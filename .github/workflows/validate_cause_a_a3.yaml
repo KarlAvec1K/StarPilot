@@ -1,0 +1,40 @@
+name: Validate Cause A A3
+
+on:
+  push:
+    branches:
+      - debug/cause-a-v2-ceoff-bypass
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cause_a_unit:
+    runs-on: [self-hosted, truenas, starpilot-build]
+    timeout-minutes: 30
+    steps:
+      - name: Checkout A3 branch
+        uses: actions/checkout@v6
+        with:
+          ref: debug/cause-a-v2-ceoff-bypass
+          fetch-depth: 1
+          submodules: recursive
+
+      - name: Python syntax validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m py_compile             selfdrive/controls/lib/longitudinal_planner.py             starpilot/controls/starpilot_planner.py             selfdrive/controls/tests/test_longitudinal_planner.py             selfdrive/controls/tests/test_starpilot_planner.py             tools/longitudinal/cause_a_regression.py
+
+      - name: Cause A targeted unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          pytest -q             selfdrive/controls/tests/test_longitudinal_planner.py               -k "allow_throttle or ce_off_positive_demand"             selfdrive/controls/tests/test_starpilot_planner.py               -k "red_light_control_flag"
+
+      - name: Regression harness help smoke test
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/longitudinal/cause_a_regression.py --help >/dev/null
