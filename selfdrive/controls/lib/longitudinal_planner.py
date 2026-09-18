@@ -87,6 +87,7 @@ ALLOW_THROTTLE_ENABLE_THRESHOLD = ALLOW_THROTTLE_THRESHOLD + ALLOW_THROTTLE_HYST
 ALLOW_THROTTLE_DISABLE_THRESHOLD = ALLOW_THROTTLE_THRESHOLD - ALLOW_THROTTLE_HYSTERESIS
 ALLOW_THROTTLE_TRANSITION_CONFIRM_TIME = 0.25
 MIN_ALLOW_THROTTLE_SPEED = 5.0
+CE_OFF_THROTTLE_BYPASS_MIN_SPEED_GAP = 7.0 * CV.KPH_TO_MS
 FORCE_DECEL_MIN_ACCEL = -0.05
 MODEL_LAUNCH_DISARM_SPEED = 2.0
 MODEL_LAUNCH_COMMIT_TIME = 3.5
@@ -351,6 +352,37 @@ def get_coast_accel(pitch):
   return np.sin(pitch) * -5.65 - 0.3  # fitted from data using xx/projects/allow_throttle/compute_coast_accel.py
 
 
+def should_bypass_model_throttle_gate(*, model_allow_throttle, explicit_disable_throttle,
+                                      experimental_mode, conditional_experimental_mode,
+                                      conditional_chill_mode, force_stops, force_slow_decel,
+                                      brake_pressed, model_should_stop, forcing_stop,
+                                      stop_sign_confirmed, tracking_lead, lead_present,
+                                      v_cruise, v_ego):
+  """Allow positive-demand ACC to ignore only the model gas-probability gate.
+
+  This is intentionally narrow: it applies only when all experimental/conditional
+  stop-control paths are disabled, no explicit StarPilot throttle disable is active,
+  no lead/stop/brake context exists, and cruise demand is materially above ego speed.
+  """
+  return bool(
+    not model_allow_throttle and
+    not explicit_disable_throttle and
+    not experimental_mode and
+    not conditional_experimental_mode and
+    not conditional_chill_mode and
+    not force_stops and
+    not force_slow_decel and
+    not brake_pressed and
+    not model_should_stop and
+    not forcing_stop and
+    not stop_sign_confirmed and
+    not tracking_lead and
+    not lead_present and
+    np.isfinite(v_cruise) and
+    (float(v_cruise) - float(v_ego)) >= CE_OFF_THROTTLE_BYPASS_MIN_SPEED_GAP
+  )
+
+
 def limit_accel_in_turns(v_ego, angle_steers, a_target, CP):
   """
   This function returns a limited long acceleration allowed, depending on the existing lateral acceleration
@@ -584,6 +616,7 @@ class LongitudinalPlanner:
     self.dt = dt
     self.model_allow_throttle = True
     self.model_allow_throttle_transition_t = 0.0
+    self.model_throttle_bypass = False
     self.allow_throttle = True
     self.mode = 'acc'
     self.is_preap = (
@@ -2104,7 +2137,29 @@ class LongitudinalPlanner:
           self.model_allow_throttle_transition_t = 0.0
       else:
         self.model_allow_throttle_transition_t = 0.0
-    self.allow_throttle = self.model_allow_throttle and not sm['starpilotPlan'].disableThrottle
+    explicit_disable_throttle = bool(sm['starpilotPlan'].disableThrottle)
+    lead_present_for_throttle_gate = bool(
+      getattr(sm['radarState'].leadOne, 'status', False) or
+      getattr(sm['radarState'].leadTwo, 'status', False)
+    )
+    self.model_throttle_bypass = should_bypass_model_throttle_gate(
+      model_allow_throttle=self.model_allow_throttle,
+      explicit_disable_throttle=explicit_disable_throttle,
+      experimental_mode=experimental_mode,
+      conditional_experimental_mode=bool(getattr(starpilot_toggles, 'conditional_experimental_mode', False)),
+      conditional_chill_mode=bool(getattr(starpilot_toggles, 'conditional_chill_mode', False)),
+      force_stops=bool(getattr(starpilot_toggles, 'force_stops', False)),
+      force_slow_decel=force_slow_decel,
+      brake_pressed=bool(getattr(sm['carState'], 'brakePressed', False)),
+      model_should_stop=bool(getattr(sm['modelV2'].action, 'shouldStop', False)),
+      forcing_stop=bool(getattr(sm['starpilotPlan'], 'forcingStop', False)),
+      stop_sign_confirmed=bool(getattr(sm['starpilotPlan'], 'stopSignConfirmed', False)),
+      tracking_lead=bool(getattr(sm['starpilotPlan'], 'trackingLead', False)),
+      lead_present=lead_present_for_throttle_gate,
+      v_cruise=v_cruise,
+      v_ego=scene_v_ego,
+    )
+    self.allow_throttle = (self.model_allow_throttle or self.model_throttle_bypass) and not explicit_disable_throttle
 
     if not self.allow_throttle:
       clipped_accel_coast = max(accel_coast, accel_limits_turns[0])
