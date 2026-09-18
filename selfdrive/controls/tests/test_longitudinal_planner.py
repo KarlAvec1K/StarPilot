@@ -3692,6 +3692,8 @@ def test_allow_throttle_hysteresis_filters_gas_prob_chatter():
   CP = CarInterface.get_non_essential_params(CAR.HONDA_CIVIC)
   planner = LongitudinalPlanner(CP, init_v=v_ego)
   sm = make_sm(v_ego, desired_accel=0.0, min_accel=-1.0, experimental_mode=False, gas_press_prob=0.5)
+  # Keep this legacy debounce test outside the A3 positive-demand bypass.
+  sm["starpilotPlan"].vCruise = v_ego
   toggles = make_toggles()
 
   planner.update(sm, toggles)
@@ -3732,6 +3734,8 @@ def test_allow_throttle_confirmation_filters_route_length_model_pulses():
   CP = CarInterface.get_non_essential_params(CAR.HONDA_CIVIC)
   planner = LongitudinalPlanner(CP, init_v=v_ego)
   sm = make_sm(v_ego, desired_accel=0.0, min_accel=-1.0, experimental_mode=False, gas_press_prob=0.6)
+  # Keep this legacy confirmation test outside the A3 positive-demand bypass.
+  sm["starpilotPlan"].vCruise = v_ego
   toggles = make_toggles()
 
   planner.update(sm, toggles)
@@ -3759,6 +3763,8 @@ def test_no_throttle_cap_stays_at_coast_limit_until_throttle_returns():
   CP = CarInterface.get_non_essential_params(CAR.HONDA_CIVIC)
   planner = LongitudinalPlanner(CP, init_v=v_ego)
   sm = make_sm(v_ego, desired_accel=0.0, min_accel=-3.0, experimental_mode=False, gas_press_prob=0.0)
+  # This test verifies the physical coast cap itself, not the A3 bypass.
+  sm["starpilotPlan"].vCruise = v_ego
   sm["carControl"].orientationNED = [0.0, 0.1, 0.0]
   toggles = make_toggles()
 
