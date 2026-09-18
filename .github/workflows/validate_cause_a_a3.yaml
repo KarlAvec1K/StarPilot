@@ -9,6 +9,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: validate-cause-a-a3
+  cancel-in-progress: true
+
 jobs:
   syntax:
     runs-on: ubuntu-latest
