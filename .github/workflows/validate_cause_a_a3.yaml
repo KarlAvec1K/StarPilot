@@ -35,6 +35,111 @@ jobs:
             selfdrive/controls/tests/test_starpilot_planner.py \
             tools/longitudinal/cause_a_regression.py
 
+  hosted_predicates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout A3 branch
+        uses: actions/checkout@v6
+        with:
+          ref: debug/cause-a-v2-ceoff-bypass
+          fetch-depth: 1
+
+      - name: Execute A3 predicates from source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import ast
+          import math
+          from types import SimpleNamespace
+
+          def load_function(path, name, extra_globals):
+            tree = ast.parse(open(path, encoding="utf-8").read(), filename=path)
+            node = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == name)
+            mod = ast.Module(body=[node], type_ignores=[])
+            ast.fix_missing_locations(mod)
+            ns = dict(extra_globals)
+            exec(compile(mod, path, "exec"), ns)
+            return ns[name]
+
+          np_stub = SimpleNamespace(isfinite=math.isfinite)
+          bypass = load_function(
+            "selfdrive/controls/lib/longitudinal_planner.py",
+            "should_bypass_model_throttle_gate",
+            {"np": np_stub, "CE_OFF_THROTTLE_BYPASS_MIN_SPEED_GAP": 7.0 / 3.6},
+          )
+
+          base = dict(
+            model_allow_throttle=False,
+            explicit_disable_throttle=False,
+            experimental_mode=False,
+            conditional_experimental_mode=False,
+            conditional_chill_mode=False,
+            force_stops=False,
+            force_slow_decel=False,
+            brake_pressed=False,
+            model_should_stop=False,
+            forcing_stop=False,
+            stop_sign_confirmed=False,
+            tracking_lead=False,
+            lead_present=False,
+            v_cruise=22.0,
+            v_ego=18.0,
+          )
+          assert bypass(**base)
+
+          vetoes = (
+            "explicit_disable_throttle",
+            "experimental_mode",
+            "conditional_experimental_mode",
+            "conditional_chill_mode",
+            "force_stops",
+            "force_slow_decel",
+            "brake_pressed",
+            "model_should_stop",
+            "forcing_stop",
+            "stop_sign_confirmed",
+            "tracking_lead",
+            "lead_present",
+          )
+          for key in vetoes:
+            case = dict(base)
+            case[key] = True
+            assert not bypass(**case), key
+
+          assert bypass(**dict(base, v_cruise=18.0 + 7.0 / 3.6))
+          assert not bypass(**dict(base, v_cruise=18.0 + 6.9 / 3.6))
+          assert not bypass(**dict(base, model_allow_throttle=True))
+
+          redlight = load_function(
+            "starpilot/controls/starpilot_planner.py",
+            "is_red_light_control_active",
+            {},
+          )
+          assert not redlight(SimpleNamespace(
+            conditional_experimental_mode=False,
+            conditional_model_stop_time=0.0,
+            force_stops=False,
+          ))
+          assert not redlight(SimpleNamespace(
+            conditional_experimental_mode=True,
+            conditional_model_stop_time=0.0,
+            force_stops=False,
+          ))
+          assert redlight(SimpleNamespace(
+            conditional_experimental_mode=True,
+            conditional_model_stop_time=7.7,
+            force_stops=False,
+          ))
+          assert redlight(SimpleNamespace(
+            conditional_experimental_mode=False,
+            conditional_model_stop_time=0.0,
+            force_stops=True,
+          ))
+          print("A3 source predicates: PASS")
+          PY
+
   cause_a_unit:
     runs-on: [self-hosted, truenas, starpilot-build]
     timeout-minutes: 30
