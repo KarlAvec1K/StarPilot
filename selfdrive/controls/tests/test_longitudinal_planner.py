@@ -3651,7 +3651,11 @@ def test_ce_off_positive_demand_bypasses_sustained_low_gas_probability_coast_cap
   assert not planner.model_allow_throttle
   assert planner.model_throttle_bypass
   assert planner.allow_throttle
-  assert planner.output_a_target > get_coast_accel(0.0) + 0.05
+
+  # A3 removes the gasPressProb coast ceiling; it does not force positive
+  # acceleration. The MPC remains free to request real braking from its other
+  # inputs, so validate the solver's upper bound rather than output_a_target.
+  assert planner.mpc.max_a > get_coast_accel(0.0) + 0.05
 
 
 def test_ce_off_positive_demand_bypass_never_overrides_explicit_disable_or_lead():
