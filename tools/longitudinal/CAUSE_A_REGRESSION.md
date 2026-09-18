@@ -148,3 +148,23 @@ For the current regression corpus, all discovered strict no-redLight episodes
 are followed by a redLight-confounded episode within 2.0 s. Therefore they
 should be treated as likely pre-latch stop-scene behavior, not as independent
 open-road proof of a throttle-gate defect.
+
+
+## Final selection status
+
+**Selected correction: A3 / CE-off positive-demand bypass.**
+
+Replay result on the 2026-09-17 diagnostic corpus:
+
+- 6/6 positive Cause-A cases reduced to 0.000 s of CE-off core false-coast.
+- Baseline positive-set false-coast total: 18.350 s.
+- A3 positive-set false-coast total: 0.000 s.
+- The episode-level global report flags 8 mixed hard-protected episodes as changed,
+  but A3's bypass predicate is frame-scoped and cannot activate while brake,
+  lead, shouldStop, forcingStop, explicit disableThrottle/pulse/tracking-lead,
+  or stop-sign protections are active.
+- The harness now reports frame-level protected bypass counts explicitly; the
+  selection criterion is zero protected bypass frames.
+
+A3 is selected for code-level validation. It is **not yet approved for vehicle
+testing** until the added unit tests/build checks have actually run successfully.
