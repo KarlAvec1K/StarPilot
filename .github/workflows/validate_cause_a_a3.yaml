@@ -142,7 +142,7 @@ jobs:
 
   cause_a_unit:
     runs-on: [self-hosted, truenas, starpilot-build]
-    timeout-minutes: 30
+    timeout-minutes: 720
     steps:
       - name: Checkout A3 branch
         uses: actions/checkout@v6
@@ -181,3 +181,22 @@ jobs:
         run: |
           set -euo pipefail
           python3 tools/longitudinal/cause_a_regression.py --help >/dev/null
+
+      - name: Link persistent sysroot
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .comma_sysroot
+          ln -s /runner/sysroots/default .comma_sysroot
+          test -d .comma_sysroot/usr
+
+      - name: Build StarPilot device target
+        shell: bash
+        run: |
+          set -euo pipefail
+          export COMMA_HOST_ROOT_DIR="/mnt/Apparition/My_App_Data/starpilot-runner/_work/${GITHUB_REPOSITORY#*/}/${GITHUB_REPOSITORY#*/}"
+          export COMMA_HOST_SYSROOT_DIR="/mnt/Apparition/My_App_Data/starpilot-runner/sysroots/default"
+          export COMMA_HOST_CACHE_DIR="/mnt/Apparition/My_App_Data/starpilot-runner/cache/work"
+          export COMMA_HOST_VENV_DIR="/mnt/Apparition/My_App_Data/starpilot-runner/cache/venv-linux-arm64"
+          export COMMA_SYSROOT_DIR="/runner/sysroots/default"
+          ./build 12
