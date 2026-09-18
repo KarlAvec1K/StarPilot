@@ -4,7 +4,11 @@ from types import SimpleNamespace
 
 from openpilot.common.constants import CV
 from openpilot.common.realtime import DT_MDL
-from openpilot.starpilot.controls.starpilot_planner import StarPilotPlanner, get_force_stop_jerk_scale
+from openpilot.starpilot.controls.starpilot_planner import (
+  StarPilotPlanner,
+  get_force_stop_jerk_scale,
+  is_red_light_control_active,
+)
 from openpilot.selfdrive.controls.lib.longitudinal_vehicle_tunes import (
   get_hyundai_canfd_scc_jerk_limits,
   get_lead_follow_jerk_scale,
@@ -36,6 +40,29 @@ def make_toggles(**overrides):
   }
   defaults.update(overrides)
   return SimpleNamespace(**defaults)
+
+
+def test_red_light_control_flag_requires_an_active_stop_control_feature():
+  assert not is_red_light_control_active(SimpleNamespace(
+    conditional_experimental_mode=False,
+    conditional_model_stop_time=0.0,
+    force_stops=False,
+  ))
+  assert not is_red_light_control_active(SimpleNamespace(
+    conditional_experimental_mode=True,
+    conditional_model_stop_time=0.0,
+    force_stops=False,
+  ))
+  assert is_red_light_control_active(SimpleNamespace(
+    conditional_experimental_mode=True,
+    conditional_model_stop_time=7.7,
+    force_stops=False,
+  ))
+  assert is_red_light_control_active(SimpleNamespace(
+    conditional_experimental_mode=False,
+    conditional_model_stop_time=0.0,
+    force_stops=True,
+  ))
 
 
 def test_force_stop_jerk_scale_is_platform_specific():
