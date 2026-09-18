@@ -197,6 +197,79 @@ jobs:
           pytest -q selfdrive/controls/tests/test_starpilot_planner.py \
             -k "red_light_control_flag"
 
+  hosted_device_build:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 240
+    steps:
+      - name: Checkout A3 branch with submodules
+        uses: actions/checkout@v6
+        with:
+          ref: debug/cause-a-v2-ceoff-bypass
+          fetch-depth: 1
+          submodules: recursive
+          lfs: true
+
+      - name: Show ARM runner resources
+        shell: bash
+        run: |
+          set -euo pipefail
+          uname -a
+          uname -m
+          nproc
+          free -h
+          df -h /
+          docker version
+          docker buildx version
+
+      - name: Build native ARM64 StarPilot builder image
+        shell: bash
+        run: |
+          set -euo pipefail
+          scripts/laptop_device_build.sh build-image
+
+      - name: Extract TICI sysroot from AGNOS
+        shell: bash
+        run: |
+          set -euo pipefail
+          scripts/laptop_device_build.sh setup-sysroot-agnos
+          scripts/laptop_device_build.sh doctor || true
+          df -h /
+
+      - name: Reclaim AGNOS image disk
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .cache/agnos/agnos_system.img.xz
+          rm -f .cache/agnos/agnos_system.img
+          rm -f .cache/agnos/agnos_system.ext4.img
+          docker builder prune -f || true
+          df -h /
+
+      - name: Build complete StarPilot device target
+        shell: bash
+        run: |
+          set -euo pipefail
+          ./build 4
+
+      - name: Verify device-target artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f prebuilt
+          artifacts=(
+            common/params_pyx.so
+            msgq_repo/msgq/ipc_pyx.so
+            selfdrive/controls/lib/longitudinal_mpc_lib/c_generated_code/acados_ocp_solver_pyx.so
+            selfdrive/controls/lib/longitudinal_mpc_lib/c_generated_code/libacados_ocp_solver_long.so
+            cereal/messaging/bridge
+          )
+          for artifact in "${artifacts[@]}"; do
+            test -f "${artifact}"
+            file "${artifact}"
+            file "${artifact}" | grep -Eq 'ARM aarch64|aarch64'
+          done
+          echo "Hosted ARM64 device build: PASS"
+
   cause_a_unit:
     runs-on: [self-hosted, truenas, starpilot-build]
     timeout-minutes: 720
