@@ -160,6 +160,13 @@ jobs:
           set -euo pipefail
           tools/op.sh setup
 
+      - name: Build native host extensions
+        shell: bash
+        run: |
+          set -euo pipefail
+          source .venv/bin/activate
+          scons -u -j"$(nproc)"
+
       - name: Run targeted A3 pytest
         shell: bash
         run: |
