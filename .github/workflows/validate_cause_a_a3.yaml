@@ -142,6 +142,34 @@ jobs:
           print("A3 source predicates: PASS")
           PY
 
+  hosted_unit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout A3 branch with submodules
+        uses: actions/checkout@v6
+        with:
+          ref: debug/cause-a-v2-ceoff-bypass
+          fetch-depth: 1
+          submodules: recursive
+          lfs: true
+
+      - name: Install StarPilot test environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          tools/op.sh setup
+
+      - name: Run targeted A3 pytest
+        shell: bash
+        run: |
+          set -euo pipefail
+          source .venv/bin/activate
+          pytest -q selfdrive/controls/tests/test_longitudinal_planner.py \
+            -k "allow_throttle or no_throttle_cap or ce_off_positive_demand"
+          pytest -q selfdrive/controls/tests/test_starpilot_planner.py \
+            -k "red_light_control_flag"
+
   cause_a_unit:
     runs-on: [self-hosted, truenas, starpilot-build]
     timeout-minutes: 720
