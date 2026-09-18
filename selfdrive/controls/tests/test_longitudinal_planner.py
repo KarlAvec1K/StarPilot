@@ -23,6 +23,7 @@ from openpilot.selfdrive.controls.lib.longitudinal_planner import (
   get_coast_accel,
   get_far_lead_coast_cap,
   get_vehicle_min_accel,
+  should_bypass_model_throttle_gate,
   should_publish_planner_fcw,
 )
 from openpilot.selfdrive.controls.lib.longitudinal_mpc_lib.long_mpc import (
@@ -3579,6 +3580,110 @@ def test_carnival_confirmed_stop_sign_stays_latched_at_low_speed():
   planner.publish(sm, pm)
 
   assert pm.sent["longitudinalPlan"].longitudinalPlan.shouldStop
+
+
+def test_ce_off_positive_demand_bypass_predicate_is_narrow():
+  base = dict(
+    model_allow_throttle=False,
+    explicit_disable_throttle=False,
+    experimental_mode=False,
+    conditional_experimental_mode=False,
+    conditional_chill_mode=False,
+    force_stops=False,
+    force_slow_decel=False,
+    brake_pressed=False,
+    model_should_stop=False,
+    forcing_stop=False,
+    stop_sign_confirmed=False,
+    tracking_lead=False,
+    lead_present=False,
+    v_cruise=22.0,
+    v_ego=18.0,
+  )
+
+  assert should_bypass_model_throttle_gate(**base)
+
+  for key in (
+    "explicit_disable_throttle",
+    "experimental_mode",
+    "conditional_experimental_mode",
+    "conditional_chill_mode",
+    "force_stops",
+    "force_slow_decel",
+    "brake_pressed",
+    "model_should_stop",
+    "forcing_stop",
+    "stop_sign_confirmed",
+    "tracking_lead",
+    "lead_present",
+  ):
+    blocked = dict(base)
+    blocked[key] = True
+    assert not should_bypass_model_throttle_gate(**blocked), key
+
+  too_small_gap = dict(base, v_cruise=19.0)
+  assert not should_bypass_model_throttle_gate(**too_small_gap)
+
+  model_allows = dict(base, model_allow_throttle=True)
+  assert not should_bypass_model_throttle_gate(**model_allows)
+
+
+def test_ce_off_positive_demand_bypasses_sustained_low_gas_probability_coast_cap():
+  v_ego = 20.0
+  CP = CarInterface.get_non_essential_params(CAR.HONDA_CIVIC)
+  planner = LongitudinalPlanner(CP, init_v=v_ego)
+  sm = make_sm(
+    v_ego,
+    desired_accel=0.0,
+    min_accel=-1.0,
+    experimental_mode=False,
+    gas_press_prob=0.2,
+  )
+  sm["starpilotPlan"].vCruise = v_ego + 4.0
+  toggles = make_toggles()
+  toggles.conditional_experimental_mode = False
+  toggles.conditional_chill_mode = False
+  toggles.force_stops = False
+
+  for _ in range(5):
+    planner.update(sm, toggles)
+
+  assert not planner.model_allow_throttle
+  assert planner.model_throttle_bypass
+  assert planner.allow_throttle
+  assert planner.output_a_target > get_coast_accel(0.0) + 0.05
+
+
+def test_ce_off_positive_demand_bypass_never_overrides_explicit_disable_or_lead():
+  v_ego = 20.0
+  CP = CarInterface.get_non_essential_params(CAR.HONDA_CIVIC)
+  toggles = make_toggles()
+  toggles.conditional_experimental_mode = False
+  toggles.conditional_chill_mode = False
+  toggles.force_stops = False
+
+  for explicit_disable, lead in (
+    (True, make_lead(status=False)),
+    (False, make_lead(status=True, d_rel=45.0, v_lead=18.0, radar=True, model_prob=1.0)),
+  ):
+    planner = LongitudinalPlanner(CP, init_v=v_ego)
+    sm = make_sm(
+      v_ego,
+      desired_accel=0.0,
+      min_accel=-1.0,
+      experimental_mode=False,
+      gas_press_prob=0.2,
+      disable_throttle=explicit_disable,
+      lead_one=lead,
+    )
+    sm["starpilotPlan"].vCruise = v_ego + 4.0
+
+    for _ in range(5):
+      planner.update(sm, toggles)
+
+    assert not planner.model_allow_throttle
+    assert not planner.model_throttle_bypass
+    assert not planner.allow_throttle
 
 
 def test_allow_throttle_hysteresis_filters_gas_prob_chatter():
