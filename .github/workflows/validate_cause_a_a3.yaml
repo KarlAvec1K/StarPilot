@@ -108,7 +108,9 @@ jobs:
             case[key] = True
             assert not bypass(**case), key
 
-          assert bypass(**dict(base, v_cruise=18.0 + 7.0 / 3.6))
+          # Stay off the exact floating-point boundary: validate a clear
+          # value above and below the 7 km/h threshold.
+          assert bypass(**dict(base, v_cruise=18.0 + 7.1 / 3.6))
           assert not bypass(**dict(base, v_cruise=18.0 + 6.9 / 3.6))
           assert not bypass(**dict(base, model_allow_throttle=True))
 
