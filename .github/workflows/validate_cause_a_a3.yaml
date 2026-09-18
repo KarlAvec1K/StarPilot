@@ -10,6 +10,27 @@ permissions:
   contents: read
 
 jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout A3 branch
+        uses: actions/checkout@v6
+        with:
+          ref: debug/cause-a-v2-ceoff-bypass
+          fetch-depth: 1
+
+      - name: Python syntax validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m py_compile \
+            selfdrive/controls/lib/longitudinal_planner.py \
+            starpilot/controls/starpilot_planner.py \
+            selfdrive/controls/tests/test_longitudinal_planner.py \
+            selfdrive/controls/tests/test_starpilot_planner.py \
+            tools/longitudinal/cause_a_regression.py
+
   cause_a_unit:
     runs-on: [self-hosted, truenas, starpilot-build]
     timeout-minutes: 30
@@ -25,13 +46,26 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m py_compile             selfdrive/controls/lib/longitudinal_planner.py             starpilot/controls/starpilot_planner.py             selfdrive/controls/tests/test_longitudinal_planner.py             selfdrive/controls/tests/test_starpilot_planner.py             tools/longitudinal/cause_a_regression.py
+          python3 -m py_compile \
+            selfdrive/controls/lib/longitudinal_planner.py \
+            starpilot/controls/starpilot_planner.py \
+            selfdrive/controls/tests/test_longitudinal_planner.py \
+            selfdrive/controls/tests/test_starpilot_planner.py \
+            tools/longitudinal/cause_a_regression.py
 
-      - name: Cause A targeted unit tests
+      - name: Longitudinal Cause A unit tests
         shell: bash
         run: |
           set -euo pipefail
-          pytest -q             selfdrive/controls/tests/test_longitudinal_planner.py               -k "allow_throttle or ce_off_positive_demand"             selfdrive/controls/tests/test_starpilot_planner.py               -k "red_light_control_flag"
+          pytest -q selfdrive/controls/tests/test_longitudinal_planner.py \
+            -k "allow_throttle or ce_off_positive_demand"
+
+      - name: StarPilot red-light control unit test
+        shell: bash
+        run: |
+          set -euo pipefail
+          pytest -q selfdrive/controls/tests/test_starpilot_planner.py \
+            -k "red_light_control_flag"
 
       - name: Regression harness help smoke test
         shell: bash
