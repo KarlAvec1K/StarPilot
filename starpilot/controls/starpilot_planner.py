@@ -373,7 +373,17 @@ class StarPilotPlanner:
     starpilotPlan.maxAcceleration = float(self.starpilot_acceleration.max_accel)
     starpilotPlan.minAcceleration = float(self.starpilot_acceleration.min_accel)
 
-    starpilotPlan.redLight = self.starpilot_cem.stop_light_detected
+    red_light_control_active = bool(
+      (
+        bool(getattr(starpilot_toggles, "conditional_experimental_mode", False)) and
+        float(getattr(starpilot_toggles, "conditional_model_stop_time", 0.0)) > 0.0
+      ) or
+      bool(getattr(starpilot_toggles, "force_stops", False))
+    )
+    # Keep CEM's internal detector available for non-control features such as
+    # green-light alerts, but do not leak it into longitudinal control when all
+    # stop-control features are disabled.
+    starpilotPlan.redLight = bool(self.starpilot_cem.stop_light_detected and red_light_control_active)
 
     starpilotPlan.roadCurvature = self.road_curvature
 
