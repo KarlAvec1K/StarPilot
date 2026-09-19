@@ -97,6 +97,11 @@ class CarControllerParams:
   ASCENT_THROTTLE_ACCEL_GAIN = (THROTTLE_MAX - THROTTLE_INACTIVE) / 2.0
   ASCENT_RPM_ACCEL_GAIN = (RPM_MAX - RPM_INACTIVE) / 2.0
 
+  # Fade the Ascent speed feed-forward out through a small negative-accel coast
+  # zone instead of dropping directly to THROTTLE_INACTIVE/RPM_INACTIVE at 0.
+  # Meaningful deceleration (<= -0.10 m/s^2) keeps the generic Subaru mapping.
+  ASCENT_LONG_COAST_BLEND_MIN_ACCEL = -0.10
+
 
 class SubaruSafetyFlags(IntFlag):
   GEN2 = 1
