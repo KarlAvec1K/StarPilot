@@ -192,6 +192,12 @@ class LatControlTorque(LatControl):
     self.starpilot_lateral_state.frictionJerkDeadzone = 0.0
     self.starpilot_lateral_state.lowSpeedFactor = 0.0
     self.starpilot_lateral_state.unwindDetected = False
+    self.starpilot_lateral_state.pidOutputLatAccelClipped = 0.0
+    self.starpilot_lateral_state.pidOutputLatAccelUnclipped = 0.0
+    self.starpilot_lateral_state.commandedTorqueNorm = 0.0
+    self.starpilot_lateral_state.shadowTorqueNorm = 0.0
+    self.starpilot_lateral_state.shadowExcessNorm = 0.0
+    self.starpilot_lateral_state.shadowSaturated = False
 
   def update_live_torque_params(self, latAccelFactor, latAccelOffset, friction):
     if self.is_palisade:
@@ -550,6 +556,13 @@ class LatControlTorque(LatControl):
       freeze_integrator = (steer_limited_by_safety or CS.steeringPressed or
                            CS.vEgo < self.low_speed_reset_threshold or unwind_detected)
       output_lataccel = self.pid.update(pid_log.error, error_rate=-measurement_rate, speed=CS.vEgo, feedforward=ff, freeze_integrator=freeze_integrator)
+
+      # Logging-only shadow request: reconstruct the PID output before its final
+      # actuator clamp. This does not feed back into the PID, integrator, returned
+      # actuator command, CarController, Panda safety, or CAN.
+      shadow_output_lataccel = float(self.pid.p + self.pid.i + self.pid.d + self.pid.f)
+      shadow_output_torque = float(self.torque_from_lateral_accel(shadow_output_lataccel, self.torque_params))
+
       output_torque = self.torque_from_lateral_accel(output_lataccel, self.torque_params)
       if bolt_2022_2023_tuned_path_active:
         output_torque *= get_bolt_2022_2023_center_output_scale(setpoint, CS.vEgo)
@@ -704,6 +717,17 @@ class LatControlTorque(LatControl):
       self.starpilot_lateral_state.frictionJerkDeadzone = float(friction_jerk_deadzone)
       self.starpilot_lateral_state.lowSpeedFactor = float(low_speed_factor)
       self.starpilot_lateral_state.unwindDetected = bool(unwind_detected)
+
+      # Signs match the actuator torque returned by this controller.
+      commanded_torque_norm = float(-output_torque)
+      shadow_torque_norm = float(-shadow_output_torque)
+      self.starpilot_lateral_state.pidOutputLatAccelClipped = float(output_lataccel)
+      self.starpilot_lateral_state.pidOutputLatAccelUnclipped = float(shadow_output_lataccel)
+      self.starpilot_lateral_state.commandedTorqueNorm = commanded_torque_norm
+      self.starpilot_lateral_state.shadowTorqueNorm = shadow_torque_norm
+      self.starpilot_lateral_state.shadowExcessNorm = float(max(abs(shadow_torque_norm) - self.steer_max, 0.0))
+      self.starpilot_lateral_state.shadowSaturated = bool(abs(shadow_torque_norm) > self.steer_max + 1e-6)
+
       pid_log.saturated = bool(self._check_saturation(self.steer_max - abs(output_torque) < 1e-3, CS, steer_limited_by_safety, curvature_limited))
       self.prev_output_torque = float(output_torque)
 
