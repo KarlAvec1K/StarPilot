@@ -334,8 +334,26 @@ class CarController(CarControllerBase):
     # *** longitudinal ***
 
     if CC.longActive:
-      apply_throttle = int(round(np.interp(actuators.accel, CarControllerParams.THROTTLE_LOOKUP_BP, CarControllerParams.THROTTLE_LOOKUP_V)))
-      apply_rpm = int(round(np.interp(actuators.accel, CarControllerParams.RPM_LOOKUP_BP, CarControllerParams.RPM_LOOKUP_V)))
+      # The generic Subaru alpha-long mapping is acceleration-only. OEM EyeSight
+      # data from this Ascent shows a strong speed-dependent feed-forward need:
+      # at highway speeds the generic 1818/600 zero-accel command is far below
+      # the stock Cruise_Throttle / Cruise_RPM required to maintain speed.
+      #
+      # First validation patch: only alter non-negative acceleration commands on
+      # the 2019-21 Ascent. Braking and all other Subaru platforms stay unchanged.
+      if self.CP.carFingerprint == CAR.SUBARU_ASCENT and actuators.accel >= 0.0:
+        accel_ff = np.clip(actuators.accel, 0.0, 2.0)
+        throttle_base = np.interp(CS.out.vEgo, CarControllerParams.ASCENT_LONG_SPEED_BP,
+                                  CarControllerParams.ASCENT_THROTTLE_BASE_V)
+        rpm_base = np.interp(CS.out.vEgo, CarControllerParams.ASCENT_LONG_SPEED_BP,
+                             CarControllerParams.ASCENT_RPM_BASE_V)
+
+        apply_throttle = int(round(throttle_base + accel_ff * CarControllerParams.ASCENT_THROTTLE_ACCEL_GAIN))
+        apply_rpm = int(round(rpm_base + accel_ff * CarControllerParams.ASCENT_RPM_ACCEL_GAIN))
+      else:
+        apply_throttle = int(round(np.interp(actuators.accel, CarControllerParams.THROTTLE_LOOKUP_BP, CarControllerParams.THROTTLE_LOOKUP_V)))
+        apply_rpm = int(round(np.interp(actuators.accel, CarControllerParams.RPM_LOOKUP_BP, CarControllerParams.RPM_LOOKUP_V)))
+
       apply_brake = int(round(np.interp(actuators.accel, CarControllerParams.BRAKE_LOOKUP_BP, CarControllerParams.BRAKE_LOOKUP_V)))
 
       # limit min and max values
