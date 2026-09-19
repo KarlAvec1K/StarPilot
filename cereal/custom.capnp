@@ -320,6 +320,15 @@ struct StarPilotLateralState @0xc2243c65e0340384 {
   frictionJerkDeadzone @5 :Float32;
   lowSpeedFactor @6 :Float32;
   unwindDetected @7 :Bool;
+
+  # Shadow lateral-control diagnostics. These fields are logging-only and are
+  # never used to command the vehicle.
+  pidOutputLatAccelClipped @8 :Float32;
+  pidOutputLatAccelUnclipped @9 :Float32;
+  commandedTorqueNorm @10 :Float32;
+  shadowTorqueNorm @11 :Float32;
+  shadowExcessNorm @12 :Float32;
+  shadowSaturated @13 :Bool;
 }
 
 struct CustomReserved12 @0x9ccdc8676701b412 {
