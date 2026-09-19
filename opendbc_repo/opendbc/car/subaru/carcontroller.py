@@ -334,26 +334,39 @@ class CarController(CarControllerBase):
     # *** longitudinal ***
 
     if CC.longActive:
-      # The generic Subaru alpha-long mapping is acceleration-only. OEM EyeSight
-      # data from this Ascent shows a strong speed-dependent feed-forward need:
-      # at highway speeds the generic 1818/600 zero-accel command is far below
-      # the stock Cruise_Throttle / Cruise_RPM required to maintain speed.
-      #
-      # First validation patch: only alter non-negative acceleration commands on
-      # the 2019-21 Ascent. Braking and all other Subaru platforms stay unchanged.
-      if self.CP.carFingerprint == CAR.SUBARU_ASCENT and actuators.accel >= 0.0:
-        accel_ff = np.clip(actuators.accel, 0.0, 2.0)
+      # Start from the generic Subaru mapping. The 2019-21 Ascent overrides it
+      # with its speed-dependent feed-forward for positive acceleration and
+      # smoothly blends that feed-forward out through a small coast zone below
+      # zero. This avoids the large 2940 -> 1818 throttle step observed in the
+      # checkpoint 05 road test while leaving meaningful deceleration unchanged.
+      apply_throttle = int(round(np.interp(actuators.accel, CarControllerParams.THROTTLE_LOOKUP_BP,
+                                           CarControllerParams.THROTTLE_LOOKUP_V)))
+      apply_rpm = int(round(np.interp(actuators.accel, CarControllerParams.RPM_LOOKUP_BP,
+                                      CarControllerParams.RPM_LOOKUP_V)))
+
+      if self.CP.carFingerprint == CAR.SUBARU_ASCENT:
         throttle_base = np.interp(CS.out.vEgo, CarControllerParams.ASCENT_LONG_SPEED_BP,
                                   CarControllerParams.ASCENT_THROTTLE_BASE_V)
         rpm_base = np.interp(CS.out.vEgo, CarControllerParams.ASCENT_LONG_SPEED_BP,
                              CarControllerParams.ASCENT_RPM_BASE_V)
 
-        apply_throttle = int(round(throttle_base + accel_ff * CarControllerParams.ASCENT_THROTTLE_ACCEL_GAIN))
-        apply_rpm = int(round(rpm_base + accel_ff * CarControllerParams.ASCENT_RPM_ACCEL_GAIN))
-      else:
-        apply_throttle = int(round(np.interp(actuators.accel, CarControllerParams.THROTTLE_LOOKUP_BP, CarControllerParams.THROTTLE_LOOKUP_V)))
-        apply_rpm = int(round(np.interp(actuators.accel, CarControllerParams.RPM_LOOKUP_BP, CarControllerParams.RPM_LOOKUP_V)))
+        if actuators.accel >= 0.0:
+          accel_ff = np.clip(actuators.accel, 0.0, 2.0)
+          apply_throttle = int(round(throttle_base + accel_ff * CarControllerParams.ASCENT_THROTTLE_ACCEL_GAIN))
+          apply_rpm = int(round(rpm_base + accel_ff * CarControllerParams.ASCENT_RPM_ACCEL_GAIN))
+        elif actuators.accel > CarControllerParams.ASCENT_LONG_COAST_BLEND_MIN_ACCEL:
+          blend = np.interp(actuators.accel,
+                            [CarControllerParams.ASCENT_LONG_COAST_BLEND_MIN_ACCEL, 0.0],
+                            [0.0, 1.0])
+          # Smoothstep keeps the transition gentle at both ends of the blend.
+          blend = blend * blend * (3.0 - 2.0 * blend)
+          apply_throttle = int(round(CarControllerParams.THROTTLE_INACTIVE +
+                                     blend * (throttle_base - CarControllerParams.THROTTLE_INACTIVE)))
+          apply_rpm = int(round(CarControllerParams.RPM_INACTIVE +
+                                blend * (rpm_base - CarControllerParams.RPM_INACTIVE)))
 
+      # Brake mapping and limits remain unchanged. In the coast-blend region the
+      # existing brake request is only a small fraction of BRAKE_MAX.
       apply_brake = int(round(np.interp(actuators.accel, CarControllerParams.BRAKE_LOOKUP_BP, CarControllerParams.BRAKE_LOOKUP_V)))
 
       # limit min and max values
