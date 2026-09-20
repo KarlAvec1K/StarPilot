@@ -329,6 +329,10 @@ struct StarPilotLateralState @0xc2243c65e0340384 {
   shadowTorqueNorm @11 :Float32;
   shadowExcessNorm @12 :Float32;
   shadowSaturated @13 :Bool;
+  # NNFF PID output in internal PID torque convention. The unclipped value is
+  # the effective pre-final-clamp demand after anti-windup has updated pid.i.
+  pidOutputTorqueClipped @14 :Float32;
+  pidOutputTorqueUnclipped @15 :Float32;
 }
 
 struct CustomReserved12 @0x9ccdc8676701b412 {

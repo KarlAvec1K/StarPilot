@@ -6,9 +6,10 @@ import numpy as np
 import os
 
 from collections import deque
+from dataclasses import dataclass
 from difflib import SequenceMatcher
 
-from cereal import log
+from cereal import custom, log
 from opendbc.car.hyundai.values import CAR as HYUNDAI_CAR
 from openpilot.common.constants import ACCELERATION_DUE_TO_GRAVITY
 from openpilot.common.filter_simple import FirstOrderFilter
@@ -36,6 +37,24 @@ ACTIVATION_FUNCTION_NAMES = {"σ": "sigmoid"}
 
 PALISADE_NNFF_LAT_JERK_FRICTION_FACTOR = 0.25
 DEFAULT_NNFF_LAT_JERK_FRICTION_FACTOR = 0.4
+NNFF_SHADOW_TOLERANCE = 1e-6
+
+
+@dataclass(frozen=True)
+class NNFFShadowMetrics:
+  commanded_torque_norm: float
+  shadow_torque_norm: float
+  shadow_excess_norm: float
+  shadow_saturated: bool
+
+
+def _compute_nnff_shadow_metrics(output_torque: float, pid_output_torque: float, steer_max: float) -> NNFFShadowMetrics:
+  """Compute passive telemetry using the actuator-facing torque convention."""
+  commanded_torque_norm = -float(output_torque)
+  shadow_torque_norm = -float(pid_output_torque)
+  shadow_excess_norm = max(abs(shadow_torque_norm) - steer_max, 0.0)
+  shadow_saturated = abs(shadow_torque_norm) > steer_max + NNFF_SHADOW_TOLERANCE
+  return NNFFShadowMetrics(commanded_torque_norm, shadow_torque_norm, shadow_excess_norm, shadow_saturated)
 
 
 def get_nnff_lat_jerk_friction_factor(car_fingerprint) -> float:
@@ -181,6 +200,7 @@ def similarity(s1: str, s2: str) -> float:
 class LatControlNNFF(LatControl):
   def __init__(self, CP, CI, dt):
     super().__init__(CP, CI, dt)
+    self.starpilot_lateral_state = custom.StarPilotLateralState.new_message()
     self.lat_torque_nn_model = get_nn_model(CP.carFingerprint, str(next((fw.fwVersion for fw in CP.carFw if fw.ecu == "eps"), "")).replace("\\", ""))
     self.nnff_loaded = self.lat_torque_nn_model is not None
 
@@ -227,6 +247,44 @@ class LatControlNNFF(LatControl):
     self.past_future_len = len(self.past_times) + len(self.nn_future_times)
     self.roll_deque = deque(maxlen=history_check_frames[0])
 
+  def _clear_starpilot_lateral_state(self):
+    self.starpilot_lateral_state.active = False
+    self.starpilot_lateral_state.frictionThreshold = 0.0
+    self.starpilot_lateral_state.frictionScale = 0.0
+    self.starpilot_lateral_state.feedforward = 0.0
+    self.starpilot_lateral_state.frictionJerk = 0.0
+    self.starpilot_lateral_state.frictionJerkDeadzone = 0.0
+    self.starpilot_lateral_state.lowSpeedFactor = 0.0
+    self.starpilot_lateral_state.unwindDetected = False
+    self.starpilot_lateral_state.pidOutputLatAccelClipped = 0.0
+    self.starpilot_lateral_state.pidOutputLatAccelUnclipped = 0.0
+    self.starpilot_lateral_state.pidOutputTorqueClipped = 0.0
+    self.starpilot_lateral_state.pidOutputTorqueUnclipped = 0.0
+    self.starpilot_lateral_state.commandedTorqueNorm = 0.0
+    self.starpilot_lateral_state.shadowTorqueNorm = 0.0
+    self.starpilot_lateral_state.shadowExcessNorm = 0.0
+    self.starpilot_lateral_state.shadowSaturated = False
+
+  def _update_starpilot_lateral_state(self, output_torque: float, pid_output_torque: float):
+    values = (output_torque, pid_output_torque, self.steer_max)
+    if not all(math.isfinite(float(value)) for value in values):
+      self._clear_starpilot_lateral_state()
+      return
+
+    metrics = _compute_nnff_shadow_metrics(output_torque, pid_output_torque, self.steer_max)
+    self.starpilot_lateral_state.active = True
+    # NNFF operates directly in torque; lateral-acceleration PID fields remain zero.
+    self.starpilot_lateral_state.pidOutputLatAccelClipped = 0.0
+    self.starpilot_lateral_state.pidOutputLatAccelUnclipped = 0.0
+    # These two fields use the internal PID sign. The *TorqueNorm fields use the
+    # actuator-facing sign returned by this controller (-output_torque).
+    self.starpilot_lateral_state.pidOutputTorqueClipped = float(output_torque)
+    self.starpilot_lateral_state.pidOutputTorqueUnclipped = float(pid_output_torque)
+    self.starpilot_lateral_state.commandedTorqueNorm = metrics.commanded_torque_norm
+    self.starpilot_lateral_state.shadowTorqueNorm = metrics.shadow_torque_norm
+    self.starpilot_lateral_state.shadowExcessNorm = metrics.shadow_excess_norm
+    self.starpilot_lateral_state.shadowSaturated = metrics.shadow_saturated
+
   def update_live_delay(self, lat_delay):
     self.nn_future_times = [time + lat_delay for time in self.future_times]
     self.past_future_len = len(self.past_times) + len(self.nn_future_times)
@@ -241,6 +299,7 @@ class LatControlNNFF(LatControl):
     if not active:
       output_torque = 0.0
       pid_log.active = False
+      self._clear_starpilot_lateral_state()
     else:
       actual_curvature = -VM.calc_curvature(math.radians(CS.steeringAngleDeg - params.angleOffsetDeg), CS.vEgo, params.roll)
       roll_compensation = params.roll * ACCELERATION_DUE_TO_GRAVITY
@@ -352,6 +411,11 @@ class LatControlNNFF(LatControl):
                                       feedforward=ff,
                                       speed=CS.vEgo,
                                       freeze_integrator=freeze_integrator)
+      # This is the effective PID demand after anti-windup has updated pid.i and
+      # before PIDController applies its final output clamp. It is not a
+      # reconstruction that bypasses anti-windup.
+      pid_output_torque = float(self.pid.p + self.pid.i + self.pid.d + self.pid.f)
+      self._update_starpilot_lateral_state(output_torque, pid_output_torque)
 
       pid_log.active = True
       pid_log.p = float(self.pid.p)
