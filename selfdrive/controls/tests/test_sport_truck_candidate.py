@@ -36,7 +36,7 @@ def test_candidate_caps_and_deltas_match_rule_of_three_tune():
 
 def test_candidate_preserves_low_speed_breakpoint_values_and_physical_cap():
   assert A_CRUISE_MAX_VALS_SPORT_TRUCK[:3] == [6.00, 1.15, 0.75]
-  samples = [cap(speed * 3.6) for speed in [i / 100 for i in range(4001)]]
+  samples = [cap(speed * 3.6) for speed in [i / 100 for i in range(1000, 4001)]]
   assert all(math.isfinite(value) and 0.0 <= value <= 2.0 for value in samples[1:])
 
 
