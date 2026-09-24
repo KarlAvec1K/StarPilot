@@ -13,6 +13,7 @@ import sysconfig
 import tarfile
 
 import io
+import tokenize
 from io import BytesIO
 from pathlib import Path
 
@@ -77,6 +78,7 @@ from openpilot.starpilot.common.model_lab import (
 )
 from openpilot.starpilot.assets.theme_manager import HOLIDAY_THEME_PATH, THEME_COMPONENT_PARAMS
 from openpilot.starpilot.common import param_profiles
+from openpilot.starpilot.common.car_params_capability import capability_car_params_bytes
 from openpilot.starpilot.system.the_galaxy import version_history, version_install
 from openpilot.starpilot.common.accel_profile import (
   A_CRUISE_MAX_BP_CUSTOM,
@@ -3283,7 +3285,13 @@ def _extract_fingerprint_models_for_make(make_key):
   except Exception:
     return []
 
-  content = re.sub(r'#[^\n]*', "", content)
+  lines = content.splitlines(keepends=True)
+  for token in tokenize.generate_tokens(io.StringIO(content).readline):
+    if token.type == tokenize.COMMENT:
+      line_index, start = token.start[0] - 1, token.start[1]
+      end = token.end[1]
+      lines[line_index] = lines[line_index][:start] + " " * (end - start) + lines[line_index][end:]
+  content = "".join(lines)
   content = re.sub(r'footnotes=\[[^\]]*\],\s*', "", content)
 
   models = []
@@ -3327,6 +3335,7 @@ def _get_fingerprint_catalog():
   all_models = []
   seen_all = set()
   model_to_label = {}
+  labels_by_model = {}
   model_to_make = {}
   label_to_model = {}
 
@@ -3340,6 +3349,7 @@ def _get_fingerprint_catalog():
       model_label = entry["label"]
 
       model_to_label.setdefault(model_value, model_label)
+      labels_by_model.setdefault(model_value, set()).add(model_label)
       model_to_make.setdefault(model_value, make_label)
       label_to_model.setdefault(model_label, model_value)
 
@@ -3355,6 +3365,10 @@ def _get_fingerprint_catalog():
       })
 
   all_models.sort(key=lambda entry: entry["label"].lower())
+
+  for model_value, labels in labels_by_model.items():
+    if len(labels) > 1:
+      model_to_label[model_value] = None
 
   _fingerprint_catalog_cache = {
     "makes": make_options,
@@ -3471,6 +3485,12 @@ def _get_param_type_info():
         types[k] = float if dt == "float" else int
       elif k in types and dt == "bool":
         types[k] = bool
+
+    # Zero-valued offsets must stay numeric; legacy inference treats "0" as bool.
+    from openpilot.starpilot.common.screen_settings import SCREEN_INT_KEYS
+    for k in SCREEN_INT_KEYS:
+      if k in _cached_allowed_keys:
+        types[k] = int
 
     for k in GALAXY_MANUAL_BOOL_PARAM_KEYS:
       if k in _cached_allowed_keys:
@@ -4280,6 +4300,12 @@ def _get_fingerprint_snapshot_text():
   model_value = str(params.get("CarModel", encoding="utf-8") or "").strip()
 
   if model_name and model_value:
+    catalog = _get_fingerprint_catalog()
+    if model_value in catalog["model_to_make"] and not any(
+      entry["value"] == model_value and entry["label"] == model_name
+      for entry in catalog["all_models"]
+    ):
+      return f"Mismatch: {model_name} vs {model_value}; reselect your vehicle"
     return f"{model_name} ({model_value})"
   if model_name:
     return model_name
@@ -4438,7 +4464,7 @@ def _get_is_tici_or_tizi():
   return HARDWARE.get_device_type() in ("tici", "tizi")
 
 def _get_alpha_longitudinal_available():
-  cp_bytes = _safe_params_get_live_raw("CarParamsPersistent")
+  cp_bytes = capability_car_params_bytes(params)
   if not cp_bytes:
     return False
 
@@ -5351,6 +5377,7 @@ def setup(app):
       "/assets/components/home/home.js",
       "/assets/components/home/home.css",
       "/assets/mobile/js/params.js",
+      "/assets/mobile/js/components/ScreenBrightnessControl.js",
       "/assets/components/tools/device_settings.js",
       "/assets/components/tools/device_settings.css",
       "/assets/components/tools/device_settings_layout.json",
@@ -6163,6 +6190,18 @@ def setup(app):
         return jsonify({"error": "Missing 'key' or 'value' in request body."}), 400
 
       key = str(data["key"]).strip()
+      if key.startswith(("ScreenBrightness", "StandbyWake")):
+        from openpilot.common.params import UnknownKeyName
+        from openpilot.starpilot.common.screen_settings import write_screen_setting
+        try:
+          updated = write_screen_setting(params, key, data["value"])
+        except ValueError as error:
+          return jsonify({"error": str(error)}), 400
+        except (OSError, KeyError, UnknownKeyName):
+          return jsonify({"error": "Screen setting could not be saved."}), 503
+        update_starpilot_toggles()
+        return jsonify({"updated": updated, "message": "Screen setting saved."}), 200
+
       if key.lower() == PERSONALITY_PROFILES_PARAM.lower():
         return jsonify({"error": "Longitudinal personality profiles must be changed with the Driving Personalities editor."}), 403
       if key in PERSONALITY_PARKED_PARAM_KEYS and _personality_editor_write_locked():
@@ -6569,6 +6608,13 @@ def setup(app):
           return jsonify({"error": "Car model cannot be empty."}), 400
 
         catalog = _get_fingerprint_catalog()
+        if selected_label_input:
+          labelled_models = {
+            entry["value"] for entry in catalog["all_models"]
+            if entry["label"] == selected_label_input
+          }
+          if labelled_models and selected_model not in labelled_models:
+            return jsonify({"error": "Vehicle label and model do not match; refresh and reselect your vehicle."}), 400
         if selected_label_input and any(
           entry["value"] == selected_model and entry["label"] == selected_label_input
           for entry in catalog["all_models"]

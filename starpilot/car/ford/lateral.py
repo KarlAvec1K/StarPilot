@@ -43,25 +43,47 @@ MACH_E_LOW_SPEED_TURN_IN_FADE_SPEED = 12.0
 MACH_E_TURN_IN_MIN_CURVATURE = 0.002
 MACH_E_TURN_IN_FULL_CURVATURE = 0.008
 MACH_E_TURN_IN_LAG_CURVATURE = 0.006
+MACH_E_UNWIND_LOOKAHEAD_EXTRA = 0.80
+MACH_E_UNWIND_FULL_LAG_CURVATURE = 0.0005
 MACH_E_DIRECTION_CHANGE_MIN_SPEED = 9.0
 MACH_E_DIRECTION_CHANGE_LOOKAHEAD_RAMP_SPEED = 10.0
 MACH_E_DIRECTION_CHANGE_LOOKAHEAD_FULL_SPEED = 12.0
 MACH_E_DIRECTION_CHANGE_LOOKAHEAD_FADE_SPEED = 15.0
-MACH_E_DIRECTION_CHANGE_LOOKAHEAD_EXTRA = 1.60
+MACH_E_DIRECTION_CHANGE_LOOKAHEAD_EXTRA = 2.40
 MACH_E_DIRECTION_CHANGE_MIN_PREVIEW_CURVATURE = 0.0005
 MACH_E_DIRECTION_CHANGE_FULL_PREVIEW_CURVATURE = 0.002
 MACH_E_DIRECTION_CHANGE_MIN_LAG_CURVATURE = 0.0008
 MACH_E_DIRECTION_CHANGE_FULL_LAG_CURVATURE = 0.0015
+MACH_E_DIRECTION_CHANGE_EARLY_MIN_LAG_CURVATURE = -0.001
+MACH_E_DIRECTION_CHANGE_EARLY_FULL_LAG_CURVATURE = 0.0008
+MACH_E_DIRECTION_CHANGE_EARLY_MIN_CURVATURE = 0.002
+MACH_E_DIRECTION_CHANGE_EARLY_FULL_CURVATURE = 0.004
 MACH_E_LOW_SPEED_DIRECTION_CHANGE_START_SPEED = 1.8
 MACH_E_LOW_SPEED_DIRECTION_CHANGE_FULL_SPEED = 2.0
 MACH_E_LOW_SPEED_DIRECTION_CHANGE_HOLD_SPEED = 2.8
 MACH_E_LOW_SPEED_DIRECTION_CHANGE_FADE_SPEED = 3.5
 MACH_E_LOW_SPEED_DIRECTION_CHANGE_MIN_CURVATURE = 0.0004
 MACH_E_LOW_SPEED_DIRECTION_CHANGE_FULL_CURVATURE = 0.0006
+MACH_E_LOW_SPEED_DIRECTION_CHANGE_MAX_CURVATURE = 0.0015
+MACH_E_SHARP_DIRECTION_CHANGE_START_SPEED = 1.5
+MACH_E_SHARP_DIRECTION_CHANGE_FULL_SPEED = 1.8
+MACH_E_SHARP_DIRECTION_CHANGE_HOLD_SPEED = 3.0
+MACH_E_SHARP_DIRECTION_CHANGE_FADE_SPEED = 4.0
+MACH_E_SHARP_DIRECTION_CHANGE_MIN_CURVATURE = 0.0002
+MACH_E_SHARP_DIRECTION_CHANGE_FULL_CURVATURE = 0.0005
+MACH_E_SHARP_DIRECTION_CHANGE_MIN_PREVIEW_CURVATURE = 0.008
+MACH_E_SHARP_DIRECTION_CHANGE_FULL_PREVIEW_CURVATURE = 0.012
+MACH_E_SHARP_DIRECTION_CHANGE_MIN_ACCEL = 1.8
+MACH_E_SHARP_DIRECTION_CHANGE_FULL_ACCEL = 2.2
+MACH_E_SHARP_DIRECTION_CHANGE_MIN_LAG_CURVATURE = -0.0005
+MACH_E_SHARP_DIRECTION_CHANGE_FULL_LAG_CURVATURE = 0.0008
 FORD_CURVATURE_LOOKAHEAD = {
   CAR.FORD_EXPLORER_MK6: 0.20,
 }
 FORD_CONSERVATIVE_PREVIEW_CARS = frozenset({
+  CAR.FORD_MUSTANG_MACH_E_MK1,
+})
+FORD_SHARP_DIRECTION_CHANGE_CARS = frozenset({
   CAR.FORD_MUSTANG_MACH_E_MK1,
 })
 FORD_MANUAL_TURN_LATCH_CARS = frozenset({
@@ -205,6 +227,21 @@ class FordLateralController:
         precision = 0
     return requested, precision
 
+  def _unwind_preview(self, desired: float, predicted: float, current: float, v_ego: float) -> float:
+    if self.CP.carFingerprint != CAR.FORD_MUSTANG_MACH_E_MK1:
+      return predicted
+    if desired * current <= 0.0 or desired * predicted <= 0.0 or desired * self.desired_curvature_last <= 0.0:
+      return predicted
+    if abs(desired) >= abs(self.desired_curvature_last) or abs(current) <= abs(desired):
+      return predicted
+    preview = self._predicted_curvature(v_ego, self._curvature_lookahead() + MACH_E_UNWIND_LOOKAHEAD_EXTRA)
+    if desired * preview <= 0.0 or abs(preview) >= min(abs(desired), abs(predicted)):
+      return predicted
+    speed_weight = float(np.interp(v_ego, [5.0, 7.0, 12.0, 15.0], [0.0, 1.0, 1.0, 0.0]))
+    curvature_weight = float(np.interp(abs(desired), [0.002, 0.008], [0.0, 1.0]))
+    lag_weight = float(np.interp(abs(current) - abs(desired), [0.0, MACH_E_UNWIND_FULL_LAG_CURVATURE], [0.0, 1.0]))
+    return predicted + speed_weight * curvature_weight * lag_weight * (preview - predicted)
+
   def _turn_in_preview_weight(self, desired: float, preview: float, current: float) -> float:
     if self.CP.carFingerprint not in FORD_CONSERVATIVE_PREVIEW_CARS:
       return 0.0
@@ -246,13 +283,32 @@ class FordLateralController:
        MACH_E_DIRECTION_CHANGE_LOOKAHEAD_EXTRA, MACH_E_TURN_IN_LOOKAHEAD_EXTRA],
     ))
 
-  def _direction_change_preview_weight(self, desired: float, preview: float, current: float) -> float:
+  def _direction_change_preview_weight(self, desired: float, preview: float, current: float,
+                                       allow_rising_desired: bool = False, early_handoff_weight: float = 0.0,
+                                       sharp_handoff: bool = False) -> float:
     if self.CP.carFingerprint not in FORD_CONSERVATIVE_PREVIEW_CARS:
       return 0.0
-    if desired * preview >= 0.0 or desired * self.desired_curvature_last <= 0.0:
+    if desired * preview >= 0.0 or desired * self.desired_curvature_last <= 0.0 or desired * current <= 0.0:
       return 0.0
-    if (abs(desired) >= abs(self.desired_curvature_last) or desired * current <= 0.0 or
-        abs(current) <= abs(desired)):
+    early_handoff_weight = float(np.clip(early_handoff_weight, 0.0, 1.0))
+    lag = abs(current) - abs(desired)
+    if sharp_handoff:
+      lag_min = MACH_E_SHARP_DIRECTION_CHANGE_MIN_LAG_CURVATURE
+      lag_full = MACH_E_SHARP_DIRECTION_CHANGE_FULL_LAG_CURVATURE
+    else:
+      lag_min = float(np.interp(
+        early_handoff_weight, [0.0, 1.0],
+        [MACH_E_DIRECTION_CHANGE_MIN_LAG_CURVATURE, MACH_E_DIRECTION_CHANGE_EARLY_MIN_LAG_CURVATURE],
+      ))
+      lag_full = float(np.interp(
+        early_handoff_weight, [0.0, 1.0],
+        [MACH_E_DIRECTION_CHANGE_FULL_LAG_CURVATURE, MACH_E_DIRECTION_CHANGE_EARLY_FULL_LAG_CURVATURE],
+      ))
+    desired_rising = abs(desired) >= abs(self.desired_curvature_last)
+    rising_handoff = (allow_rising_desired and abs(desired) > abs(self.desired_curvature_last) and
+                      abs(desired) <= MACH_E_LOW_SPEED_DIRECTION_CHANGE_MAX_CURVATURE)
+    early_rising_handoff = early_handoff_weight > 0.0 and lag > lag_min
+    if desired_rising and not rising_handoff and not early_rising_handoff:
       return 0.0
 
     preview_weight = float(np.interp(
@@ -260,9 +316,15 @@ class FordLateralController:
       [MACH_E_DIRECTION_CHANGE_MIN_PREVIEW_CURVATURE, MACH_E_DIRECTION_CHANGE_FULL_PREVIEW_CURVATURE],
       [0.0, 1.0],
     ))
+    if sharp_handoff:
+      preview_weight *= float(np.interp(
+        abs(preview),
+        [MACH_E_SHARP_DIRECTION_CHANGE_MIN_PREVIEW_CURVATURE, MACH_E_SHARP_DIRECTION_CHANGE_FULL_PREVIEW_CURVATURE],
+        [0.0, 1.0],
+      ))
     lag_weight = float(np.interp(
-      abs(current) - abs(desired),
-      [MACH_E_DIRECTION_CHANGE_MIN_LAG_CURVATURE, MACH_E_DIRECTION_CHANGE_FULL_LAG_CURVATURE],
+      lag,
+      [lag_min, lag_full],
       [0.0, 1.0],
     ))
     return preview_weight * lag_weight
@@ -281,6 +343,31 @@ class FordLateralController:
       [0.0, 1.0],
     ))
     return speed_weight * curvature_weight
+
+  @staticmethod
+  def _sharp_direction_change_weight(v_ego: float, a_ego: float, desired: float, preview: float) -> float:
+    speed_weight = float(np.interp(
+      v_ego,
+      [MACH_E_SHARP_DIRECTION_CHANGE_START_SPEED, MACH_E_SHARP_DIRECTION_CHANGE_FULL_SPEED,
+       MACH_E_SHARP_DIRECTION_CHANGE_HOLD_SPEED, MACH_E_SHARP_DIRECTION_CHANGE_FADE_SPEED],
+      [0.0, 1.0, 1.0, 0.0],
+    ))
+    curvature_weight = float(np.interp(
+      abs(desired),
+      [MACH_E_SHARP_DIRECTION_CHANGE_MIN_CURVATURE, MACH_E_SHARP_DIRECTION_CHANGE_FULL_CURVATURE],
+      [0.0, 1.0],
+    ))
+    preview_weight = float(np.interp(
+      abs(preview),
+      [MACH_E_SHARP_DIRECTION_CHANGE_MIN_PREVIEW_CURVATURE, MACH_E_SHARP_DIRECTION_CHANGE_FULL_PREVIEW_CURVATURE],
+      [0.0, 1.0],
+    ))
+    acceleration_weight = float(np.interp(
+      a_ego,
+      [MACH_E_SHARP_DIRECTION_CHANGE_MIN_ACCEL, MACH_E_SHARP_DIRECTION_CHANGE_FULL_ACCEL],
+      [0.0, 1.0],
+    ))
+    return speed_weight * curvature_weight * preview_weight * acceleration_weight
 
   def _manual_turn(self, CC, CS) -> bool:
     if not CC.latActive:
@@ -350,14 +437,32 @@ class FordLateralController:
       turn_in_predicted = self._predicted_curvature(v_ego, lookahead + MACH_E_TURN_IN_LOOKAHEAD_EXTRA)
       direction_change_predicted = turn_in_predicted
       direction_change_weight = 0.0
+      sharp_direction_change_weight = 0.0
       direction_change_speed_weight = float(v_ego > MACH_E_DIRECTION_CHANGE_MIN_SPEED)
+      low_speed_direction_change = direction_change_speed_weight == 0.0
       if direction_change_speed_weight == 0.0:
         direction_change_speed_weight = self._low_speed_direction_change_weight(v_ego, desired)
+        if self.CP.carFingerprint in FORD_SHARP_DIRECTION_CHANGE_CARS:
+          sharp_direction_change_weight = self._sharp_direction_change_weight(
+            v_ego, float(CS.out.aEgo), desired, turn_in_predicted)
+        direction_change_speed_weight = max(direction_change_speed_weight, sharp_direction_change_weight)
       if direction_change_speed_weight > 0.0 and not CS.out.steeringPressed and not self._lane_change()[0]:
         direction_change_lookahead_extra = self._direction_change_lookahead_extra(v_ego)
+        early_handoff_weight = float(np.interp(
+          direction_change_lookahead_extra,
+          [MACH_E_TURN_IN_LOOKAHEAD_EXTRA, MACH_E_DIRECTION_CHANGE_LOOKAHEAD_EXTRA],
+          [0.0, 1.0],
+        ))
+        early_handoff_weight *= float(np.interp(
+          abs(desired),
+          [MACH_E_DIRECTION_CHANGE_EARLY_MIN_CURVATURE, MACH_E_DIRECTION_CHANGE_EARLY_FULL_CURVATURE],
+          [0.0, 1.0],
+        ))
         if direction_change_lookahead_extra > MACH_E_TURN_IN_LOOKAHEAD_EXTRA:
           direction_change_predicted = self._predicted_curvature(v_ego, lookahead + direction_change_lookahead_extra)
-        direction_change_weight = self._direction_change_preview_weight(desired, direction_change_predicted, current)
+        direction_change_weight = self._direction_change_preview_weight(
+          desired, direction_change_predicted, current, allow_rising_desired=low_speed_direction_change,
+          early_handoff_weight=early_handoff_weight, sharp_handoff=sharp_direction_change_weight > 0.0)
         direction_change_weight *= direction_change_speed_weight
       if direction_change_weight > 0.0:
         predicted = float(np.interp(direction_change_weight, [0.0, 1.0], [predicted, direction_change_predicted]))
@@ -375,7 +480,10 @@ class FordLateralController:
         if turn_in_weight > 0.0:
           turn_in_target = float(np.copysign(max(abs(desired), abs(turn_in_predicted)), desired))
           predicted = float(np.interp(turn_in_weight, [0.0, 1.0], [predicted, turn_in_target]))
-    requested, precision = self._blend_and_scale(desired, predicted, v_ego, current, allow_opposite_preview)
+    command_predicted = predicted
+    if not allow_opposite_preview and not CS.out.steeringPressed and not self._lane_change()[0]:
+      command_predicted = self._unwind_preview(desired, predicted, current, v_ego)
+    requested, precision = self._blend_and_scale(desired, command_predicted, v_ego, current, allow_opposite_preview)
     self.desired_curvature_last = desired
 
     if v_ego > 9.0:
@@ -398,7 +506,10 @@ class FordLateralController:
         curvature_rate = 0.0
 
     self.curvature_last = float(np.clip(applied, -0.02, 0.02))
-    curvature_rate = float(np.clip(curvature_rate, -0.001024, 0.001023))
+    min_curvature_rate = -0.001024
+    if self.CP.carFingerprint == CAR.FORD_MUSTANG_MACH_E_MK1 and self.CP.flags & FordFlags.CANFD:
+      min_curvature_rate = -0.001023
+    curvature_rate = float(np.clip(curvature_rate, min_curvature_rate, 0.001023))
     return FordLateralResult(
       curvature=self.curvature_last,
       curvature_rate=curvature_rate,
