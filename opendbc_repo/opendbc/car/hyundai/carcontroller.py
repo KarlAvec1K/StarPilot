@@ -4,7 +4,7 @@ from dataclasses import dataclass
 # hkg-angle-steering-2025 branch at cc4b08625. See CREDITS.md and THIRD_PARTY_NOTICES.md.
 import numpy as np
 from opendbc.can import CANPacker
-from opendbc.car import Bus, DT_CTRL, make_tester_present_msg, rate_limit, structs
+from opendbc.car import Bus, DT_CTRL, create_gas_interceptor_command, make_tester_present_msg, rate_limit, structs
 from opendbc.car.common.filter_simple import FirstOrderFilter
 from opendbc.car.lateral import apply_driver_steer_torque_limits, apply_steer_angle_limits_vm, common_fault_avoidance, get_max_angle_delta_vm, get_max_angle_vm
 from opendbc.car.common.conversions import Conversions as CV
@@ -17,7 +17,7 @@ from opendbc.car.hyundai.values import HyundaiFlags, HyundaiSafetyFlags, Hyundai
 from opendbc.car.interfaces import CarControllerBase
 from opendbc.car.vehicle_model import VehicleModel
 from openpilot.common.params import Params
-from openpilot.selfdrive.controls.lib.longitudinal_vehicle_tunes import get_hyundai_canfd_scc_jerk_limits
+from openpilot.selfdrive.controls.lib.longitudinal_vehicle_tunes import get_hyundai_canfd_scc_jerk_limits, shape_hyundai_canfd_scc_accel
 from openpilot.starpilot.common.testing_grounds import testing_ground
 
 VisualAlert = structs.CarControl.HUDControl.VisualAlert
@@ -42,6 +42,9 @@ IONIQ_6_RESPONSE_MULTIPLIER = 1.2
 IONIQ_6_CANFD_SCC_ACCEL_STEP = (6.0 / 50.0) * IONIQ_6_RESPONSE_MULTIPLIER
 IONIQ_6_CANFD_SCC_DECEL_STEP = (15.0 / 50.0) * IONIQ_6_RESPONSE_MULTIPLIER
 EV9_CANFD_SCC_DECEL_STEP = 10.0 / 50.0
+RAY_PEDAL_COMMAND_CAP = 0.35  # Ray firmware voltage scaling is route-derived; validate before raising.
+RAY_PEDAL_RATE_UP = 0.012     # per 25 Hz command (0.30 normalized pedal per second)
+RAY_PEDAL_RATE_DOWN = 0.06
 GENESIS_G90_STOP_HOLD_SPEED_BP = [0.0, 0.03, 0.08, 0.16, 0.3, 0.5, 0.8, 1.2, 2.0, 3.0]
 GENESIS_G90_STOP_HOLD_ACCEL_V = [-0.10, -0.10, -0.12, -0.18, -0.30, -0.50, -0.75, -1.00, -1.40, -1.80]
 GENESIS_G90_STOP_HOLD_RELAX_SPEED_BP = [0.0, 0.08, 0.16, 0.3, 0.5, 0.8, 1.2, 2.0, 3.0]
@@ -438,12 +441,6 @@ def suppress_redundant_gv70_brake_cancel(CP, brake_pressed: bool, lat_active: bo
   )
 
 
-def clear_ioniq_6_torque_when_request_inactive(CP, apply_torque: int, apply_steer_req: bool) -> int:
-  if CP.carFingerprint == CAR.HYUNDAI_IONIQ_6 and not apply_steer_req:
-    return 0
-  return apply_torque
-
-
 class CarController(CarControllerBase):
   def __init__(self, dbc_names, CP):
     super().__init__(dbc_names, CP)
@@ -485,6 +482,9 @@ class CarController(CarControllerBase):
       CP.safetyConfigs[-1].safetyParam & HyundaiSafetyFlags.CAN_REFRESH_MSGS
     )
     self._ray_lfa_packer = CANPacker("hyundai_kia_ray_lfa") if self._ray_lfa_8byte else None
+    self._ray_pedal = CP.carFingerprint == CAR.KIA_RAY_EV and CP.enableGasInterceptorDEPRECATED
+    self._ray_pedal_packer = CANPacker("hyundai_kia_ray_pedal") if self._ray_pedal else None
+    self._ray_pedal_gas_last = 0.0
 
   def _update_dash_icon_state(self, CC):
     if CC.latActive:
@@ -636,8 +636,6 @@ class CarController(CarControllerBase):
       if not CC.latActive:
         apply_torque = 0
 
-      apply_torque = clear_ioniq_6_torque_when_request_inactive(self.CP, apply_torque, apply_steer_req)
-
       # Hold torque with induced temporary fault when cutting the actuation bit
       # FIXME: we don't use this with CAN FD?
       torque_fault = CC.latActive and not apply_steer_req
@@ -776,6 +774,7 @@ class CarController(CarControllerBase):
     if blended_hda2:
       can_sends.extend(hyundaicanfd.create_steering_messages(
         self.packer, self.CP, self.CAN, CC.enabled, apply_steer_req, apply_torque, 0.0,
+        lka_icon=lka_icon,
         longitudinal_active=longitudinal_active,
       ))
       if self.long_active_ecu:
@@ -786,6 +785,7 @@ class CarController(CarControllerBase):
           left_lane_warning, right_lane_warning, CS.msg_364,
           include_alerts=False,
           counter_mod=0xF,
+          fcw_opt_usm=2 if apply_steer_req or lka_icon == 3 else 1,
         ))
       if self.frame % 5 == 0:
         can_sends.append(hyundaicanfd.create_suppress_lfa(
@@ -811,7 +811,11 @@ class CarController(CarControllerBase):
     if not self.long_active_ecu:
       if self.cancel_counter > CANCEL_BUTTON_DELAY_FRAMES:
         can_sends.append(hyundaican.create_clu11(self.packer, self.frame, CS.clu11, Buttons.CANCEL, self.CP))
-      elif CC.cruiseControl.resume:
+      elif self._ray_pedal and CC.enabled and CS.out.cruiseState.enabled:
+        if (self.frame - self.last_button_frame) * DT_CTRL > 0.1:
+          can_sends.append(hyundaican.create_clu11(self.packer, self.frame, CS.clu11, Buttons.CANCEL, self.CP))
+          self.last_button_frame = self.frame
+      elif CC.cruiseControl.resume and not self._ray_pedal:
         # send resume at a max freq of 10Hz
         if (self.frame - self.last_button_frame) * DT_CTRL > 0.1:
           # send 25 messages at a time to increases the likelihood of resume being accepted
@@ -819,7 +823,24 @@ class CarController(CarControllerBase):
           if (self.frame - self.last_button_frame) * DT_CTRL >= 0.15:
             self.last_button_frame = self.frame
       else:
-        can_sends.extend(self._create_can_redneck_button_messages(CS))
+        if not self._ray_pedal:
+          can_sends.extend(self._create_can_redneck_button_messages(CS))
+
+    if self._ray_pedal and self.frame % 4 == 0:
+      pedal_ready = CS.ray_pedal_valid and CS.ray_pedal_state == 0
+      pedal_active = (CC.longActive and pedal_ready and not CC.cruiseControl.override and
+                      not CS.out.gasPressed and not CS.out.brakePressed and
+                      not CS.out.cruiseState.enabled)
+      if pedal_active:
+        target = float(np.clip(accel / CarControllerParams.ACCEL_MAX * RAY_PEDAL_COMMAND_CAP,
+                               0.0, RAY_PEDAL_COMMAND_CAP))
+        self._ray_pedal_gas_last = rate_limit(
+          target, self._ray_pedal_gas_last, -RAY_PEDAL_RATE_DOWN, RAY_PEDAL_RATE_UP,
+        )
+      else:
+        self._ray_pedal_gas_last = 0.0
+      can_sends.append(create_gas_interceptor_command(
+        self._ray_pedal_packer, self._ray_pedal_gas_last, (self.frame // 4) & 0xF))
 
     if self.long_active_ecu and can_canfd_blended:
       if blended_hda2:
@@ -1004,7 +1025,9 @@ class CarController(CarControllerBase):
             left_sound_active=left_warning.sound_active, right_sound_active=right_warning.sound_active,
           )
         else:
-          adrv_messages = hyundaicanfd.create_adrv_messages(self.packer, self.CAN, self.frame)
+          adrv_messages = hyundaicanfd.create_adrv_messages(self.packer, self.CAN, self.frame,
+                                                             car_fingerprint=self.CP.carFingerprint,
+                                                             drive_gear=drive_gear)
         can_sends.extend(adrv_messages)
         # The front radar treats ADAS_DRV's 0x100 broadcast as its host heartbeat
         # and stops publishing object tracks when it disappears.
@@ -1035,8 +1058,14 @@ class CarController(CarControllerBase):
       if self.frame % 2 == 0:
         lead_visible, lead_distance, lead_rel_speed = self._get_canfd_scc_lead_state(CC, CS, now_nanos)
         if self.CP.carFingerprint == CAR.GENESIS_GV70_ELECTRIFIED_1ST_GEN:
-          scc_jerk_limits = get_hyundai_canfd_scc_jerk_limits(self.CP)
+          scc_jerk_limits = get_hyundai_canfd_scc_jerk_limits(self.CP, stopping, accel)
+          raw_accel = accel
+          accel = shape_hyundai_canfd_scc_accel(
+            self.CP, CC.enabled, CC.cruiseControl.override, stopping, accel, self.accel_last,
+          )
           acc_kwargs = {
+            "direct_accel": True,
+            "raw_accel": raw_accel,
             "jerk_upper": scc_jerk_limits[0],
             "jerk_lower": scc_jerk_limits[1],
             "lead_distance": lead_distance,

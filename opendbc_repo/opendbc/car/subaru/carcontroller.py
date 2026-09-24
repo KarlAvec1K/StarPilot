@@ -4,6 +4,7 @@ from opendbc.car import Bus, DT_CTRL, make_tester_present_msg, structs
 from opendbc.car.lateral import apply_driver_steer_torque_limits, apply_std_steer_angle_limits, apply_steer_angle_limits_vm, common_fault_avoidance
 from opendbc.car.interfaces import CarControllerBase
 from opendbc.car.subaru import subarucan
+from opendbc.car.subaru.avh import AvhStartup
 from opendbc.car.subaru.values import CAR, DBC, GLOBAL_ES_ADDR, SUBARU_STOP_START_CARS, CanBus, CarControllerParams, SubaruFlags
 from opendbc.car.vehicle_model import VehicleModel
 
@@ -69,6 +70,7 @@ class CarController(CarControllerBase):
     self.stop_start_counter = 0
     self.stop_start_acknowledged = False
     self.last_redneck_button_frame = 0
+    self.avh_startup = AvhStartup()
 
   def _stop_start_off_request(self, CC, CS, starpilot_toggles):
     """Send one bounded Subaru Stop/Start OFF request after ignition.
@@ -130,14 +132,12 @@ class CarController(CarControllerBase):
     self.angle_override_confirm_frames = 0
     self.angle_handoff_active = False
 
-  def _angle_manual_handoff(self, CS, lat_active, use_steering_pressed=False):
+  def _angle_manual_handoff(self, CS, lat_active):
     if not lat_active:
       self._reset_angle_handoff()
       return False
 
     driver_override = self._update_angle_driver_override(CS)
-    if use_steering_pressed:
-      driver_override = driver_override or getattr(CS.out, "steeringPressed", False)
     steering_rate = abs(getattr(CS.out, "steeringRateDeg", 0.0))
     if driver_override:
       self.angle_handoff_active = True
@@ -216,33 +216,24 @@ class CarController(CarControllerBase):
         else:
           self.ascent_aol_arm_frames = _ASCENT_AOL_ARM_FRAMES if lkas_available else 0
 
-      manual_handoff = self._angle_manual_handoff(
-        CS, lkas_available, use_steering_pressed=self.CP.carFingerprint == CAR.SUBARU_OUTBACK_2023,
-      )
+      if self.CP.carFingerprint == CAR.SUBARU_OUTBACK_2023:
+        manual_handoff = not self.angle_lkas_active and \
+          abs(getattr(CS.out, "steeringRateDeg", 0.0)) > _ANGLE_REENGAGE_MAX_STEER_RATE
+      else:
+        manual_handoff = self._angle_manual_handoff(CS, lkas_available)
       lkas_active = lkas_available and not manual_handoff
 
       if lkas_active and not self.angle_lkas_active:
         self.apply_steer_last = CS.out.steeringAngleDeg
 
-      if self.CP.carFingerprint in (CAR.SUBARU_ASCENT_2023, CAR.SUBARU_OUTBACK_2023):
-        apply_steer = apply_std_steer_angle_limits(
-          CC.actuators.steeringAngleDeg,
-          self.apply_steer_last,
-          CS.out.vEgoRaw,
-          CS.out.steeringAngleDeg,
-          lkas_active,
-          self.p.FIXED_ANGLE_LIMITS,
-        )
-      else:
-        apply_steer = apply_steer_angle_limits_vm(
-          steer_target,
-          self.apply_steer_last,
-          CS.out.vEgoRaw,
-          CS.out.steeringAngleDeg,
-          lkas_active,
-          self.p,
-          self.VM,
-        )
+      apply_steer = apply_std_steer_angle_limits(
+        CC.actuators.steeringAngleDeg,
+        self.apply_steer_last,
+        CS.out.vEgoRaw,
+        CS.out.steeringAngleDeg,
+        lkas_active,
+        self.p.FIXED_ANGLE_LIMITS,
+      )
       self.apply_steer_last = apply_steer
       self.angle_lkas_active = lkas_active
       return subarucan.create_steering_control_angle(self.packer, apply_steer, lkas_active, self.angle_bus)
@@ -318,6 +309,13 @@ class CarController(CarControllerBase):
     stop_start_msg = self._stop_start_off_request(CC, CS, starpilot_toggles)
     if stop_start_msg is not None:
       can_sends.append(stop_start_msg)
+
+    if self.CP.carFingerprint == CAR.SUBARU_LEGACY_2025:
+      can_sends.extend(self.avh_startup.update(
+        now_nanos / 1e9, getattr(CS, "avh_frames", {}),
+        getattr(starpilot_toggles, "subaru_avh_on", False), getattr(CS.out, "canValid", False),
+        CC.enabled or CC.latActive or CC.longActive,
+      ))
 
     # *** steering ***
     if (self.frame % self.p.STEER_STEP) == 0:
@@ -411,9 +409,11 @@ class CarController(CarControllerBase):
                                                         CC.longActive, hud_control.leadVisible,
                                                         self.status_bus))
 
-        can_sends.append(subarucan.create_es_lkas_state(self.packer, self.frame // 10, CS.es_lkas_state_msg, self._lkas_status_active(CC), hud_control.visualAlert,
-                                                        hud_control.leftLaneVisible, hud_control.rightLaneVisible,
-                                                        hud_control.leftLaneDepart, hud_control.rightLaneDepart, self.status_bus))
+        can_sends.append(subarucan.create_es_lkas_state(
+          self.packer, self.frame // 10, CS.es_lkas_state_msg, self._lkas_status_active(CC), hud_control.visualAlert,
+          hud_control.leftLaneVisible, hud_control.rightLaneVisible,
+          hud_control.leftLaneDepart, hud_control.rightLaneDepart, self.status_bus,
+        ))
 
         if self.CP.flags & SubaruFlags.SEND_INFOTAINMENT:
           can_sends.append(subarucan.create_es_infotainment(self.packer, self.frame // 10, CS.es_infotainment_msg,

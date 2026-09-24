@@ -643,8 +643,8 @@ def test_angle_controller_uses_fixed_angle_rate_limits(platform):
   assert CS.out.steeringAngleDeg < parser.vl["ES_LKAS_ANGLE"]["LKAS_Output"] < -25.0
 
 
-@pytest.mark.parametrize("platform", (CAR.SUBARU_ASCENT_2023, CAR.SUBARU_OUTBACK_2023))
-def test_angle_controller_reengages_immediately_after_manual_steering_stops(platform):
+def test_ascent_angle_controller_reengages_immediately_after_manual_steering_stops():
+  platform = CAR.SUBARU_ASCENT_2023
   CP = CarInterface.get_non_essential_params(platform)
   controller = CarController({}, CP)
   CC = SimpleNamespace(enabled=True, latActive=True, actuators=SimpleNamespace(steeringAngleDeg=-10.0))
@@ -775,7 +775,7 @@ def test_ascent_angle_controller_does_not_delay_normal_engagement():
 def test_lkas_hud_state_uses_angle_request_state():
   update_source = inspect.getsource(CarController.update)
 
-  assert "create_es_lkas_state(self.packer, self.frame // 10, CS.es_lkas_state_msg, self._lkas_status_active(CC)" in update_source
+  assert "CS.es_lkas_state_msg, self._lkas_status_active(CC), hud_control.visualAlert" in update_source
   assert "create_es_lkas_state(self.packer, self.frame // 10, CS.es_lkas_state_msg, CC.enabled" not in update_source
 
 
@@ -795,7 +795,7 @@ def test_lkas_hud_active_bit_follows_lateral_state(enabled, expected):
   assert parser.vl["ES_LKAS_State"]["LKAS_ACTIVE"] == expected
 
 
-def test_outback_manual_steering_releases_angle_request_before_lkas_fault():
+def test_outback_manual_steering_keeps_cooperative_angle_request():
   CP = CarInterface.get_non_essential_params(CAR.SUBARU_OUTBACK_2023)
   controller = CarController({}, CP)
   CC = SimpleNamespace(
@@ -806,20 +806,45 @@ def test_outback_manual_steering_releases_angle_request_before_lkas_fault():
   CS = SimpleNamespace(out=SimpleNamespace(
     vEgoRaw=0.9,
     steeringAngleDeg=-57.0,
-    steeringRateDeg=-45.0,
-    steeringTorque=-127.0,
+    steeringRateDeg=0.0,
+    steeringTorque=0.0,
     steeringPressed=True,
     gearShifter=structs.CarState.GearShifter.drive,
     standstill=False,
   ))
   parser = CANParser(DBC[CP.carFingerprint][Bus.pt], [("ES_LKAS_ANGLE", 0)], CanBus.main)
 
-  msg = controller.lateral_angle(CC, CS)
-  parser.update([(1, [msg])])
+  for frame, steering_torque in enumerate((-79.0, -81.0, -170.0, -250.0, -250.0, 79.0, 81.0, 170.0, 250.0, 250.0), start=1):
+    CS.out.steeringRateDeg = 0.0 if frame == 1 else -45.0
+    CS.out.steeringTorque = steering_torque
+    CS.out.steeringPressed = abs(steering_torque) > 80.0
+    msg = controller.lateral_angle(CC, CS)
+    parser.update([(frame, [msg])])
 
-  assert parser.vl["ES_LKAS_ANGLE"]["LKAS_Request"] == 0
-  assert parser.vl["ES_LKAS_ANGLE"]["LKAS_Output"] == pytest.approx(CS.out.steeringAngleDeg)
-  assert not controller._lkas_status_active(CC)
+    assert parser.vl["ES_LKAS_ANGLE"]["LKAS_Request"] == 1
+    assert CC.actuators.steeringAngleDeg < parser.vl["ES_LKAS_ANGLE"]["LKAS_Output"] < CS.out.steeringAngleDeg
+    assert controller._lkas_status_active(CC)
+
+
+def test_outback_waits_for_manual_turn_to_settle_before_reentry():
+  CP = CarInterface.get_non_essential_params(CAR.SUBARU_OUTBACK_2023)
+  controller = CarController({}, CP)
+  CC = SimpleNamespace(enabled=False, latActive=True, actuators=SimpleNamespace(steeringAngleDeg=-80.0))
+  CS = SimpleNamespace(out=SimpleNamespace(
+    vEgoRaw=7.3, steeringAngleDeg=-121.47, steeringRateDeg=126.5,
+    gearShifter=structs.CarState.GearShifter.drive, standstill=False,
+  ))
+  parser = CANParser(DBC[CP.carFingerprint][Bus.pt], [("ES_LKAS_ANGLE", 0)], CanBus.main)
+  for frame, (angle, rate, active) in enumerate([
+    (-121.47, 126.5, False), (-117.96, 122.5, False), (-88.65, 112.0, False),
+    (-0.24, 0.0, True),
+  ], start=1):
+    CS.out.steeringAngleDeg = angle
+    CS.out.steeringRateDeg = rate
+    parser.update([(frame, [controller.lateral_angle(CC, CS)])])
+    assert bool(parser.vl["ES_LKAS_ANGLE"]["LKAS_Request"]) == active
+    if not active:
+      assert parser.vl["ES_LKAS_ANGLE"]["LKAS_Output"] == pytest.approx(angle, abs=0.01)
 
 
 def test_ascent_hud_waits_for_angle_request():
