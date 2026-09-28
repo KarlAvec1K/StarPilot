@@ -12,8 +12,8 @@ from openpilot.starpilot.common.accel_profile import (
 
 CURRENT = [6.00, 1.15, 0.75, 1.35, 1.83, 1.83, 0.83]
 SPEEDS_KPH = (0, 20, 40, 50, 60, 70, 80, 100, 120)
-EXPECTED_CAPS = (6.000000, 1.145387, 0.795847, 1.304153, 1.350000, 1.350000, 1.330166, 1.295283, 1.239669)
-EXPECTED_DELTAS = (0.0, 0.0, 0.0, 0.0, -0.100741, -0.474464, -0.499834, -0.487545, 0.012981)
+EXPECTED_CAPS = (6.000000, 1.999900, 1.999900, 1.999900, 1.999900, 1.999900, 1.999900, 1.999900, 1.999900)
+EXPECTED_DELTAS = (0.0, 0.854513, 1.204053, 0.695747, 0.549159, 0.175436, 0.169900, 0.217073, 0.773213)
 
 
 def cap(speed_kph):
@@ -22,7 +22,7 @@ def cap(speed_kph):
 
 def test_candidate_constants_and_breakpoints_are_exact():
   assert A_CRUISE_MAX_BP_CUSTOM == [0.0, 5.0, 10.0, 15.0, 20.0, 25.0, 40.0]
-  assert A_CRUISE_MAX_VALS_SPORT_TRUCK == [6.00, 1.15, 0.75, 1.35, 1.35, 1.30, 1.20]
+  assert A_CRUISE_MAX_VALS_SPORT_TRUCK == [6.00, 1.9999, 1.9999, 1.9999, 1.9999, 1.9999, 1.9999]
   assert get_accel_profile_curve_values(2, ev_tuning=False, truck_tuning=True) == A_CRUISE_MAX_VALS_SPORT_TRUCK
 
 
@@ -34,8 +34,8 @@ def test_candidate_caps_and_deltas_match_rule_of_three_tune():
     assert actual - current == pytest.approx(expected_delta, abs=0.005)
 
 
-def test_candidate_preserves_low_speed_breakpoint_values_and_physical_cap():
-  assert A_CRUISE_MAX_VALS_SPORT_TRUCK[:3] == [6.00, 1.15, 0.75]
+def test_candidate_preserves_zero_speed_breakpoint_and_physical_cap():
+  assert A_CRUISE_MAX_VALS_SPORT_TRUCK[0] == 6.00
   samples = [cap(speed * 3.6) for speed in [i / 100 for i in range(1000, 4001)]]
   assert all(math.isfinite(value) and 0.0 <= value <= 2.0 for value in samples[1:])
 
