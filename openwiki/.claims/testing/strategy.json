@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:6743e358a9829eadae1c917e133fe84f12737bd86c6916658a299ac30941a056",
+  "claims": [
+    {
+      "id": "claim_2ed086a196b74525a6d8430771ab35cb",
+      "statement": "pyproject.toml configures pytest with strict markers, warnings-as-errors, parallel execution, selected test paths, and exclusions for vendored or sibling repositories.",
+      "evidence": [
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        }
+      ]
+    },
+    {
+      "id": "claim_775e2cf3f7e347c38ace8b20dc26ee58",
+      "statement": "StarPilot test suites cover parameter/default/migration contracts, safe mode and screen settings, planner/card behavior, personality and acceleration profiles, Ford lateral behavior, navigation, and Galaxy API/frontend/update flows.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/car/ford/tests/test_lateral.py",
+          "version": "repo-file-v1:sha256:9839c37ec258da183251988b5c9a34d77ad1fcd1392eca7eda868bf2fb8d8dad"
+        },
+        {
+          "resource": "repo://starpilot/common/tests/test_starpilot_functions.py",
+          "version": "repo-file-v1:sha256:944d6f4dacd19f53a5b0bfc0daec309f13273739708c6967ed6f67ef3cd18aaf"
+        },
+        {
+          "resource": "repo://starpilot/controls/tests/test_fleet_aol.py",
+          "version": "repo-file-v1:sha256:f3f711177ece60067fe34eb386d5019b3caa8533a68a108d7a9c25f2b6fbbe14"
+        },
+        {
+          "resource": "repo://starpilot/navigation/test_route_engine.py",
+          "version": "repo-file-v1:sha256:ad37093451a58145e55bcecac1f96bf4c5b147a6d0ee285dca80dadd1640a955"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/tests/test_version_install.py",
+          "version": "repo-file-v1:sha256:91a1abe11b78b9906d81d9648bd69b69d0acec3d0b74503bd07ca390bdf75784"
+        }
+      ]
+    },
+    {
+      "id": "claim_817c5d1542244c0791afa30e3cdbd340",
+      "statement": "Vehicle tests cover interfaces, fingerprints, car-specific behavior, fleet safety, and actuator saturation, while replay and simulation tests exercise messaging/process consumers with controlled inputs.",
+      "evidence": [
+        {
+          "resource": "repo://selfdrive/car/tests/test_car_interfaces.py",
+          "version": "repo-file-v1:sha256:8e152f5800a156549fb9ee75f3ee43747b0135dbe68e94a2c4c97b9261c37a79"
+        },
+        {
+          "resource": "repo://selfdrive/car/tests/test_fleet_safety_core.py",
+          "version": "repo-file-v1:sha256:15c332d2d7eb60a46e6c062da83dd8da443d4623eb08661e9273ccb16184af05"
+        },
+        {
+          "resource": "repo://tools/replay/tests/test_onroad_config.py",
+          "version": "repo-file-v1:sha256:be07714f87a880300124c81e675de2a339f87afdb5d2789e5dbe6f71f6d6a821"
+        },
+        {
+          "resource": "repo://tools/sim/tests/test_sim_bridge.py",
+          "version": "repo-file-v1:sha256:bbc66974018ed61a4cde996230690f96c11c7b12a0923ef7d845d06a494fefb1"
+        }
+      ]
+    },
+    {
+      "id": "claim_f8b85eff9dcc49b0a6622873f9262263",
+      "statement": "Repository tests provide source, mocked, replay, and simulation evidence but do not prove physical CAN safety, hardware timing, network availability, or on-road behavior.",
+      "evidence": [
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        },
+        {
+          "resource": "repo://starpilot/controls/tests/test_fleet_aol.py",
+          "version": "repo-file-v1:sha256:f3f711177ece60067fe34eb386d5019b3caa8533a68a108d7a9c25f2b6fbbe14"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}

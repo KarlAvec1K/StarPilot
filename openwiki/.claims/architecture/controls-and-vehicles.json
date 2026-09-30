@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:05269bcbbc4b550931934daef1eae99ada0435ba6af83090b9cbe9a8271ff315",
+  "claims": [
+    {
+      "id": "claim_3bd0b8f89b4342188f389f5d5f496aef",
+      "statement": "controlsd waits for serialized CarParams and StarPilotCarParams, selects the longitudinal and lateral controllers, subscribes to StarPilot services, and publishes carControl, controlsState, and starpilotLateralState.",
+      "evidence": [
+        {
+          "resource": "repo://selfdrive/controls/controlsd.py",
+          "version": "repo-file-v1:sha256:5a7a4c3f0315d93f660b28f01c02a6c036b872169a3abc67e2715465d94928fb"
+        }
+      ]
+    },
+    {
+      "id": "claim_4d0fd67b66ee4fcd8e5606413d9f0c8e",
+      "statement": "The StarPilot planner aggregates feature outputs into a starpilotPlan message containing acceleration, cruise, lateral-check, speed-limit, and toggle state consumed by downstream control code.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/controls/starpilot_planner.py",
+          "version": "repo-file-v1:sha256:741f07f616d3cb25602051bc8ac06b2f741357c747b3ca6ca3d3b9798ddd73e3"
+        }
+      ]
+    },
+    {
+      "id": "claim_919d946fc338476b85a4e5a06eb9cdf1",
+      "statement": "The shared lateral controller treats saturation as meaningful only when it is not caused by safety limiting, driver steering input, or curvature limiting.",
+      "evidence": [
+        {
+          "resource": "repo://selfdrive/controls/lib/latcontrol.py",
+          "version": "repo-file-v1:sha256:4da75b32c8d0e1331d24bc22da235cf19bbce35b75b9f676b8afc4d7e5f2cc7d"
+        }
+      ]
+    },
+    {
+      "id": "claim_bbdd6f34ed4447d7b5c680880098b0e5",
+      "statement": "Vehicle integration applies StarPilot access and parameter policy before selecting a vehicle interface and obtaining standard and StarPilot-specific car parameters.",
+      "evidence": [
+        {
+          "resource": "repo://opendbc_repo/opendbc/car/car_helpers.py",
+          "version": "repo-file-v1:sha256:356f188224e4165da40de4399350ed4ee92313ad5a724c1d563230a3eae3b725"
+        }
+      ]
+    },
+    {
+      "id": "claim_4f9a16c4f987486bbf855e1606655350",
+      "statement": "The repository contains focused tests for StarPilot controls, Ford lateral behavior, car interfaces, and fleet/safety behavior, but those tests are source-level evidence rather than physical-vehicle validation.",
+      "evidence": [
+        {
+          "resource": "repo://selfdrive/car/tests/test_fleet_safety_core.py",
+          "version": "repo-file-v1:sha256:15c332d2d7eb60a46e6c062da83dd8da443d4623eb08661e9273ccb16184af05"
+        },
+        {
+          "resource": "repo://starpilot/car/ford/tests/test_lateral.py",
+          "version": "repo-file-v1:sha256:9839c37ec258da183251988b5c9a34d77ad1fcd1392eca7eda868bf2fb8d8dad"
+        },
+        {
+          "resource": "repo://starpilot/controls/tests/test_fleet_aol.py",
+          "version": "repo-file-v1:sha256:f3f711177ece60067fe34eb386d5019b3caa8533a68a108d7a9c25f2b6fbbe14"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}

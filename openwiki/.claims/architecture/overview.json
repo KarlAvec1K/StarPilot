@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:a298c4558ccab2418d66ac93684292e536a2db62baeb36a57fc63be4f9732175",
+  "claims": [
+    {
+      "id": "claim_1663c46bc26e47958d0f900e32dcfe27",
+      "statement": "StarPilot combines openpilot runtime processes with StarPilot packages, modified selfdrive/system consumers, opendbc vehicle code, cereal schemas, and sibling repositories.",
+      "evidence": [
+        {
+          "resource": "repo://README.md",
+          "version": "repo-file-v1:sha256:b3c5db928cef9ea8092c0de4bdb2148caf5163a3245fb8a36eda2ed82d044399"
+        },
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        }
+      ]
+    },
+    {
+      "id": "claim_5153ac0037c3471c9fc2f19ca87eb5d5",
+      "statement": "The runtime is process-oriented: manager configuration supervises daemons, cereal services carry runtime state, and Params persists configuration and lifecycle state.",
+      "evidence": [
+        {
+          "resource": "repo://cereal/services.py",
+          "version": "repo-file-v1:sha256:1c8d6480b0cb1f577621d13bb9720f89875659b65de8af6c4f61ce4cb1c61608"
+        },
+        {
+          "resource": "repo://common/params.py",
+          "version": "repo-file-v1:sha256:437168cce6fbbfbd643cc22cb4e80cf735b73434900f3fb31ec9677de44c8ed3"
+        },
+        {
+          "resource": "repo://system/manager/manager.py",
+          "version": "repo-file-v1:sha256:4d1d4a9399ebedebc7d0a8d038d8d3ceee2949a36ec7260188f1de7af8efc3b0"
+        }
+      ]
+    },
+    {
+      "id": "claim_0c5f1847a31d4d18b6d3134e304cbe7e",
+      "statement": "StarPilot-specific planner and vehicle state use dedicated cereal services to connect feature implementations with shared control consumers.",
+      "evidence": [
+        {
+          "resource": "repo://selfdrive/controls/controlsd.py",
+          "version": "repo-file-v1:sha256:5a7a4c3f0315d93f660b28f01c02a6c036b872169a3abc67e2715465d94928fb"
+        },
+        {
+          "resource": "repo://starpilot/controls/starpilot_planner.py",
+          "version": "repo-file-v1:sha256:741f07f616d3cb25602051bc8ac06b2f741357c747b3ca6ca3d3b9798ddd73e3"
+        }
+      ]
+    },
+    {
+      "id": "claim_22fd4db234324a1fa7743f7fab506efe",
+      "statement": "Cereal schemas, manager supervision, Params persistence, and opendbc/panda safety/CAN handling are distinct integration boundaries.",
+      "evidence": [
+        {
+          "resource": "repo://cereal/log.capnp",
+          "version": "repo-file-v1:sha256:774e10997098d22bac64eab21fc00449d96ddb2a5274bedd14654adfed20a532"
+        },
+        {
+          "resource": "repo://common/params.py",
+          "version": "repo-file-v1:sha256:437168cce6fbbfbd643cc22cb4e80cf735b73434900f3fb31ec9677de44c8ed3"
+        },
+        {
+          "resource": "repo://opendbc_repo/opendbc/car/car_helpers.py",
+          "version": "repo-file-v1:sha256:356f188224e4165da40de4399350ed4ee92313ad5a724c1d563230a3eae3b725"
+        },
+        {
+          "resource": "repo://system/manager/manager.py",
+          "version": "repo-file-v1:sha256:4d1d4a9399ebedebc7d0a8d038d8d3ceee2949a36ec7260188f1de7af8efc3b0"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}

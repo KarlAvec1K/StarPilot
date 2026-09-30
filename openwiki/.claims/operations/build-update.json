@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:10ab0d3d06f63edfddfa16c5f4921e3a815389718cc4ffc6a40f990e3f87e02d",
+  "claims": [
+    {
+      "id": "claim_68afee2d80274f3692cc9d9c28e6b320",
+      "statement": "The root build wrapper and manager build code provide developer/device-oriented build entrypoints, while pyproject.toml defines Python packaging, dependencies, test discovery, Ruff, and mypy boundaries.",
+      "evidence": [
+        {
+          "resource": "repo://build",
+          "version": "repo-file-v1:sha256:c75068c05bd19b43594717841e9820d303e09a52fe6f5a765523aa9b65c6a65e"
+        },
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        },
+        {
+          "resource": "repo://system/manager/build.py",
+          "version": "repo-file-v1:sha256:1c0b6d90402c5c7aa268a7b3bf0965eec3bf53807ed3923f7f8a5960a9417b60"
+        }
+      ]
+    },
+    {
+      "id": "claim_5aef92aa1c1e4dfabfe5881e30c9b8e8",
+      "statement": "updated.py owns lower-level update process/state transitions, while Galaxy implements higher-level branch/version selection, installation, rollback, recovery, and AGNOS checks.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/system/the_galaxy/update_recovery.py",
+          "version": "repo-file-v1:sha256:8a6a895090be0ff921243077d361a19036787dfa15f662af41c48a5afe586e5b"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/version_install.py",
+          "version": "repo-file-v1:sha256:79ebe08c83aaca48e5f371fdc1c29a79f7d2b9c4b9c6fe27d8657b8397e579e7"
+        },
+        {
+          "resource": "repo://system/updated/updated.py",
+          "version": "repo-file-v1:sha256:980f35a06ddf3cd892601284827eea2bf634bb677cd5df35839ceed2f10161a8"
+        }
+      ]
+    },
+    {
+      "id": "claim_9146b22a7893487ba155b5b1fab99b6c",
+      "statement": "Update flows record progress and interrupted state, validate Git targets, preserve rollback information, and handle submodules when required.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/system/the_galaxy/the_galaxy.py",
+          "version": "repo-file-v1:sha256:da859862523342bea4f7020f8e1eb67393af112e470f50c658462f57f71d4c96"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/update_recovery.py",
+          "version": "repo-file-v1:sha256:8a6a895090be0ff921243077d361a19036787dfa15f662af41c48a5afe586e5b"
+        }
+      ]
+    },
+    {
+      "id": "claim_70832365098c44bda9cde5e876e02e76",
+      "statement": "Update tests rehearse recovery and installation decisions with source-level fixtures rather than proving a live device update.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/system/the_galaxy/tests/test_update_recovery.py",
+          "version": "repo-file-v1:sha256:396f3b2d040db8999b54898262344106d494904a176bd2e1be6de4fcc7adcef8"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/tests/test_version_install.py",
+          "version": "repo-file-v1:sha256:91a1abe11b78b9906d81d9648bd69b69d0acec3d0b74503bd07ca390bdf75784"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:4f0b7f6f062f853bffbd756e709c9a4d202c8803f3dd24c7be5ac429b9bbfcc2",
+  "claims": [
+    {
+      "id": "claim_f85c1bfd37c34dc7ad98b1df4b9525ae",
+      "statement": "Core runtime code is organized across selfdrive, system, common, cereal, and panda, with StarPilot additions under starpilot and vehicle/CAN support under opendbc_repo.",
+      "evidence": [
+        {
+          "resource": "repo://README.md",
+          "version": "repo-file-v1:sha256:b3c5db928cef9ea8092c0de4bdb2148caf5163a3245fb8a36eda2ed82d044399"
+        },
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        }
+      ]
+    },
+    {
+      "id": "claim_838ebf47963e45c6beb23e7c75bfcb1d",
+      "statement": "Sibling/vendor trees such as msgq_repo, rednose_repo, tinygrad_repo, and teleoprtc_repo have separate test and lint boundaries in project configuration.",
+      "evidence": [
+        {
+          "resource": "repo://.gitignore",
+          "version": "repo-file-v1:sha256:215ba7fc7a0c89f408abcd9de2de2155f757bd2b8cc93bab4bca7e09be0e6e53"
+        },
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        }
+      ]
+    },
+    {
+      "id": "claim_ce4e6cae9b3c42c79f2d70dc426a5ff3",
+      "statement": "The project targets Python 3.11 through 3.12 and configures pytest, Ruff, mypy, and optional documentation/testing/development dependency groups in pyproject.toml.",
+      "evidence": [
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        }
+      ]
+    },
+    {
+      "id": "claim_bbeb628594104030a48db74b106a451d",
+      "statement": "Ruff bans ambiguous top-level imports from selfdrive, common, system, and tools in favor of package-qualified openpilot imports.",
+      "evidence": [
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ee1f079a6417b4acd416af7a2b23b4c70f4687fa7db3ec21cd63c9381e562201",
+  "claims": [
+    {
+      "id": "claim_5b68a8082e5a46ad944f9021d2dacd75",
+      "statement": "Navigation state is split across navigation processes, persistent destination state, UI consumers, and Galaxy's remote parameter/API boundary.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/navigation/test_destination_store.py",
+          "version": "repo-file-v1:sha256:92741ebbcdc5b28d4e73792214b57e155f2b51602aebfa363a2535ab5fdca562"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/the_galaxy.py",
+          "version": "repo-file-v1:sha256:da859862523342bea4f7020f8e1eb67393af112e470f50c658462f57f71d4c96"
+        }
+      ]
+    },
+    {
+      "id": "claim_dfff35e55d324bae9ceac898679ba022",
+      "statement": "Galaxy route helpers scan recorded footage, associate metadata, resolve thumbnails, and schedule media transformations around HTTP requests.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/system/the_galaxy/the_galaxy.py",
+          "version": "repo-file-v1:sha256:da859862523342bea4f7020f8e1eb67393af112e470f50c658462f57f71d4c96"
+        }
+      ]
+    },
+    {
+      "id": "claim_014418c8533a490ca0c92fbc144c13b2",
+      "statement": "The WebRTC daemon manages dynamic media publication through messaging subscriptions, with focused helper and stream-session tests.",
+      "evidence": [
+        {
+          "resource": "repo://system/webrtc/tests/test_stream_session.py",
+          "version": "repo-file-v1:sha256:d7242283ca3967ad9736f06cd009801461fec3cfefb97b39a3cdfbdff2a8cdd1"
+        },
+        {
+          "resource": "repo://system/webrtc/webrtcd.py",
+          "version": "repo-file-v1:sha256:733028591baa8b0e69de7c1eb107006dfd6e51e9e757d65308b88c9739fd1e9d"
+        }
+      ]
+    },
+    {
+      "id": "claim_c72411ddb8c64d4991c5365043437b26",
+      "statement": "Replay tools and tests provide controlled message playback and synthetic demos for navigation, CAN, UI, and StarPilot plan consumers.",
+      "evidence": [
+        {
+          "resource": "repo://tools/replay/fake_nav_demo.py",
+          "version": "repo-file-v1:sha256:c46f8233dedc6319bc3b9b190c8483b14f2fa53e5b8ac380b62291af623e722c"
+        },
+        {
+          "resource": "repo://tools/replay/tests/test_onroad_config.py",
+          "version": "repo-file-v1:sha256:be07714f87a880300124c81e675de2a339f87afdb5d2789e5dbe6f71f6d6a821"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}

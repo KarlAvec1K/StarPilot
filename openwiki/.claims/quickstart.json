@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:2698c323ca99f03187fa5e297ad5c2874b17134be25ebdb2b84340fbc3bcbb85",
+  "claims": [
+    {
+      "id": "claim_ecfb63ac6f01400988b3c15323a81bb9",
+      "statement": "StarPilot is an openpilot-derived system combining supervised runtime, cereal messaging, Params persistence, vehicle/CAN support, StarPilot controls/settings, navigation/media, UI, Galaxy, and development tools.",
+      "evidence": [
+        {
+          "resource": "repo://README.md",
+          "version": "repo-file-v1:sha256:b3c5db928cef9ea8092c0de4bdb2148caf5163a3245fb8a36eda2ed82d044399"
+        },
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        }
+      ]
+    },
+    {
+      "id": "claim_b57ee3b2f90443a9bf5580236c2ec640",
+      "statement": "The repository's primary entrypoints include the build wrapper, pyproject configuration, manager supervision, controlsd integration, and Galaxy service.",
+      "evidence": [
+        {
+          "resource": "repo://build",
+          "version": "repo-file-v1:sha256:c75068c05bd19b43594717841e9820d303e09a52fe6f5a765523aa9b65c6a65e"
+        },
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        },
+        {
+          "resource": "repo://selfdrive/controls/controlsd.py",
+          "version": "repo-file-v1:sha256:5a7a4c3f0315d93f660b28f01c02a6c036b872169a3abc67e2715465d94928fb"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/the_galaxy.py",
+          "version": "repo-file-v1:sha256:da859862523342bea4f7020f8e1eb67393af112e470f50c658462f57f71d4c96"
+        },
+        {
+          "resource": "repo://system/manager/manager.py",
+          "version": "repo-file-v1:sha256:4d1d4a9399ebedebc7d0a8d038d8d3ceee2949a36ec7260188f1de7af8efc3b0"
+        }
+      ]
+    },
+    {
+      "id": "claim_a3704f3cac524d2d8041d99fad46e7a2",
+      "statement": "Source and tests are the authority for this generated documentation; the repository does not thereby establish hardware, live-device, CAN, or on-road validation.",
+      "evidence": [
+        {
+          "resource": "repo://pyproject.toml",
+          "version": "repo-file-v1:sha256:17451636ba29103249e97d6308d74cd76fdc1d59c3d3bad886e2aac6e906925b"
+        },
+        {
+          "resource": "repo://starpilot/controls/tests/test_fleet_aol.py",
+          "version": "repo-file-v1:sha256:f3f711177ece60067fe34eb386d5019b3caa8533a68a108d7a9c25f2b6fbbe14"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}

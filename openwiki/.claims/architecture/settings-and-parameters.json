@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:b66c81b62ec04492697d5c81e812e8d3462c7d42befca2b13a9ccea72aa80075",
+  "claims": [
+    {
+      "id": "claim_6c8a37448b9b4e65a6c782deb7db993a",
+      "statement": "StarPilot settings use shared parameter keys and common Params persistence, with StarPilot helpers providing typed defaults, migrations, legacy compatibility, and runtime toggle snapshots.",
+      "evidence": [
+        {
+          "resource": "repo://common/params_keys.h",
+          "version": "repo-file-v1:sha256:5fb20f07f2fa79a1ed3b95fe0d753b754b1bc06e83239da3bebeb3e0495dae47"
+        },
+        {
+          "resource": "repo://starpilot/common/starpilot_functions.py",
+          "version": "repo-file-v1:sha256:1cf3384cc0530987d5fb223662741dac47527162655984b26c31559a5e9d0bb7"
+        },
+        {
+          "resource": "repo://starpilot/common/starpilot_variables.py",
+          "version": "repo-file-v1:sha256:67c7c3188c94e220b53c1ee943241425840563a897479eadbc55b4ad68410ab1"
+        }
+      ]
+    },
+    {
+      "id": "claim_764994f2f98749b08a3733846c89b405",
+      "statement": "The device-settings layout provides user-facing hierarchy, types, defaults, visibility, dependencies, and capability gates consumed by settings UIs and Galaxy.",
+      "evidence": [
+        {
+          "resource": "repo://selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+          "version": "repo-file-v1:sha256:1fcbfdd7a2657e5e2385e8bc69a9167c780fe6fe1c5ffd4f8b8318c63f2994d1"
+        },
+        {
+          "resource": "repo://starpilot/common/assets/device_settings_layout.json",
+          "version": "repo-file-v1:sha256:808bdf813fb8e2817b538ee245b48c2ab0e89522fc77eac9645ee1a1ee0d9f43"
+        }
+      ]
+    },
+    {
+      "id": "claim_8b7655ab929a40a5adee5ef075d65017",
+      "statement": "Runtime consumers use normalized StarPilot state for planner, controls, UI, and Galaxy decisions rather than duplicating raw parameter parsing.",
+      "evidence": [
+        {
+          "resource": "repo://selfdrive/controls/controlsd.py",
+          "version": "repo-file-v1:sha256:5a7a4c3f0315d93f660b28f01c02a6c036b872169a3abc67e2715465d94928fb"
+        },
+        {
+          "resource": "repo://starpilot/common/starpilot_variables.py",
+          "version": "repo-file-v1:sha256:67c7c3188c94e220b53c1ee943241425840563a897479eadbc55b4ad68410ab1"
+        },
+        {
+          "resource": "repo://starpilot/controls/starpilot_planner.py",
+          "version": "repo-file-v1:sha256:741f07f616d3cb25602051bc8ac06b2f741357c747b3ca6ca3d3b9798ddd73e3"
+        }
+      ]
+    },
+    {
+      "id": "claim_1bb98503ed6f43dea9df2974bf294cd8",
+      "statement": "Focused tests cover parameter registration/migrations, default parity, profile retention, safe mode, settings transactions, Galaxy payloads, and device-layout structure.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/common/tests/test_screen_settings_transactions.py",
+          "version": "repo-file-v1:sha256:1a9e8c8b5b53ccdf03e2b0936eac3e665fed225423da93391609db5c90ffffa2"
+        },
+        {
+          "resource": "repo://starpilot/common/tests/test_starpilot_functions.py",
+          "version": "repo-file-v1:sha256:944d6f4dacd19f53a5b0bfc0daec309f13273739708c6967ed6f67ef3cd18aaf"
+        },
+        {
+          "resource": "repo://starpilot/common/tests/test_starpilot_variables.py",
+          "version": "repo-file-v1:sha256:fd39c72c2e33874fadffa15099ab99b78439bfa474ed79ca3c24477714e7218f"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+          "version": "repo-file-v1:sha256:fc8f56fb774366b8e1e4fa833cf6078b605d23304d926f5bd9b469da1477a691"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:763a3a15d4444a5dab91baa9feb833937e7f46945fc7deea369bb68408a5c7b4",
+  "claims": [
+    {
+      "id": "claim_9c6c60357b6b44a0bac1411b4ed34d4d",
+      "statement": "Manager configuration and lifecycle code supervise process enablement, environment, startup, health observation, transitions, and cleanup.",
+      "evidence": [
+        {
+          "resource": "repo://system/manager/manager.py",
+          "version": "repo-file-v1:sha256:4d1d4a9399ebedebc7d0a8d038d8d3ceee2949a36ec7260188f1de7af8efc3b0"
+        },
+        {
+          "resource": "repo://system/manager/process_config.py",
+          "version": "repo-file-v1:sha256:f4de13feebe190efaf0588ee408c44f2085c280d30ca2cd48783780b09d2eb76"
+        }
+      ]
+    },
+    {
+      "id": "claim_a76a8e9609b54030b79b05e59fac7465",
+      "statement": "selfdrived owns high-level onroad/offroad state transitions and loggerd subscribes to configured services to persist message streams.",
+      "evidence": [
+        {
+          "resource": "repo://selfdrive/selfdrived/selfdrived.py",
+          "version": "repo-file-v1:sha256:8957e1ec4c0760186afb6dd4d44bb1223f375dbf718d62fc98ec38c159f42c53"
+        },
+        {
+          "resource": "repo://system/loggerd/loggerd.cc",
+          "version": "repo-file-v1:sha256:f20de42687d6082f7119159eeaf6490912f445d7d2ee6d4d5afcfc1585d77acb"
+        }
+      ]
+    },
+    {
+      "id": "claim_d7e24296d6504bb2b20c14866e34b3fa",
+      "statement": "Cereal service definitions and Cap'n Proto schemas provide the typed contracts used by PubMaster and SubMaster consumers.",
+      "evidence": [
+        {
+          "resource": "repo://cereal/log.capnp",
+          "version": "repo-file-v1:sha256:774e10997098d22bac64eab21fc00449d96ddb2a5274bedd14654adfed20a532"
+        },
+        {
+          "resource": "repo://cereal/services.py",
+          "version": "repo-file-v1:sha256:1c8d6480b0cb1f577621d13bb9720f89875659b65de8af6c4f61ce4cb1c61608"
+        }
+      ]
+    },
+    {
+      "id": "claim_7500b7de9f76462daa2c0bfdbe1e593f",
+      "statement": "Message presence does not by itself prove an active producer in a runtime or log; consumers must use update and validity state at their boundaries.",
+      "evidence": [
+        {
+          "resource": "repo://cereal/services.py",
+          "version": "repo-file-v1:sha256:1c8d6480b0cb1f577621d13bb9720f89875659b65de8af6c4f61ce4cb1c61608"
+        },
+        {
+          "resource": "repo://selfdrive/controls/controlsd.py",
+          "version": "repo-file-v1:sha256:5a7a4c3f0315d93f660b28f01c02a6c036b872169a3abc67e2715465d94928fb"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}

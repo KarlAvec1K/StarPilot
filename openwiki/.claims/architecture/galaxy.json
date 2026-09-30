@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:063a700d8aff056cefdde6885feb038d5d0e79405e0873d366320421e1983bff",
+  "claims": [
+    {
+      "id": "claim_dec4465b99b54f3a9a1f7b885d1d46e4",
+      "statement": "Galaxy lazily loads its Flask web dependencies, creates a Flask app with the assets directory, and starts the service from main().",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/system/the_galaxy/the_galaxy.py",
+          "version": "repo-file-v1:sha256:da859862523342bea4f7020f8e1eb67393af112e470f50c658462f57f71d4c96"
+        }
+      ]
+    },
+    {
+      "id": "claim_dd8c548c0eaa4be1a09f30c3a64c7f64",
+      "statement": "Galaxy centralizes typed parameter reads and writes, default handling, legacy compatibility, capability snapshots, route/media helpers, diagnostics, and update state behind the service module.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/system/the_galaxy/the_galaxy.py",
+          "version": "repo-file-v1:sha256:da859862523342bea4f7020f8e1eb67393af112e470f50c658462f57f71d4c96"
+        }
+      ]
+    },
+    {
+      "id": "claim_3d0447725dcc4d8e9d57f38839ce5cdf",
+      "statement": "Galaxy update flows validate Git branches and commits, track progress and interrupted recovery, save rollback targets, and separate status, installation, rollback, and recovery operations.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/system/the_galaxy/the_galaxy.py",
+          "version": "repo-file-v1:sha256:da859862523342bea4f7020f8e1eb67393af112e470f50c658462f57f71d4c96"
+        }
+      ]
+    },
+    {
+      "id": "claim_0ec3b1180e6141e68ab9270a229a6c51",
+      "statement": "The Galaxy test suite includes API, frontend/module-graph, route/media, navigation, notifications, update-recovery, version-installation, and browser-facing JavaScript coverage.",
+      "evidence": [
+        {
+          "resource": "repo://starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+          "version": "repo-file-v1:sha256:fc8f56fb774366b8e1e4fa833cf6078b605d23304d926f5bd9b469da1477a691"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/tests/test_frontend_module_graph.py",
+          "version": "repo-file-v1:sha256:e0556f3fb5cfdb6b435e1af262545b65b26396bdad6719022ba2495a111b5828"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/tests/test_navigation_params.py",
+          "version": "repo-file-v1:sha256:3e6d473502b7e29f79e3666a136ab7550b8287ab4bcaa49e641634a039f99c8f"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/tests/test_update_recovery.py",
+          "version": "repo-file-v1:sha256:396f3b2d040db8999b54898262344106d494904a176bd2e1be6de4fcc7adcef8"
+        },
+        {
+          "resource": "repo://starpilot/system/the_galaxy/tests/test_version_install.py",
+          "version": "repo-file-v1:sha256:91a1abe11b78b9906d81d9648bd69b69d0acec3d0b74503bd07ca390bdf75784"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.6.1",
+    "at": "2026-09-30T03:59:26.745Z"
+  }
+}
