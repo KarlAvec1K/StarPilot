@@ -10,10 +10,10 @@ from openpilot.starpilot.common.accel_profile import (
 )
 
 
-CURRENT = [6.00, 1.15, 0.75, 1.35, 1.83, 1.83, 0.83]
+CURRENT = [6.00, 1.15, 0.75, 0.72, 0.70, 0.58, 0.48]
 SPEEDS_KPH = (0, 20, 40, 50, 60, 70, 80, 100, 120)
-EXPECTED_CAPS = (6.000000, 1.999900, 1.999900, 1.999900, 1.999900, 1.999900, 1.999900, 1.999900, 1.999900)
-EXPECTED_DELTAS = (0.0, 0.854513, 1.204053, 0.695747, 0.549159, 0.175436, 0.169900, 0.217073, 0.773213)
+EXPECTED_CAPS = (6.000000, 1.145387, 0.750000, 0.750000, 0.750000, 0.750000, 0.730166, 0.695283, 0.639669)
+EXPECTED_DELTAS = (0.0, 0.000000, 0.002292, 0.027708, 0.034198, 0.049769, 0.077768, 0.120000, 0.120000)
 
 
 def cap(speed_kph):
@@ -22,7 +22,7 @@ def cap(speed_kph):
 
 def test_candidate_constants_and_breakpoints_are_exact():
   assert A_CRUISE_MAX_BP_CUSTOM == [0.0, 5.0, 10.0, 15.0, 20.0, 25.0, 40.0]
-  assert A_CRUISE_MAX_VALS_SPORT_TRUCK == [6.00, 1.9999, 1.9999, 1.9999, 1.9999, 1.9999, 1.9999]
+  assert A_CRUISE_MAX_VALS_SPORT_TRUCK == [6.00, 1.15, 0.75, 0.75, 0.75, 0.70, 0.60]
   assert get_accel_profile_curve_values(2, ev_tuning=False, truck_tuning=True) == A_CRUISE_MAX_VALS_SPORT_TRUCK
 
 
