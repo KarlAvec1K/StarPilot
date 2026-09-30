@@ -1,0 +1,1571 @@
+{
+  "nodes": [
+    {
+      "id": "file:system/manager/manager.py",
+      "type": "file",
+      "name": "manager.py",
+      "filePath": "system/manager/manager.py",
+      "summary": "Orchestre le cycle de vie principal d’openpilot et StarPilot : préparation, migrations, lancement, supervision et nettoyage des processus.",
+      "tags": [
+        "manager",
+        "demarrage",
+        "processus",
+        "supervision",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:system/manager/manager.py:_append_boot_timing_line",
+      "type": "function",
+      "name": "_append_boot_timing_line",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        17,
+        22
+      ],
+      "summary": "Implémente l’opération `_append_boot_timing_line` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_log_boot_timing",
+      "type": "function",
+      "name": "_log_boot_timing",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        83,
+        89
+      ],
+      "summary": "Implémente l’opération `_log_boot_timing` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_to_text",
+      "type": "function",
+      "name": "_to_text",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        92,
+        97
+      ],
+      "summary": "Implémente l’opération `_to_text` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_has_meaningful_param_value",
+      "type": "function",
+      "name": "_has_meaningful_param_value",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        100,
+        107
+      ],
+      "summary": "Évalue la condition portée par `_has_meaningful_param_value` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_is_numeric_stat_value",
+      "type": "function",
+      "name": "_is_numeric_stat_value",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        110,
+        111
+      ],
+      "summary": "Évalue la condition portée par `_is_numeric_stat_value` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_get_int_param_value",
+      "type": "function",
+      "name": "_get_int_param_value",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        114,
+        131
+      ],
+      "summary": "Récupère ou résout les données de `_get_int_param_value` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:get_nav_offroad_clear_timeout_seconds",
+      "type": "function",
+      "name": "get_nav_offroad_clear_timeout_seconds",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        134,
+        135
+      ],
+      "summary": "Récupère ou résout les données de `get_nav_offroad_clear_timeout_seconds` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:update_nav_offroad_clear_state",
+      "type": "function",
+      "name": "update_nav_offroad_clear_state",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        138,
+        169
+      ],
+      "summary": "Met à jour l’état géré par `update_nav_offroad_clear_state` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:should_defer_reboot",
+      "type": "function",
+      "name": "should_defer_reboot",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        172,
+        173
+      ],
+      "summary": "Évalue la condition portée par `should_defer_reboot` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_merge_starpilot_stat_values",
+      "type": "function",
+      "name": "_merge_starpilot_stat_values",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        176,
+        197
+      ],
+      "summary": "Construit la représentation produite par `_merge_starpilot_stat_values` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_normalize_starpilot_stats_value",
+      "type": "function",
+      "name": "_normalize_starpilot_stats_value",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        200,
+        210
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_starpilot_stats_value` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_normalize_starpilot_stats",
+      "type": "function",
+      "name": "_normalize_starpilot_stats",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        213,
+        229
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_starpilot_stats` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_load_first_available_param_value",
+      "type": "function",
+      "name": "_load_first_available_param_value",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        232,
+        243
+      ],
+      "summary": "Récupère ou résout les données de `_load_first_available_param_value` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_has_persisted_param_file",
+      "type": "function",
+      "name": "_has_persisted_param_file",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        246,
+        252
+      ],
+      "summary": "Évalue la condition portée par `_has_persisted_param_file` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_remove_persisted_param_file",
+      "type": "function",
+      "name": "_remove_persisted_param_file",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        255,
+        269
+      ],
+      "summary": "Exécute le flux piloté par `_remove_persisted_param_file` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_params_store_path",
+      "type": "function",
+      "name": "_params_store_path",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        272,
+        273
+      ],
+      "summary": "Implémente l’opération `_params_store_path` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_cache_store_has_starpilot_marker",
+      "type": "function",
+      "name": "_cache_store_has_starpilot_marker",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        276,
+        278
+      ],
+      "summary": "Implémente l’opération `_cache_store_has_starpilot_marker` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_copy_param_store_without_overwrite",
+      "type": "function",
+      "name": "_copy_param_store_without_overwrite",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        281,
+        298
+      ],
+      "summary": "Implémente l’opération `_copy_param_store_without_overwrite` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_legacy_starpilot_params_cache",
+      "type": "function",
+      "name": "migrate_legacy_starpilot_params_cache",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        301,
+        331
+      ],
+      "summary": "Exécute le flux piloté par `migrate_legacy_starpilot_params_cache` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_normalize_secoc_key",
+      "type": "function",
+      "name": "_normalize_secoc_key",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        334,
+        344
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_secoc_key` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_legacy_secoc_key",
+      "type": "function",
+      "name": "migrate_legacy_secoc_key",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        347,
+        369
+      ],
+      "summary": "Exécute le flux piloté par `migrate_legacy_secoc_key` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:cleanup_removed_starpilot_params",
+      "type": "function",
+      "name": "cleanup_removed_starpilot_params",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        372,
+        381
+      ],
+      "summary": "Convertit ou formate les données de `cleanup_removed_starpilot_params` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_starpilot_param_renames",
+      "type": "function",
+      "name": "migrate_starpilot_param_renames",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        384,
+        431
+      ],
+      "summary": "Exécute le flux piloté par `migrate_starpilot_param_renames` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_merge_tree_without_overwrite",
+      "type": "function",
+      "name": "_merge_tree_without_overwrite",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        434,
+        469
+      ],
+      "summary": "Construit la représentation produite par `_merge_tree_without_overwrite` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_starpilot_pc_root",
+      "type": "function",
+      "name": "migrate_starpilot_pc_root",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        472,
+        498
+      ],
+      "summary": "Exécute le flux piloté par `migrate_starpilot_pc_root` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_legacy_bolt_fingerprint",
+      "type": "function",
+      "name": "migrate_legacy_bolt_fingerprint",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        501,
+        561
+      ],
+      "summary": "Exécute le flux piloté par `migrate_legacy_bolt_fingerprint` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_starpilot_default_parity",
+      "type": "function",
+      "name": "migrate_starpilot_default_parity",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        564,
+        610
+      ],
+      "summary": "Exécute le flux piloté par `migrate_starpilot_default_parity` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_starpilot_default_model",
+      "type": "function",
+      "name": "migrate_starpilot_default_model",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        613,
+        654
+      ],
+      "summary": "Exécute le flux piloté par `migrate_starpilot_default_model` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_starpilot_ce_model_stop_time",
+      "type": "function",
+      "name": "migrate_starpilot_ce_model_stop_time",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        657,
+        686
+      ],
+      "summary": "Exécute le flux piloté par `migrate_starpilot_ce_model_stop_time` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_disable_humanlike_defaults",
+      "type": "function",
+      "name": "migrate_disable_humanlike_defaults",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        689,
+        710
+      ],
+      "summary": "Exécute le flux piloté par `migrate_disable_humanlike_defaults` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_cluster_offset_default",
+      "type": "function",
+      "name": "migrate_cluster_offset_default",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        713,
+        741
+      ],
+      "summary": "Exécute le flux piloté par `migrate_cluster_offset_default` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_traffic_mode_smooth_defaults",
+      "type": "function",
+      "name": "migrate_traffic_mode_smooth_defaults",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        744,
+        776
+      ],
+      "summary": "Exécute le flux piloté par `migrate_traffic_mode_smooth_defaults` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_traffic_follow_default",
+      "type": "function",
+      "name": "migrate_traffic_follow_default",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        779,
+        802
+      ],
+      "summary": "Exécute le flux piloté par `migrate_traffic_follow_default` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_read_raw_param_bytes",
+      "type": "function",
+      "name": "_read_raw_param_bytes",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        805,
+        818
+      ],
+      "summary": "Récupère ou résout les données de `_read_raw_param_bytes` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_parse_legacy_time",
+      "type": "function",
+      "name": "_parse_legacy_time",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        821,
+        837
+      ],
+      "summary": "Convertit ou formate les données de `_parse_legacy_time` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_param_type_canonicalization",
+      "type": "function",
+      "name": "migrate_param_type_canonicalization",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        840,
+        917
+      ],
+      "summary": "Exécute le flux piloté par `migrate_param_type_canonicalization` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:system/manager/manager.py:migrate_legacy_experimental_longitudinal",
+      "type": "function",
+      "name": "migrate_legacy_experimental_longitudinal",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        920,
+        932
+      ],
+      "summary": "Exécute le flux piloté par `migrate_legacy_experimental_longitudinal` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:_msgq_file_is_readwrite_openable",
+      "type": "function",
+      "name": "_msgq_file_is_readwrite_openable",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        935,
+        940
+      ],
+      "summary": "Implémente l’opération `_msgq_file_is_readwrite_openable` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:cleanup_inaccessible_msgq_files",
+      "type": "function",
+      "name": "cleanup_inaccessible_msgq_files",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        943,
+        974
+      ],
+      "summary": "Convertit ou formate les données de `cleanup_inaccessible_msgq_files` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:manager_init",
+      "type": "function",
+      "name": "manager_init",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        977,
+        1103
+      ],
+      "summary": "Implémente l’opération `manager_init` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:system/manager/manager.py:manager_cleanup",
+      "type": "function",
+      "name": "manager_cleanup",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        1106,
+        1115
+      ],
+      "summary": "Implémente l’opération `manager_cleanup` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:reset_onroad_transition_params",
+      "type": "function",
+      "name": "reset_onroad_transition_params",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        1118,
+        1125
+      ],
+      "summary": "Exécute le flux piloté par `reset_onroad_transition_params` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/manager.py:manager_thread",
+      "type": "function",
+      "name": "manager_thread",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        1128,
+        1243
+      ],
+      "summary": "Implémente l’opération `manager_thread` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:system/manager/manager.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "system/manager/manager.py",
+      "lineRange": [
+        1246,
+        1271
+      ],
+      "summary": "Lance le point d’entrée représenté par `main` dans le module `manager.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "point-entree",
+        "manager",
+        "demarrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tools/StarPilot/derive_feasible_params.py",
+      "type": "file",
+      "name": "derive_feasible_params.py",
+      "filePath": "tools/StarPilot/derive_feasible_params.py",
+      "summary": "Analyse le registre Params et les références UI afin de produire la liste de réglages que Galaxy peut modifier en toute sécurité.",
+      "tags": [
+        "outil",
+        "parametres",
+        "analyse-statique",
+        "securite"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tools/StarPilot/derive_feasible_params.py:get_repo_root",
+      "type": "function",
+      "name": "get_repo_root",
+      "filePath": "tools/StarPilot/derive_feasible_params.py",
+      "lineRange": [
+        14,
+        16
+      ],
+      "summary": "Récupère ou résout les données de `get_repo_root` dans le module `derive_feasible_params.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "outil",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/StarPilot/derive_feasible_params.py:extract_registered_keys",
+      "type": "function",
+      "name": "extract_registered_keys",
+      "filePath": "tools/StarPilot/derive_feasible_params.py",
+      "lineRange": [
+        50,
+        73
+      ],
+      "summary": "Implémente l’opération `extract_registered_keys` dans le module `derive_feasible_params.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "outil",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/StarPilot/derive_feasible_params.py:extract_ui_string_literals",
+      "type": "function",
+      "name": "extract_ui_string_literals",
+      "filePath": "tools/StarPilot/derive_feasible_params.py",
+      "lineRange": [
+        75,
+        94
+      ],
+      "summary": "Implémente l’opération `extract_ui_string_literals` dans le module `derive_feasible_params.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "outil",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tools/StarPilot/derive_feasible_params.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "tools/StarPilot/derive_feasible_params.py",
+      "lineRange": [
+        96,
+        125
+      ],
+      "summary": "Lance le point d’entrée représenté par `main` dans le module `derive_feasible_params.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "point-entree",
+        "outil",
+        "parametres"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_append_boot_timing_line",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_append_boot_timing_line",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_log_boot_timing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_log_boot_timing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_to_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_to_text",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_has_meaningful_param_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_has_meaningful_param_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_is_numeric_stat_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_is_numeric_stat_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_get_int_param_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_get_int_param_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:get_nav_offroad_clear_timeout_seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:get_nav_offroad_clear_timeout_seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:update_nav_offroad_clear_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:update_nav_offroad_clear_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:should_defer_reboot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:should_defer_reboot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_merge_starpilot_stat_values",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_merge_starpilot_stat_values",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_normalize_starpilot_stats_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_normalize_starpilot_stats_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_normalize_starpilot_stats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_normalize_starpilot_stats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_load_first_available_param_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_load_first_available_param_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_has_persisted_param_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_has_persisted_param_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_remove_persisted_param_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_remove_persisted_param_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_params_store_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_params_store_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_cache_store_has_starpilot_marker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_cache_store_has_starpilot_marker",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_copy_param_store_without_overwrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_copy_param_store_without_overwrite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_legacy_starpilot_params_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_legacy_starpilot_params_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_normalize_secoc_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_normalize_secoc_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_legacy_secoc_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_legacy_secoc_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:cleanup_removed_starpilot_params",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:cleanup_removed_starpilot_params",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_param_renames",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_param_renames",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_merge_tree_without_overwrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_merge_tree_without_overwrite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_pc_root",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_pc_root",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_legacy_bolt_fingerprint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_legacy_bolt_fingerprint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_default_parity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_default_parity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_default_model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_default_model",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_ce_model_stop_time",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_starpilot_ce_model_stop_time",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_disable_humanlike_defaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_disable_humanlike_defaults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_cluster_offset_default",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_cluster_offset_default",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_traffic_mode_smooth_defaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_traffic_mode_smooth_defaults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_traffic_follow_default",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_traffic_follow_default",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_read_raw_param_bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_read_raw_param_bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_parse_legacy_time",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_parse_legacy_time",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_param_type_canonicalization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_param_type_canonicalization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_legacy_experimental_longitudinal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:migrate_legacy_experimental_longitudinal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_msgq_file_is_readwrite_openable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:_msgq_file_is_readwrite_openable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:cleanup_inaccessible_msgq_files",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:cleanup_inaccessible_msgq_files",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:manager_init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:manager_init",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:manager_cleanup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:manager_cleanup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:reset_onroad_transition_params",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:reset_onroad_transition_params",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:manager_thread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:manager_thread",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/manager.py",
+      "target": "function:system/manager/manager.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/StarPilot/derive_feasible_params.py",
+      "target": "function:tools/StarPilot/derive_feasible_params.py:get_repo_root",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/StarPilot/derive_feasible_params.py",
+      "target": "function:tools/StarPilot/derive_feasible_params.py:get_repo_root",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/StarPilot/derive_feasible_params.py",
+      "target": "function:tools/StarPilot/derive_feasible_params.py:extract_registered_keys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/StarPilot/derive_feasible_params.py",
+      "target": "function:tools/StarPilot/derive_feasible_params.py:extract_registered_keys",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/StarPilot/derive_feasible_params.py",
+      "target": "function:tools/StarPilot/derive_feasible_params.py:extract_ui_string_literals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/StarPilot/derive_feasible_params.py",
+      "target": "function:tools/StarPilot/derive_feasible_params.py:extract_ui_string_literals",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:tools/StarPilot/derive_feasible_params.py",
+      "target": "function:tools/StarPilot/derive_feasible_params.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:tools/StarPilot/derive_feasible_params.py",
+      "target": "function:tools/StarPilot/derive_feasible_params.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,1932 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/common/starpilot_utilities.py",
+      "type": "file",
+      "name": "starpilot_utilities.py",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "summary": "Regroupe les utilitaires partagés de géométrie routière, fichiers, commandes système, diagnostic matériel et coordination de tâches.",
+      "tags": [
+        "utility",
+        "geometrie",
+        "systeme",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:capture_exception",
+      "type": "function",
+      "name": "capture_exception",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        30,
+        35
+      ],
+      "summary": "Implémente l’opération `capture_exception` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:calculate_bearing_offset",
+      "type": "function",
+      "name": "calculate_bearing_offset",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        76,
+        85
+      ],
+      "summary": "Calcule la valeur retournée par `calculate_bearing_offset` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:calculate_distance_to_point",
+      "type": "function",
+      "name": "calculate_distance_to_point",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        88,
+        100
+      ],
+      "summary": "Calcule la valeur retournée par `calculate_distance_to_point` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:calculate_lane_width",
+      "type": "function",
+      "name": "calculate_lane_width",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        103,
+        125
+      ],
+      "summary": "Calcule la valeur retournée par `calculate_lane_width` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:calculate_road_curvature",
+      "type": "function",
+      "name": "calculate_road_curvature",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        129,
+        139
+      ],
+      "summary": "Calcule la valeur retournée par `calculate_road_curvature` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:extract_curve_profile",
+      "type": "function",
+      "name": "extract_curve_profile",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        146,
+        164
+      ],
+      "summary": "Implémente l’opération `extract_curve_profile` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:clean_model_name",
+      "type": "function",
+      "name": "clean_model_name",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        167,
+        168
+      ],
+      "summary": "Convertit ou formate les données de `clean_model_name` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:contains_event_type",
+      "type": "function",
+      "name": "contains_event_type",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        171,
+        172
+      ],
+      "summary": "Évalue la condition portée par `contains_event_type` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:delete_file",
+      "type": "function",
+      "name": "delete_file",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        175,
+        190
+      ],
+      "summary": "Exécute le flux piloté par `delete_file` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:extract_zip",
+      "type": "function",
+      "name": "extract_zip",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        193,
+        199
+      ],
+      "summary": "Implémente l’opération `extract_zip` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:flash_panda",
+      "type": "function",
+      "name": "flash_panda",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        202,
+        244
+      ],
+      "summary": "Exécute le flux piloté par `flash_panda` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:get_starpilot_api_info",
+      "type": "function",
+      "name": "get_starpilot_api_info",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        247,
+        255
+      ],
+      "summary": "Récupère ou résout les données de `get_starpilot_api_info` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:get_lock_status",
+      "type": "function",
+      "name": "get_lock_status",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        258,
+        260
+      ],
+      "summary": "Récupère ou résout les données de `get_lock_status` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:get_sentry_dsn",
+      "type": "function",
+      "name": "get_sentry_dsn",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        263,
+        278
+      ],
+      "summary": "Récupère ou résout les données de `get_sentry_dsn` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:is_url_pingable",
+      "type": "function",
+      "name": "is_url_pingable",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        281,
+        305
+      ],
+      "summary": "Évalue la condition portée par `is_url_pingable` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:load_json_file",
+      "type": "function",
+      "name": "load_json_file",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        308,
+        316
+      ],
+      "summary": "Récupère ou résout les données de `load_json_file` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:lock_doors",
+      "type": "function",
+      "name": "lock_doors",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        319,
+        347
+      ],
+      "summary": "Implémente l’opération `lock_doors` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:run_cmd",
+      "type": "function",
+      "name": "run_cmd",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        350,
+        366
+      ],
+      "summary": "Exécute le flux piloté par `run_cmd` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:update_can_parser",
+      "type": "function",
+      "name": "update_can_parser",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        369,
+        371
+      ],
+      "summary": "Met à jour l’état géré par `update_can_parser` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:update_json_file",
+      "type": "function",
+      "name": "update_json_file",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        374,
+        381
+      ],
+      "summary": "Met à jour l’état géré par `update_json_file` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:use_konik_server",
+      "type": "function",
+      "name": "use_konik_server",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        385,
+        387
+      ],
+      "summary": "Implémente l’opération `use_konik_server` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_utilities.py:wait_for_no_driver",
+      "type": "function",
+      "name": "wait_for_no_driver",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        390,
+        433
+      ],
+      "summary": "Exécute le flux piloté par `wait_for_no_driver` dans le module `starpilot_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/common/starpilot_utilities.py:ThreadManager",
+      "type": "class",
+      "name": "ThreadManager",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "lineRange": [
+        38,
+        73
+      ],
+      "summary": "Regroupe l’état et le comportement de `ThreadManager` dans le module `starpilot_utilities.py`, avec 3 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "utility",
+        "geometrie"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/starpilot_variables.py",
+      "type": "file",
+      "name": "starpilot_variables.py",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "summary": "Centralise les constantes, migrations et capacités StarPilot, puis construit l’état complet des réglages consommé par le runtime.",
+      "tags": [
+        "configuration",
+        "capacites",
+        "parametres",
+        "etat-runtime"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:_lkas_allowed_for_aol",
+      "type": "function",
+      "name": "_lkas_allowed_for_aol",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        84,
+        93
+      ],
+      "summary": "Implémente l’opération `_lkas_allowed_for_aol` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:_main_cruise_aol_allowed",
+      "type": "function",
+      "name": "_main_cruise_aol_allowed",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        96,
+        97
+      ],
+      "summary": "Implémente l’opération `_main_cruise_aol_allowed` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:sync_reboot_marker",
+      "type": "function",
+      "name": "sync_reboot_marker",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        203,
+        217
+      ],
+      "summary": "Met à jour l’état géré par `sync_reboot_marker` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:device_shutdown_seconds",
+      "type": "function",
+      "name": "device_shutdown_seconds",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        246,
+        248
+      ],
+      "summary": "Implémente l’opération `device_shutdown_seconds` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:get_nnff_model_files",
+      "type": "function",
+      "name": "get_nnff_model_files",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        299,
+        300
+      ],
+      "summary": "Récupère ou résout les données de `get_nnff_model_files` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:get_nnff_substitutes",
+      "type": "function",
+      "name": "get_nnff_substitutes",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        303,
+        308
+      ],
+      "summary": "Récupère ou résout les données de `get_nnff_substitutes` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:nnff_supported",
+      "type": "function",
+      "name": "nnff_supported",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        310,
+        322
+      ],
+      "summary": "Implémente l’opération `nnff_supported` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:normalize_legacy_car_model",
+      "type": "function",
+      "name": "normalize_legacy_car_model",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        325,
+        332
+      ],
+      "summary": "Normalise ou valide les données de `normalize_legacy_car_model` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:default_ev_tuning_enabled",
+      "type": "function",
+      "name": "default_ev_tuning_enabled",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        334,
+        344
+      ],
+      "summary": "Construit la représentation produite par `default_ev_tuning_enabled` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:always_on_lateral_available",
+      "type": "function",
+      "name": "always_on_lateral_available",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        347,
+        348
+      ],
+      "summary": "Implémente l’opération `always_on_lateral_available` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:get_starpilot_toggles",
+      "type": "function",
+      "name": "get_starpilot_toggles",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        351,
+        375
+      ],
+      "summary": "Récupère ou résout les données de `get_starpilot_toggles` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:process_starpilot_toggles",
+      "type": "function",
+      "name": "process_starpilot_toggles",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        378,
+        381
+      ],
+      "summary": "Met à jour l’état géré par `process_starpilot_toggles` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:update_starpilot_toggles",
+      "type": "function",
+      "name": "update_starpilot_toggles",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        383,
+        389
+      ],
+      "summary": "Met à jour l’état géré par `update_starpilot_toggles` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:set_speed_limit_available",
+      "type": "function",
+      "name": "set_speed_limit_available",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        392,
+        393
+      ],
+      "summary": "Enregistre ou publie l’état produit par `set_speed_limit_available` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:speed_limit_controller_available",
+      "type": "function",
+      "name": "speed_limit_controller_available",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        396,
+        397
+      ],
+      "summary": "Implémente l’opération `speed_limit_controller_available` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:software_cruise_intervals_available",
+      "type": "function",
+      "name": "software_cruise_intervals_available",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        400,
+        403
+      ],
+      "summary": "Implémente l’opération `software_cruise_intervals_available` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:reverse_cruise_available",
+      "type": "function",
+      "name": "reverse_cruise_available",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        406,
+        407
+      ],
+      "summary": "Implémente l’opération `reverse_cruise_available` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:migrate_cancel_button_controls",
+      "type": "function",
+      "name": "migrate_cancel_button_controls",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        410,
+        419
+      ],
+      "summary": "Exécute le flux piloté par `migrate_cancel_button_controls` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:migrate_aol_lkas_to_button_control",
+      "type": "function",
+      "name": "migrate_aol_lkas_to_button_control",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        422,
+        431
+      ],
+      "summary": "Exécute le flux piloté par `migrate_aol_lkas_to_button_control` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_variables.py:migrate_ford_lkas_button_default",
+      "type": "function",
+      "name": "migrate_ford_lkas_button_default",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        434,
+        443
+      ],
+      "summary": "Exécute le flux piloté par `migrate_ford_lkas_button_default` dans le module `starpilot_variables.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/common/starpilot_variables.py:StarPilotVariables",
+      "type": "class",
+      "name": "StarPilotVariables",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "lineRange": [
+        446,
+        1642
+      ],
+      "summary": "Regroupe l’état et le comportement de `StarPilotVariables` dans le module `starpilot_variables.py`, avec 9 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "configuration",
+        "capacites"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/testing_grounds.py",
+      "type": "file",
+      "name": "testing_grounds.py",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "summary": "Charge le schéma des Testing Grounds et expose une sélection expérimentale typée, mise en cache et accessible par espace de noms.",
+      "tags": [
+        "experimentation",
+        "configuration",
+        "cache",
+        "selection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/testing_grounds.py:_is_unused_testing_ground_slot",
+      "type": "function",
+      "name": "_is_unused_testing_ground_slot",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "lineRange": [
+        95,
+        97
+      ],
+      "summary": "Évalue la condition portée par `_is_unused_testing_ground_slot` dans le module `testing_grounds.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "experimentation",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/testing_grounds.py:_extract_variant_labels",
+      "type": "function",
+      "name": "_extract_variant_labels",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "lineRange": [
+        115,
+        130
+      ],
+      "summary": "Implémente l’opération `_extract_variant_labels` dans le module `testing_grounds.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "experimentation",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/testing_grounds.py:_normalize_variant",
+      "type": "function",
+      "name": "_normalize_variant",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "lineRange": [
+        146,
+        153
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_variant` dans le module `testing_grounds.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "experimentation",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/testing_grounds.py:_normalize_selection",
+      "type": "function",
+      "name": "_normalize_selection",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "lineRange": [
+        156,
+        160
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_selection` dans le module `testing_grounds.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "experimentation",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/testing_grounds.py:_write_testing_ground_selection",
+      "type": "function",
+      "name": "_write_testing_ground_selection",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "lineRange": [
+        163,
+        176
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_write_testing_ground_selection` dans le module `testing_grounds.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "experimentation",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/testing_grounds.py:get_testing_ground_selection",
+      "type": "function",
+      "name": "get_testing_ground_selection",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "lineRange": [
+        179,
+        228
+      ],
+      "summary": "Récupère ou résout les données de `get_testing_ground_selection` dans le module `testing_grounds.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "experimentation",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/testing_grounds.py:is_testing_ground_active",
+      "type": "function",
+      "name": "is_testing_ground_active",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "lineRange": [
+        231,
+        235
+      ],
+      "summary": "Évalue la condition portée par `is_testing_ground_active` dans le module `testing_grounds.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "experimentation",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/common/testing_grounds.py:_TestingGroundFlag",
+      "type": "class",
+      "name": "_TestingGroundFlag",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "lineRange": [
+        238,
+        250
+      ],
+      "summary": "Regroupe l’état et le comportement de `_TestingGroundFlag` dans le module `testing_grounds.py`, avec 3 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "experimentation",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/common/testing_grounds.py:_TestingGroundNamespace",
+      "type": "class",
+      "name": "_TestingGroundNamespace",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "lineRange": [
+        263,
+        288
+      ],
+      "summary": "Regroupe l’état et le comportement de `_TestingGroundNamespace` dans le module `testing_grounds.py`, avec 2 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "experimentation",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/theme_asset_names.py",
+      "type": "file",
+      "name": "theme_asset_names.py",
+      "filePath": "starpilot/common/theme_asset_names.py",
+      "summary": "Canonicalise les noms d’assets de thème et retrouve le meilleur fichier correspondant malgré les variantes de ponctuation ou de signature.",
+      "tags": [
+        "theme",
+        "assets",
+        "normalisation",
+        "recherche"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/theme_asset_names.py:_coerce_asset_name",
+      "type": "function",
+      "name": "_coerce_asset_name",
+      "filePath": "starpilot/common/theme_asset_names.py",
+      "lineRange": [
+        7,
+        10
+      ],
+      "summary": "Normalise ou valide les données de `_coerce_asset_name` dans le module `theme_asset_names.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "theme",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/theme_asset_names.py:canonicalize_theme_asset_name",
+      "type": "function",
+      "name": "canonicalize_theme_asset_name",
+      "filePath": "starpilot/common/theme_asset_names.py",
+      "lineRange": [
+        13,
+        16
+      ],
+      "summary": "Évalue la condition portée par `canonicalize_theme_asset_name` dans le module `theme_asset_names.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "theme",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/theme_asset_names.py:find_matching_theme_asset_name",
+      "type": "function",
+      "name": "find_matching_theme_asset_name",
+      "filePath": "starpilot/common/theme_asset_names.py",
+      "lineRange": [
+        19,
+        32
+      ],
+      "summary": "Récupère ou résout les données de `find_matching_theme_asset_name` dans le module `theme_asset_names.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "theme",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/theme_asset_names.py:find_matching_theme_asset_file",
+      "type": "function",
+      "name": "find_matching_theme_asset_file",
+      "filePath": "starpilot/common/theme_asset_names.py",
+      "lineRange": [
+        35,
+        54
+      ],
+      "summary": "Récupère ou résout les données de `find_matching_theme_asset_file` dans le module `theme_asset_names.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "theme",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/vision_bsm.py",
+      "type": "file",
+      "name": "vision_bsm.py",
+      "filePath": "starpilot/common/vision_bsm.py",
+      "summary": "Lit l’état V-ASM du moniteur d’angle mort et rejette toute observation trop ancienne ou temporellement incohérente.",
+      "tags": [
+        "vision",
+        "angle-mort",
+        "fraicheur",
+        "securite"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/vision_bsm.py:get_fresh_vasm_state",
+      "type": "function",
+      "name": "get_fresh_vasm_state",
+      "filePath": "starpilot/common/vision_bsm.py",
+      "lineRange": [
+        9,
+        22
+      ],
+      "summary": "Récupère ou résout les données de `get_fresh_vasm_state` dans le module `vision_bsm.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "vision",
+        "angle-mort"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:capture_exception",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:capture_exception",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:calculate_bearing_offset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:calculate_bearing_offset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:calculate_distance_to_point",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:calculate_distance_to_point",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:calculate_lane_width",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:calculate_lane_width",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:calculate_road_curvature",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:calculate_road_curvature",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:extract_curve_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:extract_curve_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:clean_model_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:clean_model_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:contains_event_type",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:contains_event_type",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:delete_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:delete_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:extract_zip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:extract_zip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:flash_panda",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:flash_panda",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:get_starpilot_api_info",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:get_starpilot_api_info",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:get_lock_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:get_lock_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:get_sentry_dsn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:get_sentry_dsn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:is_url_pingable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:is_url_pingable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:load_json_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:load_json_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:lock_doors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:lock_doors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:run_cmd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:run_cmd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:update_can_parser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:update_can_parser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:update_json_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:update_json_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:use_konik_server",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:use_konik_server",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:wait_for_no_driver",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "function:starpilot/common/starpilot_utilities.py:wait_for_no_driver",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "class:starpilot/common/starpilot_utilities.py:ThreadManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_utilities.py",
+      "target": "class:starpilot/common/starpilot_utilities.py:ThreadManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:_lkas_allowed_for_aol",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:_lkas_allowed_for_aol",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:_main_cruise_aol_allowed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:_main_cruise_aol_allowed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:sync_reboot_marker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:sync_reboot_marker",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:device_shutdown_seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:device_shutdown_seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:get_nnff_model_files",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:get_nnff_model_files",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:get_nnff_substitutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:get_nnff_substitutes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:nnff_supported",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:nnff_supported",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:normalize_legacy_car_model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:normalize_legacy_car_model",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:default_ev_tuning_enabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:default_ev_tuning_enabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:always_on_lateral_available",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:always_on_lateral_available",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:get_starpilot_toggles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:get_starpilot_toggles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:process_starpilot_toggles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:process_starpilot_toggles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:update_starpilot_toggles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:update_starpilot_toggles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:set_speed_limit_available",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:set_speed_limit_available",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:speed_limit_controller_available",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:speed_limit_controller_available",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:software_cruise_intervals_available",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:software_cruise_intervals_available",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:reverse_cruise_available",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:reverse_cruise_available",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:migrate_cancel_button_controls",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:migrate_cancel_button_controls",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:migrate_aol_lkas_to_button_control",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:migrate_aol_lkas_to_button_control",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:migrate_ford_lkas_button_default",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "function:starpilot/common/starpilot_variables.py:migrate_ford_lkas_button_default",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "class:starpilot/common/starpilot_variables.py:StarPilotVariables",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_variables.py",
+      "target": "class:starpilot/common/starpilot_variables.py:StarPilotVariables",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_is_unused_testing_ground_slot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_is_unused_testing_ground_slot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_extract_variant_labels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_extract_variant_labels",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_normalize_variant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_normalize_variant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_normalize_selection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_normalize_selection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_write_testing_ground_selection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:_write_testing_ground_selection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:get_testing_ground_selection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:get_testing_ground_selection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:is_testing_ground_active",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "function:starpilot/common/testing_grounds.py:is_testing_ground_active",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "class:starpilot/common/testing_grounds.py:_TestingGroundFlag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "class:starpilot/common/testing_grounds.py:_TestingGroundFlag",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "class:starpilot/common/testing_grounds.py:_TestingGroundNamespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/testing_grounds.py",
+      "target": "class:starpilot/common/testing_grounds.py:_TestingGroundNamespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/theme_asset_names.py",
+      "target": "function:starpilot/common/theme_asset_names.py:_coerce_asset_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/theme_asset_names.py",
+      "target": "function:starpilot/common/theme_asset_names.py:_coerce_asset_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/theme_asset_names.py",
+      "target": "function:starpilot/common/theme_asset_names.py:canonicalize_theme_asset_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/theme_asset_names.py",
+      "target": "function:starpilot/common/theme_asset_names.py:canonicalize_theme_asset_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/theme_asset_names.py",
+      "target": "function:starpilot/common/theme_asset_names.py:find_matching_theme_asset_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/theme_asset_names.py",
+      "target": "function:starpilot/common/theme_asset_names.py:find_matching_theme_asset_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/theme_asset_names.py",
+      "target": "function:starpilot/common/theme_asset_names.py:find_matching_theme_asset_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/theme_asset_names.py",
+      "target": "function:starpilot/common/theme_asset_names.py:find_matching_theme_asset_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/vision_bsm.py",
+      "target": "function:starpilot/common/vision_bsm.py:get_fresh_vasm_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/vision_bsm.py",
+      "target": "function:starpilot/common/vision_bsm.py:get_fresh_vasm_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,1990 @@
+{
+  "nodes": [
+    {
+      "id": "file:selfdrive/controls/controlsd.py",
+      "type": "file",
+      "name": "controlsd.py",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "summary": "Exécute le contrôleur principal de conduite et combine planification, limites de courbure, commandes latérales et longitudinales, état d’engagement et publication des sorties.",
+      "tags": [
+        "contrôle",
+        "planification",
+        "sécurité",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:_plan_circle_curvature",
+      "type": "function",
+      "name": "_plan_circle_curvature",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        188,
+        204
+      ],
+      "summary": "Implémente l’opération `_plan_circle_curvature` nécessaire à le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:_plan_dual_probe",
+      "type": "function",
+      "name": "_plan_dual_probe",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        207,
+        214
+      ],
+      "summary": "Implémente l’opération `_plan_dual_probe` nécessaire à le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:get_plan_spatial_curvature",
+      "type": "function",
+      "name": "get_plan_spatial_curvature",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        217,
+        218
+      ],
+      "summary": "Calcule ou récupère la valeur `get_plan_spatial_curvature` utilisée par le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:get_plan_turn_onset_dist",
+      "type": "function",
+      "name": "get_plan_turn_onset_dist",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        221,
+        237
+      ],
+      "summary": "Calcule ou récupère la valeur `get_plan_turn_onset_dist` utilisée par le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:get_plan_reach",
+      "type": "function",
+      "name": "get_plan_reach",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        240,
+        245
+      ],
+      "summary": "Calcule ou récupère la valeur `get_plan_reach` utilisée par le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:_plan_positions_are_finite",
+      "type": "function",
+      "name": "_plan_positions_are_finite",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        248,
+        255
+      ],
+      "summary": "Implémente l’opération `_plan_positions_are_finite` nécessaire à le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "construction",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:limit_curvature_to_plan",
+      "type": "function",
+      "name": "limit_curvature_to_plan",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        258,
+        278
+      ],
+      "summary": "Applique les contraintes de `limit_curvature_to_plan` dans le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:update_twitch_guard",
+      "type": "function",
+      "name": "update_twitch_guard",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        281,
+        286
+      ],
+      "summary": "Met à jour l’état associé à `update_twitch_guard` pour le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:get_control_lateral_smooth_seconds",
+      "type": "function",
+      "name": "get_control_lateral_smooth_seconds",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        289,
+        292
+      ],
+      "summary": "Calcule ou récupère la valeur `get_control_lateral_smooth_seconds` utilisée par le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:turn_lead_allowed",
+      "type": "function",
+      "name": "turn_lead_allowed",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        295,
+        299
+      ],
+      "summary": "Évalue la condition `turn_lead_allowed` afin de sécuriser le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "validation",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:get_gm_hud_set_speed",
+      "type": "function",
+      "name": "get_gm_hud_set_speed",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        347,
+        354
+      ],
+      "summary": "Calcule ou récupère la valeur `get_gm_hud_set_speed` utilisée par le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:get_torque_control_params",
+      "type": "function",
+      "name": "get_torque_control_params",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        357,
+        378
+      ],
+      "summary": "Calcule ou récupère la valeur `get_torque_control_params` utilisée par le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/controlsd.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        944,
+        947
+      ],
+      "summary": "Démarre et maintient la boucle principale de le contrôleur principal de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/controls/controlsd.py:Controls",
+      "type": "class",
+      "name": "Controls",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "lineRange": [
+        381,
+        941
+      ],
+      "summary": "Exécute la boucle centrale des contrôles, calcule les actionneurs et publie leur état sous les contraintes de sécurité.",
+      "tags": [
+        "classe",
+        "composant",
+        "contrôle",
+        "planification",
+        "sécurité"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/controls/lib/lane_centering.py",
+      "type": "file",
+      "name": "lane_centering.py",
+      "filePath": "selfdrive/controls/lib/lane_centering.py",
+      "summary": "Calcule une correction de centrage dans la voie à partir des trajectoires et expose aussi la direction visuelle de cette correction.",
+      "tags": [
+        "contrôle-latéral",
+        "centrage-voie",
+        "trajectoire",
+        "contrôleur"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/controls/lib/lane_centering.py:get_raw_lane_centering_correction",
+      "type": "function",
+      "name": "get_raw_lane_centering_correction",
+      "filePath": "selfdrive/controls/lib/lane_centering.py",
+      "lineRange": [
+        158,
+        161
+      ],
+      "summary": "Calcule ou récupère la valeur `get_raw_lane_centering_correction` utilisée par le centrage dynamique dans la voie.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle-latéral",
+        "centrage-voie",
+        "trajectoire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/lib/lane_centering.py:get_lane_centering_visual_direction",
+      "type": "function",
+      "name": "get_lane_centering_visual_direction",
+      "filePath": "selfdrive/controls/lib/lane_centering.py",
+      "lineRange": [
+        164,
+        196
+      ],
+      "summary": "Calcule ou récupère la valeur `get_lane_centering_visual_direction` utilisée par le centrage dynamique dans la voie.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle-latéral",
+        "centrage-voie",
+        "trajectoire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/controls/lib/lane_centering.py:LaneCenteringController",
+      "type": "class",
+      "name": "LaneCenteringController",
+      "filePath": "selfdrive/controls/lib/lane_centering.py",
+      "lineRange": [
+        28,
+        155
+      ],
+      "summary": "Maintient le filtre et les critères géométriques qui produisent la correction de centrage dans la voie.",
+      "tags": [
+        "classe",
+        "composant",
+        "contrôle-latéral",
+        "centrage-voie",
+        "trajectoire"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/controls/lib/longcontrol.py",
+      "type": "file",
+      "name": "longcontrol.py",
+      "filePath": "selfdrive/controls/lib/longcontrol.py",
+      "summary": "Gère la commande longitudinale, ses transitions d’état, le PID, les arrêts et la compatibilité avec l’ancien mode longitudinal.",
+      "tags": [
+        "contrôle-longitudinal",
+        "pid",
+        "machine-à-états",
+        "sécurité"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/controls/lib/longcontrol.py:apply_deadzone",
+      "type": "function",
+      "name": "apply_deadzone",
+      "filePath": "selfdrive/controls/lib/longcontrol.py",
+      "lineRange": [
+        26,
+        33
+      ],
+      "summary": "Applique les contraintes de `apply_deadzone` dans la commande longitudinale.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "contrôle-longitudinal",
+        "pid",
+        "machine-à-états"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/lib/longcontrol.py:long_control_state_trans",
+      "type": "function",
+      "name": "long_control_state_trans",
+      "filePath": "selfdrive/controls/lib/longcontrol.py",
+      "lineRange": [
+        36,
+        74
+      ],
+      "summary": "Implémente l’opération `long_control_state_trans` nécessaire à la commande longitudinale.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "contrôle-longitudinal",
+        "pid",
+        "machine-à-états"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/controls/lib/longcontrol.py:long_control_state_trans_old_long",
+      "type": "function",
+      "name": "long_control_state_trans_old_long",
+      "filePath": "selfdrive/controls/lib/longcontrol.py",
+      "lineRange": [
+        76,
+        113
+      ],
+      "summary": "Implémente l’opération `long_control_state_trans_old_long` nécessaire à la commande longitudinale.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "contrôle-longitudinal",
+        "pid",
+        "machine-à-états"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/controls/lib/longcontrol.py:LongControl",
+      "type": "class",
+      "name": "LongControl",
+      "filePath": "selfdrive/controls/lib/longcontrol.py",
+      "lineRange": [
+        115,
+        445
+      ],
+      "summary": "Maintient l’état du contrôle longitudinal et calcule les sorties d’accélération selon le mode MPC ou historique.",
+      "tags": [
+        "classe",
+        "composant",
+        "contrôle-longitudinal",
+        "pid",
+        "machine-à-états"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/modeld/camera_offset.py",
+      "type": "file",
+      "name": "camera_offset.py",
+      "filePath": "selfdrive/modeld/camera_offset.py",
+      "summary": "Maintient et applique un décalage de caméra lissé selon le dispositif et la cible demandée au pipeline modèle.",
+      "tags": [
+        "caméra",
+        "calibration",
+        "filtrage",
+        "modèle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/camera_offset.py:_device_cameras",
+      "type": "function",
+      "name": "_device_cameras",
+      "filePath": "selfdrive/modeld/camera_offset.py",
+      "lineRange": [
+        10,
+        13
+      ],
+      "summary": "Implémente l’opération `_device_cameras` nécessaire à le décalage dynamique de caméra.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "caméra",
+        "calibration",
+        "filtrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/modeld/camera_offset.py:CameraOffset",
+      "type": "class",
+      "name": "CameraOffset",
+      "filePath": "selfdrive/modeld/camera_offset.py",
+      "lineRange": [
+        16,
+        51
+      ],
+      "summary": "Lisse une cible de décalage caméra et l’applique aux entrées du modèle.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "caméra",
+        "calibration",
+        "filtrage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/modeld/modeld.py",
+      "type": "file",
+      "name": "modeld.py",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "summary": "Pilote l’inférence du modèle de conduite, les entrées caméra, l’état récurrent, les artefacts tinygrad et les variantes Model Lab ou GPU externe.",
+      "tags": [
+        "inférence",
+        "modèle-conduite",
+        "tinygrad",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_model_smooth_seconds",
+      "type": "function",
+      "name": "_model_smooth_seconds",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        88,
+        92
+      ],
+      "summary": "Implémente l’opération `_model_smooth_seconds` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_should_publish_model_output",
+      "type": "function",
+      "name": "_should_publish_model_output",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        95,
+        96
+      ],
+      "summary": "Évalue la condition `_should_publish_model_output` afin de sécuriser le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_set_hcq_wait_timeout",
+      "type": "function",
+      "name": "_set_hcq_wait_timeout",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        109,
+        115
+      ],
+      "summary": "Met à jour l’état associé à `_set_hcq_wait_timeout` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_external_gpu_power_voltage",
+      "type": "function",
+      "name": "_external_gpu_power_voltage",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        118,
+        127
+      ],
+      "summary": "Implémente l’opération `_external_gpu_power_voltage` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_external_gpu_power_ready",
+      "type": "function",
+      "name": "_external_gpu_power_ready",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        130,
+        136
+      ],
+      "summary": "Évalue la condition `_external_gpu_power_ready` afin de sécuriser le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_egmp_ready_bus",
+      "type": "function",
+      "name": "_egmp_ready_bus",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        139,
+        148
+      ],
+      "summary": "Implémente l’opération `_egmp_ready_bus` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_egmp_vehicle_ready",
+      "type": "function",
+      "name": "_egmp_vehicle_ready",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        151,
+        155
+      ],
+      "summary": "Évalue la condition `_egmp_vehicle_ready` afin de sécuriser le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:wait_for_external_gpu_power_ready",
+      "type": "function",
+      "name": "wait_for_external_gpu_power_ready",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        158,
+        200
+      ],
+      "summary": "Évalue la condition `wait_for_external_gpu_power_ready` afin de sécuriser le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:get_lateral_smooth_seconds",
+      "type": "function",
+      "name": "get_lateral_smooth_seconds",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        203,
+        204
+      ],
+      "summary": "Calcule ou récupère la valeur `get_lateral_smooth_seconds` utilisée par le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:get_car_lateral_smooth_seconds",
+      "type": "function",
+      "name": "get_car_lateral_smooth_seconds",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        207,
+        210
+      ],
+      "summary": "Calcule ou récupère la valeur `get_car_lateral_smooth_seconds` utilisée par le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_get_param_str",
+      "type": "function",
+      "name": "_get_param_str",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        310,
+        324
+      ],
+      "summary": "Calcule ou récupère la valeur `_get_param_str` utilisée par le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_get_default_param_str",
+      "type": "function",
+      "name": "_get_default_param_str",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        327,
+        339
+      ],
+      "summary": "Calcule ou récupère la valeur `_get_default_param_str` utilisée par le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_resolve_mirrored_param",
+      "type": "function",
+      "name": "_resolve_mirrored_param",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        342,
+        357
+      ],
+      "summary": "Sélectionne ou résout la valeur de `_resolve_mirrored_param` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_canonical_model_id",
+      "type": "function",
+      "name": "_canonical_model_id",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        360,
+        364
+      ],
+      "summary": "Implémente l’opération `_canonical_model_id` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_select_builtin_model",
+      "type": "function",
+      "name": "_select_builtin_model",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        367,
+        370
+      ],
+      "summary": "Sélectionne ou résout la valeur de `_select_builtin_model` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_close_tinygrad_disk_cache_connection",
+      "type": "function",
+      "name": "_close_tinygrad_disk_cache_connection",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        373,
+        397
+      ],
+      "summary": "Implémente l’opération `_close_tinygrad_disk_cache_connection` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:get_action_from_model",
+      "type": "function",
+      "name": "get_action_from_model",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        400,
+        451
+      ],
+      "summary": "Calcule ou récupère la valeur `get_action_from_model` utilisée par le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_is_oob_artifact_header",
+      "type": "function",
+      "name": "_is_oob_artifact_header",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        466,
+        470
+      ],
+      "summary": "Évalue la condition `_is_oob_artifact_header` afin de sécuriser le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "validation",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_load_model_artifact",
+      "type": "function",
+      "name": "_load_model_artifact",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        473,
+        479
+      ],
+      "summary": "Charge les données requises par `_load_model_artifact` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_normalize_model_artifact",
+      "type": "function",
+      "name": "_normalize_model_artifact",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        482,
+        516
+      ],
+      "summary": "Transforme et normalise les données via `_normalize_model_artifact` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_load_model_state",
+      "type": "function",
+      "name": "_load_model_state",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        826,
+        854
+      ],
+      "summary": "Charge les données requises par `_load_model_state` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_load_external_gpu_model",
+      "type": "function",
+      "name": "_load_external_gpu_model",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        857,
+        883
+      ],
+      "summary": "Charge les données requises par `_load_external_gpu_model` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_model_versions",
+      "type": "function",
+      "name": "_model_versions",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        886,
+        892
+      ],
+      "summary": "Implémente l’opération `_model_versions` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_load_model_lab_model",
+      "type": "function",
+      "name": "_load_model_lab_model",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        895,
+        910
+      ],
+      "summary": "Charge les données requises par `_load_model_lab_model` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_model_lab_shared_warp_compatible",
+      "type": "function",
+      "name": "_model_lab_shared_warp_compatible",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        913,
+        919
+      ],
+      "summary": "Implémente l’opération `_model_lab_shared_warp_compatible` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_isolate_next_model_artifact_load",
+      "type": "function",
+      "name": "_isolate_next_model_artifact_load",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        922,
+        928
+      ],
+      "summary": "Implémente l’opération `_isolate_next_model_artifact_load` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_load_model_lab_models",
+      "type": "function",
+      "name": "_load_model_lab_models",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        931,
+        955
+      ],
+      "summary": "Charge les données requises par `_load_model_lab_models` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_model_outputs_finite",
+      "type": "function",
+      "name": "_model_outputs_finite",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        958,
+        964
+      ],
+      "summary": "Implémente l’opération `_model_outputs_finite` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_model_lab_runtime_request",
+      "type": "function",
+      "name": "_model_lab_runtime_request",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        966,
+        991
+      ],
+      "summary": "Implémente l’opération `_model_lab_runtime_request` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_set_model_lab_runtime",
+      "type": "function",
+      "name": "_set_model_lab_runtime",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        994,
+        1005
+      ],
+      "summary": "Met à jour l’état associé à `_set_model_lab_runtime` pour le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:_runner_frame_args",
+      "type": "function",
+      "name": "_runner_frame_args",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        1008,
+        1035
+      ],
+      "summary": "Implémente l’opération `_runner_frame_args` nécessaire à le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/modeld/modeld.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        1038,
+        1519
+      ],
+      "summary": "Démarre et maintient la boucle principale de le service d’inférence du modèle de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/modeld/modeld.py:ChestnutState",
+      "type": "class",
+      "name": "ChestnutState",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        213,
+        307
+      ],
+      "summary": "Gère l’alimentation et la communication USB de l’accélérateur Chestnut utilisé par le modèle externe.",
+      "tags": [
+        "classe",
+        "composant",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/modeld/modeld.py:FrameMeta",
+      "type": "class",
+      "name": "FrameMeta",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        453,
+        460
+      ],
+      "summary": "Regroupe les métadonnées temporelles associées à une frame d’inférence.",
+      "tags": [
+        "classe",
+        "composant",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/modeld/modeld.py:ModelState",
+      "type": "class",
+      "name": "ModelState",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "lineRange": [
+        519,
+        823
+      ],
+      "summary": "Prépare les entrées du modèle, exécute l’inférence et maintient les états récurrents et files de calcul.",
+      "tags": [
+        "classe",
+        "composant",
+        "inférence",
+        "modèle-conduite",
+        "tinygrad"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:_plan_circle_curvature",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:_plan_circle_curvature",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:_plan_dual_probe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:_plan_dual_probe",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_plan_spatial_curvature",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_plan_spatial_curvature",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_plan_turn_onset_dist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_plan_turn_onset_dist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_plan_reach",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_plan_reach",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:_plan_positions_are_finite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:_plan_positions_are_finite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:limit_curvature_to_plan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:limit_curvature_to_plan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:update_twitch_guard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:update_twitch_guard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_control_lateral_smooth_seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_control_lateral_smooth_seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:turn_lead_allowed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:turn_lead_allowed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_gm_hud_set_speed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_gm_hud_set_speed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_torque_control_params",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:get_torque_control_params",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "function:selfdrive/controls/controlsd.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "class:selfdrive/controls/controlsd.py:Controls",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/controlsd.py",
+      "target": "class:selfdrive/controls/controlsd.py:Controls",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/lib/lane_centering.py",
+      "target": "function:selfdrive/controls/lib/lane_centering.py:get_raw_lane_centering_correction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/lib/lane_centering.py",
+      "target": "function:selfdrive/controls/lib/lane_centering.py:get_raw_lane_centering_correction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/lib/lane_centering.py",
+      "target": "function:selfdrive/controls/lib/lane_centering.py:get_lane_centering_visual_direction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/lib/lane_centering.py",
+      "target": "function:selfdrive/controls/lib/lane_centering.py:get_lane_centering_visual_direction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/lib/lane_centering.py",
+      "target": "class:selfdrive/controls/lib/lane_centering.py:LaneCenteringController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/lib/lane_centering.py",
+      "target": "class:selfdrive/controls/lib/lane_centering.py:LaneCenteringController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/lib/longcontrol.py",
+      "target": "function:selfdrive/controls/lib/longcontrol.py:apply_deadzone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/lib/longcontrol.py",
+      "target": "function:selfdrive/controls/lib/longcontrol.py:apply_deadzone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/lib/longcontrol.py",
+      "target": "function:selfdrive/controls/lib/longcontrol.py:long_control_state_trans",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/lib/longcontrol.py",
+      "target": "function:selfdrive/controls/lib/longcontrol.py:long_control_state_trans",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/lib/longcontrol.py",
+      "target": "function:selfdrive/controls/lib/longcontrol.py:long_control_state_trans_old_long",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/lib/longcontrol.py",
+      "target": "function:selfdrive/controls/lib/longcontrol.py:long_control_state_trans_old_long",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/controls/lib/longcontrol.py",
+      "target": "class:selfdrive/controls/lib/longcontrol.py:LongControl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/controls/lib/longcontrol.py",
+      "target": "class:selfdrive/controls/lib/longcontrol.py:LongControl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/camera_offset.py",
+      "target": "function:selfdrive/modeld/camera_offset.py:_device_cameras",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/camera_offset.py",
+      "target": "function:selfdrive/modeld/camera_offset.py:_device_cameras",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/camera_offset.py",
+      "target": "class:selfdrive/modeld/camera_offset.py:CameraOffset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/camera_offset.py",
+      "target": "class:selfdrive/modeld/camera_offset.py:CameraOffset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_smooth_seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_smooth_seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_should_publish_model_output",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_should_publish_model_output",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_set_hcq_wait_timeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_set_hcq_wait_timeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_external_gpu_power_voltage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_external_gpu_power_voltage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_external_gpu_power_ready",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_external_gpu_power_ready",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_egmp_ready_bus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_egmp_ready_bus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_egmp_vehicle_ready",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_egmp_vehicle_ready",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:wait_for_external_gpu_power_ready",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:wait_for_external_gpu_power_ready",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:get_lateral_smooth_seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:get_lateral_smooth_seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:get_car_lateral_smooth_seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:get_car_lateral_smooth_seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_get_param_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_get_param_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_get_default_param_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_get_default_param_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_resolve_mirrored_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_resolve_mirrored_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_canonical_model_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_canonical_model_id",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_select_builtin_model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_select_builtin_model",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_close_tinygrad_disk_cache_connection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_close_tinygrad_disk_cache_connection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:get_action_from_model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:get_action_from_model",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_is_oob_artifact_header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_is_oob_artifact_header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_model_artifact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_model_artifact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_normalize_model_artifact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_normalize_model_artifact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_model_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_model_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_external_gpu_model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_external_gpu_model",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_versions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_versions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_model_lab_model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_model_lab_model",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_lab_shared_warp_compatible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_lab_shared_warp_compatible",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_isolate_next_model_artifact_load",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_isolate_next_model_artifact_load",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_model_lab_models",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_load_model_lab_models",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_outputs_finite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_outputs_finite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_lab_runtime_request",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_model_lab_runtime_request",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_set_model_lab_runtime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_set_model_lab_runtime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_runner_frame_args",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:_runner_frame_args",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "function:selfdrive/modeld/modeld.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "class:selfdrive/modeld/modeld.py:ChestnutState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "class:selfdrive/modeld/modeld.py:ChestnutState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "class:selfdrive/modeld/modeld.py:FrameMeta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "class:selfdrive/modeld/modeld.py:FrameMeta",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "class:selfdrive/modeld/modeld.py:ModelState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/modeld/modeld.py",
+      "target": "class:selfdrive/modeld/modeld.py:ModelState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

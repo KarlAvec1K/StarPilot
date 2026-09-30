@@ -1,0 +1,1259 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/common/gpu_model_ready_sound.py",
+      "type": "file",
+      "name": "gpu_model_ready_sound.py",
+      "filePath": "starpilot/common/gpu_model_ready_sound.py",
+      "summary": "Suit le chargement du modèle GPU et expose une courte fenêtre de notification sonore sans supplanter les alertes de conduite.",
+      "tags": [
+        "gpu",
+        "notification",
+        "modele",
+        "etat"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/common/gpu_model_ready_sound.py:GpuModelReadyChime",
+      "type": "class",
+      "name": "GpuModelReadyChime",
+      "filePath": "starpilot/common/gpu_model_ready_sound.py",
+      "lineRange": [
+        4,
+        20
+      ],
+      "summary": "Regroupe l’état et le comportement de `GpuModelReadyChime` dans le module `gpu_model_ready_sound.py`, avec 3 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "gpu",
+        "notification"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/lateral_delay.py",
+      "type": "file",
+      "name": "lateral_delay.py",
+      "filePath": "starpilot/common/lateral_delay.py",
+      "summary": "Calcule le délai latéral complet en ajoutant au délai du véhicule la latence logicielle fixe de la chaîne de contrôle.",
+      "tags": [
+        "controle-lateral",
+        "latence",
+        "calcul"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/lateral_delay.py:full_lateral_delay",
+      "type": "function",
+      "name": "full_lateral_delay",
+      "filePath": "starpilot/common/lateral_delay.py",
+      "lineRange": [
+        4,
+        5
+      ],
+      "summary": "Implémente l’opération `full_lateral_delay` dans le module `lateral_delay.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "controle-lateral",
+        "latence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/lateral_only_experimental.py",
+      "type": "file",
+      "name": "lateral_only_experimental.py",
+      "filePath": "starpilot/common/lateral_only_experimental.py",
+      "summary": "Définit l’allowlist des véhicules pouvant exposer Experimental Mode pour le contrôle latéral tout en conservant l’ACC longitudinal stock.",
+      "tags": [
+        "controle-lateral",
+        "mode-experimental",
+        "compatibilite",
+        "securite"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/lateral_only_experimental.py:lateral_only_experimental_available",
+      "type": "function",
+      "name": "lateral_only_experimental_available",
+      "filePath": "starpilot/common/lateral_only_experimental.py",
+      "lineRange": [
+        19,
+        24
+      ],
+      "summary": "Implémente l’opération `lateral_only_experimental_available` dans le module `lateral_only_experimental.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "controle-lateral",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/lateral_only_experimental.py:experimental_mode_available",
+      "type": "function",
+      "name": "experimental_mode_available",
+      "filePath": "starpilot/common/lateral_only_experimental.py",
+      "lineRange": [
+        27,
+        32
+      ],
+      "summary": "Implémente l’opération `experimental_mode_available` dans le module `lateral_only_experimental.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "controle-lateral",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/longitudinal_mode.py",
+      "type": "file",
+      "name": "longitudinal_mode.py",
+      "filePath": "starpilot/common/longitudinal_mode.py",
+      "summary": "Fournit un verrou latéral et des lectures cohérentes des Params qui sélectionnent les modes longitudinaux concurrents.",
+      "tags": [
+        "controle-longitudinal",
+        "verrouillage",
+        "parametres",
+        "coherence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_mode.py:mode_lock",
+      "type": "function",
+      "name": "mode_lock",
+      "filePath": "starpilot/common/longitudinal_mode.py",
+      "lineRange": [
+        18,
+        25
+      ],
+      "summary": "Implémente l’opération `mode_lock` dans le module `longitudinal_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "controle-longitudinal",
+        "verrouillage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_mode.py:read_mode_values",
+      "type": "function",
+      "name": "read_mode_values",
+      "filePath": "starpilot/common/longitudinal_mode.py",
+      "lineRange": [
+        28,
+        30
+      ],
+      "summary": "Récupère ou résout les données de `read_mode_values` dans le module `longitudinal_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "controle-longitudinal",
+        "verrouillage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_mode.py:request_mode_refresh",
+      "type": "function",
+      "name": "request_mode_refresh",
+      "filePath": "starpilot/common/longitudinal_mode.py",
+      "lineRange": [
+        33,
+        39
+      ],
+      "summary": "Exécute le flux piloté par `request_mode_refresh` dans le module `longitudinal_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "controle-longitudinal",
+        "verrouillage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "type": "file",
+      "name": "longitudinal_personality_profiles.py",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "summary": "Définit le schéma versionné des personnalités longitudinales, leurs migrations et l’interpolation des courbes d’accélération, de freinage et de suivi.",
+      "tags": [
+        "personnalites",
+        "controle-longitudinal",
+        "migration",
+        "interpolation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:is_truck_fingerprint",
+      "type": "function",
+      "name": "is_truck_fingerprint",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        31,
+        35
+      ],
+      "summary": "Évalue la condition portée par `is_truck_fingerprint` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:load_personality_profile_enable_values",
+      "type": "function",
+      "name": "load_personality_profile_enable_values",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        83,
+        87
+      ],
+      "summary": "Récupère ou résout les données de `load_personality_profile_enable_values` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:validate_personality_follow_value",
+      "type": "function",
+      "name": "validate_personality_follow_value",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        90,
+        96
+      ],
+      "summary": "Normalise ou valide les données de `validate_personality_follow_value` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:validate_personality_advanced_value",
+      "type": "function",
+      "name": "validate_personality_advanced_value",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        99,
+        105
+      ],
+      "summary": "Normalise ou valide les données de `validate_personality_advanced_value` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:_acceleration_preset_curve",
+      "type": "function",
+      "name": "_acceleration_preset_curve",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        185,
+        190
+      ],
+      "summary": "Implémente l’opération `_acceleration_preset_curve` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:default_personality_profiles",
+      "type": "function",
+      "name": "default_personality_profiles",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        193,
+        202
+      ],
+      "summary": "Construit la représentation produite par `default_personality_profiles` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:profile_document",
+      "type": "function",
+      "name": "profile_document",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        205,
+        213
+      ],
+      "summary": "Implémente l’opération `profile_document` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:_decode_json",
+      "type": "function",
+      "name": "_decode_json",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        216,
+        227
+      ],
+      "summary": "Convertit ou formate les données de `_decode_json` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:_validated_category_with_length",
+      "type": "function",
+      "name": "_validated_category_with_length",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        230,
+        280
+      ],
+      "summary": "Normalise ou valide les données de `_validated_category_with_length` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:_validated_category",
+      "type": "function",
+      "name": "_validated_category",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        283,
+        285
+      ],
+      "summary": "Normalise ou valide les données de `_validated_category` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:_schema_values_equal",
+      "type": "function",
+      "name": "_schema_values_equal",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        288,
+        295
+      ],
+      "summary": "Implémente l’opération `_schema_values_equal` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:_strict_document",
+      "type": "function",
+      "name": "_strict_document",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        298,
+        341
+      ],
+      "summary": "Implémente l’opération `_strict_document` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:_preserve_legacy_following_presets",
+      "type": "function",
+      "name": "_preserve_legacy_following_presets",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        344,
+        348
+      ],
+      "summary": "Implémente l’opération `_preserve_legacy_following_presets` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:strict_profile_document",
+      "type": "function",
+      "name": "strict_profile_document",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        351,
+        370
+      ],
+      "summary": "Implémente l’opération `strict_profile_document` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:migrate_profile_document",
+      "type": "function",
+      "name": "migrate_profile_document",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        373,
+        402
+      ],
+      "summary": "Exécute le flux piloté par `migrate_profile_document` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:is_unconfigured_profile_document",
+      "type": "function",
+      "name": "is_unconfigured_profile_document",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        405,
+        409
+      ],
+      "summary": "Évalue la condition portée par `is_unconfigured_profile_document` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:synchronise_profile_document_enabled",
+      "type": "function",
+      "name": "synchronise_profile_document_enabled",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        412,
+        423
+      ],
+      "summary": "Met à jour l’état géré par `synchronise_profile_document_enabled` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:strict_personality_profiles",
+      "type": "function",
+      "name": "strict_personality_profiles",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        426,
+        430
+      ],
+      "summary": "Implémente l’opération `strict_personality_profiles` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:load_personality_profiles",
+      "type": "function",
+      "name": "load_personality_profiles",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        433,
+        435
+      ],
+      "summary": "Récupère ou résout les données de `load_personality_profiles` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:serialize_personality_profiles",
+      "type": "function",
+      "name": "serialize_personality_profiles",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        438,
+        444
+      ],
+      "summary": "Convertit ou formate les données de `serialize_personality_profiles` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:update_personality_profile",
+      "type": "function",
+      "name": "update_personality_profile",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        447,
+        488
+      ],
+      "summary": "Met à jour l’état géré par `update_personality_profile` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:active_personality_id",
+      "type": "function",
+      "name": "active_personality_id",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        491,
+        501
+      ],
+      "summary": "Récupère ou résout les données de `active_personality_id` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:resolve_personality_profile",
+      "type": "function",
+      "name": "resolve_personality_profile",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        504,
+        509
+      ],
+      "summary": "Récupère ou résout les données de `resolve_personality_profile` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:resolve_personality_category",
+      "type": "function",
+      "name": "resolve_personality_category",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        512,
+        517
+      ],
+      "summary": "Récupère ou résout les données de `resolve_personality_category` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:category_curve",
+      "type": "function",
+      "name": "category_curve",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        520,
+        533
+      ],
+      "summary": "Implémente l’opération `category_curve` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:_sample_config_on_custom_axis",
+      "type": "function",
+      "name": "_sample_config_on_custom_axis",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        536,
+        542
+      ],
+      "summary": "Calcule la valeur retournée par `_sample_config_on_custom_axis` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:personality_reference_curves",
+      "type": "function",
+      "name": "personality_reference_curves",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        545,
+        557
+      ],
+      "summary": "Implémente l’opération `personality_reference_curves` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:initial_custom_curve",
+      "type": "function",
+      "name": "initial_custom_curve",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        560,
+        591
+      ],
+      "summary": "Implémente l’opération `initial_custom_curve` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:_linear_interp",
+      "type": "function",
+      "name": "_linear_interp",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        594,
+        601
+      ],
+      "summary": "Implémente l’opération `_linear_interp` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/longitudinal_personality_profiles.py:interpolate_category_curve",
+      "type": "function",
+      "name": "interpolate_category_curve",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "lineRange": [
+        604,
+        623
+      ],
+      "summary": "Calcule la valeur retournée par `interpolate_category_curve` dans le module `longitudinal_personality_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "personnalites",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/common/gpu_model_ready_sound.py",
+      "target": "class:starpilot/common/gpu_model_ready_sound.py:GpuModelReadyChime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/gpu_model_ready_sound.py",
+      "target": "class:starpilot/common/gpu_model_ready_sound.py:GpuModelReadyChime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/lateral_delay.py",
+      "target": "function:starpilot/common/lateral_delay.py:full_lateral_delay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/lateral_delay.py",
+      "target": "function:starpilot/common/lateral_delay.py:full_lateral_delay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/lateral_only_experimental.py",
+      "target": "function:starpilot/common/lateral_only_experimental.py:lateral_only_experimental_available",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/lateral_only_experimental.py",
+      "target": "function:starpilot/common/lateral_only_experimental.py:lateral_only_experimental_available",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/lateral_only_experimental.py",
+      "target": "function:starpilot/common/lateral_only_experimental.py:experimental_mode_available",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/lateral_only_experimental.py",
+      "target": "function:starpilot/common/lateral_only_experimental.py:experimental_mode_available",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_mode.py",
+      "target": "function:starpilot/common/longitudinal_mode.py:mode_lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_mode.py",
+      "target": "function:starpilot/common/longitudinal_mode.py:mode_lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_mode.py",
+      "target": "function:starpilot/common/longitudinal_mode.py:read_mode_values",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_mode.py",
+      "target": "function:starpilot/common/longitudinal_mode.py:read_mode_values",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_mode.py",
+      "target": "function:starpilot/common/longitudinal_mode.py:request_mode_refresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_mode.py",
+      "target": "function:starpilot/common/longitudinal_mode.py:request_mode_refresh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:is_truck_fingerprint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:is_truck_fingerprint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:load_personality_profile_enable_values",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:load_personality_profile_enable_values",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:validate_personality_follow_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:validate_personality_follow_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:validate_personality_advanced_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:validate_personality_advanced_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_acceleration_preset_curve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_acceleration_preset_curve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:default_personality_profiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:default_personality_profiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:profile_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:profile_document",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_decode_json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_decode_json",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_validated_category_with_length",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_validated_category_with_length",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_validated_category",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_validated_category",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_schema_values_equal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_schema_values_equal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_strict_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_strict_document",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_preserve_legacy_following_presets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_preserve_legacy_following_presets",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:strict_profile_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:strict_profile_document",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:migrate_profile_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:migrate_profile_document",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:is_unconfigured_profile_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:is_unconfigured_profile_document",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:synchronise_profile_document_enabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:synchronise_profile_document_enabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:strict_personality_profiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:strict_personality_profiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:load_personality_profiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:load_personality_profiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:serialize_personality_profiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:serialize_personality_profiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:update_personality_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:update_personality_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:active_personality_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:active_personality_id",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:resolve_personality_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:resolve_personality_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:resolve_personality_category",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:resolve_personality_category",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:category_curve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:category_curve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_sample_config_on_custom_axis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_sample_config_on_custom_axis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:personality_reference_curves",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:personality_reference_curves",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:initial_custom_curve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:initial_custom_curve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_linear_interp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:_linear_interp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:interpolate_category_curve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "target": "function:starpilot/common/longitudinal_personality_profiles.py:interpolate_category_curve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

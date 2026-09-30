@@ -1,0 +1,755 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "type": "file",
+      "name": "test_longitudinal_mode.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "summary": "Teste l’adaptateur de mode longitudinal, notamment la priorité des lectures, les transitions autorisées et les échecs de lecture ou d’écriture.",
+      "tags": [
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_read_precedence_without_writes",
+      "type": "function",
+      "name": "test_read_precedence_without_writes",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "lineRange": [
+        40,
+        44
+      ],
+      "summary": "Vérifie le scénario de régression `test_read_precedence_without_writes` pour la validation des transitions du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_all_transitions",
+      "type": "function",
+      "name": "test_all_transitions",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "lineRange": [
+        49,
+        61
+      ],
+      "summary": "Vérifie le scénario de régression `test_all_transitions` pour la validation des transitions du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_guards_fail_closed",
+      "type": "function",
+      "name": "test_guards_fail_closed",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "lineRange": [
+        67,
+        71
+      ],
+      "summary": "Vérifie le scénario de régression `test_guards_fail_closed` pour la validation des transitions du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_invalid_modes_never_write",
+      "type": "function",
+      "name": "test_invalid_modes_never_write",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "lineRange": [
+        75,
+        79
+      ],
+      "summary": "Vérifie le scénario de régression `test_invalid_modes_never_write` pour la validation des transitions du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_stale_or_missing_expected_state_never_writes",
+      "type": "function",
+      "name": "test_stale_or_missing_expected_state_never_writes",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "lineRange": [
+        82,
+        87
+      ],
+      "summary": "Vérifie le scénario de régression `test_stale_or_missing_expected_state_never_writes` pour la validation des transitions du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_failed_write_keeps_old_or_requested_mode",
+      "type": "function",
+      "name": "test_failed_write_keeps_old_or_requested_mode",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "lineRange": [
+        91,
+        96
+      ],
+      "summary": "Vérifie le scénario de régression `test_failed_write_keeps_old_or_requested_mode` pour la validation des transitions du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_readback_failure_stops_without_further_writes",
+      "type": "function",
+      "name": "test_readback_failure_stops_without_further_writes",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "lineRange": [
+        99,
+        105
+      ],
+      "summary": "Vérifie le scénario de régression `test_readback_failure_stops_without_further_writes` pour la validation des transitions du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_guard_rechecked_before_every_write",
+      "type": "function",
+      "name": "test_guard_rechecked_before_every_write",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "lineRange": [
+        108,
+        114
+      ],
+      "summary": "Vérifie le scénario de régression `test_guard_rechecked_before_every_write` pour la validation des transitions du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:Params",
+      "type": "class",
+      "name": "Params",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "lineRange": [
+        15,
+        36
+      ],
+      "summary": "Simule le stockage Params dans les tests afin de contrôler lectures, écritures et défaillances.",
+      "tags": [
+        "classe",
+        "composant",
+        "test",
+        "mode-longitudinal",
+        "garde-fous"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "type": "file",
+      "name": "test_longitudinal_mode_api.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "summary": "Valide l’API Galaxy du mode longitudinal, ses réponses HTTP, ses garde-fous véhicule et sa compatibilité avec les paramètres historiques.",
+      "tags": [
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:client_for",
+      "type": "function",
+      "name": "client_for",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        14,
+        29
+      ],
+      "summary": "Implémente l’opération `client_for` nécessaire à la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "test",
+        "api",
+        "galaxy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_live_snapshot_precedence_no_load_writes",
+      "type": "function",
+      "name": "test_live_snapshot_precedence_no_load_writes",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        32,
+        39
+      ],
+      "summary": "Vérifie le scénario de régression `test_live_snapshot_precedence_no_load_writes` pour la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_put_readback_and_failed_partial_write_signal",
+      "type": "function",
+      "name": "test_put_readback_and_failed_partial_write_signal",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        42,
+        49
+      ],
+      "summary": "Vérifie le scénario de régression `test_put_readback_and_failed_partial_write_signal` pour la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_bad_request_rejected",
+      "type": "function",
+      "name": "test_bad_request_rejected",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        53,
+        57
+      ],
+      "summary": "Vérifie le scénario de régression `test_bad_request_rejected` pour la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_api_guards_and_legacy_favorites",
+      "type": "function",
+      "name": "test_api_guards_and_legacy_favorites",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        61,
+        66
+      ],
+      "summary": "Vérifie le scénario de régression `test_api_guards_and_legacy_favorites` pour la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_legacy_favorite_uses_guarded_adapter",
+      "type": "function",
+      "name": "test_legacy_favorite_uses_guarded_adapter",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        69,
+        76
+      ],
+      "summary": "Vérifie le scénario de régression `test_legacy_favorite_uses_guarded_adapter` pour la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+      "type": "function",
+      "name": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        79,
+        88
+      ],
+      "summary": "Vérifie le scénario de régression `test_experimental_requires_acknowledgement_does_not_mark_confirmed` pour la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_capability_pending_vehicle_guards",
+      "type": "function",
+      "name": "test_capability_pending_vehicle_guards",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        99,
+        106
+      ],
+      "summary": "Vérifie le scénario de régression `test_capability_pending_vehicle_guards` pour la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_real_params_compat_missing_and_failed_reads_fail_closed",
+      "type": "function",
+      "name": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        109,
+        123
+      ],
+      "summary": "Vérifie le scénario de régression `test_real_params_compat_missing_and_failed_reads_fail_closed` pour la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_manual_and_persisted_overrides_and_child_values_untouched",
+      "type": "function",
+      "name": "test_manual_and_persisted_overrides_and_child_values_untouched",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "lineRange": [
+        126,
+        134
+      ],
+      "summary": "Vérifie le scénario de régression `test_manual_and_persisted_overrides_and_child_values_untouched` pour la validation de l’API du mode longitudinal.",
+      "tags": [
+        "fonction",
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "type": "file",
+      "name": "test_mode_transition_guards.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "summary": "Couvre les régressions liées aux garde-fous réévalués pendant une transition et aux écritures multiclés sans état intermédiaire dangereux.",
+      "tags": [
+        "test",
+        "garde-fous",
+        "atomicité",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py:test_guard_transition_during_write_stops_further_writes",
+      "type": "function",
+      "name": "test_guard_transition_during_write_stops_further_writes",
+      "filePath": "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "lineRange": [
+        9,
+        20
+      ],
+      "summary": "Vérifie le scénario de régression `test_guard_transition_during_write_stops_further_writes` pour la validation des garde-fous de transition.",
+      "tags": [
+        "fonction",
+        "test",
+        "garde-fous",
+        "atomicité",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py:test_multi_key_write_boundaries_never_expose_intermediate_chill",
+      "type": "function",
+      "name": "test_multi_key_write_boundaries_never_expose_intermediate_chill",
+      "filePath": "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "lineRange": [
+        23,
+        33
+      ],
+      "summary": "Vérifie le scénario de régression `test_multi_key_write_boundaries_never_expose_intermediate_chill` pour la validation des garde-fous de transition.",
+      "tags": [
+        "fonction",
+        "test",
+        "garde-fous",
+        "atomicité",
+        "régression"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_read_precedence_without_writes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_read_precedence_without_writes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_all_transitions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_all_transitions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_guards_fail_closed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_guards_fail_closed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_invalid_modes_never_write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_invalid_modes_never_write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_stale_or_missing_expected_state_never_writes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_stale_or_missing_expected_state_never_writes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_failed_write_keeps_old_or_requested_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_failed_write_keeps_old_or_requested_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_readback_failure_stops_without_further_writes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_readback_failure_stops_without_further_writes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_guard_rechecked_before_every_write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:test_guard_rechecked_before_every_write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "class:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:Params",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "target": "class:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py:Params",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:client_for",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:client_for",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_live_snapshot_precedence_no_load_writes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_live_snapshot_precedence_no_load_writes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_put_readback_and_failed_partial_write_signal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_put_readback_and_failed_partial_write_signal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_bad_request_rejected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_bad_request_rejected",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_api_guards_and_legacy_favorites",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_api_guards_and_legacy_favorites",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_legacy_favorite_uses_guarded_adapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_legacy_favorite_uses_guarded_adapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_capability_pending_vehicle_guards",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_capability_pending_vehicle_guards",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_real_params_compat_missing_and_failed_reads_fail_closed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_real_params_compat_missing_and_failed_reads_fail_closed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_manual_and_persisted_overrides_and_child_values_untouched",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py:test_manual_and_persisted_overrides_and_child_values_untouched",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py:test_guard_transition_during_write_stops_further_writes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py:test_guard_transition_during_write_stops_further_writes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py:test_multi_key_write_boundaries_never_expose_intermediate_chill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py:test_multi_key_write_boundaries_never_expose_intermediate_chill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

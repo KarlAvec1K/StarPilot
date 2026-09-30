@@ -1,0 +1,441 @@
+{
+  "nodes": [
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Présente StarPilot, son héritage openpilot/FrogPilot, ses fonctions d’assistance à la conduite, le portail Galaxy et les crédits des adaptations tierces.",
+      "tags": [
+        "documentation",
+        "présentation",
+        "fonctionnalités",
+        "galaxy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:common/params_keys.h",
+      "type": "file",
+      "name": "params_keys.h",
+      "filePath": "common/params_keys.h",
+      "summary": "Déclare le registre central des clés Params avec leurs types, valeurs par défaut, règles de persistance, niveaux de réglage et politiques d’effacement.",
+      "tags": [
+        "paramètres",
+        "configuration",
+        "registre",
+        "persistance"
+      ],
+      "complexity": "complex",
+      "languageNotes": "En-tête C++ fondé sur une table inline de métadonnées ParamKeyAttributes."
+    },
+    {
+      "id": "config:pyproject.toml",
+      "type": "config",
+      "name": "pyproject.toml",
+      "filePath": "pyproject.toml",
+      "summary": "Configure le paquet Python openpilot, ses dépendances, la construction Hatch ainsi que pytest, mypy, Ruff et codespell.",
+      "tags": [
+        "configuration",
+        "python",
+        "build-system",
+        "qualité-code"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Configuration TOML centralisant dépendances, build et règles d’analyse statique."
+    },
+    {
+      "id": "file:selfdrive/car/card.py",
+      "type": "file",
+      "name": "card.py",
+      "filePath": "selfdrive/car/card.py",
+      "summary": "Orchestre l’interface véhicule : acquisition de l’état, publication des commandes, callbacks CAN/OBD et intégration des actions StarPilot comme les favoris et Redneck Cruise.",
+      "tags": [
+        "véhicule",
+        "can",
+        "contrôle",
+        "service"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/car/card.py:_build_starpilot_car_control",
+      "type": "function",
+      "name": "_build_starpilot_car_control",
+      "filePath": "selfdrive/car/card.py",
+      "lineRange": [
+        47,
+        59
+      ],
+      "summary": "Construit l’élément produit par `_build_starpilot_car_control` pour la boucle d’interface véhicule.",
+      "tags": [
+        "fonction",
+        "construction",
+        "véhicule",
+        "can",
+        "contrôle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/car/card.py:obd_callback",
+      "type": "function",
+      "name": "obd_callback",
+      "filePath": "selfdrive/car/card.py",
+      "lineRange": [
+        66,
+        74
+      ],
+      "summary": "Fournit le callback `obd_callback` utilisé par la boucle d’interface véhicule.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "véhicule",
+        "can",
+        "contrôle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/car/card.py:can_comm_callbacks",
+      "type": "function",
+      "name": "can_comm_callbacks",
+      "filePath": "selfdrive/car/card.py",
+      "lineRange": [
+        77,
+        92
+      ],
+      "summary": "Fournit le callback `can_comm_callbacks` utilisé par la boucle d’interface véhicule.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "véhicule",
+        "can",
+        "contrôle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/car/card.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "selfdrive/car/card.py",
+      "lineRange": [
+        613,
+        616
+      ],
+      "summary": "Démarre et maintient la boucle principale de la boucle d’interface véhicule.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "véhicule",
+        "can",
+        "contrôle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/car/card.py:Car",
+      "type": "class",
+      "name": "Car",
+      "filePath": "selfdrive/car/card.py",
+      "lineRange": [
+        95,
+        610
+      ],
+      "summary": "Orchestre les échanges entre l’interface véhicule, les contrôleurs, les messages CAN et les extensions StarPilot.",
+      "tags": [
+        "classe",
+        "composant",
+        "véhicule",
+        "can",
+        "contrôle"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/car/redneck_cruise.py",
+      "type": "file",
+      "name": "redneck_cruise.py",
+      "filePath": "selfdrive/car/redneck_cruise.py",
+      "summary": "Implémente la sélection de vitesse cible et la machine à états de Redneck Cruise, avec temporisations de boutons, marge de roue libre et réaction au départ du véhicule de tête.",
+      "tags": [
+        "régulateur-vitesse",
+        "machine-à-états",
+        "véhicule",
+        "contrôle"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/car/redneck_cruise.py:select_redneck_target_speed",
+      "type": "function",
+      "name": "select_redneck_target_speed",
+      "filePath": "selfdrive/car/redneck_cruise.py",
+      "lineRange": [
+        45,
+        100
+      ],
+      "summary": "Sélectionne ou résout la valeur de `select_redneck_target_speed` pour la logique Redneck Cruise.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "régulateur-vitesse",
+        "machine-à-états",
+        "véhicule"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/car/redneck_cruise.py:get_lead_coast_buffer_ms",
+      "type": "function",
+      "name": "get_lead_coast_buffer_ms",
+      "filePath": "selfdrive/car/redneck_cruise.py",
+      "lineRange": [
+        103,
+        118
+      ],
+      "summary": "Calcule ou récupère la valeur `get_lead_coast_buffer_ms` utilisée par la logique Redneck Cruise.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "régulateur-vitesse",
+        "machine-à-états",
+        "véhicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/car/redneck_cruise.py:get_lead_departure_boost_ms",
+      "type": "function",
+      "name": "get_lead_departure_boost_ms",
+      "filePath": "selfdrive/car/redneck_cruise.py",
+      "lineRange": [
+        121,
+        141
+      ],
+      "summary": "Calcule ou récupère la valeur `get_lead_departure_boost_ms` utilisée par la logique Redneck Cruise.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "régulateur-vitesse",
+        "machine-à-états",
+        "véhicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/car/redneck_cruise.py:get_minimum_set_speed",
+      "type": "function",
+      "name": "get_minimum_set_speed",
+      "filePath": "selfdrive/car/redneck_cruise.py",
+      "lineRange": [
+        144,
+        145
+      ],
+      "summary": "Calcule ou récupère la valeur `get_minimum_set_speed` utilisée par la logique Redneck Cruise.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "régulateur-vitesse",
+        "machine-à-états",
+        "véhicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/car/redneck_cruise.py:update_manual_button_timers",
+      "type": "function",
+      "name": "update_manual_button_timers",
+      "filePath": "selfdrive/car/redneck_cruise.py",
+      "lineRange": [
+        148,
+        156
+      ],
+      "summary": "Met à jour l’état associé à `update_manual_button_timers` pour la logique Redneck Cruise.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "régulateur-vitesse",
+        "machine-à-états",
+        "véhicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/car/redneck_cruise.py:RedneckCruise",
+      "type": "class",
+      "name": "RedneckCruise",
+      "filePath": "selfdrive/car/redneck_cruise.py",
+      "lineRange": [
+        159,
+        268
+      ],
+      "summary": "Maintient la machine à états de Redneck Cruise et produit les commandes de boutons nécessaires à la vitesse cible.",
+      "tags": [
+        "classe",
+        "composant",
+        "régulateur-vitesse",
+        "machine-à-états",
+        "véhicule"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "function:selfdrive/car/card.py:_build_starpilot_car_control",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "function:selfdrive/car/card.py:_build_starpilot_car_control",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "function:selfdrive/car/card.py:obd_callback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "function:selfdrive/car/card.py:obd_callback",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "function:selfdrive/car/card.py:can_comm_callbacks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "function:selfdrive/car/card.py:can_comm_callbacks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "function:selfdrive/car/card.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "function:selfdrive/car/card.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "class:selfdrive/car/card.py:Car",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/card.py",
+      "target": "class:selfdrive/car/card.py:Car",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:select_redneck_target_speed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:select_redneck_target_speed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:get_lead_coast_buffer_ms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:get_lead_coast_buffer_ms",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:get_lead_departure_boost_ms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:get_lead_departure_boost_ms",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:get_minimum_set_speed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:get_minimum_set_speed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:update_manual_button_timers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "function:selfdrive/car/redneck_cruise.py:update_manual_button_timers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "class:selfdrive/car/redneck_cruise.py:RedneckCruise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/car/redneck_cruise.py",
+      "target": "class:selfdrive/car/redneck_cruise.py:RedneckCruise",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

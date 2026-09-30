@@ -1,0 +1,4928 @@
+{
+  "nodes": [
+    {
+      "id": "file:selfdrive/selfdrived/events.py",
+      "type": "file",
+      "name": "events.py",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "summary": "Définit le catalogue d’événements et construit les alertes conducteur, leurs priorités, textes, sons et conditions de désengagement.",
+      "tags": [
+        "événements",
+        "alertes",
+        "sécurité",
+        "conducteur"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:get_display_speed",
+      "type": "function",
+      "name": "get_display_speed",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        224,
+        227
+      ],
+      "summary": "Calcule ou récupère la valeur `get_display_speed` utilisée par la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:soft_disable_alert",
+      "type": "function",
+      "name": "soft_disable_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        235,
+        240
+      ],
+      "summary": "Construit l’alerte `soft_disable_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:user_soft_disable_alert",
+      "type": "function",
+      "name": "user_soft_disable_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        242,
+        247
+      ],
+      "summary": "Construit l’alerte `user_soft_disable_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:startup_master_alert",
+      "type": "function",
+      "name": "startup_master_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        249,
+        254
+      ],
+      "summary": "Construit l’alerte `startup_master_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:below_engage_speed_alert",
+      "type": "function",
+      "name": "below_engage_speed_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        256,
+        257
+      ],
+      "summary": "Construit l’alerte `below_engage_speed_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:below_steer_speed_alert",
+      "type": "function",
+      "name": "below_steer_speed_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        260,
+        265
+      ],
+      "summary": "Construit l’alerte `below_steer_speed_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:brake_hold_alert",
+      "type": "function",
+      "name": "brake_hold_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        268,
+        274
+      ],
+      "summary": "Construit l’alerte `brake_hold_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:speed_limit_changed_alert",
+      "type": "function",
+      "name": "speed_limit_changed_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        277,
+        282
+      ],
+      "summary": "Construit l’alerte `speed_limit_changed_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:calibration_incomplete_alert",
+      "type": "function",
+      "name": "calibration_incomplete_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        285,
+        291
+      ],
+      "summary": "Construit l’alerte `calibration_incomplete_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:too_distracted_alert",
+      "type": "function",
+      "name": "too_distracted_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        294,
+        298
+      ],
+      "summary": "Construit l’alerte `too_distracted_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:audio_feedback_alert",
+      "type": "function",
+      "name": "audio_feedback_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        301,
+        306
+      ],
+      "summary": "Construit l’alerte `audio_feedback_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:out_of_space_alert",
+      "type": "function",
+      "name": "out_of_space_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        311,
+        313
+      ],
+      "summary": "Construit l’alerte `out_of_space_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:posenet_invalid_alert",
+      "type": "function",
+      "name": "posenet_invalid_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        316,
+        320
+      ],
+      "summary": "Construit l’alerte `posenet_invalid_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "validation",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:process_not_running_alert",
+      "type": "function",
+      "name": "process_not_running_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        323,
+        326
+      ],
+      "summary": "Construit l’alerte `process_not_running_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:comm_issue_alert",
+      "type": "function",
+      "name": "comm_issue_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        329,
+        332
+      ],
+      "summary": "Construit l’alerte `comm_issue_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:camera_malfunction_alert",
+      "type": "function",
+      "name": "camera_malfunction_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        335,
+        338
+      ],
+      "summary": "Construit l’alerte `camera_malfunction_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:calibration_invalid_alert",
+      "type": "function",
+      "name": "calibration_invalid_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        341,
+        346
+      ],
+      "summary": "Construit l’alerte `calibration_invalid_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "validation",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:paramsd_invalid_alert",
+      "type": "function",
+      "name": "paramsd_invalid_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        349,
+        365
+      ],
+      "summary": "Construit l’alerte `paramsd_invalid_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "validation",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:overheat_alert",
+      "type": "function",
+      "name": "overheat_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        367,
+        371
+      ],
+      "summary": "Construit l’alerte `overheat_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:low_memory_alert",
+      "type": "function",
+      "name": "low_memory_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        374,
+        375
+      ],
+      "summary": "Construit l’alerte `low_memory_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:high_cpu_usage_alert",
+      "type": "function",
+      "name": "high_cpu_usage_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        378,
+        380
+      ],
+      "summary": "Construit l’alerte `high_cpu_usage_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:modeld_lagging_alert",
+      "type": "function",
+      "name": "modeld_lagging_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        383,
+        384
+      ],
+      "summary": "Construit l’alerte `modeld_lagging_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:wrong_car_mode_alert",
+      "type": "function",
+      "name": "wrong_car_mode_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        387,
+        394
+      ],
+      "summary": "Construit l’alerte `wrong_car_mode_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:joystick_alert",
+      "type": "function",
+      "name": "joystick_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        397,
+        401
+      ],
+      "summary": "Construit l’alerte `joystick_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:longitudinal_maneuver_alert",
+      "type": "function",
+      "name": "longitudinal_maneuver_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        404,
+        411
+      ],
+      "summary": "Construit l’alerte `longitudinal_maneuver_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:turning_alert",
+      "type": "function",
+      "name": "turning_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        414,
+        419
+      ],
+      "summary": "Construit l’alerte `turning_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:changing_lanes_alert",
+      "type": "function",
+      "name": "changing_lanes_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        422,
+        425
+      ],
+      "summary": "Construit l’alerte `changing_lanes_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:personality_changed_alert",
+      "type": "function",
+      "name": "personality_changed_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        428,
+        432
+      ],
+      "summary": "Construit l’alerte `personality_changed_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:invalid_lkas_setting_alert",
+      "type": "function",
+      "name": "invalid_lkas_setting_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        435,
+        443
+      ],
+      "summary": "Construit l’alerte `invalid_lkas_setting_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:custom_startup_alert",
+      "type": "function",
+      "name": "custom_startup_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        446,
+        447
+      ],
+      "summary": "Construit l’alerte `custom_startup_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:forcing_stop_alert",
+      "type": "function",
+      "name": "forcing_stop_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        450,
+        461
+      ],
+      "summary": "Construit l’alerte `forcing_stop_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:holiday_alert",
+      "type": "function",
+      "name": "holiday_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        464,
+        485
+      ],
+      "summary": "Construit l’alerte `holiday_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:nnff_loaded_alert",
+      "type": "function",
+      "name": "nnff_loaded_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        488,
+        501
+      ],
+      "summary": "Construit l’alerte `nnff_loaded_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/events.py:no_lane_available_alert",
+      "type": "function",
+      "name": "no_lane_available_alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        504,
+        512
+      ],
+      "summary": "Construit l’alerte `no_lane_available_alert` et ses paramètres pour la génération des alertes conducteur.",
+      "tags": [
+        "fonction",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:Priority",
+      "type": "class",
+      "name": "Priority",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        32,
+        38
+      ],
+      "summary": "Regroupe l’état et les opérations de `Priority` pour la génération des alertes conducteur.",
+      "tags": [
+        "classe",
+        "composant",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:ET",
+      "type": "class",
+      "name": "ET",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        42,
+        52
+      ],
+      "summary": "Regroupe l’état et les opérations de `ET` pour la génération des alertes conducteur.",
+      "tags": [
+        "classe",
+        "composant",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:Events",
+      "type": "class",
+      "name": "Events",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        61,
+        119
+      ],
+      "summary": "Collecte les événements actifs et les convertit en alertes ou messages sérialisés.",
+      "tags": [
+        "classe",
+        "composant",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:Alert",
+      "type": "class",
+      "name": "Alert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        122,
+        155
+      ],
+      "summary": "Représente une alerte conducteur avec priorité, texte, son, durée et comportement d’engagement.",
+      "tags": [
+        "classe",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:NoEntryAlert",
+      "type": "class",
+      "name": "NoEntryAlert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        160,
+        169
+      ],
+      "summary": "Spécialise les données et le comportement de l’alerte `NoEntryAlert` pour la génération des alertes conducteur.",
+      "tags": [
+        "classe",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:SoftDisableAlert",
+      "type": "class",
+      "name": "SoftDisableAlert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        172,
+        177
+      ],
+      "summary": "Spécialise les données et le comportement de l’alerte `SoftDisableAlert` pour la génération des alertes conducteur.",
+      "tags": [
+        "classe",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:UserSoftDisableAlert",
+      "type": "class",
+      "name": "UserSoftDisableAlert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        181,
+        184
+      ],
+      "summary": "Spécialise les données et le comportement de l’alerte `UserSoftDisableAlert` pour la génération des alertes conducteur.",
+      "tags": [
+        "classe",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:ImmediateDisableAlert",
+      "type": "class",
+      "name": "ImmediateDisableAlert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        187,
+        192
+      ],
+      "summary": "Spécialise les données et le comportement de l’alerte `ImmediateDisableAlert` pour la génération des alertes conducteur.",
+      "tags": [
+        "classe",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:EngagementAlert",
+      "type": "class",
+      "name": "EngagementAlert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        195,
+        200
+      ],
+      "summary": "Spécialise les données et le comportement de l’alerte `EngagementAlert` pour la génération des alertes conducteur.",
+      "tags": [
+        "classe",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:NormalPermanentAlert",
+      "type": "class",
+      "name": "NormalPermanentAlert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        203,
+        207
+      ],
+      "summary": "Spécialise les données et le comportement de l’alerte `NormalPermanentAlert` pour la génération des alertes conducteur.",
+      "tags": [
+        "classe",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/events.py:StartupAlert",
+      "type": "class",
+      "name": "StartupAlert",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "lineRange": [
+        210,
+        219
+      ],
+      "summary": "Spécialise les données et le comportement de l’alerte `StartupAlert` pour la génération des alertes conducteur.",
+      "tags": [
+        "classe",
+        "alerte",
+        "événements",
+        "alertes",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/selfdrived/selfdrived.py",
+      "type": "file",
+      "name": "selfdrived.py",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "summary": "Coordonne l’état d’auto-conduite, les événements de sécurité, les alertes, les transitions d’engagement et la publication de selfdriveState.",
+      "tags": [
+        "supervision",
+        "événements",
+        "sécurité",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/selfdrived.py:evaluate_comm_issue",
+      "type": "function",
+      "name": "evaluate_comm_issue",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "lineRange": [
+        69,
+        77
+      ],
+      "summary": "Implémente l’opération `evaluate_comm_issue` nécessaire à la supervision de l’auto-conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "supervision",
+        "événements",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/selfdrived.py:commanded_torque_at_max_for_saturation",
+      "type": "function",
+      "name": "commanded_torque_at_max_for_saturation",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "lineRange": [
+        80,
+        84
+      ],
+      "summary": "Implémente l’opération `commanded_torque_at_max_for_saturation` nécessaire à la supervision de l’auto-conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "supervision",
+        "événements",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/selfdrived.py:controller_openpilot_event",
+      "type": "function",
+      "name": "controller_openpilot_event",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "lineRange": [
+        87,
+        92
+      ],
+      "summary": "Implémente l’opération `controller_openpilot_event` nécessaire à la supervision de l’auto-conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "supervision",
+        "événements",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/selfdrived.py:should_loud_blindspot_alert_without_lateral",
+      "type": "function",
+      "name": "should_loud_blindspot_alert_without_lateral",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "lineRange": [
+        95,
+        120
+      ],
+      "summary": "Évalue la condition `should_loud_blindspot_alert_without_lateral` afin de sécuriser la supervision de l’auto-conduite.",
+      "tags": [
+        "fonction",
+        "validation",
+        "supervision",
+        "événements",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/selfdrived.py:get_starpilot_alert_filters",
+      "type": "function",
+      "name": "get_starpilot_alert_filters",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "lineRange": [
+        123,
+        139
+      ],
+      "summary": "Calcule ou récupère la valeur `get_starpilot_alert_filters` utilisée par la supervision de l’auto-conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "supervision",
+        "événements",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/selfdrived.py:add_tesla_preap_starpilot_events",
+      "type": "function",
+      "name": "add_tesla_preap_starpilot_events",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "lineRange": [
+        142,
+        171
+      ],
+      "summary": "Implémente l’opération `add_tesla_preap_starpilot_events` nécessaire à la supervision de l’auto-conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "supervision",
+        "événements",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/selfdrived/selfdrived.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "lineRange": [
+        1022,
+        1030
+      ],
+      "summary": "Démarre et maintient la boucle principale de la supervision de l’auto-conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "supervision",
+        "événements",
+        "sécurité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/selfdrived/selfdrived.py:SelfdriveD",
+      "type": "class",
+      "name": "SelfdriveD",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "lineRange": [
+        174,
+        1019
+      ],
+      "summary": "Supervise la boucle selfdrived, agrège les événements et publie l’état de conduite assistée.",
+      "tags": [
+        "classe",
+        "composant",
+        "supervision",
+        "événements",
+        "sécurité"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/developer.py",
+      "type": "file",
+      "name": "developer.py",
+      "filePath": "selfdrive/ui/layouts/settings/developer.py",
+      "summary": "Affiche les réglages développeur généraux et commande les options de débogage UI, ADB, SSH, joystick et longitudinal expérimental.",
+      "tags": [
+        "interface-utilisateur",
+        "réglages",
+        "développement",
+        "sécurité"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/developer.py:DeveloperLayout",
+      "type": "class",
+      "name": "DeveloperLayout",
+      "filePath": "selfdrive/ui/layouts/settings/developer.py",
+      "lineRange": [
+        31,
+        158
+      ],
+      "summary": "Compose l’écran `DeveloperLayout` et orchestre ses vues, commandes et interactions pour l’écran des réglages développeur.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "réglages",
+        "développement"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/__init__.py",
+      "summary": "Marque le répertoire des écrans de réglages StarPilot comme paquet Python.",
+      "tags": [
+        "package",
+        "réglages",
+        "starpilot"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Module d’initialisation Python volontairement vide."
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "type": "file",
+      "name": "aethergrid.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "summary": "Fournit le système de composants AetherGrid pour les réglages StarPilot : panneaux, tuiles, listes, sliders, dialogues, dessin et gestion des interactions.",
+      "tags": [
+        "interface-utilisateur",
+        "design-system",
+        "composants",
+        "rendu"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Implémentation Python de widgets à rendu immédiat avec géométrie, animation et gestion explicite des événements pointeur."
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:aether_begin_scissor_mode",
+      "type": "function",
+      "name": "aether_begin_scissor_mode",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        42,
+        54
+      ],
+      "summary": "Implémente l’opération `aether_begin_scissor_mode` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:aether_end_scissor_mode",
+      "type": "function",
+      "name": "aether_end_scissor_mode",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        56,
+        62
+      ],
+      "summary": "Implémente l’opération `aether_end_scissor_mode` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:hex_to_color",
+      "type": "function",
+      "name": "hex_to_color",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        84,
+        86
+      ],
+      "summary": "Implémente l’opération `hex_to_color` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_resolve_value",
+      "type": "function",
+      "name": "_resolve_value",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        89,
+        92
+      ],
+      "summary": "Sélectionne ou résout la valeur de `_resolve_value` pour le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_get_rgba",
+      "type": "function",
+      "name": "_get_rgba",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        95,
+        100
+      ],
+      "summary": "Calcule ou récupère la valeur `_get_rgba` utilisée par le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:with_alpha",
+      "type": "function",
+      "name": "with_alpha",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        103,
+        105
+      ],
+      "summary": "Implémente l’opération `with_alpha` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:clamp_and_snap",
+      "type": "function",
+      "name": "clamp_and_snap",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        108,
+        112
+      ],
+      "summary": "Applique les contraintes de `clamp_and_snap` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:value_fraction",
+      "type": "function",
+      "name": "value_fraction",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        115,
+        119
+      ],
+      "summary": "Implémente l’opération `value_fraction` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:update_val_from_mouse",
+      "type": "function",
+      "name": "update_val_from_mouse",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        122,
+        127
+      ],
+      "summary": "Met à jour l’état associé à `update_val_from_mouse` pour le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:mix_colors",
+      "type": "function",
+      "name": "mix_colors",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        130,
+        139
+      ],
+      "summary": "Implémente l’opération `mix_colors` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_snap",
+      "type": "function",
+      "name": "_snap",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        143,
+        144
+      ],
+      "summary": "Applique les contraintes de `_snap` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:snap_rect",
+      "type": "function",
+      "name": "snap_rect",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        147,
+        151
+      ],
+      "summary": "Applique les contraintes de `snap_rect` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_inset_rect",
+      "type": "function",
+      "name": "_inset_rect",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        154,
+        155
+      ],
+      "summary": "Implémente l’opération `_inset_rect` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_intersect_rect",
+      "type": "function",
+      "name": "_intersect_rect",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        158,
+        165
+      ],
+      "summary": "Implémente l’opération `_intersect_rect` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_roundness_for",
+      "type": "function",
+      "name": "_roundness_for",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        168,
+        170
+      ],
+      "summary": "Implémente l’opération `_roundness_for` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_segments_for",
+      "type": "function",
+      "name": "_segments_for",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        173,
+        175
+      ],
+      "summary": "Implémente l’opération `_segments_for` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_text_fit_common",
+      "type": "function",
+      "name": "draw_text_fit_common",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        178,
+        226
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_text_fit_common` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_rounded_fill",
+      "type": "function",
+      "name": "draw_rounded_fill",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        229,
+        231
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_rounded_fill` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_rounded_stroke",
+      "type": "function",
+      "name": "draw_rounded_stroke",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        234,
+        236
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_rounded_stroke` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:truncate_text_ellipsis",
+      "type": "function",
+      "name": "truncate_text_ellipsis",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        239,
+        249
+      ],
+      "summary": "Implémente l’opération `truncate_text_ellipsis` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_inflate_rect",
+      "type": "function",
+      "name": "_inflate_rect",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        369,
+        370
+      ],
+      "summary": "Implémente l’opération `_inflate_rect` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_hit_rect",
+      "type": "function",
+      "name": "_hit_rect",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        373,
+        377
+      ],
+      "summary": "Implémente l’opération `_hit_rect` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:point_hits",
+      "type": "function",
+      "name": "point_hits",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        380,
+        382
+      ],
+      "summary": "Implémente l’opération `point_hits` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:wrap_text",
+      "type": "function",
+      "name": "wrap_text",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        385,
+        402
+      ],
+      "summary": "Implémente l’opération `wrap_text` nécessaire à le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:build_list_panel_frame",
+      "type": "function",
+      "name": "build_list_panel_frame",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        405,
+        426
+      ],
+      "summary": "Construit l’élément produit par `build_list_panel_frame` pour le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "construction",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_panel_shell",
+      "type": "function",
+      "name": "draw_list_panel_shell",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        429,
+        439
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_list_panel_shell` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:init_list_panel",
+      "type": "function",
+      "name": "init_list_panel",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        442,
+        447
+      ],
+      "summary": "Construit l’élément produit par `init_list_panel` pour le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "construction",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_hud_background",
+      "type": "function",
+      "name": "draw_hud_background",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        450,
+        477
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_hud_background` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_interactive_rect",
+      "type": "function",
+      "name": "draw_interactive_rect",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        480,
+        487
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_interactive_rect` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:resolve_interactive_target",
+      "type": "function",
+      "name": "resolve_interactive_target",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        490,
+        496
+      ],
+      "summary": "Sélectionne ou résout la valeur de `resolve_interactive_target` pour le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_settings_panel_header",
+      "type": "function",
+      "name": "draw_settings_panel_header",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1444,
+        1465
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_settings_panel_header` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_soft_card",
+      "type": "function",
+      "name": "draw_soft_card",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1469,
+        1472
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_soft_card` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_row_shell",
+      "type": "function",
+      "name": "draw_list_row_shell",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1475,
+        1506
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_list_row_shell` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_action_rail",
+      "type": "function",
+      "name": "draw_action_rail",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1509,
+        1526
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_action_rail` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_scroll_fades",
+      "type": "function",
+      "name": "draw_list_scroll_fades",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1529,
+        1552
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_list_scroll_fades` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_busy_ring",
+      "type": "function",
+      "name": "draw_busy_ring",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1555,
+        1567
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_busy_ring` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_standard_toggle_row",
+      "type": "function",
+      "name": "draw_standard_toggle_row",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1570,
+        1595
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_standard_toggle_row` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_build_constellation_nodes",
+      "type": "function",
+      "name": "_build_constellation_nodes",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1623,
+        1654
+      ],
+      "summary": "Construit l’élément produit par `_build_constellation_nodes` pour le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "construction",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_constellation_nodes",
+      "type": "function",
+      "name": "draw_constellation_nodes",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1657,
+        1694
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_constellation_nodes` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_get_or_create_toggle_constellation",
+      "type": "function",
+      "name": "_get_or_create_toggle_constellation",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1697,
+        1706
+      ],
+      "summary": "Calcule ou récupère la valeur `_get_or_create_toggle_constellation` utilisée par le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_toggle_switch",
+      "type": "function",
+      "name": "draw_toggle_switch",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1708,
+        1766
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_toggle_switch` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_action_pill",
+      "type": "function",
+      "name": "draw_action_pill",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1769,
+        1791
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_action_pill` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_chevron_icon",
+      "type": "function",
+      "name": "draw_chevron_icon",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1794,
+        1812
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_chevron_icon` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_breadcrumb_chevron",
+      "type": "function",
+      "name": "draw_breadcrumb_chevron",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1815,
+        1826
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_breadcrumb_chevron` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_tab_bar",
+      "type": "function",
+      "name": "draw_tab_bar",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1834,
+        1863
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_tab_bar` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_tab_card",
+      "type": "function",
+      "name": "draw_tab_card",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1866,
+        1931
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_tab_card` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_metric_strip",
+      "type": "function",
+      "name": "draw_metric_strip",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1934,
+        1982
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_metric_strip` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_group_header",
+      "type": "function",
+      "name": "draw_group_header",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1995,
+        1999
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_group_header` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_section_header",
+      "type": "function",
+      "name": "draw_section_header",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        2002,
+        2029
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_section_header` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_empty_state_card",
+      "type": "function",
+      "name": "draw_empty_state_card",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        2032,
+        2075
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_empty_state_card` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_group_shell",
+      "type": "function",
+      "name": "draw_list_group_shell",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        2078,
+        2087
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_list_group_shell` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_settings_list_row",
+      "type": "function",
+      "name": "draw_settings_list_row",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        2090,
+        2297
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_settings_list_row` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_selectable_chip",
+      "type": "function",
+      "name": "draw_selectable_chip",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        2300,
+        2331
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_selectable_chip` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:format_adjustor_value",
+      "type": "function",
+      "name": "format_adjustor_value",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        2334,
+        2346
+      ],
+      "summary": "Transforme et normalise les données via `format_adjustor_value` pour le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_selection_list_row",
+      "type": "function",
+      "name": "draw_selection_list_row",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        2897,
+        3016
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_selection_list_row` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_status_led",
+      "type": "function",
+      "name": "draw_status_led",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3019,
+        3026
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_status_led` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_overflow_dots",
+      "type": "function",
+      "name": "draw_overflow_dots",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3029,
+        3033
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_overflow_dots` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_heart_icon",
+      "type": "function",
+      "name": "draw_heart_icon",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3037,
+        3045
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_heart_icon` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_download_icon",
+      "type": "function",
+      "name": "draw_download_icon",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3048,
+        3058
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_download_icon` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_back_button",
+      "type": "function",
+      "name": "draw_back_button",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3634,
+        3645
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_back_button` dans le design system AetherGrid.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SPACING",
+      "type": "class",
+      "name": "SPACING",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        70,
+        81
+      ],
+      "summary": "Regroupe l’état et les opérations de `SPACING` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherListColors",
+      "type": "class",
+      "name": "AetherListColors",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        252,
+        275
+      ],
+      "summary": "Structure les valeurs de `AetherListColors` partagées par le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherListMetrics",
+      "type": "class",
+      "name": "AetherListMetrics",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        279,
+        312
+      ],
+      "summary": "Structure les valeurs de `AetherListMetrics` partagées par le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherListFrame",
+      "type": "class",
+      "name": "AetherListFrame",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        316,
+        319
+      ],
+      "summary": "Regroupe l’état et les opérations de `AetherListFrame` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:PanelStyle",
+      "type": "class",
+      "name": "PanelStyle",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        328,
+        345
+      ],
+      "summary": "Regroupe l’état et les opérations de `PanelStyle` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherInteractiveMixin",
+      "type": "class",
+      "name": "AetherInteractiveMixin",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        499,
+        571
+      ],
+      "summary": "Regroupe l’état et les opérations de `AetherInteractiveMixin` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:PanelManagerView",
+      "type": "class",
+      "name": "PanelManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        574,
+        1049
+      ],
+      "summary": "Implémente la vue interactive `PanelManagerView` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AdjustorTogglesPanelView",
+      "type": "class",
+      "name": "AdjustorTogglesPanelView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1056,
+        1114
+      ],
+      "summary": "Implémente la vue interactive `AdjustorTogglesPanelView` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:BreadcrumbController",
+      "type": "class",
+      "name": "BreadcrumbController",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        1117,
+        1434
+      ],
+      "summary": "Encapsule la logique et l’état de `BreadcrumbController` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherInlineRangeControl",
+      "type": "class",
+      "name": "AetherInlineRangeControl",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        2350,
+        2626
+      ],
+      "summary": "Regroupe l’état et les opérations de `AetherInlineRangeControl` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherAdjustorRow",
+      "type": "class",
+      "name": "AetherAdjustorRow",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        2632,
+        2894
+      ],
+      "summary": "Structure les valeurs de `AetherAdjustorRow` partagées par le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherButton",
+      "type": "class",
+      "name": "AetherButton",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3061,
+        3120
+      ],
+      "summary": "Implémente le bouton `AetherButton` et ses interactions dans le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherChip",
+      "type": "class",
+      "name": "AetherChip",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3123,
+        3148
+      ],
+      "summary": "Regroupe l’état et les opérations de `AetherChip` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherScrollbar",
+      "type": "class",
+      "name": "AetherScrollbar",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3151,
+        3180
+      ],
+      "summary": "Regroupe l’état et les opérations de `AetherScrollbar` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SettingRow",
+      "type": "class",
+      "name": "SettingRow",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3192,
+        3206
+      ],
+      "summary": "Structure les valeurs de `SettingRow` partagées par le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SettingSection",
+      "type": "class",
+      "name": "SettingSection",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3210,
+        3216
+      ],
+      "summary": "Structure les valeurs de `SettingSection` partagées par le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:ParentToggle",
+      "type": "class",
+      "name": "ParentToggle",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3220,
+        3224
+      ],
+      "summary": "Regroupe l’état et les opérations de `ParentToggle` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSettingsView",
+      "type": "class",
+      "name": "AetherSettingsView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3229,
+        3580
+      ],
+      "summary": "Implémente la vue interactive `AetherSettingsView` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:CardHubManagerView",
+      "type": "class",
+      "name": "CardHubManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3587,
+        3631
+      ],
+      "summary": "Implémente la vue interactive `CardHubManagerView` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherCategoryDrawer",
+      "type": "class",
+      "name": "AetherCategoryDrawer",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3653,
+        3784
+      ],
+      "summary": "Regroupe l’état et les opérations de `AetherCategoryDrawer` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "rendu",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherTile",
+      "type": "class",
+      "name": "AetherTile",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3792,
+        3958
+      ],
+      "summary": "Représente la tuile interactive `AetherTile` dans le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:HubTile",
+      "type": "class",
+      "name": "HubTile",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        3961,
+        4038
+      ],
+      "summary": "Représente la tuile interactive `HubTile` dans le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:ToggleTile",
+      "type": "class",
+      "name": "ToggleTile",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        4042,
+        4162
+      ],
+      "summary": "Représente la tuile interactive `ToggleTile` dans le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:RowToggleTile",
+      "type": "class",
+      "name": "RowToggleTile",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        4165,
+        4205
+      ],
+      "summary": "Représente la tuile interactive `RowToggleTile` dans le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:ValueTile",
+      "type": "class",
+      "name": "ValueTile",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        4208,
+        4257
+      ],
+      "summary": "Représente la tuile interactive `ValueTile` dans le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SliderTile",
+      "type": "class",
+      "name": "SliderTile",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        4260,
+        4407
+      ],
+      "summary": "Représente la tuile interactive `SliderTile` dans le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSlider",
+      "type": "class",
+      "name": "AetherSlider",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        4410,
+        4658
+      ],
+      "summary": "Regroupe l’état et les opérations de `AetherSlider` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSliderDialog",
+      "type": "class",
+      "name": "AetherSliderDialog",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        4661,
+        4925
+      ],
+      "summary": "Présente la boîte de dialogue `AetherSliderDialog` et gère ses interactions pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:RadioTileGroup",
+      "type": "class",
+      "name": "RadioTileGroup",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        4928,
+        5004
+      ],
+      "summary": "Regroupe l’état et les opérations de `RadioTileGroup` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherMultiSelectDialog",
+      "type": "class",
+      "name": "AetherMultiSelectDialog",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        5007,
+        5153
+      ],
+      "summary": "Présente la boîte de dialogue `AetherMultiSelectDialog` et gère ses interactions pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherMultiSelectTile",
+      "type": "class",
+      "name": "AetherMultiSelectTile",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        5156,
+        5242
+      ],
+      "summary": "Représente la tuile interactive `AetherMultiSelectTile` dans le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSegmentedControl",
+      "type": "class",
+      "name": "AetherSegmentedControl",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        5244,
+        5418
+      ],
+      "summary": "Regroupe l’état et les opérations de `AetherSegmentedControl` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:TileGrid",
+      "type": "class",
+      "name": "TileGrid",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "lineRange": [
+        5421,
+        5601
+      ],
+      "summary": "Regroupe l’état et les opérations de `TileGrid` pour le design system AetherGrid.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "design-system",
+        "composants"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:get_display_speed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:get_display_speed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:soft_disable_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:soft_disable_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:user_soft_disable_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:user_soft_disable_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:startup_master_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:startup_master_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:below_engage_speed_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:below_engage_speed_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:below_steer_speed_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:below_steer_speed_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:brake_hold_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:brake_hold_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:speed_limit_changed_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:speed_limit_changed_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:calibration_incomplete_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:calibration_incomplete_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:too_distracted_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:too_distracted_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:audio_feedback_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:audio_feedback_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:out_of_space_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:out_of_space_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:posenet_invalid_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:posenet_invalid_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:process_not_running_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:process_not_running_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:comm_issue_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:comm_issue_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:camera_malfunction_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:camera_malfunction_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:calibration_invalid_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:calibration_invalid_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:paramsd_invalid_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:paramsd_invalid_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:overheat_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:overheat_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:low_memory_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:low_memory_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:high_cpu_usage_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:high_cpu_usage_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:modeld_lagging_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:modeld_lagging_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:wrong_car_mode_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:wrong_car_mode_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:joystick_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:joystick_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:longitudinal_maneuver_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:longitudinal_maneuver_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:turning_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:turning_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:changing_lanes_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:changing_lanes_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:personality_changed_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:personality_changed_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:invalid_lkas_setting_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:invalid_lkas_setting_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:custom_startup_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:custom_startup_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:forcing_stop_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:forcing_stop_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:holiday_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:holiday_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:nnff_loaded_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:nnff_loaded_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:no_lane_available_alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "function:selfdrive/selfdrived/events.py:no_lane_available_alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:Priority",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:Priority",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:ET",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:ET",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:Events",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:Events",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:Alert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:Alert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:NoEntryAlert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:NoEntryAlert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:SoftDisableAlert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:SoftDisableAlert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:UserSoftDisableAlert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:UserSoftDisableAlert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:ImmediateDisableAlert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:ImmediateDisableAlert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:EngagementAlert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:EngagementAlert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:NormalPermanentAlert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:NormalPermanentAlert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:StartupAlert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/events.py",
+      "target": "class:selfdrive/selfdrived/events.py:StartupAlert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:evaluate_comm_issue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:evaluate_comm_issue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:commanded_torque_at_max_for_saturation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:commanded_torque_at_max_for_saturation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:controller_openpilot_event",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:controller_openpilot_event",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:should_loud_blindspot_alert_without_lateral",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:should_loud_blindspot_alert_without_lateral",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:get_starpilot_alert_filters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:get_starpilot_alert_filters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:add_tesla_preap_starpilot_events",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:add_tesla_preap_starpilot_events",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "function:selfdrive/selfdrived/selfdrived.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "class:selfdrive/selfdrived/selfdrived.py:SelfdriveD",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/selfdrived/selfdrived.py",
+      "target": "class:selfdrive/selfdrived/selfdrived.py:SelfdriveD",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/developer.py",
+      "target": "class:selfdrive/ui/layouts/settings/developer.py:DeveloperLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/developer.py",
+      "target": "class:selfdrive/ui/layouts/settings/developer.py:DeveloperLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:aether_begin_scissor_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:aether_begin_scissor_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:aether_end_scissor_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:aether_end_scissor_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:hex_to_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:hex_to_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_resolve_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_resolve_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_get_rgba",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_get_rgba",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:with_alpha",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:with_alpha",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:clamp_and_snap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:clamp_and_snap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:value_fraction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:value_fraction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:update_val_from_mouse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:update_val_from_mouse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:mix_colors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:mix_colors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_snap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_snap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:snap_rect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:snap_rect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_inset_rect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_inset_rect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_intersect_rect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_intersect_rect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_roundness_for",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_roundness_for",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_segments_for",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_segments_for",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_text_fit_common",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_text_fit_common",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_rounded_fill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_rounded_fill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_rounded_stroke",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_rounded_stroke",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:truncate_text_ellipsis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:truncate_text_ellipsis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_inflate_rect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_inflate_rect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_hit_rect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_hit_rect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:point_hits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:point_hits",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:wrap_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:wrap_text",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:build_list_panel_frame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:build_list_panel_frame",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_panel_shell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_panel_shell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:init_list_panel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:init_list_panel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_hud_background",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_hud_background",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_interactive_rect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_interactive_rect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:resolve_interactive_target",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:resolve_interactive_target",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_settings_panel_header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_settings_panel_header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_soft_card",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_soft_card",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_row_shell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_row_shell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_action_rail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_action_rail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_scroll_fades",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_scroll_fades",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_busy_ring",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_busy_ring",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_standard_toggle_row",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_standard_toggle_row",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_build_constellation_nodes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_build_constellation_nodes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_constellation_nodes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_constellation_nodes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_get_or_create_toggle_constellation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:_get_or_create_toggle_constellation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_toggle_switch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_toggle_switch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_action_pill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_action_pill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_chevron_icon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_chevron_icon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_breadcrumb_chevron",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_breadcrumb_chevron",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_tab_bar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_tab_bar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_tab_card",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_tab_card",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_metric_strip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_metric_strip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_group_header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_group_header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_section_header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_section_header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_empty_state_card",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_empty_state_card",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_group_shell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_list_group_shell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_settings_list_row",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_settings_list_row",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_selectable_chip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_selectable_chip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:format_adjustor_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:format_adjustor_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_selection_list_row",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_selection_list_row",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_status_led",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_status_led",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_overflow_dots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_overflow_dots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_heart_icon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_heart_icon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_download_icon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_download_icon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_back_button",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:draw_back_button",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SPACING",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SPACING",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherListColors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherListColors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherListMetrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherListMetrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherListFrame",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherListFrame",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:PanelStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:PanelStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherInteractiveMixin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherInteractiveMixin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:PanelManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:PanelManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AdjustorTogglesPanelView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AdjustorTogglesPanelView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:BreadcrumbController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:BreadcrumbController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherInlineRangeControl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherInlineRangeControl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherAdjustorRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherAdjustorRow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherButton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherButton",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherChip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherChip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherScrollbar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherScrollbar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SettingRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SettingRow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SettingSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SettingSection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:ParentToggle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:ParentToggle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSettingsView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSettingsView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:CardHubManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:CardHubManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherCategoryDrawer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherCategoryDrawer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherTile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherTile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:HubTile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:HubTile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:ToggleTile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:ToggleTile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:RowToggleTile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:RowToggleTile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:ValueTile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:ValueTile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SliderTile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:SliderTile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSlider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSlider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSliderDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSliderDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:RadioTileGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:RadioTileGroup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherMultiSelectDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherMultiSelectDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherMultiSelectTile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherMultiSelectTile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSegmentedControl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:AetherSegmentedControl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:TileGrid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/aethergrid.py:TileGrid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

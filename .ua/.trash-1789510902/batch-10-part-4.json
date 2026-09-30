@@ -1,0 +1,2965 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/settings.js",
+      "type": "file",
+      "name": "settings.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/settings.js",
+      "summary": "Construit la vue de navigation des réglages Galaxy et délègue l’ouverture des sections au routeur global sans créer de second module.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "navigation",
+        "component"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Composant ES module fondé sur Arrow.js et chargé directement par le navigateur."
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/settings.js:SettingsView",
+      "type": "function",
+      "name": "SettingsView",
+      "filePath": "starpilot/system/the_galaxy/assets/components/settings.js",
+      "lineRange": [
+        13,
+        62
+      ],
+      "summary": "Enregistre ou publie l’état produit par `SettingsView` dans le module `settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "type": "file",
+      "name": "device_settings.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "summary": "Implémente l’interface classique complète des réglages Galaxy : layout dynamique, Params, favoris, valeurs numériques et profils de personnalité.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "parametres",
+        "favoris",
+        "personnalites"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Grand composant Arrow.js réactif, découpé en fonctions de synchronisation, validation et rendu sans étape de build."
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:isSettingVisible",
+      "type": "function",
+      "name": "isSettingVisible",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        222,
+        231
+      ],
+      "summary": "Évalue la condition portée par `isSettingVisible` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:collectDescendantKeys",
+      "type": "function",
+      "name": "collectDescendantKeys",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        233,
+        245
+      ],
+      "summary": "Construit la représentation produite par `collectDescendantKeys` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:getSectionsWithSlug",
+      "type": "function",
+      "name": "getSectionsWithSlug",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        247,
+        259
+      ],
+      "summary": "Récupère ou résout les données de `getSectionsWithSlug` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:applySelectOptions",
+      "type": "function",
+      "name": "applySelectOptions",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        336,
+        345
+      ],
+      "summary": "Exécute le flux piloté par `applySelectOptions` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:syncSelectValue",
+      "type": "function",
+      "name": "syncSelectValue",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        347,
+        368
+      ],
+      "summary": "Met à jour l’état géré par `syncSelectValue` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:hydrateEndpointOptions",
+      "type": "function",
+      "name": "hydrateEndpointOptions",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        370,
+        397
+      ],
+      "summary": "Met à jour l’état géré par `hydrateEndpointOptions` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:syncInputs",
+      "type": "function",
+      "name": "syncInputs",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        399,
+        470
+      ],
+      "summary": "Met à jour l’état géré par `syncInputs` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchLongitudinalMode",
+      "type": "function",
+      "name": "fetchLongitudinalMode",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        481,
+        495
+      ],
+      "summary": "Récupère ou résout les données de `fetchLongitudinalMode` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateLongitudinalMode",
+      "type": "function",
+      "name": "updateLongitudinalMode",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        497,
+        526
+      ],
+      "summary": "Met à jour l’état géré par `updateLongitudinalMode` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchDefaultValues",
+      "type": "function",
+      "name": "fetchDefaultValues",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        528,
+        538
+      ],
+      "summary": "Récupère ou résout les données de `fetchDefaultValues` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchFlmWorkspace",
+      "type": "function",
+      "name": "fetchFlmWorkspace",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        540,
+        558
+      ],
+      "summary": "Récupère ou résout les données de `fetchFlmWorkspace` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:refreshParamsAndDefaults",
+      "type": "function",
+      "name": "refreshParamsAndDefaults",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        560,
+        573
+      ],
+      "summary": "Met à jour l’état géré par `refreshParamsAndDefaults` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchPersonalityProfiles",
+      "type": "function",
+      "name": "fetchPersonalityProfiles",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        575,
+        611
+      ],
+      "summary": "Récupère ou résout les données de `fetchPersonalityProfiles` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:migratePersonalityProfiles",
+      "type": "function",
+      "name": "migratePersonalityProfiles",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        613,
+        628
+      ],
+      "summary": "Exécute le flux piloté par `migratePersonalityProfiles` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchLayoutAndParams",
+      "type": "function",
+      "name": "fetchLayoutAndParams",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        630,
+        687
+      ],
+      "summary": "Récupère ou résout les données de `fetchLayoutAndParams` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:numericBounds",
+      "type": "function",
+      "name": "numericBounds",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        711,
+        756
+      ],
+      "summary": "Implémente l’opération `numericBounds` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:coerceValueByType",
+      "type": "function",
+      "name": "coerceValueByType",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        758,
+        768
+      ],
+      "summary": "Normalise ou valide les données de `coerceValueByType` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:normalizeFavoriteSlots",
+      "type": "function",
+      "name": "normalizeFavoriteSlots",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        779,
+        796
+      ],
+      "summary": "Normalise ou valide les données de `normalizeFavoriteSlots` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:populateFavoriteSelect",
+      "type": "function",
+      "name": "populateFavoriteSelect",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        831,
+        844
+      ],
+      "summary": "Met à jour l’état géré par `populateFavoriteSelect` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchFavoriteSlots",
+      "type": "function",
+      "name": "fetchFavoriteSlots",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        846,
+        861
+      ],
+      "summary": "Récupère ou résout les données de `fetchFavoriteSlots` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:refreshFavoriteValues",
+      "type": "function",
+      "name": "refreshFavoriteValues",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        863,
+        885
+      ],
+      "summary": "Met à jour l’état géré par `refreshFavoriteValues` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:ensureFavoriteValuePolling",
+      "type": "function",
+      "name": "ensureFavoriteValuePolling",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        887,
+        900
+      ],
+      "summary": "Implémente l’opération `ensureFavoriteValuePolling` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:refreshCscCalibrationValues",
+      "type": "function",
+      "name": "refreshCscCalibrationValues",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        902,
+        937
+      ],
+      "summary": "Met à jour l’état géré par `refreshCscCalibrationValues` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:ensureCscCalibrationPolling",
+      "type": "function",
+      "name": "ensureCscCalibrationPolling",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        939,
+        952
+      ],
+      "summary": "Implémente l’opération `ensureCscCalibrationPolling` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:refreshUiContextValues",
+      "type": "function",
+      "name": "refreshUiContextValues",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        954,
+        989
+      ],
+      "summary": "Met à jour l’état géré par `refreshUiContextValues` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:ensureUiContextPolling",
+      "type": "function",
+      "name": "ensureUiContextPolling",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        991,
+        1003
+      ],
+      "summary": "Implémente l’opération `ensureUiContextPolling` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:saveFavoriteSlots",
+      "type": "function",
+      "name": "saveFavoriteSlots",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1005,
+        1038
+      ],
+      "summary": "Enregistre ou publie l’état produit par `saveFavoriteSlots` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateFavoriteSlot",
+      "type": "function",
+      "name": "updateFavoriteSlot",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1040,
+        1061
+      ],
+      "summary": "Met à jour l’état géré par `updateFavoriteSlot` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateFavoriteValue",
+      "type": "function",
+      "name": "updateFavoriteValue",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1071,
+        1118
+      ],
+      "summary": "Met à jour l’état géré par `updateFavoriteValue` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:stepPrecision",
+      "type": "function",
+      "name": "stepPrecision",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1129,
+        1138
+      ],
+      "summary": "Implémente l’opération `stepPrecision` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:snapNumericToBoundsAndStep",
+      "type": "function",
+      "name": "snapNumericToBoundsAndStep",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1144,
+        1158
+      ],
+      "summary": "Implémente l’opération `snapNumericToBoundsAndStep` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resolveDefaultNumericValue",
+      "type": "function",
+      "name": "resolveDefaultNumericValue",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1170,
+        1184
+      ],
+      "summary": "Récupère ou résout les données de `resolveDefaultNumericValue` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:confirmPandaFirmwareToggle",
+      "type": "function",
+      "name": "confirmPandaFirmwareToggle",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1220,
+        1229
+      ],
+      "summary": "Implémente l’opération `confirmPandaFirmwareToggle` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateNumericParam",
+      "type": "function",
+      "name": "updateNumericParam",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1242,
+        1282
+      ],
+      "summary": "Met à jour l’état géré par `updateNumericParam` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:previewSliderParam",
+      "type": "function",
+      "name": "previewSliderParam",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1284,
+        1294
+      ],
+      "summary": "Implémente l’opération `previewSliderParam` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:commitSliderParam",
+      "type": "function",
+      "name": "commitSliderParam",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1296,
+        1316
+      ],
+      "summary": "Implémente l’opération `commitSliderParam` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:stepNumericParam",
+      "type": "function",
+      "name": "stepNumericParam",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1318,
+        1336
+      ],
+      "summary": "Implémente l’opération `stepNumericParam` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:canStepNumericParam",
+      "type": "function",
+      "name": "canStepNumericParam",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1338,
+        1348
+      ],
+      "summary": "Évalue la condition portée par `canStepNumericParam` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:applyManualNumericParam",
+      "type": "function",
+      "name": "applyManualNumericParam",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1350,
+        1383
+      ],
+      "summary": "Exécute le flux piloté par `applyManualNumericParam` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resetNumericParam",
+      "type": "function",
+      "name": "resetNumericParam",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1385,
+        1411
+      ],
+      "summary": "Exécute le flux piloté par `resetNumericParam` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:runSettingAction",
+      "type": "function",
+      "name": "runSettingAction",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1413,
+        1440
+      ],
+      "summary": "Exécute le flux piloté par `runSettingAction` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateParam",
+      "type": "function",
+      "name": "updateParam",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1442,
+        1506
+      ],
+      "summary": "Met à jour l’état géré par `updateParam` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:restoreRhdAutoDetection",
+      "type": "function",
+      "name": "restoreRhdAutoDetection",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1508,
+        1531
+      ],
+      "summary": "Exécute le flux piloté par `restoreRhdAutoDetection` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:revertInput",
+      "type": "function",
+      "name": "revertInput",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1533,
+        1555
+      ],
+      "summary": "Exécute le flux piloté par `revertInput` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resetColorParam",
+      "type": "function",
+      "name": "resetColorParam",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1557,
+        1585
+      ],
+      "summary": "Exécute le flux piloté par `resetColorParam` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:getSettingLockReason",
+      "type": "function",
+      "name": "getSettingLockReason",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1609,
+        1637
+      ],
+      "summary": "Récupère ou résout les données de `getSettingLockReason` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:getFlmParamStatus",
+      "type": "function",
+      "name": "getFlmParamStatus",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1648,
+        1665
+      ],
+      "summary": "Récupère ou résout les données de `getFlmParamStatus` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:handleSectionTabClick",
+      "type": "function",
+      "name": "handleSectionTabClick",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1686,
+        1701
+      ],
+      "summary": "Exécute le flux piloté par `handleSectionTabClick` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:recoverPersonalitySave",
+      "type": "function",
+      "name": "recoverPersonalitySave",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1718,
+        1756
+      ],
+      "summary": "Implémente l’opération `recoverPersonalitySave` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:savePersonalityCategory",
+      "type": "function",
+      "name": "savePersonalityCategory",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1758,
+        1814
+      ],
+      "summary": "Enregistre ou publie l’état produit par `savePersonalityCategory` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updatePersonalityPreset",
+      "type": "function",
+      "name": "updatePersonalityPreset",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1816,
+        1837
+      ],
+      "summary": "Met à jour l’état géré par `updatePersonalityPreset` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resetPersonalityCurve",
+      "type": "function",
+      "name": "resetPersonalityCurve",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1839,
+        1849
+      ],
+      "summary": "Exécute le flux piloté par `resetPersonalityCurve` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:graphGeometry",
+      "type": "function",
+      "name": "graphGeometry",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1851,
+        1866
+      ],
+      "summary": "Implémente l’opération `graphGeometry` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:drawPersonalityCurve",
+      "type": "function",
+      "name": "drawPersonalityCurve",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1874,
+        1970
+      ],
+      "summary": "Construit le rendu ou composant fourni par `drawPersonalityCurve` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:restorePersonalityCurveVisual",
+      "type": "function",
+      "name": "restorePersonalityCurveVisual",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        1981,
+        1992
+      ],
+      "summary": "Exécute le flux piloté par `restorePersonalityCurveVisual` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:beginPersonalityCurveDrag",
+      "type": "function",
+      "name": "beginPersonalityCurveDrag",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2006,
+        2056
+      ],
+      "summary": "Implémente l’opération `beginPersonalityCurveDrag` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:adjustPersonalityCurvePoint",
+      "type": "function",
+      "name": "adjustPersonalityCurvePoint",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2066,
+        2091
+      ],
+      "summary": "Implémente l’opération `adjustPersonalityCurvePoint` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityCurve",
+      "type": "function",
+      "name": "renderPersonalityCurve",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2093,
+        2157
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderPersonalityCurve` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityCategoryField",
+      "type": "function",
+      "name": "renderPersonalityCategoryField",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2159,
+        2184
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderPersonalityCategoryField` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityProfileToggle",
+      "type": "function",
+      "name": "renderPersonalityProfileToggle",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2186,
+        2210
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderPersonalityProfileToggle` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updatePersonalityAdvancedPreset",
+      "type": "function",
+      "name": "updatePersonalityAdvancedPreset",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2227,
+        2237
+      ],
+      "summary": "Met à jour l’état géré par `updatePersonalityAdvancedPreset` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityAdvancedValue",
+      "type": "function",
+      "name": "renderPersonalityAdvancedValue",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2239,
+        2274
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderPersonalityAdvancedValue` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityAdvancedRows",
+      "type": "function",
+      "name": "renderPersonalityAdvancedRows",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2276,
+        2290
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderPersonalityAdvancedRows` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityAdvanced",
+      "type": "function",
+      "name": "renderPersonalityAdvanced",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2292,
+        2307
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderPersonalityAdvanced` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityCardSnapshot",
+      "type": "function",
+      "name": "renderPersonalityCardSnapshot",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2309,
+        2334
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderPersonalityCardSnapshot` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityProfilesPanel",
+      "type": "function",
+      "name": "renderPersonalityProfilesPanel",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2340,
+        2359
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderPersonalityProfilesPanel` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderFavoriteSlotsPanel",
+      "type": "function",
+      "name": "renderFavoriteSlotsPanel",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2361,
+        2500
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderFavoriteSlotsPanel` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderSettingRow",
+      "type": "function",
+      "name": "renderSettingRow",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2502,
+        2764
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderSettingRow` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderSettingTree",
+      "type": "function",
+      "name": "renderSettingTree",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2770,
+        2791
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderSettingTree` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resolveActiveSectionSlug",
+      "type": "function",
+      "name": "resolveActiveSectionSlug",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2794,
+        2808
+      ],
+      "summary": "Récupère ou résout les données de `resolveActiveSectionSlug` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:DeviceSettings",
+      "type": "function",
+      "name": "DeviceSettings",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "lineRange": [
+        2810,
+        2959
+      ],
+      "summary": "Construit le rendu ou composant fourni par `DeviceSettings` dans le module `device_settings.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "type": "file",
+      "name": "speed_limits.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "summary": "Affiche l’état du traitement des limites de vitesse dans Galaxy et permet de déclencher immédiatement une passe de traitement.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "limite-vitesse",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js:fetchStatus",
+      "type": "function",
+      "name": "fetchStatus",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "lineRange": [
+        24,
+        54
+      ],
+      "summary": "Récupère ou résout les données de `fetchStatus` dans le module `speed_limits.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js:handleProcessNow",
+      "type": "function",
+      "name": "handleProcessNow",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "lineRange": [
+        56,
+        77
+      ],
+      "summary": "Exécute le flux piloté par `handleProcessNow` dans le module `speed_limits.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js:SpeedLimits",
+      "type": "function",
+      "name": "SpeedLimits",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "lineRange": [
+        79,
+        159
+      ],
+      "summary": "Construit le rendu ou composant fourni par `SpeedLimits` dans le module `speed_limits.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "type": "file",
+      "name": "tuning.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "summary": "Fournit l’interface Galaxy du FLM pour sélectionner des routes, lancer l’analyse, comparer des profils, commenter les résultats et gérer les tunes sauvegardés.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "flm",
+        "tuning",
+        "visualisation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:flushPendingRoutes",
+      "type": "function",
+      "name": "flushPendingRoutes",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        105,
+        123
+      ],
+      "summary": "Met à jour l’état géré par `flushPendingRoutes` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:enqueueRoutes",
+      "type": "function",
+      "name": "enqueueRoutes",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        125,
+        146
+      ],
+      "summary": "Construit la représentation produite par `enqueueRoutes` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:fetchRoutes",
+      "type": "function",
+      "name": "fetchRoutes",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        148,
+        208
+      ],
+      "summary": "Récupère ou résout les données de `fetchRoutes` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:fetchWorkspace",
+      "type": "function",
+      "name": "fetchWorkspace",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        210,
+        223
+      ],
+      "summary": "Récupère ou résout les données de `fetchWorkspace` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:loadReport",
+      "type": "function",
+      "name": "loadReport",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        232,
+        244
+      ],
+      "summary": "Récupère ou résout les données de `loadReport` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:deleteReport",
+      "type": "function",
+      "name": "deleteReport",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        246,
+        269
+      ],
+      "summary": "Exécute le flux piloté par `deleteReport` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:fetchStatus",
+      "type": "function",
+      "name": "fetchStatus",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        271,
+        296
+      ],
+      "summary": "Récupère ou résout les données de `fetchStatus` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:ensurePolling",
+      "type": "function",
+      "name": "ensurePolling",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        305,
+        320
+      ],
+      "summary": "Implémente l’opération `ensurePolling` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:setSegmentRange",
+      "type": "function",
+      "name": "setSegmentRange",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        332,
+        341
+      ],
+      "summary": "Enregistre ou publie l’état produit par `setSegmentRange` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:selectedSegmentRanges",
+      "type": "function",
+      "name": "selectedSegmentRanges",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        343,
+        357
+      ],
+      "summary": "Récupère ou résout les données de `selectedSegmentRanges` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:runAnalyze",
+      "type": "function",
+      "name": "runAnalyze",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        364,
+        386
+      ],
+      "summary": "Exécute le flux piloté par `runAnalyze` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:stopAnalyze",
+      "type": "function",
+      "name": "stopAnalyze",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        388,
+        403
+      ],
+      "summary": "Exécute le flux piloté par `stopAnalyze` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:applyProfile",
+      "type": "function",
+      "name": "applyProfile",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        405,
+        425
+      ],
+      "summary": "Exécute le flux piloté par `applyProfile` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:saveCurrentTune",
+      "type": "function",
+      "name": "saveCurrentTune",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        427,
+        451
+      ],
+      "summary": "Enregistre ou publie l’état produit par `saveCurrentTune` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:applySavedTune",
+      "type": "function",
+      "name": "applySavedTune",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        453,
+        469
+      ],
+      "summary": "Exécute le flux piloté par `applySavedTune` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renameSavedTune",
+      "type": "function",
+      "name": "renameSavedTune",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        471,
+        494
+      ],
+      "summary": "Exécute le flux piloté par `renameSavedTune` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:deleteSavedTune",
+      "type": "function",
+      "name": "deleteSavedTune",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        496,
+        514
+      ],
+      "summary": "Exécute le flux piloté par `deleteSavedTune` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:submitSavedTune",
+      "type": "function",
+      "name": "submitSavedTune",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        516,
+        543
+      ],
+      "summary": "Exécute le flux piloté par `submitSavedTune` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:selectPath",
+      "type": "function",
+      "name": "selectPath",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        545,
+        567
+      ],
+      "summary": "Implémente l’opération `selectPath` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:revertProfile",
+      "type": "function",
+      "name": "revertProfile",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        569,
+        589
+      ],
+      "summary": "Exécute le flux piloté par `revertProfile` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:acceptCurrentAsBaseline",
+      "type": "function",
+      "name": "acceptCurrentAsBaseline",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        591,
+        609
+      ],
+      "summary": "Exécute le flux piloté par `acceptCurrentAsBaseline` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:setDimensionFeedback",
+      "type": "function",
+      "name": "setDimensionFeedback",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        611,
+        620
+      ],
+      "summary": "Enregistre ou publie l’état produit par `setDimensionFeedback` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:saveFeedback",
+      "type": "function",
+      "name": "saveFeedback",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        629,
+        659
+      ],
+      "summary": "Enregistre ou publie l’état produit par `saveFeedback` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:initialize",
+      "type": "function",
+      "name": "initialize",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        667,
+        678
+      ],
+      "summary": "Implémente l’opération `initialize` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:reportPaths",
+      "type": "function",
+      "name": "reportPaths",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        684,
+        699
+      ],
+      "summary": "Implémente l’opération `reportPaths` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:activeTrialProfile",
+      "type": "function",
+      "name": "activeTrialProfile",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        712,
+        727
+      ],
+      "summary": "Récupère ou résout les données de `activeTrialProfile` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:mergedFlmOverrides",
+      "type": "function",
+      "name": "mergedFlmOverrides",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        729,
+        742
+      ],
+      "summary": "Construit la représentation produite par `mergedFlmOverrides` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:tuneComparisonRows",
+      "type": "function",
+      "name": "tuneComparisonRows",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        751,
+        800
+      ],
+      "summary": "Implémente l’opération `tuneComparisonRows` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderTuneComparison",
+      "type": "function",
+      "name": "renderTuneComparison",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        809,
+        845
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderTuneComparison` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:trackingOverviewItems",
+      "type": "function",
+      "name": "trackingOverviewItems",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        869,
+        893
+      ],
+      "summary": "Implémente l’opération `trackingOverviewItems` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:plotPoints",
+      "type": "function",
+      "name": "plotPoints",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        895,
+        906
+      ],
+      "summary": "Implémente l’opération `plotPoints` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderTrackingPlot",
+      "type": "function",
+      "name": "renderTrackingPlot",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        908,
+        942
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderTrackingPlot` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderTrackingOverview",
+      "type": "function",
+      "name": "renderTrackingOverview",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        944,
+        989
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderTrackingOverview` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderProfile",
+      "type": "function",
+      "name": "renderProfile",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        991,
+        1030
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderProfile` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderSuggestion",
+      "type": "function",
+      "name": "renderSuggestion",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        1032,
+        1091
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderSuggestion` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderPathSummary",
+      "type": "function",
+      "name": "renderPathSummary",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        1093,
+        1116
+      ],
+      "summary": "Construit le rendu ou composant fourni par `renderPathSummary` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:Tuning",
+      "type": "function",
+      "name": "Tuning",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "lineRange": [
+        1118,
+        1466
+      ],
+      "summary": "Construit le rendu ou composant fourni par `Tuning` dans le module `tuning.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "type": "file",
+      "name": "vehicle_features.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "summary": "Présente les outils véhicule Galaxy et vérifie à la demande la disponibilité des commandes de portes et du gestionnaire TSK.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "vehicule",
+        "outils"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js:checkToolAvailability",
+      "type": "function",
+      "name": "checkToolAvailability",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "lineRange": [
+        14,
+        33
+      ],
+      "summary": "Normalise ou valide les données de `checkToolAvailability` dans le module `vehicle_features.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js:VehicleFeatures",
+      "type": "function",
+      "name": "VehicleFeatures",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "lineRange": [
+        35,
+        162
+      ],
+      "summary": "Construit le rendu ou composant fourni par `VehicleFeatures` dans le module `vehicle_features.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/settings.js:SettingsView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/settings.js:SettingsView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:isSettingVisible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:collectDescendantKeys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:getSectionsWithSlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:applySelectOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:syncSelectValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:hydrateEndpointOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:syncInputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchLongitudinalMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateLongitudinalMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchDefaultValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchFlmWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:refreshParamsAndDefaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchPersonalityProfiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:migratePersonalityProfiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchLayoutAndParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:numericBounds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:coerceValueByType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:normalizeFavoriteSlots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:populateFavoriteSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:fetchFavoriteSlots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:refreshFavoriteValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:ensureFavoriteValuePolling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:refreshCscCalibrationValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:ensureCscCalibrationPolling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:refreshUiContextValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:ensureUiContextPolling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:saveFavoriteSlots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateFavoriteSlot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateFavoriteValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:stepPrecision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:snapNumericToBoundsAndStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resolveDefaultNumericValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:confirmPandaFirmwareToggle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateNumericParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:previewSliderParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:commitSliderParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:stepNumericParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:canStepNumericParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:applyManualNumericParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resetNumericParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:runSettingAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updateParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:restoreRhdAutoDetection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:revertInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resetColorParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:getSettingLockReason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:getFlmParamStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:handleSectionTabClick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:recoverPersonalitySave",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:savePersonalityCategory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updatePersonalityPreset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resetPersonalityCurve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:graphGeometry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:drawPersonalityCurve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:restorePersonalityCurveVisual",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:beginPersonalityCurveDrag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:adjustPersonalityCurvePoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityCurve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityCategoryField",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityProfileToggle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:updatePersonalityAdvancedPreset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityAdvancedValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityAdvancedRows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityAdvanced",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityCardSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderPersonalityProfilesPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderFavoriteSlotsPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderSettingRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:renderSettingTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:resolveActiveSectionSlug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:DeviceSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/device_settings.js:DeviceSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js:fetchStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js:handleProcessNow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js:SpeedLimits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js:SpeedLimits",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:flushPendingRoutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:enqueueRoutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:fetchRoutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:fetchWorkspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:loadReport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:deleteReport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:fetchStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:ensurePolling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:setSegmentRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:selectedSegmentRanges",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:runAnalyze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:stopAnalyze",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:applyProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:saveCurrentTune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:applySavedTune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renameSavedTune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:deleteSavedTune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:submitSavedTune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:selectPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:revertProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:acceptCurrentAsBaseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:setDimensionFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:saveFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:initialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:reportPaths",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:activeTrialProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:mergedFlmOverrides",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:tuneComparisonRows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderTuneComparison",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:trackingOverviewItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:plotPoints",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderTrackingPlot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderTrackingOverview",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderSuggestion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:renderPathSummary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:Tuning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/tuning.js:Tuning",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js:checkToolAvailability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js:VehicleFeatures",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js:VehicleFeatures",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

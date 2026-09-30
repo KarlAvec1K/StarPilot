@@ -1,0 +1,2553 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 8,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 8,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "opendbc_repo/opendbc/car/interfaces.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 586,
+      "nonEmptyLines": 464,
+      "functions": [
+        {
+          "name": "get_torque_params",
+          "startLine": 64,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "get_interface_attr",
+          "startLine": 563,
+          "endLine": 586,
+          "params": [
+            "attr",
+            "combine_brands",
+            "ignore_none"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RadarInterfaceBase",
+          "startLine": 107,
+          "endLine": 119,
+          "methods": [
+            "__init__",
+            "update"
+          ],
+          "properties": []
+        },
+        {
+          "name": "CarInterfaceBase",
+          "startLine": 122,
+          "endLine": 438,
+          "methods": [
+            "__init__",
+            "apply",
+            "get_pid_accel_limits",
+            "get_non_essential_params",
+            "get_params",
+            "get_starpilot_params",
+            "_get_params",
+            "init",
+            "deinit",
+            "get_steer_feedforward_default",
+            "get_steer_feedforward_function",
+            "torque_from_lateral_accel_linear",
+            "torque_from_lateral_accel",
+            "lateral_accel_from_torque_linear",
+            "lateral_accel_from_torque",
+            "get_std_params",
+            "configure_torque_tune",
+            "update"
+          ],
+          "properties": [
+            "CarState",
+            "CarController",
+            "RadarInterface"
+          ]
+        },
+        {
+          "name": "CarStateBase",
+          "startLine": 441,
+          "endLine": 540,
+          "methods": [
+            "__init__",
+            "update",
+            "parse_wheel_speeds",
+            "update_speed_kf",
+            "update_blinker_from_lamp",
+            "update_steering_pressed",
+            "update_blinker_from_stalk",
+            "update_button_enable",
+            "parse_gear_shifter",
+            "get_can_parsers"
+          ],
+          "properties": []
+        },
+        {
+          "name": "CarControllerBase",
+          "startLine": 543,
+          "endLine": 552,
+          "methods": [
+            "__init__",
+            "update"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "get_torque_params",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "RadarInterfaceBase",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "CarInterfaceBase",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "CarStateBase",
+          "line": 441,
+          "isDefault": false
+        },
+        {
+          "name": "CarControllerBase",
+          "line": 543,
+          "isDefault": false
+        },
+        {
+          "name": "get_interface_attr",
+          "line": 563,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_torque_params",
+          "callee": "open",
+          "lineNumber": 65
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "tomllib.load",
+          "lineNumber": 66
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "open",
+          "lineNumber": 67
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "tomllib.load",
+          "lineNumber": 68
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "open",
+          "lineNumber": 69
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "tomllib.load",
+          "lineNumber": 70
+        },
+        {
+          "caller": "resolve_sub_candidate",
+          "callee": "set",
+          "lineNumber": 74
+        },
+        {
+          "caller": "resolve_sub_candidate",
+          "callee": "RuntimeError",
+          "lineNumber": 78
+        },
+        {
+          "caller": "resolve_sub_candidate",
+          "callee": "' -> '.join",
+          "lineNumber": 78
+        },
+        {
+          "caller": "resolve_sub_candidate",
+          "callee": "chain.append",
+          "lineNumber": 79
+        },
+        {
+          "caller": "resolve_sub_candidate",
+          "callee": "seen.add",
+          "lineNumber": 80
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "sub.keys",
+          "lineNumber": 85
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "params.keys",
+          "lineNumber": 85
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "override.keys",
+          "lineNumber": 85
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "sum",
+          "lineNumber": 86
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "RuntimeError",
+          "lineNumber": 87
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "resolve_sub_candidate",
+          "lineNumber": 89
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "NotImplementedError",
+          "lineNumber": 96
+        },
+        {
+          "caller": "get_torque_params",
+          "callee": "enumerate",
+          "lineNumber": 98
+        },
+        {
+          "caller": "update",
+          "callee": "structs.RadarData",
+          "lineNumber": 118
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.CarState",
+          "lineNumber": 133
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.CS.get_can_parsers",
+          "lineNumber": 134
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.can_parsers.items",
+          "lineNumber": 136
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.CarController",
+          "lineNumber": 137
+        },
+        {
+          "caller": "__init__",
+          "callee": "Params",
+          "lineNumber": 142
+        },
+        {
+          "caller": "apply",
+          "callee": "int",
+          "lineNumber": 149
+        },
+        {
+          "caller": "apply",
+          "callee": "time.monotonic",
+          "lineNumber": 149
+        },
+        {
+          "caller": "apply",
+          "callee": "self.CC.update",
+          "lineNumber": 150
+        },
+        {
+          "caller": "get_non_essential_params",
+          "callee": "cls.get_params",
+          "lineNumber": 161
+        },
+        {
+          "caller": "get_non_essential_params",
+          "callee": "gen_empty_fingerprint",
+          "lineNumber": 161
+        },
+        {
+          "caller": "get_non_essential_params",
+          "callee": "list",
+          "lineNumber": 161
+        },
+        {
+          "caller": "get_params",
+          "callee": "CarInterfaceBase.get_std_params",
+          "lineNumber": 166
+        },
+        {
+          "caller": "get_params",
+          "callee": "int",
+          "lineNumber": 176
+        },
+        {
+          "caller": "get_params",
+          "callee": "cls._get_params",
+          "lineNumber": 178
+        },
+        {
+          "caller": "get_params",
+          "callee": "float",
+          "lineNumber": 180
+        },
+        {
+          "caller": "get_params",
+          "callee": "np.clip",
+          "lineNumber": 180
+        },
+        {
+          "caller": "get_params",
+          "callee": "getattr",
+          "lineNumber": 180
+        },
+        {
+          "caller": "get_params",
+          "callee": "scale_rot_inertia",
+          "lineNumber": 188
+        },
+        {
+          "caller": "get_params",
+          "callee": "scale_tire_stiffness",
+          "lineNumber": 189
+        },
+        {
+          "caller": "get_params",
+          "callee": "bool",
+          "lineNumber": 191
+        },
+        {
+          "caller": "get_params",
+          "callee": "getattr",
+          "lineNumber": 191
+        },
+        {
+          "caller": "get_params",
+          "callee": "bool",
+          "lineNumber": 195
+        },
+        {
+          "caller": "get_params",
+          "callee": "ret.lateralTuning.which",
+          "lineNumber": 200
+        },
+        {
+          "caller": "get_params",
+          "callee": "any",
+          "lineNumber": 203
+        },
+        {
+          "caller": "get_params",
+          "callee": "getattr",
+          "lineNumber": 203
+        },
+        {
+          "caller": "get_params",
+          "callee": "CarInterfaceBase.configure_torque_tune",
+          "lineNumber": 206
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "custom.StarPilotCarParams.new_message",
+          "lineNumber": 212
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "Params",
+          "lineNumber": 214
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "int",
+          "lineNumber": 218
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "custom.StarPilotCarParams.SafetyConfig.new_message",
+          "lineNumber": 219
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "any",
+          "lineNumber": 232
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "fingerprint.values",
+          "lineNumber": 232
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "int",
+          "lineNumber": 233
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "CanBus",
+          "lineNumber": 238
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "bool",
+          "lineNumber": 238
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "bool",
+          "lineNumber": 247
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "bool",
+          "lineNumber": 247
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "params.get_bool",
+          "lineNumber": 248
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "bool",
+          "lineNumber": 259
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "getattr",
+          "lineNumber": 264
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "getattr",
+          "lineNumber": 268
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "params.get_bool",
+          "lineNumber": 276
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "params.get_int",
+          "lineNumber": 276
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "getattr",
+          "lineNumber": 279
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "getattr",
+          "lineNumber": 280
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "getattr",
+          "lineNumber": 301
+        },
+        {
+          "caller": "get_starpilot_params",
+          "callee": "params.get_bool",
+          "lineNumber": 305
+        },
+        {
+          "caller": "torque_from_lateral_accel_linear",
+          "callee": "float",
+          "lineNumber": 338
+        },
+        {
+          "caller": "lateral_accel_from_torque_linear",
+          "callee": "float",
+          "lineNumber": 344
+        },
+        {
+          "caller": "get_std_params",
+          "callee": "structs.CarParams",
+          "lineNumber": 352
+        },
+        {
+          "caller": "get_std_params",
+          "callee": "get_torque_params",
+          "lineNumber": 356
+        },
+        {
+          "caller": "configure_torque_tune",
+          "callee": "get_torque_params",
+          "lineNumber": 384
+        },
+        {
+          "caller": "configure_torque_tune",
+          "callee": "tune.init",
+          "lineNumber": 386
+        },
+        {
+          "caller": "update",
+          "callee": "self.can_parsers.values",
+          "lineNumber": 394
+        },
+        {
+          "caller": "update",
+          "callee": "cp.update",
+          "lineNumber": 396
+        },
+        {
+          "caller": "update",
+          "callee": "self.CS.update",
+          "lineNumber": 399
+        },
+        {
+          "caller": "update",
+          "callee": "all",
+          "lineNumber": 401
+        },
+        {
+          "caller": "update",
+          "callee": "self.can_parsers.values",
+          "lineNumber": 401
+        },
+        {
+          "caller": "update",
+          "callee": "any",
+          "lineNumber": 402
+        },
+        {
+          "caller": "update",
+          "callee": "self.can_parsers.values",
+          "lineNumber": 402
+        },
+        {
+          "caller": "update",
+          "callee": "apply_hysteresis",
+          "lineNumber": 410
+        },
+        {
+          "caller": "update",
+          "callee": "abs",
+          "lineNumber": 411
+        },
+        {
+          "caller": "update",
+          "callee": "self.CS.update_button_enable",
+          "lineNumber": 417
+        },
+        {
+          "caller": "update",
+          "callee": "self.params_memory.get_bool",
+          "lineNumber": 427
+        },
+        {
+          "caller": "update",
+          "callee": "create_button_events",
+          "lineNumber": 429
+        },
+        {
+          "caller": "update",
+          "callee": "be.to_dict",
+          "lineNumber": 430
+        },
+        {
+          "caller": "update",
+          "callee": "be.to_dict",
+          "lineNumber": 430
+        },
+        {
+          "caller": "update",
+          "callee": "bool",
+          "lineNumber": 434
+        },
+        {
+          "caller": "update",
+          "callee": "bool",
+          "lineNumber": 434
+        },
+        {
+          "caller": "__init__",
+          "callee": "structs.CarState",
+          "lineNumber": 445
+        },
+        {
+          "caller": "__init__",
+          "callee": "get_kalman_gain",
+          "lineNumber": 463
+        },
+        {
+          "caller": "__init__",
+          "callee": "np.array",
+          "lineNumber": 463
+        },
+        {
+          "caller": "__init__",
+          "callee": "np.array",
+          "lineNumber": 463
+        },
+        {
+          "caller": "__init__",
+          "callee": "np.array",
+          "lineNumber": 463
+        },
+        {
+          "caller": "__init__",
+          "callee": "KF1D",
+          "lineNumber": 464
+        },
+        {
+          "caller": "__init__",
+          "callee": "structs.CarControl.new_message",
+          "lineNumber": 468
+        },
+        {
+          "caller": "parse_wheel_speeds",
+          "callee": "sum",
+          "lineNumber": 477
+        },
+        {
+          "caller": "parse_wheel_speeds",
+          "callee": "self.update_speed_kf",
+          "lineNumber": 478
+        },
+        {
+          "caller": "update_speed_kf",
+          "callee": "abs",
+          "lineNumber": 481
+        },
+        {
+          "caller": "update_speed_kf",
+          "callee": "self.v_ego_kf.set_x",
+          "lineNumber": 482
+        },
+        {
+          "caller": "update_speed_kf",
+          "callee": "self.v_ego_kf.update",
+          "lineNumber": 484
+        },
+        {
+          "caller": "update_speed_kf",
+          "callee": "float",
+          "lineNumber": 485
+        },
+        {
+          "caller": "update_speed_kf",
+          "callee": "float",
+          "lineNumber": 485
+        },
+        {
+          "caller": "update_blinker_from_lamp",
+          "callee": "max",
+          "lineNumber": 491
+        },
+        {
+          "caller": "update_blinker_from_lamp",
+          "callee": "max",
+          "lineNumber": 492
+        },
+        {
+          "caller": "update_steering_pressed",
+          "callee": "int",
+          "lineNumber": 498
+        },
+        {
+          "caller": "update_steering_pressed",
+          "callee": "np.clip",
+          "lineNumber": 498
+        },
+        {
+          "caller": "update_blinker_from_stalk",
+          "callee": "max",
+          "lineNumber": 516
+        },
+        {
+          "caller": "update_blinker_from_stalk",
+          "callee": "max",
+          "lineNumber": 517
+        },
+        {
+          "caller": "update_blinker_from_stalk",
+          "callee": "bool",
+          "lineNumber": 522
+        },
+        {
+          "caller": "update_blinker_from_stalk",
+          "callee": "bool",
+          "lineNumber": 522
+        },
+        {
+          "caller": "parse_gear_shifter",
+          "callee": "GEAR_SHIFTER_MAP.get",
+          "lineNumber": 536
+        },
+        {
+          "caller": "parse_gear_shifter",
+          "callee": "gear.upper",
+          "lineNumber": 536
+        },
+        {
+          "caller": "get_interface_attr",
+          "callee": "sorted",
+          "lineNumber": 568
+        },
+        {
+          "caller": "get_interface_attr",
+          "callee": "os.walk",
+          "lineNumber": 568
+        },
+        {
+          "caller": "get_interface_attr",
+          "callee": "car_folder.split",
+          "lineNumber": 570
+        },
+        {
+          "caller": "get_interface_attr",
+          "callee": "__import__",
+          "lineNumber": 571
+        },
+        {
+          "caller": "get_interface_attr",
+          "callee": "INTERFACE_ATTR_FILE.get",
+          "lineNumber": 571
+        },
+        {
+          "caller": "get_interface_attr",
+          "callee": "hasattr",
+          "lineNumber": 572
+        },
+        {
+          "caller": "get_interface_attr",
+          "callee": "getattr",
+          "lineNumber": 573
+        },
+        {
+          "caller": "get_interface_attr",
+          "callee": "isinstance",
+          "lineNumber": 578
+        },
+        {
+          "caller": "get_interface_attr",
+          "callee": "attr_data.items",
+          "lineNumber": 579
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 6,
+        "functionCount": 2,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 486,
+      "nonEmptyLines": 404,
+      "functions": [
+        {
+          "name": "get_safety_CP",
+          "startLine": 34,
+          "endLine": 36,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CarController",
+          "startLine": 39,
+          "endLine": 486,
+          "methods": [
+            "__init__",
+            "_stop_start_off_request",
+            "_reset_angle_handoff",
+            "_angle_manual_handoff",
+            "_update_angle_driver_override",
+            "_ascent_aol_ready",
+            "lateral_angle",
+            "lateral_torque",
+            "_lkas_status_active",
+            "update",
+            "stop_and_go"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "get_safety_CP",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "CarController",
+          "line": 39,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_safety_CP",
+          "callee": "CarInterface.get_non_essential_params",
+          "lineNumber": 36
+        },
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 41
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 41
+        },
+        {
+          "caller": "__init__",
+          "callee": "CarControllerParams",
+          "lineNumber": 53
+        },
+        {
+          "caller": "__init__",
+          "callee": "CANPacker",
+          "lineNumber": 54
+        },
+        {
+          "caller": "__init__",
+          "callee": "CanBus.main_for_cp",
+          "lineNumber": 55
+        },
+        {
+          "caller": "__init__",
+          "callee": "CanBus.angle_for_cp",
+          "lineNumber": 56
+        },
+        {
+          "caller": "__init__",
+          "callee": "VehicleModel",
+          "lineNumber": 60
+        },
+        {
+          "caller": "__init__",
+          "callee": "get_safety_CP",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "getattr",
+          "lineNumber": 80
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "getattr",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "getattr",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "getattr",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "getattr",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "getattr",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "getattr",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "int",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "dashlights_msg.get",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "getattr",
+          "lineNumber": 107
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "subarucan.create_stop_start_control",
+          "lineNumber": 121
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "getattr",
+          "lineNumber": 122
+        },
+        {
+          "caller": "_stop_start_off_request",
+          "callee": "CanBus.alt_for_cp",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_angle_manual_handoff",
+          "callee": "self._reset_angle_handoff",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_angle_manual_handoff",
+          "callee": "self._update_angle_driver_override",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_angle_manual_handoff",
+          "callee": "getattr",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_angle_manual_handoff",
+          "callee": "abs",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_angle_manual_handoff",
+          "callee": "getattr",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_update_angle_driver_override",
+          "callee": "abs",
+          "lineNumber": 161
+        },
+        {
+          "caller": "_update_angle_driver_override",
+          "callee": "getattr",
+          "lineNumber": 161
+        },
+        {
+          "caller": "_ascent_aol_ready",
+          "callee": "min",
+          "lineNumber": 180
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "abs",
+          "lineNumber": 187
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "self._angle_manual_handoff",
+          "lineNumber": 191
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "apply_std_steer_angle_limits",
+          "lineNumber": 194
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "subarucan.create_steering_control_angle",
+          "lineNumber": 204
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "abs",
+          "lineNumber": 209
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "getattr",
+          "lineNumber": 214
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "getattr",
+          "lineNumber": 214
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "self._ascent_aol_ready",
+          "lineNumber": 215
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "self._angle_manual_handoff",
+          "lineNumber": 219
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "apply_std_steer_angle_limits",
+          "lineNumber": 228
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "apply_steer_angle_limits_vm",
+          "lineNumber": 237
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "subarucan.create_steering_control_angle",
+          "lineNumber": 248
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "getattr",
+          "lineNumber": 250
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "abs",
+          "lineNumber": 252
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "getattr",
+          "lineNumber": 254
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "getattr",
+          "lineNumber": 255
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "self._angle_manual_handoff",
+          "lineNumber": 256
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "apply_steer_angle_limits_vm",
+          "lineNumber": 260
+        },
+        {
+          "caller": "lateral_angle",
+          "callee": "subarucan.create_steering_control_angle",
+          "lineNumber": 275
+        },
+        {
+          "caller": "lateral_torque",
+          "callee": "int",
+          "lineNumber": 278
+        },
+        {
+          "caller": "lateral_torque",
+          "callee": "round",
+          "lineNumber": 278
+        },
+        {
+          "caller": "lateral_torque",
+          "callee": "apply_driver_steer_torque_limits",
+          "lineNumber": 279
+        },
+        {
+          "caller": "lateral_torque",
+          "callee": "subarucan.create_preglobal_steering_control",
+          "lineNumber": 287
+        },
+        {
+          "caller": "lateral_torque",
+          "callee": "common_fault_avoidance",
+          "lineNumber": 293
+        },
+        {
+          "caller": "lateral_torque",
+          "callee": "abs",
+          "lineNumber": 294
+        },
+        {
+          "caller": "lateral_torque",
+          "callee": "subarucan.create_steering_control",
+          "lineNumber": 300
+        },
+        {
+          "caller": "update",
+          "callee": "bool",
+          "lineNumber": 311
+        },
+        {
+          "caller": "update",
+          "callee": "getattr",
+          "lineNumber": 313
+        },
+        {
+          "caller": "update",
+          "callee": "self._stop_start_off_request",
+          "lineNumber": 318
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 320
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 325
+        },
+        {
+          "caller": "update",
+          "callee": "self.lateral_angle",
+          "lineNumber": 325
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 327
+        },
+        {
+          "caller": "update",
+          "callee": "self.lateral_torque",
+          "lineNumber": 327
+        },
+        {
+          "caller": "update",
+          "callee": "getattr",
+          "lineNumber": 330
+        },
+        {
+          "caller": "update",
+          "callee": "self.stop_and_go",
+          "lineNumber": 332
+        },
+        {
+          "caller": "update",
+          "callee": "int",
+          "lineNumber": 337
+        },
+        {
+          "caller": "update",
+          "callee": "round",
+          "lineNumber": 337
+        },
+        {
+          "caller": "update",
+          "callee": "np.interp",
+          "lineNumber": 337
+        },
+        {
+          "caller": "update",
+          "callee": "int",
+          "lineNumber": 338
+        },
+        {
+          "caller": "update",
+          "callee": "round",
+          "lineNumber": 338
+        },
+        {
+          "caller": "update",
+          "callee": "np.interp",
+          "lineNumber": 338
+        },
+        {
+          "caller": "update",
+          "callee": "int",
+          "lineNumber": 339
+        },
+        {
+          "caller": "update",
+          "callee": "round",
+          "lineNumber": 339
+        },
+        {
+          "caller": "update",
+          "callee": "np.interp",
+          "lineNumber": 339
+        },
+        {
+          "caller": "update",
+          "callee": "np.clip",
+          "lineNumber": 342
+        },
+        {
+          "caller": "update",
+          "callee": "np.clip",
+          "lineNumber": 343
+        },
+        {
+          "caller": "update",
+          "callee": "np.clip",
+          "lineNumber": 344
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 368
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_preglobal_es_distance",
+          "lineNumber": 368
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 371
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_preglobal_throttle",
+          "lineNumber": 371
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 374
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_preglobal_brake_pedal",
+          "lineNumber": 374
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 378
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_dashstatus",
+          "lineNumber": 378
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 383
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_lkas_state",
+          "lineNumber": 383
+        },
+        {
+          "caller": "update",
+          "callee": "self._lkas_status_active",
+          "lineNumber": 383
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 388
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_infotainment",
+          "lineNumber": 388
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 392
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_throttle",
+          "lineNumber": 392
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 395
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_brake_pedal",
+          "lineNumber": 395
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 400
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_status",
+          "lineNumber": 400
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 403
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_brake",
+          "lineNumber": 403
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 406
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_distance",
+          "lineNumber": 406
+        },
+        {
+          "caller": "update",
+          "callee": "CanBus.alt_for_cp",
+          "lineNumber": 411
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 412
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_distance",
+          "lineNumber": 412
+        },
+        {
+          "caller": "update",
+          "callee": "{\r\n          1: subarucan.CRUISE_BUTTON_RESUME,\r\n          2: subarucan.CRUISE_BUTTON_SET,\r\n        }.get",
+          "lineNumber": 415
+        },
+        {
+          "caller": "update",
+          "callee": "getattr",
+          "lineNumber": 418
+        },
+        {
+          "caller": "update",
+          "callee": "getattr",
+          "lineNumber": 419
+        },
+        {
+          "caller": "update",
+          "callee": "int",
+          "lineNumber": 421
+        },
+        {
+          "caller": "update",
+          "callee": "range",
+          "lineNumber": 422
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 423
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_cruise_buttons",
+          "lineNumber": 423
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 431
+        },
+        {
+          "caller": "update",
+          "callee": "make_tester_present_msg",
+          "lineNumber": 431
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 435
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_highbeamassist",
+          "lineNumber": 435
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 438
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_static_1",
+          "lineNumber": 438
+        },
+        {
+          "caller": "update",
+          "callee": "can_sends.append",
+          "lineNumber": 441
+        },
+        {
+          "caller": "update",
+          "callee": "subarucan.create_es_static_2",
+          "lineNumber": 441
+        },
+        {
+          "caller": "update",
+          "callee": "actuators.as_builder",
+          "lineNumber": 443
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/carstate.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 187,
+      "nonEmptyLines": 155,
+      "classes": [
+        {
+          "name": "CarState",
+          "startLine": 19,
+          "endLine": 187,
+          "methods": [
+            "__init__",
+            "update",
+            "get_can_parsers"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CarState",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 21
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 21
+        },
+        {
+          "caller": "__init__",
+          "callee": "CANDefine",
+          "lineNumber": 22
+        },
+        {
+          "caller": "__init__",
+          "callee": "CanSignalRateCalculator",
+          "lineNumber": 25
+        },
+        {
+          "caller": "update",
+          "callee": "structs.CarState",
+          "lineNumber": 38
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 42
+        },
+        {
+          "caller": "update",
+          "callee": "bool",
+          "lineNumber": 56
+        },
+        {
+          "caller": "update",
+          "callee": "self.parse_wheel_speeds",
+          "lineNumber": 65
+        },
+        {
+          "caller": "update",
+          "callee": "self.update_blinker_from_lamp",
+          "lineNumber": 74
+        },
+        {
+          "caller": "update",
+          "callee": "int",
+          "lineNumber": 83
+        },
+        {
+          "caller": "update",
+          "callee": "self.parse_gear_shifter",
+          "lineNumber": 84
+        },
+        {
+          "caller": "update",
+          "callee": "self.shifter_values.get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "update",
+          "callee": "cp.vl[\"Steering_Torque\"].get",
+          "lineNumber": 91
+        },
+        {
+          "caller": "update",
+          "callee": "self.angle_rate_calulator.update",
+          "lineNumber": 95
+        },
+        {
+          "caller": "update",
+          "callee": "abs",
+          "lineNumber": 101
+        },
+        {
+          "caller": "update",
+          "callee": "any",
+          "lineNumber": 121
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 137
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 138
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 146
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 147
+        },
+        {
+          "caller": "update",
+          "callee": "getattr",
+          "lineNumber": 151
+        },
+        {
+          "caller": "update",
+          "callee": "SUBARU_CRUISE_BUTTONS.items",
+          "lineNumber": 153
+        },
+        {
+          "caller": "update",
+          "callee": "ret.buttonEvents.extend",
+          "lineNumber": 154
+        },
+        {
+          "caller": "update",
+          "callee": "create_button_events",
+          "lineNumber": 154
+        },
+        {
+          "caller": "update",
+          "callee": "int",
+          "lineNumber": 155
+        },
+        {
+          "caller": "update",
+          "callee": "bool",
+          "lineNumber": 155
+        },
+        {
+          "caller": "update",
+          "callee": "int",
+          "lineNumber": 157
+        },
+        {
+          "caller": "update",
+          "callee": "bool",
+          "lineNumber": 157
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 158
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 161
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 163
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 165
+        },
+        {
+          "caller": "update",
+          "callee": "custom.StarPilotCarState.new_message",
+          "lineNumber": 167
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 170
+        },
+        {
+          "caller": "update",
+          "callee": "copy.copy",
+          "lineNumber": 174
+        },
+        {
+          "caller": "get_can_parsers",
+          "callee": "CANParser",
+          "lineNumber": 181
+        },
+        {
+          "caller": "get_can_parsers",
+          "callee": "CanBus.main_for_cp",
+          "lineNumber": 181
+        },
+        {
+          "caller": "get_can_parsers",
+          "callee": "CANParser",
+          "lineNumber": 182
+        },
+        {
+          "caller": "get_can_parsers",
+          "callee": "CANParser",
+          "lineNumber": 183
+        },
+        {
+          "caller": "get_can_parsers",
+          "callee": "CanBus.alt_for_cp",
+          "lineNumber": 183
+        },
+        {
+          "caller": "get_can_parsers",
+          "callee": "CANParser",
+          "lineNumber": 186
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/fingerprints.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 622,
+      "nonEmptyLines": 620,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/interface.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 125,
+      "nonEmptyLines": 102,
+      "classes": [
+        {
+          "name": "CarInterface",
+          "startLine": 9,
+          "endLine": 125,
+          "methods": [
+            "_get_params",
+            "init",
+            "deinit"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CarInterface",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_get_params",
+          "callee": "bool",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_get_params",
+          "callee": "get_safety_config",
+          "lineNumber": 30
+        },
+        {
+          "caller": "_get_params",
+          "callee": "get_safety_config",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_get_params",
+          "callee": "CarInterfaceBase.configure_torque_tune",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_get_params",
+          "callee": "ret.lateralTuning.init",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_get_params",
+          "callee": "ret.lateralTuning.init",
+          "lineNumber": 68
+        },
+        {
+          "caller": "_get_params",
+          "callee": "ret.lateralTuning.init",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_get_params",
+          "callee": "ret.lateralTuning.init",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_get_params",
+          "callee": "ValueError",
+          "lineNumber": 101
+        },
+        {
+          "caller": "init",
+          "callee": "bytes",
+          "lineNumber": 119
+        },
+        {
+          "caller": "init",
+          "callee": "disable_ecu",
+          "lineNumber": 120
+        },
+        {
+          "caller": "deinit",
+          "callee": "bytes",
+          "lineNumber": 124
+        },
+        {
+          "caller": "deinit",
+          "callee": "CarInterface.init",
+          "lineNumber": 125
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 461,
+      "nonEmptyLines": 359,
+      "functions": [
+        {
+          "name": "create_steering_control",
+          "startLine": 11,
+          "endLine": 17,
+          "params": [
+            "packer",
+            "apply_torque",
+            "steer_req"
+          ]
+        },
+        {
+          "name": "create_steering_control_angle",
+          "startLine": 20,
+          "endLine": 26,
+          "params": [
+            "packer",
+            "apply_angle",
+            "steer_req",
+            "bus"
+          ]
+        },
+        {
+          "name": "create_steering_status",
+          "startLine": 29,
+          "endLine": 30,
+          "params": [
+            "packer"
+          ]
+        },
+        {
+          "name": "create_es_distance",
+          "startLine": 33,
+          "endLine": 71,
+          "params": [
+            "packer",
+            "frame",
+            "es_distance_msg",
+            "bus",
+            "pcm_cancel_cmd",
+            "long_enabled",
+            "brake_cmd",
+            "cruise_throttle"
+          ]
+        },
+        {
+          "name": "create_cruise_buttons",
+          "startLine": 74,
+          "endLine": 84,
+          "params": [
+            "packer",
+            "frame",
+            "cruise_buttons_msg",
+            "button",
+            "bus"
+          ]
+        },
+        {
+          "name": "create_es_lkas_state",
+          "startLine": 87,
+          "endLine": 150,
+          "params": [
+            "packer",
+            "frame",
+            "es_lkas_state_msg",
+            "enabled",
+            "visual_alert",
+            "left_line",
+            "right_line",
+            "left_lane_depart",
+            "right_lane_depart",
+            "bus"
+          ]
+        },
+        {
+          "name": "create_es_dashstatus",
+          "startLine": 153,
+          "endLine": 199,
+          "params": [
+            "packer",
+            "frame",
+            "dashstatus_msg",
+            "enabled",
+            "long_enabled",
+            "long_active",
+            "lead_visible",
+            "bus"
+          ]
+        },
+        {
+          "name": "create_stop_start_control",
+          "startLine": 202,
+          "endLine": 225,
+          "params": [
+            "packer",
+            "dashlights_msg",
+            "raw_dat",
+            "counter",
+            "bus"
+          ]
+        },
+        {
+          "name": "create_es_brake",
+          "startLine": 228,
+          "endLine": 252,
+          "params": [
+            "packer",
+            "frame",
+            "es_brake_msg",
+            "long_enabled",
+            "long_active",
+            "brake_value",
+            "bus"
+          ]
+        },
+        {
+          "name": "create_es_status",
+          "startLine": 255,
+          "endLine": 275,
+          "params": [
+            "packer",
+            "frame",
+            "es_status_msg",
+            "long_enabled",
+            "long_active",
+            "cruise_rpm",
+            "bus"
+          ]
+        },
+        {
+          "name": "create_es_infotainment",
+          "startLine": 278,
+          "endLine": 301,
+          "params": [
+            "packer",
+            "frame",
+            "es_infotainment_msg",
+            "visual_alert",
+            "bus"
+          ]
+        },
+        {
+          "name": "create_es_highbeamassist",
+          "startLine": 304,
+          "endLine": 309,
+          "params": [
+            "packer"
+          ]
+        },
+        {
+          "name": "create_es_static_1",
+          "startLine": 312,
+          "endLine": 317,
+          "params": [
+            "packer"
+          ]
+        },
+        {
+          "name": "create_es_static_2",
+          "startLine": 320,
+          "endLine": 325,
+          "params": [
+            "packer"
+          ]
+        },
+        {
+          "name": "subaru_preglobal_checksum",
+          "startLine": 330,
+          "endLine": 332,
+          "params": [
+            "packer",
+            "values",
+            "addr",
+            "checksum_byte"
+          ]
+        },
+        {
+          "name": "create_preglobal_steering_control",
+          "startLine": 335,
+          "endLine": 343,
+          "params": [
+            "packer",
+            "frame",
+            "apply_torque",
+            "steer_req"
+          ]
+        },
+        {
+          "name": "create_preglobal_es_distance",
+          "startLine": 346,
+          "endLine": 370,
+          "params": [
+            "packer",
+            "cruise_button",
+            "es_distance_msg"
+          ]
+        },
+        {
+          "name": "subaru_checksum",
+          "startLine": 373,
+          "endLine": 381,
+          "params": [
+            "address",
+            "sig",
+            "d"
+          ]
+        },
+        {
+          "name": "create_brake_pedal",
+          "startLine": 384,
+          "endLine": 403,
+          "params": [
+            "packer",
+            "frame",
+            "brake_pedal_msg",
+            "speed_cmd",
+            "brake_cmd"
+          ]
+        },
+        {
+          "name": "create_preglobal_brake_pedal",
+          "startLine": 406,
+          "endLine": 416,
+          "params": [
+            "packer",
+            "brake_pedal_msg",
+            "speed_cmd"
+          ]
+        },
+        {
+          "name": "create_throttle",
+          "startLine": 419,
+          "endLine": 437,
+          "params": [
+            "packer",
+            "frame",
+            "throttle_msg",
+            "throttle_cmd"
+          ]
+        },
+        {
+          "name": "create_preglobal_throttle",
+          "startLine": 440,
+          "endLine": 461,
+          "params": [
+            "packer",
+            "frame",
+            "throttle_msg",
+            "throttle_cmd"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create_steering_control",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "create_steering_control_angle",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "create_steering_status",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "create_es_distance",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "create_cruise_buttons",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "create_es_lkas_state",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "create_es_dashstatus",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "create_stop_start_control",
+          "line": 202,
+          "isDefault": false
+        },
+        {
+          "name": "create_es_brake",
+          "line": 228,
+          "isDefault": false
+        },
+        {
+          "name": "create_es_status",
+          "line": 255,
+          "isDefault": false
+        },
+        {
+          "name": "create_es_infotainment",
+          "line": 278,
+          "isDefault": false
+        },
+        {
+          "name": "create_es_highbeamassist",
+          "line": 304,
+          "isDefault": false
+        },
+        {
+          "name": "create_es_static_1",
+          "line": 312,
+          "isDefault": false
+        },
+        {
+          "name": "create_es_static_2",
+          "line": 320,
+          "isDefault": false
+        },
+        {
+          "name": "subaru_preglobal_checksum",
+          "line": 330,
+          "isDefault": false
+        },
+        {
+          "name": "create_preglobal_steering_control",
+          "line": 335,
+          "isDefault": false
+        },
+        {
+          "name": "create_preglobal_es_distance",
+          "line": 346,
+          "isDefault": false
+        },
+        {
+          "name": "subaru_checksum",
+          "line": 373,
+          "isDefault": false
+        },
+        {
+          "name": "create_brake_pedal",
+          "line": 384,
+          "isDefault": false
+        },
+        {
+          "name": "create_preglobal_brake_pedal",
+          "line": 406,
+          "isDefault": false
+        },
+        {
+          "name": "create_throttle",
+          "line": 419,
+          "isDefault": false
+        },
+        {
+          "name": "create_preglobal_throttle",
+          "line": 440,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create_steering_control",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 17
+        },
+        {
+          "caller": "create_steering_control_angle",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 26
+        },
+        {
+          "caller": "create_steering_status",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 30
+        },
+        {
+          "caller": "create_es_distance",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 71
+        },
+        {
+          "caller": "create_cruise_buttons",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 84
+        },
+        {
+          "caller": "create_es_lkas_state",
+          "callee": "int",
+          "lineNumber": 147
+        },
+        {
+          "caller": "create_es_lkas_state",
+          "callee": "int",
+          "lineNumber": 148
+        },
+        {
+          "caller": "create_es_lkas_state",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 150
+        },
+        {
+          "caller": "create_es_dashstatus",
+          "callee": "int",
+          "lineNumber": 189
+        },
+        {
+          "caller": "create_es_dashstatus",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 199
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "bytearray",
+          "lineNumber": 210
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "len",
+          "lineNumber": 211
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "ValueError",
+          "lineNumber": 212
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "len",
+          "lineNumber": 212
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "int",
+          "lineNumber": 214
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "dashlights_msg.get",
+          "lineNumber": 214
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "sum",
+          "lineNumber": 217
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "bytes",
+          "lineNumber": 218
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "dict",
+          "lineNumber": 220
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "int",
+          "lineNumber": 222
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "values.get",
+          "lineNumber": 222
+        },
+        {
+          "caller": "create_stop_start_control",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 225
+        },
+        {
+          "caller": "create_es_brake",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 252
+        },
+        {
+          "caller": "create_es_status",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 275
+        },
+        {
+          "caller": "create_es_infotainment",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 301
+        },
+        {
+          "caller": "create_es_highbeamassist",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 309
+        },
+        {
+          "caller": "create_es_static_1",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 317
+        },
+        {
+          "caller": "create_es_static_2",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 325
+        },
+        {
+          "caller": "subaru_preglobal_checksum",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 331
+        },
+        {
+          "caller": "subaru_preglobal_checksum",
+          "callee": "sum",
+          "lineNumber": 332
+        },
+        {
+          "caller": "subaru_preglobal_checksum",
+          "callee": "sum",
+          "lineNumber": 332
+        },
+        {
+          "caller": "create_preglobal_steering_control",
+          "callee": "subaru_preglobal_checksum",
+          "lineNumber": 341
+        },
+        {
+          "caller": "create_preglobal_steering_control",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 343
+        },
+        {
+          "caller": "create_preglobal_es_distance",
+          "callee": "subaru_preglobal_checksum",
+          "lineNumber": 368
+        },
+        {
+          "caller": "create_preglobal_es_distance",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 370
+        },
+        {
+          "caller": "subaru_checksum",
+          "callee": "range",
+          "lineNumber": 379
+        },
+        {
+          "caller": "subaru_checksum",
+          "callee": "len",
+          "lineNumber": 379
+        },
+        {
+          "caller": "create_brake_pedal",
+          "callee": "sorted",
+          "lineNumber": 385
+        },
+        {
+          "caller": "create_brake_pedal",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 403
+        },
+        {
+          "caller": "create_preglobal_brake_pedal",
+          "callee": "sorted",
+          "lineNumber": 407
+        },
+        {
+          "caller": "create_preglobal_brake_pedal",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 416
+        },
+        {
+          "caller": "create_throttle",
+          "callee": "sorted",
+          "lineNumber": 420
+        },
+        {
+          "caller": "create_throttle",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 437
+        },
+        {
+          "caller": "create_preglobal_throttle",
+          "callee": "sorted",
+          "lineNumber": 441
+        },
+        {
+          "caller": "create_preglobal_throttle",
+          "callee": "packer.make_can_msg",
+          "lineNumber": 461
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 22,
+        "functionCount": 22,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/values.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 341,
+      "nonEmptyLines": 293,
+      "classes": [
+        {
+          "name": "CarControllerParams",
+          "startLine": 13,
+          "endLine": 79,
+          "methods": [
+            "__init__"
+          ],
+          "properties": [
+            "ANGLE_LIMITS",
+            "FIXED_ANGLE_LIMITS"
+          ]
+        },
+        {
+          "name": "SubaruSafetyFlags",
+          "startLine": 82,
+          "endLine": 93,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "SubaruFlags",
+          "startLine": 96,
+          "endLine": 111,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "CanBus",
+          "startLine": 118,
+          "endLine": 133,
+          "methods": [
+            "main_for_cp",
+            "alt_for_cp",
+            "angle_for_cp"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Footnote",
+          "startLine": 136,
+          "endLine": 142,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "SubaruCarDocs",
+          "startLine": 146,
+          "endLine": 153,
+          "methods": [
+            "init_make"
+          ],
+          "properties": [
+            "package",
+            "car_parts",
+            "footnotes"
+          ]
+        },
+        {
+          "name": "SubaruPlatformConfig",
+          "startLine": 157,
+          "endLine": 162,
+          "methods": [
+            "init"
+          ],
+          "properties": [
+            "dbc_dict"
+          ]
+        },
+        {
+          "name": "SubaruGen2PlatformConfig",
+          "startLine": 166,
+          "endLine": 171,
+          "methods": [
+            "init"
+          ],
+          "properties": []
+        },
+        {
+          "name": "CAR",
+          "startLine": 174,
+          "endLine": 271,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CarControllerParams",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "SubaruSafetyFlags",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "SubaruFlags",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "CanBus",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "Footnote",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "SubaruCarDocs",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "SubaruPlatformConfig",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "SubaruGen2PlatformConfig",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "CAR",
+          "line": 174,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "init_make",
+          "callee": "self.footnotes.append",
+          "lineNumber": 153
+        },
+        {
+          "caller": "init",
+          "callee": "super().init",
+          "lineNumber": 168
+        },
+        {
+          "caller": "init",
+          "callee": "super",
+          "lineNumber": 168
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 0,
+        "classCount": 9
+      }
+    }
+  ]
+}

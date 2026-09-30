@@ -1,0 +1,1043 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 3,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 90,
+      "functions": [
+        {
+          "name": "test_read_precedence_without_writes",
+          "startLine": 40,
+          "endLine": 44,
+          "params": [
+            "cem",
+            "ccm",
+            "experimental"
+          ]
+        },
+        {
+          "name": "test_all_transitions",
+          "startLine": 49,
+          "endLine": 61,
+          "params": [
+            "target",
+            "cem",
+            "ccm",
+            "experimental"
+          ]
+        },
+        {
+          "name": "test_guards_fail_closed",
+          "startLine": 67,
+          "endLine": 71,
+          "params": [
+            "values",
+            "capable"
+          ]
+        },
+        {
+          "name": "test_invalid_modes_never_write",
+          "startLine": 75,
+          "endLine": 79,
+          "params": [
+            "target"
+          ]
+        },
+        {
+          "name": "test_stale_or_missing_expected_state_never_writes",
+          "startLine": 82,
+          "endLine": 87,
+          "params": []
+        },
+        {
+          "name": "test_failed_write_keeps_old_or_requested_mode",
+          "startLine": 91,
+          "endLine": 96,
+          "params": [
+            "fail_at"
+          ]
+        },
+        {
+          "name": "test_readback_failure_stops_without_further_writes",
+          "startLine": 99,
+          "endLine": 105,
+          "params": []
+        },
+        {
+          "name": "test_guard_rechecked_before_every_write",
+          "startLine": 108,
+          "endLine": 114,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Params",
+          "startLine": 15,
+          "endLine": 36,
+          "methods": [
+            "__init__",
+            "get_param_path",
+            "get",
+            "get_bool",
+            "put_bool"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Params",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "test_read_precedence_without_writes",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "test_all_transitions",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "test_guards_fail_closed",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "test_invalid_modes_never_write",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "test_stale_or_missing_expected_state_never_writes",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "test_failed_write_keeps_old_or_requested_mode",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "test_readback_failure_stops_without_further_writes",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "test_guard_rechecked_before_every_write",
+          "line": 108,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "TemporaryDirectory",
+          "lineNumber": 17
+        },
+        {
+          "caller": "get_param_path",
+          "callee": "str",
+          "lineNumber": 24
+        },
+        {
+          "caller": "get_param_path",
+          "callee": "Path",
+          "lineNumber": 24
+        },
+        {
+          "caller": "get",
+          "callee": "self.values.get",
+          "lineNumber": 27
+        },
+        {
+          "caller": "get_bool",
+          "callee": "self.values.get",
+          "lineNumber": 30
+        },
+        {
+          "caller": "put_bool",
+          "callee": "self.writes.append",
+          "lineNumber": 33
+        },
+        {
+          "caller": "put_bool",
+          "callee": "len",
+          "lineNumber": 34
+        },
+        {
+          "caller": "put_bool",
+          "callee": "OSError",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_read_precedence_without_writes",
+          "callee": "Params",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_read_precedence_without_writes",
+          "callee": "dict",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_read_precedence_without_writes",
+          "callee": "zip",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_read_precedence_without_writes",
+          "callee": "mode.snapshot",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "Params",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "dict",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "zip",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "params.values.copy",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "mode.set_mode",
+          "lineNumber": 52
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "mode.selected_mode",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "before.copy",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "mode.selected_mode",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "mode.selected_mode",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_all_transitions",
+          "callee": "sum",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_guards_fail_closed",
+          "callee": "Params",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_guards_fail_closed",
+          "callee": "pytest.raises",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_guards_fail_closed",
+          "callee": "mode.set_mode",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_guards_fail_closed",
+          "callee": "params.values.copy",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_invalid_modes_never_write",
+          "callee": "Params",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_invalid_modes_never_write",
+          "callee": "pytest.raises",
+          "lineNumber": 77
+        },
+        {
+          "caller": "test_invalid_modes_never_write",
+          "callee": "mode.set_mode",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_invalid_modes_never_write",
+          "callee": "params.values.copy",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_stale_or_missing_expected_state_never_writes",
+          "callee": "Params",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_stale_or_missing_expected_state_never_writes",
+          "callee": "pytest.raises",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_stale_or_missing_expected_state_never_writes",
+          "callee": "mode.set_mode",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_failed_write_keeps_old_or_requested_mode",
+          "callee": "Params",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_failed_write_keeps_old_or_requested_mode",
+          "callee": "pytest.raises",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_failed_write_keeps_old_or_requested_mode",
+          "callee": "mode.set_mode",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_failed_write_keeps_old_or_requested_mode",
+          "callee": "params.values.copy",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_failed_write_keeps_old_or_requested_mode",
+          "callee": "mode.selected_mode",
+          "lineNumber": 95
+        },
+        {
+          "caller": "test_failed_write_keeps_old_or_requested_mode",
+          "callee": "len",
+          "lineNumber": 96
+        },
+        {
+          "caller": "test_readback_failure_stops_without_further_writes",
+          "callee": "Params",
+          "lineNumber": 100
+        },
+        {
+          "caller": "test_readback_failure_stops_without_further_writes",
+          "callee": "params.writes.append",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_readback_failure_stops_without_further_writes",
+          "callee": "pytest.raises",
+          "lineNumber": 102
+        },
+        {
+          "caller": "test_readback_failure_stops_without_further_writes",
+          "callee": "mode.set_mode",
+          "lineNumber": 103
+        },
+        {
+          "caller": "test_readback_failure_stops_without_further_writes",
+          "callee": "params.values.copy",
+          "lineNumber": 103
+        },
+        {
+          "caller": "test_readback_failure_stops_without_further_writes",
+          "callee": "mode.selected_mode",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_guard_rechecked_before_every_write",
+          "callee": "Params",
+          "lineNumber": 109
+        },
+        {
+          "caller": "capable",
+          "callee": "len",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_guard_rechecked_before_every_write",
+          "callee": "pytest.raises",
+          "lineNumber": 112
+        },
+        {
+          "caller": "test_guard_rechecked_before_every_write",
+          "callee": "mode.set_mode",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_guard_rechecked_before_every_write",
+          "callee": "params.values.copy",
+          "lineNumber": 113
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 134,
+      "nonEmptyLines": 111,
+      "functions": [
+        {
+          "name": "client_for",
+          "startLine": 14,
+          "endLine": 29,
+          "params": [
+            "params",
+            "capable"
+          ]
+        },
+        {
+          "name": "test_live_snapshot_precedence_no_load_writes",
+          "startLine": 32,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "test_put_readback_and_failed_partial_write_signal",
+          "startLine": 42,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "test_bad_request_rejected",
+          "startLine": 53,
+          "endLine": 57,
+          "params": [
+            "body"
+          ]
+        },
+        {
+          "name": "test_api_guards_and_legacy_favorites",
+          "startLine": 61,
+          "endLine": 66,
+          "params": [
+            "guard",
+            "capable"
+          ]
+        },
+        {
+          "name": "test_legacy_favorite_uses_guarded_adapter",
+          "startLine": 69,
+          "endLine": 76,
+          "params": []
+        },
+        {
+          "name": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+          "startLine": 79,
+          "endLine": 88,
+          "params": []
+        },
+        {
+          "name": "test_capability_pending_vehicle_guards",
+          "startLine": 99,
+          "endLine": 106,
+          "params": [
+            "cp",
+            "values",
+            "expected"
+          ]
+        },
+        {
+          "name": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "startLine": 109,
+          "endLine": 123,
+          "params": []
+        },
+        {
+          "name": "test_manual_and_persisted_overrides_and_child_values_untouched",
+          "startLine": 126,
+          "endLine": 134,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "client_for",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "test_live_snapshot_precedence_no_load_writes",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "test_put_readback_and_failed_partial_write_signal",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "test_bad_request_rejected",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "test_api_guards_and_legacy_favorites",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "test_legacy_favorite_uses_guarded_adapter",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "test_capability_pending_vehicle_guards",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "test_manual_and_persisted_overrides_and_child_values_untouched",
+          "line": 126,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "client_for",
+          "callee": "ast.parse",
+          "lineNumber": 15
+        },
+        {
+          "caller": "client_for",
+          "callee": "SOURCE.read_text",
+          "lineNumber": 15
+        },
+        {
+          "caller": "client_for",
+          "callee": "next",
+          "lineNumber": 16
+        },
+        {
+          "caller": "client_for",
+          "callee": "isinstance",
+          "lineNumber": 16
+        },
+        {
+          "caller": "client_for",
+          "callee": "isinstance",
+          "lineNumber": 17
+        },
+        {
+          "caller": "client_for",
+          "callee": "Flask",
+          "lineNumber": 19
+        },
+        {
+          "caller": "client_for",
+          "callee": "dict",
+          "lineNumber": 20
+        },
+        {
+          "caller": "client_for",
+          "callee": "signals.append",
+          "lineNumber": 24
+        },
+        {
+          "caller": "client_for",
+          "callee": "set",
+          "lineNumber": 26
+        },
+        {
+          "caller": "client_for",
+          "callee": "set",
+          "lineNumber": 26
+        },
+        {
+          "caller": "client_for",
+          "callee": "exec",
+          "lineNumber": 28
+        },
+        {
+          "caller": "client_for",
+          "callee": "compile",
+          "lineNumber": 28
+        },
+        {
+          "caller": "client_for",
+          "callee": "ast.Module",
+          "lineNumber": 28
+        },
+        {
+          "caller": "client_for",
+          "callee": "str",
+          "lineNumber": 28
+        },
+        {
+          "caller": "client_for",
+          "callee": "app.test_client",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_live_snapshot_precedence_no_load_writes",
+          "callee": "Params",
+          "lineNumber": 33
+        },
+        {
+          "caller": "test_live_snapshot_precedence_no_load_writes",
+          "callee": "client_for",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_live_snapshot_precedence_no_load_writes",
+          "callee": "client.get",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_put_readback_and_failed_partial_write_signal",
+          "callee": "Params",
+          "lineNumber": 43
+        },
+        {
+          "caller": "test_put_readback_and_failed_partial_write_signal",
+          "callee": "client_for",
+          "lineNumber": 44
+        },
+        {
+          "caller": "test_put_readback_and_failed_partial_write_signal",
+          "callee": "client.put",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_put_readback_and_failed_partial_write_signal",
+          "callee": "params.values.copy",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_put_readback_and_failed_partial_write_signal",
+          "callee": "len",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_put_readback_and_failed_partial_write_signal",
+          "callee": "client.get",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_bad_request_rejected",
+          "callee": "Params",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_bad_request_rejected",
+          "callee": "client_for",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_bad_request_rejected",
+          "callee": "client.put",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_api_guards_and_legacy_favorites",
+          "callee": "Params",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_api_guards_and_legacy_favorites",
+          "callee": "client_for",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_api_guards_and_legacy_favorites",
+          "callee": "client.put",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_api_guards_and_legacy_favorites",
+          "callee": "params.values.copy",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_api_guards_and_legacy_favorites",
+          "callee": "client.put",
+          "lineNumber": 65
+        },
+        {
+          "caller": "test_legacy_favorite_uses_guarded_adapter",
+          "callee": "Params",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_legacy_favorite_uses_guarded_adapter",
+          "callee": "client_for",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_legacy_favorite_uses_guarded_adapter",
+          "callee": "client.put",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_legacy_favorite_uses_guarded_adapter",
+          "callee": "client.put",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+          "callee": "Params",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+          "callee": "client_for",
+          "lineNumber": 81
+        },
+        {
+          "caller": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+          "callee": "params.values.copy",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+          "callee": "client.put",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+          "callee": "client.put",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+          "callee": "client.put",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+          "callee": "all",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "next",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "ast.parse",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "SOURCE.read_text",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "isinstance",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "values.get",
+          "lineNumber": 102
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "SimpleNamespace",
+          "lineNumber": 104
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "SimpleNamespace",
+          "lineNumber": 104
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "nullcontext",
+          "lineNumber": 104
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "exec",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "compile",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "ast.Module",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_capability_pending_vehicle_guards",
+          "callee": "str",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "ast.parse",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "SOURCE.read_text",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "next",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "isinstance",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "exec",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "compile",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "ast.Module",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "str",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "Params",
+          "lineNumber": 114
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "mode.snapshot",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "params.values.pop",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "mode.snapshot",
+          "lineNumber": 119
+        },
+        {
+          "caller": "failed_read",
+          "callee": "OSError",
+          "lineNumber": 121
+        },
+        {
+          "caller": "test_real_params_compat_missing_and_failed_reads_fail_closed",
+          "callee": "mode.snapshot",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_manual_and_persisted_overrides_and_child_values_untouched",
+          "callee": "Params",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_manual_and_persisted_overrides_and_child_values_untouched",
+          "callee": "client_for",
+          "lineNumber": 130
+        },
+        {
+          "caller": "test_manual_and_persisted_overrides_and_child_values_untouched",
+          "callee": "client.put",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_manual_and_persisted_overrides_and_child_values_untouched",
+          "callee": "params.values.copy",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_manual_and_persisted_overrides_and_child_values_untouched",
+          "callee": "all",
+          "lineNumber": 134
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 10,
+        "functionCount": 10,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 28,
+      "functions": [
+        {
+          "name": "test_guard_transition_during_write_stops_further_writes",
+          "startLine": 9,
+          "endLine": 20,
+          "params": [
+            "after_write",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "name": "test_multi_key_write_boundaries_never_expose_intermediate_chill",
+          "startLine": 23,
+          "endLine": 33,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_guard_transition_during_write_stops_further_writes",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "test_multi_key_write_boundaries_never_expose_intermediate_chill",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_guard_transition_during_write_stops_further_writes",
+          "callee": "Params",
+          "lineNumber": 10
+        },
+        {
+          "caller": "put",
+          "callee": "original_put",
+          "lineNumber": 13
+        },
+        {
+          "caller": "put",
+          "callee": "len",
+          "lineNumber": 14
+        },
+        {
+          "caller": "test_guard_transition_during_write_stops_further_writes",
+          "callee": "pytest.raises",
+          "lineNumber": 17
+        },
+        {
+          "caller": "test_guard_transition_during_write_stops_further_writes",
+          "callee": "mode.set_mode",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_guard_transition_during_write_stops_further_writes",
+          "callee": "params.values.copy",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_guard_transition_during_write_stops_further_writes",
+          "callee": "len",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_guard_transition_during_write_stops_further_writes",
+          "callee": "mode.selected_mode",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_multi_key_write_boundaries_never_expose_intermediate_chill",
+          "callee": "Params",
+          "lineNumber": 25
+        },
+        {
+          "caller": "put",
+          "callee": "original_put",
+          "lineNumber": 29
+        },
+        {
+          "caller": "put",
+          "callee": "observed.append",
+          "lineNumber": 30
+        },
+        {
+          "caller": "put",
+          "callee": "mode.selected_mode",
+          "lineNumber": 30
+        },
+        {
+          "caller": "put",
+          "callee": "params.get_bool",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_multi_key_write_boundaries_never_expose_intermediate_chill",
+          "callee": "mode.set_mode",
+          "lineNumber": 32
+        },
+        {
+          "caller": "test_multi_key_write_boundaries_never_expose_intermediate_chill",
+          "callee": "params.values.copy",
+          "lineNumber": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    }
+  ]
+}

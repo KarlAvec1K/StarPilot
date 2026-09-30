@@ -1,0 +1,858 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "file",
+      "name": "api.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "summary": "Centralise le client HTTP du portail Galaxy pour les paramètres, routes, diagnostics, mises à jour, thèmes, modèles, tuning et autres services StarPilot.",
+      "tags": [
+        "api-client",
+        "requete-http",
+        "service-galaxy",
+        "serialisation"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Un objet API unique enveloppe fetch et partage la normalisation JSON des erreurs entre de nombreux endpoints."
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/api.js:initFor",
+      "type": "function",
+      "name": "initFor",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "lineRange": [
+        13,
+        25
+      ],
+      "summary": "Construit les options fetch et sérialise correctement les corps JSON ou FormData.",
+      "tags": [
+        "api-client",
+        "requete-http",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/api.js:showSnackbar",
+      "type": "function",
+      "name": "showSnackbar",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "lineRange": [
+        410,
+        434
+      ],
+      "summary": "Affiche un message temporaire accessible dans le conteneur snackbar, avec sémantique renforcée pour les erreurs.",
+      "tags": [
+        "api-client",
+        "requete-http",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "type": "file",
+      "name": "GalaxySelect.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "summary": "Présente un select Galaxy accessible autour d’un élément natif, avec dialog positionné, navigation clavier, typeahead et synchronisation v-model.",
+      "tags": [
+        "composant-vue",
+        "accessibilite",
+        "controle-formulaire",
+        "navigation-clavier"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "type": "file",
+      "name": "LateralTuningPanel.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "summary": "Pilote l’espace de tuning latéral : sélection de routes et segments, analyse FLM, comparaison de profils, essais, feedback et gestion des réglages sauvegardés.",
+      "tags": [
+        "composant-vue",
+        "tuning-lateral",
+        "analyse-flm",
+        "gestion-profils"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "file",
+      "name": "composables.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "summary": "Fournit des composables Vue pour le routage par onglets, le polling résilient et la lecture de logs par EventSource avec repli sur snapshots.",
+      "tags": [
+        "vue",
+        "composable",
+        "polling",
+        "streaming"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:useTabRouting",
+      "type": "function",
+      "name": "useTabRouting",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "lineRange": [
+        5,
+        25
+      ],
+      "summary": "Synchronise un onglet calculé avec la route Galaxy et expose une action de sélection.",
+      "tags": [
+        "vue",
+        "composable",
+        "etat-reactif"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:usePolling",
+      "type": "function",
+      "name": "usePolling",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "lineRange": [
+        27,
+        50
+      ],
+      "summary": "Exécute une tâche asynchrone périodique lorsque la page est visible et conserve le dernier état d’erreur.",
+      "tags": [
+        "vue",
+        "composable",
+        "etat-reactif"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:useLogStream",
+      "type": "function",
+      "name": "useLogStream",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "lineRange": [
+        52,
+        90
+      ],
+      "summary": "Gère un flux de logs réactif par EventSource ou polling de snapshots, avec pause et nettoyage.",
+      "tags": [
+        "vue",
+        "composable",
+        "etat-reactif"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:formatAgeSeconds",
+      "type": "function",
+      "name": "formatAgeSeconds",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "lineRange": [
+        92,
+        100
+      ],
+      "summary": "Transforme un âge en secondes en libellé relatif compact.",
+      "tags": [
+        "vue",
+        "composable",
+        "etat-reactif"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "file",
+      "name": "store.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "summary": "Maintient l’état réactif global de Galaxy et implémente le thème, le tiroir de navigation et un routeur hash avec historique local.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "theme",
+        "interface-utilisateur"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:setTheme",
+      "type": "function",
+      "name": "setTheme",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        27,
+        32
+      ],
+      "summary": "Applique le thème clair ou sombre, met à jour le DOM et persiste le choix localement.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toggleTheme",
+      "type": "function",
+      "name": "toggleTheme",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Bascule entre les thèmes clair et sombre.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:setNavPinned",
+      "type": "function",
+      "name": "setNavPinned",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        38,
+        41
+      ],
+      "summary": "Met à jour et persiste l’état épinglé de la navigation.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toggleNavPinned",
+      "type": "function",
+      "name": "toggleNavPinned",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        43,
+        46
+      ],
+      "summary": "Inverse l’épinglage de la navigation et ouvre le tiroir lorsqu’il devient fixe.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:parseHash",
+      "type": "function",
+      "name": "parseHash",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        48,
+        59
+      ],
+      "summary": "Décompose une route hash en chemin et paramètres de requête décodés.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toHash",
+      "type": "function",
+      "name": "toHash",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        62,
+        66
+      ],
+      "summary": "Reconstruit la forme canonique d’une route hash avec ses paramètres encodés.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:applyRoute",
+      "type": "function",
+      "name": "applyRoute",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        77,
+        87
+      ],
+      "summary": "Met à jour l’état réactif de route, ferme le tiroir et contrôle le repositionnement de la page.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:navigate",
+      "type": "function",
+      "name": "navigate",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        89,
+        94
+      ],
+      "summary": "Ajoute une destination à l’historique local et synchronise l’état avec le hash du navigateur.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:goHome",
+      "type": "function",
+      "name": "goHome",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        96,
+        98
+      ],
+      "summary": "Navigue vers la racine de Galaxy.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:goBack",
+      "type": "function",
+      "name": "goBack",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        100,
+        108
+      ],
+      "summary": "Restaure la route précédente depuis l’historique local du portail.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toolHref",
+      "type": "function",
+      "name": "toolHref",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        112,
+        116
+      ],
+      "summary": "Conserve les routes Galaxy natives et enveloppe les outils externes dans la vue embed.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:initRouter",
+      "type": "function",
+      "name": "initRouter",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "lineRange": [
+        118,
+        128
+      ],
+      "summary": "Initialise le routeur hash, son écouteur de changement, l’historique et le thème courant.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "type": "file",
+      "name": "SystemTools.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "summary": "Réunit les outils système Galaxy pour sauvegarder les réglages, gérer branches et versions, appliquer des mises à jour, réinitialiser l’appareil et administrer Tailscale.",
+      "tags": [
+        "vue-galaxy",
+        "mise-a-jour",
+        "maintenance-systeme",
+        "tailscale"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js:readRebootMarker",
+      "type": "function",
+      "name": "readRebootMarker",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "lineRange": [
+        29,
+        39
+      ],
+      "summary": "Lit et valide le timestamp local indiquant qu’une mise à jour attend le redémarrage d’un appareil.",
+      "tags": [
+        "maintenance-systeme",
+        "mise-a-jour",
+        "persistance-locale"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js:resolveDeviceScope",
+      "type": "function",
+      "name": "resolveDeviceScope",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "lineRange": [
+        49,
+        58
+      ],
+      "summary": "Résout le slug de l’appareil actif via la gateway ou revient au scope local.",
+      "tags": [
+        "maintenance-systeme",
+        "mise-a-jour",
+        "persistance-locale"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "type": "file",
+      "name": "Tuning.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "summary": "Compose la vue Tuning en onglets pour le réglage latéral, les graphiques et le Testing Ground, synchronisés avec le routeur Galaxy.",
+      "tags": [
+        "vue-galaxy",
+        "tuning",
+        "navigation-onglets",
+        "composition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "type": "file",
+      "name": "Vehicle.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "summary": "Présente les outils liés au véhicule et vérifie leur compatibilité via l’API avant d’ouvrir la gestion des portes ou des clés Toyota.",
+      "tags": [
+        "vue-galaxy",
+        "controle-vehicule",
+        "verification-capacite",
+        "navigation"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/api.js:initFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/api.js:showSnackbar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/api.js:showSnackbar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:useTabRouting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:useTabRouting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:usePolling",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:usePolling",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:useLogStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:useLogStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:formatAgeSeconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/composables.js:formatAgeSeconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:setTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:setTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toggleTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toggleTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:setNavPinned",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:setNavPinned",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toggleNavPinned",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toggleNavPinned",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:parseHash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:parseHash",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toHash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toHash",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:applyRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:navigate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:navigate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:goHome",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:goHome",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:goBack",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:goBack",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toolHref",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toolHref",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:initRouter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:initRouter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js:readRebootMarker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js:resolveDeviceScope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toggleTheme",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:setTheme",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toggleNavPinned",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:setNavPinned",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toHash",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:parseHash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:applyRoute",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:parseHash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:navigate",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:parseHash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:navigate",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:applyRoute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:navigate",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:toHash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:goHome",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:navigate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:goBack",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:applyRoute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:initRouter",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/store.js:setTheme",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,1188 @@
+{
+  "nodes": [
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "type": "file",
+      "name": "sectioned_panel.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "summary": "Dispose des groupes de tuiles dans un panneau sectionné, avec calcul de hauteur, titres de sections et défilement.",
+      "tags": [
+        "interface-utilisateur",
+        "mise-en-page",
+        "tuiles",
+        "réglages"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py:TileSection",
+      "type": "class",
+      "name": "TileSection",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "lineRange": [
+        18,
+        20
+      ],
+      "summary": "Structure les valeurs de `TileSection` partagées par la mise en page sectionnée des réglages.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "mise-en-page",
+        "tuiles"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py:SectionedTileLayout",
+      "type": "class",
+      "name": "SectionedTileLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "lineRange": [
+        23,
+        175
+      ],
+      "summary": "Compose l’écran `SectionedTileLayout` et orchestre ses vues, commandes et interactions pour la mise en page sectionnée des réglages.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "mise-en-page",
+        "tuiles"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "type": "file",
+      "name": "simple_download_manager.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "summary": "Fournit un gestionnaire générique de ressources téléchargeables avec sélection, état réseau, progression, annulation et suppression locale.",
+      "tags": [
+        "interface-utilisateur",
+        "téléchargement",
+        "assets",
+        "gestionnaire"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_theme_display_name",
+      "type": "function",
+      "name": "_theme_display_name",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "lineRange": [
+        26,
+        46
+      ],
+      "summary": "Implémente l’opération `_theme_display_name` nécessaire à la gestion simple des ressources téléchargeables.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "téléchargement",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_display_to_slug",
+      "type": "function",
+      "name": "_display_to_slug",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "lineRange": [
+        49,
+        58
+      ],
+      "summary": "Implémente l’opération `_display_to_slug` nécessaire à la gestion simple des ressources téléchargeables.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "téléchargement",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_delete_asset_file",
+      "type": "function",
+      "name": "_delete_asset_file",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "lineRange": [
+        61,
+        77
+      ],
+      "summary": "Implémente l’opération `_delete_asset_file` nécessaire à la gestion simple des ressources téléchargeables.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "téléchargement",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_add_to_downloadable_list",
+      "type": "function",
+      "name": "_add_to_downloadable_list",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "lineRange": [
+        80,
+        87
+      ],
+      "summary": "Implémente l’opération `_add_to_downloadable_list` nécessaire à la gestion simple des ressources téléchargeables.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "téléchargement",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_is_online",
+      "type": "function",
+      "name": "_is_online",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "lineRange": [
+        90,
+        97
+      ],
+      "summary": "Évalue la condition `_is_online` afin de sécuriser la gestion simple des ressources téléchargeables.",
+      "tags": [
+        "fonction",
+        "validation",
+        "interface-utilisateur",
+        "téléchargement",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_is_parked",
+      "type": "function",
+      "name": "_is_parked",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "lineRange": [
+        100,
+        109
+      ],
+      "summary": "Évalue la condition `_is_parked` afin de sécuriser la gestion simple des ressources téléchargeables.",
+      "tags": [
+        "fonction",
+        "validation",
+        "interface-utilisateur",
+        "téléchargement",
+        "assets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:SimpleDownloadManager",
+      "type": "class",
+      "name": "SimpleDownloadManager",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "lineRange": [
+        112,
+        647
+      ],
+      "summary": "Coordonne les opérations de `SimpleDownloadManager` pour la gestion simple des ressources téléchargeables.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "téléchargement",
+        "assets"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "type": "file",
+      "name": "sounds.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "summary": "Présente les réglages sonores StarPilot, leurs volumes, options et commandes de préécoute hors route.",
+      "tags": [
+        "interface-utilisateur",
+        "audio",
+        "réglages",
+        "volume"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/sounds.py:SoundsManagerView",
+      "type": "class",
+      "name": "SoundsManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "lineRange": [
+        50,
+        254
+      ],
+      "summary": "Implémente la vue interactive `SoundsManagerView` pour les réglages et tests sonores.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "audio",
+        "réglages"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/sounds.py:StarPilotSoundsLayout",
+      "type": "class",
+      "name": "StarPilotSoundsLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "lineRange": [
+        257,
+        386
+      ],
+      "summary": "Compose l’écran `StarPilotSoundsLayout` et orchestre ses vues, commandes et interactions pour les réglages et tests sonores.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "audio",
+        "réglages"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "type": "file",
+      "name": "system_settings.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "summary": "Regroupe les réglages système et les opérations de maintenance : affichage, connectivité, stockage, sauvegardes, profils Params, firmware et réinitialisation.",
+      "tags": [
+        "interface-utilisateur",
+        "système",
+        "maintenance",
+        "sauvegardes"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/system_settings.py:SystemSettingsManagerView",
+      "type": "class",
+      "name": "SystemSettingsManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "lineRange": [
+        105,
+        602
+      ],
+      "summary": "Implémente la vue interactive `SystemSettingsManagerView` pour les réglages et la maintenance système.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "système",
+        "maintenance"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/system_settings.py:AetherBackupsCareDialog",
+      "type": "class",
+      "name": "AetherBackupsCareDialog",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "lineRange": [
+        605,
+        811
+      ],
+      "summary": "Présente la boîte de dialogue `AetherBackupsCareDialog` et gère ses interactions pour les réglages et la maintenance système.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "système",
+        "maintenance"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/system_settings.py:StarPilotSystemLayout",
+      "type": "class",
+      "name": "StarPilotSystemLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "lineRange": [
+        814,
+        1364
+      ],
+      "summary": "Compose l’écran `StarPilotSystemLayout` et orchestre ses vues, commandes et interactions pour les réglages et la maintenance système.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "système",
+        "maintenance"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "type": "file",
+      "name": "vehicle.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "summary": "Configure l’identité du véhicule, les options de direction, les actions de boutons et les sélecteurs de marque, modèle ou temporisation des portes.",
+      "tags": [
+        "interface-utilisateur",
+        "véhicule",
+        "réglages",
+        "commandes"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/vehicle.py:_lock_doors_timer_labels",
+      "type": "function",
+      "name": "_lock_doors_timer_labels",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "lineRange": [
+        74,
+        78
+      ],
+      "summary": "Implémente l’opération `_lock_doors_timer_labels` nécessaire à les réglages propres au véhicule.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "véhicule",
+        "réglages"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/vehicle.py:VehicleSettingsManagerView",
+      "type": "class",
+      "name": "VehicleSettingsManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "lineRange": [
+        86,
+        446
+      ],
+      "summary": "Implémente la vue interactive `VehicleSettingsManagerView` pour les réglages propres au véhicule.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "véhicule",
+        "réglages"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/vehicle.py:ButtonActionComboDialog",
+      "type": "class",
+      "name": "ButtonActionComboDialog",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "lineRange": [
+        449,
+        624
+      ],
+      "summary": "Présente la boîte de dialogue `ButtonActionComboDialog` et gère ses interactions pour les réglages propres au véhicule.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "véhicule",
+        "réglages"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/vehicle.py:StarPilotVehicleSettingsLayout",
+      "type": "class",
+      "name": "StarPilotVehicleSettingsLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "lineRange": [
+        627,
+        875
+      ],
+      "summary": "Compose l’écran `StarPilotVehicleSettingsLayout` et orchestre ses vues, commandes et interactions pour les réglages propres au véhicule.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "véhicule",
+        "réglages"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/lib/mode_banner.py",
+      "type": "file",
+      "name": "mode_banner.py",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "summary": "Détermine la variante et les couleurs animées de la bannière de mode de conduite, puis dessine son dégradé dans l’interface.",
+      "tags": [
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/lib/mode_banner.py:get_mode_banner_variant",
+      "type": "function",
+      "name": "get_mode_banner_variant",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "lineRange": [
+        15,
+        24
+      ],
+      "summary": "Calcule ou récupère la valeur `get_mode_banner_variant` utilisée par la bannière du mode de conduite.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/lib/mode_banner.py:_color",
+      "type": "function",
+      "name": "_color",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "lineRange": [
+        27,
+        28
+      ],
+      "summary": "Implémente l’opération `_color` nécessaire à la bannière du mode de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/lib/mode_banner.py:_lerp_color",
+      "type": "function",
+      "name": "_lerp_color",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "lineRange": [
+        31,
+        38
+      ],
+      "summary": "Implémente l’opération `_lerp_color` nécessaire à la bannière du mode de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/lib/mode_banner.py:_conditional_colors",
+      "type": "function",
+      "name": "_conditional_colors",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "lineRange": [
+        41,
+        48
+      ],
+      "summary": "Implémente l’opération `_conditional_colors` nécessaire à la bannière du mode de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/lib/mode_banner.py:mode_banner_color",
+      "type": "function",
+      "name": "mode_banner_color",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "lineRange": [
+        51,
+        63
+      ],
+      "summary": "Implémente l’opération `mode_banner_color` nécessaire à la bannière du mode de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/lib/mode_banner.py:mode_atom_color",
+      "type": "function",
+      "name": "mode_atom_color",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "lineRange": [
+        66,
+        70
+      ],
+      "summary": "Implémente l’opération `mode_atom_color` nécessaire à la bannière du mode de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/lib/mode_banner.py:draw_mode_banner_gradient",
+      "type": "function",
+      "name": "draw_mode_banner_gradient",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "lineRange": [
+        73,
+        95
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_mode_banner_gradient` dans la bannière du mode de conduite.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/lib/mode_banner.py:ModeBannerVariant",
+      "type": "class",
+      "name": "ModeBannerVariant",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "lineRange": [
+        8,
+        12
+      ],
+      "summary": "Structure les valeurs de `ModeBannerVariant` partagées par la bannière du mode de conduite.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/lib/starpilot_state.py",
+      "type": "file",
+      "name": "starpilot_state.py",
+      "filePath": "selfdrive/ui/lib/starpilot_state.py",
+      "summary": "Centralise l’état StarPilot consommé par l’UI, applique les empreintes véhicule manuelles et synchronise les paramètres latéraux.",
+      "tags": [
+        "state-management",
+        "interface-utilisateur",
+        "véhicule",
+        "paramètres"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/lib/starpilot_state.py:StarPilotCarState",
+      "type": "class",
+      "name": "StarPilotCarState",
+      "filePath": "selfdrive/ui/lib/starpilot_state.py",
+      "lineRange": [
+        15,
+        62
+      ],
+      "summary": "Conserve et met à jour l’état `StarPilotCarState` utilisé par l’état partagé de l’interface StarPilot.",
+      "tags": [
+        "classe",
+        "composant",
+        "state-management",
+        "interface-utilisateur",
+        "véhicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/lib/starpilot_state.py:StarPilotState",
+      "type": "class",
+      "name": "StarPilotState",
+      "filePath": "selfdrive/ui/lib/starpilot_state.py",
+      "lineRange": [
+        64,
+        250
+      ],
+      "summary": "Conserve et met à jour l’état `StarPilotState` utilisé par l’état partagé de l’interface StarPilot.",
+      "tags": [
+        "classe",
+        "composant",
+        "state-management",
+        "interface-utilisateur",
+        "véhicule"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/mici/layouts/settings/developer.py",
+      "type": "file",
+      "name": "developer.py",
+      "filePath": "selfdrive/ui/mici/layouts/settings/developer.py",
+      "summary": "Adapte les réglages développeur à l’interface mici et synchronise les options joystick et longitudinal expérimental.",
+      "tags": [
+        "interface-utilisateur",
+        "mici",
+        "développement",
+        "réglages"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/mici/layouts/settings/developer.py:DeveloperLayoutMici",
+      "type": "class",
+      "name": "DeveloperLayoutMici",
+      "filePath": "selfdrive/ui/mici/layouts/settings/developer.py",
+      "lineRange": [
+        11,
+        143
+      ],
+      "summary": "Regroupe l’état et les opérations de `DeveloperLayoutMici` pour les réglages développeur sur mici.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "mici",
+        "développement"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/mici/layouts/settings/settings.py",
+      "type": "file",
+      "name": "settings.py",
+      "filePath": "selfdrive/ui/mici/layouts/settings/settings.py",
+      "summary": "Compose l’écran de réglages mici avec de grands boutons et une commande Force Drive State adaptée au petit écran.",
+      "tags": [
+        "interface-utilisateur",
+        "mici",
+        "réglages",
+        "commandes"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/mici/layouts/settings/settings.py:SettingsBigButton",
+      "type": "class",
+      "name": "SettingsBigButton",
+      "filePath": "selfdrive/ui/mici/layouts/settings/settings.py",
+      "lineRange": [
+        18,
+        20
+      ],
+      "summary": "Implémente le bouton `SettingsBigButton` et ses interactions dans l’écran principal des réglages mici.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "mici",
+        "réglages"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/mici/layouts/settings/settings.py:ForceDriveStateBigButton",
+      "type": "class",
+      "name": "ForceDriveStateBigButton",
+      "filePath": "selfdrive/ui/mici/layouts/settings/settings.py",
+      "lineRange": [
+        23,
+        56
+      ],
+      "summary": "Implémente le bouton `ForceDriveStateBigButton` et ses interactions dans l’écran principal des réglages mici.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "mici",
+        "réglages"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/mici/layouts/settings/settings.py:SettingsLayout",
+      "type": "class",
+      "name": "SettingsLayout",
+      "filePath": "selfdrive/ui/mici/layouts/settings/settings.py",
+      "lineRange": [
+        59,
+        121
+      ],
+      "summary": "Compose l’écran `SettingsLayout` et orchestre ses vues, commandes et interactions pour l’écran principal des réglages mici.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "mici",
+        "réglages"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py:TileSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py:TileSection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py:SectionedTileLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py:SectionedTileLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_theme_display_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_theme_display_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_display_to_slug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_display_to_slug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_delete_asset_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_delete_asset_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_add_to_downloadable_list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_add_to_downloadable_list",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_is_online",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_is_online",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_is_parked",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:_is_parked",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:SimpleDownloadManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py:SimpleDownloadManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/sounds.py:SoundsManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/sounds.py:SoundsManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/sounds.py:StarPilotSoundsLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/sounds.py:StarPilotSoundsLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/system_settings.py:SystemSettingsManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/system_settings.py:SystemSettingsManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/system_settings.py:AetherBackupsCareDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/system_settings.py:AetherBackupsCareDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/system_settings.py:StarPilotSystemLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/system_settings.py:StarPilotSystemLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/vehicle.py:_lock_doors_timer_labels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/vehicle.py:_lock_doors_timer_labels",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/vehicle.py:VehicleSettingsManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/vehicle.py:VehicleSettingsManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/vehicle.py:ButtonActionComboDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/vehicle.py:ButtonActionComboDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/vehicle.py:StarPilotVehicleSettingsLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/vehicle.py:StarPilotVehicleSettingsLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:get_mode_banner_variant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:get_mode_banner_variant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:_lerp_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:_lerp_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:_conditional_colors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:_conditional_colors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:mode_banner_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:mode_banner_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:mode_atom_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:mode_atom_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:draw_mode_banner_gradient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "function:selfdrive/ui/lib/mode_banner.py:draw_mode_banner_gradient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "class:selfdrive/ui/lib/mode_banner.py:ModeBannerVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/mode_banner.py",
+      "target": "class:selfdrive/ui/lib/mode_banner.py:ModeBannerVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/starpilot_state.py",
+      "target": "class:selfdrive/ui/lib/starpilot_state.py:StarPilotCarState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/starpilot_state.py",
+      "target": "class:selfdrive/ui/lib/starpilot_state.py:StarPilotCarState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/lib/starpilot_state.py",
+      "target": "class:selfdrive/ui/lib/starpilot_state.py:StarPilotState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/lib/starpilot_state.py",
+      "target": "class:selfdrive/ui/lib/starpilot_state.py:StarPilotState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/mici/layouts/settings/developer.py",
+      "target": "class:selfdrive/ui/mici/layouts/settings/developer.py:DeveloperLayoutMici",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/mici/layouts/settings/developer.py",
+      "target": "class:selfdrive/ui/mici/layouts/settings/developer.py:DeveloperLayoutMici",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/mici/layouts/settings/settings.py",
+      "target": "class:selfdrive/ui/mici/layouts/settings/settings.py:SettingsBigButton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/mici/layouts/settings/settings.py",
+      "target": "class:selfdrive/ui/mici/layouts/settings/settings.py:SettingsBigButton",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/mici/layouts/settings/settings.py",
+      "target": "class:selfdrive/ui/mici/layouts/settings/settings.py:ForceDriveStateBigButton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/mici/layouts/settings/settings.py",
+      "target": "class:selfdrive/ui/mici/layouts/settings/settings.py:ForceDriveStateBigButton",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/mici/layouts/settings/settings.py",
+      "target": "class:selfdrive/ui/mici/layouts/settings/settings.py:SettingsLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/mici/layouts/settings/settings.py",
+      "target": "class:selfdrive/ui/mici/layouts/settings/settings.py:SettingsLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

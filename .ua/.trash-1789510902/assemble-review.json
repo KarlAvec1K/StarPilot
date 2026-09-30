@@ -1,0 +1,13 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 0,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "Le rapport ne contient aucune correction mécanique ni aucun élément non réparable; le passage de 3462 à 3463 arêtes correspond à l’unique relation tested_by ajoutée par convention de chemin.",
+    "Les 51 relations de importMap correspondent exactement aux 51 arêtes imports du graphe, toutes orientées forward avec un poids de 0.7.",
+    "Les 1917 nœuds et 3463 arêtes ne présentent aucun ID, type ou niveau de complexité invalide, aucun doublon, aucune auto-référence et aucune arête pendante."
+  ]
+}

@@ -1,0 +1,109 @@
+[
+  {
+    "batchIndex": 9,
+    "parts": [
+      {
+        "file": "batch-9-part-1.json",
+        "nodes": 63,
+        "edges": 116
+      },
+      {
+        "file": "batch-9-part-2.json",
+        "nodes": 42,
+        "edges": 74
+      },
+      {
+        "file": "batch-9-part-3.json",
+        "nodes": 45,
+        "edges": 80
+      },
+      {
+        "file": "batch-9-part-4.json",
+        "nodes": 54,
+        "edges": 98
+      },
+      {
+        "file": "batch-9-part-5.json",
+        "nodes": 63,
+        "edges": 116
+      }
+    ],
+    "totalNodes": 267,
+    "totalEdges": 484,
+    "importEdges": 0,
+    "expectedImportEdges": 0
+  },
+  {
+    "batchIndex": 10,
+    "parts": [
+      {
+        "file": "batch-10-part-1.json",
+        "nodes": 25,
+        "edges": 40
+      },
+      {
+        "file": "batch-10-part-2.json",
+        "nodes": 28,
+        "edges": 46
+      },
+      {
+        "file": "batch-10-part-3.json",
+        "nodes": 23,
+        "edges": 36
+      },
+      {
+        "file": "batch-10-part-4.json",
+        "nodes": 119,
+        "edges": 119
+      },
+      {
+        "file": "batch-10-part-5.json",
+        "nodes": 143,
+        "edges": 268
+      }
+    ],
+    "totalNodes": 338,
+    "totalEdges": 509,
+    "importEdges": 0,
+    "expectedImportEdges": 0
+  },
+  {
+    "batchIndex": 11,
+    "parts": [
+      {
+        "file": "batch-11-part-1.json",
+        "nodes": 41,
+        "edges": 78
+      },
+      {
+        "file": "batch-11-part-2.json",
+        "nodes": 57,
+        "edges": 111
+      },
+      {
+        "file": "batch-11-part-3.json",
+        "nodes": 259,
+        "edges": 514
+      },
+      {
+        "file": "batch-11-part-4.json",
+        "nodes": 193,
+        "edges": 382
+      },
+      {
+        "file": "batch-11-part-5.json",
+        "nodes": 38,
+        "edges": 72
+      },
+      {
+        "file": "batch-11-part-6.json",
+        "nodes": 50,
+        "edges": 96
+      }
+    ],
+    "totalNodes": 638,
+    "totalEdges": 1253,
+    "importEdges": 1,
+    "expectedImportEdges": 1
+  }
+]

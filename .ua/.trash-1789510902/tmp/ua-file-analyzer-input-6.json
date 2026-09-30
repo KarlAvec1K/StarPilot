@@ -1,0 +1,182 @@
+{
+  "projectRoot": "C:/Users/karlp/Documents/ChatGPT/StarPilot",
+  "batchFiles": [
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 99,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "common/params_keys.h",
+      "language": "c",
+      "sizeLines": 796,
+      "fileCategory": "code"
+    },
+    {
+      "path": "pyproject.toml",
+      "language": "toml",
+      "sizeLines": 288,
+      "fileCategory": "config"
+    },
+    {
+      "path": "selfdrive/car/card.py",
+      "language": "python",
+      "sizeLines": 620,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/car/redneck_cruise.py",
+      "language": "python",
+      "sizeLines": 268,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/controls/controlsd.py",
+      "language": "python",
+      "sizeLines": 951,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/controls/lib/lane_centering.py",
+      "language": "python",
+      "sizeLines": 196,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/controls/lib/longcontrol.py",
+      "language": "python",
+      "sizeLines": 445,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/modeld/camera_offset.py",
+      "language": "python",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/modeld/modeld.py",
+      "language": "python",
+      "sizeLines": 1532,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/selfdrived/events.py",
+      "language": "python",
+      "sizeLines": 1536,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/selfdrived/selfdrived.py",
+      "language": "python",
+      "sizeLines": 1033,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/developer.py",
+      "language": "python",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "language": "python",
+      "sizeLines": 5602,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "language": "python",
+      "sizeLines": 763,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+      "language": "python",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "language": "python",
+      "sizeLines": 1300,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "language": "python",
+      "sizeLines": 407,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "language": "python",
+      "sizeLines": 1250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+      "language": "python",
+      "sizeLines": 319,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "language": "python",
+      "sizeLines": 924,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "language": "python",
+      "sizeLines": 879,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "language": "python",
+      "sizeLines": 369,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "language": "python",
+      "sizeLines": 468,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "README.md": [],
+    "common/params_keys.h": [],
+    "pyproject.toml": [],
+    "selfdrive/car/card.py": [],
+    "selfdrive/car/redneck_cruise.py": [],
+    "selfdrive/controls/controlsd.py": [],
+    "selfdrive/controls/lib/lane_centering.py": [],
+    "selfdrive/controls/lib/longcontrol.py": [],
+    "selfdrive/modeld/camera_offset.py": [],
+    "selfdrive/modeld/modeld.py": [],
+    "selfdrive/selfdrived/events.py": [],
+    "selfdrive/selfdrived/selfdrived.py": [],
+    "selfdrive/ui/layouts/settings/developer.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/__init__.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/aethergrid.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/appearance.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/asset_loader.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/driving_model.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/lateral.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/longitudinal.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/main_panel.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/maps.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/navigation.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/panel.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/scribble.py": []
+  }
+}

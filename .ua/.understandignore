@@ -1,0 +1,265 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore (globs, # comments, ! negation, trailing / for dirs)
+# Lines below are suggestions — uncomment to activate.
+# Use ! prefix to force-include something excluded by defaults.
+#
+# Built-in defaults (always excluded unless negated):
+#   node_modules/, .git/, dist/, build/, obj/, *.lock, *.min.js, etc.
+#
+
+# --- From .gitignore (uncomment to exclude) ---
+
+# .ci_cache
+# .env
+# .clang-format
+# .DS_Store
+# .tags
+# .ipynb_checkpoints
+# .overlay_init
+# .overlay_consistent
+# .sconsign.dblite
+# a.out
+# .hypothesis
+# .host_runtime/
+# .comma_sysroot/
+# .venv-linux-arm64/
+# compiledmodels/
+# /docs_site/
+# !docs/assets/speed-limit-vision-demo*.mp4
+# *.dylib
+# *.DSYM
+# *.d
+# *.pyc
+# *.pyo
+# .*.swp
+# .*.swo
+# .*.un~
+# *.tmp
+# *.o
+# *.o-*
+# *.os
+# *.os-*
+# *.so
+# *.a
+# *.clb
+# *.class
+# *.pyxbldc
+# *.vcd
+# *.mo
+# *_pyx.cpp
+# *.stats
+# config.json
+# clcache
+# compile_commands.json
+# compare_runtime*.html
+# cereal/services.h
+# cereal/gen
+# selfdrive/ui/translations/tmp
+# selfdrive/car/tests/cars_dump
+# system/camerad/test/ae_gray_test
+# .coverage*
+# coverage.xml
+# htmlcov
+# pandaextra
+# .mypy_cache/
+# flycheck_*
+# cppcheck_report.txt
+# comma*.sh
+# selfdrive/modeld/models/*.pkl
+# !selfdrive/modeld/models/driving_tinygrad.pkl
+# !selfdrive/modeld/models/driving_vision_tinygrad.pkl
+# !selfdrive/modeld/models/driving_policy_tinygrad.pkl
+# !selfdrive/modeld/models/driving_vision_metadata.pkl
+# !selfdrive/modeld/models/driving_policy_metadata.pkl
+# !selfdrive/modeld/models/dmonitoring_model_tinygrad.pkl
+# !selfdrive/modeld/models/dmonitoring_model_metadata.pkl
+# !selfdrive/modeld/models/warp_1928x1208_tinygrad.pkl
+# !selfdrive/modeld/models/warp_1344x760_tinygrad.pkl
+# !selfdrive/modeld/models/dm_warp_1928x1208_tinygrad.pkl
+# !selfdrive/modeld/models/dm_warp_1344x760_tinygrad.pkl
+# *.bz2
+# *.zst
+# !selfdrive/modeld/firmware/amdgpu/*.zst
+# !**/.gitkeep
+# poetry.toml
+# Pipfile
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+# !.vscode/*.code-snippets
+# .history/
+# *.vsix
+# .history
+# .ionide
+# !cereal/messaging/bridge
+# !system/camerad/camerad
+# !system/loggerd/loggerd
+# !system/loggerd/encoderd
+# !system/loggerd/bootlog
+# !selfdrive/pandad/pandad
+# !cereal/services.h
+# !cereal/libcereal.a
+# !cereal/libsocketmaster.a
+# !common/params_pyx.so
+# !common/params_pyx.cpp
+# !common/transformations/transformations.so
+# !selfdrive/modeld/models/commonmodel_pyx.so
+# !selfdrive/pandad/pandad_api_impl.so
+# !selfdrive/controls/lib/lateral_mpc_lib/c_generated_code/acados_ocp_solver_pyx.so
+# !selfdrive/controls/lib/lateral_mpc_lib/c_generated_code/libacados_ocp_solver_lat.so
+# !selfdrive/controls/lib/longitudinal_mpc_lib/c_generated_code/acados_ocp_solver_pyx.so
+# !selfdrive/controls/lib/longitudinal_mpc_lib/c_generated_code/libacados_ocp_solver_long.so
+# !common/libcommon.a
+# !msgq_repo/msgq/ipc_pyx.so
+# !msgq_repo/msgq/visionipc/visionipc_pyx.so
+# !rednose_repo/rednose/helpers/ekf_sym_pyx.so
+# !panda/board/obj/
+# !panda/board/obj/**
+
+# --- Detected directories (uncomment to exclude) ---
+
+# docs/
+# scripts/
+
+# --- Test file patterns (uncomment to exclude) ---
+
+# JS / TS
+# *.test.*
+# *.spec.*
+# *.snap
+# C# / .NET
+# **/*Tests.cs
+# **/*Test.cs
+# **/*Fixture.cs
+# **/*.Tests.csproj
+# Java / Kotlin
+# **/src/test/**
+# **/*Test.java
+# **/*IT.java
+# **/*Spec.kt
+# Go
+# **/*_test.go
+# C++
+# **/*_test.cc
+# **/*_test.cpp
+# **/*_test.cxx
+# **/*Test.cc
+# **/*Test.cpp
+# **/*_unittest.cc
+# **/*_unittest.cpp
+# **/*_browsertest.cc
+# **/*_benchmark.cc
+# **/*Benchmark.cpp
+# Python
+# **/test_*.py
+# **/*_test.py
+# **/tests.py
+# **/conftest.py
+# Rust
+# **/tests.rs
+# **/test_*.rs
+# **/*_test.rs
+# **/bench_*.rs
+# **/*_bench.rs
+
+# --- Focused StarPilot / Galaxy Advanced analysis (confirmed 2026-09-15) ---
+# Start from an allowlist so the graph stays centered on settings that can
+# affect Galaxy, StarPilot runtime behavior, and the Subaru Ascent platform.
+*
+!**/
+!/README.md
+!/pyproject.toml
+!common/params_keys.h
+!opendbc_repo/opendbc/car/interfaces.py
+!opendbc_repo/opendbc/car/subaru/**
+opendbc_repo/opendbc/car/subaru/tests/**
+
+# Runtime parameter loading and feature consumers.
+!starpilot/common/**
+starpilot/common/tests/**
+starpilot/common/assets/**
+!starpilot/common/assets/device_settings_layout.json
+!starpilot/controls/**
+starpilot/controls/tests/**
+!starpilot/system/adj_spot_monitor_vision.py
+!starpilot/system/speed_limit_filler.py
+!starpilot/system/speed_limit_vision.py
+!starpilot/system/wheel_controls/wheel_controlsd.py
+!selfdrive/car/card.py
+!selfdrive/car/redneck_cruise.py
+!selfdrive/controls/controlsd.py
+!selfdrive/controls/lib/lane_centering.py
+!selfdrive/controls/lib/longcontrol.py
+!selfdrive/modeld/camera_offset.py
+!selfdrive/modeld/modeld.py
+!selfdrive/selfdrived/events.py
+!selfdrive/selfdrived/selfdrived.py
+!selfdrive/ui/layouts/settings/developer.py
+!selfdrive/ui/layouts/settings/starpilot/**
+!selfdrive/ui/lib/mode_banner.py
+!selfdrive/ui/lib/starpilot_state.py
+!selfdrive/ui/mici/layouts/settings/developer.py
+!selfdrive/ui/mici/layouts/settings/settings.py
+!selfdrive/ui/mici/layouts/settings/visuals.py
+!selfdrive/ui/mici/onroad/hud_renderer.py
+!selfdrive/ui/mici/onroad/sidebar_widgets.py
+!selfdrive/ui/onroad/model_renderer.py
+!selfdrive/ui/onroad/starpilot/**
+!selfdrive/ui/ui_state.py
+!system/camerad/main.cc
+!system/manager/launch_param_migrations.py
+!system/manager/manager.py
+!tools/StarPilot/derive_feasible_params.py
+
+# Galaxy backend, classic UI, mobile UI, and focused behavior tests.
+!starpilot/system/the_galaxy/README.md
+!starpilot/system/the_galaxy/the_galaxy.py
+!starpilot/system/the_galaxy/longitudinal_mode.py
+!starpilot/system/the_galaxy/flm_workspace.py
+!starpilot/system/the_galaxy/utilities.py
+!starpilot/system/the_galaxy/assets/components/settings.js
+!starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js
+!starpilot/system/the_galaxy/assets/components/tools/device_settings.js
+!starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs
+!starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs
+!starpilot/system/the_galaxy/assets/components/tools/speed_limits.js
+!starpilot/system/the_galaxy/assets/components/tools/tuning.js
+!starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js
+!starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js
+!starpilot/system/the_galaxy/assets/mobile/js/api.js
+!starpilot/system/the_galaxy/assets/mobile/js/composables.js
+!starpilot/system/the_galaxy/assets/mobile/js/params.js
+!starpilot/system/the_galaxy/assets/mobile/js/store.js
+!starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js
+!starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js
+!starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js
+!starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js
+!starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js
+!starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js
+!starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js
+!starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js
+!starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js
+!starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js
+!starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js
+!starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js
+!starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js
+!starpilot/system/the_galaxy/tests/test_device_settings_frontend.py
+!starpilot/system/the_galaxy/tests/test_device_settings_layout.py
+!starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py
+!starpilot/system/the_galaxy/tests/test_longitudinal_mode.py
+!starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py
+!starpilot/system/the_galaxy/tests/test_mode_transition_guards.py
+!starpilot/system/the_galaxy/tests/test_personality_profiles_api.py
+!starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py
+# Ruby
+# **/*_spec.rb
+# **/*_test.rb
+# **/test_*.rb
+# **/spec_helper.rb
+# **/test_helper.rb
+# **/rails_helper.rb
+# Swift
+# **/Tests/**/*.swift
+# **/Specs/**/*.swift

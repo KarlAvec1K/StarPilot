@@ -1,0 +1,182 @@
+{
+  "projectRoot": "C:/Users/karlp/Documents/ChatGPT/StarPilot",
+  "batchFiles": [
+    {
+      "path": "selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "language": "python",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+      "language": "python",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "language": "python",
+      "sizeLines": 694,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "language": "python",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "language": "python",
+      "sizeLines": 287,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+      "language": "python",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "language": "python",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "language": "python",
+      "sizeLines": 274,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/weather_icon.py",
+      "language": "python",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+      "language": "python",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widget_style.py",
+      "language": "python",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/__init__.py",
+      "language": "python",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+      "language": "python",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/base.py",
+      "language": "python",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+      "language": "python",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "language": "python",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+      "language": "python",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+      "language": "python",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+      "language": "python",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+      "language": "python",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+      "language": "python",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+      "language": "python",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/ui_state.py",
+      "language": "python",
+      "sizeLines": 504,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/accel_profile.py",
+      "language": "python",
+      "sizeLines": 287,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/assets/device_settings_layout.json",
+      "language": "json",
+      "sizeLines": 5057,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "selfdrive/ui/onroad/starpilot/rainbow_path.py": [],
+    "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py": [],
+    "selfdrive/ui/onroad/starpilot/slc_speed_limit.py": [],
+    "selfdrive/ui/onroad/starpilot/source_bubble_layout.py": [],
+    "selfdrive/ui/onroad/starpilot/starpilot_border.py": [],
+    "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py": [],
+    "selfdrive/ui/onroad/starpilot/stopping_point.py": [],
+    "selfdrive/ui/onroad/starpilot/torque_bar.py": [],
+    "selfdrive/ui/onroad/starpilot/weather_icon.py": [],
+    "selfdrive/ui/onroad/starpilot/widget_layout_manager.py": [],
+    "selfdrive/ui/onroad/starpilot/widget_style.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/__init__.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/base.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/model_source.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/personality_button.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/set_speed.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py": [],
+    "selfdrive/ui/ui_state.py": [],
+    "starpilot/common/accel_profile.py": [],
+    "starpilot/common/assets/device_settings_layout.json": []
+  }
+}

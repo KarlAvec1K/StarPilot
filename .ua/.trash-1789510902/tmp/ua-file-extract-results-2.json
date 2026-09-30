@@ -1,0 +1,3002 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 8,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 8,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "formatProfileSpeed",
+          "startLine": 1,
+          "endLine": 6,
+          "params": [
+            "speedMph",
+            "isMetric"
+          ]
+        },
+        {
+          "name": "profileSpeedUnit",
+          "startLine": 8,
+          "endLine": 10,
+          "params": [
+            "isMetric"
+          ]
+        },
+        {
+          "name": "personalityProfileParamKey",
+          "startLine": 19,
+          "endLine": 21,
+          "params": [
+            "profileId"
+          ]
+        },
+        {
+          "name": "shouldSubmitPersonalityPreset",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "currentPreset",
+            "selectedPreset"
+          ]
+        },
+        {
+          "name": "valueFromPointer",
+          "startLine": 27,
+          "endLine": 37,
+          "params": [
+            "clientY",
+            "rect",
+            "minimum",
+            "maximum",
+            "step"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "formatProfileSpeed",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "profileSpeedUnit",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "personalityProfileParamKey",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "shouldSubmitPersonalityPreset",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "valueFromPointer",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "formatProfileSpeed",
+          "callee": "Number",
+          "lineNumber": 2
+        },
+        {
+          "caller": "formatProfileSpeed",
+          "callee": "Number.isFinite",
+          "lineNumber": 3
+        },
+        {
+          "caller": "formatProfileSpeed",
+          "callee": "Number.isInteger",
+          "lineNumber": 4
+        },
+        {
+          "caller": "formatProfileSpeed",
+          "callee": "String",
+          "lineNumber": 4
+        },
+        {
+          "caller": "formatProfileSpeed",
+          "callee": "numeric.toFixed(1).replace",
+          "lineNumber": 4
+        },
+        {
+          "caller": "formatProfileSpeed",
+          "callee": "numeric.toFixed",
+          "lineNumber": 4
+        },
+        {
+          "caller": "formatProfileSpeed",
+          "callee": "(numeric * 1.609344).toFixed(1).replace",
+          "lineNumber": 5
+        },
+        {
+          "caller": "formatProfileSpeed",
+          "callee": "(numeric * 1.609344).toFixed",
+          "lineNumber": 5
+        },
+        {
+          "caller": "personalityProfileParamKey",
+          "callee": "String",
+          "lineNumber": 20
+        },
+        {
+          "caller": "shouldSubmitPersonalityPreset",
+          "callee": "String",
+          "lineNumber": 24
+        },
+        {
+          "caller": "shouldSubmitPersonalityPreset",
+          "callee": "String",
+          "lineNumber": 24
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 28
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 29
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number.isFinite",
+          "lineNumber": 30
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number.isFinite",
+          "lineNumber": 30
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number.isFinite",
+          "lineNumber": 30
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 31
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Math.max",
+          "lineNumber": 33
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Math.min",
+          "lineNumber": 33
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 34
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 34
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 34
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Math.round",
+          "lineNumber": 35
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 35
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 35
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 36
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Math.max(Number(minimum), Math.min(Number(maximum), snapped)).toFixed",
+          "lineNumber": 36
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Math.max",
+          "lineNumber": 36
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 36
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Math.min",
+          "lineNumber": 36
+        },
+        {
+          "caller": "valueFromPointer",
+          "callee": "Number",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 250,
+      "nonEmptyLines": 239,
+      "exports": [
+        {
+          "name": "GalaxyToggleCard",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "displayParam",
+          "callee": "resolveVehicleUnitParam",
+          "lineNumber": 36
+        },
+        {
+          "caller": "bounds",
+          "callee": "numericBounds",
+          "lineNumber": 37
+        },
+        {
+          "caller": "precision",
+          "callee": "stepPrecision",
+          "lineNumber": 38
+        },
+        {
+          "caller": "epsilon",
+          "callee": "numericEpsilon",
+          "lineNumber": 39
+        },
+        {
+          "caller": "displayValue",
+          "callee": "normalizeHexColor",
+          "lineNumber": 46
+        },
+        {
+          "caller": "displayValue",
+          "callee": "normalizeHexColor(this.value).toUpperCase",
+          "lineNumber": 46
+        },
+        {
+          "caller": "displayValue",
+          "callee": "normalizeHexColor",
+          "lineNumber": 46
+        },
+        {
+          "caller": "displayValue",
+          "callee": "formatReadoutValue",
+          "lineNumber": 47
+        },
+        {
+          "caller": "displayValue",
+          "callee": "formatNumericParamValue",
+          "lineNumber": 48
+        },
+        {
+          "caller": "sliderDisplay",
+          "callee": "formatNumericParamValue",
+          "lineNumber": 51
+        },
+        {
+          "caller": "sliderRangeDisplay",
+          "callee": "formatNumericParamValue",
+          "lineNumber": 54
+        },
+        {
+          "caller": "sliderRangeDisplay",
+          "callee": "formatNumericParamValue",
+          "lineNumber": 54
+        },
+        {
+          "caller": "sliderStepDisplay",
+          "callee": "formatNumericParamValue",
+          "lineNumber": 57
+        },
+        {
+          "caller": "optionsLoading",
+          "callee": "Boolean",
+          "lineNumber": 69
+        },
+        {
+          "caller": "tr",
+          "callee": "t",
+          "lineNumber": 73
+        },
+        {
+          "caller": "coerce",
+          "callee": "coerceValueByType",
+          "lineNumber": 76
+        },
+        {
+          "caller": "rollback",
+          "callee": "this.$emit",
+          "lineNumber": 78
+        },
+        {
+          "caller": "commit",
+          "callee": "PANDA_FIRMWARE_TOGGLE_KEYS.has",
+          "lineNumber": 81
+        },
+        {
+          "caller": "commit",
+          "callee": "window.confirm",
+          "lineNumber": 83
+        },
+        {
+          "caller": "commit",
+          "callee": "this.rollback",
+          "lineNumber": 84
+        },
+        {
+          "caller": "commit",
+          "callee": "this.$emit",
+          "lineNumber": 89
+        },
+        {
+          "caller": "commit",
+          "callee": "api.updateParam",
+          "lineNumber": 92
+        },
+        {
+          "caller": "commit",
+          "callee": "Object.prototype.hasOwnProperty.call",
+          "lineNumber": 94
+        },
+        {
+          "caller": "commit",
+          "callee": "this.$emit",
+          "lineNumber": 95
+        },
+        {
+          "caller": "commit",
+          "callee": "showSnackbar",
+          "lineNumber": 97
+        },
+        {
+          "caller": "commit",
+          "callee": "this.rollback",
+          "lineNumber": 99
+        },
+        {
+          "caller": "commit",
+          "callee": "showSnackbar",
+          "lineNumber": 100
+        },
+        {
+          "caller": "onSwitch",
+          "callee": "this.commit",
+          "lineNumber": 106
+        },
+        {
+          "caller": "onSelect",
+          "callee": "String",
+          "lineNumber": 110
+        },
+        {
+          "caller": "onSelect",
+          "callee": "this.commit",
+          "lineNumber": 112
+        },
+        {
+          "caller": "onSelect",
+          "callee": "this.coerce",
+          "lineNumber": 112
+        },
+        {
+          "caller": "onText",
+          "callee": "this.commit",
+          "lineNumber": 115
+        },
+        {
+          "caller": "onText",
+          "callee": "this.coerce",
+          "lineNumber": 115
+        },
+        {
+          "caller": "onColor",
+          "callee": "this.commit",
+          "lineNumber": 119
+        },
+        {
+          "caller": "onColor",
+          "callee": "normalizeHexColor",
+          "lineNumber": 119
+        },
+        {
+          "caller": "onColor",
+          "callee": "getColorDefault",
+          "lineNumber": 119
+        },
+        {
+          "caller": "flushSlider",
+          "callee": "snapNumericToBoundsAndStep",
+          "lineNumber": 123
+        },
+        {
+          "caller": "flushSlider",
+          "callee": "this.snap",
+          "lineNumber": 126
+        },
+        {
+          "caller": "flushSlider",
+          "callee": "Math.abs",
+          "lineNumber": 127
+        },
+        {
+          "caller": "flushSlider",
+          "callee": "this.commit",
+          "lineNumber": 128
+        },
+        {
+          "caller": "onSliderInput",
+          "callee": "this.beginInteract",
+          "lineNumber": 131
+        },
+        {
+          "caller": "onSliderInput",
+          "callee": "Number",
+          "lineNumber": 132
+        },
+        {
+          "caller": "onSliderCommit",
+          "callee": "this.flushSlider",
+          "lineNumber": 136
+        },
+        {
+          "caller": "onSliderBlur",
+          "callee": "this.onSliderCommit",
+          "lineNumber": 139
+        },
+        {
+          "caller": "snap",
+          "callee": "snapNumericToBoundsAndStep",
+          "lineNumber": 142
+        },
+        {
+          "caller": "resetToDefault",
+          "callee": "api.getDefaults",
+          "lineNumber": 145
+        },
+        {
+          "caller": "resetToDefault",
+          "callee": "this.snap",
+          "lineNumber": 149
+        },
+        {
+          "caller": "resetToDefault",
+          "callee": "showSnackbar",
+          "lineNumber": 150
+        },
+        {
+          "caller": "resetToDefault",
+          "callee": "Math.abs",
+          "lineNumber": 151
+        },
+        {
+          "caller": "resetToDefault",
+          "callee": "this.snap",
+          "lineNumber": 151
+        },
+        {
+          "caller": "resetToDefault",
+          "callee": "this.commit",
+          "lineNumber": 152
+        },
+        {
+          "caller": "resetColor",
+          "callee": "normalizeHexColor",
+          "lineNumber": 155
+        },
+        {
+          "caller": "resetColor",
+          "callee": "this.commit",
+          "lineNumber": 156
+        },
+        {
+          "caller": "runAction",
+          "callee": "api.postAction(String(this.param.action_endpoint || \"\"))\r\n        .then((data) => {\r\n          if (!data?.error) {\r\n            showSnackbar(data?.message || `${this.param.label || this.param.key} completed.`)\r\n            if (data?.updated && typeof data.updated === \"object\") this.$emit(\"change\", data.updated)\r\n          } else {\r\n            showSnackbar(data.error, \"error\")\r\n          }\r\n        })\r\n        .catch(() => showSnackbar(`${this.param.label || this.param.key} failed.`, \"error\"))\r\n        .finally",
+          "lineNumber": 161
+        },
+        {
+          "caller": "runAction",
+          "callee": "api.postAction(String(this.param.action_endpoint || \"\"))\r\n        .then((data) => {\r\n          if (!data?.error) {\r\n            showSnackbar(data?.message || `${this.param.label || this.param.key} completed.`)\r\n            if (data?.updated && typeof data.updated === \"object\") this.$emit(\"change\", data.updated)\r\n          } else {\r\n            showSnackbar(data.error, \"error\")\r\n          }\r\n        })\r\n        .catch",
+          "lineNumber": 161
+        },
+        {
+          "caller": "runAction",
+          "callee": "api.postAction(String(this.param.action_endpoint || \"\"))\r\n        .then",
+          "lineNumber": 161
+        },
+        {
+          "caller": "runAction",
+          "callee": "api.postAction",
+          "lineNumber": 161
+        },
+        {
+          "caller": "runAction",
+          "callee": "String",
+          "lineNumber": 161
+        },
+        {
+          "caller": "runAction",
+          "callee": "showSnackbar",
+          "lineNumber": 164
+        },
+        {
+          "caller": "runAction",
+          "callee": "this.$emit",
+          "lineNumber": 165
+        },
+        {
+          "caller": "runAction",
+          "callee": "showSnackbar",
+          "lineNumber": 167
+        },
+        {
+          "caller": "runAction",
+          "callee": "showSnackbar",
+          "lineNumber": 170
+        },
+        {
+          "caller": "loadEndpointOptions",
+          "callee": "api.getOptions(this.param.options_endpoint)\r\n        .then((opts) => { this.endpointOptions = opts })\r\n        .catch(() => { this.endpointOptions = [] })\r\n        .finally",
+          "lineNumber": 177
+        },
+        {
+          "caller": "loadEndpointOptions",
+          "callee": "api.getOptions(this.param.options_endpoint)\r\n        .then((opts) => { this.endpointOptions = opts })\r\n        .catch",
+          "lineNumber": 177
+        },
+        {
+          "caller": "loadEndpointOptions",
+          "callee": "api.getOptions(this.param.options_endpoint)\r\n        .then",
+          "lineNumber": 177
+        },
+        {
+          "caller": "loadEndpointOptions",
+          "callee": "api.getOptions",
+          "lineNumber": 177
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.loadEndpointOptions",
+          "lineNumber": 184
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 85,
+      "nonEmptyLines": 84,
+      "exports": [
+        {
+          "name": "LongitudinalMode",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "label",
+          "callee": "this.modes.find",
+          "lineNumber": 13
+        },
+        {
+          "caller": "description",
+          "callee": "this.section.params.find",
+          "lineNumber": 17
+        },
+        {
+          "caller": "children",
+          "callee": "this.section.params.filter",
+          "lineNumber": 18
+        },
+        {
+          "caller": "children",
+          "callee": "isSettingVisible",
+          "lineNumber": 18
+        },
+        {
+          "caller": "request",
+          "callee": "fetch",
+          "lineNumber": 22
+        },
+        {
+          "caller": "request",
+          "callee": "response.json",
+          "lineNumber": 23
+        },
+        {
+          "caller": "request",
+          "callee": "validLongitudinalSnapshot",
+          "lineNumber": 24
+        },
+        {
+          "caller": "refresh",
+          "callee": "this.request",
+          "lineNumber": 32
+        },
+        {
+          "caller": "select",
+          "callee": "this.modes.some",
+          "lineNumber": 41
+        },
+        {
+          "caller": "select",
+          "callee": "this.request",
+          "lineNumber": 46
+        },
+        {
+          "caller": "select",
+          "callee": "JSON.stringify",
+          "lineNumber": 46
+        },
+        {
+          "caller": "select",
+          "callee": "this.request",
+          "lineNumber": 52
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.refresh",
+          "lineNumber": 58
+        },
+        {
+          "caller": "mounted",
+          "callee": "setInterval",
+          "lineNumber": 58
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.refresh",
+          "lineNumber": 58
+        },
+        {
+          "caller": "beforeUnmount",
+          "callee": "clearInterval",
+          "lineNumber": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 67,
+      "exports": [
+        {
+          "name": "ParamSections",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sections",
+          "callee": "this.layout\r\n        .filter((s) => this.sectionNames.includes(s.name))\r\n        .map((s) => ({\r\n          ...s,\r\n          params: (s.params || []).filter((p) => isSettingVisible(s, p, this.values) && this.matches(p)),\r\n          slug: slugifySectionName(s.name),\r\n        }))\r\n        .filter",
+          "lineNumber": 24
+        },
+        {
+          "caller": "sections",
+          "callee": "this.layout\r\n        .filter((s) => this.sectionNames.includes(s.name))\r\n        .map",
+          "lineNumber": 24
+        },
+        {
+          "caller": "sections",
+          "callee": "this.layout\r\n        .filter",
+          "lineNumber": 24
+        },
+        {
+          "caller": "sections",
+          "callee": "this.sectionNames.includes",
+          "lineNumber": 25
+        },
+        {
+          "caller": "sections",
+          "callee": "(s.params || []).filter",
+          "lineNumber": 28
+        },
+        {
+          "caller": "sections",
+          "callee": "isSettingVisible",
+          "lineNumber": 28
+        },
+        {
+          "caller": "sections",
+          "callee": "this.matches",
+          "lineNumber": 28
+        },
+        {
+          "caller": "sections",
+          "callee": "slugifySectionName",
+          "lineNumber": 29
+        },
+        {
+          "caller": "matches",
+          "callee": "this.search.toLowerCase",
+          "lineNumber": 37
+        },
+        {
+          "caller": "matches",
+          "callee": "resolveVehicleUnitParam",
+          "lineNumber": 38
+        },
+        {
+          "caller": "matches",
+          "callee": "[displayParam.label, displayParam.key, displayParam.description, displayParam.unit, displayParam.unit_search_terms]\r\n        .some",
+          "lineNumber": 39
+        },
+        {
+          "caller": "matches",
+          "callee": "String(v || \"\").toLowerCase().includes",
+          "lineNumber": 40
+        },
+        {
+          "caller": "matches",
+          "callee": "String(v || \"\").toLowerCase",
+          "lineNumber": 40
+        },
+        {
+          "caller": "matches",
+          "callee": "String",
+          "lineNumber": 40
+        },
+        {
+          "caller": "load",
+          "callee": "Promise.all",
+          "lineNumber": 44
+        },
+        {
+          "caller": "load",
+          "callee": "api.getLayout",
+          "lineNumber": 44
+        },
+        {
+          "caller": "load",
+          "callee": "api.getParams",
+          "lineNumber": 44
+        },
+        {
+          "caller": "onParamChange",
+          "callee": "applyParamChange",
+          "lineNumber": 53
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.load",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 399,
+      "nonEmptyLines": 395,
+      "functions": [
+        {
+          "name": "roadFlag",
+          "startLine": 8,
+          "endLine": 12,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PersonalityProfiles",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "set",
+          "callee": "this.$emit",
+          "lineNumber": 23
+        },
+        {
+          "caller": "isOnroad",
+          "callee": "roadFlag",
+          "lineNumber": 24
+        },
+        {
+          "caller": "roadStateKnown",
+          "callee": "roadFlag",
+          "lineNumber": 26
+        },
+        {
+          "caller": "roadStateKnown",
+          "callee": "roadFlag",
+          "lineNumber": 27
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.load",
+          "lineNumber": 34
+        },
+        {
+          "caller": "mounted",
+          "callee": "setInterval",
+          "lineNumber": 35
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.refreshContext",
+          "lineNumber": 35
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.load",
+          "lineNumber": 35
+        },
+        {
+          "caller": "beforeUnmount",
+          "callee": "clearInterval",
+          "lineNumber": 38
+        },
+        {
+          "caller": "enabled",
+          "callee": "[true, 1, \"1\", \"True\", \"true\"].includes",
+          "lineNumber": 42
+        },
+        {
+          "caller": "label",
+          "callee": "value.split(\"_\").map(s => s === \"plus\" ? \"+\" : s === \"legacy\" ? \"Previous\" : s[0].toUpperCase() + s.slice(1)).join(\" \").replace",
+          "lineNumber": 43
+        },
+        {
+          "caller": "label",
+          "callee": "value.split(\"_\").map(s => s === \"plus\" ? \"+\" : s === \"legacy\" ? \"Previous\" : s[0].toUpperCase() + s.slice(1)).join",
+          "lineNumber": 43
+        },
+        {
+          "caller": "label",
+          "callee": "value.split(\"_\").map",
+          "lineNumber": 43
+        },
+        {
+          "caller": "label",
+          "callee": "value.split",
+          "lineNumber": 43
+        },
+        {
+          "caller": "label",
+          "callee": "s[0].toUpperCase",
+          "lineNumber": 43
+        },
+        {
+          "caller": "label",
+          "callee": "s.slice",
+          "lineNumber": 43
+        },
+        {
+          "caller": "speed",
+          "callee": "formatProfileSpeed",
+          "lineNumber": 45
+        },
+        {
+          "caller": "speed",
+          "callee": "this.enabled",
+          "lineNumber": 45
+        },
+        {
+          "caller": "speedUnit",
+          "callee": "profileSpeedUnit",
+          "lineNumber": 46
+        },
+        {
+          "caller": "speedUnit",
+          "callee": "this.enabled",
+          "lineNumber": 46
+        },
+        {
+          "caller": "bounds",
+          "callee": "numericBounds",
+          "lineNumber": 47
+        },
+        {
+          "caller": "options",
+          "callee": "(category === \"following\" ? [\"close\", \"medium\", \"far\", \"traffic\", \"custom\"] : [\"eco\", \"standard\", \"sport\", \"sport_plus\", \"custom\"]).filter",
+          "lineNumber": 49
+        },
+        {
+          "caller": "options",
+          "callee": "this.data.options[category].includes",
+          "lineNumber": 49
+        },
+        {
+          "caller": "options",
+          "callee": "selected?.startsWith",
+          "lineNumber": 51
+        },
+        {
+          "caller": "options",
+          "callee": "this.data.options[category].includes",
+          "lineNumber": 51
+        },
+        {
+          "caller": "options",
+          "callee": "choices.unshift",
+          "lineNumber": 51
+        },
+        {
+          "caller": "advancedParams",
+          "callee": "Object.values(this.meta).filter",
+          "lineNumber": 55
+        },
+        {
+          "caller": "advancedParams",
+          "callee": "Object.values",
+          "lineNumber": 55
+        },
+        {
+          "caller": "advancedParams",
+          "callee": "this.key",
+          "lineNumber": 55
+        },
+        {
+          "caller": "advancedParams",
+          "callee": "p.key.includes",
+          "lineNumber": 55
+        },
+        {
+          "caller": "advancedMode",
+          "callee": "Number",
+          "lineNumber": 59
+        },
+        {
+          "caller": "advancedMode",
+          "callee": "key.endsWith",
+          "lineNumber": 61
+        },
+        {
+          "caller": "advancedPreset",
+          "callee": "this.paramLocked",
+          "lineNumber": 65
+        },
+        {
+          "caller": "advancedPreset",
+          "callee": "this.setAdvanced",
+          "lineNumber": 67
+        },
+        {
+          "caller": "validate",
+          "callee": "Object.keys",
+          "lineNumber": 78
+        },
+        {
+          "caller": "validate",
+          "callee": "Array.isArray",
+          "lineNumber": 83
+        },
+        {
+          "caller": "validate",
+          "callee": "Array.isArray",
+          "lineNumber": 83
+        },
+        {
+          "caller": "validate",
+          "callee": "speeds.every",
+          "lineNumber": 84
+        },
+        {
+          "caller": "validate",
+          "callee": "Number.isFinite",
+          "lineNumber": 84
+        },
+        {
+          "caller": "validate",
+          "callee": "speeds.at",
+          "lineNumber": 84
+        },
+        {
+          "caller": "validate",
+          "callee": "Array.isArray",
+          "lineNumber": 85
+        },
+        {
+          "caller": "validate",
+          "callee": "bounds.every",
+          "lineNumber": 85
+        },
+        {
+          "caller": "validate",
+          "callee": "Array.isArray",
+          "lineNumber": 86
+        },
+        {
+          "caller": "validate",
+          "callee": "reference.every",
+          "lineNumber": 86
+        },
+        {
+          "caller": "validate",
+          "callee": "Array.isArray",
+          "lineNumber": 87
+        },
+        {
+          "caller": "validate",
+          "callee": "data.options[category].includes",
+          "lineNumber": 87
+        },
+        {
+          "caller": "validate",
+          "callee": "config.curve.every",
+          "lineNumber": 88
+        },
+        {
+          "caller": "validate",
+          "callee": "Array.isArray",
+          "lineNumber": 89
+        },
+        {
+          "caller": "validate",
+          "callee": "Array.isArray",
+          "lineNumber": 89
+        },
+        {
+          "caller": "acceptData",
+          "callee": "this.validate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "acceptData",
+          "callee": "Object.keys",
+          "lineNumber": 97
+        },
+        {
+          "caller": "acceptData",
+          "callee": "JSON.stringify",
+          "lineNumber": 99
+        },
+        {
+          "caller": "acceptData",
+          "callee": "JSON.stringify",
+          "lineNumber": 99
+        },
+        {
+          "caller": "acceptData",
+          "callee": "this.discard",
+          "lineNumber": 100
+        },
+        {
+          "caller": "load",
+          "callee": "Promise.all",
+          "lineNumber": 111
+        },
+        {
+          "caller": "load",
+          "callee": "api.getPersonalityProfiles",
+          "lineNumber": 111
+        },
+        {
+          "caller": "load",
+          "callee": "api.getParams",
+          "lineNumber": 111
+        },
+        {
+          "caller": "load",
+          "callee": "api.getLayout",
+          "lineNumber": 111
+        },
+        {
+          "caller": "load",
+          "callee": "Array.isArray",
+          "lineNumber": 113
+        },
+        {
+          "caller": "load",
+          "callee": "Array.isArray",
+          "lineNumber": 113
+        },
+        {
+          "caller": "load",
+          "callee": "layout.every",
+          "lineNumber": 113
+        },
+        {
+          "caller": "load",
+          "callee": "Array.isArray",
+          "lineNumber": 113
+        },
+        {
+          "caller": "load",
+          "callee": "this.acceptData",
+          "lineNumber": 114
+        },
+        {
+          "caller": "load",
+          "callee": "Object.fromEntries",
+          "lineNumber": 116
+        },
+        {
+          "caller": "load",
+          "callee": "layout.flatMap(s => s.params).map",
+          "lineNumber": 116
+        },
+        {
+          "caller": "load",
+          "callee": "layout.flatMap",
+          "lineNumber": 116
+        },
+        {
+          "caller": "load",
+          "callee": "PROFILES.flatMap",
+          "lineNumber": 117
+        },
+        {
+          "caller": "load",
+          "callee": "this.key",
+          "lineNumber": 117
+        },
+        {
+          "caller": "load",
+          "callee": "[\"Acceleration\", \"Deceleration\", \"Danger\", \"SpeedDecrease\", \"Speed\"].map",
+          "lineNumber": 117
+        },
+        {
+          "caller": "load",
+          "callee": "this.label",
+          "lineNumber": 117
+        },
+        {
+          "caller": "load",
+          "callee": "required.some",
+          "lineNumber": 118
+        },
+        {
+          "caller": "refreshContext",
+          "callee": "api.getParams",
+          "lineNumber": 129
+        },
+        {
+          "caller": "refreshContext",
+          "callee": "roadFlag",
+          "lineNumber": 132
+        },
+        {
+          "caller": "refreshContext",
+          "callee": "roadFlag",
+          "lineNumber": 133
+        },
+        {
+          "caller": "write",
+          "callee": "check",
+          "lineNumber": 147
+        },
+        {
+          "caller": "write",
+          "callee": "action",
+          "lineNumber": 152
+        },
+        {
+          "caller": "write",
+          "callee": "Promise.all",
+          "lineNumber": 154
+        },
+        {
+          "caller": "write",
+          "callee": "api.getPersonalityProfiles",
+          "lineNumber": 154
+        },
+        {
+          "caller": "write",
+          "callee": "api.getParams",
+          "lineNumber": 154
+        },
+        {
+          "caller": "write",
+          "callee": "this.acceptData",
+          "lineNumber": 156
+        },
+        {
+          "caller": "write",
+          "callee": "this.$emit",
+          "lineNumber": 158
+        },
+        {
+          "caller": "write",
+          "callee": "showSnackbar",
+          "lineNumber": 159
+        },
+        {
+          "caller": "write",
+          "callee": "this.load",
+          "lineNumber": 168
+        },
+        {
+          "caller": "migrate",
+          "callee": "this.write",
+          "lineNumber": 170
+        },
+        {
+          "caller": "migrate",
+          "callee": "api.migratePersonalityProfiles",
+          "lineNumber": 170
+        },
+        {
+          "caller": "toggle",
+          "callee": "this.enabled",
+          "lineNumber": 173
+        },
+        {
+          "caller": "toggle",
+          "callee": "this.write",
+          "lineNumber": 174
+        },
+        {
+          "caller": "toggle",
+          "callee": "api.updateParam",
+          "lineNumber": 174
+        },
+        {
+          "caller": "toggle",
+          "callee": "this.paramLocked",
+          "lineNumber": 174
+        },
+        {
+          "caller": "preset",
+          "callee": "this.write",
+          "lineNumber": 178
+        },
+        {
+          "caller": "preset",
+          "callee": "api.savePersonalityProfile",
+          "lineNumber": 178
+        },
+        {
+          "caller": "preset",
+          "callee": "this.discard",
+          "lineNumber": 178
+        },
+        {
+          "caller": "point",
+          "callee": "Number",
+          "lineNumber": 185
+        },
+        {
+          "caller": "point",
+          "callee": "raw.trim",
+          "lineNumber": 187
+        },
+        {
+          "caller": "point",
+          "callee": "Number.isFinite",
+          "lineNumber": 187
+        },
+        {
+          "caller": "point",
+          "callee": "Math.abs",
+          "lineNumber": 187
+        },
+        {
+          "caller": "point",
+          "callee": "Math.round",
+          "lineNumber": 187
+        },
+        {
+          "caller": "point",
+          "callee": "this.draft",
+          "lineNumber": 188
+        },
+        {
+          "caller": "point",
+          "callee": "this.draft",
+          "lineNumber": 192
+        },
+        {
+          "caller": "point",
+          "callee": "this.saveCurve",
+          "lineNumber": 196
+        },
+        {
+          "caller": "saveCurve",
+          "callee": "this.draft",
+          "lineNumber": 202
+        },
+        {
+          "caller": "saveCurve",
+          "callee": "Array.isArray",
+          "lineNumber": 203
+        },
+        {
+          "caller": "saveCurve",
+          "callee": "this.write",
+          "lineNumber": 209
+        },
+        {
+          "caller": "saveCurve",
+          "callee": "api.savePersonalityProfile",
+          "lineNumber": 209
+        },
+        {
+          "caller": "saveCurve",
+          "callee": "this.discard",
+          "lineNumber": 211
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "Number",
+          "lineNumber": 220
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "this.bounds",
+          "lineNumber": 221
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "String(raw).trim",
+          "lineNumber": 222
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "String",
+          "lineNumber": 222
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "Number.isFinite",
+          "lineNumber": 222
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "Math.abs",
+          "lineNumber": 222
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "Math.round",
+          "lineNumber": 222
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "this.write",
+          "lineNumber": 226
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "api.updateParam",
+          "lineNumber": 226
+        },
+        {
+          "caller": "setAdvanced",
+          "callee": "this.paramLocked",
+          "lineNumber": 226
+        },
+        {
+          "caller": "graphMax",
+          "callee": "Math.max",
+          "lineNumber": 230
+        },
+        {
+          "caller": "graphMax",
+          "callee": "this.draft",
+          "lineNumber": 230
+        },
+        {
+          "caller": "graphMin",
+          "callee": "Math.min",
+          "lineNumber": 232
+        },
+        {
+          "caller": "graphMin",
+          "callee": "this.draft",
+          "lineNumber": 232
+        },
+        {
+          "caller": "graphPoints",
+          "callee": "this.draft",
+          "lineNumber": 234
+        },
+        {
+          "caller": "graphPoints",
+          "callee": "this.graphMax",
+          "lineNumber": 235
+        },
+        {
+          "caller": "graphPoints",
+          "callee": "this.graphMin",
+          "lineNumber": 236
+        },
+        {
+          "caller": "graphPoints",
+          "callee": "(curve || []).map",
+          "lineNumber": 238
+        },
+        {
+          "caller": "graph",
+          "callee": "this.graphPoints(profile, category, reference).map(p => `${p.x},${p.y}`).join",
+          "lineNumber": 241
+        },
+        {
+          "caller": "graph",
+          "callee": "this.graphPoints(profile, category, reference).map",
+          "lineNumber": 241
+        },
+        {
+          "caller": "graph",
+          "callee": "this.graphPoints",
+          "lineNumber": 241
+        },
+        {
+          "caller": "startDrag",
+          "callee": "svg.setPointerCapture",
+          "lineNumber": 246
+        },
+        {
+          "caller": "startDrag",
+          "callee": "this.graphMin",
+          "lineNumber": 247
+        },
+        {
+          "caller": "startDrag",
+          "callee": "this.graphMax",
+          "lineNumber": 247
+        },
+        {
+          "caller": "startDrag",
+          "callee": "event.preventDefault",
+          "lineNumber": 248
+        },
+        {
+          "caller": "startDrag",
+          "callee": "this.moveDrag",
+          "lineNumber": 249
+        },
+        {
+          "caller": "pickPoint",
+          "callee": "event.currentTarget.getScreenCTM",
+          "lineNumber": 252
+        },
+        {
+          "caller": "pickPoint",
+          "callee": "new DOMPoint(event.clientX, event.clientY).matrixTransform",
+          "lineNumber": 254
+        },
+        {
+          "caller": "pickPoint",
+          "callee": "matrix.inverse",
+          "lineNumber": 254
+        },
+        {
+          "caller": "pickPoint",
+          "callee": "this.graphPoints",
+          "lineNumber": 255
+        },
+        {
+          "caller": "pickPoint",
+          "callee": "points.reduce",
+          "lineNumber": 256
+        },
+        {
+          "caller": "pickPoint",
+          "callee": "Math.abs",
+          "lineNumber": 256
+        },
+        {
+          "caller": "pickPoint",
+          "callee": "Math.abs",
+          "lineNumber": 256
+        },
+        {
+          "caller": "pickPoint",
+          "callee": "this.startDrag",
+          "lineNumber": 257
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "this.endDrag",
+          "lineNumber": 262
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "event.currentTarget.getScreenCTM",
+          "lineNumber": 263
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "new DOMPoint(event.clientX, event.clientY).matrixTransform",
+          "lineNumber": 265
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "matrix.inverse",
+          "lineNumber": 265
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "Math.max",
+          "lineNumber": 267
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "Math.min",
+          "lineNumber": 267
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "Math.round",
+          "lineNumber": 267
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "this.point",
+          "lineNumber": 268
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "String",
+          "lineNumber": 268
+        },
+        {
+          "caller": "moveDrag",
+          "callee": "event.preventDefault",
+          "lineNumber": 269
+        },
+        {
+          "caller": "endDrag",
+          "callee": "event.currentTarget.hasPointerCapture",
+          "lineNumber": 281
+        },
+        {
+          "caller": "endDrag",
+          "callee": "event.currentTarget.releasePointerCapture",
+          "lineNumber": 281
+        },
+        {
+          "caller": "endDrag",
+          "callee": "this.saveCurve",
+          "lineNumber": 282
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 47,
+      "exports": [
+        {
+          "name": "SettingTree",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "children",
+          "callee": "this.params.filter",
+          "lineNumber": 19
+        },
+        {
+          "caller": "enabledForChildren",
+          "callee": "isParamEnabledForChildren",
+          "lineNumber": 23
+        },
+        {
+          "caller": "isParent",
+          "callee": "hasChildParams",
+          "lineNumber": 24
+        },
+        {
+          "caller": "isGroup",
+          "callee": "isGroupParam",
+          "lineNumber": 25
+        },
+        {
+          "caller": "showChildren",
+          "callee": "this.isParent",
+          "lineNumber": 27
+        },
+        {
+          "caller": "showChildren",
+          "callee": "this.enabledForChildren",
+          "lineNumber": 27
+        },
+        {
+          "caller": "showChildren",
+          "callee": "this.isExpanded",
+          "lineNumber": 27
+        },
+        {
+          "caller": "manageable",
+          "callee": "this.isParent",
+          "lineNumber": 28
+        },
+        {
+          "caller": "manageable",
+          "callee": "this.enabledForChildren",
+          "lineNumber": 28
+        },
+        {
+          "caller": "manageOpen",
+          "callee": "this.isParent",
+          "lineNumber": 29
+        },
+        {
+          "caller": "manageOpen",
+          "callee": "this.enabledForChildren",
+          "lineNumber": 29
+        },
+        {
+          "caller": "manageOpen",
+          "callee": "this.isExpanded",
+          "lineNumber": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 324,
+      "nonEmptyLines": 290,
+      "functions": [
+        {
+          "name": "usesMetricUnits",
+          "startLine": 9,
+          "endLine": 13,
+          "params": []
+        },
+        {
+          "name": "vehicleSpeedUnit",
+          "startLine": 15,
+          "endLine": 17,
+          "params": []
+        },
+        {
+          "name": "resolveVehicleUnitParam",
+          "startLine": 19,
+          "endLine": 42,
+          "params": [
+            "param"
+          ]
+        },
+        {
+          "name": "normalizeVehicleMake",
+          "startLine": 77,
+          "endLine": 79,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "isVehicleSettingVisible",
+          "startLine": 81,
+          "endLine": 86,
+          "params": [
+            "section",
+            "param",
+            "values"
+          ]
+        },
+        {
+          "name": "toSelectValue",
+          "startLine": 88,
+          "endLine": 90,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "matchesSettingValueCondition",
+          "startLine": 92,
+          "endLine": 97,
+          "params": [
+            "param",
+            "values"
+          ]
+        },
+        {
+          "name": "isHiddenByConditions",
+          "startLine": 100,
+          "endLine": 106,
+          "params": [
+            "section",
+            "param",
+            "values"
+          ]
+        },
+        {
+          "name": "isSettingVisible",
+          "startLine": 108,
+          "endLine": 112,
+          "params": [
+            "section",
+            "param",
+            "values"
+          ]
+        },
+        {
+          "name": "isAdvancedHiddenByDeveloperMode",
+          "startLine": 114,
+          "endLine": 117,
+          "params": [
+            "section",
+            "param",
+            "values"
+          ]
+        },
+        {
+          "name": "countAdvancedHiddenByDeveloperMode",
+          "startLine": 119,
+          "endLine": 129,
+          "params": [
+            "layout",
+            "values"
+          ]
+        },
+        {
+          "name": "numericBounds",
+          "startLine": 131,
+          "endLine": 167,
+          "params": [
+            "param"
+          ]
+        },
+        {
+          "name": "stepPrecision",
+          "startLine": 169,
+          "endLine": 177,
+          "params": [
+            "step",
+            "explicitPrecision"
+          ]
+        },
+        {
+          "name": "numericEpsilon",
+          "startLine": 179,
+          "endLine": 181,
+          "params": [
+            "precision"
+          ]
+        },
+        {
+          "name": "clampNumeric",
+          "startLine": 183,
+          "endLine": 185,
+          "params": [
+            "value",
+            "min",
+            "max"
+          ]
+        },
+        {
+          "name": "snapNumericToBoundsAndStep",
+          "startLine": 187,
+          "endLine": 199,
+          "params": [
+            "rawValue",
+            "bounds",
+            "precision"
+          ]
+        },
+        {
+          "name": "coerceValueByType",
+          "startLine": 201,
+          "endLine": 211,
+          "params": [
+            "rawValue",
+            "dataType"
+          ]
+        },
+        {
+          "name": "formatSliderValue",
+          "startLine": 213,
+          "endLine": 239,
+          "params": [
+            "val",
+            "stepStr",
+            "precisionInt",
+            "key"
+          ]
+        },
+        {
+          "name": "formatNumericParamValue",
+          "startLine": 241,
+          "endLine": 246,
+          "params": [
+            "param",
+            "value"
+          ]
+        },
+        {
+          "name": "formatReadoutValue",
+          "startLine": 248,
+          "endLine": 255,
+          "params": [
+            "p",
+            "value"
+          ]
+        },
+        {
+          "name": "normalizeHexColor",
+          "startLine": 257,
+          "endLine": 263,
+          "params": [
+            "rawValue"
+          ]
+        },
+        {
+          "name": "getColorDefault",
+          "startLine": 265,
+          "endLine": 269,
+          "params": [
+            "param"
+          ]
+        },
+        {
+          "name": "slugifySectionName",
+          "startLine": 271,
+          "endLine": 276,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "isGroupParam",
+          "startLine": 278,
+          "endLine": 280,
+          "params": [
+            "param"
+          ]
+        },
+        {
+          "name": "applyParamChange",
+          "startLine": 282,
+          "endLine": 294,
+          "params": [
+            "values",
+            "patch"
+          ]
+        },
+        {
+          "name": "isParamEnabledForChildren",
+          "startLine": 296,
+          "endLine": 300,
+          "params": [
+            "paramOrKey",
+            "values"
+          ]
+        },
+        {
+          "name": "hasChildParams",
+          "startLine": 302,
+          "endLine": 304,
+          "params": [
+            "paramsList",
+            "key"
+          ]
+        },
+        {
+          "name": "buildRenderTree",
+          "startLine": 306,
+          "endLine": 324,
+          "params": [
+            "paramsList",
+            "values",
+            "expanded",
+            "isVisible"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GALAXY_DEVELOPER_MODE_KEY",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "VEHICLE_SPEED_UNIT_TYPE",
+          "line": 2,
+          "isDefault": false
+        },
+        {
+          "name": "usesMetricUnits",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "vehicleSpeedUnit",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "resolveVehicleUnitParam",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "normalizeVehicleMake",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "isVehicleSettingVisible",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "matchesSettingValueCondition",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "isSettingVisible",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "isAdvancedHiddenByDeveloperMode",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "countAdvancedHiddenByDeveloperMode",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "numericBounds",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "stepPrecision",
+          "line": 169,
+          "isDefault": false
+        },
+        {
+          "name": "numericEpsilon",
+          "line": 179,
+          "isDefault": false
+        },
+        {
+          "name": "clampNumeric",
+          "line": 183,
+          "isDefault": false
+        },
+        {
+          "name": "snapNumericToBoundsAndStep",
+          "line": 187,
+          "isDefault": false
+        },
+        {
+          "name": "coerceValueByType",
+          "line": 201,
+          "isDefault": false
+        },
+        {
+          "name": "formatSliderValue",
+          "line": 213,
+          "isDefault": false
+        },
+        {
+          "name": "formatNumericParamValue",
+          "line": 241,
+          "isDefault": false
+        },
+        {
+          "name": "formatReadoutValue",
+          "line": 248,
+          "isDefault": false
+        },
+        {
+          "name": "normalizeHexColor",
+          "line": 257,
+          "isDefault": false
+        },
+        {
+          "name": "getColorDefault",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "slugifySectionName",
+          "line": 271,
+          "isDefault": false
+        },
+        {
+          "name": "isGroupParam",
+          "line": 278,
+          "isDefault": false
+        },
+        {
+          "name": "applyParamChange",
+          "line": 282,
+          "isDefault": false
+        },
+        {
+          "name": "isParamEnabledForChildren",
+          "line": 296,
+          "isDefault": false
+        },
+        {
+          "name": "hasChildParams",
+          "line": 302,
+          "isDefault": false
+        },
+        {
+          "name": "buildRenderTree",
+          "line": 306,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "usesMetricUnits",
+          "callee": "[\"1\", \"true\", \"yes\", \"on\"].includes",
+          "lineNumber": 12
+        },
+        {
+          "caller": "usesMetricUnits",
+          "callee": "String(value ?? \"\").trim().toLowerCase",
+          "lineNumber": 12
+        },
+        {
+          "caller": "usesMetricUnits",
+          "callee": "String(value ?? \"\").trim",
+          "lineNumber": 12
+        },
+        {
+          "caller": "usesMetricUnits",
+          "callee": "String",
+          "lineNumber": 12
+        },
+        {
+          "caller": "vehicleSpeedUnit",
+          "callee": "usesMetricUnits",
+          "lineNumber": 16
+        },
+        {
+          "caller": "resolveVehicleUnitParam",
+          "callee": "usesMetricUnits",
+          "lineNumber": 22
+        },
+        {
+          "caller": "resolveVehicleUnitParam",
+          "callee": "vehicleSpeedUnit",
+          "lineNumber": 26
+        },
+        {
+          "caller": "resolveVehicleUnitParam",
+          "callee": "Number.isInteger",
+          "lineNumber": 34
+        },
+        {
+          "caller": "resolveVehicleUnitParam",
+          "callee": "vehicleSpeedUnit",
+          "lineNumber": 37
+        },
+        {
+          "caller": "resolveVehicleUnitParam",
+          "callee": "vehicleSpeedUnit",
+          "lineNumber": 38
+        },
+        {
+          "caller": "normalizeVehicleMake",
+          "callee": "String(value ?? \"\").trim().toLowerCase",
+          "lineNumber": 78
+        },
+        {
+          "caller": "normalizeVehicleMake",
+          "callee": "String(value ?? \"\").trim",
+          "lineNumber": 78
+        },
+        {
+          "caller": "normalizeVehicleMake",
+          "callee": "String",
+          "lineNumber": 78
+        },
+        {
+          "caller": "isVehicleSettingVisible",
+          "callee": "normalizeVehicleMake",
+          "lineNumber": 84
+        },
+        {
+          "caller": "isVehicleSettingVisible",
+          "callee": "allowedMakes.some",
+          "lineNumber": 85
+        },
+        {
+          "caller": "isVehicleSettingVisible",
+          "callee": "normalizeVehicleMake",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toSelectValue",
+          "callee": "String",
+          "lineNumber": 89
+        },
+        {
+          "caller": "matchesSettingValueCondition",
+          "callee": "Array.isArray",
+          "lineNumber": 94
+        },
+        {
+          "caller": "matchesSettingValueCondition",
+          "callee": "toSelectValue",
+          "lineNumber": 95
+        },
+        {
+          "caller": "matchesSettingValueCondition",
+          "callee": "allowedValues.some",
+          "lineNumber": 96
+        },
+        {
+          "caller": "matchesSettingValueCondition",
+          "callee": "toSelectValue",
+          "lineNumber": 96
+        },
+        {
+          "caller": "isHiddenByConditions",
+          "callee": "HIDDEN_SETTING_KEYS.has",
+          "lineNumber": 101
+        },
+        {
+          "caller": "isHiddenByConditions",
+          "callee": "isVehicleSettingVisible",
+          "lineNumber": 101
+        },
+        {
+          "caller": "isHiddenByConditions",
+          "callee": "matchesSettingValueCondition",
+          "lineNumber": 101
+        },
+        {
+          "caller": "isHiddenByConditions",
+          "callee": "RADAR_REQUIRED_KEYS.has",
+          "lineNumber": 103
+        },
+        {
+          "caller": "isSettingVisible",
+          "callee": "isHiddenByConditions",
+          "lineNumber": 109
+        },
+        {
+          "caller": "isAdvancedHiddenByDeveloperMode",
+          "callee": "isHiddenByConditions",
+          "lineNumber": 116
+        },
+        {
+          "caller": "countAdvancedHiddenByDeveloperMode",
+          "callee": "isAdvancedHiddenByDeveloperMode",
+          "lineNumber": 125
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "resolveVehicleUnitParam",
+          "lineNumber": 132
+        },
+        {
+          "caller": "toFinite",
+          "callee": "Number",
+          "lineNumber": 139
+        },
+        {
+          "caller": "toFinite",
+          "callee": "Number.isFinite",
+          "lineNumber": 140
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "/^(Traffic|Aggressive|Standard|Relaxed)Jerk(Acceleration|Deceleration|Danger|SpeedDecrease|Speed)$/.test",
+          "lineNumber": 151
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "String",
+          "lineNumber": 151
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "toFinite",
+          "lineNumber": 155
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "toFinite",
+          "lineNumber": 155
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "(base * 0.5).toFixed",
+          "lineNumber": 156
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "(base * 1.5).toFixed",
+          "lineNumber": 156
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "toFinite",
+          "lineNumber": 159
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "toFinite",
+          "lineNumber": 159
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "(base * 0.5).toFixed",
+          "lineNumber": 160
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "(base * 1.25).toFixed",
+          "lineNumber": 160
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "toFinite",
+          "lineNumber": 163
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "toFinite",
+          "lineNumber": 163
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "(base * 0.25).toFixed",
+          "lineNumber": 164
+        },
+        {
+          "caller": "numericBounds",
+          "callee": "(base * 1.5).toFixed",
+          "lineNumber": 164
+        },
+        {
+          "caller": "stepPrecision",
+          "callee": "Number.parseInt",
+          "lineNumber": 171
+        },
+        {
+          "caller": "stepPrecision",
+          "callee": "Number.isFinite",
+          "lineNumber": 172
+        },
+        {
+          "caller": "stepPrecision",
+          "callee": "String",
+          "lineNumber": 174
+        },
+        {
+          "caller": "stepPrecision",
+          "callee": "stepStr.includes",
+          "lineNumber": 175
+        },
+        {
+          "caller": "stepPrecision",
+          "callee": "stepStr.split",
+          "lineNumber": 176
+        },
+        {
+          "caller": "numericEpsilon",
+          "callee": "Math.pow",
+          "lineNumber": 180
+        },
+        {
+          "caller": "clampNumeric",
+          "callee": "Math.min",
+          "lineNumber": 184
+        },
+        {
+          "caller": "clampNumeric",
+          "callee": "Math.max",
+          "lineNumber": 184
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number",
+          "lineNumber": 188
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number",
+          "lineNumber": 189
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number",
+          "lineNumber": 190
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number",
+          "lineNumber": 191
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number.isFinite",
+          "lineNumber": 192
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number.isFinite",
+          "lineNumber": 192
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number.isFinite",
+          "lineNumber": 192
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "clampNumeric",
+          "lineNumber": 193
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number.isFinite",
+          "lineNumber": 194
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "clampNumeric",
+          "lineNumber": 195
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number",
+          "lineNumber": 195
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "clamped.toFixed",
+          "lineNumber": 195
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Math.round",
+          "lineNumber": 197
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "clampNumeric",
+          "lineNumber": 198
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "Number",
+          "lineNumber": 198
+        },
+        {
+          "caller": "snapNumericToBoundsAndStep",
+          "callee": "snapped.toFixed",
+          "lineNumber": 198
+        },
+        {
+          "caller": "coerceValueByType",
+          "callee": "Number.parseInt",
+          "lineNumber": 203
+        },
+        {
+          "caller": "coerceValueByType",
+          "callee": "Number.isFinite",
+          "lineNumber": 204
+        },
+        {
+          "caller": "coerceValueByType",
+          "callee": "Number.parseFloat",
+          "lineNumber": 207
+        },
+        {
+          "caller": "coerceValueByType",
+          "callee": "Number.isFinite",
+          "lineNumber": 208
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "parseFloat",
+          "lineNumber": 215
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "Number.isNaN",
+          "lineNumber": 216
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "volumeKeys.includes",
+          "lineNumber": 228
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "Number(v.toFixed(precisionInt)).toString",
+          "lineNumber": 234
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "Number",
+          "lineNumber": 234
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "v.toFixed",
+          "lineNumber": 234
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "stepStr.includes",
+          "lineNumber": 236
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "Math.round(v).toString",
+          "lineNumber": 236
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "Math.round",
+          "lineNumber": 236
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "stepStr.split",
+          "lineNumber": 237
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "Number(v.toFixed(dec)).toString",
+          "lineNumber": 238
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "Number",
+          "lineNumber": 238
+        },
+        {
+          "caller": "formatSliderValue",
+          "callee": "v.toFixed",
+          "lineNumber": 238
+        },
+        {
+          "caller": "formatNumericParamValue",
+          "callee": "resolveVehicleUnitParam",
+          "lineNumber": 242
+        },
+        {
+          "caller": "formatNumericParamValue",
+          "callee": "numericBounds",
+          "lineNumber": 243
+        },
+        {
+          "caller": "formatNumericParamValue",
+          "callee": "formatSliderValue",
+          "lineNumber": 244
+        },
+        {
+          "caller": "formatNumericParamValue",
+          "callee": "String",
+          "lineNumber": 244
+        },
+        {
+          "caller": "formatReadoutValue",
+          "callee": "parseFloat",
+          "lineNumber": 250
+        },
+        {
+          "caller": "formatReadoutValue",
+          "callee": "Number.isNaN",
+          "lineNumber": 251
+        },
+        {
+          "caller": "formatReadoutValue",
+          "callee": "Number",
+          "lineNumber": 252
+        },
+        {
+          "caller": "formatReadoutValue",
+          "callee": "Number(parsed.toFixed(Math.max(0, precision))).toString",
+          "lineNumber": 253
+        },
+        {
+          "caller": "formatReadoutValue",
+          "callee": "Number",
+          "lineNumber": 253
+        },
+        {
+          "caller": "formatReadoutValue",
+          "callee": "parsed.toFixed",
+          "lineNumber": 253
+        },
+        {
+          "caller": "formatReadoutValue",
+          "callee": "Math.max",
+          "lineNumber": 253
+        },
+        {
+          "caller": "normalizeHexColor",
+          "callee": "String(rawValue ?? \"\").trim",
+          "lineNumber": 258
+        },
+        {
+          "caller": "normalizeHexColor",
+          "callee": "String",
+          "lineNumber": 258
+        },
+        {
+          "caller": "normalizeHexColor",
+          "callee": "value.toLowerCase",
+          "lineNumber": 259
+        },
+        {
+          "caller": "normalizeHexColor",
+          "callee": "value.startsWith",
+          "lineNumber": 260
+        },
+        {
+          "caller": "normalizeHexColor",
+          "callee": "value.slice",
+          "lineNumber": 260
+        },
+        {
+          "caller": "normalizeHexColor",
+          "callee": "/^[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$/.test",
+          "lineNumber": 261
+        },
+        {
+          "caller": "normalizeHexColor",
+          "callee": "stripped.slice(0, 6).toLowerCase",
+          "lineNumber": 262
+        },
+        {
+          "caller": "normalizeHexColor",
+          "callee": "stripped.slice",
+          "lineNumber": 262
+        },
+        {
+          "caller": "getColorDefault",
+          "callee": "normalizeHexColor",
+          "lineNumber": 266
+        },
+        {
+          "caller": "slugifySectionName",
+          "callee": "String(name || \"\")\r\n    .toLowerCase()\r\n    .replace(/[^a-z0-9]+/g, \"-\")\r\n    .replace",
+          "lineNumber": 272
+        },
+        {
+          "caller": "slugifySectionName",
+          "callee": "String(name || \"\")\r\n    .toLowerCase()\r\n    .replace",
+          "lineNumber": 272
+        },
+        {
+          "caller": "slugifySectionName",
+          "callee": "String(name || \"\")\r\n    .toLowerCase",
+          "lineNumber": 272
+        },
+        {
+          "caller": "slugifySectionName",
+          "callee": "String",
+          "lineNumber": 272
+        },
+        {
+          "caller": "applyParamChange",
+          "callee": "Object.entries",
+          "lineNumber": 287
+        },
+        {
+          "caller": "applyParamChange",
+          "callee": "Object.assign",
+          "lineNumber": 291
+        },
+        {
+          "caller": "isParamEnabledForChildren",
+          "callee": "isGroupParam",
+          "lineNumber": 298
+        },
+        {
+          "caller": "hasChildParams",
+          "callee": "(paramsList || []).some",
+          "lineNumber": 303
+        },
+        {
+          "caller": "walk",
+          "callee": "visible",
+          "lineNumber": 314
+        },
+        {
+          "caller": "walk",
+          "callee": "out.push",
+          "lineNumber": 315
+        },
+        {
+          "caller": "walk",
+          "callee": "hasChildParams",
+          "lineNumber": 316
+        },
+        {
+          "caller": "walk",
+          "callee": "isParamEnabledForChildren",
+          "lineNumber": 316
+        },
+        {
+          "caller": "walk",
+          "callee": "walk",
+          "lineNumber": 317
+        },
+        {
+          "caller": "buildRenderTree",
+          "callee": "walk",
+          "lineNumber": 322
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 28,
+        "functionCount": 28,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 211,
+      "nonEmptyLines": 201,
+      "exports": [
+        {
+          "name": "Settings",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sections",
+          "callee": "this.layout\r\n        .filter((s) => s.name !== \"Model & Customization\")\r\n        .map((s) => ({\r\n          ...s,\r\n          params: (s.params || []).filter((p) => !LEGACY_PERSONALITY_KEYS.has(p.key) && isSettingVisible(s, p, this.values)),\r\n          slug: slugifySectionName(s.name),\r\n        }))\r\n        .filter",
+          "lineNumber": 44
+        },
+        {
+          "caller": "sections",
+          "callee": "this.layout\r\n        .filter((s) => s.name !== \"Model & Customization\")\r\n        .map",
+          "lineNumber": 44
+        },
+        {
+          "caller": "sections",
+          "callee": "this.layout\r\n        .filter",
+          "lineNumber": 44
+        },
+        {
+          "caller": "sections",
+          "callee": "(s.params || []).filter",
+          "lineNumber": 48
+        },
+        {
+          "caller": "sections",
+          "callee": "LEGACY_PERSONALITY_KEYS.has",
+          "lineNumber": 48
+        },
+        {
+          "caller": "sections",
+          "callee": "isSettingVisible",
+          "lineNumber": 48
+        },
+        {
+          "caller": "sections",
+          "callee": "slugifySectionName",
+          "lineNumber": 49
+        },
+        {
+          "caller": "activeSection",
+          "callee": "this.sections.find",
+          "lineNumber": 54
+        },
+        {
+          "caller": "hiddenAdvancedCount",
+          "callee": "countAdvancedHiddenByDeveloperMode",
+          "lineNumber": 56
+        },
+        {
+          "caller": "searchResults",
+          "callee": "this.sections\r\n        .map((s) => {\r\n          const descendants = new Set([\"CustomPersonalities\"])\r\n          let size\r\n          do { size = descendants.size; s.params.forEach(p => { if (descendants.has(p.parent_key)) descendants.add(p.key) }) } while (size !== descendants.size)\r\n          return { ...s, matches: s.params.filter(p => p.key === \"CustomPersonalities\" ? s.params.some(child => descendants.has(child.key) && this.matchesFilter(child)) : !descendants.has(p.key) && this.matchesFilter(p)) }\r\n        })\r\n        .filter",
+          "lineNumber": 65
+        },
+        {
+          "caller": "searchResults",
+          "callee": "this.sections\r\n        .map",
+          "lineNumber": 65
+        },
+        {
+          "caller": "searchResults",
+          "callee": "s.params.forEach",
+          "lineNumber": 69
+        },
+        {
+          "caller": "searchResults",
+          "callee": "descendants.has",
+          "lineNumber": 69
+        },
+        {
+          "caller": "searchResults",
+          "callee": "descendants.add",
+          "lineNumber": 69
+        },
+        {
+          "caller": "searchResults",
+          "callee": "s.params.filter",
+          "lineNumber": 70
+        },
+        {
+          "caller": "searchResults",
+          "callee": "s.params.some",
+          "lineNumber": 70
+        },
+        {
+          "caller": "searchResults",
+          "callee": "descendants.has",
+          "lineNumber": 70
+        },
+        {
+          "caller": "searchResults",
+          "callee": "this.matchesFilter",
+          "lineNumber": 70
+        },
+        {
+          "caller": "searchResults",
+          "callee": "descendants.has",
+          "lineNumber": 70
+        },
+        {
+          "caller": "searchResults",
+          "callee": "this.matchesFilter",
+          "lineNumber": 70
+        },
+        {
+          "caller": "tr",
+          "callee": "t",
+          "lineNumber": 76
+        },
+        {
+          "caller": "modeSection",
+          "callee": "this.layout.find",
+          "lineNumber": 78
+        },
+        {
+          "caller": "modeSection",
+          "callee": "section.params.some",
+          "lineNumber": 78
+        },
+        {
+          "caller": "ordinaryParams",
+          "callee": "s.params.filter",
+          "lineNumber": 79
+        },
+        {
+          "caller": "ordinaryParams",
+          "callee": "this.isModeParam",
+          "lineNumber": 79
+        },
+        {
+          "caller": "load",
+          "callee": "Promise.all",
+          "lineNumber": 82
+        },
+        {
+          "caller": "load",
+          "callee": "api.getLayout",
+          "lineNumber": 83
+        },
+        {
+          "caller": "load",
+          "callee": "api.getParams",
+          "lineNumber": 83
+        },
+        {
+          "caller": "load",
+          "callee": "api.getDefaults",
+          "lineNumber": 83
+        },
+        {
+          "caller": "load",
+          "callee": "longitudinalModeLayout",
+          "lineNumber": 85
+        },
+        {
+          "caller": "load",
+          "callee": "setLanguage",
+          "lineNumber": 87
+        },
+        {
+          "caller": "load",
+          "callee": "this.sections.find",
+          "lineNumber": 90
+        },
+        {
+          "caller": "load",
+          "callee": "showSnackbar",
+          "lineNumber": 94
+        },
+        {
+          "caller": "onParamChange",
+          "callee": "applyParamChange",
+          "lineNumber": 100
+        },
+        {
+          "caller": "toggleManage",
+          "callee": "encodeURIComponent",
+          "lineNumber": 106
+        },
+        {
+          "caller": "matchesFilter",
+          "callee": "this.searchTerm.toLowerCase",
+          "lineNumber": 110
+        },
+        {
+          "caller": "matchesFilter",
+          "callee": "resolveVehicleUnitParam",
+          "lineNumber": 111
+        },
+        {
+          "caller": "matchesFilter",
+          "callee": "[displayParam.label, displayParam.key, displayParam.description, displayParam.unit, displayParam.unit_search_terms]\r\n        .some",
+          "lineNumber": 112
+        },
+        {
+          "caller": "matchesFilter",
+          "callee": "String(v || \"\").toLowerCase().includes",
+          "lineNumber": 113
+        },
+        {
+          "caller": "matchesFilter",
+          "callee": "String(v || \"\").toLowerCase",
+          "lineNumber": 113
+        },
+        {
+          "caller": "matchesFilter",
+          "callee": "String",
+          "lineNumber": 113
+        },
+        {
+          "caller": "selectSection",
+          "callee": "navigate",
+          "lineNumber": 116
+        },
+        {
+          "caller": "applyRouteSection",
+          "callee": "this.sections.find",
+          "lineNumber": 122
+        },
+        {
+          "caller": "applyRouteSection",
+          "callee": "route.startsWith",
+          "lineNumber": 127
+        },
+        {
+          "caller": "applyRouteSection",
+          "callee": "route.replace(/^\\/settings\\/?/, \"\").split(\"?\")[0].split",
+          "lineNumber": 128
+        },
+        {
+          "caller": "applyRouteSection",
+          "callee": "route.replace(/^\\/settings\\/?/, \"\").split",
+          "lineNumber": 128
+        },
+        {
+          "caller": "applyRouteSection",
+          "callee": "route.replace",
+          "lineNumber": 128
+        },
+        {
+          "caller": "applyRouteSection",
+          "callee": "this.sections.some",
+          "lineNumber": 129
+        },
+        {
+          "caller": "route",
+          "callee": "this.applyRouteSection",
+          "lineNumber": 144
+        },
+        {
+          "caller": "devModeOn",
+          "callee": "this.load",
+          "lineNumber": 145
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.load",
+          "lineNumber": 148
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.applyRouteSection",
+          "lineNumber": 149
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1099 @@
+{
+  "nodes": [
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/base.py",
+      "type": "file",
+      "name": "base.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/base.py",
+      "summary": "Définit l’interface abstraite commune des widgets routiers, avec visibilité, taille, priorité et gestion du pointeur.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "abstraction",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/base.py:LayoutWidget",
+      "type": "class",
+      "name": "LayoutWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/base.py",
+      "lineRange": [
+        5,
+        28
+      ],
+      "summary": "Fournit le widget `LayoutWidget`, avec visibilité, dimensions et rendu adaptés à le contrat de base des widgets routiers.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "abstraction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+      "type": "file",
+      "name": "driver_monitor.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+      "summary": "Adapte l’indicateur de surveillance du conducteur au système de widgets routiers.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "surveillance-conducteur",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py:DriverMonitorWidget",
+      "type": "class",
+      "name": "DriverMonitorWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+      "lineRange": [
+        10,
+        35
+      ],
+      "summary": "Fournit le widget `DriverMonitorWidget`, avec visibilité, dimensions et rendu adaptés à le widget de surveillance du conducteur.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "surveillance-conducteur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "type": "file",
+      "name": "model_source.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "summary": "Affiche l’état de la source du modèle de conduite et signale les échecs du grand modèle dans un widget interactif.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "modèle",
+        "état"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/model_source.py:ModelSourceStatus",
+      "type": "class",
+      "name": "ModelSourceStatus",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "lineRange": [
+        12,
+        16
+      ],
+      "summary": "Regroupe l’état et les opérations de `ModelSourceStatus` pour le widget d’état de la source modèle.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "widget",
+        "modèle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/model_source.py:ModelSourceWidget",
+      "type": "class",
+      "name": "ModelSourceWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "lineRange": [
+        19,
+        125
+      ],
+      "summary": "Fournit le widget `ModelSourceWidget`, avec visibilité, dimensions et rendu adaptés à le widget d’état de la source modèle.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "modèle"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+      "type": "file",
+      "name": "pedal_icons.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+      "summary": "Adapte les icônes de pédales au système de widgets et contrôle leur visibilité et leur taille.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "pédales",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py:PedalIconsWidget",
+      "type": "class",
+      "name": "PedalIconsWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+      "lineRange": [
+        8,
+        27
+      ],
+      "summary": "Fournit le widget `PedalIconsWidget`, avec visibilité, dimensions et rendu adaptés à le widget des icônes de pédales.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "pédales"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+      "type": "file",
+      "name": "personality_button.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+      "summary": "Adapte le bouton de personnalité de conduite au système de widgets routiers.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "personnalité",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/personality_button.py:PersonalityButtonWidget",
+      "type": "class",
+      "name": "PersonalityButtonWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+      "lineRange": [
+        6,
+        24
+      ],
+      "summary": "Fournit le widget `PersonalityButtonWidget`, avec visibilité, dimensions et rendu adaptés à le widget de personnalité de conduite.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "personnalité"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+      "type": "file",
+      "name": "set_speed.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+      "summary": "Affiche la vitesse de consigne comme widget routier, avec visibilité et dimensions adaptées au layout.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "vitesse-consigne",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/set_speed.py:SetSpeedWidget",
+      "type": "class",
+      "name": "SetSpeedWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+      "lineRange": [
+        12,
+        72
+      ],
+      "summary": "Fournit le widget `SetSpeedWidget`, avec visibilité, dimensions et rendu adaptés à le widget de vitesse de consigne.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "vitesse-consigne"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+      "type": "file",
+      "name": "speed_limit.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+      "summary": "Affiche la limite de vitesse comme widget routier et gère l’interaction ouvrant les détails de ses sources.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "limite-vitesse",
+        "interaction"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/speed_limit.py:SpeedLimitWidget",
+      "type": "class",
+      "name": "SpeedLimitWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+      "lineRange": [
+        12,
+        67
+      ],
+      "summary": "Fournit le widget `SpeedLimitWidget`, avec visibilité, dimensions et rendu adaptés à le widget de limite de vitesse.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "limite-vitesse"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+      "type": "file",
+      "name": "steering_wheel.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+      "summary": "Adapte l’icône de volant au système de widgets routiers.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "volant",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py:SteeringWheelWidget",
+      "type": "class",
+      "name": "SteeringWheelWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+      "lineRange": [
+        5,
+        19
+      ],
+      "summary": "Fournit le widget `SteeringWheelWidget`, avec visibilité, dimensions et rendu adaptés à le widget d’état du volant.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "volant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+      "type": "file",
+      "name": "stopped_timer.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+      "summary": "Chronomètre les arrêts, formate leur durée et remplace au besoin la vitesse courante par un widget dédié.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "chronomètre",
+        "arrêt"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py:StoppedTimerWidget",
+      "type": "class",
+      "name": "StoppedTimerWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+      "lineRange": [
+        15,
+        131
+      ],
+      "summary": "Fournit le widget `StoppedTimerWidget`, avec visibilité, dimensions et rendu adaptés à le widget de durée d’arrêt.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "chronomètre"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/ui_state.py",
+      "type": "file",
+      "name": "ui_state.py",
+      "filePath": "selfdrive/ui/ui_state.py",
+      "summary": "Maintient l’état global de l’interface et du dispositif, dont les transitions onroad/offroad, l’engagement, la luminosité, la veille et les callbacks UI.",
+      "tags": [
+        "state-management",
+        "interface-utilisateur",
+        "dispositif",
+        "cycle-de-vie"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/ui_state.py:_noop_progress",
+      "type": "function",
+      "name": "_noop_progress",
+      "filePath": "selfdrive/ui/ui_state.py",
+      "lineRange": [
+        21,
+        22
+      ],
+      "summary": "Implémente l’opération `_noop_progress` nécessaire à l’état global de l’interface et du dispositif.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "state-management",
+        "interface-utilisateur",
+        "dispositif"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/ui_state.py:UIStatus",
+      "type": "class",
+      "name": "UIStatus",
+      "filePath": "selfdrive/ui/ui_state.py",
+      "lineRange": [
+        25,
+        28
+      ],
+      "summary": "Regroupe l’état et les opérations de `UIStatus` pour l’état global de l’interface et du dispositif.",
+      "tags": [
+        "classe",
+        "composant",
+        "state-management",
+        "interface-utilisateur",
+        "dispositif"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/ui_state.py:UIState",
+      "type": "class",
+      "name": "UIState",
+      "filePath": "selfdrive/ui/ui_state.py",
+      "lineRange": [
+        31,
+        296
+      ],
+      "summary": "Fournit le singleton d’état UI et diffuse les transitions de conduite, d’engagement et de périphériques.",
+      "tags": [
+        "classe",
+        "composant",
+        "state-management",
+        "interface-utilisateur",
+        "dispositif"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/ui_state.py:Device",
+      "type": "class",
+      "name": "Device",
+      "filePath": "selfdrive/ui/ui_state.py",
+      "lineRange": [
+        299,
+        499
+      ],
+      "summary": "Contrôle la veille, la luminosité et l’interactivité de l’écran selon l’état routier et les alertes.",
+      "tags": [
+        "classe",
+        "composant",
+        "state-management",
+        "interface-utilisateur",
+        "dispositif"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/accel_profile.py",
+      "type": "file",
+      "name": "accel_profile.py",
+      "filePath": "starpilot/common/accel_profile.py",
+      "summary": "Définit, normalise, interpole et sérialise les profils personnalisés d’accélération et de décélération utilisés par le contrôle longitudinal.",
+      "tags": [
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:akima_interp",
+      "type": "function",
+      "name": "akima_interp",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        84,
+        96
+      ],
+      "summary": "Implémente l’opération `akima_interp` nécessaire à les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:normalize_acceleration_profile",
+      "type": "function",
+      "name": "normalize_acceleration_profile",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        99,
+        100
+      ],
+      "summary": "Transforme et normalise les données via `normalize_acceleration_profile` pour les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:normalize_deceleration_profile",
+      "type": "function",
+      "name": "normalize_deceleration_profile",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        103,
+        104
+      ],
+      "summary": "Transforme et normalise les données via `normalize_deceleration_profile` pour les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:get_accel_profile_curve_values",
+      "type": "function",
+      "name": "get_accel_profile_curve_values",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        107,
+        137
+      ],
+      "summary": "Calcule ou récupère la valeur `get_accel_profile_curve_values` utilisée par les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:interpolate_accel_profile",
+      "type": "function",
+      "name": "interpolate_accel_profile",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        140,
+        144
+      ],
+      "summary": "Implémente l’opération `interpolate_accel_profile` nécessaire à les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:get_max_allowed_accel",
+      "type": "function",
+      "name": "get_max_allowed_accel",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        147,
+        148
+      ],
+      "summary": "Calcule ou récupère la valeur `get_max_allowed_accel` utilisée par les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:build_custom_accel_profile_defaults",
+      "type": "function",
+      "name": "build_custom_accel_profile_defaults",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        151,
+        156
+      ],
+      "summary": "Construit l’élément produit par `build_custom_accel_profile_defaults` pour les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "construction",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:custom_accel_profile_is_initialized",
+      "type": "function",
+      "name": "custom_accel_profile_is_initialized",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        165,
+        185
+      ],
+      "summary": "Implémente l’opération `custom_accel_profile_is_initialized` nécessaire à les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "validation",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:coerce_custom_accel_profile_values",
+      "type": "function",
+      "name": "coerce_custom_accel_profile_values",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        188,
+        199
+      ],
+      "summary": "Transforme et normalise les données via `coerce_custom_accel_profile_values` pour les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:parse_custom_accel_profile_curve",
+      "type": "function",
+      "name": "parse_custom_accel_profile_curve",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        202,
+        241
+      ],
+      "summary": "Transforme et normalise les données via `parse_custom_accel_profile_curve` pour les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:get_custom_accel_profile_curve_defaults",
+      "type": "function",
+      "name": "get_custom_accel_profile_curve_defaults",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        244,
+        256
+      ],
+      "summary": "Calcule ou récupère la valeur `get_custom_accel_profile_curve_defaults` utilisée par les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:_normalize_profile",
+      "type": "function",
+      "name": "_normalize_profile",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        259,
+        271
+      ],
+      "summary": "Transforme et normalise les données via `_normalize_profile` pour les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:_decode_param_value",
+      "type": "function",
+      "name": "_decode_param_value",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        274,
+        277
+      ],
+      "summary": "Transforme et normalise les données via `_decode_param_value` pour les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/accel_profile.py:_coerce_bool",
+      "type": "function",
+      "name": "_coerce_bool",
+      "filePath": "starpilot/common/accel_profile.py",
+      "lineRange": [
+        280,
+        287
+      ],
+      "summary": "Transforme et normalise les données via `_coerce_bool` pour les profils d’accélération personnalisés.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:starpilot/common/assets/device_settings_layout.json",
+      "type": "config",
+      "name": "device_settings_layout.json",
+      "filePath": "starpilot/common/assets/device_settings_layout.json",
+      "summary": "Décrit le catalogue des réglages Galaxy par catégories, avec clés Params, libellés, types UI, dépendances, bornes et niveaux simple ou avancé.",
+      "tags": [
+        "configuration",
+        "galaxy",
+        "réglages",
+        "schema-definition"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Grand tableau JSON déclaratif servant de source de vérité à l’interface de réglages du dispositif."
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/base.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/base.py:LayoutWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/base.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/base.py:LayoutWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py:DriverMonitorWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py:DriverMonitorWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/model_source.py:ModelSourceStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/model_source.py:ModelSourceStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/model_source.py:ModelSourceWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/model_source.py:ModelSourceWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py:PedalIconsWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py:PedalIconsWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/personality_button.py:PersonalityButtonWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/personality_button.py:PersonalityButtonWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/set_speed.py:SetSpeedWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/set_speed.py:SetSpeedWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/speed_limit.py:SpeedLimitWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/speed_limit.py:SpeedLimitWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py:SteeringWheelWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py:SteeringWheelWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py:StoppedTimerWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py:StoppedTimerWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/ui_state.py",
+      "target": "function:selfdrive/ui/ui_state.py:_noop_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/ui_state.py",
+      "target": "function:selfdrive/ui/ui_state.py:_noop_progress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/ui_state.py",
+      "target": "class:selfdrive/ui/ui_state.py:UIStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/ui_state.py",
+      "target": "class:selfdrive/ui/ui_state.py:UIStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/ui_state.py",
+      "target": "class:selfdrive/ui/ui_state.py:UIState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/ui_state.py",
+      "target": "class:selfdrive/ui/ui_state.py:UIState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/ui_state.py",
+      "target": "class:selfdrive/ui/ui_state.py:Device",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/ui_state.py",
+      "target": "class:selfdrive/ui/ui_state.py:Device",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:akima_interp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:akima_interp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:normalize_acceleration_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:normalize_acceleration_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:normalize_deceleration_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:normalize_deceleration_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:get_accel_profile_curve_values",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:get_accel_profile_curve_values",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:interpolate_accel_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:interpolate_accel_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:get_max_allowed_accel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:get_max_allowed_accel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:build_custom_accel_profile_defaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:build_custom_accel_profile_defaults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:custom_accel_profile_is_initialized",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:custom_accel_profile_is_initialized",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:coerce_custom_accel_profile_values",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:coerce_custom_accel_profile_values",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:parse_custom_accel_profile_curve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:parse_custom_accel_profile_curve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:get_custom_accel_profile_curve_defaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:get_custom_accel_profile_curve_defaults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:_normalize_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:_normalize_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:_decode_param_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:_decode_param_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:_coerce_bool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/accel_profile.py",
+      "target": "function:starpilot/common/accel_profile.py:_coerce_bool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

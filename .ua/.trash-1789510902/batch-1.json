@@ -1,0 +1,1525 @@
+{
+  "nodes": [
+    {
+      "id": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "file",
+      "name": "interfaces.py",
+      "filePath": "opendbc_repo/opendbc/car/interfaces.py",
+      "summary": "Définit les interfaces de base qui normalisent les paramètres, l’état, le radar et les commandes des véhicules, puis y applique les extensions StarPilot communes aux marques prises en charge.",
+      "tags": [
+        "interface-vehicule",
+        "abstraction",
+        "parametres-vehicule",
+        "starpilot"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Le module combine des ABC Python, des méthodes de classe et un cache de paramètres de couple chargés depuis TOML."
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/interfaces.py:get_torque_params",
+      "type": "function",
+      "name": "get_torque_params",
+      "filePath": "opendbc_repo/opendbc/car/interfaces.py",
+      "lineRange": [
+        64,
+        102
+      ],
+      "summary": "Charge les paramètres de couple, leurs substitutions et overrides TOML, puis détecte les doublons et cycles avant de produire la table normalisée.",
+      "tags": [
+        "interface-vehicule",
+        "abstraction",
+        "parametres-vehicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/interfaces.py:get_interface_attr",
+      "type": "function",
+      "name": "get_interface_attr",
+      "filePath": "opendbc_repo/opendbc/car/interfaces.py",
+      "lineRange": [
+        563,
+        586
+      ],
+      "summary": "Découvre dynamiquement les intégrations de marques et agrège l’attribut demandé, avec regroupement optionnel par marque.",
+      "tags": [
+        "interface-vehicule",
+        "abstraction",
+        "parametres-vehicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/interfaces.py:RadarInterfaceBase",
+      "type": "class",
+      "name": "RadarInterfaceBase",
+      "filePath": "opendbc_repo/opendbc/car/interfaces.py",
+      "lineRange": [
+        107,
+        119
+      ],
+      "summary": "Fournit l’implémentation radar de base et émet un résultat vide à la cadence standard de 20 Hz.",
+      "tags": [
+        "interface-vehicule",
+        "abstraction",
+        "parametres-vehicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/interfaces.py:CarInterfaceBase",
+      "type": "class",
+      "name": "CarInterfaceBase",
+      "filePath": "opendbc_repo/opendbc/car/interfaces.py",
+      "lineRange": [
+        122,
+        438
+      ],
+      "summary": "Orchestre l’initialisation des parsers et contrôleurs, la construction des paramètres véhicule et StarPilot, puis la mise à jour normalisée de l’état CAN.",
+      "tags": [
+        "interface-vehicule",
+        "abstraction",
+        "parametres-vehicule"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/interfaces.py:CarStateBase",
+      "type": "class",
+      "name": "CarStateBase",
+      "filePath": "opendbc_repo/opendbc/car/interfaces.py",
+      "lineRange": [
+        441,
+        540
+      ],
+      "summary": "Fournit les filtres et parseurs communs pour vitesses de roues, clignotants, direction, boutons et rapports de boîte.",
+      "tags": [
+        "interface-vehicule",
+        "abstraction",
+        "parametres-vehicule"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/interfaces.py:CarControllerBase",
+      "type": "class",
+      "name": "CarControllerBase",
+      "filePath": "opendbc_repo/opendbc/car/interfaces.py",
+      "lineRange": [
+        543,
+        552
+      ],
+      "summary": "Définit le contrat minimal des contrôleurs véhicule qui transforment CarControl en actionneurs et messages CAN.",
+      "tags": [
+        "interface-vehicule",
+        "abstraction",
+        "parametres-vehicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/__init__.py",
+      "summary": "Marque l’intégration Subaru comme package Python sans exposer de logique propre.",
+      "tags": [
+        "subaru",
+        "package-python",
+        "integration-vehicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "type": "file",
+      "name": "carcontroller.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "summary": "Convertit les commandes latérales et longitudinales en trames CAN Subaru, avec gestion du contrôle par angle ou couple, du stop-and-go et de la désactivation stop-start.",
+      "tags": [
+        "controle-vehicule",
+        "commande-can",
+        "subaru",
+        "starpilot"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Le contrôleur sélectionne dynamiquement les stratégies angle et torque selon les flags de plateforme."
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/carcontroller.py:get_safety_CP",
+      "type": "function",
+      "name": "get_safety_CP",
+      "filePath": "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Construit à la demande les paramètres Subaru minimaux utilisés par le modèle de sécurité du contrôleur.",
+      "tags": [
+        "controle-vehicule",
+        "commande-can",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/carcontroller.py:CarController",
+      "type": "class",
+      "name": "CarController",
+      "filePath": "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "lineRange": [
+        39,
+        486
+      ],
+      "summary": "Calcule les commandes Subaru par angle ou couple et génère les trames latérales, longitudinales, stop-and-go et stop-start appropriées.",
+      "tags": [
+        "controle-vehicule",
+        "commande-can",
+        "subaru"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "type": "file",
+      "name": "carstate.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/carstate.py",
+      "summary": "Décode les bus CAN Subaru pour produire l’état véhicule, les événements de boutons, les états EyeSight et les données StarPilot nécessaires au contrôleur.",
+      "tags": [
+        "etat-vehicule",
+        "decodage-can",
+        "subaru",
+        "starpilot"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/carstate.py:CarState",
+      "type": "class",
+      "name": "CarState",
+      "filePath": "opendbc_repo/opendbc/car/subaru/carstate.py",
+      "lineRange": [
+        19,
+        187
+      ],
+      "summary": "Décode les signaux Subaru des différents bus CAN et conserve les messages sources nécessaires aux commandes synthétiques.",
+      "tags": [
+        "etat-vehicule",
+        "decodage-can",
+        "subaru"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/fingerprints.py",
+      "type": "file",
+      "name": "fingerprints.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/fingerprints.py",
+      "summary": "Répertorie les versions de firmware ECU connues pour identifier les plateformes Subaru compatibles à partir de leurs signatures matérielles.",
+      "tags": [
+        "donnees-firmware",
+        "identification-vehicule",
+        "subaru",
+        "compatibilite"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Ce module Python est essentiellement déclaratif et associe des ECU à des séquences de version binaires."
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "type": "file",
+      "name": "interface.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/interface.py",
+      "summary": "Spécialise l’interface véhicule pour Subaru en choisissant les paramètres de sécurité, le tuning latéral, les capacités longitudinales et la gestion de l’ECU EyeSight.",
+      "tags": [
+        "interface-vehicule",
+        "configuration-securite",
+        "subaru",
+        "eyesight"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/interface.py:CarInterface",
+      "type": "class",
+      "name": "CarInterface",
+      "filePath": "opendbc_repo/opendbc/car/subaru/interface.py",
+      "lineRange": [
+        9,
+        125
+      ],
+      "summary": "Sélectionne les flags, modèles de sécurité, réglages latéraux et capacités longitudinales propres à chaque plateforme Subaru.",
+      "tags": [
+        "interface-vehicule",
+        "configuration-securite",
+        "subaru"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "type": "file",
+      "name": "subarucan.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "summary": "Construit les trames CAN Subaru globales et preglobales pour la direction, le cruise, le freinage, l’accélérateur et les indications EyeSight.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru",
+        "eyesight"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Les fonctions sont des builders de messages CAN qui copient les compteurs d’origine et recalculent les checksums nécessaires."
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_steering_control",
+      "type": "function",
+      "name": "create_steering_control",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        11,
+        17
+      ],
+      "summary": "Encode une commande Subaru de direction par couple avec son indicateur d’activation.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_steering_control_angle",
+      "type": "function",
+      "name": "create_steering_control_angle",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        20,
+        26
+      ],
+      "summary": "Encode une commande Subaru de direction par angle sur le bus sélectionné.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_steering_status",
+      "type": "function",
+      "name": "create_steering_status",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        29,
+        30
+      ],
+      "summary": "Produit la trame Subaru minimale d’état de direction.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_distance",
+      "type": "function",
+      "name": "create_es_distance",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        33,
+        71
+      ],
+      "summary": "Réécrit la trame EyeSight de distance pour le cancel cruise et les demandes longitudinales de freinage ou d’accélération.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_cruise_buttons",
+      "type": "function",
+      "name": "create_cruise_buttons",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        74,
+        84
+      ],
+      "summary": "Construit une trame de boutons cruise Subaru avec compteur cohérent.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_lkas_state",
+      "type": "function",
+      "name": "create_es_lkas_state",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        87,
+        150
+      ],
+      "summary": "Met à jour la trame LKAS avec l’état d’activation, les lignes de voie et les alertes de franchissement.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_dashstatus",
+      "type": "function",
+      "name": "create_es_dashstatus",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        153,
+        199
+      ],
+      "summary": "Met à jour le statut combiné EyeSight et tableau de bord pour le cruise et le contrôle longitudinal.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_stop_start_control",
+      "type": "function",
+      "name": "create_stop_start_control",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        202,
+        225
+      ],
+      "summary": "Construit une requête stop-start à partir de la trame dashlights et recalcule ses octets de contrôle.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_brake",
+      "type": "function",
+      "name": "create_es_brake",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        228,
+        252
+      ],
+      "summary": "Encode la consigne de freinage EyeSight et son état longitudinal.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_status",
+      "type": "function",
+      "name": "create_es_status",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        255,
+        275
+      ],
+      "summary": "Encode l’état longitudinal EyeSight, dont la consigne de régime cruise.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_infotainment",
+      "type": "function",
+      "name": "create_es_infotainment",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        278,
+        301
+      ],
+      "summary": "Injecte les alertes visuelles dans la trame d’infodivertissement EyeSight.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_highbeamassist",
+      "type": "function",
+      "name": "create_es_highbeamassist",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        304,
+        309
+      ],
+      "summary": "Produit la trame statique d’assistance aux feux de route EyeSight.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_static_1",
+      "type": "function",
+      "name": "create_es_static_1",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        312,
+        317
+      ],
+      "summary": "Produit la première trame EyeSight statique requise par certaines plateformes Subaru.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_static_2",
+      "type": "function",
+      "name": "create_es_static_2",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        320,
+        325
+      ],
+      "summary": "Produit la seconde trame EyeSight statique requise par certaines plateformes Subaru.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:subaru_preglobal_checksum",
+      "type": "function",
+      "name": "subaru_preglobal_checksum",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        330,
+        332
+      ],
+      "summary": "Calcule et insère le checksum des messages Subaru preglobal à partir de la trame packée.",
+      "tags": [
+        "checksum",
+        "commande-can",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_steering_control",
+      "type": "function",
+      "name": "create_preglobal_steering_control",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        335,
+        343
+      ],
+      "summary": "Encode la commande de direction par couple des plateformes Subaru preglobal avec compteur et checksum.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_es_distance",
+      "type": "function",
+      "name": "create_preglobal_es_distance",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        346,
+        370
+      ],
+      "summary": "Réécrit les boutons cruise d’une trame de distance preglobal et recalcule son checksum.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:subaru_checksum",
+      "type": "function",
+      "name": "subaru_checksum",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        373,
+        381
+      ],
+      "summary": "Calcule le checksum Subaru à partir de l’adresse, de la description du signal et des octets du message.",
+      "tags": [
+        "checksum",
+        "commande-can",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_brake_pedal",
+      "type": "function",
+      "name": "create_brake_pedal",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        384,
+        403
+      ],
+      "summary": "Encode une trame globale de pédale de frein combinant vitesse et demande de freinage.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_brake_pedal",
+      "type": "function",
+      "name": "create_preglobal_brake_pedal",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        406,
+        416
+      ],
+      "summary": "Encode la trame de pédale de frein propre aux plateformes Subaru preglobal.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_throttle",
+      "type": "function",
+      "name": "create_throttle",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        419,
+        437
+      ],
+      "summary": "Encode une commande globale d’accélérateur Subaru avec compteur dérivé de la frame.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_throttle",
+      "type": "function",
+      "name": "create_preglobal_throttle",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "lineRange": [
+        440,
+        461
+      ],
+      "summary": "Encode une commande d’accélérateur Subaru preglobal en préservant les champs nécessaires du message source.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "file",
+      "name": "values.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "summary": "Centralise les plateformes Subaru, leurs caractéristiques physiques, flags de sécurité, limites de commande, routage CAN, DBC et requêtes firmware.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru",
+        "securite-can"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/values.py:CarControllerParams",
+      "type": "class",
+      "name": "CarControllerParams",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "lineRange": [
+        13,
+        79
+      ],
+      "summary": "Détermine les limites de direction, frein, accélérateur et régime selon la génération et le modèle Subaru.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruSafetyFlags",
+      "type": "class",
+      "name": "SubaruSafetyFlags",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "lineRange": [
+        82,
+        93
+      ],
+      "summary": "Énumère les bits transmis au modèle de sécurité panda pour les variantes Subaru.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruFlags",
+      "type": "class",
+      "name": "SubaruFlags",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "lineRange": [
+        96,
+        111
+      ],
+      "summary": "Énumère les capacités statiques et détectées qui pilotent le comportement de l’intégration Subaru.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/values.py:CanBus",
+      "type": "class",
+      "name": "CanBus",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "lineRange": [
+        118,
+        133
+      ],
+      "summary": "Résout les numéros de bus principal, alternatif, caméra et angle selon les flags de plateforme.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/values.py:Footnote",
+      "type": "class",
+      "name": "Footnote",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "lineRange": [
+        136,
+        142
+      ],
+      "summary": "Déclare les avertissements de documentation Subaru relatifs à EyeSight et au contrôle longitudinal expérimental.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruCarDocs",
+      "type": "class",
+      "name": "SubaruCarDocs",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "lineRange": [
+        146,
+        153
+      ],
+      "summary": "Décrit l’équipement Subaru requis et ajoute la mise en garde longitudinale quand la plateforme la permet.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruPlatformConfig",
+      "type": "class",
+      "name": "SubaruPlatformConfig",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "lineRange": [
+        157,
+        162
+      ],
+      "summary": "Étend la configuration de plateforme avec le DBC Subaru adapté, notamment pour les variantes hybrides.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruGen2PlatformConfig",
+      "type": "class",
+      "name": "SubaruGen2PlatformConfig",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "lineRange": [
+        166,
+        171
+      ],
+      "summary": "Ajoute les flags Global Gen2 et de limitation de vitesse de direction aux plateformes concernées.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:opendbc_repo/opendbc/car/subaru/values.py:CAR",
+      "type": "class",
+      "name": "CAR",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "lineRange": [
+        174,
+        271
+      ],
+      "summary": "Énumère les plateformes Subaru prises en charge avec leurs modèles, caractéristiques physiques, harnais et flags.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "function:opendbc_repo/opendbc/car/interfaces.py:get_torque_params",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "function:opendbc_repo/opendbc/car/interfaces.py:get_torque_params",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "function:opendbc_repo/opendbc/car/interfaces.py:get_interface_attr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "function:opendbc_repo/opendbc/car/interfaces.py:get_interface_attr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:RadarInterfaceBase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:RadarInterfaceBase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:CarInterfaceBase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:CarInterfaceBase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:CarStateBase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:CarStateBase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:CarControllerBase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:CarControllerBase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/__init__.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/carcontroller.py:get_safety_CP",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/carcontroller.py:get_safety_CP",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/carcontroller.py:CarController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/carcontroller.py:CarController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "target": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/carstate.py:CarState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/carstate.py:CarState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/fingerprints.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/interface.py:CarInterface",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/interface.py:CarInterface",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_steering_control",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_steering_control",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_steering_control_angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_steering_control_angle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_steering_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_steering_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_distance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_cruise_buttons",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_cruise_buttons",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_lkas_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_lkas_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_dashstatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_dashstatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_stop_start_control",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_stop_start_control",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_brake",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_brake",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_infotainment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_infotainment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_highbeamassist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_highbeamassist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_static_1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_static_1",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_static_2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_es_static_2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:subaru_preglobal_checksum",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:subaru_preglobal_checksum",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_steering_control",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_steering_control",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_es_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_es_distance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:subaru_checksum",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:subaru_checksum",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_brake_pedal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_brake_pedal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_brake_pedal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_brake_pedal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_throttle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_throttle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_throttle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_throttle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:CarControllerParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:CarControllerParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruSafetyFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruSafetyFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:CanBus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:CanBus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:Footnote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:Footnote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruCarDocs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruCarDocs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruPlatformConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruPlatformConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruGen2PlatformConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruGen2PlatformConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:CAR",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:CAR",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_steering_control",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:subaru_preglobal_checksum",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:create_preglobal_es_distance",
+      "target": "function:opendbc_repo/opendbc/car/subaru/subarucan.py:subaru_preglobal_checksum",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:opendbc_repo/opendbc/car/subaru/carcontroller.py:CarController",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:CarControllerBase",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:opendbc_repo/opendbc/car/subaru/carstate.py:CarState",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:CarStateBase",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:opendbc_repo/opendbc/car/subaru/interface.py:CarInterface",
+      "target": "class:opendbc_repo/opendbc/car/interfaces.py:CarInterfaceBase",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruGen2PlatformConfig",
+      "target": "class:opendbc_repo/opendbc/car/subaru/values.py:SubaruPlatformConfig",
+      "type": "inherits",
+      "direction": "forward",
+      "weight": 0.9
+    }
+  ]
+}

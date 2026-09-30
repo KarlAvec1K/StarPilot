@@ -1,0 +1,90 @@
+{
+  "projectRoot": "C:\\Users\\karlp\\Documents\\ChatGPT\\StarPilot",
+  "batchFiles": [
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "language": "javascript",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "language": "javascript",
+      "sizeLines": 250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "language": "javascript",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "language": "javascript",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "language": "javascript",
+      "sizeLines": 399,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "language": "javascript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "language": "javascript",
+      "sizeLines": 324,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "language": "javascript",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs": [],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js": [
+      "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/params.js": [],
+    "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/store.js"
+    ]
+  }
+}

@@ -1,0 +1,1750 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "type": "file",
+      "name": "test_following_preset_defaults_api.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "summary": "Teste l’API des presets de suivi afin de garantir leur concordance avec les courbes de référence et leur conversion en valeurs personnalisées.",
+      "tags": [
+        "test",
+        "api",
+        "personnalites",
+        "distance-suivi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py:test_named_following_matches_default_reference_and_custom_conversion",
+      "type": "function",
+      "name": "test_named_following_matches_default_reference_and_custom_conversion",
+      "filePath": "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "lineRange": [
+        10,
+        21
+      ],
+      "summary": "Vérifie le scénario couvert par `test_named_following_matches_default_reference_and_custom_conversion` dans la suite `test_following_preset_defaults_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py:test_existing_fixed_selection_stays_visible_and_can_explicitly_change",
+      "type": "function",
+      "name": "test_existing_fixed_selection_stays_visible_and_can_explicitly_change",
+      "filePath": "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "lineRange": [
+        24,
+        40
+      ],
+      "summary": "Vérifie le scénario couvert par `test_existing_fixed_selection_stays_visible_and_can_explicitly_change` dans la suite `test_following_preset_defaults_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py:test_existing_dom_default_keeps_inheriting_user_following_settings",
+      "type": "function",
+      "name": "test_existing_dom_default_keeps_inheriting_user_following_settings",
+      "filePath": "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "lineRange": [
+        43,
+        48
+      ],
+      "summary": "Vérifie le scénario couvert par `test_existing_dom_default_keeps_inheriting_user_following_settings` dans la suite `test_following_preset_defaults_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "type": "file",
+      "name": "test_personality_profiles_api.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "summary": "Couvre l’API Galaxy des profils de personnalité, notamment les migrations, validations, presets, courbes personnalisées et écritures Params.",
+      "tags": [
+        "test",
+        "api",
+        "personnalites",
+        "migration",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:_client",
+      "type": "function",
+      "name": "_client",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        26,
+        50
+      ],
+      "summary": "Implémente l’opération `_client` dans le module `test_personality_profiles_api.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "test",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:_slot_client",
+      "type": "function",
+      "name": "_slot_client",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        53,
+        66
+      ],
+      "summary": "Implémente l’opération `_slot_client` dans le module `test_personality_profiles_api.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "test",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_requires_confirmed_offroad",
+      "type": "function",
+      "name": "test_slot_load_requires_confirmed_offroad",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        70,
+        73
+      ],
+      "summary": "Vérifie le scénario couvert par `test_slot_load_requires_confirmed_offroad` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_rechecks_offroad_after_acquiring_shared_lock",
+      "type": "function",
+      "name": "test_slot_load_rechecks_offroad_after_acquiring_shared_lock",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        76,
+        88
+      ],
+      "summary": "Vérifie le scénario couvert par `test_slot_load_rechecks_offroad_after_acquiring_shared_lock` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_preserves_native_types_renames_and_skips",
+      "type": "function",
+      "name": "test_slot_load_preserves_native_types_renames_and_skips",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        91,
+        114
+      ],
+      "summary": "Vérifie le scénario couvert par `test_slot_load_preserves_native_types_renames_and_skips` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_validates_personality_before_any_writes",
+      "type": "function",
+      "name": "test_slot_load_validates_personality_before_any_writes",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        122,
+        125
+      ],
+      "summary": "Vérifie le scénario couvert par `test_slot_load_validates_personality_before_any_writes` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_rejects_incompatible_document_before_any_writes",
+      "type": "function",
+      "name": "test_slot_load_rejects_incompatible_document_before_any_writes",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        129,
+        134
+      ],
+      "summary": "Vérifie le scénario couvert par `test_slot_load_rejects_incompatible_document_before_any_writes` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_syncs_master_preserves_historical_curves_under_shared_lock",
+      "type": "function",
+      "name": "test_slot_load_syncs_master_preserves_historical_curves_under_shared_lock",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        138,
+        166
+      ],
+      "summary": "Vérifie le scénario couvert par `test_slot_load_syncs_master_preserves_historical_curves_under_shared_lock` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_saved_v2_high_curve_read_migrate_edit_and_master_round_trip",
+      "type": "function",
+      "name": "test_saved_v2_high_curve_read_migrate_edit_and_master_round_trip",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        170,
+        209
+      ],
+      "summary": "Vérifie le scénario couvert par `test_saved_v2_high_curve_read_migrate_edit_and_master_round_trip` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_saved_v2_high_curve_is_editable_onroad_but_migration_needs_offroad",
+      "type": "function",
+      "name": "test_saved_v2_high_curve_is_editable_onroad_but_migration_needs_offroad",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        213,
+        231
+      ],
+      "summary": "Vérifie le scénario couvert par `test_saved_v2_high_curve_is_editable_onroad_but_migration_needs_offroad` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_get_returns_disabled_standard_defaults_and_explicit_graph_metadata",
+      "type": "function",
+      "name": "test_get_returns_disabled_standard_defaults_and_explicit_graph_metadata",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        234,
+        247
+      ],
+      "summary": "Vérifie le scénario couvert par `test_get_returns_disabled_standard_defaults_and_explicit_graph_metadata` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_legacy_master_without_document_remains_enabled_when_first_profile_is_saved",
+      "type": "function",
+      "name": "test_legacy_master_without_document_remains_enabled_when_first_profile_is_saved",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        250,
+        261
+      ],
+      "summary": "Vérifie le scénario couvert par `test_legacy_master_without_document_remains_enabled_when_first_profile_is_saved` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_first_save_persists_one_atomic_versioned_document_with_other_categories_dom_default",
+      "type": "function",
+      "name": "test_first_save_persists_one_atomic_versioned_document_with_other_categories_dom_default",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        264,
+        280
+      ],
+      "summary": "Vérifie le scénario couvert par `test_first_save_persists_one_atomic_versioned_document_with_other_categories_dom_default` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_profile_read_modify_write_endpoint_is_serialized",
+      "type": "function",
+      "name": "test_profile_read_modify_write_endpoint_is_serialized",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        283,
+        288
+      ],
+      "summary": "Vérifie le scénario couvert par `test_profile_read_modify_write_endpoint_is_serialized` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_selecting_custom_is_seeded_server_side_from_current_ev_preset_with_ev_over_truck",
+      "type": "function",
+      "name": "test_selecting_custom_is_seeded_server_side_from_current_ev_preset_with_ev_over_truck",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        291,
+        310
+      ],
+      "summary": "Vérifie le scénario couvert par `test_selecting_custom_is_seeded_server_side_from_current_ev_preset_with_ev_over_truck` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_selecting_custom_uses_the_automatically_detected_truck_curve",
+      "type": "function",
+      "name": "test_selecting_custom_uses_the_automatically_detected_truck_curve",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        313,
+        339
+      ],
+      "summary": "Vérifie le scénario couvert par `test_selecting_custom_uses_the_automatically_detected_truck_curve` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_custom_braking_is_seeded_from_selected_deceleration_preset",
+      "type": "function",
+      "name": "test_custom_braking_is_seeded_from_selected_deceleration_preset",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        342,
+        353
+      ],
+      "summary": "Vérifie le scénario couvert par `test_custom_braking_is_seeded_from_selected_deceleration_preset` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dom_default_custom_acceleration_seeds_from_effective_legacy_custom_curve",
+      "type": "function",
+      "name": "test_dom_default_custom_acceleration_seeds_from_effective_legacy_custom_curve",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        356,
+        379
+      ],
+      "summary": "Vérifie le scénario couvert par `test_dom_default_custom_acceleration_seeds_from_effective_legacy_custom_curve` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_existing_custom_category_persists_subsequent_graph_edits_exactly",
+      "type": "function",
+      "name": "test_existing_custom_category_persists_subsequent_graph_edits_exactly",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        382,
+        394
+      ],
+      "summary": "Vérifie le scénario couvert par `test_existing_custom_category_persists_subsequent_graph_edits_exactly` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dom_default_custom_seed_resamples_valid_dynamic_curve_and_malformed_dynamic_falls_back",
+      "type": "function",
+      "name": "test_dom_default_custom_seed_resamples_valid_dynamic_curve_and_malformed_dynamic_falls_back",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        397,
+        436
+      ],
+      "summary": "Vérifie le scénario couvert par `test_dom_default_custom_seed_resamples_valid_dynamic_curve_and_malformed_dynamic_falls_back` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_following_custom_seeds_from_legacy_profile_and_then_persists_edits",
+      "type": "function",
+      "name": "test_following_custom_seeds_from_legacy_profile_and_then_persists_edits",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        439,
+        463
+      ],
+      "summary": "Vérifie le scénario couvert par `test_following_custom_seeds_from_legacy_profile_and_then_persists_edits` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_fresh_following_custom_seeds_from_dom_default_when_legacy_custom_is_off",
+      "type": "function",
+      "name": "test_fresh_following_custom_seeds_from_dom_default_when_legacy_custom_is_off",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        466,
+        478
+      ],
+      "summary": "Vérifie le scénario couvert par `test_fresh_following_custom_seeds_from_dom_default_when_legacy_custom_is_off` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_traffic_following_seed_matches_legacy_runtime_speed_units",
+      "type": "function",
+      "name": "test_traffic_following_seed_matches_legacy_runtime_speed_units",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        481,
+        500
+      ],
+      "summary": "Vérifie le scénario couvert par `test_traffic_following_seed_matches_legacy_runtime_speed_units` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_invalid_payload_never_writes",
+      "type": "function",
+      "name": "test_invalid_payload_never_writes",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        503,
+        511
+      ],
+      "summary": "Vérifie le scénario couvert par `test_invalid_payload_never_writes` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_api_exposes_and_enforces_requested_acceleration_and_braking_bounds",
+      "type": "function",
+      "name": "test_api_exposes_and_enforces_requested_acceleration_and_braking_bounds",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        514,
+        530
+      ],
+      "summary": "Vérifie le scénario couvert par `test_api_exposes_and_enforces_requested_acceleration_and_braking_bounds` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dedicated_profile_edits_allow_confirmed_onroad_but_reject_unknown_state",
+      "type": "function",
+      "name": "test_dedicated_profile_edits_allow_confirmed_onroad_but_reject_unknown_state",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        537,
+        557
+      ],
+      "summary": "Vérifie le scénario couvert par `test_dedicated_profile_edits_allow_confirmed_onroad_but_reject_unknown_state` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_generic_profile_mutation_is_also_rejected_while_parked",
+      "type": "function",
+      "name": "test_generic_profile_mutation_is_also_rejected_while_parked",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        560,
+        564
+      ],
+      "summary": "Vérifie le scénario couvert par `test_generic_profile_mutation_is_also_rejected_while_parked` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dedicated_profile_write_rechecks_road_state_before_commit",
+      "type": "function",
+      "name": "test_dedicated_profile_write_rechecks_road_state_before_commit",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        567,
+        583
+      ],
+      "summary": "Vérifie le scénario couvert par `test_dedicated_profile_write_rechecks_road_state_before_commit` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_advanced_personality_write_rechecks_road_state_before_commit",
+      "type": "function",
+      "name": "test_advanced_personality_write_rechecks_road_state_before_commit",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        586,
+        599
+      ],
+      "summary": "Vérifie le scénario couvert par `test_advanced_personality_write_rechecks_road_state_before_commit` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dedicated_enable_mutation_is_rejected",
+      "type": "function",
+      "name": "test_dedicated_enable_mutation_is_rejected",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        602,
+        606
+      ],
+      "summary": "Vérifie le scénario couvert par `test_dedicated_enable_mutation_is_rejected` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_enabling_master_without_document_creates_standard_medium_defaults",
+      "type": "function",
+      "name": "test_enabling_master_without_document_creates_standard_medium_defaults",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        609,
+        618
+      ],
+      "summary": "Vérifie le scénario couvert par `test_enabling_master_without_document_creates_standard_medium_defaults` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_synchronises_the_profile_document_enable_bit",
+      "type": "function",
+      "name": "test_master_toggle_synchronises_the_profile_document_enable_bit",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        621,
+        632
+      ],
+      "summary": "Vérifie le scénario couvert par `test_master_toggle_synchronises_the_profile_document_enable_bit` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_writes_in_fail_closed_order",
+      "type": "function",
+      "name": "test_master_toggle_writes_in_fail_closed_order",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        639,
+        648
+      ],
+      "summary": "Vérifie le scénario couvert par `test_master_toggle_writes_in_fail_closed_order` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_rechecks_confirmed_road_state_after_waiting_for_profile_lock",
+      "type": "function",
+      "name": "test_master_toggle_rechecks_confirmed_road_state_after_waiting_for_profile_lock",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        653,
+        674
+      ],
+      "summary": "Vérifie le scénario couvert par `test_master_toggle_rechecks_confirmed_road_state_after_waiting_for_profile_lock` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_profile_document_write_failure_never_enables_master",
+      "type": "function",
+      "name": "test_profile_document_write_failure_never_enables_master",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        677,
+        695
+      ],
+      "summary": "Vérifie le scénario couvert par `test_profile_document_write_failure_never_enables_master` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_unverified_profile_document_write_never_enables_master",
+      "type": "function",
+      "name": "test_unverified_profile_document_write_never_enables_master",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        698,
+        711
+      ],
+      "summary": "Vérifie le scénario couvert par `test_unverified_profile_document_write_never_enables_master` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_write_failure_leaves_master_false_after_verified_document_write",
+      "type": "function",
+      "name": "test_master_write_failure_leaves_master_false_after_verified_document_write",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        714,
+        733
+      ],
+      "summary": "Vérifie le scénario couvert par `test_master_write_failure_leaves_master_false_after_verified_document_write` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_every_state_affecting_personality_write_is_allowed_onroad",
+      "type": "function",
+      "name": "test_every_state_affecting_personality_write_is_allowed_onroad",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        736,
+        747
+      ],
+      "summary": "Vérifie le scénario couvert par `test_every_state_affecting_personality_write_is_allowed_onroad` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_every_state_affecting_personality_write_is_rejected_when_road_state_is_unconfirmed",
+      "type": "function",
+      "name": "test_every_state_affecting_personality_write_is_rejected_when_road_state_is_unconfirmed",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        755,
+        763
+      ],
+      "summary": "Vérifie le scénario couvert par `test_every_state_affecting_personality_write_is_rejected_when_road_state_is_unconfirmed` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_reset_defaults_requires_confirmed_offroad_without_side_effects",
+      "type": "function",
+      "name": "test_reset_defaults_requires_confirmed_offroad_without_side_effects",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        770,
+        788
+      ],
+      "summary": "Vérifie le scénario couvert par `test_reset_defaults_requires_confirmed_offroad_without_side_effects` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_troubleshoot_reset_skips_every_parked_personality_key_without_confirmed_offroad",
+      "type": "function",
+      "name": "test_troubleshoot_reset_skips_every_parked_personality_key_without_confirmed_offroad",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        795,
+        820
+      ],
+      "summary": "Vérifie le scénario couvert par `test_troubleshoot_reset_skips_every_parked_personality_key_without_confirmed_offroad` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_advanced_personality_values_require_numbers_in_supported_range",
+      "type": "function",
+      "name": "test_advanced_personality_values_require_numbers_in_supported_range",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        824,
+        831
+      ],
+      "summary": "Vérifie le scénario couvert par `test_advanced_personality_values_require_numbers_in_supported_range` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_legacy_follow_values_require_numbers_in_supported_range",
+      "type": "function",
+      "name": "test_legacy_follow_values_require_numbers_in_supported_range",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        834,
+        842
+      ],
+      "summary": "Vérifie le scénario couvert par `test_legacy_follow_values_require_numbers_in_supported_range` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_profile_enable_params_require_json_booleans",
+      "type": "function",
+      "name": "test_profile_enable_params_require_json_booleans",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        847,
+        854
+      ],
+      "summary": "Vérifie le scénario couvert par `test_profile_enable_params_require_json_booleans` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_rejects_malformed_profile_document_without_mutation",
+      "type": "function",
+      "name": "test_master_toggle_rejects_malformed_profile_document_without_mutation",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        857,
+        867
+      ],
+      "summary": "Vérifie le scénario couvert par `test_master_toggle_rejects_malformed_profile_document_without_mutation` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:_known_v1_document",
+      "type": "function",
+      "name": "_known_v1_document",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        870,
+        885
+      ],
+      "summary": "Évalue la condition portée par `_known_v1_document` dans le module `test_personality_profiles_api.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "test",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_known_v1_document_is_migrated_for_readback",
+      "type": "function",
+      "name": "test_known_v1_document_is_migrated_for_readback",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        888,
+        898
+      ],
+      "summary": "Vérifie le scénario couvert par `test_known_v1_document_is_migrated_for_readback` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_known_v1_document_can_be_installed_by_explicit_offroad_migration",
+      "type": "function",
+      "name": "test_known_v1_document_can_be_installed_by_explicit_offroad_migration",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        901,
+        917
+      ],
+      "summary": "Vérifie le scénario couvert par `test_known_v1_document_can_be_installed_by_explicit_offroad_migration` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_verified_v2_migration_remains_editable_and_preserves_other_legacy_curves",
+      "type": "function",
+      "name": "test_verified_v2_migration_remains_editable_and_preserves_other_legacy_curves",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        920,
+        936
+      ],
+      "summary": "Vérifie le scénario couvert par `test_verified_v2_migration_remains_editable_and_preserves_other_legacy_curves` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_known_v1_document_cannot_be_overwritten_before_a_verified_migration",
+      "type": "function",
+      "name": "test_known_v1_document_cannot_be_overwritten_before_a_verified_migration",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        939,
+        950
+      ],
+      "summary": "Vérifie le scénario couvert par `test_known_v1_document_cannot_be_overwritten_before_a_verified_migration` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_malformed_document_is_not_overwritten_by_profile_edit",
+      "type": "function",
+      "name": "test_malformed_document_is_not_overwritten_by_profile_edit",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        953,
+        962
+      ],
+      "summary": "Vérifie le scénario couvert par `test_malformed_document_is_not_overwritten_by_profile_edit` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_malformed_stored_document_readback_fails_closed",
+      "type": "function",
+      "name": "test_malformed_stored_document_readback_fails_closed",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "lineRange": [
+        965,
+        969
+      ],
+      "summary": "Vérifie le scénario couvert par `test_malformed_stored_document_readback_fails_closed` dans la suite `test_personality_profiles_api.py`.",
+      "tags": [
+        "test",
+        "api",
+        "composant"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py:test_named_following_matches_default_reference_and_custom_conversion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py:test_named_following_matches_default_reference_and_custom_conversion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py:test_existing_fixed_selection_stays_visible_and_can_explicitly_change",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py:test_existing_fixed_selection_stays_visible_and_can_explicitly_change",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py:test_existing_dom_default_keeps_inheriting_user_following_settings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py:test_existing_dom_default_keeps_inheriting_user_following_settings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:_client",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:_client",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:_slot_client",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:_slot_client",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_requires_confirmed_offroad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_requires_confirmed_offroad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_rechecks_offroad_after_acquiring_shared_lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_rechecks_offroad_after_acquiring_shared_lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_preserves_native_types_renames_and_skips",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_preserves_native_types_renames_and_skips",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_validates_personality_before_any_writes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_validates_personality_before_any_writes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_rejects_incompatible_document_before_any_writes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_rejects_incompatible_document_before_any_writes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_syncs_master_preserves_historical_curves_under_shared_lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_slot_load_syncs_master_preserves_historical_curves_under_shared_lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_saved_v2_high_curve_read_migrate_edit_and_master_round_trip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_saved_v2_high_curve_read_migrate_edit_and_master_round_trip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_saved_v2_high_curve_is_editable_onroad_but_migration_needs_offroad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_saved_v2_high_curve_is_editable_onroad_but_migration_needs_offroad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_get_returns_disabled_standard_defaults_and_explicit_graph_metadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_get_returns_disabled_standard_defaults_and_explicit_graph_metadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_legacy_master_without_document_remains_enabled_when_first_profile_is_saved",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_legacy_master_without_document_remains_enabled_when_first_profile_is_saved",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_first_save_persists_one_atomic_versioned_document_with_other_categories_dom_default",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_first_save_persists_one_atomic_versioned_document_with_other_categories_dom_default",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_profile_read_modify_write_endpoint_is_serialized",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_profile_read_modify_write_endpoint_is_serialized",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_selecting_custom_is_seeded_server_side_from_current_ev_preset_with_ev_over_truck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_selecting_custom_is_seeded_server_side_from_current_ev_preset_with_ev_over_truck",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_selecting_custom_uses_the_automatically_detected_truck_curve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_selecting_custom_uses_the_automatically_detected_truck_curve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_custom_braking_is_seeded_from_selected_deceleration_preset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_custom_braking_is_seeded_from_selected_deceleration_preset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dom_default_custom_acceleration_seeds_from_effective_legacy_custom_curve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dom_default_custom_acceleration_seeds_from_effective_legacy_custom_curve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_existing_custom_category_persists_subsequent_graph_edits_exactly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_existing_custom_category_persists_subsequent_graph_edits_exactly",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dom_default_custom_seed_resamples_valid_dynamic_curve_and_malformed_dynamic_falls_back",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dom_default_custom_seed_resamples_valid_dynamic_curve_and_malformed_dynamic_falls_back",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_following_custom_seeds_from_legacy_profile_and_then_persists_edits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_following_custom_seeds_from_legacy_profile_and_then_persists_edits",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_fresh_following_custom_seeds_from_dom_default_when_legacy_custom_is_off",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_fresh_following_custom_seeds_from_dom_default_when_legacy_custom_is_off",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_traffic_following_seed_matches_legacy_runtime_speed_units",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_traffic_following_seed_matches_legacy_runtime_speed_units",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_invalid_payload_never_writes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_invalid_payload_never_writes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_api_exposes_and_enforces_requested_acceleration_and_braking_bounds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_api_exposes_and_enforces_requested_acceleration_and_braking_bounds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dedicated_profile_edits_allow_confirmed_onroad_but_reject_unknown_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dedicated_profile_edits_allow_confirmed_onroad_but_reject_unknown_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_generic_profile_mutation_is_also_rejected_while_parked",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_generic_profile_mutation_is_also_rejected_while_parked",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dedicated_profile_write_rechecks_road_state_before_commit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dedicated_profile_write_rechecks_road_state_before_commit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_advanced_personality_write_rechecks_road_state_before_commit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_advanced_personality_write_rechecks_road_state_before_commit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dedicated_enable_mutation_is_rejected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_dedicated_enable_mutation_is_rejected",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_enabling_master_without_document_creates_standard_medium_defaults",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_enabling_master_without_document_creates_standard_medium_defaults",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_synchronises_the_profile_document_enable_bit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_synchronises_the_profile_document_enable_bit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_writes_in_fail_closed_order",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_writes_in_fail_closed_order",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_rechecks_confirmed_road_state_after_waiting_for_profile_lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_rechecks_confirmed_road_state_after_waiting_for_profile_lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_profile_document_write_failure_never_enables_master",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_profile_document_write_failure_never_enables_master",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_unverified_profile_document_write_never_enables_master",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_unverified_profile_document_write_never_enables_master",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_write_failure_leaves_master_false_after_verified_document_write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_write_failure_leaves_master_false_after_verified_document_write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_every_state_affecting_personality_write_is_allowed_onroad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_every_state_affecting_personality_write_is_allowed_onroad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_every_state_affecting_personality_write_is_rejected_when_road_state_is_unconfirmed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_every_state_affecting_personality_write_is_rejected_when_road_state_is_unconfirmed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_reset_defaults_requires_confirmed_offroad_without_side_effects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_reset_defaults_requires_confirmed_offroad_without_side_effects",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_troubleshoot_reset_skips_every_parked_personality_key_without_confirmed_offroad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_troubleshoot_reset_skips_every_parked_personality_key_without_confirmed_offroad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_advanced_personality_values_require_numbers_in_supported_range",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_advanced_personality_values_require_numbers_in_supported_range",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_legacy_follow_values_require_numbers_in_supported_range",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_legacy_follow_values_require_numbers_in_supported_range",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_profile_enable_params_require_json_booleans",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_profile_enable_params_require_json_booleans",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_rejects_malformed_profile_document_without_mutation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_master_toggle_rejects_malformed_profile_document_without_mutation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:_known_v1_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:_known_v1_document",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_known_v1_document_is_migrated_for_readback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_known_v1_document_is_migrated_for_readback",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_known_v1_document_can_be_installed_by_explicit_offroad_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_known_v1_document_can_be_installed_by_explicit_offroad_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_verified_v2_migration_remains_editable_and_preserves_other_legacy_curves",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_verified_v2_migration_remains_editable_and_preserves_other_legacy_curves",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_known_v1_document_cannot_be_overwritten_before_a_verified_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_known_v1_document_cannot_be_overwritten_before_a_verified_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_malformed_document_is_not_overwritten_by_profile_edit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_malformed_document_is_not_overwritten_by_profile_edit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_malformed_stored_document_readback_fails_closed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py:test_malformed_stored_document_readback_fails_closed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

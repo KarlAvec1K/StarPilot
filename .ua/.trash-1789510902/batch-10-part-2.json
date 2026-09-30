@@ -1,0 +1,812 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "type": "file",
+      "name": "starpilot_acceleration.py",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "summary": "Calcule les bornes d’accélération et de décélération selon les profils, le véhicule de tête, le SLC et les modes pulse-and-glide.",
+      "tags": [
+        "acceleration",
+        "controle-longitudinal",
+        "profil",
+        "interpolation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:cubic_interp",
+      "type": "function",
+      "name": "cubic_interp",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        25,
+        41
+      ],
+      "summary": "Implémente l’opération `cubic_interp` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:akima_interp",
+      "type": "function",
+      "name": "akima_interp",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        43,
+        60
+      ],
+      "summary": "Implémente l’opération `akima_interp` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_eco",
+      "type": "function",
+      "name": "get_max_accel_eco",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        102,
+        103
+      ],
+      "summary": "Récupère ou résout les données de `get_max_accel_eco` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_sport",
+      "type": "function",
+      "name": "get_max_accel_sport",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        105,
+        106
+      ],
+      "summary": "Récupère ou résout les données de `get_max_accel_sport` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_standard",
+      "type": "function",
+      "name": "get_max_accel_standard",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        108,
+        109
+      ],
+      "summary": "Récupère ou résout les données de `get_max_accel_standard` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_traffic",
+      "type": "function",
+      "name": "get_max_accel_traffic",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        111,
+        112
+      ],
+      "summary": "Récupère ou résout les données de `get_max_accel_traffic` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_custom",
+      "type": "function",
+      "name": "get_max_accel_custom",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        114,
+        123
+      ],
+      "summary": "Récupère ou résout les données de `get_max_accel_custom` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_allowed_accel",
+      "type": "function",
+      "name": "get_max_allowed_accel",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        125,
+        126
+      ],
+      "summary": "Récupère ou résout les données de `get_max_allowed_accel` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:get_profile_min_accel_floor",
+      "type": "function",
+      "name": "get_profile_min_accel_floor",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        128,
+        133
+      ],
+      "summary": "Récupère ou résout les données de `get_profile_min_accel_floor` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:lead_is_braking_relevant",
+      "type": "function",
+      "name": "lead_is_braking_relevant",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        135,
+        146
+      ],
+      "summary": "Implémente l’opération `lead_is_braking_relevant` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_acceleration.py:get_slc_shaped_min_accel",
+      "type": "function",
+      "name": "get_slc_shaped_min_accel",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        148,
+        161
+      ],
+      "summary": "Récupère ou résout les données de `get_slc_shaped_min_accel` dans le module `starpilot_acceleration.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/lib/starpilot_acceleration.py:StarPilotAcceleration",
+      "type": "class",
+      "name": "StarPilotAcceleration",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "lineRange": [
+        163,
+        450
+      ],
+      "summary": "Regroupe l’état et le comportement de `StarPilotAcceleration` dans le module `starpilot_acceleration.py`, avec 6 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "acceleration",
+        "controle-longitudinal"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/starpilot_events.py",
+      "type": "file",
+      "name": "starpilot_events.py",
+      "filePath": "starpilot/controls/lib/starpilot_events.py",
+      "summary": "Produit les événements et alertes StarPilot à partir de l’état de conduite, des forces mesurées et des fonctions activées.",
+      "tags": [
+        "evenement",
+        "alerte",
+        "conduite",
+        "securite"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:starpilot/controls/lib/starpilot_events.py:StarPilotEvents",
+      "type": "class",
+      "name": "StarPilotEvents",
+      "filePath": "starpilot/controls/lib/starpilot_events.py",
+      "lineRange": [
+        18,
+        222
+      ],
+      "summary": "Regroupe l’état et le comportement de `StarPilotEvents` dans le module `starpilot_events.py`, avec 2 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "evenement",
+        "alerte"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/starpilot_following.py",
+      "type": "file",
+      "name": "starpilot_following.py",
+      "filePath": "starpilot/controls/lib/starpilot_following.py",
+      "summary": "Ajuste les distances de suivi et les marges de changement de voie selon la personnalité active, la vitesse et les véhicules de tête.",
+      "tags": [
+        "distance-suivi",
+        "controle-longitudinal",
+        "personnalites",
+        "changement-voie"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_following.py:get_longitudinal_personality",
+      "type": "function",
+      "name": "get_longitudinal_personality",
+      "filePath": "starpilot/controls/lib/starpilot_following.py",
+      "lineRange": [
+        35,
+        36
+      ],
+      "summary": "Récupère ou résout les données de `get_longitudinal_personality` dans le module `starpilot_following.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "distance-suivi",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/lib/starpilot_following.py:StarPilotFollowing",
+      "type": "class",
+      "name": "StarPilotFollowing",
+      "filePath": "starpilot/controls/lib/starpilot_following.py",
+      "lineRange": [
+        38,
+        200
+      ],
+      "summary": "Regroupe l’état et le comportement de `StarPilotFollowing` dans le module `starpilot_following.py`, avec 5 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "distance-suivi",
+        "controle-longitudinal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "type": "file",
+      "name": "starpilot_vcruise.py",
+      "filePath": "starpilot/controls/lib/starpilot_vcruise.py",
+      "summary": "Détermine la vitesse de croisière StarPilot à partir des virages, de la navigation, des limites de vitesse et du contexte des véhicules de tête.",
+      "tags": [
+        "vitesse-croisiere",
+        "navigation",
+        "limite-vitesse",
+        "controle-longitudinal"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_vcruise.py:get_lead_veto_distance",
+      "type": "function",
+      "name": "get_lead_veto_distance",
+      "filePath": "starpilot/controls/lib/starpilot_vcruise.py",
+      "lineRange": [
+        100,
+        102
+      ],
+      "summary": "Récupère ou résout les données de `get_lead_veto_distance` dans le module `starpilot_vcruise.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "vitesse-croisiere",
+        "navigation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_vcruise.py:get_active_slc_control_target",
+      "type": "function",
+      "name": "get_active_slc_control_target",
+      "filePath": "starpilot/controls/lib/starpilot_vcruise.py",
+      "lineRange": [
+        105,
+        119
+      ],
+      "summary": "Récupère ou résout les données de `get_active_slc_control_target` dans le module `starpilot_vcruise.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "vitesse-croisiere",
+        "navigation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_vcruise.py:_interp_linear",
+      "type": "function",
+      "name": "_interp_linear",
+      "filePath": "starpilot/controls/lib/starpilot_vcruise.py",
+      "lineRange": [
+        122,
+        136
+      ],
+      "summary": "Calcule la valeur retournée par `_interp_linear` dans le module `starpilot_vcruise.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "vitesse-croisiere",
+        "navigation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/starpilot_vcruise.py:get_slc_lead_drop_relaxed_target",
+      "type": "function",
+      "name": "get_slc_lead_drop_relaxed_target",
+      "filePath": "starpilot/controls/lib/starpilot_vcruise.py",
+      "lineRange": [
+        139,
+        172
+      ],
+      "summary": "Récupère ou résout les données de `get_slc_lead_drop_relaxed_target` dans le module `starpilot_vcruise.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "vitesse-croisiere",
+        "navigation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/lib/starpilot_vcruise.py:StarPilotVCruise",
+      "type": "class",
+      "name": "StarPilotVCruise",
+      "filePath": "starpilot/controls/lib/starpilot_vcruise.py",
+      "lineRange": [
+        175,
+        797
+      ],
+      "summary": "Regroupe l’état et le comportement de `StarPilotVCruise` dans le module `starpilot_vcruise.py`, avec 10 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "vitesse-croisiere",
+        "navigation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/weather_checker.py",
+      "type": "file",
+      "name": "weather_checker.py",
+      "filePath": "starpilot/controls/lib/weather_checker.py",
+      "summary": "Interroge et met en cache les conditions météo proches afin de fournir des offsets exploitables par la logique de conduite.",
+      "tags": [
+        "meteo",
+        "cache",
+        "geolocalisation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/controls/lib/weather_checker.py:_iso_to_unix",
+      "type": "function",
+      "name": "_iso_to_unix",
+      "filePath": "starpilot/controls/lib/weather_checker.py",
+      "lineRange": [
+        76,
+        81
+      ],
+      "summary": "Évalue la condition portée par `_iso_to_unix` dans le module `weather_checker.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "meteo",
+        "cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/weather_checker.py:_normalize_response",
+      "type": "function",
+      "name": "_normalize_response",
+      "filePath": "starpilot/controls/lib/weather_checker.py",
+      "lineRange": [
+        84,
+        107
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_response` dans le module `weather_checker.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "meteo",
+        "cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/lib/weather_checker.py:WeatherChecker",
+      "type": "class",
+      "name": "WeatherChecker",
+      "filePath": "starpilot/controls/lib/weather_checker.py",
+      "lineRange": [
+        110,
+        222
+      ],
+      "summary": "Regroupe l’état et le comportement de `WeatherChecker` dans le module `weather_checker.py`, avec 3 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "meteo",
+        "cache"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:cubic_interp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:cubic_interp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:akima_interp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:akima_interp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_eco",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_eco",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_sport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_sport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_standard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_standard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_traffic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_traffic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_custom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_accel_custom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_allowed_accel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_max_allowed_accel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_profile_min_accel_floor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_profile_min_accel_floor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:lead_is_braking_relevant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:lead_is_braking_relevant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_slc_shaped_min_accel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "function:starpilot/controls/lib/starpilot_acceleration.py:get_slc_shaped_min_accel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "class:starpilot/controls/lib/starpilot_acceleration.py:StarPilotAcceleration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "target": "class:starpilot/controls/lib/starpilot_acceleration.py:StarPilotAcceleration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_events.py",
+      "target": "class:starpilot/controls/lib/starpilot_events.py:StarPilotEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_events.py",
+      "target": "class:starpilot/controls/lib/starpilot_events.py:StarPilotEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_following.py",
+      "target": "function:starpilot/controls/lib/starpilot_following.py:get_longitudinal_personality",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_following.py",
+      "target": "function:starpilot/controls/lib/starpilot_following.py:get_longitudinal_personality",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_following.py",
+      "target": "class:starpilot/controls/lib/starpilot_following.py:StarPilotFollowing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_following.py",
+      "target": "class:starpilot/controls/lib/starpilot_following.py:StarPilotFollowing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "function:starpilot/controls/lib/starpilot_vcruise.py:get_lead_veto_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "function:starpilot/controls/lib/starpilot_vcruise.py:get_lead_veto_distance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "function:starpilot/controls/lib/starpilot_vcruise.py:get_active_slc_control_target",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "function:starpilot/controls/lib/starpilot_vcruise.py:get_active_slc_control_target",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "function:starpilot/controls/lib/starpilot_vcruise.py:_interp_linear",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "function:starpilot/controls/lib/starpilot_vcruise.py:_interp_linear",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "function:starpilot/controls/lib/starpilot_vcruise.py:get_slc_lead_drop_relaxed_target",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "function:starpilot/controls/lib/starpilot_vcruise.py:get_slc_lead_drop_relaxed_target",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "class:starpilot/controls/lib/starpilot_vcruise.py:StarPilotVCruise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "target": "class:starpilot/controls/lib/starpilot_vcruise.py:StarPilotVCruise",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/weather_checker.py",
+      "target": "function:starpilot/controls/lib/weather_checker.py:_iso_to_unix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/weather_checker.py",
+      "target": "function:starpilot/controls/lib/weather_checker.py:_iso_to_unix",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/weather_checker.py",
+      "target": "function:starpilot/controls/lib/weather_checker.py:_normalize_response",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/weather_checker.py",
+      "target": "function:starpilot/controls/lib/weather_checker.py:_normalize_response",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/weather_checker.py",
+      "target": "class:starpilot/controls/lib/weather_checker.py:WeatherChecker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/weather_checker.py",
+      "target": "class:starpilot/controls/lib/weather_checker.py:WeatherChecker",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

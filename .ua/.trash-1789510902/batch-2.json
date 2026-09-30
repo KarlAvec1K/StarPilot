@@ -1,0 +1,1311 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "type": "file",
+      "name": "personality_profiles.mjs",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "summary": "Fournit les helpers purs de l’éditeur de profils de conduite pour formater les vitesses, construire les clés de paramètres et convertir un pointeur en valeur de courbe.",
+      "tags": [
+        "profil-conduite",
+        "utilitaire",
+        "formatage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:formatProfileSpeed",
+      "type": "function",
+      "name": "formatProfileSpeed",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "lineRange": [
+        1,
+        6
+      ],
+      "summary": "Convertit une vitesse de profil en chaîne mph ou km/h avec une précision lisible.",
+      "tags": [
+        "profil-conduite",
+        "utilitaire",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:profileSpeedUnit",
+      "type": "function",
+      "name": "profileSpeedUnit",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "lineRange": [
+        8,
+        10
+      ],
+      "summary": "Retourne l’unité de vitesse affichée selon le mode métrique.",
+      "tags": [
+        "profil-conduite",
+        "utilitaire",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:personalityProfileParamKey",
+      "type": "function",
+      "name": "personalityProfileParamKey",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "Construit la clé de paramètre persistée pour un identifiant de profil de conduite.",
+      "tags": [
+        "profil-conduite",
+        "utilitaire",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:shouldSubmitPersonalityPreset",
+      "type": "function",
+      "name": "shouldSubmitPersonalityPreset",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "lineRange": [
+        23,
+        25
+      ],
+      "summary": "Indique si un changement de preset doit être envoyé au backend.",
+      "tags": [
+        "profil-conduite",
+        "utilitaire",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:valueFromPointer",
+      "type": "function",
+      "name": "valueFromPointer",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "lineRange": [
+        27,
+        37
+      ],
+      "summary": "Projette la position verticale d’un pointeur sur une plage numérique bornée et alignée sur son step.",
+      "tags": [
+        "profil-conduite",
+        "utilitaire",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "type": "file",
+      "name": "GalaxyToggleCard.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "summary": "Implémente la carte de réglage générique de Galaxy pour switches, sliders, couleurs, listes, actions et favoris, avec sauvegarde API et rollback en cas d’échec.",
+      "tags": [
+        "composant-vue",
+        "parametres-ui",
+        "formulaire",
+        "api-client"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Composant Vue Options API qui adapte son rendu au ui_type décrit par le catalogue de paramètres."
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "type": "file",
+      "name": "LongitudinalMode.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "summary": "Affiche et modifie le mode de contrôle longitudinal, interroge périodiquement son état verrouillé et rend les paramètres conditionnels associés au mode actif.",
+      "tags": [
+        "composant-vue",
+        "controle-longitudinal",
+        "polling",
+        "parametres-ui"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "type": "file",
+      "name": "ParamSections.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "summary": "Charge un catalogue de paramètres, filtre ses sections et rend chaque arborescence de réglages dans une vue Galaxy réutilisable.",
+      "tags": [
+        "composant-vue",
+        "catalogue-parametres",
+        "filtrage",
+        "interface-utilisateur"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "type": "file",
+      "name": "PersonalityProfiles.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "summary": "Gère l’édition complète des profils de conduite, dont les presets, courbes de vitesse, paramètres avancés, migration et verrouillage selon l’état routier.",
+      "tags": [
+        "composant-vue",
+        "profil-conduite",
+        "edition-courbe",
+        "api-client"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "file",
+      "name": "SettingTree.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "summary": "Rend récursivement les paramètres visibles avec leur profondeur, leurs groupes et l’ouverture contrôlée de leurs enfants.",
+      "tags": [
+        "composant-vue",
+        "arborescence",
+        "parametres-ui",
+        "rendu-recursif"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "file",
+      "name": "params.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "summary": "Regroupe les règles de visibilité, conversion d’unités, bornage numérique, formatage et construction hiérarchique utilisées par l’interface de paramètres Galaxy.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "formatage",
+        "utilitaire"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:usesMetricUnits",
+      "type": "function",
+      "name": "usesMetricUnits",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        9,
+        13
+      ],
+      "summary": "Interprète les différentes représentations booléennes du paramètre IsMetric.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:vehicleSpeedUnit",
+      "type": "function",
+      "name": "vehicleSpeedUnit",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        15,
+        17
+      ],
+      "summary": "Choisit l’unité de vitesse véhicule cohérente avec les préférences courantes.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:resolveVehicleUnitParam",
+      "type": "function",
+      "name": "resolveVehicleUnitParam",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        19,
+        42
+      ],
+      "summary": "Adapte les bornes, le step, l’unité et les libellés d’un paramètre de vitesse au système métrique ou impérial.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:normalizeVehicleMake",
+      "type": "function",
+      "name": "normalizeVehicleMake",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        77,
+        79
+      ],
+      "summary": "Normalise un nom de constructeur pour les comparaisons de visibilité.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isVehicleSettingVisible",
+      "type": "function",
+      "name": "isVehicleSettingVisible",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        81,
+        86
+      ],
+      "summary": "Vérifie qu’un réglage est compatible avec le constructeur sélectionné.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:matchesSettingValueCondition",
+      "type": "function",
+      "name": "matchesSettingValueCondition",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        92,
+        97
+      ],
+      "summary": "Évalue une condition de visibilité fondée sur la valeur d’un autre paramètre.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isSettingVisible",
+      "type": "function",
+      "name": "isSettingVisible",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        108,
+        112
+      ],
+      "summary": "Applique les capacités, le véhicule, le mode développeur et le niveau de réglage pour décider de l’affichage.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isAdvancedHiddenByDeveloperMode",
+      "type": "function",
+      "name": "isAdvancedHiddenByDeveloperMode",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        114,
+        117
+      ],
+      "summary": "Repère un réglage avancé structurellement valide mais masqué hors mode développeur.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:countAdvancedHiddenByDeveloperMode",
+      "type": "function",
+      "name": "countAdvancedHiddenByDeveloperMode",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        119,
+        129
+      ],
+      "summary": "Compte les réglages avancés que le mode développeur rendrait visibles.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:numericBounds",
+      "type": "function",
+      "name": "numericBounds",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        131,
+        167
+      ],
+      "summary": "Résout les bornes et le step numériques, avec des règles spécialisées pour plusieurs paramètres critiques.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:stepPrecision",
+      "type": "function",
+      "name": "stepPrecision",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        169,
+        177
+      ],
+      "summary": "Déduit la précision décimale d’un step, sauf précision explicitement déclarée.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:numericEpsilon",
+      "type": "function",
+      "name": "numericEpsilon",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        179,
+        181
+      ],
+      "summary": "Calcule une tolérance numérique adaptée à la précision d’affichage.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:clampNumeric",
+      "type": "function",
+      "name": "clampNumeric",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        183,
+        185
+      ],
+      "summary": "Borne une valeur numérique entre un minimum et un maximum.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:snapNumericToBoundsAndStep",
+      "type": "function",
+      "name": "snapNumericToBoundsAndStep",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        187,
+        199
+      ],
+      "summary": "Borne puis aligne une valeur sur la grille de step en respectant la précision demandée.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:coerceValueByType",
+      "type": "function",
+      "name": "coerceValueByType",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        201,
+        211
+      ],
+      "summary": "Convertit une saisie en entier ou float selon le type de donnée déclaré.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatSliderValue",
+      "type": "function",
+      "name": "formatSliderValue",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        213,
+        239
+      ],
+      "summary": "Formate la valeur d’un slider et applique les libellés spéciaux de durée, volume ou désactivation.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatNumericParamValue",
+      "type": "function",
+      "name": "formatNumericParamValue",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        241,
+        246
+      ],
+      "summary": "Formate un paramètre numérique avec ses bornes résolues et son unité courante.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatReadoutValue",
+      "type": "function",
+      "name": "formatReadoutValue",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        248,
+        255
+      ],
+      "summary": "Formate une valeur de lecture seule avec précision et unité, ou un marqueur d’indisponibilité.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:normalizeHexColor",
+      "type": "function",
+      "name": "normalizeHexColor",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        257,
+        263
+      ],
+      "summary": "Valide une couleur hexadécimale et la normalise en notation RGB minuscule.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:getColorDefault",
+      "type": "function",
+      "name": "getColorDefault",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        265,
+        269
+      ],
+      "summary": "Résout la couleur par défaut déclarée ou une valeur de repli propre au paramètre.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:slugifySectionName",
+      "type": "function",
+      "name": "slugifySectionName",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        271,
+        276
+      ],
+      "summary": "Transforme un nom de section en slug stable pour le routage.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isGroupParam",
+      "type": "function",
+      "name": "isGroupParam",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        278,
+        280
+      ],
+      "summary": "Détermine si un paramètre représente un groupe sans valeur propre.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:applyParamChange",
+      "type": "function",
+      "name": "applyParamChange",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        282,
+        294
+      ],
+      "summary": "Applique de manière immuable un patch de paramètre ou un ensemble de valeurs.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isParamEnabledForChildren",
+      "type": "function",
+      "name": "isParamEnabledForChildren",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        296,
+        300
+      ],
+      "summary": "Détermine si les paramètres enfants d’un parent peuvent être affichés.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:hasChildParams",
+      "type": "function",
+      "name": "hasChildParams",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        302,
+        304
+      ],
+      "summary": "Vérifie qu’une liste contient au moins un enfant pour la clé donnée.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:buildRenderTree",
+      "type": "function",
+      "name": "buildRenderTree",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "lineRange": [
+        306,
+        324
+      ],
+      "summary": "Parcourt la hiérarchie des paramètres visibles et produit une liste aplatie avec profondeur de rendu.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "utilitaire"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "type": "file",
+      "name": "Settings.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "summary": "Orchestre la page principale des réglages Galaxy : chargement du catalogue et des valeurs, recherche, navigation par section, mode développeur et sous-vues spécialisées.",
+      "tags": [
+        "vue-galaxy",
+        "parametres-ui",
+        "recherche",
+        "navigation"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:formatProfileSpeed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:formatProfileSpeed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:profileSpeedUnit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:profileSpeedUnit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:personalityProfileParamKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:personalityProfileParamKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:shouldSubmitPersonalityPreset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:shouldSubmitPersonalityPreset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:valueFromPointer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs:valueFromPointer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "target": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:usesMetricUnits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:usesMetricUnits",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:vehicleSpeedUnit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:vehicleSpeedUnit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:resolveVehicleUnitParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:resolveVehicleUnitParam",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:normalizeVehicleMake",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:normalizeVehicleMake",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isVehicleSettingVisible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isVehicleSettingVisible",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:matchesSettingValueCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:matchesSettingValueCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isSettingVisible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isSettingVisible",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isAdvancedHiddenByDeveloperMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isAdvancedHiddenByDeveloperMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:countAdvancedHiddenByDeveloperMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:countAdvancedHiddenByDeveloperMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:numericBounds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:numericBounds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:stepPrecision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:stepPrecision",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:numericEpsilon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:numericEpsilon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:clampNumeric",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:clampNumeric",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:snapNumericToBoundsAndStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:snapNumericToBoundsAndStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:coerceValueByType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:coerceValueByType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatSliderValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatSliderValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatNumericParamValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatNumericParamValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatReadoutValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatReadoutValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:normalizeHexColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:normalizeHexColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:getColorDefault",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:getColorDefault",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:slugifySectionName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:slugifySectionName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isGroupParam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isGroupParam",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:applyParamChange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:applyParamChange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isParamEnabledForChildren",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isParamEnabledForChildren",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:hasChildParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:hasChildParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:buildRenderTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:buildRenderTree",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:vehicleSpeedUnit",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:usesMetricUnits",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:resolveVehicleUnitParam",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:usesMetricUnits",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:resolveVehicleUnitParam",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:vehicleSpeedUnit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isVehicleSettingVisible",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:normalizeVehicleMake",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:countAdvancedHiddenByDeveloperMode",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isAdvancedHiddenByDeveloperMode",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:numericBounds",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:resolveVehicleUnitParam",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:snapNumericToBoundsAndStep",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:clampNumeric",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatNumericParamValue",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:resolveVehicleUnitParam",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatNumericParamValue",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:numericBounds",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatNumericParamValue",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:formatSliderValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:getColorDefault",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:normalizeHexColor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isParamEnabledForChildren",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/params.js:isGroupParam",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

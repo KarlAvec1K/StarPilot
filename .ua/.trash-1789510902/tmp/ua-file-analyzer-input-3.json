@@ -1,0 +1,79 @@
+{
+  "projectRoot": "C:\\Users\\karlp\\Documents\\ChatGPT\\StarPilot",
+  "batchFiles": [
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "language": "javascript",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "language": "javascript",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "language": "javascript",
+      "sizeLines": 817,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "language": "javascript",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "language": "javascript",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "language": "javascript",
+      "sizeLines": 815,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "language": "javascript",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "language": "javascript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "starpilot/system/the_galaxy/assets/mobile/js/api.js": [],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js": [],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/composables.js"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/composables.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/store.js"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/store.js": [],
+    "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/composables.js"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/composables.js"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js": [
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/store.js"
+    ]
+  }
+}

@@ -1,0 +1,716 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/controls/lib/conditional_chill_mode.py",
+      "type": "file",
+      "name": "conditional_chill_mode.py",
+      "filePath": "starpilot/controls/lib/conditional_chill_mode.py",
+      "summary": "Implémente la machine d’état du Conditional Chill Mode à partir de la vitesse, des véhicules voisins, des arrêts et des confirmations temporelles.",
+      "tags": [
+        "mode-chill",
+        "controle-longitudinal",
+        "machine-etat",
+        "detection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:starpilot/controls/lib/conditional_chill_mode.py:DetectorToggles",
+      "type": "class",
+      "name": "DetectorToggles",
+      "filePath": "starpilot/controls/lib/conditional_chill_mode.py",
+      "lineRange": [
+        13,
+        22
+      ],
+      "summary": "Regroupe l’état et le comportement de `DetectorToggles` dans le module `conditional_chill_mode.py`, avec 0 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "mode-chill",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/lib/conditional_chill_mode.py:ConditionalChillMode",
+      "type": "class",
+      "name": "ConditionalChillMode",
+      "filePath": "starpilot/controls/lib/conditional_chill_mode.py",
+      "lineRange": [
+        28,
+        363
+      ],
+      "summary": "Regroupe l’état et le comportement de `ConditionalChillMode` dans le module `conditional_chill_mode.py`, avec 16 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "mode-chill",
+        "controle-longitudinal"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/conditional_experimental_mode.py",
+      "type": "file",
+      "name": "conditional_experimental_mode.py",
+      "filePath": "starpilot/controls/lib/conditional_experimental_mode.py",
+      "summary": "Active ou désactive conditionnellement Experimental Mode selon les courbes, véhicules lents, arrêts, intersections et choix manuels du conducteur.",
+      "tags": [
+        "mode-experimental",
+        "controle-longitudinal",
+        "machine-etat",
+        "detection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/controls/lib/conditional_experimental_mode.py:interp",
+      "type": "function",
+      "name": "interp",
+      "filePath": "starpilot/controls/lib/conditional_experimental_mode.py",
+      "lineRange": [
+        17,
+        18
+      ],
+      "summary": "Calcule la valeur retournée par `interp` dans le module `conditional_experimental_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "mode-experimental",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/conditional_experimental_mode.py:scale_threshold",
+      "type": "function",
+      "name": "scale_threshold",
+      "filePath": "starpilot/controls/lib/conditional_experimental_mode.py",
+      "lineRange": [
+        21,
+        23
+      ],
+      "summary": "Calcule la valeur retournée par `scale_threshold` dans le module `conditional_experimental_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "mode-experimental",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/lib/conditional_experimental_mode.py:ConditionalExperimentalMode",
+      "type": "class",
+      "name": "ConditionalExperimentalMode",
+      "filePath": "starpilot/controls/lib/conditional_experimental_mode.py",
+      "lineRange": [
+        26,
+        611
+      ],
+      "summary": "Regroupe l’état et le comportement de `ConditionalExperimentalMode` dans le module `conditional_experimental_mode.py`, avec 15 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "mode-experimental",
+        "controle-longitudinal"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "type": "file",
+      "name": "curve_speed_controller.py",
+      "filePath": "starpilot/controls/lib/curve_speed_controller.py",
+      "summary": "Apprend une courbe d’accélération latérale et calcule une vitesse cible de virage tout en gérant les dérogations manuelles.",
+      "tags": [
+        "vitesse-virage",
+        "apprentissage",
+        "controle-longitudinal",
+        "calibration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/controls/lib/curve_speed_controller.py:weighted_isotonic",
+      "type": "function",
+      "name": "weighted_isotonic",
+      "filePath": "starpilot/controls/lib/curve_speed_controller.py",
+      "lineRange": [
+        60,
+        90
+      ],
+      "summary": "Calcule la valeur retournée par `weighted_isotonic` dans le module `curve_speed_controller.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "vitesse-virage",
+        "apprentissage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/curve_speed_controller.py:is_user_overriding_longitudinal",
+      "type": "function",
+      "name": "is_user_overriding_longitudinal",
+      "filePath": "starpilot/controls/lib/curve_speed_controller.py",
+      "lineRange": [
+        93,
+        106
+      ],
+      "summary": "Évalue la condition portée par `is_user_overriding_longitudinal` dans le module `curve_speed_controller.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "vitesse-virage",
+        "apprentissage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/curve_speed_controller.py:is_manual_speed_control",
+      "type": "function",
+      "name": "is_manual_speed_control",
+      "filePath": "starpilot/controls/lib/curve_speed_controller.py",
+      "lineRange": [
+        109,
+        111
+      ],
+      "summary": "Évalue la condition portée par `is_manual_speed_control` dans le module `curve_speed_controller.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "vitesse-virage",
+        "apprentissage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/lib/curve_speed_controller.py:CurveSpeedController",
+      "type": "class",
+      "name": "CurveSpeedController",
+      "filePath": "starpilot/controls/lib/curve_speed_controller.py",
+      "lineRange": [
+        114,
+        434
+      ],
+      "summary": "Regroupe l’état et le comportement de `CurveSpeedController` dans le module `curve_speed_controller.py`, avec 18 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "vitesse-virage",
+        "apprentissage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "type": "file",
+      "name": "neural_network_feedforward.py",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "summary": "Charge et évalue un réseau feedforward pour prédire la commande latérale, avec adaptation des paramètres de friction et de délai.",
+      "tags": [
+        "reseau-neuronal",
+        "feedforward",
+        "controle-lateral",
+        "modele"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/controls/lib/neural_network_feedforward.py:get_nnff_lat_jerk_friction_factor",
+      "type": "function",
+      "name": "get_nnff_lat_jerk_friction_factor",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        41,
+        46
+      ],
+      "summary": "Récupère ou résout les données de `get_nnff_lat_jerk_friction_factor` dans le module `neural_network_feedforward.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/neural_network_feedforward.py:get_lookahead_value",
+      "type": "function",
+      "name": "get_lookahead_value",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        115,
+        122
+      ],
+      "summary": "Récupère ou résout les données de `get_lookahead_value` dans le module `neural_network_feedforward.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/neural_network_feedforward.py:get_nn_model",
+      "type": "function",
+      "name": "get_nn_model",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        124,
+        129
+      ],
+      "summary": "Récupère ou résout les données de `get_nn_model` dans le module `neural_network_feedforward.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/neural_network_feedforward.py:get_nn_model_path",
+      "type": "function",
+      "name": "get_nn_model_path",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        131,
+        160
+      ],
+      "summary": "Récupère ou résout les données de `get_nn_model_path` dans le module `neural_network_feedforward.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/neural_network_feedforward.py:get_predicted_lateral_jerk",
+      "type": "function",
+      "name": "get_predicted_lateral_jerk",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        162,
+        165
+      ],
+      "summary": "Récupère ou résout les données de `get_predicted_lateral_jerk` dans le module `neural_network_feedforward.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/neural_network_feedforward.py:roll_pitch_adjust",
+      "type": "function",
+      "name": "roll_pitch_adjust",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        172,
+        173
+      ],
+      "summary": "Implémente l’opération `roll_pitch_adjust` dans le module `neural_network_feedforward.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/neural_network_feedforward.py:sign",
+      "type": "function",
+      "name": "sign",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        175,
+        176
+      ],
+      "summary": "Calcule la valeur retournée par `sign` dans le module `neural_network_feedforward.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/lib/neural_network_feedforward.py:similarity",
+      "type": "function",
+      "name": "similarity",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        178,
+        179
+      ],
+      "summary": "Calcule la valeur retournée par `similarity` dans le module `neural_network_feedforward.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/lib/neural_network_feedforward.py:FluxModel",
+      "type": "class",
+      "name": "FluxModel",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        53,
+        113
+      ],
+      "summary": "Regroupe l’état et le comportement de `FluxModel` dans le module `neural_network_feedforward.py`, avec 7 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:starpilot/controls/lib/neural_network_feedforward.py:LatControlNNFF",
+      "type": "class",
+      "name": "LatControlNNFF",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "lineRange": [
+        181,
+        367
+      ],
+      "summary": "Regroupe l’état et le comportement de `LatControlNNFF` dans le module `neural_network_feedforward.py`, avec 4 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "reseau-neuronal",
+        "feedforward"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/controls/lib/speed_limit_controller.py",
+      "type": "file",
+      "name": "speed_limit_controller.py",
+      "filePath": "starpilot/controls/lib/speed_limit_controller.py",
+      "summary": "Fusionne les limites de vitesse cartographiques et visuelles, applique les décalages et gère les confirmations ainsi que les overrides du conducteur.",
+      "tags": [
+        "limite-vitesse",
+        "controle-longitudinal",
+        "cartographie",
+        "override"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:starpilot/controls/lib/speed_limit_controller.py:SpeedLimitController",
+      "type": "class",
+      "name": "SpeedLimitController",
+      "filePath": "starpilot/controls/lib/speed_limit_controller.py",
+      "lineRange": [
+        46,
+        580
+      ],
+      "summary": "Regroupe l’état et le comportement de `SpeedLimitController` dans le module `speed_limit_controller.py`, avec 16 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "limite-vitesse",
+        "controle-longitudinal"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/controls/lib/conditional_chill_mode.py",
+      "target": "class:starpilot/controls/lib/conditional_chill_mode.py:DetectorToggles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/conditional_chill_mode.py",
+      "target": "class:starpilot/controls/lib/conditional_chill_mode.py:DetectorToggles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/conditional_chill_mode.py",
+      "target": "class:starpilot/controls/lib/conditional_chill_mode.py:ConditionalChillMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/conditional_chill_mode.py",
+      "target": "class:starpilot/controls/lib/conditional_chill_mode.py:ConditionalChillMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/conditional_experimental_mode.py",
+      "target": "function:starpilot/controls/lib/conditional_experimental_mode.py:interp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/conditional_experimental_mode.py",
+      "target": "function:starpilot/controls/lib/conditional_experimental_mode.py:interp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/conditional_experimental_mode.py",
+      "target": "function:starpilot/controls/lib/conditional_experimental_mode.py:scale_threshold",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/conditional_experimental_mode.py",
+      "target": "function:starpilot/controls/lib/conditional_experimental_mode.py:scale_threshold",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/conditional_experimental_mode.py",
+      "target": "class:starpilot/controls/lib/conditional_experimental_mode.py:ConditionalExperimentalMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/conditional_experimental_mode.py",
+      "target": "class:starpilot/controls/lib/conditional_experimental_mode.py:ConditionalExperimentalMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "target": "function:starpilot/controls/lib/curve_speed_controller.py:weighted_isotonic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "target": "function:starpilot/controls/lib/curve_speed_controller.py:weighted_isotonic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "target": "function:starpilot/controls/lib/curve_speed_controller.py:is_user_overriding_longitudinal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "target": "function:starpilot/controls/lib/curve_speed_controller.py:is_user_overriding_longitudinal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "target": "function:starpilot/controls/lib/curve_speed_controller.py:is_manual_speed_control",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "target": "function:starpilot/controls/lib/curve_speed_controller.py:is_manual_speed_control",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "target": "class:starpilot/controls/lib/curve_speed_controller.py:CurveSpeedController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "target": "class:starpilot/controls/lib/curve_speed_controller.py:CurveSpeedController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_nnff_lat_jerk_friction_factor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_nnff_lat_jerk_friction_factor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_lookahead_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_lookahead_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_nn_model",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_nn_model",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_nn_model_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_nn_model_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_predicted_lateral_jerk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:get_predicted_lateral_jerk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:roll_pitch_adjust",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:roll_pitch_adjust",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:sign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:sign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:similarity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "function:starpilot/controls/lib/neural_network_feedforward.py:similarity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "class:starpilot/controls/lib/neural_network_feedforward.py:FluxModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "class:starpilot/controls/lib/neural_network_feedforward.py:FluxModel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "class:starpilot/controls/lib/neural_network_feedforward.py:LatControlNNFF",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "target": "class:starpilot/controls/lib/neural_network_feedforward.py:LatControlNNFF",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/lib/speed_limit_controller.py",
+      "target": "class:starpilot/controls/lib/speed_limit_controller.py:SpeedLimitController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/lib/speed_limit_controller.py",
+      "target": "class:starpilot/controls/lib/speed_limit_controller.py:SpeedLimitController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

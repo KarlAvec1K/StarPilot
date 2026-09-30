@@ -1,0 +1,802 @@
+{
+  "nodes": [
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+      "type": "file",
+      "name": "main_panel.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+      "summary": "Gère la navigation hiérarchique du panneau StarPilot, le hub de catégories, les sous-panneaux et leur cycle d’affichage.",
+      "tags": [
+        "interface-utilisateur",
+        "navigation",
+        "réglages",
+        "panneau"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/main_panel.py:StarPilotLayout",
+      "type": "class",
+      "name": "StarPilotLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+      "lineRange": [
+        22,
+        319
+      ],
+      "summary": "Compose l’écran `StarPilotLayout` et orchestre ses vues, commandes et interactions pour la navigation principale des réglages StarPilot.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "navigation",
+        "réglages"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "type": "file",
+      "name": "maps.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "summary": "Pilote l’écran de cartes hors ligne : sélection de régions, état du stockage, progression, planification, annulation et suppression des téléchargements.",
+      "tags": [
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement",
+        "stockage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_format_mb",
+      "type": "function",
+      "name": "_format_mb",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "lineRange": [
+        107,
+        111
+      ],
+      "summary": "Transforme et normalise les données via `_format_mb` pour la gestion des cartes hors ligne.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_format_elapsed_ms",
+      "type": "function",
+      "name": "_format_elapsed_ms",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "lineRange": [
+        114,
+        123
+      ],
+      "summary": "Transforme et normalise les données via `_format_elapsed_ms` pour la gestion des cartes hors ligne.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_format_eta_ms",
+      "type": "function",
+      "name": "_format_eta_ms",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "lineRange": [
+        126,
+        136
+      ],
+      "summary": "Transforme et normalise les données via `_format_eta_ms` pour la gestion des cartes hors ligne.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_localized_schedule_label",
+      "type": "function",
+      "name": "_localized_schedule_label",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "lineRange": [
+        139,
+        140
+      ],
+      "summary": "Implémente l’opération `_localized_schedule_label` nécessaire à la gestion des cartes hors ligne.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_selected_token_set",
+      "type": "function",
+      "name": "_selected_token_set",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "lineRange": [
+        143,
+        145
+      ],
+      "summary": "Implémente l’opération `_selected_token_set` nécessaire à la gestion des cartes hors ligne.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/maps.py:MapsDownloadState",
+      "type": "class",
+      "name": "MapsDownloadState",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "lineRange": [
+        149,
+        156
+      ],
+      "summary": "Conserve et met à jour l’état `MapsDownloadState` utilisé par la gestion des cartes hors ligne.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/maps.py:MapsManagerView",
+      "type": "class",
+      "name": "MapsManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "lineRange": [
+        159,
+        425
+      ],
+      "summary": "Implémente la vue interactive `MapsManagerView` pour la gestion des cartes hors ligne.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/maps.py:StarPilotMapsLayout",
+      "type": "class",
+      "name": "StarPilotMapsLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "lineRange": [
+        428,
+        924
+      ],
+      "summary": "Compose l’écran `StarPilotMapsLayout` et orchestre ses vues, commandes et interactions pour la gestion des cartes hors ligne.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "type": "file",
+      "name": "navigation.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "summary": "Fournit la recherche Mapbox, les destinations favorites et les commandes de démarrage ou d’annulation de navigation dans les réglages StarPilot.",
+      "tags": [
+        "interface-utilisateur",
+        "navigation",
+        "mapbox",
+        "favoris"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:MapboxSearchError",
+      "type": "class",
+      "name": "MapboxSearchError",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "lineRange": [
+        68,
+        69
+      ],
+      "summary": "Regroupe l’état et les opérations de `MapboxSearchError` pour la configuration de la navigation.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "navigation",
+        "mapbox"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:SearchResult",
+      "type": "class",
+      "name": "SearchResult",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "lineRange": [
+        73,
+        93
+      ],
+      "summary": "Regroupe l’état et les opérations de `SearchResult` pour la configuration de la navigation.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "navigation",
+        "mapbox"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:MapboxSearchClient",
+      "type": "class",
+      "name": "MapboxSearchClient",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "lineRange": [
+        96,
+        219
+      ],
+      "summary": "Regroupe l’état et les opérations de `MapboxSearchClient` pour la configuration de la navigation.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "navigation",
+        "mapbox"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:NavigationManagerView",
+      "type": "class",
+      "name": "NavigationManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "lineRange": [
+        237,
+        255
+      ],
+      "summary": "Implémente la vue interactive `NavigationManagerView` pour la configuration de la navigation.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "navigation",
+        "mapbox"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:StarPilotNavigationLayout",
+      "type": "class",
+      "name": "StarPilotNavigationLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "lineRange": [
+        258,
+        879
+      ],
+      "summary": "Compose l’écran `StarPilotNavigationLayout` et orchestre ses vues, commandes et interactions pour la configuration de la navigation.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "navigation",
+        "mapbox"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "type": "file",
+      "name": "panel.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "summary": "Définit les fondations des panneaux StarPilot, le cache Params par frame, les métadonnées de catégories et les helpers de sélection.",
+      "tags": [
+        "interface-utilisateur",
+        "panneau",
+        "paramètres",
+        "infrastructure-ui"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/panel.py:create_tile_panel",
+      "type": "function",
+      "name": "create_tile_panel",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "lineRange": [
+        260,
+        273
+      ],
+      "summary": "Construit l’élément produit par `create_tile_panel` pour l’infrastructure des panneaux de réglages.",
+      "tags": [
+        "fonction",
+        "construction",
+        "interface-utilisateur",
+        "panneau",
+        "paramètres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:FrameCachedParams",
+      "type": "class",
+      "name": "FrameCachedParams",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "lineRange": [
+        19,
+        60
+      ],
+      "summary": "Regroupe l’état et les opérations de `FrameCachedParams` pour l’infrastructure des panneaux de réglages.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "panneau",
+        "paramètres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:StarPilotPanelType",
+      "type": "class",
+      "name": "StarPilotPanelType",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "lineRange": [
+        63,
+        74
+      ],
+      "summary": "Structure les valeurs de `StarPilotPanelType` partagées par l’infrastructure des panneaux de réglages.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "panneau",
+        "paramètres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:StarPilotPanelInfo",
+      "type": "class",
+      "name": "StarPilotPanelInfo",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "lineRange": [
+        78,
+        80
+      ],
+      "summary": "Structure les valeurs de `StarPilotPanelInfo` partagées par l’infrastructure des panneaux de réglages.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "panneau",
+        "paramètres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:StarPilotPanel",
+      "type": "class",
+      "name": "StarPilotPanel",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "lineRange": [
+        84,
+        257
+      ],
+      "summary": "Regroupe l’état et les opérations de `StarPilotPanel` pour l’infrastructure des panneaux de réglages.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "panneau",
+        "paramètres"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:_SettingsPage",
+      "type": "class",
+      "name": "_SettingsPage",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "lineRange": [
+        280,
+        369
+      ],
+      "summary": "Regroupe l’état et les opérations de `_SettingsPage` pour l’infrastructure des panneaux de réglages.",
+      "tags": [
+        "classe",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "panneau",
+        "paramètres"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "type": "file",
+      "name": "scribble.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "summary": "Dessine la bibliothèque d’icônes personnalisées StarPilot à partir de primitives géométriques.",
+      "tags": [
+        "interface-utilisateur",
+        "icônes",
+        "graphisme",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/scribble.py:_draw_custom_icon_geometry",
+      "type": "function",
+      "name": "_draw_custom_icon_geometry",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "lineRange": [
+        7,
+        426
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_custom_icon_geometry` dans le rendu des icônes personnalisées.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "icônes",
+        "graphisme"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/scribble.py:draw_custom_icon",
+      "type": "function",
+      "name": "draw_custom_icon",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "lineRange": [
+        429,
+        468
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_custom_icon` dans le rendu des icônes personnalisées.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "icônes",
+        "graphisme"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/main_panel.py:StarPilotLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/main_panel.py:StarPilotLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_format_mb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_format_mb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_format_elapsed_ms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_format_elapsed_ms",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_format_eta_ms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_format_eta_ms",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_localized_schedule_label",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_localized_schedule_label",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_selected_token_set",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/maps.py:_selected_token_set",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/maps.py:MapsDownloadState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/maps.py:MapsDownloadState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/maps.py:MapsManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/maps.py:MapsManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/maps.py:StarPilotMapsLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/maps.py:StarPilotMapsLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:MapboxSearchError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:MapboxSearchError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:SearchResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:SearchResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:MapboxSearchClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:MapboxSearchClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:NavigationManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:NavigationManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:StarPilotNavigationLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/navigation.py:StarPilotNavigationLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/panel.py:create_tile_panel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/panel.py:create_tile_panel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:FrameCachedParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:FrameCachedParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:StarPilotPanelType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:StarPilotPanelType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:StarPilotPanelInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:StarPilotPanelInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:StarPilotPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:StarPilotPanel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:_SettingsPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/panel.py:_SettingsPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/scribble.py:_draw_custom_icon_geometry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/scribble.py:_draw_custom_icon_geometry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/scribble.py:draw_custom_icon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/scribble.py:draw_custom_icon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

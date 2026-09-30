@@ -1,0 +1,32 @@
+{
+  "projectRoot": "C:/Users/karlp/Documents/ChatGPT/StarPilot",
+  "batchFiles": [
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "language": "python",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "language": "python",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "language": "python",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py": [],
+    "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py": [
+      "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py"
+    ],
+    "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py": [
+      "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py"
+    ]
+  }
+}

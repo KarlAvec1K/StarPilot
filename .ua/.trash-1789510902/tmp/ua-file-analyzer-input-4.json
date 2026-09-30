@@ -1,0 +1,33 @@
+{
+  "projectRoot": "C:\\Users\\karlp\\Documents\\ChatGPT\\StarPilot",
+  "batchFiles": [
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "language": "javascript",
+      "sizeLines": 257,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs",
+      "language": "javascript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "language": "javascript",
+      "sizeLines": 204,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js": [
+      "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs"
+    ],
+    "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs": [],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js": [
+      "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js"
+    ]
+  }
+}

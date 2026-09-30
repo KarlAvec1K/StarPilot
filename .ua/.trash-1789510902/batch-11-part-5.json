@@ -1,0 +1,1185 @@
+{
+  "nodes": [
+    {
+      "id": "file:system/camerad/main.cc",
+      "type": "file",
+      "name": "main.cc",
+      "filePath": "system/camerad/main.cc",
+      "summary": "Démarre camerad avec l’affinité CPU prévue, tolère certains échecs hors production et désactive la caméra grand-angle selon le Param dédié.",
+      "tags": [
+        "camera",
+        "point-entree",
+        "affinite-cpu",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/camerad/main.cc:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "system/camerad/main.cc",
+      "lineRange": [
+        7,
+        22
+      ],
+      "summary": "Lance le point d’entrée représenté par `main` dans le module `main.cc` de StarPilot.",
+      "tags": [
+        "fonction",
+        "point-entree",
+        "camera"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:system/manager/launch_param_migrations.py",
+      "type": "file",
+      "name": "launch_param_migrations.py",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "summary": "Applique des migrations idempotentes aux Params StarPilot au démarrage, notamment pour les réglages UI, vision, direction et valeurs héritées.",
+      "tags": [
+        "migration",
+        "parametres",
+        "demarrage",
+        "compatibilite"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_approx_equal",
+      "type": "function",
+      "name": "_approx_equal",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        103,
+        104
+      ],
+      "summary": "Implémente l’opération `_approx_equal` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_default_marker_path",
+      "type": "function",
+      "name": "_default_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        107,
+        108
+      ],
+      "summary": "Construit la représentation produite par `_default_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_branch_defaults_marker_path",
+      "type": "function",
+      "name": "_branch_defaults_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        111,
+        112
+      ],
+      "summary": "Implémente l’opération `_branch_defaults_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_acceleration_profile_marker_path",
+      "type": "function",
+      "name": "_acceleration_profile_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        115,
+        116
+      ],
+      "summary": "Implémente l’opération `_acceleration_profile_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_legacy_ui_selection_marker_path",
+      "type": "function",
+      "name": "_legacy_ui_selection_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        119,
+        120
+      ],
+      "summary": "Implémente l’opération `_legacy_ui_selection_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_lateral_method_rebrand_marker_path",
+      "type": "function",
+      "name": "_lateral_method_rebrand_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        123,
+        124
+      ],
+      "summary": "Implémente l’opération `_lateral_method_rebrand_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_vision_speed_limit_detection_marker_path",
+      "type": "function",
+      "name": "_vision_speed_limit_detection_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        127,
+        128
+      ],
+      "summary": "Implémente l’opération `_vision_speed_limit_detection_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_developer_metric_display_marker_path",
+      "type": "function",
+      "name": "_developer_metric_display_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        131,
+        132
+      ],
+      "summary": "Implémente l’opération `_developer_metric_display_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_lane_change_smoothing_marker_path",
+      "type": "function",
+      "name": "_lane_change_smoothing_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        135,
+        136
+      ],
+      "summary": "Implémente l’opération `_lane_change_smoothing_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_speed_limit_visibility_marker_path",
+      "type": "function",
+      "name": "_speed_limit_visibility_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        139,
+        140
+      ],
+      "summary": "Implémente l’opération `_speed_limit_visibility_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_device_shutdown_hours_marker_path",
+      "type": "function",
+      "name": "_device_shutdown_hours_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        143,
+        144
+      ],
+      "summary": "Implémente l’opération `_device_shutdown_hours_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_camera_view_default_marker_path",
+      "type": "function",
+      "name": "_camera_view_default_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        147,
+        148
+      ],
+      "summary": "Implémente l’opération `_camera_view_default_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_reverse_cruise_restore_marker_path",
+      "type": "function",
+      "name": "_reverse_cruise_restore_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        151,
+        152
+      ],
+      "summary": "Implémente l’opération `_reverse_cruise_restore_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_galaxy_new_default_marker_path",
+      "type": "function",
+      "name": "_galaxy_new_default_marker_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        155,
+        156
+      ],
+      "summary": "Implémente l’opération `_galaxy_new_default_marker_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_marker_dir_path",
+      "type": "function",
+      "name": "_marker_dir_path",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        159,
+        163
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_marker_dir_path` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_param_file_exists",
+      "type": "function",
+      "name": "_param_file_exists",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        166,
+        167
+      ],
+      "summary": "Implémente l’opération `_param_file_exists` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_should_migrate_bool_param",
+      "type": "function",
+      "name": "_should_migrate_bool_param",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        170,
+        171
+      ],
+      "summary": "Évalue la condition portée par `_should_migrate_bool_param` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_should_migrate_int_param",
+      "type": "function",
+      "name": "_should_migrate_int_param",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        174,
+        175
+      ],
+      "summary": "Évalue la condition portée par `_should_migrate_int_param` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_should_migrate_float_param",
+      "type": "function",
+      "name": "_should_migrate_float_param",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        178,
+        179
+      ],
+      "summary": "Évalue la condition portée par `_should_migrate_float_param` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_legacy_launch_param_migrations",
+      "type": "function",
+      "name": "_apply_legacy_launch_param_migrations",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        182,
+        201
+      ],
+      "summary": "Exécute le flux piloté par `_apply_legacy_launch_param_migrations` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_branch_default_migration",
+      "type": "function",
+      "name": "_apply_branch_default_migration",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        204,
+        218
+      ],
+      "summary": "Exécute le flux piloté par `_apply_branch_default_migration` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_acceleration_profile_default_migration",
+      "type": "function",
+      "name": "_apply_acceleration_profile_default_migration",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        221,
+        231
+      ],
+      "summary": "Exécute le flux piloté par `_apply_acceleration_profile_default_migration` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_remove_legacy_ui_selection",
+      "type": "function",
+      "name": "_remove_legacy_ui_selection",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        234,
+        243
+      ],
+      "summary": "Exécute le flux piloté par `_remove_legacy_ui_selection` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_lateral_method_rebrand_migration",
+      "type": "function",
+      "name": "_apply_lateral_method_rebrand_migration",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        246,
+        261
+      ],
+      "summary": "Exécute le flux piloté par `_apply_lateral_method_rebrand_migration` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_vision_speed_limit_detection_migration",
+      "type": "function",
+      "name": "_apply_vision_speed_limit_detection_migration",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        264,
+        272
+      ],
+      "summary": "Exécute le flux piloté par `_apply_vision_speed_limit_detection_migration` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_developer_metric_display_migration",
+      "type": "function",
+      "name": "_apply_developer_metric_display_migration",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        275,
+        284
+      ],
+      "summary": "Exécute le flux piloté par `_apply_developer_metric_display_migration` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_lane_change_smoothing_default_migration",
+      "type": "function",
+      "name": "_apply_lane_change_smoothing_default_migration",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        287,
+        296
+      ],
+      "summary": "Exécute le flux piloté par `_apply_lane_change_smoothing_default_migration` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_speed_limit_visibility_migration",
+      "type": "function",
+      "name": "_apply_speed_limit_visibility_migration",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        299,
+        311
+      ],
+      "summary": "Exécute le flux piloté par `_apply_speed_limit_visibility_migration` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_device_shutdown_hours_migration",
+      "type": "function",
+      "name": "_apply_device_shutdown_hours_migration",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        314,
+        325
+      ],
+      "summary": "Exécute le flux piloté par `_apply_device_shutdown_hours_migration` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_apply_camera_view_default_migration",
+      "type": "function",
+      "name": "_apply_camera_view_default_migration",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        328,
+        337
+      ],
+      "summary": "Exécute le flux piloté par `_apply_camera_view_default_migration` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_restore_reverse_cruise_param",
+      "type": "function",
+      "name": "_restore_reverse_cruise_param",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        340,
+        349
+      ],
+      "summary": "Exécute le flux piloté par `_restore_reverse_cruise_param` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:_enable_galaxy_new_default",
+      "type": "function",
+      "name": "_enable_galaxy_new_default",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        352,
+        358
+      ],
+      "summary": "Implémente l’opération `_enable_galaxy_new_default` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:apply_launch_param_migrations",
+      "type": "function",
+      "name": "apply_launch_param_migrations",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        361,
+        410
+      ],
+      "summary": "Exécute le flux piloté par `apply_launch_param_migrations` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:system/manager/launch_param_migrations.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        413,
+        421
+      ],
+      "summary": "Lance le point d’entrée représenté par `main` dans le module `launch_param_migrations.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "point-entree",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:system/manager/launch_param_migrations.py:ParamsLike",
+      "type": "class",
+      "name": "ParamsLike",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "lineRange": [
+        93,
+        100
+      ],
+      "summary": "Regroupe l’état et le comportement de `ParamsLike` dans le module `launch_param_migrations.py`, avec 7 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "migration",
+        "parametres"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:system/camerad/main.cc",
+      "target": "function:system/camerad/main.cc:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/camerad/main.cc",
+      "target": "function:system/camerad/main.cc:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_approx_equal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_approx_equal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_default_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_default_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_branch_defaults_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_branch_defaults_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_acceleration_profile_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_acceleration_profile_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_legacy_ui_selection_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_legacy_ui_selection_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_lateral_method_rebrand_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_lateral_method_rebrand_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_vision_speed_limit_detection_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_vision_speed_limit_detection_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_developer_metric_display_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_developer_metric_display_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_lane_change_smoothing_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_lane_change_smoothing_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_speed_limit_visibility_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_speed_limit_visibility_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_device_shutdown_hours_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_device_shutdown_hours_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_camera_view_default_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_camera_view_default_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_reverse_cruise_restore_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_reverse_cruise_restore_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_galaxy_new_default_marker_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_galaxy_new_default_marker_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_marker_dir_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_marker_dir_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_param_file_exists",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_param_file_exists",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_should_migrate_bool_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_should_migrate_bool_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_should_migrate_int_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_should_migrate_int_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_should_migrate_float_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_should_migrate_float_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_legacy_launch_param_migrations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_legacy_launch_param_migrations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_branch_default_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_branch_default_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_acceleration_profile_default_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_acceleration_profile_default_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_remove_legacy_ui_selection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_remove_legacy_ui_selection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_lateral_method_rebrand_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_lateral_method_rebrand_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_vision_speed_limit_detection_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_vision_speed_limit_detection_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_developer_metric_display_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_developer_metric_display_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_lane_change_smoothing_default_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_lane_change_smoothing_default_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_speed_limit_visibility_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_speed_limit_visibility_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_device_shutdown_hours_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_device_shutdown_hours_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_camera_view_default_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_apply_camera_view_default_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_restore_reverse_cruise_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_restore_reverse_cruise_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_enable_galaxy_new_default",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:_enable_galaxy_new_default",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:apply_launch_param_migrations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:apply_launch_param_migrations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "function:system/manager/launch_param_migrations.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "class:system/manager/launch_param_migrations.py:ParamsLike",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:system/manager/launch_param_migrations.py",
+      "target": "class:system/manager/launch_param_migrations.py:ParamsLike",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

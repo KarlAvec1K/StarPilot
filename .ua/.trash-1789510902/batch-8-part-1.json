@@ -1,0 +1,1773 @@
+{
+  "nodes": [
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "type": "file",
+      "name": "rainbow_path.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "summary": "Anime un dégradé arc-en-ciel HSL pour la trajectoire routière et expose les couleurs mises à jour à chaque frame.",
+      "tags": [
+        "interface-utilisateur",
+        "trajectoire",
+        "animation",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/rainbow_path.py:_hsla_to_color",
+      "type": "function",
+      "name": "_hsla_to_color",
+      "filePath": "selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "lineRange": [
+        16,
+        18
+      ],
+      "summary": "Implémente l’opération `_hsla_to_color` nécessaire à le dégradé animé de trajectoire.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "trajectoire",
+        "animation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/rainbow_path.py:RainbowPath",
+      "type": "class",
+      "name": "RainbowPath",
+      "filePath": "selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "lineRange": [
+        21,
+        56
+      ],
+      "summary": "Regroupe l’état et les opérations de `RainbowPath` pour le dégradé animé de trajectoire.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "trajectoire",
+        "animation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+      "type": "file",
+      "name": "rivian_lateral_mode.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+      "summary": "Suit le mode latéral Rivian actif et calcule la teinte du volant utilisée par l’interface routière.",
+      "tags": [
+        "interface-utilisateur",
+        "rivian",
+        "contrôle-latéral",
+        "indicateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py:RivianLateralMode",
+      "type": "class",
+      "name": "RivianLateralMode",
+      "filePath": "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+      "lineRange": [
+        12,
+        52
+      ],
+      "summary": "Regroupe l’état et les opérations de `RivianLateralMode` pour l’indication du mode latéral Rivian.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "rivian",
+        "contrôle-latéral"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "type": "file",
+      "name": "slc_speed_limit.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "summary": "Rend la limite de vitesse du Speed Limit Controller, ses sources, offsets, animations de changement et panneaux US ou européens.",
+      "tags": [
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_reset_pulse",
+      "type": "function",
+      "name": "_reset_pulse",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        72,
+        76
+      ],
+      "summary": "Implémente l’opération `_reset_pulse` nécessaire à l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_tick_pulse",
+      "type": "function",
+      "name": "_tick_pulse",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        79,
+        90
+      ],
+      "summary": "Implémente l’opération `_tick_pulse` nécessaire à l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_speed_limit_pulse_color",
+      "type": "function",
+      "name": "_speed_limit_pulse_color",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        93,
+        112
+      ],
+      "summary": "Implémente l’opération `_speed_limit_pulse_color` nécessaire à l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_get_slc_state",
+      "type": "function",
+      "name": "_get_slc_state",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        117,
+        197
+      ],
+      "summary": "Calcule ou récupère la valeur `_get_slc_state` utilisée par l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_get_bold",
+      "type": "function",
+      "name": "_get_bold",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        205,
+        209
+      ],
+      "summary": "Calcule ou récupère la valeur `_get_bold` utilisée par l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_get_semi_bold",
+      "type": "function",
+      "name": "_get_semi_bold",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        211,
+        215
+      ],
+      "summary": "Calcule ou récupère la valeur `_get_semi_bold` utilisée par l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_active_source_label",
+      "type": "function",
+      "name": "_active_source_label",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        221,
+        225
+      ],
+      "summary": "Implémente l’opération `_active_source_label` nécessaire à l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_source_label_color",
+      "type": "function",
+      "name": "_source_label_color",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        228,
+        236
+      ],
+      "summary": "Implémente l’opération `_source_label_color` nécessaire à l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_offset_chip",
+      "type": "function",
+      "name": "_draw_offset_chip",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        241,
+        264
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_offset_chip` dans l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_us_sign",
+      "type": "function",
+      "name": "_draw_us_sign",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        267,
+        323
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_us_sign` dans l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_eu_sign",
+      "type": "function",
+      "name": "_draw_eu_sign",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        328,
+        388
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_eu_sign` dans l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_sign",
+      "type": "function",
+      "name": "_draw_sign",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        393,
+        412
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_sign` dans l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_source_icon",
+      "type": "function",
+      "name": "_draw_source_icon",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        443,
+        536
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_source_icon` dans l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_sources_bubble_empty_state",
+      "type": "function",
+      "name": "_draw_sources_bubble_empty_state",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        539,
+        553
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_sources_bubble_empty_state` dans l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_sources_bubble",
+      "type": "function",
+      "name": "_draw_sources_bubble",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        556,
+        673
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_sources_bubble` dans l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:render_speed_limit_at",
+      "type": "function",
+      "name": "render_speed_limit_at",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "lineRange": [
+        678,
+        694
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_speed_limit_at` dans l’affichage du Speed Limit Controller.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "type": "file",
+      "name": "source_bubble_layout.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "summary": "Calcule les libellés, dimensions, lignes visibles et valeurs abrégées de la bulle présentant les sources de limite de vitesse.",
+      "tags": [
+        "interface-utilisateur",
+        "mise-en-page",
+        "sources",
+        "limite-vitesse"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:enabled_source_titles",
+      "type": "function",
+      "name": "enabled_source_titles",
+      "filePath": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "lineRange": [
+        11,
+        45
+      ],
+      "summary": "Implémente l’opération `enabled_source_titles` nécessaire à la mise en page de la bulle des sources.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mise-en-page",
+        "sources"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:source_content_metrics",
+      "type": "function",
+      "name": "source_content_metrics",
+      "filePath": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "lineRange": [
+        48,
+        54
+      ],
+      "summary": "Implémente l’opération `source_content_metrics` nécessaire à la mise en page de la bulle des sources.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mise-en-page",
+        "sources"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:visible_source_rows",
+      "type": "function",
+      "name": "visible_source_rows",
+      "filePath": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "lineRange": [
+        57,
+        80
+      ],
+      "summary": "Implémente l’opération `visible_source_rows` nécessaire à la mise en page de la bulle des sources.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mise-en-page",
+        "sources"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:fit_source_label",
+      "type": "function",
+      "name": "fit_source_label",
+      "filePath": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "lineRange": [
+        83,
+        98
+      ],
+      "summary": "Implémente l’opération `fit_source_label` nécessaire à la mise en page de la bulle des sources.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mise-en-page",
+        "sources"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:source_value_text",
+      "type": "function",
+      "name": "source_value_text",
+      "filePath": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "lineRange": [
+        101,
+        106
+      ],
+      "summary": "Implémente l’opération `source_value_text` nécessaire à la mise en page de la bulle des sources.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mise-en-page",
+        "sources"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:source_abbreviated_value_text",
+      "type": "function",
+      "name": "source_abbreviated_value_text",
+      "filePath": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "lineRange": [
+        109,
+        112
+      ],
+      "summary": "Implémente l’opération `source_abbreviated_value_text` nécessaire à la mise en page de la bulle des sources.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "mise-en-page",
+        "sources"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "type": "file",
+      "name": "starpilot_border.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "summary": "Compose les effets de bordure routière StarPilot selon les états de contrôle, la circulation et les animations lumineuses.",
+      "tags": [
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_csc_state",
+      "type": "function",
+      "name": "_csc_state",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        51,
+        80
+      ],
+      "summary": "Implémente l’opération `_csc_state` nécessaire à les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_intensity",
+      "type": "function",
+      "name": "_intensity",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        83,
+        87
+      ],
+      "summary": "Implémente l’opération `_intensity` nécessaire à les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_glow_period",
+      "type": "function",
+      "name": "_glow_period",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        90,
+        92
+      ],
+      "summary": "Implémente l’opération `_glow_period` nécessaire à les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_lerp_color",
+      "type": "function",
+      "name": "_lerp_color",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        95,
+        101
+      ],
+      "summary": "Implémente l’opération `_lerp_color` nécessaire à les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_glow_color",
+      "type": "function",
+      "name": "_glow_color",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        104,
+        111
+      ],
+      "summary": "Implémente l’opération `_glow_color` nécessaire à les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_render_csc_glow",
+      "type": "function",
+      "name": "_render_csc_glow",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        114,
+        172
+      ],
+      "summary": "Dessine l’élément graphique géré par `_render_csc_glow` dans les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:get_traffic_border_colors",
+      "type": "function",
+      "name": "get_traffic_border_colors",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        178,
+        218
+      ],
+      "summary": "Calcule ou récupère la valeur `get_traffic_border_colors` utilisée par les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:render_background_effects",
+      "type": "function",
+      "name": "render_background_effects",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        221,
+        270
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_background_effects` dans les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:render_behind",
+      "type": "function",
+      "name": "render_behind",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        278,
+        281
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_behind` dans les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:render_overlay",
+      "type": "function",
+      "name": "render_overlay",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        284,
+        287
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_overlay` dans les effets visuels de la bordure routière.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/starpilot_border.py:BorderLayer",
+      "type": "class",
+      "name": "BorderLayer",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        18,
+        20
+      ],
+      "summary": "Structure les valeurs de `BorderLayer` partagées par les effets visuels de la bordure routière.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/starpilot_border.py:BorderEffect",
+      "type": "class",
+      "name": "BorderEffect",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "lineRange": [
+        24,
+        27
+      ],
+      "summary": "Structure les valeurs de `BorderEffect` partagées par les effets visuels de la bordure routière.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+      "type": "file",
+      "name": "starpilot_onroad_view.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+      "summary": "Coordonne la vue routière StarPilot, ses bordures, overlays, widgets, limite de vitesse, barre de couple, favoris et métriques développeur.",
+      "tags": [
+        "interface-utilisateur",
+        "onroad",
+        "orchestration",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py:StarPilotOnroadView",
+      "type": "class",
+      "name": "StarPilotOnroadView",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+      "lineRange": [
+        39,
+        434
+      ],
+      "summary": "Implémente la vue interactive `StarPilotOnroadView` pour la vue routière principale StarPilot.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "onroad",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "type": "file",
+      "name": "stopping_point.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "summary": "Projette et dessine le point d’arrêt prévu ainsi que son contour sur la trajectoire routière.",
+      "tags": [
+        "interface-utilisateur",
+        "arrêt",
+        "projection",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/stopping_point.py:_draw_poly_outline",
+      "type": "function",
+      "name": "_draw_poly_outline",
+      "filePath": "selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "lineRange": [
+        7,
+        14
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_poly_outline` dans l’indicateur du point d’arrêt.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "arrêt",
+        "projection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/stopping_point.py:render_stopping_point",
+      "type": "function",
+      "name": "render_stopping_point",
+      "filePath": "selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "lineRange": [
+        16,
+        75
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_stopping_point` dans l’indicateur du point d’arrêt.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "arrêt",
+        "projection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "type": "file",
+      "name": "torque_bar.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "summary": "Calcule une géométrie d’arc mise en cache et rend la barre de couple de direction avec filtrage de l’état.",
+      "tags": [
+        "interface-utilisateur",
+        "couple",
+        "direction",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/torque_bar.py:quantized_lru_cache",
+      "type": "function",
+      "name": "quantized_lru_cache",
+      "filePath": "selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "lineRange": [
+        23,
+        45
+      ],
+      "summary": "Implémente l’opération `quantized_lru_cache` nécessaire à la barre de couple de direction.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "couple",
+        "direction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/torque_bar.py:arc_bar_pts",
+      "type": "function",
+      "name": "arc_bar_pts",
+      "filePath": "selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "lineRange": [
+        49,
+        145
+      ],
+      "summary": "Implémente l’opération `arc_bar_pts` nécessaire à la barre de couple de direction.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "couple",
+        "direction"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/torque_bar.py:TorqueBar",
+      "type": "class",
+      "name": "TorqueBar",
+      "filePath": "selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "lineRange": [
+        151,
+        274
+      ],
+      "summary": "Regroupe l’état et les opérations de `TorqueBar` pour la barre de couple de direction.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "couple",
+        "direction"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/weather_icon.py",
+      "type": "file",
+      "name": "weather_icon.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/weather_icon.py",
+      "summary": "Dessine les pictogrammes météo routiers à partir de primitives graphiques et de l’état météorologique courant.",
+      "tags": [
+        "interface-utilisateur",
+        "météo",
+        "icône",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/weather_icon.py:render_weather_icon",
+      "type": "function",
+      "name": "render_weather_icon",
+      "filePath": "selfdrive/ui/onroad/starpilot/weather_icon.py",
+      "lineRange": [
+        5,
+        104
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_weather_icon` dans le rendu des icônes météo.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "météo",
+        "icône"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+      "type": "file",
+      "name": "widget_layout_manager.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+      "summary": "Enregistre, ordonne et positionne les widgets routiers dans les zones gauche, droite et basse avant leur rendu.",
+      "tags": [
+        "interface-utilisateur",
+        "widgets",
+        "mise-en-page",
+        "orchestration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widget_layout_manager.py:WidgetLayoutManager",
+      "type": "class",
+      "name": "WidgetLayoutManager",
+      "filePath": "selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+      "lineRange": [
+        5,
+        97
+      ],
+      "summary": "Coordonne les opérations de `WidgetLayoutManager` pour la disposition des widgets routiers.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widgets",
+        "mise-en-page"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widget_style.py",
+      "type": "file",
+      "name": "widget_style.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widget_style.py",
+      "summary": "Centralise le style commun des widgets routiers, notamment l’arrondi et le dessin des cartes de contrôle.",
+      "tags": [
+        "interface-utilisateur",
+        "widgets",
+        "style",
+        "rendu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/widget_style.py:roundness_for",
+      "type": "function",
+      "name": "roundness_for",
+      "filePath": "selfdrive/ui/onroad/starpilot/widget_style.py",
+      "lineRange": [
+        23,
+        25
+      ],
+      "summary": "Implémente l’opération `roundness_for` nécessaire à le style partagé des widgets.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "widgets",
+        "style"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/widget_style.py:draw_control_card",
+      "type": "function",
+      "name": "draw_control_card",
+      "filePath": "selfdrive/ui/onroad/starpilot/widget_style.py",
+      "lineRange": [
+        28,
+        34
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_control_card` dans le style partagé des widgets.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "widgets",
+        "style"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/__init__.py",
+      "summary": "Réexporte l’API publique des widgets routiers et rassemble les implémentations disponibles derrière un point d’entrée unique.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "widgets",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Barrel Python déclarant explicitement ses réexports dans __all__."
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+      "type": "file",
+      "name": "aethergauge.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+      "summary": "Adapte AetherGauge au contrat LayoutWidget pour l’intégrer au gestionnaire de disposition routière.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "jauge",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/widgets/aethergauge.py:AetherGaugeWidget",
+      "type": "class",
+      "name": "AetherGaugeWidget",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+      "lineRange": [
+        8,
+        40
+      ],
+      "summary": "Fournit le widget `AetherGaugeWidget`, avec visibilité, dimensions et rendu adaptés à le widget AetherGauge.",
+      "tags": [
+        "classe",
+        "accès-données",
+        "interface-utilisateur",
+        "widget",
+        "jauge"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/rainbow_path.py:_hsla_to_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/rainbow_path.py:_hsla_to_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/rainbow_path.py:RainbowPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/rainbow_path.py:RainbowPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py:RivianLateralMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py:RivianLateralMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_reset_pulse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_reset_pulse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_tick_pulse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_tick_pulse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_speed_limit_pulse_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_speed_limit_pulse_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_get_slc_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_get_slc_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_get_bold",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_get_bold",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_get_semi_bold",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_get_semi_bold",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_active_source_label",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_active_source_label",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_source_label_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_source_label_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_offset_chip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_offset_chip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_us_sign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_us_sign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_eu_sign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_eu_sign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_sign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_sign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_source_icon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_source_icon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_sources_bubble_empty_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_sources_bubble_empty_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_sources_bubble",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:_draw_sources_bubble",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:render_speed_limit_at",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/slc_speed_limit.py:render_speed_limit_at",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:enabled_source_titles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:enabled_source_titles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:source_content_metrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:source_content_metrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:visible_source_rows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:visible_source_rows",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:fit_source_label",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:fit_source_label",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:source_value_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:source_value_text",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:source_abbreviated_value_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/source_bubble_layout.py:source_abbreviated_value_text",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_csc_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_csc_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_intensity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_intensity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_glow_period",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_glow_period",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_lerp_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_lerp_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_glow_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_glow_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_render_csc_glow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:_render_csc_glow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:get_traffic_border_colors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:get_traffic_border_colors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:render_background_effects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:render_background_effects",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:render_behind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:render_behind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:render_overlay",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/starpilot_border.py:render_overlay",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/starpilot_border.py:BorderLayer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/starpilot_border.py:BorderLayer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/starpilot_border.py:BorderEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/starpilot_border.py:BorderEffect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py:StarPilotOnroadView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py:StarPilotOnroadView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/stopping_point.py:_draw_poly_outline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/stopping_point.py:_draw_poly_outline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/stopping_point.py:render_stopping_point",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/stopping_point.py:render_stopping_point",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/torque_bar.py:quantized_lru_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/torque_bar.py:quantized_lru_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/torque_bar.py:arc_bar_pts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/torque_bar.py:arc_bar_pts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/torque_bar.py:TorqueBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/torque_bar.py:TorqueBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/weather_icon.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/weather_icon.py:render_weather_icon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/weather_icon.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/weather_icon.py:render_weather_icon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widget_layout_manager.py:WidgetLayoutManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widget_layout_manager.py:WidgetLayoutManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widget_style.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/widget_style.py:roundness_for",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widget_style.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/widget_style.py:roundness_for",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widget_style.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/widget_style.py:draw_control_card",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widget_style.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/widget_style.py:draw_control_card",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/aethergauge.py:AetherGaugeWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/widgets/aethergauge.py:AetherGaugeWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

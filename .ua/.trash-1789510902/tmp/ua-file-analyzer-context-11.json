@@ -1,0 +1,94 @@
+{
+  "batchIndex": 11,
+  "files": [
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "language": "python",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "language": "python",
+      "sizeLines": 503,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "language": "python",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "language": "python",
+      "sizeLines": 969,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py",
+      "language": "python",
+      "sizeLines": 853,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/the_galaxy.py",
+      "language": "python",
+      "sizeLines": 10681,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/utilities.py",
+      "language": "python",
+      "sizeLines": 3320,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/wheel_controls/wheel_controlsd.py",
+      "language": "python",
+      "sizeLines": 688,
+      "fileCategory": "code"
+    },
+    {
+      "path": "system/camerad/main.cc",
+      "language": "cpp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "system/manager/launch_param_migrations.py",
+      "language": "python",
+      "sizeLines": 425,
+      "fileCategory": "code"
+    },
+    {
+      "path": "system/manager/manager.py",
+      "language": "python",
+      "sizeLines": 1299,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tools/StarPilot/derive_feasible_params.py",
+      "language": "python",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py": [],
+    "starpilot/system/the_galaxy/tests/test_device_settings_layout.py": [],
+    "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py": [
+      "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py"
+    ],
+    "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py": [],
+    "starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py": [],
+    "starpilot/system/the_galaxy/the_galaxy.py": [],
+    "starpilot/system/the_galaxy/utilities.py": [],
+    "starpilot/system/wheel_controls/wheel_controlsd.py": [],
+    "system/camerad/main.cc": [],
+    "system/manager/launch_param_migrations.py": [],
+    "system/manager/manager.py": [],
+    "tools/StarPilot/derive_feasible_params.py": []
+  },
+  "neighborMap": {}
+}

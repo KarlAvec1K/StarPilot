@@ -1,0 +1,1397 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 3,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 257,
+      "nonEmptyLines": 247,
+      "functions": [
+        {
+          "name": "settingsAnchor",
+          "startLine": 7,
+          "endLine": 11,
+          "params": [
+            "key"
+          ]
+        },
+        {
+          "name": "settingOwner",
+          "startLine": 13,
+          "endLine": 18,
+          "params": [
+            "option",
+            "layout"
+          ]
+        },
+        {
+          "name": "actionCategory",
+          "startLine": 20,
+          "endLine": 24,
+          "params": [
+            "option"
+          ]
+        },
+        {
+          "name": "actionHierarchy",
+          "startLine": 26,
+          "endLine": 39,
+          "params": [
+            "option"
+          ]
+        },
+        {
+          "name": "actionGroups",
+          "startLine": 41,
+          "endLine": 61,
+          "params": [
+            "options"
+          ]
+        },
+        {
+          "name": "actionCategories",
+          "startLine": 63,
+          "endLine": 67,
+          "params": [
+            "options"
+          ]
+        },
+        {
+          "name": "filterActions",
+          "startLine": 69,
+          "endLine": 74,
+          "params": [
+            "options"
+          ]
+        },
+        {
+          "name": "openControllerActionPicker",
+          "startLine": 76,
+          "endLine": 257,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "actionCategory",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "actionHierarchy",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "actionGroups",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "actionCategories",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "filterActions",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "openControllerActionPicker",
+          "line": 76,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "settingsAnchor",
+          "callee": "[\"ExperimentalMode\", \"ConditionalExperimental\", \"ConditionalChill\"].includes",
+          "lineNumber": 8
+        },
+        {
+          "caller": "settingsAnchor",
+          "callee": "[\"__starpilot_controller_action__:cycle_driving_personality\", \"__starpilot_favorite_action__:toggle_traffic_mode\"].includes",
+          "lineNumber": 9
+        },
+        {
+          "caller": "settingOwner",
+          "callee": "settingsAnchor",
+          "lineNumber": 14
+        },
+        {
+          "caller": "settingOwner",
+          "callee": "longitudinalModeLayout",
+          "lineNumber": 15
+        },
+        {
+          "caller": "settingOwner",
+          "callee": "sections.findLast",
+          "lineNumber": 16
+        },
+        {
+          "caller": "settingOwner",
+          "callee": "section.params?.some",
+          "lineNumber": 16
+        },
+        {
+          "caller": "actionCategory",
+          "callee": "settingOwner",
+          "lineNumber": 21
+        },
+        {
+          "caller": "actionCategory",
+          "callee": "String",
+          "lineNumber": 23
+        },
+        {
+          "caller": "actionHierarchy",
+          "callee": "settingOwner",
+          "lineNumber": 27
+        },
+        {
+          "caller": "actionHierarchy",
+          "callee": "section.params.map",
+          "lineNumber": 29
+        },
+        {
+          "caller": "actionHierarchy",
+          "callee": "byKey.get",
+          "lineNumber": 30
+        },
+        {
+          "caller": "actionHierarchy",
+          "callee": "byKey.get",
+          "lineNumber": 31
+        },
+        {
+          "caller": "actionHierarchy",
+          "callee": "seen.has",
+          "lineNumber": 33
+        },
+        {
+          "caller": "actionHierarchy",
+          "callee": "seen.add",
+          "lineNumber": 34
+        },
+        {
+          "caller": "actionHierarchy",
+          "callee": "path.unshift",
+          "lineNumber": 35
+        },
+        {
+          "caller": "actionHierarchy",
+          "callee": "byKey.get",
+          "lineNumber": 36
+        },
+        {
+          "caller": "actionGroups",
+          "callee": "actionHierarchy",
+          "lineNumber": 45
+        },
+        {
+          "caller": "actionGroups",
+          "callee": "node.groups.find",
+          "lineNumber": 46
+        },
+        {
+          "caller": "actionGroups",
+          "callee": "node.groups.push",
+          "lineNumber": 47
+        },
+        {
+          "caller": "actionGroups",
+          "callee": "node.items.push",
+          "lineNumber": 51
+        },
+        {
+          "caller": "actionGroups",
+          "callee": "longitudinalModeLayout(layout).flatMap(section => section.params).map",
+          "lineNumber": 53
+        },
+        {
+          "caller": "actionGroups",
+          "callee": "longitudinalModeLayout(layout).flatMap",
+          "lineNumber": 53
+        },
+        {
+          "caller": "actionGroups",
+          "callee": "longitudinalModeLayout",
+          "lineNumber": 53
+        },
+        {
+          "caller": "actionGroups",
+          "callee": "order.set",
+          "lineNumber": 54
+        },
+        {
+          "caller": "sort",
+          "callee": "node.groups.sort",
+          "lineNumber": 56
+        },
+        {
+          "caller": "sort",
+          "callee": "order.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "sort",
+          "callee": "order.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "sort",
+          "callee": "node.groups.forEach",
+          "lineNumber": 57
+        },
+        {
+          "caller": "actionGroups",
+          "callee": "sort",
+          "lineNumber": 59
+        },
+        {
+          "caller": "actionCategories",
+          "callee": "options.map",
+          "lineNumber": 64
+        },
+        {
+          "caller": "actionCategories",
+          "callee": "actionCategory",
+          "lineNumber": 64
+        },
+        {
+          "caller": "actionCategories",
+          "callee": "layout.map(section => section.name).filter",
+          "lineNumber": 65
+        },
+        {
+          "caller": "actionCategories",
+          "callee": "layout.map",
+          "lineNumber": 65
+        },
+        {
+          "caller": "actionCategories",
+          "callee": "available.has",
+          "lineNumber": 65
+        },
+        {
+          "caller": "filterActions",
+          "callee": "query.trim().toLocaleLowerCase().split(/\\s+/).filter",
+          "lineNumber": 70
+        },
+        {
+          "caller": "filterActions",
+          "callee": "query.trim().toLocaleLowerCase().split",
+          "lineNumber": 70
+        },
+        {
+          "caller": "filterActions",
+          "callee": "query.trim().toLocaleLowerCase",
+          "lineNumber": 70
+        },
+        {
+          "caller": "filterActions",
+          "callee": "query.trim",
+          "lineNumber": 70
+        },
+        {
+          "caller": "filterActions",
+          "callee": "options.filter",
+          "lineNumber": 71
+        },
+        {
+          "caller": "filterActions",
+          "callee": "actionCategory",
+          "lineNumber": 71
+        },
+        {
+          "caller": "filterActions",
+          "callee": "words.every",
+          "lineNumber": 72
+        },
+        {
+          "caller": "filterActions",
+          "callee": "[option.label, option.key, option.description, option.picker_label,\r\n      option.picker_description, actionCategory(option, layout), ...actionHierarchy(option, layout).map(part => part.label)].join(\" \").toLocaleLowerCase().includes",
+          "lineNumber": 72
+        },
+        {
+          "caller": "filterActions",
+          "callee": "[option.label, option.key, option.description, option.picker_label,\r\n      option.picker_description, actionCategory(option, layout), ...actionHierarchy(option, layout).map(part => part.label)].join(\" \").toLocaleLowerCase",
+          "lineNumber": 72
+        },
+        {
+          "caller": "filterActions",
+          "callee": "[option.label, option.key, option.description, option.picker_label,\r\n      option.picker_description, actionCategory(option, layout), ...actionHierarchy(option, layout).map(part => part.label)].join",
+          "lineNumber": 72
+        },
+        {
+          "caller": "filterActions",
+          "callee": "actionCategory",
+          "lineNumber": 73
+        },
+        {
+          "caller": "filterActions",
+          "callee": "actionHierarchy(option, layout).map",
+          "lineNumber": 73
+        },
+        {
+          "caller": "filterActions",
+          "callee": "actionHierarchy",
+          "lineNumber": 73
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "isDisabled",
+          "lineNumber": 77
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "document.querySelector",
+          "lineNumber": 78
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "document.createElement",
+          "lineNumber": 79
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "document.head.append",
+          "lineNumber": 83
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "document.createElement",
+          "lineNumber": 85
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.setAttribute",
+          "lineNumber": 87
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 94
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 95
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 99
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 100
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 101
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 102
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 103
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 105
+        },
+        {
+          "caller": "fitViewport",
+          "callee": "Number.parseFloat",
+          "lineNumber": 116
+        },
+        {
+          "caller": "fitViewport",
+          "callee": "getComputedStyle",
+          "lineNumber": 116
+        },
+        {
+          "caller": "close",
+          "callee": "clearInterval",
+          "lineNumber": 124
+        },
+        {
+          "caller": "close",
+          "callee": "window.removeEventListener",
+          "lineNumber": 125
+        },
+        {
+          "caller": "close",
+          "callee": "window.visualViewport?.removeEventListener",
+          "lineNumber": 126
+        },
+        {
+          "caller": "close",
+          "callee": "dialog.close",
+          "lineNumber": 127
+        },
+        {
+          "caller": "close",
+          "callee": "dialog.remove",
+          "lineNumber": 128
+        },
+        {
+          "caller": "close",
+          "callee": "document.querySelector",
+          "lineNumber": 129
+        },
+        {
+          "caller": "close",
+          "callee": "target?.focus",
+          "lineNumber": 130
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.addEventListener",
+          "lineNumber": 132
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "event.preventDefault",
+          "lineNumber": 132
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "close",
+          "lineNumber": 132
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.addEventListener",
+          "lineNumber": 133
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "[...dialog.querySelectorAll(\"button:not(:disabled), input, select, summary\")].filter",
+          "lineNumber": 135
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelectorAll",
+          "lineNumber": 135
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "node.getClientRects",
+          "lineNumber": 135
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "event.preventDefault",
+          "lineNumber": 139
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "last.focus",
+          "lineNumber": 139
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "event.preventDefault",
+          "lineNumber": 141
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "first.focus",
+          "lineNumber": 141
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector(\"[data-cancel]\").addEventListener",
+          "lineNumber": 144
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.querySelector",
+          "lineNumber": 144
+        },
+        {
+          "caller": "render",
+          "callee": "getOptions",
+          "lineNumber": 146
+        },
+        {
+          "caller": "render",
+          "callee": "getSlot",
+          "lineNumber": 147
+        },
+        {
+          "caller": "render",
+          "callee": "isDisabled",
+          "lineNumber": 149
+        },
+        {
+          "caller": "render",
+          "callee": "JSON.stringify",
+          "lineNumber": 150
+        },
+        {
+          "caller": "render",
+          "callee": "actionCategories",
+          "lineNumber": 153
+        },
+        {
+          "caller": "render",
+          "callee": "category.replaceChildren",
+          "lineNumber": 155
+        },
+        {
+          "caller": "render",
+          "callee": "categories.map",
+          "lineNumber": 155
+        },
+        {
+          "caller": "render",
+          "callee": "categories.includes",
+          "lineNumber": 156
+        },
+        {
+          "caller": "render",
+          "callee": "options.find",
+          "lineNumber": 157
+        },
+        {
+          "caller": "render",
+          "callee": "filterActions",
+          "lineNumber": 159
+        },
+        {
+          "caller": "render",
+          "callee": "noun.replace",
+          "lineNumber": 160
+        },
+        {
+          "caller": "render",
+          "callee": "results.contains",
+          "lineNumber": 161
+        },
+        {
+          "caller": "render",
+          "callee": "results.replaceChildren",
+          "lineNumber": 162
+        },
+        {
+          "caller": "add",
+          "callee": "document.createElement",
+          "lineNumber": 164
+        },
+        {
+          "caller": "add",
+          "callee": "button.setAttribute",
+          "lineNumber": 168
+        },
+        {
+          "caller": "add",
+          "callee": "String",
+          "lineNumber": 168
+        },
+        {
+          "caller": "add",
+          "callee": "document.createElement",
+          "lineNumber": 170
+        },
+        {
+          "caller": "add",
+          "callee": "document.createElement",
+          "lineNumber": 172
+        },
+        {
+          "caller": "add",
+          "callee": "[categoryName, option.description].filter(Boolean).join",
+          "lineNumber": 173
+        },
+        {
+          "caller": "add",
+          "callee": "[categoryName, option.description].filter",
+          "lineNumber": 173
+        },
+        {
+          "caller": "add",
+          "callee": "button.append",
+          "lineNumber": 174
+        },
+        {
+          "caller": "add",
+          "callee": "button.addEventListener",
+          "lineNumber": 175
+        },
+        {
+          "caller": "add",
+          "callee": "isDisabled",
+          "lineNumber": 176
+        },
+        {
+          "caller": "add",
+          "callee": "getOptions().some",
+          "lineNumber": 176
+        },
+        {
+          "caller": "add",
+          "callee": "getOptions",
+          "lineNumber": 176
+        },
+        {
+          "caller": "add",
+          "callee": "render",
+          "lineNumber": 176
+        },
+        {
+          "caller": "add",
+          "callee": "close",
+          "lineNumber": 177
+        },
+        {
+          "caller": "add",
+          "callee": "onSelect",
+          "lineNumber": 178
+        },
+        {
+          "caller": "add",
+          "callee": "container.append",
+          "lineNumber": 180
+        },
+        {
+          "caller": "add",
+          "callee": "button.focus",
+          "lineNumber": 181
+        },
+        {
+          "caller": "render",
+          "callee": "add",
+          "lineNumber": 183
+        },
+        {
+          "caller": "render",
+          "callee": "matches.filter",
+          "lineNumber": 186
+        },
+        {
+          "caller": "render",
+          "callee": "actionCategory",
+          "lineNumber": 186
+        },
+        {
+          "caller": "render",
+          "callee": "document.createElement",
+          "lineNumber": 188
+        },
+        {
+          "caller": "render",
+          "callee": "input.value.trim",
+          "lineNumber": 190
+        },
+        {
+          "caller": "render",
+          "callee": "expanded.has",
+          "lineNumber": 190
+        },
+        {
+          "caller": "render",
+          "callee": "document.createElement",
+          "lineNumber": 191
+        },
+        {
+          "caller": "render",
+          "callee": "document.createElement",
+          "lineNumber": 193
+        },
+        {
+          "caller": "render",
+          "callee": "group.append",
+          "lineNumber": 195
+        },
+        {
+          "caller": "render",
+          "callee": "group.addEventListener",
+          "lineNumber": 196
+        },
+        {
+          "caller": "render",
+          "callee": "input.value.trim",
+          "lineNumber": 197
+        },
+        {
+          "caller": "render",
+          "callee": "expanded.add",
+          "lineNumber": 197
+        },
+        {
+          "caller": "render",
+          "callee": "expanded.delete",
+          "lineNumber": 197
+        },
+        {
+          "caller": "render",
+          "callee": "results.append",
+          "lineNumber": 199
+        },
+        {
+          "caller": "populate",
+          "callee": "add",
+          "lineNumber": 201
+        },
+        {
+          "caller": "populate",
+          "callee": "path.join",
+          "lineNumber": 201
+        },
+        {
+          "caller": "populate",
+          "callee": "[...path, child.key].join",
+          "lineNumber": 203
+        },
+        {
+          "caller": "populate",
+          "callee": "document.createElement",
+          "lineNumber": 204
+        },
+        {
+          "caller": "populate",
+          "callee": "input.value.trim",
+          "lineNumber": 206
+        },
+        {
+          "caller": "populate",
+          "callee": "expanded.has",
+          "lineNumber": 206
+        },
+        {
+          "caller": "populate",
+          "callee": "document.createElement",
+          "lineNumber": 207
+        },
+        {
+          "caller": "populate",
+          "callee": "document.createElement",
+          "lineNumber": 209
+        },
+        {
+          "caller": "populate",
+          "callee": "subgroup.append",
+          "lineNumber": 211
+        },
+        {
+          "caller": "populate",
+          "callee": "subgroup.addEventListener",
+          "lineNumber": 212
+        },
+        {
+          "caller": "populate",
+          "callee": "input.value.trim",
+          "lineNumber": 213
+        },
+        {
+          "caller": "populate",
+          "callee": "expanded.add",
+          "lineNumber": 213
+        },
+        {
+          "caller": "populate",
+          "callee": "expanded.delete",
+          "lineNumber": 213
+        },
+        {
+          "caller": "populate",
+          "callee": "container.append",
+          "lineNumber": 215
+        },
+        {
+          "caller": "populate",
+          "callee": "populate",
+          "lineNumber": 216
+        },
+        {
+          "caller": "render",
+          "callee": "populate",
+          "lineNumber": 219
+        },
+        {
+          "caller": "render",
+          "callee": "actionGroups",
+          "lineNumber": 219
+        },
+        {
+          "caller": "render",
+          "callee": "add",
+          "lineNumber": 222
+        },
+        {
+          "caller": "render",
+          "callee": "actionCategory",
+          "lineNumber": 222
+        },
+        {
+          "caller": "render",
+          "callee": "document.createElement",
+          "lineNumber": 225
+        },
+        {
+          "caller": "render",
+          "callee": "results.append",
+          "lineNumber": 227
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "input.addEventListener",
+          "lineNumber": 230
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "render",
+          "lineNumber": 232
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "category.addEventListener",
+          "lineNumber": 235
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "render",
+          "lineNumber": 235
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "document.body.append",
+          "lineNumber": 236
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "fitViewport",
+          "lineNumber": 237
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "window.addEventListener",
+          "lineNumber": 238
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "window.visualViewport?.addEventListener",
+          "lineNumber": 239
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "render",
+          "lineNumber": 240
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "dialog.showModal",
+          "lineNumber": 241
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "input.focus",
+          "lineNumber": 242
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "fetch(layoutUrl, { cache: \"no-store\" }).then(response => {\r\n    if (!response.ok) throw new Error(\"Settings catalogue unavailable\")\r\n    return response.json()\r\n  }).then(data => {\r\n    if (closed || !Array.isArray(data)) return\r\n    layout = data.filter(section => section && typeof section.name === \"string\" && Array.isArray(section.params))\r\n    signature = \"\"\r\n    render()\r\n  }).catch",
+          "lineNumber": 243
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "fetch(layoutUrl, { cache: \"no-store\" }).then(response => {\r\n    if (!response.ok) throw new Error(\"Settings catalogue unavailable\")\r\n    return response.json()\r\n  }).then",
+          "lineNumber": 243
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "fetch(layoutUrl, { cache: \"no-store\" }).then",
+          "lineNumber": 243
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "fetch",
+          "lineNumber": 243
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "response.json",
+          "lineNumber": 245
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "Array.isArray",
+          "lineNumber": 247
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "data.filter",
+          "lineNumber": 248
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "Array.isArray",
+          "lineNumber": 248
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "render",
+          "lineNumber": 250
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "setInterval",
+          "lineNumber": 252
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "document.querySelector",
+          "lineNumber": 253
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "close",
+          "lineNumber": 253
+        },
+        {
+          "caller": "openControllerActionPicker",
+          "callee": "render",
+          "lineNumber": 254
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 6,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 41,
+      "functions": [
+        {
+          "name": "longitudinalModeLayout",
+          "startLine": 9,
+          "endLine": 36,
+          "params": [
+            "layout"
+          ]
+        },
+        {
+          "name": "validLongitudinalSnapshot",
+          "startLine": 38,
+          "endLine": 43,
+          "params": [
+            "data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LONGITUDINAL_MODE_KEY",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "LONGITUDINAL_MODES",
+          "line": 2,
+          "isDefault": false
+        },
+        {
+          "name": "longitudinalModeLayout",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "validLongitudinalSnapshot",
+          "line": 38,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "longitudinalModeLayout",
+          "callee": "layout.map",
+          "lineNumber": 10
+        },
+        {
+          "caller": "longitudinalModeLayout",
+          "callee": "params.some",
+          "lineNumber": 12
+        },
+        {
+          "caller": "longitudinalModeLayout",
+          "callee": "params.map",
+          "lineNumber": 13
+        },
+        {
+          "caller": "owner",
+          "callee": "seen.has",
+          "lineNumber": 16
+        },
+        {
+          "caller": "owner",
+          "callee": "seen.add",
+          "lineNumber": 19
+        },
+        {
+          "caller": "owner",
+          "callee": "byKey.get",
+          "lineNumber": 20
+        },
+        {
+          "caller": "longitudinalModeLayout",
+          "callee": "params.flatMap",
+          "lineNumber": 24
+        },
+        {
+          "caller": "longitudinalModeLayout",
+          "callee": "owner",
+          "lineNumber": 31
+        },
+        {
+          "caller": "longitudinalModeLayout",
+          "callee": "[\"ConditionalExperimental\", \"ConditionalChill\"].includes",
+          "lineNumber": 33
+        },
+        {
+          "caller": "validLongitudinalSnapshot",
+          "callee": "LONGITUDINAL_MODES.some",
+          "lineNumber": 39
+        },
+        {
+          "caller": "validLongitudinalSnapshot",
+          "callee": "[\"ExperimentalMode\", \"ConditionalExperimental\", \"ConditionalChill\"].every",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 204,
+      "nonEmptyLines": 197,
+      "functions": [
+        {
+          "name": "sortOptions",
+          "startLine": 8,
+          "endLine": 12,
+          "params": [
+            "options"
+          ]
+        },
+        {
+          "name": "defaultSlots",
+          "startLine": 14,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "normalizeSlots",
+          "startLine": 18,
+          "endLine": 33,
+          "params": [
+            "slots"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FavoritesEditor",
+          "line": 35,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sortOptions",
+          "callee": "(options || []).slice().sort",
+          "lineNumber": 9
+        },
+        {
+          "caller": "sortOptions",
+          "callee": "(options || []).slice",
+          "lineNumber": 9
+        },
+        {
+          "caller": "sortOptions",
+          "callee": "String(a?.label || a?.key || \"\").localeCompare",
+          "lineNumber": 10
+        },
+        {
+          "caller": "sortOptions",
+          "callee": "String",
+          "lineNumber": 10
+        },
+        {
+          "caller": "sortOptions",
+          "callee": "String",
+          "lineNumber": 10
+        },
+        {
+          "caller": "defaultSlots",
+          "callee": "[0, 1, 2].map",
+          "lineNumber": 15
+        },
+        {
+          "caller": "normalizeSlots",
+          "callee": "defaultSlots",
+          "lineNumber": 19
+        },
+        {
+          "caller": "normalizeSlots",
+          "callee": "Array.isArray",
+          "lineNumber": 20
+        },
+        {
+          "caller": "normalizeSlots",
+          "callee": "slots.slice(0, FAVORITE_COUNT).forEach",
+          "lineNumber": 21
+        },
+        {
+          "caller": "normalizeSlots",
+          "callee": "slots.slice",
+          "lineNumber": 21
+        },
+        {
+          "caller": "normalizeSlots",
+          "callee": "String",
+          "lineNumber": 23
+        },
+        {
+          "caller": "normalizeSlots",
+          "callee": "String",
+          "lineNumber": 29
+        },
+        {
+          "caller": "optionByKey",
+          "callee": "this.options.map",
+          "lineNumber": 49
+        },
+        {
+          "caller": "quickFavorites",
+          "callee": "this.slots\r\n        .map((slot, index) => {\r\n          const opt = this.optionByKey.get(slot.key || \"\")\r\n          return { index, slot, opt, checked: !!(slot.key && opt && !!this.values[slot.key]) }\r\n        })\r\n        .filter",
+          "lineNumber": 51
+        },
+        {
+          "caller": "quickFavorites",
+          "callee": "this.slots\r\n        .map",
+          "lineNumber": 51
+        },
+        {
+          "caller": "quickFavorites",
+          "callee": "this.optionByKey.get",
+          "lineNumber": 53
+        },
+        {
+          "caller": "beforeUnmount",
+          "callee": "this.closeActionPicker",
+          "lineNumber": 59
+        },
+        {
+          "caller": "chooseControl",
+          "callee": "this.closeActionPicker",
+          "lineNumber": 63
+        },
+        {
+          "caller": "chooseControl",
+          "callee": "openControllerActionPicker",
+          "lineNumber": 64
+        },
+        {
+          "caller": "chooseControl",
+          "callee": "this.updateSlot",
+          "lineNumber": 69
+        },
+        {
+          "caller": "controlLabel",
+          "callee": "this.optionByKey.get",
+          "lineNumber": 74
+        },
+        {
+          "caller": "controlLabel",
+          "callee": "this.isSpeedSlot",
+          "lineNumber": 75
+        },
+        {
+          "caller": "isActionSlot",
+          "callee": "this.optionByKey.get",
+          "lineNumber": 78
+        },
+        {
+          "caller": "isActionSlot",
+          "callee": "String(slot.key || \"\").startsWith",
+          "lineNumber": 79
+        },
+        {
+          "caller": "isActionSlot",
+          "callee": "String",
+          "lineNumber": 79
+        },
+        {
+          "caller": "load",
+          "callee": "api.getFavoritesSlots",
+          "lineNumber": 84
+        },
+        {
+          "caller": "load",
+          "callee": "sortOptions",
+          "lineNumber": 85
+        },
+        {
+          "caller": "load",
+          "callee": "normalizeSlots",
+          "lineNumber": 86
+        },
+        {
+          "caller": "load",
+          "callee": "normalizeSlots",
+          "lineNumber": 87
+        },
+        {
+          "caller": "load",
+          "callee": "showSnackbar",
+          "lineNumber": 90
+        },
+        {
+          "caller": "saveSlots",
+          "callee": "api.saveFavoritesSlots",
+          "lineNumber": 99
+        },
+        {
+          "caller": "saveSlots",
+          "callee": "normalizeSlots",
+          "lineNumber": 100
+        },
+        {
+          "caller": "saveSlots",
+          "callee": "normalizeSlots",
+          "lineNumber": 101
+        },
+        {
+          "caller": "saveSlots",
+          "callee": "Array.isArray",
+          "lineNumber": 102
+        },
+        {
+          "caller": "saveSlots",
+          "callee": "sortOptions",
+          "lineNumber": 102
+        },
+        {
+          "caller": "saveSlots",
+          "callee": "showSnackbar",
+          "lineNumber": 104
+        },
+        {
+          "caller": "saveSlots",
+          "callee": "normalizeSlots",
+          "lineNumber": 106
+        },
+        {
+          "caller": "saveSlots",
+          "callee": "showSnackbar",
+          "lineNumber": 107
+        },
+        {
+          "caller": "updateSlot",
+          "callee": "this.slots.slice",
+          "lineNumber": 114
+        },
+        {
+          "caller": "updateSlot",
+          "callee": "Object.hasOwn",
+          "lineNumber": 116
+        },
+        {
+          "caller": "updateSlot",
+          "callee": "this.optionByKey.get",
+          "lineNumber": 123
+        },
+        {
+          "caller": "updateSlot",
+          "callee": "this.saveSlots",
+          "lineNumber": 126
+        },
+        {
+          "caller": "toggleValue",
+          "callee": "api.updateParam",
+          "lineNumber": 132
+        },
+        {
+          "caller": "toggleValue",
+          "callee": "showSnackbar",
+          "lineNumber": 134
+        },
+        {
+          "caller": "toggleValue",
+          "callee": "showSnackbar",
+          "lineNumber": 137
+        },
+        {
+          "caller": "runAction",
+          "callee": "api.activateFavoriteAction",
+          "lineNumber": 142
+        },
+        {
+          "caller": "runAction",
+          "callee": "showSnackbar",
+          "lineNumber": 143
+        },
+        {
+          "caller": "runAction",
+          "callee": "showSnackbar",
+          "lineNumber": 145
+        },
+        {
+          "caller": "mounted",
+          "callee": "this.load",
+          "lineNumber": 149
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    }
+  ]
+}

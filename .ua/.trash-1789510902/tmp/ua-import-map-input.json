@@ -1,0 +1,1007 @@
+{
+  "projectRoot": "C:/Users/karlp/Documents/ChatGPT/StarPilot",
+  "files": [
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 99,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "common/params_keys.h",
+      "language": "c",
+      "sizeLines": 796,
+      "fileCategory": "code"
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/interfaces.py",
+      "language": "python",
+      "sizeLines": 586,
+      "fileCategory": "code"
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "language": "python",
+      "sizeLines": 486,
+      "fileCategory": "code"
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/carstate.py",
+      "language": "python",
+      "sizeLines": 187,
+      "fileCategory": "code"
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/fingerprints.py",
+      "language": "python",
+      "sizeLines": 622,
+      "fileCategory": "code"
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/interface.py",
+      "language": "python",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "language": "python",
+      "sizeLines": 461,
+      "fileCategory": "code"
+    },
+    {
+      "path": "opendbc_repo/opendbc/car/subaru/values.py",
+      "language": "python",
+      "sizeLines": 341,
+      "fileCategory": "code"
+    },
+    {
+      "path": "pyproject.toml",
+      "language": "toml",
+      "sizeLines": 288,
+      "fileCategory": "config"
+    },
+    {
+      "path": "selfdrive/car/card.py",
+      "language": "python",
+      "sizeLines": 620,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/car/redneck_cruise.py",
+      "language": "python",
+      "sizeLines": 268,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/controls/controlsd.py",
+      "language": "python",
+      "sizeLines": 951,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/controls/lib/lane_centering.py",
+      "language": "python",
+      "sizeLines": 196,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/controls/lib/longcontrol.py",
+      "language": "python",
+      "sizeLines": 445,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/modeld/camera_offset.py",
+      "language": "python",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/modeld/modeld.py",
+      "language": "python",
+      "sizeLines": 1532,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/selfdrived/events.py",
+      "language": "python",
+      "sizeLines": 1536,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/selfdrived/selfdrived.py",
+      "language": "python",
+      "sizeLines": 1033,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/developer.py",
+      "language": "python",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "language": "python",
+      "sizeLines": 5602,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "language": "python",
+      "sizeLines": 763,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+      "language": "python",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "language": "python",
+      "sizeLines": 1300,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "language": "python",
+      "sizeLines": 407,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "language": "python",
+      "sizeLines": 1250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+      "language": "python",
+      "sizeLines": 319,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "language": "python",
+      "sizeLines": 924,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "language": "python",
+      "sizeLines": 879,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "language": "python",
+      "sizeLines": 369,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "language": "python",
+      "sizeLines": 468,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "language": "python",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "language": "python",
+      "sizeLines": 647,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "language": "python",
+      "sizeLines": 386,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "language": "python",
+      "sizeLines": 1364,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "language": "python",
+      "sizeLines": 875,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/lib/mode_banner.py",
+      "language": "python",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/lib/starpilot_state.py",
+      "language": "python",
+      "sizeLines": 253,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/layouts/settings/developer.py",
+      "language": "python",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/layouts/settings/settings.py",
+      "language": "python",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/layouts/settings/visuals.py",
+      "language": "python",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/onroad/hud_renderer.py",
+      "language": "python",
+      "sizeLines": 730,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/onroad/sidebar_widgets.py",
+      "language": "python",
+      "sizeLines": 382,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/model_renderer.py",
+      "language": "python",
+      "sizeLines": 1033,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/aethergauge.py",
+      "language": "python",
+      "sizeLines": 795,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/compass.py",
+      "language": "python",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/developer_sidebar.py",
+      "language": "python",
+      "sizeLines": 388,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/favorite_radial_menu.py",
+      "language": "python",
+      "sizeLines": 1209,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "language": "python",
+      "sizeLines": 528,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/path.py",
+      "language": "python",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "language": "python",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/pedal_icons.py",
+      "language": "python",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/personality_button.py",
+      "language": "python",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+      "language": "python",
+      "sizeLines": 465,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "language": "python",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "language": "python",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+      "language": "python",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "language": "python",
+      "sizeLines": 694,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "language": "python",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "language": "python",
+      "sizeLines": 287,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+      "language": "python",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "language": "python",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "language": "python",
+      "sizeLines": 274,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/weather_icon.py",
+      "language": "python",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+      "language": "python",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widget_style.py",
+      "language": "python",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/__init__.py",
+      "language": "python",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+      "language": "python",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/base.py",
+      "language": "python",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+      "language": "python",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "language": "python",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+      "language": "python",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+      "language": "python",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+      "language": "python",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+      "language": "python",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+      "language": "python",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+      "language": "python",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/ui_state.py",
+      "language": "python",
+      "sizeLines": 504,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/accel_profile.py",
+      "language": "python",
+      "sizeLines": 287,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/assets/device_settings_layout.json",
+      "language": "json",
+      "sizeLines": 5057,
+      "fileCategory": "config"
+    },
+    {
+      "path": "starpilot/common/connect_server.py",
+      "language": "python",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/controller_actions.py",
+      "language": "python",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/cpu_throttle.py",
+      "language": "python",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/experimental_state.py",
+      "language": "python",
+      "sizeLines": 190,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/favorite_slots.py",
+      "language": "python",
+      "sizeLines": 570,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/gpu_model_ready_sound.py",
+      "language": "python",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/lateral_delay.py",
+      "language": "python",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/lateral_only_experimental.py",
+      "language": "python",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/longitudinal_mode.py",
+      "language": "python",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/longitudinal_personality_profiles.py",
+      "language": "python",
+      "sizeLines": 623,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/maps_catalog.py",
+      "language": "python",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/maps_download_progress.py",
+      "language": "python",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/maps_selection.py",
+      "language": "python",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/model_lab.py",
+      "language": "python",
+      "sizeLines": 262,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/model_versions.py",
+      "language": "python",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/param_profiles.py",
+      "language": "python",
+      "sizeLines": 263,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/safe_mode.py",
+      "language": "python",
+      "sizeLines": 392,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_backups.py",
+      "language": "python",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_download_utilities.py",
+      "language": "python",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_functions.py",
+      "language": "python",
+      "sizeLines": 529,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_utilities.py",
+      "language": "python",
+      "sizeLines": 433,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_variables.py",
+      "language": "python",
+      "sizeLines": 1642,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/testing_grounds.py",
+      "language": "python",
+      "sizeLines": 291,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/theme_asset_names.py",
+      "language": "python",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/vision_bsm.py",
+      "language": "python",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/conditional_chill_mode.py",
+      "language": "python",
+      "sizeLines": 363,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/conditional_experimental_mode.py",
+      "language": "python",
+      "sizeLines": 611,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/curve_speed_controller.py",
+      "language": "python",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/neural_network_feedforward.py",
+      "language": "python",
+      "sizeLines": 367,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/speed_limit_controller.py",
+      "language": "python",
+      "sizeLines": 580,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/starpilot_acceleration.py",
+      "language": "python",
+      "sizeLines": 450,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/starpilot_events.py",
+      "language": "python",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/starpilot_following.py",
+      "language": "python",
+      "sizeLines": 200,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/starpilot_vcruise.py",
+      "language": "python",
+      "sizeLines": 797,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/weather_checker.py",
+      "language": "python",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/starpilot_card.py",
+      "language": "python",
+      "sizeLines": 476,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/starpilot_planner.py",
+      "language": "python",
+      "sizeLines": 397,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/adj_spot_monitor_vision.py",
+      "language": "python",
+      "sizeLines": 330,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/speed_limit_filler.py",
+      "language": "python",
+      "sizeLines": 465,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/speed_limit_vision.py",
+      "language": "python",
+      "sizeLines": 2846,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/README.md",
+      "language": "markdown",
+      "sizeLines": 121,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/settings.js",
+      "language": "javascript",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "language": "javascript",
+      "sizeLines": 257,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "language": "javascript",
+      "sizeLines": 2959,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs",
+      "language": "javascript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "language": "javascript",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "language": "javascript",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "language": "javascript",
+      "sizeLines": 1466,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "language": "javascript",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "language": "javascript",
+      "sizeLines": 311,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "language": "javascript",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "language": "javascript",
+      "sizeLines": 204,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "language": "javascript",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "language": "javascript",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "language": "javascript",
+      "sizeLines": 250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "language": "javascript",
+      "sizeLines": 817,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "language": "javascript",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "language": "javascript",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "language": "javascript",
+      "sizeLines": 399,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "language": "javascript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "language": "javascript",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "language": "javascript",
+      "sizeLines": 324,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "language": "javascript",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "language": "javascript",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "language": "javascript",
+      "sizeLines": 815,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "language": "javascript",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "language": "javascript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/flm_workspace.py",
+      "language": "python",
+      "sizeLines": 3729,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "language": "python",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "language": "python",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "language": "python",
+      "sizeLines": 503,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "language": "python",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "language": "python",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "language": "python",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "language": "python",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "language": "python",
+      "sizeLines": 969,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py",
+      "language": "python",
+      "sizeLines": 853,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/the_galaxy.py",
+      "language": "python",
+      "sizeLines": 10681,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/utilities.py",
+      "language": "python",
+      "sizeLines": 3320,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/wheel_controls/wheel_controlsd.py",
+      "language": "python",
+      "sizeLines": 688,
+      "fileCategory": "code"
+    },
+    {
+      "path": "system/camerad/main.cc",
+      "language": "cpp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "system/manager/launch_param_migrations.py",
+      "language": "python",
+      "sizeLines": 425,
+      "fileCategory": "code"
+    },
+    {
+      "path": "system/manager/manager.py",
+      "language": "python",
+      "sizeLines": 1299,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tools/StarPilot/derive_feasible_params.py",
+      "language": "python",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    }
+  ]
+}

@@ -1,0 +1,3443 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 167,
+  "totalBatches": 11,
+  "exportsByPath": {
+    "common/params_keys.h": [],
+    "opendbc_repo/opendbc/car/interfaces.py": [
+      "get_torque_params",
+      "RadarInterfaceBase",
+      "CarInterfaceBase",
+      "CarStateBase",
+      "CarControllerBase",
+      "get_interface_attr"
+    ],
+    "opendbc_repo/opendbc/car/subaru/__init__.py": [],
+    "opendbc_repo/opendbc/car/subaru/carcontroller.py": [
+      "get_safety_CP",
+      "CarController"
+    ],
+    "opendbc_repo/opendbc/car/subaru/carstate.py": [
+      "CarState"
+    ],
+    "opendbc_repo/opendbc/car/subaru/fingerprints.py": [],
+    "opendbc_repo/opendbc/car/subaru/interface.py": [
+      "CarInterface"
+    ],
+    "opendbc_repo/opendbc/car/subaru/subarucan.py": [
+      "create_steering_control",
+      "create_steering_control_angle",
+      "create_steering_status",
+      "create_es_distance",
+      "create_cruise_buttons",
+      "create_es_lkas_state",
+      "create_es_dashstatus",
+      "create_stop_start_control",
+      "create_es_brake",
+      "create_es_status",
+      "create_es_infotainment",
+      "create_es_highbeamassist",
+      "create_es_static_1",
+      "create_es_static_2",
+      "subaru_preglobal_checksum",
+      "create_preglobal_steering_control",
+      "create_preglobal_es_distance",
+      "subaru_checksum",
+      "create_brake_pedal",
+      "create_preglobal_brake_pedal",
+      "create_throttle",
+      "create_preglobal_throttle"
+    ],
+    "opendbc_repo/opendbc/car/subaru/values.py": [
+      "CarControllerParams",
+      "SubaruSafetyFlags",
+      "SubaruFlags",
+      "CanBus",
+      "Footnote",
+      "SubaruCarDocs",
+      "SubaruPlatformConfig",
+      "SubaruGen2PlatformConfig",
+      "CAR"
+    ],
+    "selfdrive/car/card.py": [
+      "_build_starpilot_car_control",
+      "obd_callback",
+      "can_comm_callbacks",
+      "Car",
+      "main"
+    ],
+    "selfdrive/car/redneck_cruise.py": [
+      "select_redneck_target_speed",
+      "get_lead_coast_buffer_ms",
+      "get_lead_departure_boost_ms",
+      "get_minimum_set_speed",
+      "update_manual_button_timers",
+      "RedneckCruise"
+    ],
+    "selfdrive/controls/controlsd.py": [
+      "_plan_circle_curvature",
+      "_plan_dual_probe",
+      "get_plan_spatial_curvature",
+      "get_plan_turn_onset_dist",
+      "get_plan_reach",
+      "_plan_positions_are_finite",
+      "limit_curvature_to_plan",
+      "update_twitch_guard",
+      "get_control_lateral_smooth_seconds",
+      "turn_lead_allowed",
+      "get_gm_hud_set_speed",
+      "get_torque_control_params",
+      "Controls",
+      "main"
+    ],
+    "selfdrive/controls/lib/lane_centering.py": [
+      "LaneCenteringController",
+      "get_raw_lane_centering_correction",
+      "get_lane_centering_visual_direction"
+    ],
+    "selfdrive/controls/lib/longcontrol.py": [
+      "apply_deadzone",
+      "long_control_state_trans",
+      "long_control_state_trans_old_long",
+      "LongControl"
+    ],
+    "selfdrive/modeld/camera_offset.py": [
+      "_device_cameras",
+      "CameraOffset"
+    ],
+    "selfdrive/modeld/modeld.py": [
+      "_model_smooth_seconds",
+      "_should_publish_model_output",
+      "_set_hcq_wait_timeout",
+      "_external_gpu_power_voltage",
+      "_external_gpu_power_ready",
+      "_egmp_ready_bus",
+      "_egmp_vehicle_ready",
+      "wait_for_external_gpu_power_ready",
+      "get_lateral_smooth_seconds",
+      "get_car_lateral_smooth_seconds",
+      "ChestnutState",
+      "_get_param_str",
+      "_get_default_param_str",
+      "_resolve_mirrored_param",
+      "_canonical_model_id",
+      "_select_builtin_model",
+      "_close_tinygrad_disk_cache_connection",
+      "get_action_from_model",
+      "FrameMeta",
+      "_is_oob_artifact_header",
+      "_load_model_artifact",
+      "_normalize_model_artifact",
+      "ModelState",
+      "_load_model_state",
+      "_load_external_gpu_model",
+      "_model_versions",
+      "_load_model_lab_model",
+      "_model_lab_shared_warp_compatible",
+      "_isolate_next_model_artifact_load",
+      "_load_model_lab_models",
+      "_model_outputs_finite",
+      "_model_lab_runtime_request",
+      "_set_model_lab_runtime",
+      "_runner_frame_args",
+      "main"
+    ],
+    "selfdrive/selfdrived/events.py": [
+      "Priority",
+      "ET",
+      "Events",
+      "Alert",
+      "NoEntryAlert",
+      "SoftDisableAlert",
+      "UserSoftDisableAlert",
+      "ImmediateDisableAlert",
+      "EngagementAlert",
+      "NormalPermanentAlert",
+      "StartupAlert",
+      "get_display_speed",
+      "soft_disable_alert",
+      "user_soft_disable_alert",
+      "startup_master_alert",
+      "below_engage_speed_alert",
+      "below_steer_speed_alert",
+      "brake_hold_alert",
+      "speed_limit_changed_alert",
+      "calibration_incomplete_alert",
+      "too_distracted_alert",
+      "audio_feedback_alert",
+      "out_of_space_alert",
+      "posenet_invalid_alert",
+      "process_not_running_alert",
+      "comm_issue_alert",
+      "camera_malfunction_alert",
+      "calibration_invalid_alert",
+      "paramsd_invalid_alert",
+      "overheat_alert",
+      "low_memory_alert",
+      "high_cpu_usage_alert",
+      "modeld_lagging_alert",
+      "wrong_car_mode_alert",
+      "joystick_alert",
+      "longitudinal_maneuver_alert",
+      "turning_alert",
+      "changing_lanes_alert",
+      "personality_changed_alert",
+      "invalid_lkas_setting_alert",
+      "custom_startup_alert",
+      "forcing_stop_alert",
+      "holiday_alert",
+      "nnff_loaded_alert",
+      "no_lane_available_alert"
+    ],
+    "selfdrive/selfdrived/selfdrived.py": [
+      "evaluate_comm_issue",
+      "commanded_torque_at_max_for_saturation",
+      "controller_openpilot_event",
+      "should_loud_blindspot_alert_without_lateral",
+      "get_starpilot_alert_filters",
+      "add_tesla_preap_starpilot_events",
+      "SelfdriveD",
+      "main"
+    ],
+    "selfdrive/ui/layouts/settings/developer.py": [
+      "DeveloperLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/__init__.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/aethergrid.py": [
+      "aether_begin_scissor_mode",
+      "aether_end_scissor_mode",
+      "SPACING",
+      "hex_to_color",
+      "_resolve_value",
+      "_get_rgba",
+      "with_alpha",
+      "clamp_and_snap",
+      "value_fraction",
+      "update_val_from_mouse",
+      "mix_colors",
+      "_snap",
+      "snap_rect",
+      "_inset_rect",
+      "_intersect_rect",
+      "_roundness_for",
+      "_segments_for",
+      "draw_text_fit_common",
+      "draw_rounded_fill",
+      "draw_rounded_stroke",
+      "truncate_text_ellipsis",
+      "AetherListColors",
+      "AetherListMetrics",
+      "AetherListFrame",
+      "PanelStyle",
+      "_inflate_rect",
+      "_hit_rect",
+      "point_hits",
+      "wrap_text",
+      "build_list_panel_frame",
+      "draw_list_panel_shell",
+      "init_list_panel",
+      "draw_hud_background",
+      "draw_interactive_rect",
+      "resolve_interactive_target",
+      "AetherInteractiveMixin",
+      "PanelManagerView",
+      "AdjustorTogglesPanelView",
+      "BreadcrumbController",
+      "draw_settings_panel_header",
+      "draw_soft_card",
+      "draw_list_row_shell",
+      "draw_action_rail",
+      "draw_list_scroll_fades",
+      "draw_busy_ring",
+      "draw_standard_toggle_row",
+      "_build_constellation_nodes",
+      "draw_constellation_nodes",
+      "_get_or_create_toggle_constellation",
+      "draw_toggle_switch",
+      "draw_action_pill",
+      "draw_chevron_icon",
+      "draw_breadcrumb_chevron",
+      "draw_tab_bar",
+      "draw_tab_card",
+      "draw_metric_strip",
+      "draw_group_header",
+      "draw_section_header",
+      "draw_empty_state_card",
+      "draw_list_group_shell",
+      "draw_settings_list_row",
+      "draw_selectable_chip",
+      "format_adjustor_value",
+      "AetherInlineRangeControl",
+      "AetherAdjustorRow",
+      "draw_selection_list_row",
+      "draw_status_led",
+      "draw_overflow_dots",
+      "draw_heart_icon",
+      "draw_download_icon",
+      "AetherButton",
+      "AetherChip",
+      "AetherScrollbar",
+      "SettingRow",
+      "SettingSection",
+      "ParentToggle",
+      "AetherSettingsView",
+      "CardHubManagerView",
+      "draw_back_button",
+      "AetherCategoryDrawer",
+      "AetherTile",
+      "HubTile",
+      "ToggleTile",
+      "RowToggleTile",
+      "ValueTile",
+      "SliderTile",
+      "AetherSlider",
+      "AetherSliderDialog",
+      "RadioTileGroup",
+      "AetherMultiSelectDialog",
+      "AetherMultiSelectTile",
+      "AetherSegmentedControl",
+      "TileGrid"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/appearance.py": [
+      "_theme_display_name",
+      "AppearanceManagerView",
+      "StarPilotAppearanceLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/asset_loader.py": [
+      "starpilot_texture"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/driving_model.py": [
+      "ModelCatalogEntry",
+      "_clean_model_name",
+      "_ease",
+      "DrivingModelManagerView",
+      "StarPilotDrivingModelLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/lateral.py": [
+      "_confirm_reboot_toggle",
+      "_sync_parent",
+      "SteeringManagerView",
+      "StarPilotLateralLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/longitudinal.py": [
+      "AdaptiveSpeedView",
+      "LongitudinalManagerView",
+      "ConditionalDriveModeView",
+      "StarPilotLongitudinalLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/main_panel.py": [
+      "StarPilotLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/maps.py": [
+      "_format_mb",
+      "_format_elapsed_ms",
+      "_format_eta_ms",
+      "_localized_schedule_label",
+      "_selected_token_set",
+      "MapsDownloadState",
+      "MapsManagerView",
+      "StarPilotMapsLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/navigation.py": [
+      "MapboxSearchError",
+      "SearchResult",
+      "MapboxSearchClient",
+      "NavigationManagerView",
+      "StarPilotNavigationLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/panel.py": [
+      "FrameCachedParams",
+      "StarPilotPanelType",
+      "StarPilotPanelInfo",
+      "StarPilotPanel",
+      "create_tile_panel",
+      "_SettingsPage"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/scribble.py": [
+      "_draw_custom_icon_geometry",
+      "draw_custom_icon"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py": [
+      "TileSection",
+      "SectionedTileLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py": [
+      "_theme_display_name",
+      "_display_to_slug",
+      "_delete_asset_file",
+      "_add_to_downloadable_list",
+      "_is_online",
+      "_is_parked",
+      "SimpleDownloadManager"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/sounds.py": [
+      "SoundsManagerView",
+      "StarPilotSoundsLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/system_settings.py": [
+      "SystemSettingsManagerView",
+      "AetherBackupsCareDialog",
+      "StarPilotSystemLayout"
+    ],
+    "selfdrive/ui/layouts/settings/starpilot/vehicle.py": [
+      "_lock_doors_timer_labels",
+      "VehicleSettingsManagerView",
+      "ButtonActionComboDialog",
+      "StarPilotVehicleSettingsLayout"
+    ],
+    "selfdrive/ui/lib/mode_banner.py": [
+      "ModeBannerVariant",
+      "get_mode_banner_variant",
+      "_color",
+      "_lerp_color",
+      "_conditional_colors",
+      "mode_banner_color",
+      "mode_atom_color",
+      "draw_mode_banner_gradient"
+    ],
+    "selfdrive/ui/lib/starpilot_state.py": [
+      "StarPilotCarState",
+      "StarPilotState"
+    ],
+    "selfdrive/ui/mici/layouts/settings/developer.py": [
+      "DeveloperLayoutMici"
+    ],
+    "selfdrive/ui/mici/layouts/settings/settings.py": [
+      "SettingsBigButton",
+      "ForceDriveStateBigButton",
+      "SettingsLayout"
+    ],
+    "selfdrive/ui/mici/layouts/settings/visuals.py": [
+      "CameraViewBigButton",
+      "LeadIndicatorBigButton",
+      "LeadInfoBigButton",
+      "VisualsLayoutMici"
+    ],
+    "selfdrive/ui/mici/onroad/hud_renderer.py": [
+      "FontSizes",
+      "Colors",
+      "TurnIntent",
+      "HudRenderer"
+    ],
+    "selfdrive/ui/mici/onroad/sidebar_widgets.py": [
+      "_with_alpha",
+      "_env_truthy",
+      "_v",
+      "_draw_line",
+      "_draw_tri",
+      "_draw_quad",
+      "_draw_quad_outline",
+      "_draw_bezier",
+      "_bezier_point",
+      "_draw_dashed_bezier",
+      "MiciSidebarWidgets"
+    ],
+    "selfdrive/ui/onroad/model_renderer.py": [
+      "ModelPoints",
+      "LeadVehicle",
+      "ModelRenderer"
+    ],
+    "selfdrive/ui/onroad/starpilot/__init__.py": [],
+    "selfdrive/ui/onroad/starpilot/aethergauge.py": [
+      "_speed_conversion",
+      "_speed_unit",
+      "_distance_conversion",
+      "_distance_unit",
+      "_to_display_distance",
+      "_env_truthy",
+      "_to_display_speed",
+      "_get_val",
+      "_sm_valid",
+      "_calc_reduction",
+      "_channels",
+      "_with_alpha",
+      "_fade",
+      "_lerp_color",
+      "_pulse",
+      "_get_road_height",
+      "_road_xy",
+      "_get_t_from_x",
+      "_get_perspective_offset",
+      "_draw_text_with_shadow",
+      "IndicatorType",
+      "AetherGaugeData",
+      "_build_curve_gauge_data",
+      "_is_force_stop",
+      "_force_stop_data",
+      "_is_stop_light",
+      "_stop_light_data",
+      "_is_curve_speed",
+      "_curve_speed_data",
+      "_is_cem_curvature",
+      "_cem_curvature_data",
+      "_is_lead",
+      "_lead_data",
+      "_test_cycle_active",
+      "_test_cycle_data",
+      "_cem_demo_active",
+      "_cem_demo_data",
+      "AetherGauge"
+    ],
+    "selfdrive/ui/onroad/starpilot/compass.py": [
+      "get_compass_text"
+    ],
+    "selfdrive/ui/onroad/starpilot/developer_sidebar.py": [
+      "parse_hex_color",
+      "resolve_effective_torque_value",
+      "_safe_float",
+      "_setting_changed",
+      "DeveloperSidebar"
+    ],
+    "selfdrive/ui/onroad/starpilot/favorite_radial_menu.py": [
+      "FavoriteRadialMenu"
+    ],
+    "selfdrive/ui/onroad/starpilot/navigation_card.py": [
+      "_format_distance",
+      "_modifier_suffix",
+      "_normalize_maneuver_type",
+      "NavigationCardRenderer"
+    ],
+    "selfdrive/ui/onroad/starpilot/path.py": [
+      "_hsla_to_color",
+      "_make_gradient",
+      "_draw_text_with_outline",
+      "render_adjacent_lanes",
+      "render_path_edges"
+    ],
+    "selfdrive/ui/onroad/starpilot/pause_indicators.py": [
+      "draw_pause_symbol",
+      "render_lateral_paused",
+      "render_longitudinal_paused"
+    ],
+    "selfdrive/ui/onroad/starpilot/pedal_icons.py": [
+      "render_pedal_icons"
+    ],
+    "selfdrive/ui/onroad/starpilot/personality_button.py": [
+      "PersonalityButton"
+    ],
+    "selfdrive/ui/onroad/starpilot/pip_sidecam.py": [
+      "PipSideCamera"
+    ],
+    "selfdrive/ui/onroad/starpilot/pulse_glide.py": [
+      "get_pulse_glide_border_color",
+      "render_pulse_glide"
+    ],
+    "selfdrive/ui/onroad/starpilot/rainbow_path.py": [
+      "_hsla_to_color",
+      "RainbowPath"
+    ],
+    "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py": [
+      "RivianLateralMode"
+    ],
+    "selfdrive/ui/onroad/starpilot/slc_speed_limit.py": [
+      "_reset_pulse",
+      "_tick_pulse",
+      "_speed_limit_pulse_color",
+      "_get_slc_state",
+      "_get_bold",
+      "_get_semi_bold",
+      "_active_source_label",
+      "_source_label_color",
+      "_draw_offset_chip",
+      "_draw_us_sign",
+      "_draw_eu_sign",
+      "_draw_sign",
+      "_draw_source_icon",
+      "_draw_sources_bubble_empty_state",
+      "_draw_sources_bubble",
+      "render_speed_limit_at"
+    ],
+    "selfdrive/ui/onroad/starpilot/source_bubble_layout.py": [
+      "enabled_source_titles",
+      "source_content_metrics",
+      "visible_source_rows",
+      "fit_source_label",
+      "source_value_text",
+      "source_abbreviated_value_text"
+    ],
+    "selfdrive/ui/onroad/starpilot/starpilot_border.py": [
+      "BorderLayer",
+      "BorderEffect",
+      "_csc_state",
+      "_intensity",
+      "_glow_period",
+      "_lerp_color",
+      "_glow_color",
+      "_render_csc_glow",
+      "get_traffic_border_colors",
+      "render_background_effects",
+      "render_behind",
+      "render_overlay"
+    ],
+    "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py": [
+      "StarPilotOnroadView"
+    ],
+    "selfdrive/ui/onroad/starpilot/stopping_point.py": [
+      "_draw_poly_outline",
+      "render_stopping_point"
+    ],
+    "selfdrive/ui/onroad/starpilot/torque_bar.py": [
+      "quantized_lru_cache",
+      "arc_bar_pts",
+      "TorqueBar"
+    ],
+    "selfdrive/ui/onroad/starpilot/weather_icon.py": [
+      "render_weather_icon"
+    ],
+    "selfdrive/ui/onroad/starpilot/widget_layout_manager.py": [
+      "WidgetLayoutManager"
+    ],
+    "selfdrive/ui/onroad/starpilot/widget_style.py": [
+      "roundness_for",
+      "draw_control_card"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/__init__.py": [],
+    "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py": [
+      "AetherGaugeWidget"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/base.py": [
+      "LayoutWidget"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py": [
+      "DriverMonitorWidget"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/model_source.py": [
+      "ModelSourceStatus",
+      "ModelSourceWidget"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py": [
+      "PedalIconsWidget"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/personality_button.py": [
+      "PersonalityButtonWidget"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/set_speed.py": [
+      "SetSpeedWidget"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py": [
+      "SpeedLimitWidget"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py": [
+      "SteeringWheelWidget"
+    ],
+    "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py": [
+      "StoppedTimerWidget"
+    ],
+    "selfdrive/ui/ui_state.py": [
+      "_noop_progress",
+      "UIStatus",
+      "UIState",
+      "Device"
+    ],
+    "starpilot/common/accel_profile.py": [
+      "akima_interp",
+      "normalize_acceleration_profile",
+      "normalize_deceleration_profile",
+      "get_accel_profile_curve_values",
+      "interpolate_accel_profile",
+      "get_max_allowed_accel",
+      "build_custom_accel_profile_defaults",
+      "custom_accel_profile_is_initialized",
+      "coerce_custom_accel_profile_values",
+      "parse_custom_accel_profile_curve",
+      "get_custom_accel_profile_curve_defaults",
+      "_normalize_profile",
+      "_decode_param_value",
+      "_coerce_bool"
+    ],
+    "starpilot/common/connect_server.py": [
+      "_cache_params_path",
+      "_normalize_dongle_id",
+      "_read_persisted_stock_dongle_id",
+      "_remove_param_from_live_and_cache",
+      "prepare_konik_server_switch",
+      "_ensure_stock_dongle_id",
+      "sync_konik_dongle_id"
+    ],
+    "starpilot/common/controller_actions.py": [
+      "controller_speed_bounds"
+    ],
+    "starpilot/common/cpu_throttle.py": [
+      "_online_cpu_count",
+      "_online_cpu_usage",
+      "device_cpu_throttle_factor",
+      "_compute_throttle_factor"
+    ],
+    "starpilot/common/experimental_state.py": [
+      "is_manual_ce_status",
+      "is_manual_cc_status",
+      "normalize_persisted_ce_status",
+      "normalize_persisted_cc_status",
+      "get_persisted_ce_status",
+      "get_persisted_cc_status",
+      "set_persisted_ce_status",
+      "set_persisted_cc_status",
+      "clear_persisted_ce_status",
+      "clear_persisted_cc_status",
+      "sync_persist_experimental_state",
+      "sync_persist_chill_state",
+      "sync_manual_ce_state",
+      "sync_manual_cc_state",
+      "clear_and_return_off",
+      "clear_cc_and_return_off",
+      "next_manual_ce_status",
+      "next_manual_cc_status",
+      "requested_experimental_mode",
+      "restore_persisted_ce_state",
+      "restore_persisted_cc_state"
+    ],
+    "starpilot/common/favorite_slots.py": [
+      "is_param_action_safe_onroad",
+      "load_settings_catalog",
+      "get_catalog_param_map",
+      "build_favorite_slot_options",
+      "filter_favorite_slot_options",
+      "default_favorite_slots",
+      "_load_raw_slots",
+      "_get_key_type",
+      "is_enum_param",
+      "get_param_enum_options",
+      "get_favorite_param_value",
+      "get_favorite_values",
+      "get_favorite_enum_state",
+      "cycle_enum_parameter",
+      "is_favorite_action_key",
+      "favorite_key_is_valid",
+      "is_bool_param",
+      "normalize_favorite_slots",
+      "load_favorite_slots",
+      "save_favorite_slots",
+      "request_starpilot_toggle_refresh",
+      "trigger_favorite_action",
+      "execute_favorite_key",
+      "toggle_favorite_slot",
+      "unassign_favorite_slot"
+    ],
+    "starpilot/common/gpu_model_ready_sound.py": [
+      "GpuModelReadyChime"
+    ],
+    "starpilot/common/lateral_delay.py": [
+      "full_lateral_delay"
+    ],
+    "starpilot/common/lateral_only_experimental.py": [
+      "lateral_only_experimental_available",
+      "experimental_mode_available"
+    ],
+    "starpilot/common/longitudinal_mode.py": [
+      "mode_lock",
+      "read_mode_values",
+      "request_mode_refresh"
+    ],
+    "starpilot/common/longitudinal_personality_profiles.py": [
+      "is_truck_fingerprint",
+      "load_personality_profile_enable_values",
+      "validate_personality_follow_value",
+      "validate_personality_advanced_value",
+      "_acceleration_preset_curve",
+      "default_personality_profiles",
+      "profile_document",
+      "_decode_json",
+      "_validated_category_with_length",
+      "_validated_category",
+      "_schema_values_equal",
+      "_strict_document",
+      "_preserve_legacy_following_presets",
+      "strict_profile_document",
+      "migrate_profile_document",
+      "is_unconfigured_profile_document",
+      "synchronise_profile_document_enabled",
+      "strict_personality_profiles",
+      "load_personality_profiles",
+      "serialize_personality_profiles",
+      "update_personality_profile",
+      "active_personality_id",
+      "resolve_personality_profile",
+      "resolve_personality_category",
+      "category_curve",
+      "_sample_config_on_custom_axis",
+      "personality_reference_curves",
+      "initial_custom_curve",
+      "_linear_interp",
+      "interpolate_category_curve"
+    ],
+    "starpilot/common/maps_catalog.py": [
+      "normalize_schedule_value",
+      "schedule_label",
+      "schedule_param_value",
+      "_sorted_regions",
+      "get_maps_catalog",
+      "get_selected_map_tokens",
+      "sanitize_selected_locations_csv",
+      "get_selected_map_entries"
+    ],
+    "starpilot/common/maps_download_progress.py": [
+      "nonnegative_int",
+      "storage_bytes",
+      "selection_key",
+      "estimate_download_bytes",
+      "estimate_eta_seconds",
+      "estimate_file_eta_seconds",
+      "load_size_cache",
+      "MapsStorageCache",
+      "load_maps_storage_cache"
+    ],
+    "starpilot/common/maps_selection.py": [
+      "_normalize_json_selection",
+      "normalize_map_token",
+      "normalize_maps_selected"
+    ],
+    "starpilot/common/model_lab.py": [
+      "compact_model_lab_label",
+      "model_lab_pair_display_name",
+      "model_lab_pair_display_name_from_params",
+      "parse_model_version",
+      "model_lab_version_supported",
+      "is_small_model_metadata",
+      "model_lab_manifest_eligible",
+      "normalize_model_lab_config",
+      "load_model_lab_config",
+      "validate_model_lab_selection",
+      "_merge_plan_tensor",
+      "_merge_action_tensor",
+      "compose_model_outputs",
+      "hybrid_action_values"
+    ],
+    "starpilot/common/model_versions.py": [
+      "parse_model_version",
+      "is_tinygrad_model_version",
+      "uses_split_off_policy_artifacts",
+      "uses_combined_driving_artifacts",
+      "is_supported_artifact_format",
+      "driving_artifact_filename"
+    ],
+    "starpilot/common/param_profiles.py": [
+      "ParamProfileError",
+      "_normalize_slot",
+      "_profile_path",
+      "_key_text",
+      "eligible_profile_keys",
+      "_get_current_value",
+      "_serialize_value",
+      "_deserialize_value",
+      "_build_profile_payload",
+      "save_profile",
+      "_read_profile",
+      "prepare_profile",
+      "load_profile",
+      "profile_status",
+      "list_profiles"
+    ],
+    "starpilot/common/safe_mode.py": [
+      "safe_mode_enabled",
+      "_load_backup",
+      "_current_entry",
+      "_safe_value",
+      "_apply_value",
+      "_mark_toggle_update",
+      "apply_safe_mode",
+      "restore_safe_mode"
+    ],
+    "starpilot/common/starpilot_backups.py": [
+      "backup_starpilot",
+      "backup_toggles",
+      "cleanup_backups",
+      "create_backup"
+    ],
+    "starpilot/common/starpilot_download_utilities.py": [
+      "download_file",
+      "get_remote_file_size",
+      "get_repository_url",
+      "get_resource_urls",
+      "github_rate_limited",
+      "handle_error",
+      "handle_request_error",
+      "verify_download"
+    ],
+    "starpilot/common/starpilot_functions.py": [
+      "seed_desktop_theme_assets",
+      "starpilot_boot_functions",
+      "install_starpilot",
+      "register_device",
+      "uninstall_starpilot",
+      "update_boot_logo",
+      "_decode_map_param",
+      "_get_maps_storage_cache",
+      "_save_maps_storage_cache",
+      "_reconcile_maps_storage",
+      "_publish_maps_progress",
+      "_wait_for_map_download_to_stop",
+      "update_maps",
+      "update_openpilot"
+    ],
+    "starpilot/common/starpilot_utilities.py": [
+      "capture_exception",
+      "ThreadManager",
+      "calculate_bearing_offset",
+      "calculate_distance_to_point",
+      "calculate_lane_width",
+      "calculate_road_curvature",
+      "extract_curve_profile",
+      "clean_model_name",
+      "contains_event_type",
+      "delete_file",
+      "extract_zip",
+      "flash_panda",
+      "get_starpilot_api_info",
+      "get_lock_status",
+      "get_sentry_dsn",
+      "is_url_pingable",
+      "load_json_file",
+      "lock_doors",
+      "run_cmd",
+      "update_can_parser",
+      "update_json_file",
+      "use_konik_server",
+      "wait_for_no_driver"
+    ],
+    "starpilot/common/starpilot_variables.py": [
+      "_lkas_allowed_for_aol",
+      "_main_cruise_aol_allowed",
+      "sync_reboot_marker",
+      "device_shutdown_seconds",
+      "get_nnff_model_files",
+      "get_nnff_substitutes",
+      "nnff_supported",
+      "normalize_legacy_car_model",
+      "default_ev_tuning_enabled",
+      "always_on_lateral_available",
+      "get_starpilot_toggles",
+      "process_starpilot_toggles",
+      "update_starpilot_toggles",
+      "set_speed_limit_available",
+      "speed_limit_controller_available",
+      "software_cruise_intervals_available",
+      "reverse_cruise_available",
+      "migrate_cancel_button_controls",
+      "migrate_aol_lkas_to_button_control",
+      "migrate_ford_lkas_button_default",
+      "StarPilotVariables"
+    ],
+    "starpilot/common/testing_grounds.py": [
+      "_is_unused_testing_ground_slot",
+      "_extract_variant_labels",
+      "_normalize_variant",
+      "_normalize_selection",
+      "_write_testing_ground_selection",
+      "get_testing_ground_selection",
+      "is_testing_ground_active",
+      "_TestingGroundFlag",
+      "_TestingGroundNamespace"
+    ],
+    "starpilot/common/theme_asset_names.py": [
+      "_coerce_asset_name",
+      "canonicalize_theme_asset_name",
+      "find_matching_theme_asset_name",
+      "find_matching_theme_asset_file"
+    ],
+    "starpilot/common/vision_bsm.py": [
+      "get_fresh_vasm_state"
+    ],
+    "starpilot/controls/lib/conditional_chill_mode.py": [
+      "DetectorToggles",
+      "ConditionalChillMode"
+    ],
+    "starpilot/controls/lib/conditional_experimental_mode.py": [
+      "interp",
+      "scale_threshold",
+      "ConditionalExperimentalMode"
+    ],
+    "starpilot/controls/lib/curve_speed_controller.py": [
+      "weighted_isotonic",
+      "is_user_overriding_longitudinal",
+      "is_manual_speed_control",
+      "CurveSpeedController"
+    ],
+    "starpilot/controls/lib/neural_network_feedforward.py": [
+      "get_nnff_lat_jerk_friction_factor",
+      "FluxModel",
+      "get_lookahead_value",
+      "get_nn_model",
+      "get_nn_model_path",
+      "get_predicted_lateral_jerk",
+      "roll_pitch_adjust",
+      "sign",
+      "similarity",
+      "LatControlNNFF"
+    ],
+    "starpilot/controls/lib/speed_limit_controller.py": [
+      "SpeedLimitController"
+    ],
+    "starpilot/controls/lib/starpilot_acceleration.py": [
+      "cubic_interp",
+      "akima_interp",
+      "get_max_accel_eco",
+      "get_max_accel_sport",
+      "get_max_accel_standard",
+      "get_max_accel_traffic",
+      "get_max_accel_custom",
+      "get_max_allowed_accel",
+      "get_profile_min_accel_floor",
+      "lead_is_braking_relevant",
+      "get_slc_shaped_min_accel",
+      "StarPilotAcceleration"
+    ],
+    "starpilot/controls/lib/starpilot_events.py": [
+      "StarPilotEvents"
+    ],
+    "starpilot/controls/lib/starpilot_following.py": [
+      "get_longitudinal_personality",
+      "StarPilotFollowing"
+    ],
+    "starpilot/controls/lib/starpilot_vcruise.py": [
+      "get_lead_veto_distance",
+      "get_active_slc_control_target",
+      "_interp_linear",
+      "get_slc_lead_drop_relaxed_target",
+      "StarPilotVCruise"
+    ],
+    "starpilot/controls/lib/weather_checker.py": [
+      "_iso_to_unix",
+      "_normalize_response",
+      "WeatherChecker"
+    ],
+    "starpilot/controls/starpilot_card.py": [
+      "aol_blocked_by_immediate_disable",
+      "StarPilotCard"
+    ],
+    "starpilot/controls/starpilot_planner.py": [
+      "get_force_stop_jerk_scale",
+      "_sanitize_json_value",
+      "serialize_starpilot_toggles",
+      "StarPilotPlanner"
+    ],
+    "starpilot/system/adj_spot_monitor_vision.py": [
+      "VASMDaemon",
+      "main"
+    ],
+    "starpilot/system/speed_limit_filler.py": [
+      "MapSpeedLogger",
+      "main"
+    ],
+    "starpilot/system/speed_limit_vision.py": [
+      "device_cpu_usage_busy",
+      "memory_pressure_level",
+      "Detection",
+      "DetectorProposal",
+      "ProposalTrack",
+      "HistoryEntry",
+      "SpeedLimitVisionDaemon",
+      "main"
+    ],
+    "starpilot/system/the_galaxy/assets/components/settings.js": [
+      "SettingsView"
+    ],
+    "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js": [
+      "actionCategory",
+      "actionHierarchy",
+      "actionGroups",
+      "actionCategories",
+      "filterActions",
+      "openControllerActionPicker"
+    ],
+    "starpilot/system/the_galaxy/assets/components/tools/device_settings.js": [
+      "DeviceSettings"
+    ],
+    "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs": [
+      "LONGITUDINAL_MODE_KEY",
+      "LONGITUDINAL_MODES",
+      "longitudinalModeLayout",
+      "validLongitudinalSnapshot"
+    ],
+    "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs": [
+      "formatProfileSpeed",
+      "profileSpeedUnit",
+      "personalityProfileParamKey",
+      "shouldSubmitPersonalityPreset",
+      "valueFromPointer"
+    ],
+    "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js": [
+      "SpeedLimits"
+    ],
+    "starpilot/system/the_galaxy/assets/components/tools/tuning.js": [
+      "Tuning"
+    ],
+    "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js": [
+      "VehicleFeatures"
+    ],
+    "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js": [
+      "WheelControls"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/api.js": [
+      "LAYOUT_URL",
+      "api",
+      "showSnackbar"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js": [
+      "FavoritesEditor"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js": [
+      "openGalaxyHelpDialog"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js": [
+      "GalaxySelect"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js": [
+      "GalaxyToggleCard"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js": [
+      "LateralTuningPanel"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js": [
+      "LongitudinalMode"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js": [
+      "ParamSections"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js": [
+      "PersonalityProfiles"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js": [
+      "SettingTree"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/composables.js": [
+      "useTabRouting",
+      "usePolling",
+      "useLogStream",
+      "formatAgeSeconds"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/params.js": [
+      "GALAXY_DEVELOPER_MODE_KEY",
+      "VEHICLE_SPEED_UNIT_TYPE",
+      "usesMetricUnits",
+      "vehicleSpeedUnit",
+      "resolveVehicleUnitParam",
+      "normalizeVehicleMake",
+      "isVehicleSettingVisible",
+      "matchesSettingValueCondition",
+      "isSettingVisible",
+      "isAdvancedHiddenByDeveloperMode",
+      "countAdvancedHiddenByDeveloperMode",
+      "numericBounds",
+      "stepPrecision",
+      "numericEpsilon",
+      "clampNumeric",
+      "snapNumericToBoundsAndStep",
+      "coerceValueByType",
+      "formatSliderValue",
+      "formatNumericParamValue",
+      "formatReadoutValue",
+      "normalizeHexColor",
+      "getColorDefault",
+      "slugifySectionName",
+      "isGroupParam",
+      "applyParamChange",
+      "isParamEnabledForChildren",
+      "hasChildParams",
+      "buildRenderTree"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/store.js": [
+      "store",
+      "setTheme",
+      "toggleTheme",
+      "setNavPinned",
+      "toggleNavPinned",
+      "parseHash",
+      "toHash",
+      "navigate",
+      "goHome",
+      "goBack",
+      "toolHref",
+      "initRouter"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js": [
+      "Settings"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js": [
+      "SystemTools"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js": [
+      "Tuning"
+    ],
+    "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js": [
+      "Vehicle"
+    ],
+    "starpilot/system/the_galaxy/flm_workspace.py": [
+      "FLMAnalysisCancelled",
+      "FLMSegmentTimeout",
+      "RouteSource",
+      "FLMSample",
+      "_get_galaxy_dir",
+      "get_flm_workspace_root",
+      "_legacy_workspace_root",
+      "_migrate_legacy_payload",
+      "_migrate_legacy_workspace",
+      "_workspace_paths",
+      "ensure_flm_workspace",
+      "_read_json",
+      "_write_json",
+      "_progress_path",
+      "_record_cleanup_progress",
+      "_cleanup_progress_locked",
+      "_worker_env",
+      "read_flm_status",
+      "_write_flm_status",
+      "clear_flm_status",
+      "_require_flm_offroad",
+      "_require_flm_lane_centering_off",
+      "flm_analyzer_running",
+      "_terminate_flm_process",
+      "_write_flm_cancelled_status",
+      "stop_flm_background_analysis",
+      "_watch_flm_process_for_onroad",
+      "_watch_flm_worker_for_onroad",
+      "cancel_flm_if_onroad",
+      "_optional_segment_number",
+      "normalize_segment_ranges",
+      "selected_segment_count",
+      "enforce_segment_limit",
+      "start_flm_background_analysis",
+      "_parse_segment_num",
+      "resolve_route_sources",
+      "_speed_band_label",
+      "_route_label",
+      "_event_direction",
+      "_group_masked_events",
+      "_analysis_eligibility_mask",
+      "_build_plot_data",
+      "_build_plot_svg",
+      "_decode_init_param",
+      "_init_param_enabled",
+      "_car_params_control_path",
+      "_effective_control_path",
+      "_effective_torque_car_params",
+      "_segment_samples",
+      "_segment_samples_with_timeout",
+      "_current_param_state",
+      "_stock_param_state",
+      "_nonlinear_torque_map",
+      "_baseline_family_curve",
+      "_current_family_curve",
+      "_center_chatter_friction_adjustment",
+      "_center_chatter_threshold_pass_applied",
+      "_center_chatter_deadband_adjustment",
+      "_direction_reversal_count",
+      "_clamp",
+      "_round_to_precision",
+      "_current_vehicle_knob_value",
+      "_vehicle_knob_adjustment",
+      "_rich_profile_supports_knob",
+      "_build_event_summaries",
+      "_summaries_from_events",
+      "classify_torque_samples",
+      "_primary_delta_from_summary",
+      "_observed_behavior",
+      "_likely_interpretation",
+      "_why_this_knob",
+      "_render_adjustment_line",
+      "_what_not_to_touch_yet",
+      "_if_that_was_wrong",
+      "_log_support",
+      "build_suggestions",
+      "_clamp_generic_param",
+      "_merge_primary_adjustments",
+      "_resolve_conflicting_actionable_suggestions",
+      "_bucket_tuning_family",
+      "_select_primary_tuning_path_unlocked",
+      "select_primary_tuning_path",
+      "build_trial_profiles",
+      "_add_parameters_start_here",
+      "build_recommendation_paths",
+      "_render_report_html",
+      "analyze_routes",
+      "load_report",
+      "select_report_path",
+      "_active_trial_display_state",
+      "_current_car_identity",
+      "_normalize_saved_tune_name",
+      "_normalize_discord_username",
+      "_saved_tune_car_name",
+      "_load_saved_tune",
+      "list_saved_tunes",
+      "list_workspace",
+      "delete_report",
+      "clear_workspace",
+      "_snapshot_current_trial_state",
+      "_read_persistent_trial_baseline",
+      "_persist_trial_baseline",
+      "_clear_persistent_trial_baseline",
+      "_profile_report_id",
+      "_recover_report_baseline",
+      "_apply_param_bundle",
+      "_merge_flm_override_state",
+      "_find_revert_snapshot",
+      "_active_trial_adjustments",
+      "_active_trial_car_fingerprint",
+      "save_active_trial_as_tune",
+      "submit_saved_tune",
+      "apply_saved_tune",
+      "rename_saved_tune",
+      "delete_saved_tune",
+      "apply_trial_profile",
+      "revert_trial_profile",
+      "accept_trial_as_baseline",
+      "record_feedback",
+      "run_worker",
+      "main"
+    ],
+    "starpilot/system/the_galaxy/longitudinal_mode.py": [
+      "ModeError",
+      "selected_mode",
+      "lock_reason",
+      "snapshot",
+      "_snapshot",
+      "_write_lock",
+      "set_mode"
+    ],
+    "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py": [
+      "_device_settings",
+      "test_device_settings_surfaces_hidden_advanced_settings_count",
+      "test_developer_mode_notice_is_rendered_when_advanced_settings_hidden",
+      "test_developer_mode_notice_navigates_to_developer_section",
+      "test_advanced_settings_hidden_count_shown_in_status_bar",
+      "test_device_settings_uses_the_params_api_and_layout_json",
+      "test_device_settings_speed_units_follow_the_vehicle",
+      "test_device_settings_supports_vehicle_make_exclusions",
+      "test_lane_center_offset_can_step_below_zero",
+      "test_developer_mode_notice_has_styles"
+    ],
+    "starpilot/system/the_galaxy/tests/test_device_settings_layout.py": [
+      "_layout",
+      "_params_by_section",
+      "_declared_default",
+      "test_galaxy_layout_removes_obsolete_and_duplicate_controls",
+      "test_slc_override_method_is_not_exposed_in_either_settings_ui",
+      "test_galaxy_layout_contains_basic_mode_controls",
+      "test_galaxy_new_ui_is_the_visible_default_choice",
+      "test_driving_personality_controls_are_not_parked_only",
+      "test_brake_status_toggle_is_galaxy_only",
+      "test_ford_lateral_controls_are_ford_only_and_galaxy_only",
+      "test_device_shutdown_uses_literal_hours",
+      "test_speed_settings_follow_vehicle_units_with_one_unit_steps",
+      "test_cruise_controls_are_split_between_toyota_and_software_cruise",
+      "test_curve_speed_controller_no_lead_toggle_is_nested_under_csc",
+      "test_curve_speed_controller_readouts_are_display_only_and_nested",
+      "test_custom_accel_profile_exposes_variable_breakpoints",
+      "test_every_galaxy_setting_has_a_shared_settings_tier",
+      "test_every_setting_parent_exposes_a_manage_control",
+      "test_requested_simple_and_advanced_settings_tiers",
+      "test_turn_steering_limit_mute_speed_is_galaxy_developer_only",
+      "test_honda_pid_scale_controls_use_galaxy_fine_granularity",
+      "test_hidden_feature_defaults_remain_enabled",
+      "test_toyota_auto_hold_is_galaxy_only",
+      "test_cluster_offset_is_in_galaxy_developer_section_only",
+      "test_human_acceleration_param_is_removed",
+      "test_rivian_angle_control_is_harness_gated",
+      "test_vasm_is_default_off_and_configured_only_in_galaxy",
+      "test_low_vision_limit_filter_is_default_off_and_configured_only_in_galaxy",
+      "test_pip_preview_is_under_driving_screen_widgets_and_configured_only_in_galaxy"
+    ],
+    "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py": [
+      "test_named_following_matches_default_reference_and_custom_conversion",
+      "test_existing_fixed_selection_stays_visible_and_can_explicitly_change",
+      "test_existing_dom_default_keeps_inheriting_user_following_settings"
+    ],
+    "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py": [
+      "Params",
+      "test_read_precedence_without_writes",
+      "test_all_transitions",
+      "test_guards_fail_closed",
+      "test_invalid_modes_never_write",
+      "test_stale_or_missing_expected_state_never_writes",
+      "test_failed_write_keeps_old_or_requested_mode",
+      "test_readback_failure_stops_without_further_writes",
+      "test_guard_rechecked_before_every_write"
+    ],
+    "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py": [
+      "client_for",
+      "test_live_snapshot_precedence_no_load_writes",
+      "test_put_readback_and_failed_partial_write_signal",
+      "test_bad_request_rejected",
+      "test_api_guards_and_legacy_favorites",
+      "test_legacy_favorite_uses_guarded_adapter",
+      "test_experimental_requires_acknowledgement_does_not_mark_confirmed",
+      "test_capability_pending_vehicle_guards",
+      "test_real_params_compat_missing_and_failed_reads_fail_closed",
+      "test_manual_and_persisted_overrides_and_child_values_untouched"
+    ],
+    "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py": [
+      "test_guard_transition_during_write_stops_further_writes",
+      "test_multi_key_write_boundaries_never_expose_intermediate_chill"
+    ],
+    "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py": [
+      "_client",
+      "_slot_client",
+      "test_slot_load_requires_confirmed_offroad",
+      "test_slot_load_rechecks_offroad_after_acquiring_shared_lock",
+      "test_slot_load_preserves_native_types_renames_and_skips",
+      "test_slot_load_validates_personality_before_any_writes",
+      "test_slot_load_rejects_incompatible_document_before_any_writes",
+      "test_slot_load_syncs_master_preserves_historical_curves_under_shared_lock",
+      "test_saved_v2_high_curve_read_migrate_edit_and_master_round_trip",
+      "test_saved_v2_high_curve_is_editable_onroad_but_migration_needs_offroad",
+      "test_get_returns_disabled_standard_defaults_and_explicit_graph_metadata",
+      "test_legacy_master_without_document_remains_enabled_when_first_profile_is_saved",
+      "test_first_save_persists_one_atomic_versioned_document_with_other_categories_dom_default",
+      "test_profile_read_modify_write_endpoint_is_serialized",
+      "test_selecting_custom_is_seeded_server_side_from_current_ev_preset_with_ev_over_truck",
+      "test_selecting_custom_uses_the_automatically_detected_truck_curve",
+      "test_custom_braking_is_seeded_from_selected_deceleration_preset",
+      "test_dom_default_custom_acceleration_seeds_from_effective_legacy_custom_curve",
+      "test_existing_custom_category_persists_subsequent_graph_edits_exactly",
+      "test_dom_default_custom_seed_resamples_valid_dynamic_curve_and_malformed_dynamic_falls_back",
+      "test_following_custom_seeds_from_legacy_profile_and_then_persists_edits",
+      "test_fresh_following_custom_seeds_from_dom_default_when_legacy_custom_is_off",
+      "test_traffic_following_seed_matches_legacy_runtime_speed_units",
+      "test_invalid_payload_never_writes",
+      "test_api_exposes_and_enforces_requested_acceleration_and_braking_bounds",
+      "test_dedicated_profile_edits_allow_confirmed_onroad_but_reject_unknown_state",
+      "test_generic_profile_mutation_is_also_rejected_while_parked",
+      "test_dedicated_profile_write_rechecks_road_state_before_commit",
+      "test_advanced_personality_write_rechecks_road_state_before_commit",
+      "test_dedicated_enable_mutation_is_rejected",
+      "test_enabling_master_without_document_creates_standard_medium_defaults",
+      "test_master_toggle_synchronises_the_profile_document_enable_bit",
+      "test_master_toggle_writes_in_fail_closed_order",
+      "test_master_toggle_rechecks_confirmed_road_state_after_waiting_for_profile_lock",
+      "test_profile_document_write_failure_never_enables_master",
+      "test_unverified_profile_document_write_never_enables_master",
+      "test_master_write_failure_leaves_master_false_after_verified_document_write",
+      "test_every_state_affecting_personality_write_is_allowed_onroad",
+      "test_every_state_affecting_personality_write_is_rejected_when_road_state_is_unconfirmed",
+      "test_reset_defaults_requires_confirmed_offroad_without_side_effects",
+      "test_troubleshoot_reset_skips_every_parked_personality_key_without_confirmed_offroad",
+      "test_advanced_personality_values_require_numbers_in_supported_range",
+      "test_legacy_follow_values_require_numbers_in_supported_range",
+      "test_profile_enable_params_require_json_booleans",
+      "test_master_toggle_rejects_malformed_profile_document_without_mutation",
+      "_known_v1_document",
+      "test_known_v1_document_is_migrated_for_readback",
+      "test_known_v1_document_can_be_installed_by_explicit_offroad_migration",
+      "test_verified_v2_migration_remains_editable_and_preserves_other_legacy_curves",
+      "test_known_v1_document_cannot_be_overwritten_before_a_verified_migration",
+      "test_malformed_document_is_not_overwritten_by_profile_edit",
+      "test_malformed_stored_document_readback_fails_closed"
+    ],
+    "starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py": [
+      "_read",
+      "test_ui_app_shell_files_exist",
+      "test_ui_index_wires_vue_and_mount_point",
+      "test_ui_device_picker_uses_gateway_directory_and_preserves_local_galaxy",
+      "test_ui_uses_same_backend_endpoints",
+      "test_ui_language_selector_uses_shared_device_language_setting",
+      "test_ui_ports_developer_mode_gating",
+      "test_ui_exposes_gm_auto_hold_to_buick",
+      "test_ui_restores_hierarchical_sub_toggle_rendering",
+      "test_ui_ports_all_tool_views",
+      "test_ui_routes_ported_views_natively_no_classic_fallback",
+      "test_ui_embeds_unmigrated_tools_inapp",
+      "test_ui_numeric_toggles_are_sliders_with_default",
+      "test_ui_speed_units_follow_the_vehicle",
+      "test_ui_centralizes_api_and_uses_composables",
+      "test_ui_schema_driven_param_engine_reused",
+      "test_ui_eliminates_slider_toggle_flicker",
+      "test_ui_developer_mode_banner_offers_unlock",
+      "test_ui_has_bottom_navigation_and_drawer",
+      "test_ui_search_visible_on_mobile_and_content_full_width",
+      "test_ui_glass_nav_single_breakpoint_no_dual_nav",
+      "test_ui_settings_deep_links_and_dev_mode_updates",
+      "test_ui_galaxy_background_is_css_only_and_lightweight",
+      "test_galaxy_py_serves_classic_at_root_and_new_ui_at_mobile",
+      "test_ui_manifest_is_valid_pwa_manifest",
+      "test_ui_ported_classic_tools_native_no_embed",
+      "test_ui_all_remaining_classic_tools_native_no_embed",
+      "test_navigation_requires_secret_key_before_starting_on_device_route",
+      "test_ui_cameras_hub_vasm_and_pip_native_no_embed",
+      "test_ui_mobile_polish_regressions",
+      "test_scroll_coordinator_gesture_lifecycle",
+      "_node_exe",
+      "test_ui_ported_param_logic_runs_and_passes",
+      "test_ui_hierarchical_tree_logic_runs_and_passes"
+    ],
+    "starpilot/system/the_galaxy/the_galaxy.py": [
+      "_galaxy_runtime_dependency_paths",
+      "_flash_panda_then_reboot",
+      "_is_comma_device_runtime",
+      "_get_param_key_type",
+      "_import_galaxy_web_symbols",
+      "_install_galaxy_web_deps",
+      "_ensure_galaxy_web_deps",
+      "extract_tar",
+      "ParamsCompat",
+      "_normalize_default_value",
+      "_sanitize_json_value",
+      "_build_default_params",
+      "_sentry_event_roots",
+      "_sentry_event_index_path",
+      "_load_sentry_event_catalog_unlocked",
+      "_save_sentry_event_catalog_unlocked",
+      "_stored_sentry_event",
+      "_discover_legacy_sentry_events",
+      "_sentry_event_catalog",
+      "_record_sentry_event",
+      "_safe_sentry_image_paths",
+      "_normalize_sentry_event",
+      "_sentry_image_path",
+      "_public_sentry_event",
+      "_capture_sentry_test_images",
+      "_capture_sentry_live_images",
+      "_get_live_driver_jpeg",
+      "_sentry_push_paths",
+      "_load_sentry_push_subscriptions",
+      "_save_sentry_push_subscriptions",
+      "_normalize_sentry_push_subscription",
+      "_get_sentry_vapid",
+      "_sentry_vapid_public_key",
+      "_sentry_push_subscription_count",
+      "_sentry_public_base_url",
+      "_sentry_external_image_urls",
+      "_sentry_first_image",
+      "_sentry_notification_channels",
+      "_sentry_notification_rate_limit_path",
+      "_load_sentry_notification_last_at",
+      "_claim_sentry_notification_slot",
+      "_sentry_test_notification_event",
+      "_dispatch_sentry_push",
+      "_dispatch_sentry_event",
+      "_get_toggle_backup_keys",
+      "_route_log_files",
+      "_coerce_toggle_restore_value",
+      "_route_scan_entries",
+      "_route_metadata_events",
+      "_route_first_segment_path",
+      "_resolve_route_thumbnail",
+      "_generate_route_thumbnail",
+      "_remove_video_remux_future",
+      "_get_or_create_segment_mp4",
+      "_remove_route_thumbnail_future",
+      "_get_or_create_route_thumbnail",
+      "_TarBuffer",
+      "_get_galaxy_dir",
+      "_read_galaxy_text",
+      "_build_galaxy_session_value",
+      "_parse_last_gps_position",
+      "_last_gps_position_is_live",
+      "_last_gps_position_is_recent",
+      "_get_navigation_last_position",
+      "_normalize_fingerprint_make_key",
+      "_safe_float",
+      "_get_param_int_value",
+      "_get_system_uptime_seconds",
+      "_is_plots_boot_stabilizing",
+      "_extract_plots_speed_mps",
+      "_extract_lateral_accel_values",
+      "_extract_longitudinal_accel_values",
+      "_extract_lateral_controller_terms",
+      "_extract_longitudinal_controller_terms",
+      "_plots_worker",
+      "_ensure_plots_worker",
+      "_set_fast_update_state",
+      "_get_fast_update_state",
+      "_get_interrupted_update_recovery",
+      "_set_fast_update_progress",
+      "_parse_git_progress_line",
+      "_normalize_git_phase_percent",
+      "_resolve_git_ca_bundle",
+      "_git_base_cmd",
+      "_git_command_env",
+      "_remote_git_check_allowed",
+      "_is_deferred_tls_error",
+      "_get_remote_branch_commit",
+      "_base_agnos_update_status",
+      "_canonical_agnos_manifest_text",
+      "_agnos_manifest_hash",
+      "_agnos_partition_fingerprints",
+      "_agnos_changed_partitions",
+      "_git_show_file_text",
+      "_github_raw_file_url",
+      "_fetch_remote_file_text",
+      "_build_agnos_update_status",
+      "_build_shallow_fetch_args",
+      "_build_shallow_fetch_commit_args",
+      "_run_git_with_progress",
+      "_run_git",
+      "_git_stdout",
+      "_clear_generated_build_state",
+      "_git_config_get",
+      "_git_config_set",
+      "_git_config_unset",
+      "_git_update_ref",
+      "_git_delete_ref",
+      "_git_has_commit",
+      "_save_rollback_target",
+      "_clear_rollback_target",
+      "_load_rollback_target",
+      "_is_valid_git_branch_name",
+      "_list_origin_branches",
+      "_repo_has_submodule_entries",
+      "_run_submodule_update_if_needed",
+      "_finish_update_and_reboot",
+      "_set_fast_update_error_state",
+      "_factory_reset_worker",
+      "_collect_fast_update_info",
+      "_version_install_worker",
+      "_fast_update_worker",
+      "_branch_switch_worker",
+      "_rollback_worker",
+      "_get_openpilot_root",
+      "_extract_fingerprint_models_for_make",
+      "_get_fingerprint_catalog",
+      "read_legacy_param_file",
+      "write_legacy_param_file",
+      "_get_layout_param_metadata",
+      "_get_layout_type_overrides",
+      "_get_favorite_slot_options",
+      "_get_available_favorite_slot_options",
+      "_get_available_controller_action_options",
+      "_favorite_slot_values",
+      "_configured_favorite_slot_values",
+      "_get_param_type_info",
+      "_get_static_default_param_values",
+      "_get_default_param_values",
+      "_coerce_param_value",
+      "_safe_params_get",
+      "_safe_params_get_live_raw",
+      "_safe_params_get_bool",
+      "_personality_settings_write_locked",
+      "_personality_editor_write_locked",
+      "_normalize_vasm_config",
+      "_normalize_pip_preview_config",
+      "_decode_json_object",
+      "_is_blank_param_raw",
+      "_has_runtime_default_value",
+      "_serialize_personality_profile_writes",
+      "_get_detected_ev_tuning",
+      "_get_detected_truck_tuning",
+      "_get_effective_legacy_custom_accel_curve",
+      "_get_effective_legacy_following_curve",
+      "_get_dom_personality_reference_curves",
+      "_get_runtime_default_param_overrides",
+      "_get_current_param_value",
+      "_get_lead_indicator_enabled",
+      "_get_custom_accel_profile_initialized",
+      "_get_custom_accel_profile_breakpoints_initialized",
+      "_get_legacy_compatible_curve_value",
+      "_seed_custom_accel_profile_curve",
+      "_serialize_param_write_value",
+      "_offroad_excessive_actuation_type",
+      "_apply_cellular_metered_setting",
+      "_format_longitudinal_personality",
+      "_resolve_troubleshoot_current_value",
+      "_resolve_troubleshoot_default_value",
+      "_normalize_troubleshoot_current_display_value",
+      "_normalize_live_delay_status",
+      "_get_steer_delay_learned_text",
+      "_get_troubleshoot_learned_values",
+      "_get_safety_snapshot_text",
+      "_get_fingerprint_snapshot_text",
+      "_snapshot_bool_text",
+      "_build_vehicle_fault_status",
+      "_get_starpilot_toggles_snapshot",
+      "_get_has_radar",
+      "_get_vehicle_parked",
+      "_get_longitudinal_mode_capable",
+      "_get_is_tici_or_tizi",
+      "_get_alpha_longitudinal_available",
+      "_get_has_rivian_angle_harness",
+      "_get_hardware_snapshot_items",
+      "_build_troubleshoot_section_payload",
+      "_build_troubleshoot_payload",
+      "_reset_troubleshoot_section",
+      "_extract_testing_ground_variant_labels",
+      "_get_testing_ground_variant_labels",
+      "_normalize_testing_ground_variant",
+      "_set_testing_ground_variant_fields",
+      "_get_first_selectable_testing_ground_slot_id",
+      "_build_testing_ground_fallback_slots",
+      "_default_testing_grounds_state",
+      "_normalize_testing_ground_slot",
+      "_load_testing_grounds_state_unlocked",
+      "_write_testing_grounds_state_unlocked",
+      "_get_testing_grounds_state",
+      "_is_unused_testing_ground_slot",
+      "_find_testing_ground_slot",
+      "_serialize_testing_grounds_state",
+      "_get_testing_ground_custom_reserved_pm",
+      "_build_testing_ground_custom_reserved_payload",
+      "_publish_testing_ground_custom_reserved",
+      "_testing_ground_custom_reserved_worker",
+      "_set_testing_ground_selection",
+      "_default_longitudinal_maneuver_status",
+      "_load_longitudinal_maneuver_status",
+      "_save_longitudinal_maneuver_status",
+      "_append_longitudinal_maneuver_history",
+      "_get_longitudinal_maneuver_support_snapshot",
+      "_serialize_longitudinal_maneuver_status",
+      "_set_longitudinal_maneuver_mode",
+      "_default_lateral_maneuver_status",
+      "_load_lateral_maneuver_status",
+      "_save_lateral_maneuver_status",
+      "_append_lateral_maneuver_history",
+      "_serialize_lateral_maneuver_status",
+      "_set_lateral_maneuver_mode",
+      "GalaxySlugMiddleware",
+      "setup",
+      "main"
+    ],
+    "starpilot/system/the_galaxy/utilities.py": [
+      "_format_lan_ip",
+      "_candidate_lan_ips_from_ip_addr",
+      "get_current_lan_ip",
+      "_clean_network_name",
+      "_read_active_wifi_ssid",
+      "_network_type_name",
+      "get_current_network_name",
+      "secure_filename",
+      "_decode_json_param",
+      "_get_pillow_image",
+      "_get_pydub_audio_segment",
+      "check_theme_components",
+      "covert_audio",
+      "create_theme",
+      "decode_parameters",
+      "encode_parameters",
+      "_resolve_ffmpeg_binary",
+      "_prune_video_cache",
+      "ffmpeg_concat_segments_to_mp4",
+      "ffmpeg_stream_concatenated_mp4",
+      "ffmpeg_mp4_wrap_to_path",
+      "ffmpeg_mp4_wrap_process_builder",
+      "format_git_date",
+      "get_all_segment_names",
+      "get_available_cameras",
+      "get_disk_usage",
+      "get_drive_stats",
+      "_params_get_value",
+      "_params_get_text",
+      "_params_get_bool",
+      "_dashboard_param_file_path",
+      "_read_dashboard_param_file",
+      "_write_dashboard_param_file",
+      "_params_put_text",
+      "_split_csv",
+      "_safe_int",
+      "_safe_float",
+      "_clean_model_label",
+      "_jsonable_time",
+      "_coerce_dashboard_time",
+      "_dashboard_time_is_valid",
+      "_timestamp_to_dashboard_time",
+      "_parse_segment_dir_name",
+      "_segment_mtime",
+      "_segment_has_dashboard_log",
+      "_select_dashboard_segment_candidate",
+      "_estimate_route_start_details",
+      "_estimate_route_started_at",
+      "_list_dashboard_routes",
+      "_dashboard_cache_key",
+      "_model_lookup",
+      "_decode_init_param_value",
+      "_init_params_items",
+      "_route_model_from_init_data",
+      "_event_name_text",
+      "_message_type",
+      "_message_payload",
+      "_deadline_reached",
+      "_numeric_attr",
+      "_wall_time_seconds_from_payload",
+      "_log_wall_time_range",
+      "_sample_route_info",
+      "_analyze_route_messages",
+      "_iter_route_log_messages",
+      "_empty_drive",
+      "_public_drive",
+      "_route_time_range",
+      "_distance_from_meters",
+      "_route_shell_drive",
+      "_drive_from_persistent_route",
+      "_persistent_drives",
+      "_merge_dashboard_drives",
+      "_drive_display_group_key",
+      "_coalesced_drive_group",
+      "_coalesce_display_drives",
+      "_drive_has_stale_analysis",
+      "_week_summary_drives",
+      "_persistent_route_needs_time_refresh",
+      "_analysis_candidates",
+      "_mark_ignored_drives",
+      "_invalidate_dashboard_cache",
+      "clear_dashboard_route_history",
+      "warm_dashboard_stats",
+      "_dashboard_worker_env",
+      "_dashboard_analyzer_running",
+      "_read_dashboard_analyzer_status",
+      "_write_dashboard_analyzer_status",
+      "_clear_dashboard_analyzer_status",
+      "_dashboard_analyzer_pid_matches",
+      "stop_dashboard_background_analysis",
+      "_dashboard_analysis_status",
+      "_start_dashboard_background_analysis",
+      "_start_of_week",
+      "_build_week_summary",
+      "_format_record_date",
+      "_format_record_hours",
+      "_drive_is_clean",
+      "_drive_is_undistracted",
+      "_drive_sort_time",
+      "_display_attention_records",
+      "_display_distance_record_value",
+      "_display_personal_records",
+      "_build_records",
+      "_normalize_persistent_routes",
+      "_load_dashboard_persistent_stats",
+      "_route_entry_sort_key",
+      "_model_usage_key",
+      "_better_record",
+      "_record_with_valid_dates",
+      "_build_personal_records_raw",
+      "_merge_personal_records",
+      "_recalculate_persistent_stats",
+      "set_dashboard_routes_ignored",
+      "ignore_dashboard_routes",
+      "include_dashboard_routes",
+      "_drive_stable_for_persistence",
+      "_drive_time_reliable_for_persistence",
+      "_filesystem_route_time_changed",
+      "_update_dashboard_persistent_stats",
+      "_storage_category",
+      "_build_storage_summary",
+      "_read_uptime_seconds",
+      "_normalize_temp_c",
+      "_read_hardware_component_temps",
+      "_read_hardware_cpu_temps",
+      "_read_hardware_gpu_temps",
+      "_read_component_temp_c",
+      "_read_cpu_temp_c",
+      "_read_gpu_temp_c",
+      "_build_device_summary",
+      "_build_favorite_models",
+      "_dashboard_empty",
+      "get_dashboard_stats",
+      "get_repo_owner",
+      "normalize_github_remote",
+      "get_github_changelog_url",
+      "get_github_commit_url",
+      "get_route_log_path",
+      "_route_logged_start_time",
+      "get_route_start_time",
+      "get_routes_names",
+      "get_routes_with_segment_details",
+      "get_segments_in_route",
+      "get_video_duration",
+      "has_preserve_attr",
+      "list_file",
+      "normalize_theme_name",
+      "is_route_marker_file",
+      "_utc_rfc3339",
+      "process_route",
+      "process_screen_recording",
+      "segment_to_segment_name",
+      "video_to_png",
+      "xor_encrypt_decrypt"
+    ],
+    "starpilot/system/wheel_controls/wheel_controlsd.py": [
+      "InputSource",
+      "_read_text",
+      "inspect_input_source",
+      "connected_input_sources",
+      "selected_joystick_device",
+      "set_joystick_device",
+      "event_name",
+      "hat_event_code",
+      "mapping_id",
+      "default_controller_action_slots",
+      "normalize_controller_action_slots",
+      "load_controller_action_slots",
+      "save_controller_action_slots",
+      "set_controller_action_slot",
+      "set_controller_cruise_speed",
+      "_request_comma_selfie",
+      "request_comma_selfie",
+      "trigger_controller_action",
+      "normalize_mappings",
+      "load_mappings",
+      "save_mappings",
+      "upsert_mapping",
+      "delete_mapping",
+      "clear_mappings",
+      "start_learning",
+      "cancel_learning",
+      "start_testing",
+      "stop_testing",
+      "_status_value",
+      "public_status",
+      "execute_favorite_slot",
+      "cycle_driving_personality",
+      "execute_controller_action",
+      "execute_controller_key",
+      "execute_mapping_slot",
+      "WheelControlsDaemon",
+      "main"
+    ],
+    "system/camerad/main.cc": [
+      "main"
+    ],
+    "system/manager/launch_param_migrations.py": [
+      "ParamsLike",
+      "_approx_equal",
+      "_default_marker_path",
+      "_branch_defaults_marker_path",
+      "_acceleration_profile_marker_path",
+      "_legacy_ui_selection_marker_path",
+      "_lateral_method_rebrand_marker_path",
+      "_vision_speed_limit_detection_marker_path",
+      "_developer_metric_display_marker_path",
+      "_lane_change_smoothing_marker_path",
+      "_speed_limit_visibility_marker_path",
+      "_device_shutdown_hours_marker_path",
+      "_camera_view_default_marker_path",
+      "_reverse_cruise_restore_marker_path",
+      "_galaxy_new_default_marker_path",
+      "_marker_dir_path",
+      "_param_file_exists",
+      "_should_migrate_bool_param",
+      "_should_migrate_int_param",
+      "_should_migrate_float_param",
+      "_apply_legacy_launch_param_migrations",
+      "_apply_branch_default_migration",
+      "_apply_acceleration_profile_default_migration",
+      "_remove_legacy_ui_selection",
+      "_apply_lateral_method_rebrand_migration",
+      "_apply_vision_speed_limit_detection_migration",
+      "_apply_developer_metric_display_migration",
+      "_apply_lane_change_smoothing_default_migration",
+      "_apply_speed_limit_visibility_migration",
+      "_apply_device_shutdown_hours_migration",
+      "_apply_camera_view_default_migration",
+      "_restore_reverse_cruise_param",
+      "_enable_galaxy_new_default",
+      "apply_launch_param_migrations",
+      "main"
+    ],
+    "system/manager/manager.py": [
+      "_append_boot_timing_line",
+      "_log_boot_timing",
+      "_to_text",
+      "_has_meaningful_param_value",
+      "_is_numeric_stat_value",
+      "_get_int_param_value",
+      "get_nav_offroad_clear_timeout_seconds",
+      "update_nav_offroad_clear_state",
+      "should_defer_reboot",
+      "_merge_starpilot_stat_values",
+      "_normalize_starpilot_stats_value",
+      "_normalize_starpilot_stats",
+      "_load_first_available_param_value",
+      "_has_persisted_param_file",
+      "_remove_persisted_param_file",
+      "_params_store_path",
+      "_cache_store_has_starpilot_marker",
+      "_copy_param_store_without_overwrite",
+      "migrate_legacy_starpilot_params_cache",
+      "_normalize_secoc_key",
+      "migrate_legacy_secoc_key",
+      "cleanup_removed_starpilot_params",
+      "migrate_starpilot_param_renames",
+      "_merge_tree_without_overwrite",
+      "migrate_starpilot_pc_root",
+      "migrate_legacy_bolt_fingerprint",
+      "migrate_starpilot_default_parity",
+      "migrate_starpilot_default_model",
+      "migrate_starpilot_ce_model_stop_time",
+      "migrate_disable_humanlike_defaults",
+      "migrate_cluster_offset_default",
+      "migrate_traffic_mode_smooth_defaults",
+      "migrate_traffic_follow_default",
+      "_read_raw_param_bytes",
+      "_parse_legacy_time",
+      "migrate_param_type_canonicalization",
+      "migrate_legacy_experimental_longitudinal",
+      "_msgq_file_is_readwrite_openable",
+      "cleanup_inaccessible_msgq_files",
+      "manager_init",
+      "manager_cleanup",
+      "reset_onroad_transition_params",
+      "manager_thread",
+      "main"
+    ],
+    "tools/StarPilot/derive_feasible_params.py": [
+      "get_repo_root",
+      "extract_registered_keys",
+      "extract_ui_string_literals",
+      "main"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "opendbc_repo/opendbc/car/interfaces.py",
+          "language": "python",
+          "sizeLines": 586,
+          "fileCategory": "code"
+        },
+        {
+          "path": "opendbc_repo/opendbc/car/subaru/__init__.py",
+          "language": "python",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+          "language": "python",
+          "sizeLines": 486,
+          "fileCategory": "code"
+        },
+        {
+          "path": "opendbc_repo/opendbc/car/subaru/carstate.py",
+          "language": "python",
+          "sizeLines": 187,
+          "fileCategory": "code"
+        },
+        {
+          "path": "opendbc_repo/opendbc/car/subaru/fingerprints.py",
+          "language": "python",
+          "sizeLines": 622,
+          "fileCategory": "code"
+        },
+        {
+          "path": "opendbc_repo/opendbc/car/subaru/interface.py",
+          "language": "python",
+          "sizeLines": 125,
+          "fileCategory": "code"
+        },
+        {
+          "path": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+          "language": "python",
+          "sizeLines": 461,
+          "fileCategory": "code"
+        },
+        {
+          "path": "opendbc_repo/opendbc/car/subaru/values.py",
+          "language": "python",
+          "sizeLines": 341,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "opendbc_repo/opendbc/car/interfaces.py": [
+          "opendbc_repo/opendbc/car/subaru/values.py"
+        ],
+        "opendbc_repo/opendbc/car/subaru/__init__.py": [],
+        "opendbc_repo/opendbc/car/subaru/carcontroller.py": [
+          "opendbc_repo/opendbc/car/interfaces.py",
+          "opendbc_repo/opendbc/car/subaru/__init__.py",
+          "opendbc_repo/opendbc/car/subaru/subarucan.py",
+          "opendbc_repo/opendbc/car/subaru/values.py"
+        ],
+        "opendbc_repo/opendbc/car/subaru/carstate.py": [
+          "opendbc_repo/opendbc/car/interfaces.py",
+          "opendbc_repo/opendbc/car/subaru/values.py"
+        ],
+        "opendbc_repo/opendbc/car/subaru/fingerprints.py": [
+          "opendbc_repo/opendbc/car/subaru/values.py"
+        ],
+        "opendbc_repo/opendbc/car/subaru/interface.py": [
+          "opendbc_repo/opendbc/car/interfaces.py",
+          "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+          "opendbc_repo/opendbc/car/subaru/carstate.py",
+          "opendbc_repo/opendbc/car/subaru/values.py"
+        ],
+        "opendbc_repo/opendbc/car/subaru/subarucan.py": [
+          "opendbc_repo/opendbc/car/subaru/values.py"
+        ],
+        "opendbc_repo/opendbc/car/subaru/values.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+          "language": "javascript",
+          "sizeLines": 37,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+          "language": "javascript",
+          "sizeLines": 250,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+          "language": "javascript",
+          "sizeLines": 85,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+          "language": "javascript",
+          "sizeLines": 68,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+          "language": "javascript",
+          "sizeLines": 399,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+          "language": "javascript",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+          "language": "javascript",
+          "sizeLines": 324,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+          "language": "javascript",
+          "sizeLines": 211,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs": [],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js": [
+          "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+          "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/params.js": [],
+        "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/store.js"
+        ]
+      },
+      "neighborMap": {
+        "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js": [
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+            "batchIndex": 3,
+            "symbols": [
+              "LAYOUT_URL",
+              "api",
+              "showSnackbar"
+            ]
+          },
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+            "batchIndex": 4,
+            "symbols": [
+              "FavoritesEditor"
+            ]
+          }
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js": [
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+            "batchIndex": 3,
+            "symbols": [
+              "LAYOUT_URL",
+              "api",
+              "showSnackbar"
+            ]
+          }
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js": [
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+            "batchIndex": 3,
+            "symbols": [
+              "LAYOUT_URL",
+              "api",
+              "showSnackbar"
+            ]
+          }
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js": [
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+            "batchIndex": 3,
+            "symbols": [
+              "LAYOUT_URL",
+              "api",
+              "showSnackbar"
+            ]
+          },
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+            "batchIndex": 3,
+            "symbols": [
+              "store",
+              "setTheme",
+              "toggleTheme",
+              "setNavPinned",
+              "toggleNavPinned",
+              "parseHash",
+              "toHash",
+              "navigate",
+              "goHome",
+              "goBack",
+              "toolHref",
+              "initRouter"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+          "language": "javascript",
+          "sizeLines": 434,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+          "language": "javascript",
+          "sizeLines": 141,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+          "language": "javascript",
+          "sizeLines": 817,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+          "language": "javascript",
+          "sizeLines": 100,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+          "language": "javascript",
+          "sizeLines": 128,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+          "language": "javascript",
+          "sizeLines": 815,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+          "language": "javascript",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+          "language": "javascript",
+          "sizeLines": 72,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js": [],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js": [],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/composables.js"
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/composables.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/store.js"
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/store.js": [],
+        "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/composables.js"
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/composables.js"
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js": [
+          "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/store.js"
+        ]
+      },
+      "neighborMap": {
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js": [
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+            "batchIndex": 4,
+            "symbols": [
+              "FavoritesEditor"
+            ]
+          },
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+            "batchIndex": 2,
+            "symbols": [
+              "GalaxyToggleCard"
+            ]
+          },
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+            "batchIndex": 2,
+            "symbols": [
+              "ParamSections"
+            ]
+          },
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+            "batchIndex": 2,
+            "symbols": [
+              "PersonalityProfiles"
+            ]
+          },
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+            "batchIndex": 2,
+            "symbols": [
+              "Settings"
+            ]
+          }
+        ],
+        "starpilot/system/the_galaxy/assets/mobile/js/store.js": [
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+            "batchIndex": 2,
+            "symbols": [
+              "Settings"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+          "language": "javascript",
+          "sizeLines": 257,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs",
+          "language": "javascript",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+          "language": "javascript",
+          "sizeLines": 204,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js": [
+          "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs"
+        ],
+        "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs": [],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js": [
+          "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+          "starpilot/system/the_galaxy/assets/mobile/js/api.js"
+        ]
+      },
+      "neighborMap": {
+        "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js": [
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+            "batchIndex": 3,
+            "symbols": [
+              "LAYOUT_URL",
+              "api",
+              "showSnackbar"
+            ]
+          },
+          {
+            "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+            "batchIndex": 2,
+            "symbols": [
+              "GalaxyToggleCard"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+          "language": "python",
+          "sizeLines": 114,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+          "language": "python",
+          "sizeLines": 134,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+          "language": "python",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py": [],
+        "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py": [
+          "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py"
+        ],
+        "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py": [
+          "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py"
+        ]
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 99,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "common/params_keys.h",
+          "language": "c",
+          "sizeLines": 796,
+          "fileCategory": "code"
+        },
+        {
+          "path": "pyproject.toml",
+          "language": "toml",
+          "sizeLines": 288,
+          "fileCategory": "config"
+        },
+        {
+          "path": "selfdrive/car/card.py",
+          "language": "python",
+          "sizeLines": 620,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/car/redneck_cruise.py",
+          "language": "python",
+          "sizeLines": 268,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/controls/controlsd.py",
+          "language": "python",
+          "sizeLines": 951,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/controls/lib/lane_centering.py",
+          "language": "python",
+          "sizeLines": 196,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/controls/lib/longcontrol.py",
+          "language": "python",
+          "sizeLines": 445,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/modeld/camera_offset.py",
+          "language": "python",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/modeld/modeld.py",
+          "language": "python",
+          "sizeLines": 1532,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/selfdrived/events.py",
+          "language": "python",
+          "sizeLines": 1536,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/selfdrived/selfdrived.py",
+          "language": "python",
+          "sizeLines": 1033,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/developer.py",
+          "language": "python",
+          "sizeLines": 158,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/__init__.py",
+          "language": "python",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+          "language": "python",
+          "sizeLines": 5602,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/appearance.py",
+          "language": "python",
+          "sizeLines": 763,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+          "language": "python",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+          "language": "python",
+          "sizeLines": 1300,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+          "language": "python",
+          "sizeLines": 407,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+          "language": "python",
+          "sizeLines": 1250,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+          "language": "python",
+          "sizeLines": 319,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+          "language": "python",
+          "sizeLines": 924,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+          "language": "python",
+          "sizeLines": 879,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+          "language": "python",
+          "sizeLines": 369,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/scribble.py",
+          "language": "python",
+          "sizeLines": 468,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "README.md": [],
+        "common/params_keys.h": [],
+        "pyproject.toml": [],
+        "selfdrive/car/card.py": [],
+        "selfdrive/car/redneck_cruise.py": [],
+        "selfdrive/controls/controlsd.py": [],
+        "selfdrive/controls/lib/lane_centering.py": [],
+        "selfdrive/controls/lib/longcontrol.py": [],
+        "selfdrive/modeld/camera_offset.py": [],
+        "selfdrive/modeld/modeld.py": [],
+        "selfdrive/selfdrived/events.py": [],
+        "selfdrive/selfdrived/selfdrived.py": [],
+        "selfdrive/ui/layouts/settings/developer.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/__init__.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/aethergrid.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/appearance.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/asset_loader.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/driving_model.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/lateral.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/longitudinal.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/main_panel.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/maps.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/navigation.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/panel.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/scribble.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+          "language": "python",
+          "sizeLines": 175,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+          "language": "python",
+          "sizeLines": 647,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/sounds.py",
+          "language": "python",
+          "sizeLines": 386,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+          "language": "python",
+          "sizeLines": 1364,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+          "language": "python",
+          "sizeLines": 875,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/lib/mode_banner.py",
+          "language": "python",
+          "sizeLines": 95,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/lib/starpilot_state.py",
+          "language": "python",
+          "sizeLines": 253,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/mici/layouts/settings/developer.py",
+          "language": "python",
+          "sizeLines": 143,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/mici/layouts/settings/settings.py",
+          "language": "python",
+          "sizeLines": 121,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/mici/layouts/settings/visuals.py",
+          "language": "python",
+          "sizeLines": 138,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/mici/onroad/hud_renderer.py",
+          "language": "python",
+          "sizeLines": 730,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/mici/onroad/sidebar_widgets.py",
+          "language": "python",
+          "sizeLines": 382,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/model_renderer.py",
+          "language": "python",
+          "sizeLines": 1033,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/__init__.py",
+          "language": "python",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/aethergauge.py",
+          "language": "python",
+          "sizeLines": 795,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/compass.py",
+          "language": "python",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/developer_sidebar.py",
+          "language": "python",
+          "sizeLines": 388,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/favorite_radial_menu.py",
+          "language": "python",
+          "sizeLines": 1209,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+          "language": "python",
+          "sizeLines": 528,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/path.py",
+          "language": "python",
+          "sizeLines": 170,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/pause_indicators.py",
+          "language": "python",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/pedal_icons.py",
+          "language": "python",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/personality_button.py",
+          "language": "python",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+          "language": "python",
+          "sizeLines": 465,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/pulse_glide.py",
+          "language": "python",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/sounds.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/system_settings.py": [],
+        "selfdrive/ui/layouts/settings/starpilot/vehicle.py": [],
+        "selfdrive/ui/lib/mode_banner.py": [],
+        "selfdrive/ui/lib/starpilot_state.py": [],
+        "selfdrive/ui/mici/layouts/settings/developer.py": [],
+        "selfdrive/ui/mici/layouts/settings/settings.py": [],
+        "selfdrive/ui/mici/layouts/settings/visuals.py": [],
+        "selfdrive/ui/mici/onroad/hud_renderer.py": [],
+        "selfdrive/ui/mici/onroad/sidebar_widgets.py": [],
+        "selfdrive/ui/onroad/model_renderer.py": [],
+        "selfdrive/ui/onroad/starpilot/__init__.py": [],
+        "selfdrive/ui/onroad/starpilot/aethergauge.py": [],
+        "selfdrive/ui/onroad/starpilot/compass.py": [],
+        "selfdrive/ui/onroad/starpilot/developer_sidebar.py": [],
+        "selfdrive/ui/onroad/starpilot/favorite_radial_menu.py": [],
+        "selfdrive/ui/onroad/starpilot/navigation_card.py": [],
+        "selfdrive/ui/onroad/starpilot/path.py": [],
+        "selfdrive/ui/onroad/starpilot/pause_indicators.py": [],
+        "selfdrive/ui/onroad/starpilot/pedal_icons.py": [],
+        "selfdrive/ui/onroad/starpilot/personality_button.py": [],
+        "selfdrive/ui/onroad/starpilot/pip_sidecam.py": [],
+        "selfdrive/ui/onroad/starpilot/pulse_glide.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "selfdrive/ui/onroad/starpilot/rainbow_path.py",
+          "language": "python",
+          "sizeLines": 56,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+          "language": "python",
+          "sizeLines": 55,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+          "language": "python",
+          "sizeLines": 694,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+          "language": "python",
+          "sizeLines": 112,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+          "language": "python",
+          "sizeLines": 287,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+          "language": "python",
+          "sizeLines": 434,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/stopping_point.py",
+          "language": "python",
+          "sizeLines": 75,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/torque_bar.py",
+          "language": "python",
+          "sizeLines": 274,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/weather_icon.py",
+          "language": "python",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+          "language": "python",
+          "sizeLines": 97,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widget_style.py",
+          "language": "python",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/__init__.py",
+          "language": "python",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+          "language": "python",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/base.py",
+          "language": "python",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+          "language": "python",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+          "language": "python",
+          "sizeLines": 125,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+          "language": "python",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+          "language": "python",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+          "language": "python",
+          "sizeLines": 72,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+          "language": "python",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+          "language": "python",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+          "language": "python",
+          "sizeLines": 131,
+          "fileCategory": "code"
+        },
+        {
+          "path": "selfdrive/ui/ui_state.py",
+          "language": "python",
+          "sizeLines": 504,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/accel_profile.py",
+          "language": "python",
+          "sizeLines": 287,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/assets/device_settings_layout.json",
+          "language": "json",
+          "sizeLines": 5057,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "selfdrive/ui/onroad/starpilot/rainbow_path.py": [],
+        "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py": [],
+        "selfdrive/ui/onroad/starpilot/slc_speed_limit.py": [],
+        "selfdrive/ui/onroad/starpilot/source_bubble_layout.py": [],
+        "selfdrive/ui/onroad/starpilot/starpilot_border.py": [],
+        "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py": [],
+        "selfdrive/ui/onroad/starpilot/stopping_point.py": [],
+        "selfdrive/ui/onroad/starpilot/torque_bar.py": [],
+        "selfdrive/ui/onroad/starpilot/weather_icon.py": [],
+        "selfdrive/ui/onroad/starpilot/widget_layout_manager.py": [],
+        "selfdrive/ui/onroad/starpilot/widget_style.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/__init__.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/base.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/model_source.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/personality_button.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/set_speed.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py": [],
+        "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py": [],
+        "selfdrive/ui/ui_state.py": [],
+        "starpilot/common/accel_profile.py": [],
+        "starpilot/common/assets/device_settings_layout.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "starpilot/common/connect_server.py",
+          "language": "python",
+          "sizeLines": 76,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/controller_actions.py",
+          "language": "python",
+          "sizeLines": 81,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/cpu_throttle.py",
+          "language": "python",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/experimental_state.py",
+          "language": "python",
+          "sizeLines": 190,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/favorite_slots.py",
+          "language": "python",
+          "sizeLines": 570,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/gpu_model_ready_sound.py",
+          "language": "python",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/lateral_delay.py",
+          "language": "python",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/lateral_only_experimental.py",
+          "language": "python",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/longitudinal_mode.py",
+          "language": "python",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/longitudinal_personality_profiles.py",
+          "language": "python",
+          "sizeLines": 623,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/maps_catalog.py",
+          "language": "python",
+          "sizeLines": 132,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/maps_download_progress.py",
+          "language": "python",
+          "sizeLines": 158,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/maps_selection.py",
+          "language": "python",
+          "sizeLines": 97,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/model_lab.py",
+          "language": "python",
+          "sizeLines": 262,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/model_versions.py",
+          "language": "python",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/param_profiles.py",
+          "language": "python",
+          "sizeLines": 263,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/safe_mode.py",
+          "language": "python",
+          "sizeLines": 392,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/starpilot_backups.py",
+          "language": "python",
+          "sizeLines": 107,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/starpilot_download_utilities.py",
+          "language": "python",
+          "sizeLines": 172,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/starpilot_functions.py",
+          "language": "python",
+          "sizeLines": 529,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/starpilot_utilities.py",
+          "language": "python",
+          "sizeLines": 433,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/starpilot_variables.py",
+          "language": "python",
+          "sizeLines": 1642,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/testing_grounds.py",
+          "language": "python",
+          "sizeLines": 291,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/theme_asset_names.py",
+          "language": "python",
+          "sizeLines": 54,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/common/vision_bsm.py",
+          "language": "python",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "starpilot/common/connect_server.py": [],
+        "starpilot/common/controller_actions.py": [],
+        "starpilot/common/cpu_throttle.py": [],
+        "starpilot/common/experimental_state.py": [],
+        "starpilot/common/favorite_slots.py": [],
+        "starpilot/common/gpu_model_ready_sound.py": [],
+        "starpilot/common/lateral_delay.py": [],
+        "starpilot/common/lateral_only_experimental.py": [],
+        "starpilot/common/longitudinal_mode.py": [],
+        "starpilot/common/longitudinal_personality_profiles.py": [],
+        "starpilot/common/maps_catalog.py": [],
+        "starpilot/common/maps_download_progress.py": [],
+        "starpilot/common/maps_selection.py": [],
+        "starpilot/common/model_lab.py": [],
+        "starpilot/common/model_versions.py": [],
+        "starpilot/common/param_profiles.py": [],
+        "starpilot/common/safe_mode.py": [],
+        "starpilot/common/starpilot_backups.py": [],
+        "starpilot/common/starpilot_download_utilities.py": [],
+        "starpilot/common/starpilot_functions.py": [],
+        "starpilot/common/starpilot_utilities.py": [],
+        "starpilot/common/starpilot_variables.py": [],
+        "starpilot/common/testing_grounds.py": [],
+        "starpilot/common/theme_asset_names.py": [],
+        "starpilot/common/vision_bsm.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "starpilot/controls/lib/conditional_chill_mode.py",
+          "language": "python",
+          "sizeLines": 363,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/lib/conditional_experimental_mode.py",
+          "language": "python",
+          "sizeLines": 611,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/lib/curve_speed_controller.py",
+          "language": "python",
+          "sizeLines": 434,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/lib/neural_network_feedforward.py",
+          "language": "python",
+          "sizeLines": 367,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/lib/speed_limit_controller.py",
+          "language": "python",
+          "sizeLines": 580,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/lib/starpilot_acceleration.py",
+          "language": "python",
+          "sizeLines": 450,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/lib/starpilot_events.py",
+          "language": "python",
+          "sizeLines": 222,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/lib/starpilot_following.py",
+          "language": "python",
+          "sizeLines": 200,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/lib/starpilot_vcruise.py",
+          "language": "python",
+          "sizeLines": 797,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/lib/weather_checker.py",
+          "language": "python",
+          "sizeLines": 222,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/starpilot_card.py",
+          "language": "python",
+          "sizeLines": 476,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/controls/starpilot_planner.py",
+          "language": "python",
+          "sizeLines": 397,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/adj_spot_monitor_vision.py",
+          "language": "python",
+          "sizeLines": 330,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/speed_limit_filler.py",
+          "language": "python",
+          "sizeLines": 465,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/speed_limit_vision.py",
+          "language": "python",
+          "sizeLines": 2846,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/README.md",
+          "language": "markdown",
+          "sizeLines": 121,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/components/settings.js",
+          "language": "javascript",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+          "language": "javascript",
+          "sizeLines": 2959,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+          "language": "javascript",
+          "sizeLines": 159,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+          "language": "javascript",
+          "sizeLines": 1466,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+          "language": "javascript",
+          "sizeLines": 162,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+          "language": "javascript",
+          "sizeLines": 311,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+          "language": "javascript",
+          "sizeLines": 92,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/flm_workspace.py",
+          "language": "python",
+          "sizeLines": 3729,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/longitudinal_mode.py",
+          "language": "python",
+          "sizeLines": 112,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "starpilot/controls/lib/conditional_chill_mode.py": [],
+        "starpilot/controls/lib/conditional_experimental_mode.py": [],
+        "starpilot/controls/lib/curve_speed_controller.py": [],
+        "starpilot/controls/lib/neural_network_feedforward.py": [],
+        "starpilot/controls/lib/speed_limit_controller.py": [],
+        "starpilot/controls/lib/starpilot_acceleration.py": [],
+        "starpilot/controls/lib/starpilot_events.py": [],
+        "starpilot/controls/lib/starpilot_following.py": [],
+        "starpilot/controls/lib/starpilot_vcruise.py": [],
+        "starpilot/controls/lib/weather_checker.py": [],
+        "starpilot/controls/starpilot_card.py": [],
+        "starpilot/controls/starpilot_planner.py": [],
+        "starpilot/system/adj_spot_monitor_vision.py": [],
+        "starpilot/system/speed_limit_filler.py": [],
+        "starpilot/system/speed_limit_vision.py": [],
+        "starpilot/system/the_galaxy/README.md": [],
+        "starpilot/system/the_galaxy/assets/components/settings.js": [],
+        "starpilot/system/the_galaxy/assets/components/tools/device_settings.js": [],
+        "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js": [],
+        "starpilot/system/the_galaxy/assets/components/tools/tuning.js": [],
+        "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js": [],
+        "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js": [],
+        "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js": [],
+        "starpilot/system/the_galaxy/flm_workspace.py": [],
+        "starpilot/system/the_galaxy/longitudinal_mode.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+          "language": "python",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+          "language": "python",
+          "sizeLines": 503,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+          "language": "python",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+          "language": "python",
+          "sizeLines": 969,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py",
+          "language": "python",
+          "sizeLines": 853,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/the_galaxy.py",
+          "language": "python",
+          "sizeLines": 10681,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/the_galaxy/utilities.py",
+          "language": "python",
+          "sizeLines": 3320,
+          "fileCategory": "code"
+        },
+        {
+          "path": "starpilot/system/wheel_controls/wheel_controlsd.py",
+          "language": "python",
+          "sizeLines": 688,
+          "fileCategory": "code"
+        },
+        {
+          "path": "system/camerad/main.cc",
+          "language": "cpp",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "system/manager/launch_param_migrations.py",
+          "language": "python",
+          "sizeLines": 425,
+          "fileCategory": "code"
+        },
+        {
+          "path": "system/manager/manager.py",
+          "language": "python",
+          "sizeLines": 1299,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tools/StarPilot/derive_feasible_params.py",
+          "language": "python",
+          "sizeLines": 128,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py": [],
+        "starpilot/system/the_galaxy/tests/test_device_settings_layout.py": [],
+        "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py": [
+          "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py"
+        ],
+        "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py": [],
+        "starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py": [],
+        "starpilot/system/the_galaxy/the_galaxy.py": [],
+        "starpilot/system/the_galaxy/utilities.py": [],
+        "starpilot/system/wheel_controls/wheel_controlsd.py": [],
+        "system/camerad/main.cc": [],
+        "system/manager/launch_param_migrations.py": [],
+        "system/manager/manager.py": [],
+        "tools/StarPilot/derive_feasible_params.py": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

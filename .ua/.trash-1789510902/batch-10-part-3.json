@@ -1,0 +1,654 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/controls/starpilot_card.py",
+      "type": "file",
+      "name": "starpilot_card.py",
+      "filePath": "starpilot/controls/starpilot_card.py",
+      "summary": "Intègre les boutons du véhicule, favoris et contrôleurs externes dans CarState pour piloter les modes et actions StarPilot.",
+      "tags": [
+        "carstate",
+        "boutons",
+        "controleur",
+        "actions"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/controls/starpilot_card.py:aol_blocked_by_immediate_disable",
+      "type": "function",
+      "name": "aol_blocked_by_immediate_disable",
+      "filePath": "starpilot/controls/starpilot_card.py",
+      "lineRange": [
+        39,
+        43
+      ],
+      "summary": "Implémente l’opération `aol_blocked_by_immediate_disable` dans le module `starpilot_card.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "carstate",
+        "boutons"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/starpilot_card.py:StarPilotCard",
+      "type": "class",
+      "name": "StarPilotCard",
+      "filePath": "starpilot/controls/starpilot_card.py",
+      "lineRange": [
+        46,
+        476
+      ],
+      "summary": "Regroupe l’état et le comportement de `StarPilotCard` dans le module `starpilot_card.py`, avec 11 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "carstate",
+        "boutons"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/starpilot_planner.py",
+      "type": "file",
+      "name": "starpilot_planner.py",
+      "filePath": "starpilot/controls/starpilot_planner.py",
+      "summary": "Coordonne les contrôleurs StarPilot, met à jour le plan longitudinal et publie les états et cibles calculés aux autres processus.",
+      "tags": [
+        "planificateur",
+        "controle-longitudinal",
+        "publication",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/controls/starpilot_planner.py:get_force_stop_jerk_scale",
+      "type": "function",
+      "name": "get_force_stop_jerk_scale",
+      "filePath": "starpilot/controls/starpilot_planner.py",
+      "lineRange": [
+        47,
+        49
+      ],
+      "summary": "Récupère ou résout les données de `get_force_stop_jerk_scale` dans le module `starpilot_planner.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "planificateur",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/starpilot_planner.py:_sanitize_json_value",
+      "type": "function",
+      "name": "_sanitize_json_value",
+      "filePath": "starpilot/controls/starpilot_planner.py",
+      "lineRange": [
+        52,
+        59
+      ],
+      "summary": "Normalise ou valide les données de `_sanitize_json_value` dans le module `starpilot_planner.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "planificateur",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/controls/starpilot_planner.py:serialize_starpilot_toggles",
+      "type": "function",
+      "name": "serialize_starpilot_toggles",
+      "filePath": "starpilot/controls/starpilot_planner.py",
+      "lineRange": [
+        62,
+        63
+      ],
+      "summary": "Convertit ou formate les données de `serialize_starpilot_toggles` dans le module `starpilot_planner.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "planificateur",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/controls/starpilot_planner.py:StarPilotPlanner",
+      "type": "class",
+      "name": "StarPilotPlanner",
+      "filePath": "starpilot/controls/starpilot_planner.py",
+      "lineRange": [
+        66,
+        397
+      ],
+      "summary": "Regroupe l’état et le comportement de `StarPilotPlanner` dans le module `starpilot_planner.py`, avec 5 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "planificateur",
+        "controle-longitudinal"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/adj_spot_monitor_vision.py",
+      "type": "file",
+      "name": "adj_spot_monitor_vision.py",
+      "filePath": "starpilot/system/adj_spot_monitor_vision.py",
+      "summary": "Exécute le daemon vision V-ASM qui analyse les caméras latérales pour publier l’état des zones adjacentes en respectant les limites CPU.",
+      "tags": [
+        "vision",
+        "angle-mort",
+        "daemon",
+        "camera"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/adj_spot_monitor_vision.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "starpilot/system/adj_spot_monitor_vision.py",
+      "lineRange": [
+        324,
+        326
+      ],
+      "summary": "Lance le point d’entrée représenté par `main` dans le module `adj_spot_monitor_vision.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "point-entree",
+        "vision",
+        "angle-mort"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/adj_spot_monitor_vision.py:VASMDaemon",
+      "type": "class",
+      "name": "VASMDaemon",
+      "filePath": "starpilot/system/adj_spot_monitor_vision.py",
+      "lineRange": [
+        31,
+        321
+      ],
+      "summary": "Regroupe l’état et le comportement de `VASMDaemon` dans le module `adj_spot_monitor_vision.py`, avec 10 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "daemon",
+        "vision",
+        "angle-mort"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/speed_limit_filler.py",
+      "type": "file",
+      "name": "speed_limit_filler.py",
+      "filePath": "starpilot/system/speed_limit_filler.py",
+      "summary": "Enrichit un jeu de données de limites de vitesse à partir du GPS et d’Overpass, avec cache spatial, quotas et validation des segments.",
+      "tags": [
+        "limite-vitesse",
+        "overpass",
+        "geolocalisation",
+        "jeu-donnees"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/speed_limit_filler.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "starpilot/system/speed_limit_filler.py",
+      "lineRange": [
+        431,
+        462
+      ],
+      "summary": "Lance le point d’entrée représenté par `main` dans le module `speed_limit_filler.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "point-entree",
+        "limite-vitesse",
+        "overpass"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/speed_limit_filler.py:MapSpeedLogger",
+      "type": "class",
+      "name": "MapSpeedLogger",
+      "filePath": "starpilot/system/speed_limit_filler.py",
+      "lineRange": [
+        34,
+        429
+      ],
+      "summary": "Regroupe l’état et le comportement de `MapSpeedLogger` dans le module `speed_limit_filler.py`, avec 21 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "limite-vitesse",
+        "overpass"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/speed_limit_vision.py",
+      "type": "file",
+      "name": "speed_limit_vision.py",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "summary": "Pilote la détection visuelle des panneaux de vitesse par modèle, OCR et suivi optique, puis publie les résultats et captures de diagnostic.",
+      "tags": [
+        "limite-vitesse",
+        "vision",
+        "ocr",
+        "daemon",
+        "diagnostic"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Le module combine OpenCV, suivi temporel, classification et plusieurs stratégies de repli autour d’un daemon Python long-lived."
+    },
+    {
+      "id": "function:starpilot/system/speed_limit_vision.py:device_cpu_usage_busy",
+      "type": "function",
+      "name": "device_cpu_usage_busy",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "lineRange": [
+        265,
+        272
+      ],
+      "summary": "Implémente l’opération `device_cpu_usage_busy` dans le module `speed_limit_vision.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "limite-vitesse",
+        "vision"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/speed_limit_vision.py:memory_pressure_level",
+      "type": "function",
+      "name": "memory_pressure_level",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "lineRange": [
+        275,
+        290
+      ],
+      "summary": "Implémente l’opération `memory_pressure_level` dans le module `speed_limit_vision.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "limite-vitesse",
+        "vision"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/speed_limit_vision.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "lineRange": [
+        2832,
+        2842
+      ],
+      "summary": "Lance le point d’entrée représenté par `main` dans le module `speed_limit_vision.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "point-entree",
+        "limite-vitesse",
+        "vision"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/speed_limit_vision.py:Detection",
+      "type": "class",
+      "name": "Detection",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "lineRange": [
+        294,
+        297
+      ],
+      "summary": "Structure les données `Detection` manipulées par le module `speed_limit_vision.py` pendant son traitement.",
+      "tags": [
+        "classe",
+        "etat",
+        "limite-vitesse",
+        "vision"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/speed_limit_vision.py:DetectorProposal",
+      "type": "class",
+      "name": "DetectorProposal",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "lineRange": [
+        301,
+        305
+      ],
+      "summary": "Structure les données `DetectorProposal` manipulées par le module `speed_limit_vision.py` pendant son traitement.",
+      "tags": [
+        "classe",
+        "etat",
+        "limite-vitesse",
+        "vision"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/speed_limit_vision.py:ProposalTrack",
+      "type": "class",
+      "name": "ProposalTrack",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "lineRange": [
+        309,
+        318
+      ],
+      "summary": "Structure les données `ProposalTrack` manipulées par le module `speed_limit_vision.py` pendant son traitement.",
+      "tags": [
+        "classe",
+        "etat",
+        "limite-vitesse",
+        "vision"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/speed_limit_vision.py:HistoryEntry",
+      "type": "class",
+      "name": "HistoryEntry",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "lineRange": [
+        322,
+        326
+      ],
+      "summary": "Structure les données `HistoryEntry` manipulées par le module `speed_limit_vision.py` pendant son traitement.",
+      "tags": [
+        "classe",
+        "etat",
+        "limite-vitesse",
+        "vision"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/speed_limit_vision.py:SpeedLimitVisionDaemon",
+      "type": "class",
+      "name": "SpeedLimitVisionDaemon",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "lineRange": [
+        329,
+        2829
+      ],
+      "summary": "Regroupe l’état et le comportement de `SpeedLimitVisionDaemon` dans le module `speed_limit_vision.py`, avec 77 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "daemon",
+        "limite-vitesse",
+        "vision"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/controls/starpilot_card.py",
+      "target": "function:starpilot/controls/starpilot_card.py:aol_blocked_by_immediate_disable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_card.py",
+      "target": "function:starpilot/controls/starpilot_card.py:aol_blocked_by_immediate_disable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_card.py",
+      "target": "class:starpilot/controls/starpilot_card.py:StarPilotCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_card.py",
+      "target": "class:starpilot/controls/starpilot_card.py:StarPilotCard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_planner.py",
+      "target": "function:starpilot/controls/starpilot_planner.py:get_force_stop_jerk_scale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_planner.py",
+      "target": "function:starpilot/controls/starpilot_planner.py:get_force_stop_jerk_scale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_planner.py",
+      "target": "function:starpilot/controls/starpilot_planner.py:_sanitize_json_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_planner.py",
+      "target": "function:starpilot/controls/starpilot_planner.py:_sanitize_json_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_planner.py",
+      "target": "function:starpilot/controls/starpilot_planner.py:serialize_starpilot_toggles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_planner.py",
+      "target": "function:starpilot/controls/starpilot_planner.py:serialize_starpilot_toggles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_planner.py",
+      "target": "class:starpilot/controls/starpilot_planner.py:StarPilotPlanner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/controls/starpilot_planner.py",
+      "target": "class:starpilot/controls/starpilot_planner.py:StarPilotPlanner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/adj_spot_monitor_vision.py",
+      "target": "function:starpilot/system/adj_spot_monitor_vision.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/adj_spot_monitor_vision.py",
+      "target": "function:starpilot/system/adj_spot_monitor_vision.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/adj_spot_monitor_vision.py",
+      "target": "class:starpilot/system/adj_spot_monitor_vision.py:VASMDaemon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/adj_spot_monitor_vision.py",
+      "target": "class:starpilot/system/adj_spot_monitor_vision.py:VASMDaemon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_filler.py",
+      "target": "function:starpilot/system/speed_limit_filler.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_filler.py",
+      "target": "function:starpilot/system/speed_limit_filler.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_filler.py",
+      "target": "class:starpilot/system/speed_limit_filler.py:MapSpeedLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_filler.py",
+      "target": "class:starpilot/system/speed_limit_filler.py:MapSpeedLogger",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "function:starpilot/system/speed_limit_vision.py:device_cpu_usage_busy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "function:starpilot/system/speed_limit_vision.py:device_cpu_usage_busy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "function:starpilot/system/speed_limit_vision.py:memory_pressure_level",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "function:starpilot/system/speed_limit_vision.py:memory_pressure_level",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "function:starpilot/system/speed_limit_vision.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "function:starpilot/system/speed_limit_vision.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:Detection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:Detection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:DetectorProposal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:DetectorProposal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:ProposalTrack",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:ProposalTrack",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:HistoryEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:HistoryEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:SpeedLimitVisionDaemon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/speed_limit_vision.py",
+      "target": "class:starpilot/system/speed_limit_vision.py:SpeedLimitVisionDaemon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

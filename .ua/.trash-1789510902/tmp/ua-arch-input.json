@@ -1,0 +1,4395 @@
+{
+  "fileNodes": [
+    {
+      "id": "file:common/params_keys.h",
+      "type": "file",
+      "name": "params_keys.h",
+      "filePath": "common/params_keys.h",
+      "summary": "Déclare le registre central des clés Params avec leurs types, valeurs par défaut, règles de persistance, niveaux de réglage et politiques d’effacement.",
+      "tags": [
+        "paramètres",
+        "configuration",
+        "registre",
+        "persistance"
+      ],
+      "complexity": "complex",
+      "languageNotes": "En-tête C++ fondé sur une table inline de métadonnées ParamKeyAttributes."
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "file",
+      "name": "interfaces.py",
+      "filePath": "opendbc_repo/opendbc/car/interfaces.py",
+      "summary": "Définit les interfaces de base qui normalisent les paramètres, l’état, le radar et les commandes des véhicules, puis y applique les extensions StarPilot communes aux marques prises en charge.",
+      "tags": [
+        "interface-vehicule",
+        "abstraction",
+        "parametres-vehicule",
+        "starpilot"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Le module combine des ABC Python, des méthodes de classe et un cache de paramètres de couple chargés depuis TOML."
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/__init__.py",
+      "summary": "Marque l’intégration Subaru comme package Python sans exposer de logique propre.",
+      "tags": [
+        "subaru",
+        "package-python",
+        "integration-vehicule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "type": "file",
+      "name": "carcontroller.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "summary": "Convertit les commandes latérales et longitudinales en trames CAN Subaru, avec gestion du contrôle par angle ou couple, du stop-and-go et de la désactivation stop-start.",
+      "tags": [
+        "controle-vehicule",
+        "commande-can",
+        "subaru",
+        "starpilot"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Le contrôleur sélectionne dynamiquement les stratégies angle et torque selon les flags de plateforme."
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "type": "file",
+      "name": "carstate.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/carstate.py",
+      "summary": "Décode les bus CAN Subaru pour produire l’état véhicule, les événements de boutons, les états EyeSight et les données StarPilot nécessaires au contrôleur.",
+      "tags": [
+        "etat-vehicule",
+        "decodage-can",
+        "subaru",
+        "starpilot"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/fingerprints.py",
+      "type": "file",
+      "name": "fingerprints.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/fingerprints.py",
+      "summary": "Répertorie les versions de firmware ECU connues pour identifier les plateformes Subaru compatibles à partir de leurs signatures matérielles.",
+      "tags": [
+        "donnees-firmware",
+        "identification-vehicule",
+        "subaru",
+        "compatibilite"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Ce module Python est essentiellement déclaratif et associe des ECU à des séquences de version binaires."
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "type": "file",
+      "name": "interface.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/interface.py",
+      "summary": "Spécialise l’interface véhicule pour Subaru en choisissant les paramètres de sécurité, le tuning latéral, les capacités longitudinales et la gestion de l’ECU EyeSight.",
+      "tags": [
+        "interface-vehicule",
+        "configuration-securite",
+        "subaru",
+        "eyesight"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "type": "file",
+      "name": "subarucan.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "summary": "Construit les trames CAN Subaru globales et preglobales pour la direction, le cruise, le freinage, l’accélérateur et les indications EyeSight.",
+      "tags": [
+        "commande-can",
+        "serialisation",
+        "subaru",
+        "eyesight"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Les fonctions sont des builders de messages CAN qui copient les compteurs d’origine et recalculent les checksums nécessaires."
+    },
+    {
+      "id": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "file",
+      "name": "values.py",
+      "filePath": "opendbc_repo/opendbc/car/subaru/values.py",
+      "summary": "Centralise les plateformes Subaru, leurs caractéristiques physiques, flags de sécurité, limites de commande, routage CAN, DBC et requêtes firmware.",
+      "tags": [
+        "configuration-vehicule",
+        "modele-donnees",
+        "subaru",
+        "securite-can"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:pyproject.toml",
+      "type": "config",
+      "name": "pyproject.toml",
+      "filePath": "pyproject.toml",
+      "summary": "Configure le paquet Python openpilot, ses dépendances, la construction Hatch ainsi que pytest, mypy, Ruff et codespell.",
+      "tags": [
+        "configuration",
+        "python",
+        "build-system",
+        "qualité-code"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Configuration TOML centralisant dépendances, build et règles d’analyse statique."
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Présente StarPilot, son héritage openpilot/FrogPilot, ses fonctions d’assistance à la conduite, le portail Galaxy et les crédits des adaptations tierces.",
+      "tags": [
+        "documentation",
+        "présentation",
+        "fonctionnalités",
+        "galaxy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/car/card.py",
+      "type": "file",
+      "name": "card.py",
+      "filePath": "selfdrive/car/card.py",
+      "summary": "Orchestre l’interface véhicule : acquisition de l’état, publication des commandes, callbacks CAN/OBD et intégration des actions StarPilot comme les favoris et Redneck Cruise.",
+      "tags": [
+        "véhicule",
+        "can",
+        "contrôle",
+        "service"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/car/redneck_cruise.py",
+      "type": "file",
+      "name": "redneck_cruise.py",
+      "filePath": "selfdrive/car/redneck_cruise.py",
+      "summary": "Implémente la sélection de vitesse cible et la machine à états de Redneck Cruise, avec temporisations de boutons, marge de roue libre et réaction au départ du véhicule de tête.",
+      "tags": [
+        "régulateur-vitesse",
+        "machine-à-états",
+        "véhicule",
+        "contrôle"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/controls/controlsd.py",
+      "type": "file",
+      "name": "controlsd.py",
+      "filePath": "selfdrive/controls/controlsd.py",
+      "summary": "Exécute le contrôleur principal de conduite et combine planification, limites de courbure, commandes latérales et longitudinales, état d’engagement et publication des sorties.",
+      "tags": [
+        "contrôle",
+        "planification",
+        "sécurité",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/controls/lib/lane_centering.py",
+      "type": "file",
+      "name": "lane_centering.py",
+      "filePath": "selfdrive/controls/lib/lane_centering.py",
+      "summary": "Calcule une correction de centrage dans la voie à partir des trajectoires et expose aussi la direction visuelle de cette correction.",
+      "tags": [
+        "contrôle-latéral",
+        "centrage-voie",
+        "trajectoire",
+        "contrôleur"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/controls/lib/longcontrol.py",
+      "type": "file",
+      "name": "longcontrol.py",
+      "filePath": "selfdrive/controls/lib/longcontrol.py",
+      "summary": "Gère la commande longitudinale, ses transitions d’état, le PID, les arrêts et la compatibilité avec l’ancien mode longitudinal.",
+      "tags": [
+        "contrôle-longitudinal",
+        "pid",
+        "machine-à-états",
+        "sécurité"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/modeld/camera_offset.py",
+      "type": "file",
+      "name": "camera_offset.py",
+      "filePath": "selfdrive/modeld/camera_offset.py",
+      "summary": "Maintient et applique un décalage de caméra lissé selon le dispositif et la cible demandée au pipeline modèle.",
+      "tags": [
+        "caméra",
+        "calibration",
+        "filtrage",
+        "modèle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/modeld/modeld.py",
+      "type": "file",
+      "name": "modeld.py",
+      "filePath": "selfdrive/modeld/modeld.py",
+      "summary": "Pilote l’inférence du modèle de conduite, les entrées caméra, l’état récurrent, les artefacts tinygrad et les variantes Model Lab ou GPU externe.",
+      "tags": [
+        "inférence",
+        "modèle-conduite",
+        "tinygrad",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/selfdrived/events.py",
+      "type": "file",
+      "name": "events.py",
+      "filePath": "selfdrive/selfdrived/events.py",
+      "summary": "Définit le catalogue d’événements et construit les alertes conducteur, leurs priorités, textes, sons et conditions de désengagement.",
+      "tags": [
+        "événements",
+        "alertes",
+        "sécurité",
+        "conducteur"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/selfdrived/selfdrived.py",
+      "type": "file",
+      "name": "selfdrived.py",
+      "filePath": "selfdrive/selfdrived/selfdrived.py",
+      "summary": "Coordonne l’état d’auto-conduite, les événements de sécurité, les alertes, les transitions d’engagement et la publication de selfdriveState.",
+      "tags": [
+        "supervision",
+        "événements",
+        "sécurité",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/developer.py",
+      "type": "file",
+      "name": "developer.py",
+      "filePath": "selfdrive/ui/layouts/settings/developer.py",
+      "summary": "Affiche les réglages développeur généraux et commande les options de débogage UI, ADB, SSH, joystick et longitudinal expérimental.",
+      "tags": [
+        "interface-utilisateur",
+        "réglages",
+        "développement",
+        "sécurité"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/__init__.py",
+      "summary": "Marque le répertoire des écrans de réglages StarPilot comme paquet Python.",
+      "tags": [
+        "package",
+        "réglages",
+        "starpilot"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Module d’initialisation Python volontairement vide."
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "type": "file",
+      "name": "aethergrid.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+      "summary": "Fournit le système de composants AetherGrid pour les réglages StarPilot : panneaux, tuiles, listes, sliders, dialogues, dessin et gestion des interactions.",
+      "tags": [
+        "interface-utilisateur",
+        "design-system",
+        "composants",
+        "rendu"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Implémentation Python de widgets à rendu immédiat avec géométrie, animation et gestion explicite des événements pointeur."
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "type": "file",
+      "name": "appearance.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "summary": "Construit les écrans d’apparence StarPilot pour les thèmes, couleurs, métriques, caméra, chemins, alertes de démarrage et éléments du HUD.",
+      "tags": [
+        "interface-utilisateur",
+        "apparence",
+        "thèmes",
+        "réglages"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+      "type": "file",
+      "name": "asset_loader.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+      "summary": "Charge les textures StarPilot depuis les ressources et fournit un repli sûr lorsqu’un asset est absent.",
+      "tags": [
+        "assets",
+        "textures",
+        "chargement",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "type": "file",
+      "name": "driving_model.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "summary": "Gère le catalogue des modèles de conduite : découverte, tri, téléchargement, sélection, suppression, favoris et état Model Lab.",
+      "tags": [
+        "interface-utilisateur",
+        "modèles",
+        "téléchargement",
+        "catalogue"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "type": "file",
+      "name": "lateral.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "summary": "Assemble les réglages de direction et de contrôle latéral, dont les délais, le lissage de changement de voie et les options nécessitant un redémarrage.",
+      "tags": [
+        "interface-utilisateur",
+        "contrôle-latéral",
+        "réglages",
+        "direction"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "type": "file",
+      "name": "longitudinal.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "summary": "Assemble les réglages longitudinaux StarPilot : profils d’accélération, mode conditionnel, arrêts, offsets SLC, météo et personnalités de conduite.",
+      "tags": [
+        "interface-utilisateur",
+        "contrôle-longitudinal",
+        "réglages",
+        "profils"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+      "type": "file",
+      "name": "main_panel.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+      "summary": "Gère la navigation hiérarchique du panneau StarPilot, le hub de catégories, les sous-panneaux et leur cycle d’affichage.",
+      "tags": [
+        "interface-utilisateur",
+        "navigation",
+        "réglages",
+        "panneau"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "type": "file",
+      "name": "maps.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+      "summary": "Pilote l’écran de cartes hors ligne : sélection de régions, état du stockage, progression, planification, annulation et suppression des téléchargements.",
+      "tags": [
+        "interface-utilisateur",
+        "cartes",
+        "téléchargement",
+        "stockage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "type": "file",
+      "name": "navigation.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+      "summary": "Fournit la recherche Mapbox, les destinations favorites et les commandes de démarrage ou d’annulation de navigation dans les réglages StarPilot.",
+      "tags": [
+        "interface-utilisateur",
+        "navigation",
+        "mapbox",
+        "favoris"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "type": "file",
+      "name": "panel.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+      "summary": "Définit les fondations des panneaux StarPilot, le cache Params par frame, les métadonnées de catégories et les helpers de sélection.",
+      "tags": [
+        "interface-utilisateur",
+        "panneau",
+        "paramètres",
+        "infrastructure-ui"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "type": "file",
+      "name": "scribble.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/scribble.py",
+      "summary": "Dessine la bibliothèque d’icônes personnalisées StarPilot à partir de primitives géométriques.",
+      "tags": [
+        "interface-utilisateur",
+        "icônes",
+        "graphisme",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "type": "file",
+      "name": "sectioned_panel.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "summary": "Dispose des groupes de tuiles dans un panneau sectionné, avec calcul de hauteur, titres de sections et défilement.",
+      "tags": [
+        "interface-utilisateur",
+        "mise-en-page",
+        "tuiles",
+        "réglages"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "type": "file",
+      "name": "simple_download_manager.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "summary": "Fournit un gestionnaire générique de ressources téléchargeables avec sélection, état réseau, progression, annulation et suppression locale.",
+      "tags": [
+        "interface-utilisateur",
+        "téléchargement",
+        "assets",
+        "gestionnaire"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "type": "file",
+      "name": "sounds.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "summary": "Présente les réglages sonores StarPilot, leurs volumes, options et commandes de préécoute hors route.",
+      "tags": [
+        "interface-utilisateur",
+        "audio",
+        "réglages",
+        "volume"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "type": "file",
+      "name": "system_settings.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "summary": "Regroupe les réglages système et les opérations de maintenance : affichage, connectivité, stockage, sauvegardes, profils Params, firmware et réinitialisation.",
+      "tags": [
+        "interface-utilisateur",
+        "système",
+        "maintenance",
+        "sauvegardes"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "type": "file",
+      "name": "vehicle.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "summary": "Configure l’identité du véhicule, les options de direction, les actions de boutons et les sélecteurs de marque, modèle ou temporisation des portes.",
+      "tags": [
+        "interface-utilisateur",
+        "véhicule",
+        "réglages",
+        "commandes"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/lib/mode_banner.py",
+      "type": "file",
+      "name": "mode_banner.py",
+      "filePath": "selfdrive/ui/lib/mode_banner.py",
+      "summary": "Détermine la variante et les couleurs animées de la bannière de mode de conduite, puis dessine son dégradé dans l’interface.",
+      "tags": [
+        "interface-utilisateur",
+        "mode-conduite",
+        "couleurs",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/lib/starpilot_state.py",
+      "type": "file",
+      "name": "starpilot_state.py",
+      "filePath": "selfdrive/ui/lib/starpilot_state.py",
+      "summary": "Centralise l’état StarPilot consommé par l’UI, applique les empreintes véhicule manuelles et synchronise les paramètres latéraux.",
+      "tags": [
+        "state-management",
+        "interface-utilisateur",
+        "véhicule",
+        "paramètres"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/mici/layouts/settings/developer.py",
+      "type": "file",
+      "name": "developer.py",
+      "filePath": "selfdrive/ui/mici/layouts/settings/developer.py",
+      "summary": "Adapte les réglages développeur à l’interface mici et synchronise les options joystick et longitudinal expérimental.",
+      "tags": [
+        "interface-utilisateur",
+        "mici",
+        "développement",
+        "réglages"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/mici/layouts/settings/settings.py",
+      "type": "file",
+      "name": "settings.py",
+      "filePath": "selfdrive/ui/mici/layouts/settings/settings.py",
+      "summary": "Compose l’écran de réglages mici avec de grands boutons et une commande Force Drive State adaptée au petit écran.",
+      "tags": [
+        "interface-utilisateur",
+        "mici",
+        "réglages",
+        "commandes"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/mici/layouts/settings/visuals.py",
+      "type": "file",
+      "name": "visuals.py",
+      "filePath": "selfdrive/ui/mici/layouts/settings/visuals.py",
+      "summary": "Propose sur mici les sélecteurs de vue caméra et d’affichage des informations ou indicateurs de véhicule de tête.",
+      "tags": [
+        "interface-utilisateur",
+        "mici",
+        "visuels",
+        "réglages"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/mici/onroad/hud_renderer.py",
+      "type": "file",
+      "name": "hud_renderer.py",
+      "filePath": "selfdrive/ui/mici/onroad/hud_renderer.py",
+      "summary": "Rend le HUD routier de mici : vitesse, consigne, limite, volant, source modèle, intentions de virage et invites interactives.",
+      "tags": [
+        "interface-utilisateur",
+        "mici",
+        "hud",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/mici/onroad/sidebar_widgets.py",
+      "type": "file",
+      "name": "sidebar_widgets.py",
+      "filePath": "selfdrive/ui/mici/onroad/sidebar_widgets.py",
+      "summary": "Dessine les widgets latéraux mici pour la personnalité, le mode conditionnel, les arrêts, les courbes et les limites de vitesse.",
+      "tags": [
+        "interface-utilisateur",
+        "mici",
+        "widgets",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/model_renderer.py",
+      "type": "file",
+      "name": "model_renderer.py",
+      "filePath": "selfdrive/ui/onroad/model_renderer.py",
+      "summary": "Projette et dessine les sorties du modèle sur la route : voies, trajectoire, véhicules de tête, pistes radar et chemins adjacents.",
+      "tags": [
+        "interface-utilisateur",
+        "modèle",
+        "projection",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/__init__.py",
+      "summary": "Marque le répertoire des composants routiers StarPilot comme paquet Python.",
+      "tags": [
+        "package",
+        "interface-utilisateur",
+        "onroad"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Module d’initialisation Python volontairement vide."
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/aethergauge.py",
+      "type": "file",
+      "name": "aethergauge.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/aethergauge.py",
+      "summary": "Agrège les sources d’anticipation routière et rend l’AetherGauge pour les arrêts forcés, feux, courbes, CEM et véhicules de tête.",
+      "tags": [
+        "interface-utilisateur",
+        "jauge",
+        "anticipation",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/compass.py",
+      "type": "file",
+      "name": "compass.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/compass.py",
+      "summary": "Convertit un cap en texte de boussole localisé et adapté au niveau de précision disponible.",
+      "tags": [
+        "interface-utilisateur",
+        "boussole",
+        "navigation",
+        "formatage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/developer_sidebar.py",
+      "type": "file",
+      "name": "developer_sidebar.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/developer_sidebar.py",
+      "summary": "Affiche la barre latérale développeur avec métriques de réglage, valeurs de couple et commandes rapides de paramètres.",
+      "tags": [
+        "interface-utilisateur",
+        "développement",
+        "télémétrie",
+        "réglage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/favorite_radial_menu.py",
+      "type": "file",
+      "name": "favorite_radial_menu.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/favorite_radial_menu.py",
+      "summary": "Implémente le menu radial des favoris routiers, son éditeur d’emplacements, la pagination, les gestes longs et le rendu des cartes d’options.",
+      "tags": [
+        "interface-utilisateur",
+        "menu-radial",
+        "favoris",
+        "interaction"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "type": "file",
+      "name": "navigation_card.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "summary": "Rend la carte de navigation et ses variantes normale, réduite ou mici, avec manœuvre, distance, texte et commande d’annulation.",
+      "tags": [
+        "interface-utilisateur",
+        "navigation",
+        "carte",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "type": "file",
+      "name": "path.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/path.py",
+      "summary": "Dessine les voies adjacentes et les bords de trajectoire avec dégradés, couleurs HSL et annotations visuelles.",
+      "tags": [
+        "interface-utilisateur",
+        "trajectoire",
+        "voies",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "type": "file",
+      "name": "pause_indicators.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "summary": "Dessine les indicateurs de pause latérale et longitudinale sur la vue routière.",
+      "tags": [
+        "interface-utilisateur",
+        "indicateur",
+        "pause",
+        "rendu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/pedal_icons.py",
+      "type": "file",
+      "name": "pedal_icons.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/pedal_icons.py",
+      "summary": "Rend les icônes d’accélérateur et de frein selon l’état courant des commandes longitudinales.",
+      "tags": [
+        "interface-utilisateur",
+        "pédales",
+        "indicateur",
+        "rendu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/personality_button.py",
+      "type": "file",
+      "name": "personality_button.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/personality_button.py",
+      "summary": "Fournit le bouton routier de personnalité de conduite et gère son état, ses interactions et son rendu.",
+      "tags": [
+        "interface-utilisateur",
+        "personnalité",
+        "bouton",
+        "interaction"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+      "type": "file",
+      "name": "pip_sidecam.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+      "summary": "Acquiert les flux des caméras latérales et les affiche en incrustation avec recadrage, textures, disposition et sélection du côté actif.",
+      "tags": [
+        "interface-utilisateur",
+        "caméra",
+        "picture-in-picture",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "type": "file",
+      "name": "pulse_glide.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "summary": "Calcule la couleur du mode Pulse and Glide et dessine son indicateur sur la bordure routière.",
+      "tags": [
+        "interface-utilisateur",
+        "pulse-and-glide",
+        "indicateur",
+        "rendu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "type": "file",
+      "name": "rainbow_path.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/rainbow_path.py",
+      "summary": "Anime un dégradé arc-en-ciel HSL pour la trajectoire routière et expose les couleurs mises à jour à chaque frame.",
+      "tags": [
+        "interface-utilisateur",
+        "trajectoire",
+        "animation",
+        "couleurs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+      "type": "file",
+      "name": "rivian_lateral_mode.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+      "summary": "Suit le mode latéral Rivian actif et calcule la teinte du volant utilisée par l’interface routière.",
+      "tags": [
+        "interface-utilisateur",
+        "rivian",
+        "contrôle-latéral",
+        "indicateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "type": "file",
+      "name": "slc_speed_limit.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+      "summary": "Rend la limite de vitesse du Speed Limit Controller, ses sources, offsets, animations de changement et panneaux US ou européens.",
+      "tags": [
+        "interface-utilisateur",
+        "limite-vitesse",
+        "slc",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "type": "file",
+      "name": "source_bubble_layout.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+      "summary": "Calcule les libellés, dimensions, lignes visibles et valeurs abrégées de la bulle présentant les sources de limite de vitesse.",
+      "tags": [
+        "interface-utilisateur",
+        "mise-en-page",
+        "sources",
+        "limite-vitesse"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "type": "file",
+      "name": "starpilot_border.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+      "summary": "Compose les effets de bordure routière StarPilot selon les états de contrôle, la circulation et les animations lumineuses.",
+      "tags": [
+        "interface-utilisateur",
+        "bordure",
+        "effets-visuels",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+      "type": "file",
+      "name": "starpilot_onroad_view.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+      "summary": "Coordonne la vue routière StarPilot, ses bordures, overlays, widgets, limite de vitesse, barre de couple, favoris et métriques développeur.",
+      "tags": [
+        "interface-utilisateur",
+        "onroad",
+        "orchestration",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "type": "file",
+      "name": "stopping_point.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/stopping_point.py",
+      "summary": "Projette et dessine le point d’arrêt prévu ainsi que son contour sur la trajectoire routière.",
+      "tags": [
+        "interface-utilisateur",
+        "arrêt",
+        "projection",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "type": "file",
+      "name": "torque_bar.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/torque_bar.py",
+      "summary": "Calcule une géométrie d’arc mise en cache et rend la barre de couple de direction avec filtrage de l’état.",
+      "tags": [
+        "interface-utilisateur",
+        "couple",
+        "direction",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/weather_icon.py",
+      "type": "file",
+      "name": "weather_icon.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/weather_icon.py",
+      "summary": "Dessine les pictogrammes météo routiers à partir de primitives graphiques et de l’état météorologique courant.",
+      "tags": [
+        "interface-utilisateur",
+        "météo",
+        "icône",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+      "type": "file",
+      "name": "widget_layout_manager.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+      "summary": "Enregistre, ordonne et positionne les widgets routiers dans les zones gauche, droite et basse avant leur rendu.",
+      "tags": [
+        "interface-utilisateur",
+        "widgets",
+        "mise-en-page",
+        "orchestration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widget_style.py",
+      "type": "file",
+      "name": "widget_style.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widget_style.py",
+      "summary": "Centralise le style commun des widgets routiers, notamment l’arrondi et le dessin des cartes de contrôle.",
+      "tags": [
+        "interface-utilisateur",
+        "widgets",
+        "style",
+        "rendu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/__init__.py",
+      "summary": "Réexporte l’API publique des widgets routiers et rassemble les implémentations disponibles derrière un point d’entrée unique.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "widgets",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Barrel Python déclarant explicitement ses réexports dans __all__."
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+      "type": "file",
+      "name": "aethergauge.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+      "summary": "Adapte AetherGauge au contrat LayoutWidget pour l’intégrer au gestionnaire de disposition routière.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "jauge",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/base.py",
+      "type": "file",
+      "name": "base.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/base.py",
+      "summary": "Définit l’interface abstraite commune des widgets routiers, avec visibilité, taille, priorité et gestion du pointeur.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "abstraction",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+      "type": "file",
+      "name": "driver_monitor.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+      "summary": "Adapte l’indicateur de surveillance du conducteur au système de widgets routiers.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "surveillance-conducteur",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "type": "file",
+      "name": "model_source.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+      "summary": "Affiche l’état de la source du modèle de conduite et signale les échecs du grand modèle dans un widget interactif.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "modèle",
+        "état"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+      "type": "file",
+      "name": "pedal_icons.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+      "summary": "Adapte les icônes de pédales au système de widgets et contrôle leur visibilité et leur taille.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "pédales",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+      "type": "file",
+      "name": "personality_button.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+      "summary": "Adapte le bouton de personnalité de conduite au système de widgets routiers.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "personnalité",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+      "type": "file",
+      "name": "set_speed.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+      "summary": "Affiche la vitesse de consigne comme widget routier, avec visibilité et dimensions adaptées au layout.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "vitesse-consigne",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+      "type": "file",
+      "name": "speed_limit.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+      "summary": "Affiche la limite de vitesse comme widget routier et gère l’interaction ouvrant les détails de ses sources.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "limite-vitesse",
+        "interaction"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+      "type": "file",
+      "name": "steering_wheel.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+      "summary": "Adapte l’icône de volant au système de widgets routiers.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "volant",
+        "adaptateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+      "type": "file",
+      "name": "stopped_timer.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+      "summary": "Chronomètre les arrêts, formate leur durée et remplace au besoin la vitesse courante par un widget dédié.",
+      "tags": [
+        "interface-utilisateur",
+        "widget",
+        "chronomètre",
+        "arrêt"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/ui_state.py",
+      "type": "file",
+      "name": "ui_state.py",
+      "filePath": "selfdrive/ui/ui_state.py",
+      "summary": "Maintient l’état global de l’interface et du dispositif, dont les transitions onroad/offroad, l’engagement, la luminosité, la veille et les callbacks UI.",
+      "tags": [
+        "state-management",
+        "interface-utilisateur",
+        "dispositif",
+        "cycle-de-vie"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/accel_profile.py",
+      "type": "file",
+      "name": "accel_profile.py",
+      "filePath": "starpilot/common/accel_profile.py",
+      "summary": "Définit, normalise, interpole et sérialise les profils personnalisés d’accélération et de décélération utilisés par le contrôle longitudinal.",
+      "tags": [
+        "contrôle-longitudinal",
+        "profil-accélération",
+        "interpolation",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:starpilot/common/assets/device_settings_layout.json",
+      "type": "config",
+      "name": "device_settings_layout.json",
+      "filePath": "starpilot/common/assets/device_settings_layout.json",
+      "summary": "Décrit le catalogue des réglages Galaxy par catégories, avec clés Params, libellés, types UI, dépendances, bornes et niveaux simple ou avancé.",
+      "tags": [
+        "configuration",
+        "galaxy",
+        "réglages",
+        "schema-definition"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Grand tableau JSON déclaratif servant de source de vérité à l’interface de réglages du dispositif."
+    },
+    {
+      "id": "file:starpilot/common/connect_server.py",
+      "type": "file",
+      "name": "connect_server.py",
+      "filePath": "starpilot/common/connect_server.py",
+      "summary": "Prépare les bascules entre le serveur stock et Konik en conservant, restaurant ou régénérant l’identifiant de l’appareil dans les Params actifs et leur cache.",
+      "tags": [
+        "serveur",
+        "identite-appareil",
+        "parametres",
+        "synchronisation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/controller_actions.py",
+      "type": "file",
+      "name": "controller_actions.py",
+      "filePath": "starpilot/common/controller_actions.py",
+      "summary": "Centralise le catalogue des actions assignables aux favoris et aux contrôleurs externes, ainsi que leurs compteurs et bornes de vitesse.",
+      "tags": [
+        "actions",
+        "controleur",
+        "favoris",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/cpu_throttle.py",
+      "type": "file",
+      "name": "cpu_throttle.py",
+      "filePath": "starpilot/common/cpu_throttle.py",
+      "summary": "Évalue la charge des cœurs CPU en ligne et produit un facteur de ralentissement stable pour protéger les traitements d’arrière-plan.",
+      "tags": [
+        "cpu",
+        "performance",
+        "limitation",
+        "telemetrie"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/experimental_state.py",
+      "type": "file",
+      "name": "experimental_state.py",
+      "filePath": "starpilot/common/experimental_state.py",
+      "summary": "Normalise, persiste et restaure les états manuels ou conditionnels des modes Experimental et Chill entre les Params persistants et mémoire.",
+      "tags": [
+        "etat",
+        "mode-experimental",
+        "mode-chill",
+        "parametres"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/favorite_slots.py",
+      "type": "file",
+      "name": "favorite_slots.py",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "summary": "Construit et valide les emplacements favoris, lit leurs valeurs de Params et exécute de façon contrôlée les réglages ou actions qui leur sont assignés.",
+      "tags": [
+        "favoris",
+        "parametres",
+        "validation",
+        "actions"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/gpu_model_ready_sound.py",
+      "type": "file",
+      "name": "gpu_model_ready_sound.py",
+      "filePath": "starpilot/common/gpu_model_ready_sound.py",
+      "summary": "Suit le chargement du modèle GPU et expose une courte fenêtre de notification sonore sans supplanter les alertes de conduite.",
+      "tags": [
+        "gpu",
+        "notification",
+        "modele",
+        "etat"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/lateral_delay.py",
+      "type": "file",
+      "name": "lateral_delay.py",
+      "filePath": "starpilot/common/lateral_delay.py",
+      "summary": "Calcule le délai latéral complet en ajoutant au délai du véhicule la latence logicielle fixe de la chaîne de contrôle.",
+      "tags": [
+        "controle-lateral",
+        "latence",
+        "calcul"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/lateral_only_experimental.py",
+      "type": "file",
+      "name": "lateral_only_experimental.py",
+      "filePath": "starpilot/common/lateral_only_experimental.py",
+      "summary": "Définit l’allowlist des véhicules pouvant exposer Experimental Mode pour le contrôle latéral tout en conservant l’ACC longitudinal stock.",
+      "tags": [
+        "controle-lateral",
+        "mode-experimental",
+        "compatibilite",
+        "securite"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/longitudinal_mode.py",
+      "type": "file",
+      "name": "longitudinal_mode.py",
+      "filePath": "starpilot/common/longitudinal_mode.py",
+      "summary": "Fournit un verrou latéral et des lectures cohérentes des Params qui sélectionnent les modes longitudinaux concurrents.",
+      "tags": [
+        "controle-longitudinal",
+        "verrouillage",
+        "parametres",
+        "coherence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/longitudinal_personality_profiles.py",
+      "type": "file",
+      "name": "longitudinal_personality_profiles.py",
+      "filePath": "starpilot/common/longitudinal_personality_profiles.py",
+      "summary": "Définit le schéma versionné des personnalités longitudinales, leurs migrations et l’interpolation des courbes d’accélération, de freinage et de suivi.",
+      "tags": [
+        "personnalites",
+        "controle-longitudinal",
+        "migration",
+        "interpolation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/maps_catalog.py",
+      "type": "file",
+      "name": "maps_catalog.py",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "summary": "Décrit le catalogue géographique et les cadences de téléchargement des cartes, puis transforme les sélections enregistrées en entrées affichables.",
+      "tags": [
+        "cartographie",
+        "catalogue",
+        "telechargement",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/maps_download_progress.py",
+      "type": "file",
+      "name": "maps_download_progress.py",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "summary": "Estime la taille et la durée des téléchargements cartographiques et maintient un cache réconcilié de l’espace occupé par chaque sélection.",
+      "tags": [
+        "cartographie",
+        "progression",
+        "cache",
+        "stockage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/maps_selection.py",
+      "type": "file",
+      "name": "maps_selection.py",
+      "filePath": "starpilot/common/maps_selection.py",
+      "summary": "Normalise les sélections cartographiques actuelles et historiques vers des identifiants de pays ou d’États américains stables.",
+      "tags": [
+        "cartographie",
+        "normalisation",
+        "compatibilite",
+        "selection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/model_lab.py",
+      "type": "file",
+      "name": "model_lab.py",
+      "filePath": "starpilot/common/model_lab.py",
+      "summary": "Valide les paires de modèles latéral et longitudinal du Model Lab et fusionne leurs tenseurs de sortie en une prédiction hybride cohérente.",
+      "tags": [
+        "model-lab",
+        "modele",
+        "validation",
+        "fusion"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/model_versions.py",
+      "type": "file",
+      "name": "model_versions.py",
+      "filePath": "starpilot/common/model_versions.py",
+      "summary": "Interprète les versions de modèles et choisit les formats et noms d’artefacts de conduite compatibles avec chaque génération.",
+      "tags": [
+        "modele",
+        "version",
+        "artefact",
+        "compatibilite"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/param_profiles.py",
+      "type": "file",
+      "name": "param_profiles.py",
+      "filePath": "starpilot/common/param_profiles.py",
+      "summary": "Sauvegarde, valide et restaure des profils typés de Params dans des emplacements bornés, avec migration des anciennes clés.",
+      "tags": [
+        "parametres",
+        "profil",
+        "serialisation",
+        "migration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/safe_mode.py",
+      "type": "file",
+      "name": "safe_mode.py",
+      "filePath": "starpilot/common/safe_mode.py",
+      "summary": "Applique un ensemble prudent de réglages après sauvegarde des valeurs courantes, puis permet leur restauration contrôlée.",
+      "tags": [
+        "mode-securise",
+        "parametres",
+        "sauvegarde",
+        "restauration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/starpilot_backups.py",
+      "type": "file",
+      "name": "starpilot_backups.py",
+      "filePath": "starpilot/common/starpilot_backups.py",
+      "summary": "Crée et fait tourner les sauvegardes compressées de StarPilot et de ses réglages, avec contrôle de taille et état de résultat.",
+      "tags": [
+        "sauvegarde",
+        "compression",
+        "rotation",
+        "stockage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/starpilot_download_utilities.py",
+      "type": "file",
+      "name": "starpilot_download_utilities.py",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "summary": "Gère les téléchargements HTTP reprenables des ressources StarPilot, leur progression, les limites GitHub et la vérification finale.",
+      "tags": [
+        "telechargement",
+        "http",
+        "verification",
+        "progression"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/starpilot_functions.py",
+      "type": "file",
+      "name": "starpilot_functions.py",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "summary": "Orchestre les opérations de démarrage et d’installation StarPilot, l’enregistrement de l’appareil et les mises à jour des cartes ou du logiciel.",
+      "tags": [
+        "demarrage",
+        "installation",
+        "mise-a-jour",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/starpilot_utilities.py",
+      "type": "file",
+      "name": "starpilot_utilities.py",
+      "filePath": "starpilot/common/starpilot_utilities.py",
+      "summary": "Regroupe les utilitaires partagés de géométrie routière, fichiers, commandes système, diagnostic matériel et coordination de tâches.",
+      "tags": [
+        "utility",
+        "geometrie",
+        "systeme",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/starpilot_variables.py",
+      "type": "file",
+      "name": "starpilot_variables.py",
+      "filePath": "starpilot/common/starpilot_variables.py",
+      "summary": "Centralise les constantes, migrations et capacités StarPilot, puis construit l’état complet des réglages consommé par le runtime.",
+      "tags": [
+        "configuration",
+        "capacites",
+        "parametres",
+        "etat-runtime"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/testing_grounds.py",
+      "type": "file",
+      "name": "testing_grounds.py",
+      "filePath": "starpilot/common/testing_grounds.py",
+      "summary": "Charge le schéma des Testing Grounds et expose une sélection expérimentale typée, mise en cache et accessible par espace de noms.",
+      "tags": [
+        "experimentation",
+        "configuration",
+        "cache",
+        "selection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/common/theme_asset_names.py",
+      "type": "file",
+      "name": "theme_asset_names.py",
+      "filePath": "starpilot/common/theme_asset_names.py",
+      "summary": "Canonicalise les noms d’assets de thème et retrouve le meilleur fichier correspondant malgré les variantes de ponctuation ou de signature.",
+      "tags": [
+        "theme",
+        "assets",
+        "normalisation",
+        "recherche"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/vision_bsm.py",
+      "type": "file",
+      "name": "vision_bsm.py",
+      "filePath": "starpilot/common/vision_bsm.py",
+      "summary": "Lit l’état V-ASM du moniteur d’angle mort et rejette toute observation trop ancienne ou temporellement incohérente.",
+      "tags": [
+        "vision",
+        "angle-mort",
+        "fraicheur",
+        "securite"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/controls/lib/conditional_chill_mode.py",
+      "type": "file",
+      "name": "conditional_chill_mode.py",
+      "filePath": "starpilot/controls/lib/conditional_chill_mode.py",
+      "summary": "Implémente la machine d’état du Conditional Chill Mode à partir de la vitesse, des véhicules voisins, des arrêts et des confirmations temporelles.",
+      "tags": [
+        "mode-chill",
+        "controle-longitudinal",
+        "machine-etat",
+        "detection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/conditional_experimental_mode.py",
+      "type": "file",
+      "name": "conditional_experimental_mode.py",
+      "filePath": "starpilot/controls/lib/conditional_experimental_mode.py",
+      "summary": "Active ou désactive conditionnellement Experimental Mode selon les courbes, véhicules lents, arrêts, intersections et choix manuels du conducteur.",
+      "tags": [
+        "mode-experimental",
+        "controle-longitudinal",
+        "machine-etat",
+        "detection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/curve_speed_controller.py",
+      "type": "file",
+      "name": "curve_speed_controller.py",
+      "filePath": "starpilot/controls/lib/curve_speed_controller.py",
+      "summary": "Apprend une courbe d’accélération latérale et calcule une vitesse cible de virage tout en gérant les dérogations manuelles.",
+      "tags": [
+        "vitesse-virage",
+        "apprentissage",
+        "controle-longitudinal",
+        "calibration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/neural_network_feedforward.py",
+      "type": "file",
+      "name": "neural_network_feedforward.py",
+      "filePath": "starpilot/controls/lib/neural_network_feedforward.py",
+      "summary": "Charge et évalue un réseau feedforward pour prédire la commande latérale, avec adaptation des paramètres de friction et de délai.",
+      "tags": [
+        "reseau-neuronal",
+        "feedforward",
+        "controle-lateral",
+        "modele"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/speed_limit_controller.py",
+      "type": "file",
+      "name": "speed_limit_controller.py",
+      "filePath": "starpilot/controls/lib/speed_limit_controller.py",
+      "summary": "Fusionne les limites de vitesse cartographiques et visuelles, applique les décalages et gère les confirmations ainsi que les overrides du conducteur.",
+      "tags": [
+        "limite-vitesse",
+        "controle-longitudinal",
+        "cartographie",
+        "override"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/starpilot_acceleration.py",
+      "type": "file",
+      "name": "starpilot_acceleration.py",
+      "filePath": "starpilot/controls/lib/starpilot_acceleration.py",
+      "summary": "Calcule les bornes d’accélération et de décélération selon les profils, le véhicule de tête, le SLC et les modes pulse-and-glide.",
+      "tags": [
+        "acceleration",
+        "controle-longitudinal",
+        "profil",
+        "interpolation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/starpilot_events.py",
+      "type": "file",
+      "name": "starpilot_events.py",
+      "filePath": "starpilot/controls/lib/starpilot_events.py",
+      "summary": "Produit les événements et alertes StarPilot à partir de l’état de conduite, des forces mesurées et des fonctions activées.",
+      "tags": [
+        "evenement",
+        "alerte",
+        "conduite",
+        "securite"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/controls/lib/starpilot_following.py",
+      "type": "file",
+      "name": "starpilot_following.py",
+      "filePath": "starpilot/controls/lib/starpilot_following.py",
+      "summary": "Ajuste les distances de suivi et les marges de changement de voie selon la personnalité active, la vitesse et les véhicules de tête.",
+      "tags": [
+        "distance-suivi",
+        "controle-longitudinal",
+        "personnalites",
+        "changement-voie"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/controls/lib/starpilot_vcruise.py",
+      "type": "file",
+      "name": "starpilot_vcruise.py",
+      "filePath": "starpilot/controls/lib/starpilot_vcruise.py",
+      "summary": "Détermine la vitesse de croisière StarPilot à partir des virages, de la navigation, des limites de vitesse et du contexte des véhicules de tête.",
+      "tags": [
+        "vitesse-croisiere",
+        "navigation",
+        "limite-vitesse",
+        "controle-longitudinal"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/lib/weather_checker.py",
+      "type": "file",
+      "name": "weather_checker.py",
+      "filePath": "starpilot/controls/lib/weather_checker.py",
+      "summary": "Interroge et met en cache les conditions météo proches afin de fournir des offsets exploitables par la logique de conduite.",
+      "tags": [
+        "meteo",
+        "cache",
+        "geolocalisation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/controls/starpilot_card.py",
+      "type": "file",
+      "name": "starpilot_card.py",
+      "filePath": "starpilot/controls/starpilot_card.py",
+      "summary": "Intègre les boutons du véhicule, favoris et contrôleurs externes dans CarState pour piloter les modes et actions StarPilot.",
+      "tags": [
+        "carstate",
+        "boutons",
+        "controleur",
+        "actions"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/controls/starpilot_planner.py",
+      "type": "file",
+      "name": "starpilot_planner.py",
+      "filePath": "starpilot/controls/starpilot_planner.py",
+      "summary": "Coordonne les contrôleurs StarPilot, met à jour le plan longitudinal et publie les états et cibles calculés aux autres processus.",
+      "tags": [
+        "planificateur",
+        "controle-longitudinal",
+        "publication",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/adj_spot_monitor_vision.py",
+      "type": "file",
+      "name": "adj_spot_monitor_vision.py",
+      "filePath": "starpilot/system/adj_spot_monitor_vision.py",
+      "summary": "Exécute le daemon vision V-ASM qui analyse les caméras latérales pour publier l’état des zones adjacentes en respectant les limites CPU.",
+      "tags": [
+        "vision",
+        "angle-mort",
+        "daemon",
+        "camera"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/speed_limit_filler.py",
+      "type": "file",
+      "name": "speed_limit_filler.py",
+      "filePath": "starpilot/system/speed_limit_filler.py",
+      "summary": "Enrichit un jeu de données de limites de vitesse à partir du GPS et d’Overpass, avec cache spatial, quotas et validation des segments.",
+      "tags": [
+        "limite-vitesse",
+        "overpass",
+        "geolocalisation",
+        "jeu-donnees"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/speed_limit_vision.py",
+      "type": "file",
+      "name": "speed_limit_vision.py",
+      "filePath": "starpilot/system/speed_limit_vision.py",
+      "summary": "Pilote la détection visuelle des panneaux de vitesse par modèle, OCR et suivi optique, puis publie les résultats et captures de diagnostic.",
+      "tags": [
+        "limite-vitesse",
+        "vision",
+        "ocr",
+        "daemon",
+        "diagnostic"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Le module combine OpenCV, suivi temporel, classification et plusieurs stratégies de repli autour d’un daemon Python long-lived."
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/settings.js",
+      "type": "file",
+      "name": "settings.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/settings.js",
+      "summary": "Construit la vue de navigation des réglages Galaxy et délègue l’ouverture des sections au routeur global sans créer de second module.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "navigation",
+        "component"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Composant ES module fondé sur Arrow.js et chargé directement par le navigateur."
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "type": "file",
+      "name": "controller_action_picker.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "summary": "Construit un dialog accessible pour rechercher, catégoriser et choisir une action de contrôleur selon la hiérarchie du catalogue de réglages.",
+      "tags": [
+        "selecteur-action",
+        "dialog",
+        "accessibilite",
+        "recherche"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Le module utilise directement le DOM natif et retourne une fonction de fermeture pour gérer le cycle de vie du dialog."
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "type": "file",
+      "name": "device_settings.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "summary": "Implémente l’interface classique complète des réglages Galaxy : layout dynamique, Params, favoris, valeurs numériques et profils de personnalité.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "parametres",
+        "favoris",
+        "personnalites"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Grand composant Arrow.js réactif, découpé en fonctions de synchronisation, validation et rendu sans étape de build."
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs",
+      "type": "file",
+      "name": "longitudinal_mode.mjs",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs",
+      "summary": "Normalise l’ancien catalogue des modes longitudinaux en un sélecteur unique et valide les snapshots d’état renvoyés par le backend.",
+      "tags": [
+        "controle-longitudinal",
+        "normalisation",
+        "validation",
+        "catalogue-parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "type": "file",
+      "name": "personality_profiles.mjs",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "summary": "Fournit les helpers purs de l’éditeur de profils de conduite pour formater les vitesses, construire les clés de paramètres et convertir un pointeur en valeur de courbe.",
+      "tags": [
+        "profil-conduite",
+        "utilitaire",
+        "formatage",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "type": "file",
+      "name": "speed_limits.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "summary": "Affiche l’état du traitement des limites de vitesse dans Galaxy et permet de déclencher immédiatement une passe de traitement.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "limite-vitesse",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "type": "file",
+      "name": "tuning.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "summary": "Fournit l’interface Galaxy du FLM pour sélectionner des routes, lancer l’analyse, comparer des profils, commenter les résultats et gérer les tunes sauvegardés.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "flm",
+        "tuning",
+        "visualisation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "type": "file",
+      "name": "vehicle_features.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "summary": "Présente les outils véhicule Galaxy et vérifie à la demande la disponibilité des commandes de portes et du gestionnaire TSK.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "vehicule",
+        "outils"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "type": "file",
+      "name": "wheel_controls.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "summary": "Gère l’interface Galaxy de découverte, apprentissage, test et assignation des commandes au volant ou contrôleurs externes.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "controleur",
+        "mapping",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "file",
+      "name": "api.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "summary": "Centralise le client HTTP du portail Galaxy pour les paramètres, routes, diagnostics, mises à jour, thèmes, modèles, tuning et autres services StarPilot.",
+      "tags": [
+        "api-client",
+        "requete-http",
+        "service-galaxy",
+        "serialisation"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Un objet API unique enveloppe fetch et partage la normalisation JSON des erreurs entre de nombreux endpoints."
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "type": "file",
+      "name": "FavoritesEditor.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "summary": "Permet de configurer trois contrôles favoris, de les sauvegarder, de les afficher rapidement et d’exécuter leurs toggles ou actions depuis Galaxy.",
+      "tags": [
+        "composant-vue",
+        "favoris",
+        "controle-vehicule",
+        "api-client"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "type": "file",
+      "name": "FeatureHelp.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "summary": "Crée une boîte de dialogue d’aide accessible et injecte ses styles pour afficher les explications détaillées des fonctions Galaxy.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "aide",
+        "dialogue"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "type": "file",
+      "name": "GalaxySelect.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "summary": "Présente un select Galaxy accessible autour d’un élément natif, avec dialog positionné, navigation clavier, typeahead et synchronisation v-model.",
+      "tags": [
+        "composant-vue",
+        "accessibilite",
+        "controle-formulaire",
+        "navigation-clavier"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "type": "file",
+      "name": "GalaxyToggleCard.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "summary": "Implémente la carte de réglage générique de Galaxy pour switches, sliders, couleurs, listes, actions et favoris, avec sauvegarde API et rollback en cas d’échec.",
+      "tags": [
+        "composant-vue",
+        "parametres-ui",
+        "formulaire",
+        "api-client"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Composant Vue Options API qui adapte son rendu au ui_type décrit par le catalogue de paramètres."
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "type": "file",
+      "name": "LateralTuningPanel.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "summary": "Pilote l’espace de tuning latéral : sélection de routes et segments, analyse FLM, comparaison de profils, essais, feedback et gestion des réglages sauvegardés.",
+      "tags": [
+        "composant-vue",
+        "tuning-lateral",
+        "analyse-flm",
+        "gestion-profils"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "type": "file",
+      "name": "LongitudinalMode.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "summary": "Affiche et modifie le mode de contrôle longitudinal, interroge périodiquement son état verrouillé et rend les paramètres conditionnels associés au mode actif.",
+      "tags": [
+        "composant-vue",
+        "controle-longitudinal",
+        "polling",
+        "parametres-ui"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "type": "file",
+      "name": "ParamSections.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "summary": "Charge un catalogue de paramètres, filtre ses sections et rend chaque arborescence de réglages dans une vue Galaxy réutilisable.",
+      "tags": [
+        "composant-vue",
+        "catalogue-parametres",
+        "filtrage",
+        "interface-utilisateur"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "type": "file",
+      "name": "PersonalityProfiles.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "summary": "Gère l’édition complète des profils de conduite, dont les presets, courbes de vitesse, paramètres avancés, migration et verrouillage selon l’état routier.",
+      "tags": [
+        "composant-vue",
+        "profil-conduite",
+        "edition-courbe",
+        "api-client"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "file",
+      "name": "SettingTree.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "summary": "Rend récursivement les paramètres visibles avec leur profondeur, leurs groupes et l’ouverture contrôlée de leurs enfants.",
+      "tags": [
+        "composant-vue",
+        "arborescence",
+        "parametres-ui",
+        "rendu-recursif"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "file",
+      "name": "composables.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "summary": "Fournit des composables Vue pour le routage par onglets, le polling résilient et la lecture de logs par EventSource avec repli sur snapshots.",
+      "tags": [
+        "vue",
+        "composable",
+        "polling",
+        "streaming"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "file",
+      "name": "params.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "summary": "Regroupe les règles de visibilité, conversion d’unités, bornage numérique, formatage et construction hiérarchique utilisées par l’interface de paramètres Galaxy.",
+      "tags": [
+        "parametres-ui",
+        "validation",
+        "formatage",
+        "utilitaire"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "file",
+      "name": "store.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "summary": "Maintient l’état réactif global de Galaxy et implémente le thème, le tiroir de navigation et un routeur hash avec historique local.",
+      "tags": [
+        "etat-reactif",
+        "routage",
+        "theme",
+        "interface-utilisateur"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "type": "file",
+      "name": "Settings.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "summary": "Orchestre la page principale des réglages Galaxy : chargement du catalogue et des valeurs, recherche, navigation par section, mode développeur et sous-vues spécialisées.",
+      "tags": [
+        "vue-galaxy",
+        "parametres-ui",
+        "recherche",
+        "navigation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "type": "file",
+      "name": "SystemTools.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "summary": "Réunit les outils système Galaxy pour sauvegarder les réglages, gérer branches et versions, appliquer des mises à jour, réinitialiser l’appareil et administrer Tailscale.",
+      "tags": [
+        "vue-galaxy",
+        "mise-a-jour",
+        "maintenance-systeme",
+        "tailscale"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "type": "file",
+      "name": "Tuning.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "summary": "Compose la vue Tuning en onglets pour le réglage latéral, les graphiques et le Testing Ground, synchronisés avec le routeur Galaxy.",
+      "tags": [
+        "vue-galaxy",
+        "tuning",
+        "navigation-onglets",
+        "composition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "type": "file",
+      "name": "Vehicle.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "summary": "Présente les outils liés au véhicule et vérifie leur compatibilité via l’API avant d’ouvrir la gestion des portes ou des clés Toyota.",
+      "tags": [
+        "vue-galaxy",
+        "controle-vehicule",
+        "verification-capacite",
+        "navigation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "type": "file",
+      "name": "flm_workspace.py",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "summary": "Gère l’espace de travail FLM : analyse de routes, diagnostic du comportement latéral, recommandations, profils d’essai, feedback et tunes persistants.",
+      "tags": [
+        "flm",
+        "tuning",
+        "analyse-route",
+        "profil",
+        "workspace"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "type": "file",
+      "name": "longitudinal_mode.py",
+      "filePath": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "summary": "Expose un adaptateur transactionnel pour lire et modifier les modes longitudinaux Galaxy sous verrou, avec détection des conflits et snapshots cohérents.",
+      "tags": [
+        "galaxy",
+        "controle-longitudinal",
+        "api",
+        "verrouillage",
+        "tested"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:starpilot/system/the_galaxy/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "starpilot/system/the_galaxy/README.md",
+      "summary": "Présente l’architecture de The Galaxy, son API Flask, son frontend Arrow.js sans build et les procédures d’installation, d’exécution et de contribution.",
+      "tags": [
+        "documentation",
+        "galaxy",
+        "api",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "type": "file",
+      "name": "test_device_settings_frontend.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "summary": "Vérifie statiquement que l’interface Device Settings affiche les réglages avancés, respecte le contexte véhicule et conserve les contrôles numériques attendus.",
+      "tags": [
+        "test",
+        "galaxy",
+        "frontend",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "type": "file",
+      "name": "test_device_settings_layout.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "summary": "Valide le layout JSON des réglages Galaxy contre le registre Params, les valeurs par défaut, les groupes et les contraintes de visibilité.",
+      "tags": [
+        "test",
+        "galaxy",
+        "schema",
+        "parametres",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "type": "file",
+      "name": "test_following_preset_defaults_api.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "summary": "Teste l’API des presets de suivi afin de garantir leur concordance avec les courbes de référence et leur conversion en valeurs personnalisées.",
+      "tags": [
+        "test",
+        "api",
+        "personnalites",
+        "distance-suivi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "type": "file",
+      "name": "test_longitudinal_mode_api.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "summary": "Valide l’API Galaxy du mode longitudinal, ses réponses HTTP, ses garde-fous véhicule et sa compatibilité avec les paramètres historiques.",
+      "tags": [
+        "test",
+        "api",
+        "galaxy",
+        "mode-longitudinal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "type": "file",
+      "name": "test_longitudinal_mode.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "summary": "Teste l’adaptateur de mode longitudinal, notamment la priorité des lectures, les transitions autorisées et les échecs de lecture ou d’écriture.",
+      "tags": [
+        "test",
+        "mode-longitudinal",
+        "garde-fous",
+        "régression"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "type": "file",
+      "name": "test_mode_transition_guards.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "summary": "Couvre les régressions liées aux garde-fous réévalués pendant une transition et aux écritures multiclés sans état intermédiaire dangereux.",
+      "tags": [
+        "test",
+        "garde-fous",
+        "atomicité",
+        "régression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "type": "file",
+      "name": "test_personality_profiles_api.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "summary": "Couvre l’API Galaxy des profils de personnalité, notamment les migrations, validations, presets, courbes personnalisées et écritures Params.",
+      "tags": [
+        "test",
+        "api",
+        "personnalites",
+        "migration",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py",
+      "type": "file",
+      "name": "test_ui_vue_frontend.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py",
+      "summary": "Vérifie la structure et les contrats du frontend mobile Galaxy, dont le shell, le routeur, le store, les vues, les assets hors ligne et plusieurs flux Node.",
+      "tags": [
+        "test",
+        "galaxy",
+        "frontend",
+        "routeur",
+        "hors-ligne"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/the_galaxy.py",
+      "type": "file",
+      "name": "the_galaxy.py",
+      "filePath": "starpilot/system/the_galaxy/the_galaxy.py",
+      "summary": "Implémente le serveur Flask principal de The Galaxy et ses endpoints pour les Params, réglages, modèles, logs, cartes, outils système et opérations appareil.",
+      "tags": [
+        "galaxy",
+        "api",
+        "flask",
+        "parametres",
+        "service"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/utilities.py",
+      "type": "file",
+      "name": "utilities.py",
+      "filePath": "starpilot/system/the_galaxy/utilities.py",
+      "summary": "Regroupe les services opérationnels de Galaxy pour les processus, fichiers, réseau, authentification, uploads, diagnostics et commandes de l’appareil.",
+      "tags": [
+        "galaxy",
+        "utility",
+        "systeme",
+        "securite",
+        "reseau"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:starpilot/system/wheel_controls/wheel_controlsd.py",
+      "type": "file",
+      "name": "wheel_controlsd.py",
+      "filePath": "starpilot/system/wheel_controls/wheel_controlsd.py",
+      "summary": "Découvre les périphériques d’entrée, apprend et teste leurs événements, applique les mappings et publie l’état du daemon Wheel Controls.",
+      "tags": [
+        "controleur",
+        "daemon",
+        "mapping",
+        "evenement",
+        "entree"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:system/camerad/main.cc",
+      "type": "file",
+      "name": "main.cc",
+      "filePath": "system/camerad/main.cc",
+      "summary": "Démarre camerad avec l’affinité CPU prévue, tolère certains échecs hors production et désactive la caméra grand-angle selon le Param dédié.",
+      "tags": [
+        "camera",
+        "point-entree",
+        "affinite-cpu",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:system/manager/launch_param_migrations.py",
+      "type": "file",
+      "name": "launch_param_migrations.py",
+      "filePath": "system/manager/launch_param_migrations.py",
+      "summary": "Applique des migrations idempotentes aux Params StarPilot au démarrage, notamment pour les réglages UI, vision, direction et valeurs héritées.",
+      "tags": [
+        "migration",
+        "parametres",
+        "demarrage",
+        "compatibilite"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:system/manager/manager.py",
+      "type": "file",
+      "name": "manager.py",
+      "filePath": "system/manager/manager.py",
+      "summary": "Orchestre le cycle de vie principal d’openpilot et StarPilot : préparation, migrations, lancement, supervision et nettoyage des processus.",
+      "tags": [
+        "manager",
+        "demarrage",
+        "processus",
+        "supervision",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tools/StarPilot/derive_feasible_params.py",
+      "type": "file",
+      "name": "derive_feasible_params.py",
+      "filePath": "tools/StarPilot/derive_feasible_params.py",
+      "summary": "Analyse le registre Params et les références UI afin de produire la liste de réglages que Galaxy peut modifier en toute sécurité.",
+      "tags": [
+        "outil",
+        "parametres",
+        "analyse-statique",
+        "securite"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "importEdges": [
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/__init__.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "target": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/fingerprints.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "target": "file:starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "target": "file:starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "target": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "allEdges": [
+    {
+      "source": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/__init__.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "target": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/fingerprints.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/interfaces.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/carcontroller.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/carstate.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/interface.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:opendbc_repo/opendbc/car/subaru/subarucan.py",
+      "target": "file:opendbc_repo/opendbc/car/subaru/values.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "target": "file:starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "target": "file:starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "target": "file:starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/params.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+      "target": "file:starpilot/system/the_galaxy/assets/mobile/js/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5,
+      "description": "Path-based pairing (deterministic)"
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+      "target": "file:starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "scanResult": {
+    "name": "openpilot",
+    "description": "Fork personnalisé d’openpilot, StarPilot est un système open source d’aide à la conduite. Remarque : ce projet contient plus de 100 fichiers source ; envisagez de limiter l’analyse à un sous-répertoire pour obtenir des résultats plus rapides.",
+    "languages": [
+      "c",
+      "cpp",
+      "javascript",
+      "json",
+      "markdown",
+      "python",
+      "toml"
+    ],
+    "frameworks": [
+      "aiohttp",
+      "hypothesis",
+      "pytest"
+    ],
+    "files": [
+      {
+        "path": "README.md",
+        "language": "markdown",
+        "sizeLines": 99,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "common/params_keys.h",
+        "language": "c",
+        "sizeLines": 796,
+        "fileCategory": "code"
+      },
+      {
+        "path": "opendbc_repo/opendbc/car/interfaces.py",
+        "language": "python",
+        "sizeLines": 586,
+        "fileCategory": "code"
+      },
+      {
+        "path": "opendbc_repo/opendbc/car/subaru/__init__.py",
+        "language": "python",
+        "sizeLines": 0,
+        "fileCategory": "code"
+      },
+      {
+        "path": "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+        "language": "python",
+        "sizeLines": 486,
+        "fileCategory": "code"
+      },
+      {
+        "path": "opendbc_repo/opendbc/car/subaru/carstate.py",
+        "language": "python",
+        "sizeLines": 187,
+        "fileCategory": "code"
+      },
+      {
+        "path": "opendbc_repo/opendbc/car/subaru/fingerprints.py",
+        "language": "python",
+        "sizeLines": 622,
+        "fileCategory": "code"
+      },
+      {
+        "path": "opendbc_repo/opendbc/car/subaru/interface.py",
+        "language": "python",
+        "sizeLines": 125,
+        "fileCategory": "code"
+      },
+      {
+        "path": "opendbc_repo/opendbc/car/subaru/subarucan.py",
+        "language": "python",
+        "sizeLines": 461,
+        "fileCategory": "code"
+      },
+      {
+        "path": "opendbc_repo/opendbc/car/subaru/values.py",
+        "language": "python",
+        "sizeLines": 341,
+        "fileCategory": "code"
+      },
+      {
+        "path": "pyproject.toml",
+        "language": "toml",
+        "sizeLines": 288,
+        "fileCategory": "config"
+      },
+      {
+        "path": "selfdrive/car/card.py",
+        "language": "python",
+        "sizeLines": 620,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/car/redneck_cruise.py",
+        "language": "python",
+        "sizeLines": 268,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/controls/controlsd.py",
+        "language": "python",
+        "sizeLines": 951,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/controls/lib/lane_centering.py",
+        "language": "python",
+        "sizeLines": 196,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/controls/lib/longcontrol.py",
+        "language": "python",
+        "sizeLines": 445,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/modeld/camera_offset.py",
+        "language": "python",
+        "sizeLines": 51,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/modeld/modeld.py",
+        "language": "python",
+        "sizeLines": 1532,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/selfdrived/events.py",
+        "language": "python",
+        "sizeLines": 1536,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/selfdrived/selfdrived.py",
+        "language": "python",
+        "sizeLines": 1033,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/developer.py",
+        "language": "python",
+        "sizeLines": 158,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/__init__.py",
+        "language": "python",
+        "sizeLines": 0,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/aethergrid.py",
+        "language": "python",
+        "sizeLines": 5602,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/appearance.py",
+        "language": "python",
+        "sizeLines": 763,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+        "language": "python",
+        "sizeLines": 31,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+        "language": "python",
+        "sizeLines": 1300,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+        "language": "python",
+        "sizeLines": 407,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+        "language": "python",
+        "sizeLines": 1250,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/main_panel.py",
+        "language": "python",
+        "sizeLines": 319,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/maps.py",
+        "language": "python",
+        "sizeLines": 924,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/navigation.py",
+        "language": "python",
+        "sizeLines": 879,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/panel.py",
+        "language": "python",
+        "sizeLines": 369,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/scribble.py",
+        "language": "python",
+        "sizeLines": 468,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+        "language": "python",
+        "sizeLines": 175,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+        "language": "python",
+        "sizeLines": 647,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/sounds.py",
+        "language": "python",
+        "sizeLines": 386,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+        "language": "python",
+        "sizeLines": 1364,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+        "language": "python",
+        "sizeLines": 875,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/lib/mode_banner.py",
+        "language": "python",
+        "sizeLines": 95,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/lib/starpilot_state.py",
+        "language": "python",
+        "sizeLines": 253,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/mici/layouts/settings/developer.py",
+        "language": "python",
+        "sizeLines": 143,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/mici/layouts/settings/settings.py",
+        "language": "python",
+        "sizeLines": 121,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/mici/layouts/settings/visuals.py",
+        "language": "python",
+        "sizeLines": 138,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/mici/onroad/hud_renderer.py",
+        "language": "python",
+        "sizeLines": 730,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/mici/onroad/sidebar_widgets.py",
+        "language": "python",
+        "sizeLines": 382,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/model_renderer.py",
+        "language": "python",
+        "sizeLines": 1033,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/__init__.py",
+        "language": "python",
+        "sizeLines": 0,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/aethergauge.py",
+        "language": "python",
+        "sizeLines": 795,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/compass.py",
+        "language": "python",
+        "sizeLines": 26,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/developer_sidebar.py",
+        "language": "python",
+        "sizeLines": 388,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/favorite_radial_menu.py",
+        "language": "python",
+        "sizeLines": 1209,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+        "language": "python",
+        "sizeLines": 528,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/path.py",
+        "language": "python",
+        "sizeLines": 170,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/pause_indicators.py",
+        "language": "python",
+        "sizeLines": 49,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/pedal_icons.py",
+        "language": "python",
+        "sizeLines": 49,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/personality_button.py",
+        "language": "python",
+        "sizeLines": 67,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+        "language": "python",
+        "sizeLines": 465,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/pulse_glide.py",
+        "language": "python",
+        "sizeLines": 45,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/rainbow_path.py",
+        "language": "python",
+        "sizeLines": 56,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py",
+        "language": "python",
+        "sizeLines": 55,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/slc_speed_limit.py",
+        "language": "python",
+        "sizeLines": 694,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/source_bubble_layout.py",
+        "language": "python",
+        "sizeLines": 112,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/starpilot_border.py",
+        "language": "python",
+        "sizeLines": 287,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py",
+        "language": "python",
+        "sizeLines": 434,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/stopping_point.py",
+        "language": "python",
+        "sizeLines": 75,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/torque_bar.py",
+        "language": "python",
+        "sizeLines": 274,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/weather_icon.py",
+        "language": "python",
+        "sizeLines": 104,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widget_layout_manager.py",
+        "language": "python",
+        "sizeLines": 97,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widget_style.py",
+        "language": "python",
+        "sizeLines": 34,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/__init__.py",
+        "language": "python",
+        "sizeLines": 23,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py",
+        "language": "python",
+        "sizeLines": 40,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/base.py",
+        "language": "python",
+        "sizeLines": 28,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py",
+        "language": "python",
+        "sizeLines": 35,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/model_source.py",
+        "language": "python",
+        "sizeLines": 125,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py",
+        "language": "python",
+        "sizeLines": 27,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/personality_button.py",
+        "language": "python",
+        "sizeLines": 24,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/set_speed.py",
+        "language": "python",
+        "sizeLines": 72,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py",
+        "language": "python",
+        "sizeLines": 67,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py",
+        "language": "python",
+        "sizeLines": 19,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py",
+        "language": "python",
+        "sizeLines": 131,
+        "fileCategory": "code"
+      },
+      {
+        "path": "selfdrive/ui/ui_state.py",
+        "language": "python",
+        "sizeLines": 504,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/accel_profile.py",
+        "language": "python",
+        "sizeLines": 287,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/assets/device_settings_layout.json",
+        "language": "json",
+        "sizeLines": 5057,
+        "fileCategory": "config"
+      },
+      {
+        "path": "starpilot/common/connect_server.py",
+        "language": "python",
+        "sizeLines": 76,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/controller_actions.py",
+        "language": "python",
+        "sizeLines": 81,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/cpu_throttle.py",
+        "language": "python",
+        "sizeLines": 79,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/experimental_state.py",
+        "language": "python",
+        "sizeLines": 190,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/favorite_slots.py",
+        "language": "python",
+        "sizeLines": 570,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/gpu_model_ready_sound.py",
+        "language": "python",
+        "sizeLines": 20,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/lateral_delay.py",
+        "language": "python",
+        "sizeLines": 5,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/lateral_only_experimental.py",
+        "language": "python",
+        "sizeLines": 32,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/longitudinal_mode.py",
+        "language": "python",
+        "sizeLines": 39,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/longitudinal_personality_profiles.py",
+        "language": "python",
+        "sizeLines": 623,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/maps_catalog.py",
+        "language": "python",
+        "sizeLines": 132,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/maps_download_progress.py",
+        "language": "python",
+        "sizeLines": 158,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/maps_selection.py",
+        "language": "python",
+        "sizeLines": 97,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/model_lab.py",
+        "language": "python",
+        "sizeLines": 262,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/model_versions.py",
+        "language": "python",
+        "sizeLines": 41,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/param_profiles.py",
+        "language": "python",
+        "sizeLines": 263,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/safe_mode.py",
+        "language": "python",
+        "sizeLines": 392,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/starpilot_backups.py",
+        "language": "python",
+        "sizeLines": 107,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/starpilot_download_utilities.py",
+        "language": "python",
+        "sizeLines": 172,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/starpilot_functions.py",
+        "language": "python",
+        "sizeLines": 529,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/starpilot_utilities.py",
+        "language": "python",
+        "sizeLines": 433,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/starpilot_variables.py",
+        "language": "python",
+        "sizeLines": 1642,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/testing_grounds.py",
+        "language": "python",
+        "sizeLines": 291,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/theme_asset_names.py",
+        "language": "python",
+        "sizeLines": 54,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/common/vision_bsm.py",
+        "language": "python",
+        "sizeLines": 22,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/conditional_chill_mode.py",
+        "language": "python",
+        "sizeLines": 363,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/conditional_experimental_mode.py",
+        "language": "python",
+        "sizeLines": 611,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/curve_speed_controller.py",
+        "language": "python",
+        "sizeLines": 434,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/neural_network_feedforward.py",
+        "language": "python",
+        "sizeLines": 367,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/speed_limit_controller.py",
+        "language": "python",
+        "sizeLines": 580,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/starpilot_acceleration.py",
+        "language": "python",
+        "sizeLines": 450,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/starpilot_events.py",
+        "language": "python",
+        "sizeLines": 222,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/starpilot_following.py",
+        "language": "python",
+        "sizeLines": 200,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/starpilot_vcruise.py",
+        "language": "python",
+        "sizeLines": 797,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/lib/weather_checker.py",
+        "language": "python",
+        "sizeLines": 222,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/starpilot_card.py",
+        "language": "python",
+        "sizeLines": 476,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/controls/starpilot_planner.py",
+        "language": "python",
+        "sizeLines": 397,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/adj_spot_monitor_vision.py",
+        "language": "python",
+        "sizeLines": 330,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/speed_limit_filler.py",
+        "language": "python",
+        "sizeLines": 465,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/speed_limit_vision.py",
+        "language": "python",
+        "sizeLines": 2846,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/README.md",
+        "language": "markdown",
+        "sizeLines": 121,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/components/settings.js",
+        "language": "javascript",
+        "sizeLines": 66,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+        "language": "javascript",
+        "sizeLines": 257,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+        "language": "javascript",
+        "sizeLines": 2959,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs",
+        "language": "javascript",
+        "sizeLines": 43,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+        "language": "javascript",
+        "sizeLines": 37,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+        "language": "javascript",
+        "sizeLines": 159,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+        "language": "javascript",
+        "sizeLines": 1466,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+        "language": "javascript",
+        "sizeLines": 162,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+        "language": "javascript",
+        "sizeLines": 311,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+        "language": "javascript",
+        "sizeLines": 434,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+        "language": "javascript",
+        "sizeLines": 204,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+        "language": "javascript",
+        "sizeLines": 92,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+        "language": "javascript",
+        "sizeLines": 141,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+        "language": "javascript",
+        "sizeLines": 250,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+        "language": "javascript",
+        "sizeLines": 817,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+        "language": "javascript",
+        "sizeLines": 85,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js",
+        "language": "javascript",
+        "sizeLines": 68,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+        "language": "javascript",
+        "sizeLines": 399,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+        "language": "javascript",
+        "sizeLines": 48,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/composables.js",
+        "language": "javascript",
+        "sizeLines": 100,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+        "language": "javascript",
+        "sizeLines": 324,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/store.js",
+        "language": "javascript",
+        "sizeLines": 128,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js",
+        "language": "javascript",
+        "sizeLines": 211,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js",
+        "language": "javascript",
+        "sizeLines": 815,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js",
+        "language": "javascript",
+        "sizeLines": 39,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js",
+        "language": "javascript",
+        "sizeLines": 72,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/flm_workspace.py",
+        "language": "python",
+        "sizeLines": 3729,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/longitudinal_mode.py",
+        "language": "python",
+        "sizeLines": 112,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+        "language": "python",
+        "sizeLines": 78,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+        "language": "python",
+        "sizeLines": 503,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py",
+        "language": "python",
+        "sizeLines": 48,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py",
+        "language": "python",
+        "sizeLines": 114,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py",
+        "language": "python",
+        "sizeLines": 134,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py",
+        "language": "python",
+        "sizeLines": 33,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py",
+        "language": "python",
+        "sizeLines": 969,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py",
+        "language": "python",
+        "sizeLines": 853,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/the_galaxy.py",
+        "language": "python",
+        "sizeLines": 10681,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/the_galaxy/utilities.py",
+        "language": "python",
+        "sizeLines": 3320,
+        "fileCategory": "code"
+      },
+      {
+        "path": "starpilot/system/wheel_controls/wheel_controlsd.py",
+        "language": "python",
+        "sizeLines": 688,
+        "fileCategory": "code"
+      },
+      {
+        "path": "system/camerad/main.cc",
+        "language": "cpp",
+        "sizeLines": 22,
+        "fileCategory": "code"
+      },
+      {
+        "path": "system/manager/launch_param_migrations.py",
+        "language": "python",
+        "sizeLines": 425,
+        "fileCategory": "code"
+      },
+      {
+        "path": "system/manager/manager.py",
+        "language": "python",
+        "sizeLines": 1299,
+        "fileCategory": "code"
+      },
+      {
+        "path": "tools/StarPilot/derive_feasible_params.py",
+        "language": "python",
+        "sizeLines": 128,
+        "fileCategory": "code"
+      }
+    ],
+    "totalFiles": 167,
+    "filteredByIgnore": 5633,
+    "estimatedComplexity": "large",
+    "importMap": {
+      "README.md": [],
+      "common/params_keys.h": [],
+      "opendbc_repo/opendbc/car/interfaces.py": [
+        "opendbc_repo/opendbc/car/subaru/values.py"
+      ],
+      "opendbc_repo/opendbc/car/subaru/__init__.py": [],
+      "opendbc_repo/opendbc/car/subaru/carcontroller.py": [
+        "opendbc_repo/opendbc/car/interfaces.py",
+        "opendbc_repo/opendbc/car/subaru/__init__.py",
+        "opendbc_repo/opendbc/car/subaru/subarucan.py",
+        "opendbc_repo/opendbc/car/subaru/values.py"
+      ],
+      "opendbc_repo/opendbc/car/subaru/carstate.py": [
+        "opendbc_repo/opendbc/car/interfaces.py",
+        "opendbc_repo/opendbc/car/subaru/values.py"
+      ],
+      "opendbc_repo/opendbc/car/subaru/fingerprints.py": [
+        "opendbc_repo/opendbc/car/subaru/values.py"
+      ],
+      "opendbc_repo/opendbc/car/subaru/interface.py": [
+        "opendbc_repo/opendbc/car/interfaces.py",
+        "opendbc_repo/opendbc/car/subaru/carcontroller.py",
+        "opendbc_repo/opendbc/car/subaru/carstate.py",
+        "opendbc_repo/opendbc/car/subaru/values.py"
+      ],
+      "opendbc_repo/opendbc/car/subaru/subarucan.py": [
+        "opendbc_repo/opendbc/car/subaru/values.py"
+      ],
+      "opendbc_repo/opendbc/car/subaru/values.py": [],
+      "pyproject.toml": [],
+      "selfdrive/car/card.py": [],
+      "selfdrive/car/redneck_cruise.py": [],
+      "selfdrive/controls/controlsd.py": [],
+      "selfdrive/controls/lib/lane_centering.py": [],
+      "selfdrive/controls/lib/longcontrol.py": [],
+      "selfdrive/modeld/camera_offset.py": [],
+      "selfdrive/modeld/modeld.py": [],
+      "selfdrive/selfdrived/events.py": [],
+      "selfdrive/selfdrived/selfdrived.py": [],
+      "selfdrive/ui/layouts/settings/developer.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/__init__.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/aethergrid.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/appearance.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/asset_loader.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/driving_model.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/lateral.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/longitudinal.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/main_panel.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/maps.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/navigation.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/panel.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/scribble.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/sounds.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/system_settings.py": [],
+      "selfdrive/ui/layouts/settings/starpilot/vehicle.py": [],
+      "selfdrive/ui/lib/mode_banner.py": [],
+      "selfdrive/ui/lib/starpilot_state.py": [],
+      "selfdrive/ui/mici/layouts/settings/developer.py": [],
+      "selfdrive/ui/mici/layouts/settings/settings.py": [],
+      "selfdrive/ui/mici/layouts/settings/visuals.py": [],
+      "selfdrive/ui/mici/onroad/hud_renderer.py": [],
+      "selfdrive/ui/mici/onroad/sidebar_widgets.py": [],
+      "selfdrive/ui/onroad/model_renderer.py": [],
+      "selfdrive/ui/onroad/starpilot/__init__.py": [],
+      "selfdrive/ui/onroad/starpilot/aethergauge.py": [],
+      "selfdrive/ui/onroad/starpilot/compass.py": [],
+      "selfdrive/ui/onroad/starpilot/developer_sidebar.py": [],
+      "selfdrive/ui/onroad/starpilot/favorite_radial_menu.py": [],
+      "selfdrive/ui/onroad/starpilot/navigation_card.py": [],
+      "selfdrive/ui/onroad/starpilot/path.py": [],
+      "selfdrive/ui/onroad/starpilot/pause_indicators.py": [],
+      "selfdrive/ui/onroad/starpilot/pedal_icons.py": [],
+      "selfdrive/ui/onroad/starpilot/personality_button.py": [],
+      "selfdrive/ui/onroad/starpilot/pip_sidecam.py": [],
+      "selfdrive/ui/onroad/starpilot/pulse_glide.py": [],
+      "selfdrive/ui/onroad/starpilot/rainbow_path.py": [],
+      "selfdrive/ui/onroad/starpilot/rivian_lateral_mode.py": [],
+      "selfdrive/ui/onroad/starpilot/slc_speed_limit.py": [],
+      "selfdrive/ui/onroad/starpilot/source_bubble_layout.py": [],
+      "selfdrive/ui/onroad/starpilot/starpilot_border.py": [],
+      "selfdrive/ui/onroad/starpilot/starpilot_onroad_view.py": [],
+      "selfdrive/ui/onroad/starpilot/stopping_point.py": [],
+      "selfdrive/ui/onroad/starpilot/torque_bar.py": [],
+      "selfdrive/ui/onroad/starpilot/weather_icon.py": [],
+      "selfdrive/ui/onroad/starpilot/widget_layout_manager.py": [],
+      "selfdrive/ui/onroad/starpilot/widget_style.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/__init__.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/aethergauge.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/base.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/driver_monitor.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/model_source.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/pedal_icons.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/personality_button.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/set_speed.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/speed_limit.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/steering_wheel.py": [],
+      "selfdrive/ui/onroad/starpilot/widgets/stopped_timer.py": [],
+      "selfdrive/ui/ui_state.py": [],
+      "starpilot/common/accel_profile.py": [],
+      "starpilot/common/assets/device_settings_layout.json": [],
+      "starpilot/common/connect_server.py": [],
+      "starpilot/common/controller_actions.py": [],
+      "starpilot/common/cpu_throttle.py": [],
+      "starpilot/common/experimental_state.py": [],
+      "starpilot/common/favorite_slots.py": [],
+      "starpilot/common/gpu_model_ready_sound.py": [],
+      "starpilot/common/lateral_delay.py": [],
+      "starpilot/common/lateral_only_experimental.py": [],
+      "starpilot/common/longitudinal_mode.py": [],
+      "starpilot/common/longitudinal_personality_profiles.py": [],
+      "starpilot/common/maps_catalog.py": [],
+      "starpilot/common/maps_download_progress.py": [],
+      "starpilot/common/maps_selection.py": [],
+      "starpilot/common/model_lab.py": [],
+      "starpilot/common/model_versions.py": [],
+      "starpilot/common/param_profiles.py": [],
+      "starpilot/common/safe_mode.py": [],
+      "starpilot/common/starpilot_backups.py": [],
+      "starpilot/common/starpilot_download_utilities.py": [],
+      "starpilot/common/starpilot_functions.py": [],
+      "starpilot/common/starpilot_utilities.py": [],
+      "starpilot/common/starpilot_variables.py": [],
+      "starpilot/common/testing_grounds.py": [],
+      "starpilot/common/theme_asset_names.py": [],
+      "starpilot/common/vision_bsm.py": [],
+      "starpilot/controls/lib/conditional_chill_mode.py": [],
+      "starpilot/controls/lib/conditional_experimental_mode.py": [],
+      "starpilot/controls/lib/curve_speed_controller.py": [],
+      "starpilot/controls/lib/neural_network_feedforward.py": [],
+      "starpilot/controls/lib/speed_limit_controller.py": [],
+      "starpilot/controls/lib/starpilot_acceleration.py": [],
+      "starpilot/controls/lib/starpilot_events.py": [],
+      "starpilot/controls/lib/starpilot_following.py": [],
+      "starpilot/controls/lib/starpilot_vcruise.py": [],
+      "starpilot/controls/lib/weather_checker.py": [],
+      "starpilot/controls/starpilot_card.py": [],
+      "starpilot/controls/starpilot_planner.py": [],
+      "starpilot/system/adj_spot_monitor_vision.py": [],
+      "starpilot/system/speed_limit_filler.py": [],
+      "starpilot/system/speed_limit_vision.py": [],
+      "starpilot/system/the_galaxy/README.md": [],
+      "starpilot/system/the_galaxy/assets/components/settings.js": [],
+      "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js": [
+        "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs"
+      ],
+      "starpilot/system/the_galaxy/assets/components/tools/device_settings.js": [],
+      "starpilot/system/the_galaxy/assets/components/tools/longitudinal_mode.mjs": [],
+      "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs": [],
+      "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js": [],
+      "starpilot/system/the_galaxy/assets/components/tools/tuning.js": [],
+      "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js": [],
+      "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js": [],
+      "starpilot/system/the_galaxy/assets/mobile/js/api.js": [],
+      "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js": [
+        "starpilot/system/the_galaxy/assets/components/tools/controller_action_picker.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js": [],
+      "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js": [],
+      "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/components/FavoritesEditor.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/composables.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/components/ParamSections.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js": [
+        "starpilot/system/the_galaxy/assets/components/tools/personality_profiles.mjs",
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/params.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/composables.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/store.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/params.js": [],
+      "starpilot/system/the_galaxy/assets/mobile/js/store.js": [],
+      "starpilot/system/the_galaxy/assets/mobile/js/views/Settings.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxyToggleCard.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/components/LongitudinalMode.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/components/PersonalityProfiles.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/components/SettingTree.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/params.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/store.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/views/SystemTools.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/components/GalaxySelect.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/composables.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/views/Tuning.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/components/LateralTuningPanel.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/composables.js"
+      ],
+      "starpilot/system/the_galaxy/assets/mobile/js/views/Vehicle.js": [
+        "starpilot/system/the_galaxy/assets/mobile/js/api.js",
+        "starpilot/system/the_galaxy/assets/mobile/js/store.js"
+      ],
+      "starpilot/system/the_galaxy/flm_workspace.py": [],
+      "starpilot/system/the_galaxy/longitudinal_mode.py": [],
+      "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py": [],
+      "starpilot/system/the_galaxy/tests/test_device_settings_layout.py": [],
+      "starpilot/system/the_galaxy/tests/test_following_preset_defaults_api.py": [
+        "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py"
+      ],
+      "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py": [],
+      "starpilot/system/the_galaxy/tests/test_longitudinal_mode_api.py": [
+        "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py"
+      ],
+      "starpilot/system/the_galaxy/tests/test_mode_transition_guards.py": [
+        "starpilot/system/the_galaxy/tests/test_longitudinal_mode.py"
+      ],
+      "starpilot/system/the_galaxy/tests/test_personality_profiles_api.py": [],
+      "starpilot/system/the_galaxy/tests/test_ui_vue_frontend.py": [],
+      "starpilot/system/the_galaxy/the_galaxy.py": [],
+      "starpilot/system/the_galaxy/utilities.py": [],
+      "starpilot/system/wheel_controls/wheel_controlsd.py": [],
+      "system/camerad/main.cc": [],
+      "system/manager/launch_param_migrations.py": [],
+      "system/manager/manager.py": [],
+      "tools/StarPilot/derive_feasible_params.py": []
+    }
+  },
+  "projectContext": {
+    "name": "StarPilot",
+    "description": "Fork openpilot dont le sous-ensemble analysé couvre Galaxy, les registres et consommateurs de paramètres, Subaru/Ascent et l’UI embarquée.",
+    "frameworks": [
+      "aiohttp",
+      "hypothesis",
+      "pytest"
+    ],
+    "structure": [
+      "README.md",
+      "pyproject.toml",
+      "common/params_keys.h",
+      "opendbc_repo/opendbc/car/subaru",
+      "selfdrive/car",
+      "selfdrive/controls",
+      "selfdrive/modeld",
+      "selfdrive/selfdrived",
+      "selfdrive/ui",
+      "starpilot/common",
+      "starpilot/controls",
+      "starpilot/system/the_galaxy",
+      "starpilot/system/wheel_controls",
+      "system/camerad",
+      "system/manager",
+      "tools/StarPilot"
+    ]
+  },
+  "Language Context": {
+    "cpp": "# C++ Language Prompt Snippet\r\n\r\n## Key Concepts\r\n\r\n- **Templates**: Function, class, and variadic templates for generic compile-time polymorphism\r\n- **RAII**: Resource Acquisition Is Initialization — tie resource lifetime to object scope\r\n- **Smart Pointers**: `unique_ptr` (exclusive), `shared_ptr` (reference-counted), `weak_ptr` (non-owning)\r\n- **Move Semantics**: Rvalue references (`&&`) and `std::move` for efficient resource transfer\r\n- **Operator Overloading**: Define custom behavior for operators on user-defined types\r\n- **Virtual Functions and Vtable**: Runtime polymorphism through virtual method dispatch tables\r\n- **Namespaces**: Organize symbols and prevent name collisions across translation units\r\n- **Constexpr**: Compile-time evaluation of functions and variables for zero-runtime-cost computation\r\n- **Lambda Expressions**: Anonymous functions with capture lists for closures\r\n- **STL Containers and Algorithms**: Standard containers (vector, map, set) and generic algorithms\r\n- **Concepts (C++20)**: Named constraints on template parameters replacing SFINAE patterns\r\n\r\n## Import Patterns\r\n\r\n- `#include <system_header>` — include standard library or system headers\r\n- `#include \"local_header.h\"` — include project-local header files\r\n- `using namespace std` — bring all names from std into scope (avoid in headers)\r\n- `using std::vector` — selectively bring specific names into scope\r\n\r\n## File Patterns\r\n\r\n- `.h` / `.hpp` — header files containing declarations, templates, and inline definitions\r\n- `.cpp` / `.cc` — implementation files with function definitions and static data\r\n- `CMakeLists.txt` — CMake build system configuration\r\n- `Makefile` — Make-based build rules and targets\r\n- `main.cpp` — program entry point containing `int main()`\r\n\r\n## Common Frameworks\r\n\r\n- **Qt** — Cross-platform application framework with signal/slot mechanism\r\n- **Boost** — Extensive collection of peer-reviewed portable libraries\r\n- **Catch2** — Header-only testing framework with BDD-style syntax\r\n- **Google Test** — Testing framework with fixtures, assertions, and mocking\r\n- **gRPC** — High-performance RPC framework for service communication\r\n\r\n## Example Language Notes\r\n\r\n> Uses `std::unique_ptr<T>` for RAII-based ownership, ensuring deterministic cleanup\r\n> when scope exits. The unique pointer cannot be copied, only moved, making ownership\r\n> transfer explicit and preventing accidental double-free errors.\r\n>\r\n> Header/implementation separation (`.h`/`.cpp`) controls compilation boundaries —\r\n> changes to a `.cpp` file only recompile that translation unit, not all includers.\r\n",
+    "javascript": "# JavaScript Language Prompt Snippet\r\n\r\n## Key Concepts\r\n\r\n- **Closures**: Functions that capture variables from their enclosing lexical scope\r\n- **Prototypes**: Prototype chain-based inheritance underlying all JavaScript objects\r\n- **Promises**: Asynchronous value containers enabling `.then()` chaining and `async/await`\r\n- **Event Loop**: Single-threaded concurrency model with microtask and macrotask queues\r\n- **Destructuring**: Extract values from objects and arrays into distinct variables\r\n- **Spread/Rest Operators**: `...` for expanding iterables or collecting remaining arguments\r\n- **Proxies**: Meta-programming construct to intercept and customize object operations\r\n- **Generators**: Functions using `function*` and `yield` for lazy iteration\r\n- **Symbol**: Unique, immutable primitive used for non-string property keys\r\n- **WeakMap/WeakSet**: Collections with weakly-held keys allowing garbage collection\r\n- **Modules (ESM vs CJS)**: ES Modules use `import/export`; CommonJS uses `require/module.exports`\r\n\r\n## Import Patterns\r\n\r\n- `import { X } from 'module'` — ESM named import\r\n- `const X = require('module')` — CommonJS require\r\n- `import('module')` — dynamic import returning a Promise (code splitting)\r\n- `export default X` / `export { X }` — ESM export forms\r\n\r\n## File Patterns\r\n\r\n- `index.js` — barrel file or directory entry point\r\n- `.mjs` — explicitly ES Module files\r\n- `.cjs` — explicitly CommonJS files\r\n- `package.json` `\"type\"` field — sets default module system (`\"module\"` or `\"commonjs\"`)\r\n\r\n## Common Frameworks\r\n\r\n- **React** — Declarative UI with virtual DOM and component model\r\n- **Vue** — Progressive framework with reactivity system and single-file components\r\n- **Express** — Minimal and flexible Node.js web application framework\r\n- **Next.js** — React framework for production with hybrid rendering\r\n- **Svelte** — Compile-time framework that shifts work from runtime to build step\r\n\r\n## Example Language Notes\r\n\r\n> Closure captures outer `config` variable, providing encapsulated state without class\r\n> overhead. The returned object's methods share access to the same `config` reference,\r\n> forming a module pattern that was standard before ES Modules.\r\n>\r\n> When encountering `.mjs` vs `.cjs` extensions, the module system is determined by\r\n> extension regardless of the `package.json` type field — useful in mixed codebases.\r\n",
+    "json": "# JSON Language Prompt Snippet\r\n\r\n## Key Concepts\r\n\r\n- **Strict Syntax**: No trailing commas, no comments (unlike JSONC or JSON5), double-quoted strings only\r\n- **Data Types**: Objects, arrays, strings, numbers, booleans, and null — no undefined or date types\r\n- **Nested Structure**: Arbitrary nesting depth for hierarchical configuration or data\r\n- **Schema Validation**: JSON Schema (`$schema` keyword) for validating structure and types\r\n- **JSONC**: JSON with Comments variant used by VS Code, tsconfig.json, and other tooling\r\n- **JSON5**: Extended JSON allowing comments, trailing commas, unquoted keys, and more\r\n- **JSON Lines** (`.jsonl`): One JSON object per line for streaming data processing\r\n\r\n## Notable File Patterns\r\n\r\n- `package.json` — Node.js project manifest with dependencies, scripts, and metadata\r\n- `tsconfig.json` — TypeScript compiler configuration (actually JSONC)\r\n- `.eslintrc.json` — ESLint linting rules and configuration\r\n- `*.schema.json` — JSON Schema definitions for validation\r\n- `composer.json` — PHP Composer project manifest\r\n- `appsettings.json` — .NET application configuration\r\n- `manifest.json` — Browser extension or PWA manifest\r\n\r\n## Edge Patterns\r\n\r\n- `package.json` `configures` the build toolchain and defines project dependencies\r\n- `tsconfig.json` `configures` TypeScript compilation for all `.ts` files\r\n- JSON Schema files `defines_schema` for API request/response validation\r\n- Config JSON files `configures` the runtime behavior of the application\r\n\r\n## Summary Style\r\n\r\n> \"Node.js project manifest defining N dependencies, build scripts, and project metadata.\"\r\n> \"TypeScript compiler configuration enabling strict mode with path aliases for monorepo packages.\"\r\n> \"JSON Schema defining the request/response structure for the user API endpoint.\"\r\n",
+    "markdown": "# Markdown Language Prompt Snippet\r\n\r\n## Key Concepts\r\n\r\n- **Heading Hierarchy**: `#` through `######` for document structure, with h1 as the title\r\n- **Front Matter**: YAML metadata between `---` delimiters at the top of the file\r\n- **Fenced Code Blocks**: Triple backticks with optional language identifier for syntax highlighting\r\n- **Reference-Style Links**: `[text][ref]` with `[ref]: url` definitions, useful for repeated URLs\r\n- **Tables**: Pipe-delimited columns with alignment markers (`:---`, `:---:`, `---:`)\r\n- **Admonitions**: Blockquote-based callouts (`> **Note:**`, `> **Warning:**`) for emphasis\r\n- **Task Lists**: `- [ ]` and `- [x]` for checklists in issue trackers and READMEs\r\n- **HTML Embedding**: Raw HTML allowed inline for features Markdown does not support natively\r\n\r\n## Notable File Patterns\r\n\r\n- `README.md` — Project overview and entry point for new contributors (high-value)\r\n- `CONTRIBUTING.md` — Contribution guidelines, code style, PR process\r\n- `CHANGELOG.md` — Version history following Keep a Changelog or similar format\r\n- `docs/**/*.md` — Documentation directory with guides, API references, tutorials\r\n- `*.md` in source directories — Co-located documentation for modules or packages\r\n- `ADR-*.md` or `adr/*.md` — Architecture Decision Records\r\n\r\n## Edge Patterns\r\n\r\n- Markdown files `documents` the code components they describe or reference\r\n- Links to other `.md` files create `related` edges between documentation nodes\r\n- Code block references mentioning file paths may imply `documents` edges to those files\r\n- README files in subdirectories typically `documents` the module at that path\r\n\r\n## Summary Style\r\n\r\n> \"Project overview documentation with N sections covering installation, usage, and API reference.\"\r\n> \"Architecture Decision Record documenting the choice of [technology] for [purpose].\"\r\n> \"Contributing guide with code style rules, testing requirements, and pull request process.\"\r\n",
+    "python": "# Python Language Prompt Snippet\r\n\r\n## Key Concepts\r\n\r\n- **Decorators**: Functions that wrap other functions or classes using `@decorator` syntax\r\n- **List/Dict Comprehensions**: Concise syntax for creating collections from iterables\r\n- **Generators and Yield**: Lazy iterators using `yield` for memory-efficient data processing\r\n- **Context Managers**: `with` statement for resource management via `__enter__`/`__exit__`\r\n- **Type Hints and Typing Module**: Optional static type annotations for tooling and documentation\r\n- **Dunder Methods**: Special methods like `__init__`, `__repr__`, `__eq__` defining object behavior\r\n- **Metaclasses**: Classes that define how other classes are created (type as default metaclass)\r\n- **Dataclasses**: `@dataclass` decorator auto-generating boilerplate from field annotations\r\n- **Protocols**: Structural subtyping via `typing.Protocol` for duck-type-safe interfaces\r\n- **Descriptors**: Objects defining `__get__`, `__set__`, `__delete__` to customize attribute access\r\n- **Async/Await with Asyncio**: Cooperative concurrency using coroutines and an event loop\r\n\r\n## Import Patterns\r\n\r\n- `from module import name` — import specific name from module\r\n- `import module` — import entire module, access via `module.name`\r\n- `from package.module import name` — absolute import from nested package\r\n- `from . import relative` — relative import within a package\r\n\r\n## File Patterns\r\n\r\n- `__init__.py` — package initializer (barrel equivalent), can re-export public API\r\n- `__main__.py` — package entry point when run with `python -m package`\r\n- `conftest.py` — pytest shared fixtures and hooks (auto-discovered)\r\n- `setup.py` / `pyproject.toml` — project configuration and build metadata\r\n- `requirements.txt` — pinned dependency list\r\n\r\n## Common Frameworks\r\n\r\n- **Django** — Full-stack web framework with ORM, admin, and batteries included\r\n- **FastAPI** — Modern async API framework with automatic OpenAPI docs\r\n- **Flask** — Lightweight WSGI micro-framework for web applications\r\n- **SQLAlchemy** — SQL toolkit and ORM with unit-of-work pattern\r\n- **Celery** — Distributed task queue for background job processing\r\n- **Pydantic** — Data validation and settings management using type annotations\r\n\r\n## Example Language Notes\r\n\r\n> Uses `@dataclass` decorator to auto-generate `__init__`, `__repr__`, and `__eq__` from\r\n> field annotations. This eliminates boilerplate while keeping the class definition\r\n> readable and the generated methods consistent.\r\n>\r\n> When `__init__.py` re-exports symbols, it acts as the package's public API surface —\r\n> consumers import from the package rather than reaching into internal modules.\r\n"
+  }
+}

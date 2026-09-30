@@ -1,0 +1,182 @@
+{
+  "projectRoot": "C:/Users/karlp/Documents/ChatGPT/StarPilot",
+  "batchFiles": [
+    {
+      "path": "starpilot/controls/lib/conditional_chill_mode.py",
+      "language": "python",
+      "sizeLines": 363,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/conditional_experimental_mode.py",
+      "language": "python",
+      "sizeLines": 611,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/curve_speed_controller.py",
+      "language": "python",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/neural_network_feedforward.py",
+      "language": "python",
+      "sizeLines": 367,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/speed_limit_controller.py",
+      "language": "python",
+      "sizeLines": 580,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/starpilot_acceleration.py",
+      "language": "python",
+      "sizeLines": 450,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/starpilot_events.py",
+      "language": "python",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/starpilot_following.py",
+      "language": "python",
+      "sizeLines": 200,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/starpilot_vcruise.py",
+      "language": "python",
+      "sizeLines": 797,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/lib/weather_checker.py",
+      "language": "python",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/starpilot_card.py",
+      "language": "python",
+      "sizeLines": 476,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/controls/starpilot_planner.py",
+      "language": "python",
+      "sizeLines": 397,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/adj_spot_monitor_vision.py",
+      "language": "python",
+      "sizeLines": 330,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/speed_limit_filler.py",
+      "language": "python",
+      "sizeLines": 465,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/speed_limit_vision.py",
+      "language": "python",
+      "sizeLines": 2846,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/README.md",
+      "language": "markdown",
+      "sizeLines": 121,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/settings.js",
+      "language": "javascript",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/device_settings.js",
+      "language": "javascript",
+      "sizeLines": 2959,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js",
+      "language": "javascript",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/tuning.js",
+      "language": "javascript",
+      "sizeLines": 1466,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js",
+      "language": "javascript",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "language": "javascript",
+      "sizeLines": 311,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "language": "javascript",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/flm_workspace.py",
+      "language": "python",
+      "sizeLines": 3729,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "language": "python",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "starpilot/controls/lib/conditional_chill_mode.py": [],
+    "starpilot/controls/lib/conditional_experimental_mode.py": [],
+    "starpilot/controls/lib/curve_speed_controller.py": [],
+    "starpilot/controls/lib/neural_network_feedforward.py": [],
+    "starpilot/controls/lib/speed_limit_controller.py": [],
+    "starpilot/controls/lib/starpilot_acceleration.py": [],
+    "starpilot/controls/lib/starpilot_events.py": [],
+    "starpilot/controls/lib/starpilot_following.py": [],
+    "starpilot/controls/lib/starpilot_vcruise.py": [],
+    "starpilot/controls/lib/weather_checker.py": [],
+    "starpilot/controls/starpilot_card.py": [],
+    "starpilot/controls/starpilot_planner.py": [],
+    "starpilot/system/adj_spot_monitor_vision.py": [],
+    "starpilot/system/speed_limit_filler.py": [],
+    "starpilot/system/speed_limit_vision.py": [],
+    "starpilot/system/the_galaxy/README.md": [],
+    "starpilot/system/the_galaxy/assets/components/settings.js": [],
+    "starpilot/system/the_galaxy/assets/components/tools/device_settings.js": [],
+    "starpilot/system/the_galaxy/assets/components/tools/speed_limits.js": [],
+    "starpilot/system/the_galaxy/assets/components/tools/tuning.js": [],
+    "starpilot/system/the_galaxy/assets/components/tools/vehicle_features.js": [],
+    "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js": [],
+    "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js": [],
+    "starpilot/system/the_galaxy/flm_workspace.py": [],
+    "starpilot/system/the_galaxy/longitudinal_mode.py": []
+  }
+}

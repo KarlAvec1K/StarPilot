@@ -1,0 +1,182 @@
+{
+  "projectRoot": "C:/Users/karlp/Documents/ChatGPT/StarPilot",
+  "batchFiles": [
+    {
+      "path": "starpilot/common/connect_server.py",
+      "language": "python",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/controller_actions.py",
+      "language": "python",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/cpu_throttle.py",
+      "language": "python",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/experimental_state.py",
+      "language": "python",
+      "sizeLines": 190,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/favorite_slots.py",
+      "language": "python",
+      "sizeLines": 570,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/gpu_model_ready_sound.py",
+      "language": "python",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/lateral_delay.py",
+      "language": "python",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/lateral_only_experimental.py",
+      "language": "python",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/longitudinal_mode.py",
+      "language": "python",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/longitudinal_personality_profiles.py",
+      "language": "python",
+      "sizeLines": 623,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/maps_catalog.py",
+      "language": "python",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/maps_download_progress.py",
+      "language": "python",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/maps_selection.py",
+      "language": "python",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/model_lab.py",
+      "language": "python",
+      "sizeLines": 262,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/model_versions.py",
+      "language": "python",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/param_profiles.py",
+      "language": "python",
+      "sizeLines": 263,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/safe_mode.py",
+      "language": "python",
+      "sizeLines": 392,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_backups.py",
+      "language": "python",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_download_utilities.py",
+      "language": "python",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_functions.py",
+      "language": "python",
+      "sizeLines": 529,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_utilities.py",
+      "language": "python",
+      "sizeLines": 433,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/starpilot_variables.py",
+      "language": "python",
+      "sizeLines": 1642,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/testing_grounds.py",
+      "language": "python",
+      "sizeLines": 291,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/theme_asset_names.py",
+      "language": "python",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "starpilot/common/vision_bsm.py",
+      "language": "python",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "starpilot/common/connect_server.py": [],
+    "starpilot/common/controller_actions.py": [],
+    "starpilot/common/cpu_throttle.py": [],
+    "starpilot/common/experimental_state.py": [],
+    "starpilot/common/favorite_slots.py": [],
+    "starpilot/common/gpu_model_ready_sound.py": [],
+    "starpilot/common/lateral_delay.py": [],
+    "starpilot/common/lateral_only_experimental.py": [],
+    "starpilot/common/longitudinal_mode.py": [],
+    "starpilot/common/longitudinal_personality_profiles.py": [],
+    "starpilot/common/maps_catalog.py": [],
+    "starpilot/common/maps_download_progress.py": [],
+    "starpilot/common/maps_selection.py": [],
+    "starpilot/common/model_lab.py": [],
+    "starpilot/common/model_versions.py": [],
+    "starpilot/common/param_profiles.py": [],
+    "starpilot/common/safe_mode.py": [],
+    "starpilot/common/starpilot_backups.py": [],
+    "starpilot/common/starpilot_download_utilities.py": [],
+    "starpilot/common/starpilot_functions.py": [],
+    "starpilot/common/starpilot_utilities.py": [],
+    "starpilot/common/starpilot_variables.py": [],
+    "starpilot/common/testing_grounds.py": [],
+    "starpilot/common/theme_asset_names.py": [],
+    "starpilot/common/vision_bsm.py": []
+  }
+}

@@ -1,0 +1,1644 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/common/param_profiles.py",
+      "type": "file",
+      "name": "param_profiles.py",
+      "filePath": "starpilot/common/param_profiles.py",
+      "summary": "Sauvegarde, valide et restaure des profils typés de Params dans des emplacements bornés, avec migration des anciennes clés.",
+      "tags": [
+        "parametres",
+        "profil",
+        "serialisation",
+        "migration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:_normalize_slot",
+      "type": "function",
+      "name": "_normalize_slot",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        43,
+        47
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_slot` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:_profile_path",
+      "type": "function",
+      "name": "_profile_path",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        50,
+        53
+      ],
+      "summary": "Implémente l’opération `_profile_path` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:_key_text",
+      "type": "function",
+      "name": "_key_text",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        56,
+        57
+      ],
+      "summary": "Implémente l’opération `_key_text` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:eligible_profile_keys",
+      "type": "function",
+      "name": "eligible_profile_keys",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        60,
+        79
+      ],
+      "summary": "Évalue la condition portée par `eligible_profile_keys` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:_get_current_value",
+      "type": "function",
+      "name": "_get_current_value",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        82,
+        86
+      ],
+      "summary": "Récupère ou résout les données de `_get_current_value` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:_serialize_value",
+      "type": "function",
+      "name": "_serialize_value",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        89,
+        99
+      ],
+      "summary": "Convertit ou formate les données de `_serialize_value` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:_deserialize_value",
+      "type": "function",
+      "name": "_deserialize_value",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        102,
+        111
+      ],
+      "summary": "Convertit ou formate les données de `_deserialize_value` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:_build_profile_payload",
+      "type": "function",
+      "name": "_build_profile_payload",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        114,
+        143
+      ],
+      "summary": "Construit la représentation produite par `_build_profile_payload` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:save_profile",
+      "type": "function",
+      "name": "save_profile",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        146,
+        160
+      ],
+      "summary": "Enregistre ou publie l’état produit par `save_profile` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:_read_profile",
+      "type": "function",
+      "name": "_read_profile",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        163,
+        183
+      ],
+      "summary": "Récupère ou résout les données de `_read_profile` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:prepare_profile",
+      "type": "function",
+      "name": "prepare_profile",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        186,
+        217
+      ],
+      "summary": "Exécute le flux piloté par `prepare_profile` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:load_profile",
+      "type": "function",
+      "name": "load_profile",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        220,
+        235
+      ],
+      "summary": "Récupère ou résout les données de `load_profile` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:profile_status",
+      "type": "function",
+      "name": "profile_status",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        238,
+        259
+      ],
+      "summary": "Récupère ou résout les données de `profile_status` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/param_profiles.py:list_profiles",
+      "type": "function",
+      "name": "list_profiles",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        262,
+        263
+      ],
+      "summary": "Récupère ou résout les données de `list_profiles` dans le module `param_profiles.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/common/param_profiles.py:ParamProfileError",
+      "type": "class",
+      "name": "ParamProfileError",
+      "filePath": "starpilot/common/param_profiles.py",
+      "lineRange": [
+        39,
+        40
+      ],
+      "summary": "Représente l’erreur spécialisée `ParamProfileError` utilisée par le module `param_profiles.py` pour interrompre ou signaler proprement son flux.",
+      "tags": [
+        "classe",
+        "gestion-erreur",
+        "parametres",
+        "profil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/safe_mode.py",
+      "type": "file",
+      "name": "safe_mode.py",
+      "filePath": "starpilot/common/safe_mode.py",
+      "summary": "Applique un ensemble prudent de réglages après sauvegarde des valeurs courantes, puis permet leur restauration contrôlée.",
+      "tags": [
+        "mode-securise",
+        "parametres",
+        "sauvegarde",
+        "restauration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/safe_mode.py:safe_mode_enabled",
+      "type": "function",
+      "name": "safe_mode_enabled",
+      "filePath": "starpilot/common/safe_mode.py",
+      "lineRange": [
+        257,
+        259
+      ],
+      "summary": "Implémente l’opération `safe_mode_enabled` dans le module `safe_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "mode-securise",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/safe_mode.py:_load_backup",
+      "type": "function",
+      "name": "_load_backup",
+      "filePath": "starpilot/common/safe_mode.py",
+      "lineRange": [
+        262,
+        264
+      ],
+      "summary": "Récupère ou résout les données de `_load_backup` dans le module `safe_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "mode-securise",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/safe_mode.py:_current_entry",
+      "type": "function",
+      "name": "_current_entry",
+      "filePath": "starpilot/common/safe_mode.py",
+      "lineRange": [
+        267,
+        269
+      ],
+      "summary": "Récupère ou résout les données de `_current_entry` dans le module `safe_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "mode-securise",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/safe_mode.py:_safe_value",
+      "type": "function",
+      "name": "_safe_value",
+      "filePath": "starpilot/common/safe_mode.py",
+      "lineRange": [
+        272,
+        282
+      ],
+      "summary": "Implémente l’opération `_safe_value` dans le module `safe_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "mode-securise",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/safe_mode.py:_apply_value",
+      "type": "function",
+      "name": "_apply_value",
+      "filePath": "starpilot/common/safe_mode.py",
+      "lineRange": [
+        285,
+        300
+      ],
+      "summary": "Exécute le flux piloté par `_apply_value` dans le module `safe_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "mode-securise",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/safe_mode.py:_mark_toggle_update",
+      "type": "function",
+      "name": "_mark_toggle_update",
+      "filePath": "starpilot/common/safe_mode.py",
+      "lineRange": [
+        303,
+        306
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_mark_toggle_update` dans le module `safe_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "mode-securise",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/safe_mode.py:apply_safe_mode",
+      "type": "function",
+      "name": "apply_safe_mode",
+      "filePath": "starpilot/common/safe_mode.py",
+      "lineRange": [
+        309,
+        341
+      ],
+      "summary": "Exécute le flux piloté par `apply_safe_mode` dans le module `safe_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "mode-securise",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/safe_mode.py:restore_safe_mode",
+      "type": "function",
+      "name": "restore_safe_mode",
+      "filePath": "starpilot/common/safe_mode.py",
+      "lineRange": [
+        344,
+        392
+      ],
+      "summary": "Exécute le flux piloté par `restore_safe_mode` dans le module `safe_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "mode-securise",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/starpilot_backups.py",
+      "type": "file",
+      "name": "starpilot_backups.py",
+      "filePath": "starpilot/common/starpilot_backups.py",
+      "summary": "Crée et fait tourner les sauvegardes compressées de StarPilot et de ses réglages, avec contrôle de taille et état de résultat.",
+      "tags": [
+        "sauvegarde",
+        "compression",
+        "rotation",
+        "stockage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_backups.py:backup_starpilot",
+      "type": "function",
+      "name": "backup_starpilot",
+      "filePath": "starpilot/common/starpilot_backups.py",
+      "lineRange": [
+        17,
+        32
+      ],
+      "summary": "Exécute le flux piloté par `backup_starpilot` dans le module `starpilot_backups.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "sauvegarde",
+        "compression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_backups.py:backup_toggles",
+      "type": "function",
+      "name": "backup_toggles",
+      "filePath": "starpilot/common/starpilot_backups.py",
+      "lineRange": [
+        35,
+        62
+      ],
+      "summary": "Exécute le flux piloté par `backup_toggles` dans le module `starpilot_backups.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "sauvegarde",
+        "compression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_backups.py:cleanup_backups",
+      "type": "function",
+      "name": "cleanup_backups",
+      "filePath": "starpilot/common/starpilot_backups.py",
+      "lineRange": [
+        65,
+        73
+      ],
+      "summary": "Convertit ou formate les données de `cleanup_backups` dans le module `starpilot_backups.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "sauvegarde",
+        "compression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_backups.py:create_backup",
+      "type": "function",
+      "name": "create_backup",
+      "filePath": "starpilot/common/starpilot_backups.py",
+      "lineRange": [
+        76,
+        107
+      ],
+      "summary": "Construit la représentation produite par `create_backup` dans le module `starpilot_backups.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "sauvegarde",
+        "compression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/starpilot_download_utilities.py",
+      "type": "file",
+      "name": "starpilot_download_utilities.py",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "summary": "Gère les téléchargements HTTP reprenables des ressources StarPilot, leur progression, les limites GitHub et la vérification finale.",
+      "tags": [
+        "telechargement",
+        "http",
+        "verification",
+        "progression"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_download_utilities.py:download_file",
+      "type": "function",
+      "name": "download_file",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "lineRange": [
+        14,
+        67
+      ],
+      "summary": "Implémente l’opération `download_file` dans le module `starpilot_download_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "telechargement",
+        "http"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_download_utilities.py:get_remote_file_size",
+      "type": "function",
+      "name": "get_remote_file_size",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "lineRange": [
+        70,
+        84
+      ],
+      "summary": "Récupère ou résout les données de `get_remote_file_size` dans le module `starpilot_download_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "telechargement",
+        "http"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_download_utilities.py:get_repository_url",
+      "type": "function",
+      "name": "get_repository_url",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "lineRange": [
+        87,
+        90
+      ],
+      "summary": "Récupère ou résout les données de `get_repository_url` dans le module `starpilot_download_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "telechargement",
+        "http"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_download_utilities.py:get_resource_urls",
+      "type": "function",
+      "name": "get_resource_urls",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "lineRange": [
+        93,
+        100
+      ],
+      "summary": "Récupère ou résout les données de `get_resource_urls` dans le module `starpilot_download_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "telechargement",
+        "http"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_download_utilities.py:github_rate_limited",
+      "type": "function",
+      "name": "github_rate_limited",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "lineRange": [
+        103,
+        123
+      ],
+      "summary": "Implémente l’opération `github_rate_limited` dans le module `starpilot_download_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "telechargement",
+        "http"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_download_utilities.py:handle_error",
+      "type": "function",
+      "name": "handle_error",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "lineRange": [
+        126,
+        133
+      ],
+      "summary": "Exécute le flux piloté par `handle_error` dans le module `starpilot_download_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "telechargement",
+        "http"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_download_utilities.py:handle_request_error",
+      "type": "function",
+      "name": "handle_request_error",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "lineRange": [
+        136,
+        150
+      ],
+      "summary": "Exécute le flux piloté par `handle_request_error` dans le module `starpilot_download_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "telechargement",
+        "http"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_download_utilities.py:verify_download",
+      "type": "function",
+      "name": "verify_download",
+      "filePath": "starpilot/common/starpilot_download_utilities.py",
+      "lineRange": [
+        153,
+        172
+      ],
+      "summary": "Normalise ou valide les données de `verify_download` dans le module `starpilot_download_utilities.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "telechargement",
+        "http"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/starpilot_functions.py",
+      "type": "file",
+      "name": "starpilot_functions.py",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "summary": "Orchestre les opérations de démarrage et d’installation StarPilot, l’enregistrement de l’appareil et les mises à jour des cartes ou du logiciel.",
+      "tags": [
+        "demarrage",
+        "installation",
+        "mise-a-jour",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:seed_desktop_theme_assets",
+      "type": "function",
+      "name": "seed_desktop_theme_assets",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        43,
+        71
+      ],
+      "summary": "Construit la représentation produite par `seed_desktop_theme_assets` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:starpilot_boot_functions",
+      "type": "function",
+      "name": "starpilot_boot_functions",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        74,
+        98
+      ],
+      "summary": "Implémente l’opération `starpilot_boot_functions` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:install_starpilot",
+      "type": "function",
+      "name": "install_starpilot",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        101,
+        114
+      ],
+      "summary": "Exécute le flux piloté par `install_starpilot` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:register_device",
+      "type": "function",
+      "name": "register_device",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        116,
+        151
+      ],
+      "summary": "Enregistre ou publie l’état produit par `register_device` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:uninstall_starpilot",
+      "type": "function",
+      "name": "uninstall_starpilot",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        154,
+        157
+      ],
+      "summary": "Exécute le flux piloté par `uninstall_starpilot` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:update_boot_logo",
+      "type": "function",
+      "name": "update_boot_logo",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        160,
+        233
+      ],
+      "summary": "Met à jour l’état géré par `update_boot_logo` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:_decode_map_param",
+      "type": "function",
+      "name": "_decode_map_param",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        240,
+        241
+      ],
+      "summary": "Convertit ou formate les données de `_decode_map_param` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:_get_maps_storage_cache",
+      "type": "function",
+      "name": "_get_maps_storage_cache",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        244,
+        245
+      ],
+      "summary": "Récupère ou résout les données de `_get_maps_storage_cache` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:_save_maps_storage_cache",
+      "type": "function",
+      "name": "_save_maps_storage_cache",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        248,
+        249
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_save_maps_storage_cache` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:_reconcile_maps_storage",
+      "type": "function",
+      "name": "_reconcile_maps_storage",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        252,
+        262
+      ],
+      "summary": "Met à jour l’état géré par `_reconcile_maps_storage` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:_publish_maps_progress",
+      "type": "function",
+      "name": "_publish_maps_progress",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        265,
+        338
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_publish_maps_progress` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:_wait_for_map_download_to_stop",
+      "type": "function",
+      "name": "_wait_for_map_download_to_stop",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        341,
+        351
+      ],
+      "summary": "Exécute le flux piloté par `_wait_for_map_download_to_stop` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:update_maps",
+      "type": "function",
+      "name": "update_maps",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        354,
+        485
+      ],
+      "summary": "Met à jour l’état géré par `update_maps` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/starpilot_functions.py:update_openpilot",
+      "type": "function",
+      "name": "update_openpilot",
+      "filePath": "starpilot/common/starpilot_functions.py",
+      "lineRange": [
+        488,
+        529
+      ],
+      "summary": "Met à jour l’état géré par `update_openpilot` dans le module `starpilot_functions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "demarrage",
+        "installation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_normalize_slot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_normalize_slot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_profile_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_profile_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_key_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_key_text",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:eligible_profile_keys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:eligible_profile_keys",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_get_current_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_get_current_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_serialize_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_serialize_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_deserialize_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_deserialize_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_build_profile_payload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_build_profile_payload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:save_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:save_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_read_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:_read_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:prepare_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:prepare_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:load_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:load_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:profile_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:profile_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:list_profiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "function:starpilot/common/param_profiles.py:list_profiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "class:starpilot/common/param_profiles.py:ParamProfileError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/param_profiles.py",
+      "target": "class:starpilot/common/param_profiles.py:ParamProfileError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:safe_mode_enabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:safe_mode_enabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_load_backup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_load_backup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_current_entry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_current_entry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_safe_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_safe_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_apply_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_apply_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_mark_toggle_update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:_mark_toggle_update",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:apply_safe_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:apply_safe_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:restore_safe_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/safe_mode.py",
+      "target": "function:starpilot/common/safe_mode.py:restore_safe_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_backups.py",
+      "target": "function:starpilot/common/starpilot_backups.py:backup_starpilot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_backups.py",
+      "target": "function:starpilot/common/starpilot_backups.py:backup_starpilot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_backups.py",
+      "target": "function:starpilot/common/starpilot_backups.py:backup_toggles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_backups.py",
+      "target": "function:starpilot/common/starpilot_backups.py:backup_toggles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_backups.py",
+      "target": "function:starpilot/common/starpilot_backups.py:cleanup_backups",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_backups.py",
+      "target": "function:starpilot/common/starpilot_backups.py:cleanup_backups",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_backups.py",
+      "target": "function:starpilot/common/starpilot_backups.py:create_backup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_backups.py",
+      "target": "function:starpilot/common/starpilot_backups.py:create_backup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:download_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:download_file",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:get_remote_file_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:get_remote_file_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:get_repository_url",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:get_repository_url",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:get_resource_urls",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:get_resource_urls",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:github_rate_limited",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:github_rate_limited",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:handle_error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:handle_error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:handle_request_error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:handle_request_error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:verify_download",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_download_utilities.py",
+      "target": "function:starpilot/common/starpilot_download_utilities.py:verify_download",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:seed_desktop_theme_assets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:seed_desktop_theme_assets",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:starpilot_boot_functions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:starpilot_boot_functions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:install_starpilot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:install_starpilot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:register_device",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:register_device",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:uninstall_starpilot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:uninstall_starpilot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:update_boot_logo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:update_boot_logo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_decode_map_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_decode_map_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_get_maps_storage_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_get_maps_storage_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_save_maps_storage_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_save_maps_storage_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_reconcile_maps_storage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_reconcile_maps_storage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_publish_maps_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_publish_maps_progress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_wait_for_map_download_to_stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:_wait_for_map_download_to_stop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:update_maps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:update_maps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:update_openpilot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/starpilot_functions.py",
+      "target": "function:starpilot/common/starpilot_functions.py:update_openpilot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

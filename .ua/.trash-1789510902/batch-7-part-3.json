@@ -1,0 +1,665 @@
+{
+  "nodes": [
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "type": "file",
+      "name": "navigation_card.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "summary": "Rend la carte de navigation et ses variantes normale, réduite ou mici, avec manœuvre, distance, texte et commande d’annulation.",
+      "tags": [
+        "interface-utilisateur",
+        "navigation",
+        "carte",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/navigation_card.py:_format_distance",
+      "type": "function",
+      "name": "_format_distance",
+      "filePath": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "lineRange": [
+        20,
+        33
+      ],
+      "summary": "Transforme et normalise les données via `_format_distance` pour la carte routière de navigation.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "interface-utilisateur",
+        "navigation",
+        "carte"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/navigation_card.py:_modifier_suffix",
+      "type": "function",
+      "name": "_modifier_suffix",
+      "filePath": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "lineRange": [
+        36,
+        46
+      ],
+      "summary": "Implémente l’opération `_modifier_suffix` nécessaire à la carte routière de navigation.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "navigation",
+        "carte"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/navigation_card.py:_normalize_maneuver_type",
+      "type": "function",
+      "name": "_normalize_maneuver_type",
+      "filePath": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "lineRange": [
+        49,
+        55
+      ],
+      "summary": "Transforme et normalise les données via `_normalize_maneuver_type` pour la carte routière de navigation.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "interface-utilisateur",
+        "navigation",
+        "carte"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/navigation_card.py:NavigationCardRenderer",
+      "type": "class",
+      "name": "NavigationCardRenderer",
+      "filePath": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "lineRange": [
+        58,
+        528
+      ],
+      "summary": "Assure le rendu `NavigationCardRenderer` et transforme l’état courant en éléments graphiques pour la carte routière de navigation.",
+      "tags": [
+        "classe",
+        "rendu",
+        "interface-utilisateur",
+        "navigation",
+        "carte"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "type": "file",
+      "name": "path.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/path.py",
+      "summary": "Dessine les voies adjacentes et les bords de trajectoire avec dégradés, couleurs HSL et annotations visuelles.",
+      "tags": [
+        "interface-utilisateur",
+        "trajectoire",
+        "voies",
+        "rendu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/path.py:_hsla_to_color",
+      "type": "function",
+      "name": "_hsla_to_color",
+      "filePath": "selfdrive/ui/onroad/starpilot/path.py",
+      "lineRange": [
+        20,
+        22
+      ],
+      "summary": "Implémente l’opération `_hsla_to_color` nécessaire à le rendu de la trajectoire et des voies.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "trajectoire",
+        "voies"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/path.py:_make_gradient",
+      "type": "function",
+      "name": "_make_gradient",
+      "filePath": "selfdrive/ui/onroad/starpilot/path.py",
+      "lineRange": [
+        25,
+        35
+      ],
+      "summary": "Construit l’élément produit par `_make_gradient` pour le rendu de la trajectoire et des voies.",
+      "tags": [
+        "fonction",
+        "construction",
+        "interface-utilisateur",
+        "trajectoire",
+        "voies"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/path.py:_draw_text_with_outline",
+      "type": "function",
+      "name": "_draw_text_with_outline",
+      "filePath": "selfdrive/ui/onroad/starpilot/path.py",
+      "lineRange": [
+        38,
+        44
+      ],
+      "summary": "Dessine l’élément graphique géré par `_draw_text_with_outline` dans le rendu de la trajectoire et des voies.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "trajectoire",
+        "voies"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/path.py:render_adjacent_lanes",
+      "type": "function",
+      "name": "render_adjacent_lanes",
+      "filePath": "selfdrive/ui/onroad/starpilot/path.py",
+      "lineRange": [
+        47,
+        127
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_adjacent_lanes` dans le rendu de la trajectoire et des voies.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "trajectoire",
+        "voies"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/path.py:render_path_edges",
+      "type": "function",
+      "name": "render_path_edges",
+      "filePath": "selfdrive/ui/onroad/starpilot/path.py",
+      "lineRange": [
+        130,
+        170
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_path_edges` dans le rendu de la trajectoire et des voies.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "trajectoire",
+        "voies"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "type": "file",
+      "name": "pause_indicators.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "summary": "Dessine les indicateurs de pause latérale et longitudinale sur la vue routière.",
+      "tags": [
+        "interface-utilisateur",
+        "indicateur",
+        "pause",
+        "rendu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/pause_indicators.py:draw_pause_symbol",
+      "type": "function",
+      "name": "draw_pause_symbol",
+      "filePath": "selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "lineRange": [
+        4,
+        7
+      ],
+      "summary": "Dessine l’élément graphique géré par `draw_pause_symbol` dans les indicateurs de pause de conduite.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "indicateur",
+        "pause"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/pause_indicators.py:render_lateral_paused",
+      "type": "function",
+      "name": "render_lateral_paused",
+      "filePath": "selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "lineRange": [
+        9,
+        28
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_lateral_paused` dans les indicateurs de pause de conduite.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "indicateur",
+        "pause"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/pause_indicators.py:render_longitudinal_paused",
+      "type": "function",
+      "name": "render_longitudinal_paused",
+      "filePath": "selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "lineRange": [
+        30,
+        49
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_longitudinal_paused` dans les indicateurs de pause de conduite.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "indicateur",
+        "pause"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/pedal_icons.py",
+      "type": "file",
+      "name": "pedal_icons.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/pedal_icons.py",
+      "summary": "Rend les icônes d’accélérateur et de frein selon l’état courant des commandes longitudinales.",
+      "tags": [
+        "interface-utilisateur",
+        "pédales",
+        "indicateur",
+        "rendu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/pedal_icons.py:render_pedal_icons",
+      "type": "function",
+      "name": "render_pedal_icons",
+      "filePath": "selfdrive/ui/onroad/starpilot/pedal_icons.py",
+      "lineRange": [
+        8,
+        49
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_pedal_icons` dans les indicateurs graphiques des pédales.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "pédales",
+        "indicateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/personality_button.py",
+      "type": "file",
+      "name": "personality_button.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/personality_button.py",
+      "summary": "Fournit le bouton routier de personnalité de conduite et gère son état, ses interactions et son rendu.",
+      "tags": [
+        "interface-utilisateur",
+        "personnalité",
+        "bouton",
+        "interaction"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/personality_button.py:PersonalityButton",
+      "type": "class",
+      "name": "PersonalityButton",
+      "filePath": "selfdrive/ui/onroad/starpilot/personality_button.py",
+      "lineRange": [
+        13,
+        67
+      ],
+      "summary": "Implémente le bouton `PersonalityButton` et ses interactions dans le bouton de personnalité de conduite.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "personnalité",
+        "bouton"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+      "type": "file",
+      "name": "pip_sidecam.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+      "summary": "Acquiert les flux des caméras latérales et les affiche en incrustation avec recadrage, textures, disposition et sélection du côté actif.",
+      "tags": [
+        "interface-utilisateur",
+        "caméra",
+        "picture-in-picture",
+        "rendu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/onroad/starpilot/pip_sidecam.py:PipSideCamera",
+      "type": "class",
+      "name": "PipSideCamera",
+      "filePath": "selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+      "lineRange": [
+        178,
+        465
+      ],
+      "summary": "Regroupe l’état et les opérations de `PipSideCamera` pour l’incrustation des caméras latérales.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "caméra",
+        "picture-in-picture"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "type": "file",
+      "name": "pulse_glide.py",
+      "filePath": "selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "summary": "Calcule la couleur du mode Pulse and Glide et dessine son indicateur sur la bordure routière.",
+      "tags": [
+        "interface-utilisateur",
+        "pulse-and-glide",
+        "indicateur",
+        "rendu"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/pulse_glide.py:get_pulse_glide_border_color",
+      "type": "function",
+      "name": "get_pulse_glide_border_color",
+      "filePath": "selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "lineRange": [
+        12,
+        26
+      ],
+      "summary": "Calcule ou récupère la valeur `get_pulse_glide_border_color` utilisée par l’indicateur Pulse and Glide.",
+      "tags": [
+        "fonction",
+        "accès-données",
+        "interface-utilisateur",
+        "pulse-and-glide",
+        "indicateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/onroad/starpilot/pulse_glide.py:render_pulse_glide",
+      "type": "function",
+      "name": "render_pulse_glide",
+      "filePath": "selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "lineRange": [
+        29,
+        45
+      ],
+      "summary": "Dessine l’élément graphique géré par `render_pulse_glide` dans l’indicateur Pulse and Glide.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "interface-utilisateur",
+        "pulse-and-glide",
+        "indicateur"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/navigation_card.py:_format_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/navigation_card.py:_format_distance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/navigation_card.py:_modifier_suffix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/navigation_card.py:_modifier_suffix",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/navigation_card.py:_normalize_maneuver_type",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/navigation_card.py:_normalize_maneuver_type",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/navigation_card.py:NavigationCardRenderer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/navigation_card.py:NavigationCardRenderer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:_hsla_to_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:_hsla_to_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:_make_gradient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:_make_gradient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:_draw_text_with_outline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:_draw_text_with_outline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:render_adjacent_lanes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:render_adjacent_lanes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:render_path_edges",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/path.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/path.py:render_path_edges",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pause_indicators.py:draw_pause_symbol",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pause_indicators.py:draw_pause_symbol",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pause_indicators.py:render_lateral_paused",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pause_indicators.py:render_lateral_paused",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pause_indicators.py:render_longitudinal_paused",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pause_indicators.py:render_longitudinal_paused",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pedal_icons.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pedal_icons.py:render_pedal_icons",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pedal_icons.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pedal_icons.py:render_pedal_icons",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/personality_button.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/personality_button.py:PersonalityButton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/personality_button.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/personality_button.py:PersonalityButton",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/pip_sidecam.py:PipSideCamera",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+      "target": "class:selfdrive/ui/onroad/starpilot/pip_sidecam.py:PipSideCamera",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pulse_glide.py:get_pulse_glide_border_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pulse_glide.py:get_pulse_glide_border_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pulse_glide.py:render_pulse_glide",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "target": "function:selfdrive/ui/onroad/starpilot/pulse_glide.py:render_pulse_glide",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

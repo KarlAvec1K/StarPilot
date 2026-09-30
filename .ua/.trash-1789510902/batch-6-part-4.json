@@ -1,0 +1,637 @@
+{
+  "nodes": [
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "type": "file",
+      "name": "appearance.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "summary": "Construit les écrans d’apparence StarPilot pour les thèmes, couleurs, métriques, caméra, chemins, alertes de démarrage et éléments du HUD.",
+      "tags": [
+        "interface-utilisateur",
+        "apparence",
+        "thèmes",
+        "réglages"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/appearance.py:_theme_display_name",
+      "type": "function",
+      "name": "_theme_display_name",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "lineRange": [
+        58,
+        79
+      ],
+      "summary": "Implémente l’opération `_theme_display_name` nécessaire à les réglages d’apparence StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "apparence",
+        "thèmes"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/appearance.py:AppearanceManagerView",
+      "type": "class",
+      "name": "AppearanceManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "lineRange": [
+        85,
+        127
+      ],
+      "summary": "Implémente la vue interactive `AppearanceManagerView` pour les réglages d’apparence StarPilot.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "apparence",
+        "thèmes"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/appearance.py:StarPilotAppearanceLayout",
+      "type": "class",
+      "name": "StarPilotAppearanceLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "lineRange": [
+        130,
+        763
+      ],
+      "summary": "Compose l’écran `StarPilotAppearanceLayout` et orchestre ses vues, commandes et interactions pour les réglages d’apparence StarPilot.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "apparence",
+        "thèmes"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+      "type": "file",
+      "name": "asset_loader.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+      "summary": "Charge les textures StarPilot depuis les ressources et fournit un repli sûr lorsqu’un asset est absent.",
+      "tags": [
+        "assets",
+        "textures",
+        "chargement",
+        "interface-utilisateur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/asset_loader.py:starpilot_texture",
+      "type": "function",
+      "name": "starpilot_texture",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+      "lineRange": [
+        10,
+        31
+      ],
+      "summary": "Implémente l’opération `starpilot_texture` nécessaire à le chargement des textures StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "assets",
+        "textures",
+        "chargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "type": "file",
+      "name": "driving_model.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "summary": "Gère le catalogue des modèles de conduite : découverte, tri, téléchargement, sélection, suppression, favoris et état Model Lab.",
+      "tags": [
+        "interface-utilisateur",
+        "modèles",
+        "téléchargement",
+        "catalogue"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/driving_model.py:_clean_model_name",
+      "type": "function",
+      "name": "_clean_model_name",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "lineRange": [
+        108,
+        109
+      ],
+      "summary": "Transforme et normalise les données via `_clean_model_name` pour la gestion des modèles de conduite.",
+      "tags": [
+        "fonction",
+        "transformation",
+        "interface-utilisateur",
+        "modèles",
+        "téléchargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/driving_model.py:_ease",
+      "type": "function",
+      "name": "_ease",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "lineRange": [
+        112,
+        114
+      ],
+      "summary": "Implémente l’opération `_ease` nécessaire à la gestion des modèles de conduite.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "modèles",
+        "téléchargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/driving_model.py:ModelCatalogEntry",
+      "type": "class",
+      "name": "ModelCatalogEntry",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "lineRange": [
+        94,
+        105
+      ],
+      "summary": "Structure les valeurs de `ModelCatalogEntry` partagées par la gestion des modèles de conduite.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "modèles",
+        "téléchargement"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/driving_model.py:DrivingModelManagerView",
+      "type": "class",
+      "name": "DrivingModelManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "lineRange": [
+        117,
+        688
+      ],
+      "summary": "Implémente la vue interactive `DrivingModelManagerView` pour la gestion des modèles de conduite.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "modèles",
+        "téléchargement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/driving_model.py:StarPilotDrivingModelLayout",
+      "type": "class",
+      "name": "StarPilotDrivingModelLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "lineRange": [
+        691,
+        1300
+      ],
+      "summary": "Compose l’écran `StarPilotDrivingModelLayout` et orchestre ses vues, commandes et interactions pour la gestion des modèles de conduite.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "modèles",
+        "téléchargement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "type": "file",
+      "name": "lateral.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "summary": "Assemble les réglages de direction et de contrôle latéral, dont les délais, le lissage de changement de voie et les options nécessitant un redémarrage.",
+      "tags": [
+        "interface-utilisateur",
+        "contrôle-latéral",
+        "réglages",
+        "direction"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/lateral.py:_confirm_reboot_toggle",
+      "type": "function",
+      "name": "_confirm_reboot_toggle",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "lineRange": [
+        21,
+        29
+      ],
+      "summary": "Implémente l’opération `_confirm_reboot_toggle` nécessaire à les réglages de contrôle latéral.",
+      "tags": [
+        "fonction",
+        "logique-métier",
+        "interface-utilisateur",
+        "contrôle-latéral",
+        "réglages"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selfdrive/ui/layouts/settings/starpilot/lateral.py:_sync_parent",
+      "type": "function",
+      "name": "_sync_parent",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "lineRange": [
+        37,
+        43
+      ],
+      "summary": "Met à jour l’état associé à `_sync_parent` pour les réglages de contrôle latéral.",
+      "tags": [
+        "fonction",
+        "mise-à-jour",
+        "interface-utilisateur",
+        "contrôle-latéral",
+        "réglages"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/lateral.py:SteeringManagerView",
+      "type": "class",
+      "name": "SteeringManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "lineRange": [
+        50,
+        75
+      ],
+      "summary": "Implémente la vue interactive `SteeringManagerView` pour les réglages de contrôle latéral.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "contrôle-latéral",
+        "réglages"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/lateral.py:StarPilotLateralLayout",
+      "type": "class",
+      "name": "StarPilotLateralLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "lineRange": [
+        82,
+        407
+      ],
+      "summary": "Compose l’écran `StarPilotLateralLayout` et orchestre ses vues, commandes et interactions pour les réglages de contrôle latéral.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "contrôle-latéral",
+        "réglages"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "type": "file",
+      "name": "longitudinal.py",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "summary": "Assemble les réglages longitudinaux StarPilot : profils d’accélération, mode conditionnel, arrêts, offsets SLC, météo et personnalités de conduite.",
+      "tags": [
+        "interface-utilisateur",
+        "contrôle-longitudinal",
+        "réglages",
+        "profils"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:AdaptiveSpeedView",
+      "type": "class",
+      "name": "AdaptiveSpeedView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "lineRange": [
+        84,
+        103
+      ],
+      "summary": "Implémente la vue interactive `AdaptiveSpeedView` pour les réglages de contrôle longitudinal.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "contrôle-longitudinal",
+        "réglages"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:LongitudinalManagerView",
+      "type": "class",
+      "name": "LongitudinalManagerView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "lineRange": [
+        110,
+        158
+      ],
+      "summary": "Implémente la vue interactive `LongitudinalManagerView` pour les réglages de contrôle longitudinal.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "contrôle-longitudinal",
+        "réglages"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:ConditionalDriveModeView",
+      "type": "class",
+      "name": "ConditionalDriveModeView",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "lineRange": [
+        161,
+        458
+      ],
+      "summary": "Implémente la vue interactive `ConditionalDriveModeView` pour les réglages de contrôle longitudinal.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "contrôle-longitudinal",
+        "réglages"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:StarPilotLongitudinalLayout",
+      "type": "class",
+      "name": "StarPilotLongitudinalLayout",
+      "filePath": "selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "lineRange": [
+        465,
+        1250
+      ],
+      "summary": "Compose l’écran `StarPilotLongitudinalLayout` et orchestre ses vues, commandes et interactions pour les réglages de contrôle longitudinal.",
+      "tags": [
+        "classe",
+        "composant",
+        "interface-utilisateur",
+        "contrôle-longitudinal",
+        "réglages"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/appearance.py:_theme_display_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/appearance.py:_theme_display_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/appearance.py:AppearanceManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/appearance.py:AppearanceManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/appearance.py:StarPilotAppearanceLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/appearance.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/appearance.py:StarPilotAppearanceLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/asset_loader.py:starpilot_texture",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/asset_loader.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/asset_loader.py:starpilot_texture",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/driving_model.py:_clean_model_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/driving_model.py:_clean_model_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/driving_model.py:_ease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/driving_model.py:_ease",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/driving_model.py:ModelCatalogEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/driving_model.py:ModelCatalogEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/driving_model.py:DrivingModelManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/driving_model.py:DrivingModelManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/driving_model.py:StarPilotDrivingModelLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/driving_model.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/driving_model.py:StarPilotDrivingModelLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/lateral.py:_confirm_reboot_toggle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/lateral.py:_confirm_reboot_toggle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/lateral.py:_sync_parent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "target": "function:selfdrive/ui/layouts/settings/starpilot/lateral.py:_sync_parent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/lateral.py:SteeringManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/lateral.py:SteeringManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/lateral.py:StarPilotLateralLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/lateral.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/lateral.py:StarPilotLateralLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:AdaptiveSpeedView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:AdaptiveSpeedView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:LongitudinalManagerView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:LongitudinalManagerView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:ConditionalDriveModeView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:ConditionalDriveModeView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:StarPilotLongitudinalLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selfdrive/ui/layouts/settings/starpilot/longitudinal.py",
+      "target": "class:selfdrive/ui/layouts/settings/starpilot/longitudinal.py:StarPilotLongitudinalLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "projectRoot": "C:/Users/karlp/Documents/ChatGPT/StarPilot",
+  "batchFiles": [
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py",
+      "language": "python",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py",
+      "language": "python",
+      "sizeLines": 647,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/sounds.py",
+      "language": "python",
+      "sizeLines": 386,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/system_settings.py",
+      "language": "python",
+      "sizeLines": 1364,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/layouts/settings/starpilot/vehicle.py",
+      "language": "python",
+      "sizeLines": 875,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/lib/mode_banner.py",
+      "language": "python",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/lib/starpilot_state.py",
+      "language": "python",
+      "sizeLines": 253,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/layouts/settings/developer.py",
+      "language": "python",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/layouts/settings/settings.py",
+      "language": "python",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/layouts/settings/visuals.py",
+      "language": "python",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/onroad/hud_renderer.py",
+      "language": "python",
+      "sizeLines": 730,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/mici/onroad/sidebar_widgets.py",
+      "language": "python",
+      "sizeLines": 382,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/model_renderer.py",
+      "language": "python",
+      "sizeLines": 1033,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/aethergauge.py",
+      "language": "python",
+      "sizeLines": 795,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/compass.py",
+      "language": "python",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/developer_sidebar.py",
+      "language": "python",
+      "sizeLines": 388,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/favorite_radial_menu.py",
+      "language": "python",
+      "sizeLines": 1209,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/navigation_card.py",
+      "language": "python",
+      "sizeLines": 528,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/path.py",
+      "language": "python",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/pause_indicators.py",
+      "language": "python",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/pedal_icons.py",
+      "language": "python",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/personality_button.py",
+      "language": "python",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/pip_sidecam.py",
+      "language": "python",
+      "sizeLines": 465,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selfdrive/ui/onroad/starpilot/pulse_glide.py",
+      "language": "python",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "selfdrive/ui/layouts/settings/starpilot/sectioned_panel.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/simple_download_manager.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/sounds.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/system_settings.py": [],
+    "selfdrive/ui/layouts/settings/starpilot/vehicle.py": [],
+    "selfdrive/ui/lib/mode_banner.py": [],
+    "selfdrive/ui/lib/starpilot_state.py": [],
+    "selfdrive/ui/mici/layouts/settings/developer.py": [],
+    "selfdrive/ui/mici/layouts/settings/settings.py": [],
+    "selfdrive/ui/mici/layouts/settings/visuals.py": [],
+    "selfdrive/ui/mici/onroad/hud_renderer.py": [],
+    "selfdrive/ui/mici/onroad/sidebar_widgets.py": [],
+    "selfdrive/ui/onroad/model_renderer.py": [],
+    "selfdrive/ui/onroad/starpilot/__init__.py": [],
+    "selfdrive/ui/onroad/starpilot/aethergauge.py": [],
+    "selfdrive/ui/onroad/starpilot/compass.py": [],
+    "selfdrive/ui/onroad/starpilot/developer_sidebar.py": [],
+    "selfdrive/ui/onroad/starpilot/favorite_radial_menu.py": [],
+    "selfdrive/ui/onroad/starpilot/navigation_card.py": [],
+    "selfdrive/ui/onroad/starpilot/path.py": [],
+    "selfdrive/ui/onroad/starpilot/pause_indicators.py": [],
+    "selfdrive/ui/onroad/starpilot/pedal_icons.py": [],
+    "selfdrive/ui/onroad/starpilot/personality_button.py": [],
+    "selfdrive/ui/onroad/starpilot/pip_sidecam.py": [],
+    "selfdrive/ui/onroad/starpilot/pulse_glide.py": []
+  }
+}

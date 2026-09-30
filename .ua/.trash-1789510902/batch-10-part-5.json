@@ -1,0 +1,4438 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "type": "file",
+      "name": "wheel_controls.js",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "summary": "Gère l’interface Galaxy de découverte, apprentissage, test et assignation des commandes au volant ou contrôleurs externes.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "controleur",
+        "mapping",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:refresh",
+      "type": "function",
+      "name": "refresh",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "lineRange": [
+        28,
+        57
+      ],
+      "summary": "Met à jour l’état géré par `refresh` dans le module `wheel_controls.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:request",
+      "type": "function",
+      "name": "request",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "lineRange": [
+        59,
+        76
+      ],
+      "summary": "Exécute le flux piloté par `request` dans le module `wheel_controls.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:mappingRow",
+      "type": "function",
+      "name": "mappingRow",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "lineRange": [
+        87,
+        98
+      ],
+      "summary": "Implémente l’opération `mappingRow` dans le module `wheel_controls.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:slotCard",
+      "type": "function",
+      "name": "slotCard",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "lineRange": [
+        100,
+        130
+      ],
+      "summary": "Implémente l’opération `slotCard` dans le module `wheel_controls.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:controllerSlotCard",
+      "type": "function",
+      "name": "controllerSlotCard",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "lineRange": [
+        132,
+        190
+      ],
+      "summary": "Implémente l’opération `controllerSlotCard` dans le module `wheel_controls.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:testPanel",
+      "type": "function",
+      "name": "testPanel",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "lineRange": [
+        202,
+        222
+      ],
+      "summary": "Implémente l’opération `testPanel` dans le module `wheel_controls.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:deviceRow",
+      "type": "function",
+      "name": "deviceRow",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "lineRange": [
+        224,
+        241
+      ],
+      "summary": "Implémente l’opération `deviceRow` dans le module `wheel_controls.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:WheelControls",
+      "type": "function",
+      "name": "WheelControls",
+      "filePath": "starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "lineRange": [
+        243,
+        311
+      ],
+      "summary": "Construit le rendu ou composant fourni par `WheelControls` dans le module `wheel_controls.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "type": "file",
+      "name": "FeatureHelp.js",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "summary": "Crée une boîte de dialogue d’aide accessible et injecte ses styles pour afficher les explications détaillées des fonctions Galaxy.",
+      "tags": [
+        "galaxy",
+        "frontend",
+        "aide",
+        "dialogue"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js:installStyle",
+      "type": "function",
+      "name": "installStyle",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "lineRange": [
+        3,
+        18
+      ],
+      "summary": "Construit le rendu ou composant fourni par `installStyle` dans le module `FeatureHelp.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js:openGalaxyHelpDialog",
+      "type": "function",
+      "name": "openGalaxyHelpDialog",
+      "filePath": "starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "lineRange": [
+        20,
+        92
+      ],
+      "summary": "Construit le rendu ou composant fourni par `openGalaxyHelpDialog` dans le module `FeatureHelp.js` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "galaxy",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "type": "file",
+      "name": "flm_workspace.py",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "summary": "Gère l’espace de travail FLM : analyse de routes, diagnostic du comportement latéral, recommandations, profils d’essai, feedback et tunes persistants.",
+      "tags": [
+        "flm",
+        "tuning",
+        "analyse-route",
+        "profil",
+        "workspace"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_get_galaxy_dir",
+      "type": "function",
+      "name": "_get_galaxy_dir",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        178,
+        179
+      ],
+      "summary": "Récupère ou résout les données de `_get_galaxy_dir` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:get_flm_workspace_root",
+      "type": "function",
+      "name": "get_flm_workspace_root",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        182,
+        183
+      ],
+      "summary": "Récupère ou résout les données de `get_flm_workspace_root` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_legacy_workspace_root",
+      "type": "function",
+      "name": "_legacy_workspace_root",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        186,
+        187
+      ],
+      "summary": "Implémente l’opération `_legacy_workspace_root` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_migrate_legacy_payload",
+      "type": "function",
+      "name": "_migrate_legacy_payload",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        190,
+        208
+      ],
+      "summary": "Exécute le flux piloté par `_migrate_legacy_payload` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_migrate_legacy_workspace",
+      "type": "function",
+      "name": "_migrate_legacy_workspace",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        211,
+        252
+      ],
+      "summary": "Exécute le flux piloté par `_migrate_legacy_workspace` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_workspace_paths",
+      "type": "function",
+      "name": "_workspace_paths",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        255,
+        265
+      ],
+      "summary": "Implémente l’opération `_workspace_paths` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:ensure_flm_workspace",
+      "type": "function",
+      "name": "ensure_flm_workspace",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        268,
+        277
+      ],
+      "summary": "Implémente l’opération `ensure_flm_workspace` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_read_json",
+      "type": "function",
+      "name": "_read_json",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        280,
+        284
+      ],
+      "summary": "Récupère ou résout les données de `_read_json` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_write_json",
+      "type": "function",
+      "name": "_write_json",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        287,
+        291
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_write_json` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_progress_path",
+      "type": "function",
+      "name": "_progress_path",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        294,
+        295
+      ],
+      "summary": "Implémente l’opération `_progress_path` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_record_cleanup_progress",
+      "type": "function",
+      "name": "_record_cleanup_progress",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        298,
+        314
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_record_cleanup_progress` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_cleanup_progress_locked",
+      "type": "function",
+      "name": "_cleanup_progress_locked",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        317,
+        341
+      ],
+      "summary": "Convertit ou formate les données de `_cleanup_progress_locked` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_worker_env",
+      "type": "function",
+      "name": "_worker_env",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        344,
+        358
+      ],
+      "summary": "Implémente l’opération `_worker_env` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:read_flm_status",
+      "type": "function",
+      "name": "read_flm_status",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        361,
+        363
+      ],
+      "summary": "Récupère ou résout les données de `read_flm_status` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_write_flm_status",
+      "type": "function",
+      "name": "_write_flm_status",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        366,
+        371
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_write_flm_status` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:clear_flm_status",
+      "type": "function",
+      "name": "clear_flm_status",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        374,
+        380
+      ],
+      "summary": "Exécute le flux piloté par `clear_flm_status` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_require_flm_offroad",
+      "type": "function",
+      "name": "_require_flm_offroad",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        383,
+        386
+      ],
+      "summary": "Implémente l’opération `_require_flm_offroad` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_require_flm_lane_centering_off",
+      "type": "function",
+      "name": "_require_flm_lane_centering_off",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        389,
+        392
+      ],
+      "summary": "Implémente l’opération `_require_flm_lane_centering_off` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:flm_analyzer_running",
+      "type": "function",
+      "name": "flm_analyzer_running",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        395,
+        417
+      ],
+      "summary": "Implémente l’opération `flm_analyzer_running` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_terminate_flm_process",
+      "type": "function",
+      "name": "_terminate_flm_process",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        420,
+        442
+      ],
+      "summary": "Exécute le flux piloté par `_terminate_flm_process` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_write_flm_cancelled_status",
+      "type": "function",
+      "name": "_write_flm_cancelled_status",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        445,
+        452
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_write_flm_cancelled_status` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:stop_flm_background_analysis",
+      "type": "function",
+      "name": "stop_flm_background_analysis",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        455,
+        493
+      ],
+      "summary": "Exécute le flux piloté par `stop_flm_background_analysis` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_watch_flm_process_for_onroad",
+      "type": "function",
+      "name": "_watch_flm_process_for_onroad",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        496,
+        502
+      ],
+      "summary": "Implémente l’opération `_watch_flm_process_for_onroad` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_watch_flm_worker_for_onroad",
+      "type": "function",
+      "name": "_watch_flm_worker_for_onroad",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        505,
+        518
+      ],
+      "summary": "Implémente l’opération `_watch_flm_worker_for_onroad` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:cancel_flm_if_onroad",
+      "type": "function",
+      "name": "cancel_flm_if_onroad",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        521,
+        526
+      ],
+      "summary": "Évalue la condition portée par `cancel_flm_if_onroad` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_optional_segment_number",
+      "type": "function",
+      "name": "_optional_segment_number",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        529,
+        535
+      ],
+      "summary": "Implémente l’opération `_optional_segment_number` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:normalize_segment_ranges",
+      "type": "function",
+      "name": "normalize_segment_ranges",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        538,
+        554
+      ],
+      "summary": "Normalise ou valide les données de `normalize_segment_ranges` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:selected_segment_count",
+      "type": "function",
+      "name": "selected_segment_count",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        557,
+        582
+      ],
+      "summary": "Récupère ou résout les données de `selected_segment_count` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:enforce_segment_limit",
+      "type": "function",
+      "name": "enforce_segment_limit",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        585,
+        590
+      ],
+      "summary": "Normalise ou valide les données de `enforce_segment_limit` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:start_flm_background_analysis",
+      "type": "function",
+      "name": "start_flm_background_analysis",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        593,
+        665
+      ],
+      "summary": "Exécute le flux piloté par `start_flm_background_analysis` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_parse_segment_num",
+      "type": "function",
+      "name": "_parse_segment_num",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        668,
+        672
+      ],
+      "summary": "Convertit ou formate les données de `_parse_segment_num` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:resolve_route_sources",
+      "type": "function",
+      "name": "resolve_route_sources",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        675,
+        732
+      ],
+      "summary": "Récupère ou résout les données de `resolve_route_sources` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_speed_band_label",
+      "type": "function",
+      "name": "_speed_band_label",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        735,
+        742
+      ],
+      "summary": "Implémente l’opération `_speed_band_label` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_route_label",
+      "type": "function",
+      "name": "_route_label",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        745,
+        746
+      ],
+      "summary": "Traite la requête associée à `_route_label` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "api",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_event_direction",
+      "type": "function",
+      "name": "_event_direction",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        749,
+        755
+      ],
+      "summary": "Implémente l’opération `_event_direction` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_group_masked_events",
+      "type": "function",
+      "name": "_group_masked_events",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        758,
+        789
+      ],
+      "summary": "Construit la représentation produite par `_group_masked_events` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_analysis_eligibility_mask",
+      "type": "function",
+      "name": "_analysis_eligibility_mask",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        792,
+        822
+      ],
+      "summary": "Implémente l’opération `_analysis_eligibility_mask` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_build_plot_data",
+      "type": "function",
+      "name": "_build_plot_data",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        825,
+        879
+      ],
+      "summary": "Construit la représentation produite par `_build_plot_data` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_build_plot_svg",
+      "type": "function",
+      "name": "_build_plot_svg",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        882,
+        912
+      ],
+      "summary": "Construit la représentation produite par `_build_plot_svg` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_decode_init_param",
+      "type": "function",
+      "name": "_decode_init_param",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        915,
+        925
+      ],
+      "summary": "Convertit ou formate les données de `_decode_init_param` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_init_param_enabled",
+      "type": "function",
+      "name": "_init_param_enabled",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        928,
+        929
+      ],
+      "summary": "Implémente l’opération `_init_param_enabled` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_car_params_control_path",
+      "type": "function",
+      "name": "_car_params_control_path",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        932,
+        939
+      ],
+      "summary": "Implémente l’opération `_car_params_control_path` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_effective_control_path",
+      "type": "function",
+      "name": "_effective_control_path",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        942,
+        956
+      ],
+      "summary": "Implémente l’opération `_effective_control_path` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_effective_torque_car_params",
+      "type": "function",
+      "name": "_effective_torque_car_params",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        959,
+        970
+      ],
+      "summary": "Implémente l’opération `_effective_torque_car_params` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_segment_samples",
+      "type": "function",
+      "name": "_segment_samples",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        973,
+        1058
+      ],
+      "summary": "Implémente l’opération `_segment_samples` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_segment_samples_with_timeout",
+      "type": "function",
+      "name": "_segment_samples_with_timeout",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1061,
+        1085
+      ],
+      "summary": "Implémente l’opération `_segment_samples_with_timeout` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_param_state",
+      "type": "function",
+      "name": "_current_param_state",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1088,
+        1108
+      ],
+      "summary": "Récupère ou résout les données de `_current_param_state` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_stock_param_state",
+      "type": "function",
+      "name": "_stock_param_state",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1111,
+        1134
+      ],
+      "summary": "Implémente l’opération `_stock_param_state` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_nonlinear_torque_map",
+      "type": "function",
+      "name": "_nonlinear_torque_map",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1137,
+        1167
+      ],
+      "summary": "Implémente l’opération `_nonlinear_torque_map` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_baseline_family_curve",
+      "type": "function",
+      "name": "_baseline_family_curve",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1170,
+        1176
+      ],
+      "summary": "Implémente l’opération `_baseline_family_curve` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_family_curve",
+      "type": "function",
+      "name": "_current_family_curve",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1179,
+        1188
+      ],
+      "summary": "Récupère ou résout les données de `_current_family_curve` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_center_chatter_friction_adjustment",
+      "type": "function",
+      "name": "_center_chatter_friction_adjustment",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1215,
+        1230
+      ],
+      "summary": "Implémente l’opération `_center_chatter_friction_adjustment` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_center_chatter_threshold_pass_applied",
+      "type": "function",
+      "name": "_center_chatter_threshold_pass_applied",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1233,
+        1243
+      ],
+      "summary": "Implémente l’opération `_center_chatter_threshold_pass_applied` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_center_chatter_deadband_adjustment",
+      "type": "function",
+      "name": "_center_chatter_deadband_adjustment",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1246,
+        1260
+      ],
+      "summary": "Implémente l’opération `_center_chatter_deadband_adjustment` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_direction_reversal_count",
+      "type": "function",
+      "name": "_direction_reversal_count",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1263,
+        1270
+      ],
+      "summary": "Implémente l’opération `_direction_reversal_count` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_clamp",
+      "type": "function",
+      "name": "_clamp",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1273,
+        1274
+      ],
+      "summary": "Calcule la valeur retournée par `_clamp` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_round_to_precision",
+      "type": "function",
+      "name": "_round_to_precision",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1277,
+        1281
+      ],
+      "summary": "Calcule la valeur retournée par `_round_to_precision` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_vehicle_knob_value",
+      "type": "function",
+      "name": "_current_vehicle_knob_value",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1284,
+        1294
+      ],
+      "summary": "Récupère ou résout les données de `_current_vehicle_knob_value` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_vehicle_knob_adjustment",
+      "type": "function",
+      "name": "_vehicle_knob_adjustment",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1297,
+        1313
+      ],
+      "summary": "Implémente l’opération `_vehicle_knob_adjustment` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_rich_profile_supports_knob",
+      "type": "function",
+      "name": "_rich_profile_supports_knob",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1316,
+        1320
+      ],
+      "summary": "Implémente l’opération `_rich_profile_supports_knob` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_build_event_summaries",
+      "type": "function",
+      "name": "_build_event_summaries",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1323,
+        1510
+      ],
+      "summary": "Construit la représentation produite par `_build_event_summaries` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_summaries_from_events",
+      "type": "function",
+      "name": "_summaries_from_events",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1513,
+        1555
+      ],
+      "summary": "Implémente l’opération `_summaries_from_events` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:classify_torque_samples",
+      "type": "function",
+      "name": "classify_torque_samples",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1558,
+        1559
+      ],
+      "summary": "Implémente l’opération `classify_torque_samples` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_primary_delta_from_summary",
+      "type": "function",
+      "name": "_primary_delta_from_summary",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1562,
+        1759
+      ],
+      "summary": "Implémente l’opération `_primary_delta_from_summary` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_observed_behavior",
+      "type": "function",
+      "name": "_observed_behavior",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1762,
+        1780
+      ],
+      "summary": "Implémente l’opération `_observed_behavior` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_likely_interpretation",
+      "type": "function",
+      "name": "_likely_interpretation",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1783,
+        1818
+      ],
+      "summary": "Implémente l’opération `_likely_interpretation` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_why_this_knob",
+      "type": "function",
+      "name": "_why_this_knob",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1821,
+        1852
+      ],
+      "summary": "Implémente l’opération `_why_this_knob` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_render_adjustment_line",
+      "type": "function",
+      "name": "_render_adjustment_line",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1855,
+        1862
+      ],
+      "summary": "Construit le rendu ou composant fourni par `_render_adjustment_line` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_what_not_to_touch_yet",
+      "type": "function",
+      "name": "_what_not_to_touch_yet",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1865,
+        1880
+      ],
+      "summary": "Implémente l’opération `_what_not_to_touch_yet` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_if_that_was_wrong",
+      "type": "function",
+      "name": "_if_that_was_wrong",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1883,
+        1897
+      ],
+      "summary": "Implémente l’opération `_if_that_was_wrong` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_log_support",
+      "type": "function",
+      "name": "_log_support",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1900,
+        1912
+      ],
+      "summary": "Implémente l’opération `_log_support` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:build_suggestions",
+      "type": "function",
+      "name": "build_suggestions",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1915,
+        1980
+      ],
+      "summary": "Construit la représentation produite par `build_suggestions` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_clamp_generic_param",
+      "type": "function",
+      "name": "_clamp_generic_param",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1983,
+        1985
+      ],
+      "summary": "Calcule la valeur retournée par `_clamp_generic_param` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_merge_primary_adjustments",
+      "type": "function",
+      "name": "_merge_primary_adjustments",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        1988,
+        2072
+      ],
+      "summary": "Construit la représentation produite par `_merge_primary_adjustments` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_resolve_conflicting_actionable_suggestions",
+      "type": "function",
+      "name": "_resolve_conflicting_actionable_suggestions",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2075,
+        2124
+      ],
+      "summary": "Récupère ou résout les données de `_resolve_conflicting_actionable_suggestions` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_bucket_tuning_family",
+      "type": "function",
+      "name": "_bucket_tuning_family",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2127,
+        2134
+      ],
+      "summary": "Implémente l’opération `_bucket_tuning_family` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_select_primary_tuning_path_unlocked",
+      "type": "function",
+      "name": "_select_primary_tuning_path_unlocked",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2137,
+        2211
+      ],
+      "summary": "Implémente l’opération `_select_primary_tuning_path_unlocked` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:select_primary_tuning_path",
+      "type": "function",
+      "name": "select_primary_tuning_path",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2214,
+        2239
+      ],
+      "summary": "Implémente l’opération `select_primary_tuning_path` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:build_trial_profiles",
+      "type": "function",
+      "name": "build_trial_profiles",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2242,
+        2289
+      ],
+      "summary": "Construit la représentation produite par `build_trial_profiles` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_add_parameters_start_here",
+      "type": "function",
+      "name": "_add_parameters_start_here",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2292,
+        2306
+      ],
+      "summary": "Implémente l’opération `_add_parameters_start_here` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:build_recommendation_paths",
+      "type": "function",
+      "name": "build_recommendation_paths",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2309,
+        2335
+      ],
+      "summary": "Construit la représentation produite par `build_recommendation_paths` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_render_report_html",
+      "type": "function",
+      "name": "_render_report_html",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2338,
+        2452
+      ],
+      "summary": "Construit le rendu ou composant fourni par `_render_report_html` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "rendu",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:analyze_routes",
+      "type": "function",
+      "name": "analyze_routes",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2455,
+        2740
+      ],
+      "summary": "Implémente l’opération `analyze_routes` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:load_report",
+      "type": "function",
+      "name": "load_report",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2743,
+        2751
+      ],
+      "summary": "Récupère ou résout les données de `load_report` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:select_report_path",
+      "type": "function",
+      "name": "select_report_path",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2754,
+        2778
+      ],
+      "summary": "Implémente l’opération `select_report_path` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_active_trial_display_state",
+      "type": "function",
+      "name": "_active_trial_display_state",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2781,
+        2810
+      ],
+      "summary": "Récupère ou résout les données de `_active_trial_display_state` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_car_identity",
+      "type": "function",
+      "name": "_current_car_identity",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2813,
+        2825
+      ],
+      "summary": "Récupère ou résout les données de `_current_car_identity` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_normalize_saved_tune_name",
+      "type": "function",
+      "name": "_normalize_saved_tune_name",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2828,
+        2834
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_saved_tune_name` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_normalize_discord_username",
+      "type": "function",
+      "name": "_normalize_discord_username",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2837,
+        2845
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_discord_username` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_saved_tune_car_name",
+      "type": "function",
+      "name": "_saved_tune_car_name",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2848,
+        2850
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_saved_tune_car_name` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_load_saved_tune",
+      "type": "function",
+      "name": "_load_saved_tune",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2853,
+        2858
+      ],
+      "summary": "Récupère ou résout les données de `_load_saved_tune` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:list_saved_tunes",
+      "type": "function",
+      "name": "list_saved_tunes",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2861,
+        2883
+      ],
+      "summary": "Récupère ou résout les données de `list_saved_tunes` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:list_workspace",
+      "type": "function",
+      "name": "list_workspace",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2886,
+        2946
+      ],
+      "summary": "Récupère ou résout les données de `list_workspace` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:delete_report",
+      "type": "function",
+      "name": "delete_report",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2949,
+        2985
+      ],
+      "summary": "Exécute le flux piloté par `delete_report` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:clear_workspace",
+      "type": "function",
+      "name": "clear_workspace",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        2988,
+        3022
+      ],
+      "summary": "Exécute le flux piloté par `clear_workspace` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_snapshot_current_trial_state",
+      "type": "function",
+      "name": "_snapshot_current_trial_state",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3025,
+        3036
+      ],
+      "summary": "Récupère ou résout les données de `_snapshot_current_trial_state` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_read_persistent_trial_baseline",
+      "type": "function",
+      "name": "_read_persistent_trial_baseline",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3039,
+        3050
+      ],
+      "summary": "Récupère ou résout les données de `_read_persistent_trial_baseline` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_persist_trial_baseline",
+      "type": "function",
+      "name": "_persist_trial_baseline",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3053,
+        3055
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_persist_trial_baseline` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_clear_persistent_trial_baseline",
+      "type": "function",
+      "name": "_clear_persistent_trial_baseline",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3058,
+        3059
+      ],
+      "summary": "Exécute le flux piloté par `_clear_persistent_trial_baseline` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_profile_report_id",
+      "type": "function",
+      "name": "_profile_report_id",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3062,
+        3063
+      ],
+      "summary": "Implémente l’opération `_profile_report_id` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_recover_report_baseline",
+      "type": "function",
+      "name": "_recover_report_baseline",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3066,
+        3103
+      ],
+      "summary": "Implémente l’opération `_recover_report_baseline` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_apply_param_bundle",
+      "type": "function",
+      "name": "_apply_param_bundle",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3106,
+        3118
+      ],
+      "summary": "Exécute le flux piloté par `_apply_param_bundle` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_merge_flm_override_state",
+      "type": "function",
+      "name": "_merge_flm_override_state",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3121,
+        3135
+      ],
+      "summary": "Construit la représentation produite par `_merge_flm_override_state` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_find_revert_snapshot",
+      "type": "function",
+      "name": "_find_revert_snapshot",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3138,
+        3168
+      ],
+      "summary": "Récupère ou résout les données de `_find_revert_snapshot` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_active_trial_adjustments",
+      "type": "function",
+      "name": "_active_trial_adjustments",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3171,
+        3218
+      ],
+      "summary": "Récupère ou résout les données de `_active_trial_adjustments` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:_active_trial_car_fingerprint",
+      "type": "function",
+      "name": "_active_trial_car_fingerprint",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3221,
+        3227
+      ],
+      "summary": "Récupère ou résout les données de `_active_trial_car_fingerprint` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:save_active_trial_as_tune",
+      "type": "function",
+      "name": "save_active_trial_as_tune",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3230,
+        3289
+      ],
+      "summary": "Enregistre ou publie l’état produit par `save_active_trial_as_tune` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:submit_saved_tune",
+      "type": "function",
+      "name": "submit_saved_tune",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3292,
+        3327
+      ],
+      "summary": "Exécute le flux piloté par `submit_saved_tune` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:apply_saved_tune",
+      "type": "function",
+      "name": "apply_saved_tune",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3330,
+        3415
+      ],
+      "summary": "Exécute le flux piloté par `apply_saved_tune` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:rename_saved_tune",
+      "type": "function",
+      "name": "rename_saved_tune",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3418,
+        3434
+      ],
+      "summary": "Exécute le flux piloté par `rename_saved_tune` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:delete_saved_tune",
+      "type": "function",
+      "name": "delete_saved_tune",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3437,
+        3452
+      ],
+      "summary": "Exécute le flux piloté par `delete_saved_tune` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:apply_trial_profile",
+      "type": "function",
+      "name": "apply_trial_profile",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3455,
+        3552
+      ],
+      "summary": "Exécute le flux piloté par `apply_trial_profile` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:revert_trial_profile",
+      "type": "function",
+      "name": "revert_trial_profile",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3555,
+        3586
+      ],
+      "summary": "Exécute le flux piloté par `revert_trial_profile` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:accept_trial_as_baseline",
+      "type": "function",
+      "name": "accept_trial_as_baseline",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3589,
+        3606
+      ],
+      "summary": "Exécute le flux piloté par `accept_trial_as_baseline` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:record_feedback",
+      "type": "function",
+      "name": "record_feedback",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3609,
+        3650
+      ],
+      "summary": "Enregistre ou publie l’état produit par `record_feedback` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:run_worker",
+      "type": "function",
+      "name": "run_worker",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3653,
+        3712
+      ],
+      "summary": "Exécute le flux piloté par `run_worker` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/flm_workspace.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        3715,
+        3725
+      ],
+      "summary": "Lance le point d’entrée représenté par `main` dans le module `flm_workspace.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "point-entree",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/the_galaxy/flm_workspace.py:FLMAnalysisCancelled",
+      "type": "class",
+      "name": "FLMAnalysisCancelled",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        53,
+        54
+      ],
+      "summary": "Représente l’erreur spécialisée `FLMAnalysisCancelled` utilisée par le module `flm_workspace.py` pour interrompre ou signaler proprement son flux.",
+      "tags": [
+        "classe",
+        "gestion-erreur",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/the_galaxy/flm_workspace.py:FLMSegmentTimeout",
+      "type": "class",
+      "name": "FLMSegmentTimeout",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        57,
+        58
+      ],
+      "summary": "Représente l’erreur spécialisée `FLMSegmentTimeout` utilisée par le module `flm_workspace.py` pour interrompre ou signaler proprement son flux.",
+      "tags": [
+        "classe",
+        "gestion-erreur",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/the_galaxy/flm_workspace.py:RouteSource",
+      "type": "class",
+      "name": "RouteSource",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        143,
+        149
+      ],
+      "summary": "Structure les données `RouteSource` manipulées par le module `flm_workspace.py` pendant son traitement.",
+      "tags": [
+        "classe",
+        "etat",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/the_galaxy/flm_workspace.py:FLMSample",
+      "type": "class",
+      "name": "FLMSample",
+      "filePath": "starpilot/system/the_galaxy/flm_workspace.py",
+      "lineRange": [
+        153,
+        175
+      ],
+      "summary": "Structure les données `FLMSample` manipulées par le module `flm_workspace.py` pendant son traitement.",
+      "tags": [
+        "classe",
+        "etat",
+        "flm",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "type": "file",
+      "name": "longitudinal_mode.py",
+      "filePath": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "summary": "Expose un adaptateur transactionnel pour lire et modifier les modes longitudinaux Galaxy sous verrou, avec détection des conflits et snapshots cohérents.",
+      "tags": [
+        "galaxy",
+        "controle-longitudinal",
+        "api",
+        "verrouillage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/longitudinal_mode.py:selected_mode",
+      "type": "function",
+      "name": "selected_mode",
+      "filePath": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "lineRange": [
+        25,
+        30
+      ],
+      "summary": "Récupère ou résout les données de `selected_mode` dans le module `longitudinal_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/longitudinal_mode.py:lock_reason",
+      "type": "function",
+      "name": "lock_reason",
+      "filePath": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "lineRange": [
+        33,
+        48
+      ],
+      "summary": "Implémente l’opération `lock_reason` dans le module `longitudinal_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "galaxy",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/longitudinal_mode.py:snapshot",
+      "type": "function",
+      "name": "snapshot",
+      "filePath": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "lineRange": [
+        51,
+        56
+      ],
+      "summary": "Récupère ou résout les données de `snapshot` dans le module `longitudinal_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/longitudinal_mode.py:_snapshot",
+      "type": "function",
+      "name": "_snapshot",
+      "filePath": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "lineRange": [
+        59,
+        63
+      ],
+      "summary": "Récupère ou résout les données de `_snapshot` dans le module `longitudinal_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "galaxy",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/longitudinal_mode.py:_write_lock",
+      "type": "function",
+      "name": "_write_lock",
+      "filePath": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "lineRange": [
+        67,
+        72
+      ],
+      "summary": "Enregistre ou publie l’état produit par `_write_lock` dans le module `longitudinal_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "galaxy",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/longitudinal_mode.py:set_mode",
+      "type": "function",
+      "name": "set_mode",
+      "filePath": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "lineRange": [
+        75,
+        112
+      ],
+      "summary": "Enregistre ou publie l’état produit par `set_mode` dans le module `longitudinal_mode.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "galaxy",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/system/the_galaxy/longitudinal_mode.py:ModeError",
+      "type": "class",
+      "name": "ModeError",
+      "filePath": "starpilot/system/the_galaxy/longitudinal_mode.py",
+      "lineRange": [
+        19,
+        22
+      ],
+      "summary": "Représente l’erreur spécialisée `ModeError` utilisée par le module `longitudinal_mode.py` pour interrompre ou signaler proprement son flux.",
+      "tags": [
+        "classe",
+        "gestion-erreur",
+        "galaxy",
+        "controle-longitudinal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:starpilot/system/the_galaxy/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "starpilot/system/the_galaxy/README.md",
+      "summary": "Présente l’architecture de The Galaxy, son API Flask, son frontend Arrow.js sans build et les procédures d’installation, d’exécution et de contribution.",
+      "tags": [
+        "documentation",
+        "galaxy",
+        "api",
+        "frontend"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:refresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:request",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:mappingRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:slotCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:controllerSlotCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:testPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:deviceRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:WheelControls",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js",
+      "target": "function:starpilot/system/the_galaxy/assets/components/tools/wheel_controls.js:WheelControls",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js:installStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js:openGalaxyHelpDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js",
+      "target": "function:starpilot/system/the_galaxy/assets/mobile/js/components/FeatureHelp.js:openGalaxyHelpDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_get_galaxy_dir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_get_galaxy_dir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:get_flm_workspace_root",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:get_flm_workspace_root",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_legacy_workspace_root",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_legacy_workspace_root",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_migrate_legacy_payload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_migrate_legacy_payload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_migrate_legacy_workspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_migrate_legacy_workspace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_workspace_paths",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_workspace_paths",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:ensure_flm_workspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:ensure_flm_workspace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_read_json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_read_json",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_write_json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_write_json",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_progress_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_progress_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_record_cleanup_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_record_cleanup_progress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_cleanup_progress_locked",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_cleanup_progress_locked",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_worker_env",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_worker_env",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:read_flm_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:read_flm_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_write_flm_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_write_flm_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:clear_flm_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:clear_flm_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_require_flm_offroad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_require_flm_offroad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_require_flm_lane_centering_off",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_require_flm_lane_centering_off",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:flm_analyzer_running",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:flm_analyzer_running",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_terminate_flm_process",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_terminate_flm_process",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_write_flm_cancelled_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_write_flm_cancelled_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:stop_flm_background_analysis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:stop_flm_background_analysis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_watch_flm_process_for_onroad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_watch_flm_process_for_onroad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_watch_flm_worker_for_onroad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_watch_flm_worker_for_onroad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:cancel_flm_if_onroad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:cancel_flm_if_onroad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_optional_segment_number",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_optional_segment_number",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:normalize_segment_ranges",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:normalize_segment_ranges",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:selected_segment_count",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:selected_segment_count",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:enforce_segment_limit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:enforce_segment_limit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:start_flm_background_analysis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:start_flm_background_analysis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_parse_segment_num",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_parse_segment_num",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:resolve_route_sources",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:resolve_route_sources",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_speed_band_label",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_speed_band_label",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_route_label",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_route_label",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_event_direction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_event_direction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_group_masked_events",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_group_masked_events",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_analysis_eligibility_mask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_analysis_eligibility_mask",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_build_plot_data",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_build_plot_data",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_build_plot_svg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_build_plot_svg",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_decode_init_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_decode_init_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_init_param_enabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_init_param_enabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_car_params_control_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_car_params_control_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_effective_control_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_effective_control_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_effective_torque_car_params",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_effective_torque_car_params",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_segment_samples",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_segment_samples",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_segment_samples_with_timeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_segment_samples_with_timeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_param_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_param_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_stock_param_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_stock_param_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_nonlinear_torque_map",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_nonlinear_torque_map",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_baseline_family_curve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_baseline_family_curve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_family_curve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_family_curve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_center_chatter_friction_adjustment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_center_chatter_friction_adjustment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_center_chatter_threshold_pass_applied",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_center_chatter_threshold_pass_applied",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_center_chatter_deadband_adjustment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_center_chatter_deadband_adjustment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_direction_reversal_count",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_direction_reversal_count",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_clamp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_clamp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_round_to_precision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_round_to_precision",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_vehicle_knob_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_vehicle_knob_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_vehicle_knob_adjustment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_vehicle_knob_adjustment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_rich_profile_supports_knob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_rich_profile_supports_knob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_build_event_summaries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_build_event_summaries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_summaries_from_events",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_summaries_from_events",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:classify_torque_samples",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:classify_torque_samples",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_primary_delta_from_summary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_primary_delta_from_summary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_observed_behavior",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_observed_behavior",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_likely_interpretation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_likely_interpretation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_why_this_knob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_why_this_knob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_render_adjustment_line",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_render_adjustment_line",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_what_not_to_touch_yet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_what_not_to_touch_yet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_if_that_was_wrong",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_if_that_was_wrong",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_log_support",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_log_support",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:build_suggestions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:build_suggestions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_clamp_generic_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_clamp_generic_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_merge_primary_adjustments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_merge_primary_adjustments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_resolve_conflicting_actionable_suggestions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_resolve_conflicting_actionable_suggestions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_bucket_tuning_family",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_bucket_tuning_family",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_select_primary_tuning_path_unlocked",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_select_primary_tuning_path_unlocked",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:select_primary_tuning_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:select_primary_tuning_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:build_trial_profiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:build_trial_profiles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_add_parameters_start_here",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_add_parameters_start_here",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:build_recommendation_paths",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:build_recommendation_paths",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_render_report_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_render_report_html",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:analyze_routes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:analyze_routes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:load_report",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:load_report",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:select_report_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:select_report_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_active_trial_display_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_active_trial_display_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_car_identity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_current_car_identity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_normalize_saved_tune_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_normalize_saved_tune_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_normalize_discord_username",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_normalize_discord_username",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_saved_tune_car_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_saved_tune_car_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_load_saved_tune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_load_saved_tune",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:list_saved_tunes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:list_saved_tunes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:list_workspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:list_workspace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:delete_report",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:delete_report",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:clear_workspace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:clear_workspace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_snapshot_current_trial_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_snapshot_current_trial_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_read_persistent_trial_baseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_read_persistent_trial_baseline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_persist_trial_baseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_persist_trial_baseline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_clear_persistent_trial_baseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_clear_persistent_trial_baseline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_profile_report_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_profile_report_id",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_recover_report_baseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_recover_report_baseline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_apply_param_bundle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_apply_param_bundle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_merge_flm_override_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_merge_flm_override_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_find_revert_snapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_find_revert_snapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_active_trial_adjustments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_active_trial_adjustments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_active_trial_car_fingerprint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:_active_trial_car_fingerprint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:save_active_trial_as_tune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:save_active_trial_as_tune",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:submit_saved_tune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:submit_saved_tune",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:apply_saved_tune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:apply_saved_tune",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:rename_saved_tune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:rename_saved_tune",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:delete_saved_tune",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:delete_saved_tune",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:apply_trial_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:apply_trial_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:revert_trial_profile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:revert_trial_profile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:accept_trial_as_baseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:accept_trial_as_baseline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:record_feedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:record_feedback",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:run_worker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:run_worker",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "function:starpilot/system/the_galaxy/flm_workspace.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "class:starpilot/system/the_galaxy/flm_workspace.py:FLMAnalysisCancelled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "class:starpilot/system/the_galaxy/flm_workspace.py:FLMAnalysisCancelled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "class:starpilot/system/the_galaxy/flm_workspace.py:FLMSegmentTimeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "class:starpilot/system/the_galaxy/flm_workspace.py:FLMSegmentTimeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "class:starpilot/system/the_galaxy/flm_workspace.py:RouteSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "class:starpilot/system/the_galaxy/flm_workspace.py:RouteSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "class:starpilot/system/the_galaxy/flm_workspace.py:FLMSample",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/flm_workspace.py",
+      "target": "class:starpilot/system/the_galaxy/flm_workspace.py:FLMSample",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:selected_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:selected_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:lock_reason",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:lock_reason",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:snapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:snapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:_snapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:_snapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:_write_lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:_write_lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:set_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "function:starpilot/system/the_galaxy/longitudinal_mode.py:set_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "class:starpilot/system/the_galaxy/longitudinal_mode.py:ModeError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/longitudinal_mode.py",
+      "target": "class:starpilot/system/the_galaxy/longitudinal_mode.py:ModeError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

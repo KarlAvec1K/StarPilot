@@ -1,0 +1,34 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'document:README.md' has no edges (orphan)",
+    "Node 'file:common/params_keys.h' has no edges (orphan)",
+    "Node 'config:pyproject.toml' has no edges (orphan)",
+    "Node 'file:selfdrive/ui/layouts/settings/starpilot/__init__.py' has no edges (orphan)",
+    "Node 'file:selfdrive/ui/onroad/starpilot/__init__.py' has no edges (orphan)",
+    "Node 'file:selfdrive/ui/onroad/starpilot/widgets/__init__.py' has no edges (orphan)",
+    "Node 'config:starpilot/common/assets/device_settings_layout.json' has no edges (orphan)",
+    "Node 'document:starpilot/system/the_galaxy/README.md' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 1917,
+    "totalEdges": 3463,
+    "totalLayers": 8,
+    "tourSteps": 11,
+    "nodeTypes": {
+      "file": 163,
+      "function": 1555,
+      "class": 195,
+      "document": 2,
+      "config": 2
+    },
+    "edgeTypes": {
+      "imports": 51,
+      "contains": 1750,
+      "exports": 1628,
+      "calls": 29,
+      "inherits": 4,
+      "tested_by": 1
+    }
+  }
+}

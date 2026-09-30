@@ -1,0 +1,1356 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/common/maps_catalog.py",
+      "type": "file",
+      "name": "maps_catalog.py",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "summary": "Décrit le catalogue géographique et les cadences de téléchargement des cartes, puis transforme les sélections enregistrées en entrées affichables.",
+      "tags": [
+        "cartographie",
+        "catalogue",
+        "telechargement",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/maps_catalog.py:normalize_schedule_value",
+      "type": "function",
+      "name": "normalize_schedule_value",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "lineRange": [
+        40,
+        58
+      ],
+      "summary": "Normalise ou valide les données de `normalize_schedule_value` dans le module `maps_catalog.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "cartographie",
+        "catalogue"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_catalog.py:schedule_label",
+      "type": "function",
+      "name": "schedule_label",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "lineRange": [
+        61,
+        62
+      ],
+      "summary": "Implémente l’opération `schedule_label` dans le module `maps_catalog.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "cartographie",
+        "catalogue"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_catalog.py:schedule_param_value",
+      "type": "function",
+      "name": "schedule_param_value",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "lineRange": [
+        65,
+        66
+      ],
+      "summary": "Implémente l’opération `schedule_param_value` dans le module `maps_catalog.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "cartographie",
+        "catalogue"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_catalog.py:_sorted_regions",
+      "type": "function",
+      "name": "_sorted_regions",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "lineRange": [
+        69,
+        70
+      ],
+      "summary": "Implémente l’opération `_sorted_regions` dans le module `maps_catalog.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "cartographie",
+        "catalogue"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_catalog.py:get_maps_catalog",
+      "type": "function",
+      "name": "get_maps_catalog",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "lineRange": [
+        73,
+        98
+      ],
+      "summary": "Récupère ou résout les données de `get_maps_catalog` dans le module `maps_catalog.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "cartographie",
+        "catalogue"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_catalog.py:get_selected_map_tokens",
+      "type": "function",
+      "name": "get_selected_map_tokens",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "lineRange": [
+        111,
+        113
+      ],
+      "summary": "Récupère ou résout les données de `get_selected_map_tokens` dans le module `maps_catalog.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "cartographie",
+        "catalogue"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_catalog.py:sanitize_selected_locations_csv",
+      "type": "function",
+      "name": "sanitize_selected_locations_csv",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "lineRange": [
+        116,
+        125
+      ],
+      "summary": "Normalise ou valide les données de `sanitize_selected_locations_csv` dans le module `maps_catalog.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "cartographie",
+        "catalogue"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_catalog.py:get_selected_map_entries",
+      "type": "function",
+      "name": "get_selected_map_entries",
+      "filePath": "starpilot/common/maps_catalog.py",
+      "lineRange": [
+        128,
+        132
+      ],
+      "summary": "Récupère ou résout les données de `get_selected_map_entries` dans le module `maps_catalog.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "cartographie",
+        "catalogue"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/maps_download_progress.py",
+      "type": "file",
+      "name": "maps_download_progress.py",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "summary": "Estime la taille et la durée des téléchargements cartographiques et maintient un cache réconcilié de l’espace occupé par chaque sélection.",
+      "tags": [
+        "cartographie",
+        "progression",
+        "cache",
+        "stockage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/maps_download_progress.py:nonnegative_int",
+      "type": "function",
+      "name": "nonnegative_int",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "lineRange": [
+        7,
+        11
+      ],
+      "summary": "Implémente l’opération `nonnegative_int` dans le module `maps_download_progress.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "cartographie",
+        "progression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_download_progress.py:storage_bytes",
+      "type": "function",
+      "name": "storage_bytes",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "lineRange": [
+        14,
+        29
+      ],
+      "summary": "Implémente l’opération `storage_bytes` dans le module `maps_download_progress.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "cartographie",
+        "progression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_download_progress.py:selection_key",
+      "type": "function",
+      "name": "selection_key",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "lineRange": [
+        32,
+        35
+      ],
+      "summary": "Implémente l’opération `selection_key` dans le module `maps_download_progress.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "cartographie",
+        "progression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_download_progress.py:estimate_download_bytes",
+      "type": "function",
+      "name": "estimate_download_bytes",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "lineRange": [
+        38,
+        44
+      ],
+      "summary": "Calcule la valeur retournée par `estimate_download_bytes` dans le module `maps_download_progress.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "cartographie",
+        "progression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_download_progress.py:estimate_eta_seconds",
+      "type": "function",
+      "name": "estimate_eta_seconds",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "lineRange": [
+        47,
+        52
+      ],
+      "summary": "Calcule la valeur retournée par `estimate_eta_seconds` dans le module `maps_download_progress.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "cartographie",
+        "progression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_download_progress.py:estimate_file_eta_seconds",
+      "type": "function",
+      "name": "estimate_file_eta_seconds",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "lineRange": [
+        55,
+        61
+      ],
+      "summary": "Calcule la valeur retournée par `estimate_file_eta_seconds` dans le module `maps_download_progress.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "cartographie",
+        "progression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_download_progress.py:load_size_cache",
+      "type": "function",
+      "name": "load_size_cache",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "lineRange": [
+        64,
+        73
+      ],
+      "summary": "Récupère ou résout les données de `load_size_cache` dans le module `maps_download_progress.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "cartographie",
+        "progression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_download_progress.py:load_maps_storage_cache",
+      "type": "function",
+      "name": "load_maps_storage_cache",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "lineRange": [
+        148,
+        158
+      ],
+      "summary": "Récupère ou résout les données de `load_maps_storage_cache` dans le module `maps_download_progress.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "cartographie",
+        "progression"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:starpilot/common/maps_download_progress.py:MapsStorageCache",
+      "type": "class",
+      "name": "MapsStorageCache",
+      "filePath": "starpilot/common/maps_download_progress.py",
+      "lineRange": [
+        81,
+        145
+      ],
+      "summary": "Regroupe l’état et le comportement de `MapsStorageCache` dans le module `maps_download_progress.py`, avec 9 méthode(s) structurantes.",
+      "tags": [
+        "classe",
+        "etat",
+        "cartographie",
+        "progression"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:starpilot/common/maps_selection.py",
+      "type": "file",
+      "name": "maps_selection.py",
+      "filePath": "starpilot/common/maps_selection.py",
+      "summary": "Normalise les sélections cartographiques actuelles et historiques vers des identifiants de pays ou d’États américains stables.",
+      "tags": [
+        "cartographie",
+        "normalisation",
+        "compatibilite",
+        "selection"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/maps_selection.py:_normalize_json_selection",
+      "type": "function",
+      "name": "_normalize_json_selection",
+      "filePath": "starpilot/common/maps_selection.py",
+      "lineRange": [
+        39,
+        54
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_json_selection` dans le module `maps_selection.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "cartographie",
+        "normalisation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_selection.py:normalize_map_token",
+      "type": "function",
+      "name": "normalize_map_token",
+      "filePath": "starpilot/common/maps_selection.py",
+      "lineRange": [
+        57,
+        75
+      ],
+      "summary": "Normalise ou valide les données de `normalize_map_token` dans le module `maps_selection.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "cartographie",
+        "normalisation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/maps_selection.py:normalize_maps_selected",
+      "type": "function",
+      "name": "normalize_maps_selected",
+      "filePath": "starpilot/common/maps_selection.py",
+      "lineRange": [
+        78,
+        97
+      ],
+      "summary": "Normalise ou valide les données de `normalize_maps_selected` dans le module `maps_selection.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "cartographie",
+        "normalisation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/model_lab.py",
+      "type": "file",
+      "name": "model_lab.py",
+      "filePath": "starpilot/common/model_lab.py",
+      "summary": "Valide les paires de modèles latéral et longitudinal du Model Lab et fusionne leurs tenseurs de sortie en une prédiction hybride cohérente.",
+      "tags": [
+        "model-lab",
+        "modele",
+        "validation",
+        "fusion"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:compact_model_lab_label",
+      "type": "function",
+      "name": "compact_model_lab_label",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        38,
+        59
+      ],
+      "summary": "Implémente l’opération `compact_model_lab_label` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:model_lab_pair_display_name",
+      "type": "function",
+      "name": "model_lab_pair_display_name",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        62,
+        65
+      ],
+      "summary": "Implémente l’opération `model_lab_pair_display_name` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:model_lab_pair_display_name_from_params",
+      "type": "function",
+      "name": "model_lab_pair_display_name_from_params",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        68,
+        94
+      ],
+      "summary": "Implémente l’opération `model_lab_pair_display_name_from_params` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:parse_model_version",
+      "type": "function",
+      "name": "parse_model_version",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        99,
+        103
+      ],
+      "summary": "Convertit ou formate les données de `parse_model_version` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:model_lab_version_supported",
+      "type": "function",
+      "name": "model_lab_version_supported",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        106,
+        108
+      ],
+      "summary": "Implémente l’opération `model_lab_version_supported` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:is_small_model_metadata",
+      "type": "function",
+      "name": "is_small_model_metadata",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        111,
+        119
+      ],
+      "summary": "Évalue la condition portée par `is_small_model_metadata` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:model_lab_manifest_eligible",
+      "type": "function",
+      "name": "model_lab_manifest_eligible",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        122,
+        127
+      ],
+      "summary": "Implémente l’opération `model_lab_manifest_eligible` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:normalize_model_lab_config",
+      "type": "function",
+      "name": "normalize_model_lab_config",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        130,
+        145
+      ],
+      "summary": "Normalise ou valide les données de `normalize_model_lab_config` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:load_model_lab_config",
+      "type": "function",
+      "name": "load_model_lab_config",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        148,
+        152
+      ],
+      "summary": "Récupère ou résout les données de `load_model_lab_config` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:validate_model_lab_selection",
+      "type": "function",
+      "name": "validate_model_lab_selection",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        155,
+        188
+      ],
+      "summary": "Normalise ou valide les données de `validate_model_lab_selection` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:_merge_plan_tensor",
+      "type": "function",
+      "name": "_merge_plan_tensor",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        191,
+        198
+      ],
+      "summary": "Construit la représentation produite par `_merge_plan_tensor` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:_merge_action_tensor",
+      "type": "function",
+      "name": "_merge_action_tensor",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        201,
+        208
+      ],
+      "summary": "Construit la représentation produite par `_merge_action_tensor` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:compose_model_outputs",
+      "type": "function",
+      "name": "compose_model_outputs",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        211,
+        254
+      ],
+      "summary": "Construit la représentation produite par `compose_model_outputs` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_lab.py:hybrid_action_values",
+      "type": "function",
+      "name": "hybrid_action_values",
+      "filePath": "starpilot/common/model_lab.py",
+      "lineRange": [
+        257,
+        262
+      ],
+      "summary": "Implémente l’opération `hybrid_action_values` dans le module `model_lab.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "model-lab",
+        "modele"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/model_versions.py",
+      "type": "file",
+      "name": "model_versions.py",
+      "filePath": "starpilot/common/model_versions.py",
+      "summary": "Interprète les versions de modèles et choisit les formats et noms d’artefacts de conduite compatibles avec chaque génération.",
+      "tags": [
+        "modele",
+        "version",
+        "artefact",
+        "compatibilite"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_versions.py:parse_model_version",
+      "type": "function",
+      "name": "parse_model_version",
+      "filePath": "starpilot/common/model_versions.py",
+      "lineRange": [
+        6,
+        14
+      ],
+      "summary": "Convertit ou formate les données de `parse_model_version` dans le module `model_versions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "conversion",
+        "modele",
+        "version"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_versions.py:is_tinygrad_model_version",
+      "type": "function",
+      "name": "is_tinygrad_model_version",
+      "filePath": "starpilot/common/model_versions.py",
+      "lineRange": [
+        17,
+        19
+      ],
+      "summary": "Évalue la condition portée par `is_tinygrad_model_version` dans le module `model_versions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "modele",
+        "version"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_versions.py:uses_split_off_policy_artifacts",
+      "type": "function",
+      "name": "uses_split_off_policy_artifacts",
+      "filePath": "starpilot/common/model_versions.py",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "Évalue la condition portée par `uses_split_off_policy_artifacts` dans le module `model_versions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "modele",
+        "version"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_versions.py:uses_combined_driving_artifacts",
+      "type": "function",
+      "name": "uses_combined_driving_artifacts",
+      "filePath": "starpilot/common/model_versions.py",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "Évalue la condition portée par `uses_combined_driving_artifacts` dans le module `model_versions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "modele",
+        "version"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_versions.py:is_supported_artifact_format",
+      "type": "function",
+      "name": "is_supported_artifact_format",
+      "filePath": "starpilot/common/model_versions.py",
+      "lineRange": [
+        32,
+        35
+      ],
+      "summary": "Évalue la condition portée par `is_supported_artifact_format` dans le module `model_versions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "modele",
+        "version"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/model_versions.py:driving_artifact_filename",
+      "type": "function",
+      "name": "driving_artifact_filename",
+      "filePath": "starpilot/common/model_versions.py",
+      "lineRange": [
+        38,
+        41
+      ],
+      "summary": "Implémente l’opération `driving_artifact_filename` dans le module `model_versions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "modele",
+        "version"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:normalize_schedule_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:normalize_schedule_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:schedule_label",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:schedule_label",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:schedule_param_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:schedule_param_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:_sorted_regions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:_sorted_regions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:get_maps_catalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:get_maps_catalog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:get_selected_map_tokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:get_selected_map_tokens",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:sanitize_selected_locations_csv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:sanitize_selected_locations_csv",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:get_selected_map_entries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_catalog.py",
+      "target": "function:starpilot/common/maps_catalog.py:get_selected_map_entries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:nonnegative_int",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:nonnegative_int",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:storage_bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:storage_bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:selection_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:selection_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:estimate_download_bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:estimate_download_bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:estimate_eta_seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:estimate_eta_seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:estimate_file_eta_seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:estimate_file_eta_seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:load_size_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:load_size_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:load_maps_storage_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "function:starpilot/common/maps_download_progress.py:load_maps_storage_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "class:starpilot/common/maps_download_progress.py:MapsStorageCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_download_progress.py",
+      "target": "class:starpilot/common/maps_download_progress.py:MapsStorageCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_selection.py",
+      "target": "function:starpilot/common/maps_selection.py:_normalize_json_selection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_selection.py",
+      "target": "function:starpilot/common/maps_selection.py:_normalize_json_selection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_selection.py",
+      "target": "function:starpilot/common/maps_selection.py:normalize_map_token",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_selection.py",
+      "target": "function:starpilot/common/maps_selection.py:normalize_map_token",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/maps_selection.py",
+      "target": "function:starpilot/common/maps_selection.py:normalize_maps_selected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/maps_selection.py",
+      "target": "function:starpilot/common/maps_selection.py:normalize_maps_selected",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:compact_model_lab_label",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:compact_model_lab_label",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:model_lab_pair_display_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:model_lab_pair_display_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:model_lab_pair_display_name_from_params",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:model_lab_pair_display_name_from_params",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:parse_model_version",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:parse_model_version",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:model_lab_version_supported",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:model_lab_version_supported",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:is_small_model_metadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:is_small_model_metadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:model_lab_manifest_eligible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:model_lab_manifest_eligible",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:normalize_model_lab_config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:normalize_model_lab_config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:load_model_lab_config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:load_model_lab_config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:validate_model_lab_selection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:validate_model_lab_selection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:_merge_plan_tensor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:_merge_plan_tensor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:_merge_action_tensor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:_merge_action_tensor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:compose_model_outputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:compose_model_outputs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:hybrid_action_values",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_lab.py",
+      "target": "function:starpilot/common/model_lab.py:hybrid_action_values",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:parse_model_version",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:parse_model_version",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:is_tinygrad_model_version",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:is_tinygrad_model_version",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:uses_split_off_policy_artifacts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:uses_split_off_policy_artifacts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:uses_combined_driving_artifacts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:uses_combined_driving_artifacts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:is_supported_artifact_format",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:is_supported_artifact_format",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:driving_artifact_filename",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/model_versions.py",
+      "target": "function:starpilot/common/model_versions.py:driving_artifact_filename",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

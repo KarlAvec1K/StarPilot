@@ -1,0 +1,1248 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "type": "file",
+      "name": "test_device_settings_frontend.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "summary": "Vérifie statiquement que l’interface Device Settings affiche les réglages avancés, respecte le contexte véhicule et conserve les contrôles numériques attendus.",
+      "tags": [
+        "test",
+        "galaxy",
+        "frontend",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:_device_settings",
+      "type": "function",
+      "name": "_device_settings",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        9,
+        10
+      ],
+      "summary": "Implémente l’opération `_device_settings` dans le module `test_device_settings_frontend.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "test",
+        "galaxy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_surfaces_hidden_advanced_settings_count",
+      "type": "function",
+      "name": "test_device_settings_surfaces_hidden_advanced_settings_count",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        13,
+        17
+      ],
+      "summary": "Vérifie le scénario couvert par `test_device_settings_surfaces_hidden_advanced_settings_count` dans la suite `test_device_settings_frontend.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_developer_mode_notice_is_rendered_when_advanced_settings_hidden",
+      "type": "function",
+      "name": "test_developer_mode_notice_is_rendered_when_advanced_settings_hidden",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "Vérifie le scénario couvert par `test_developer_mode_notice_is_rendered_when_advanced_settings_hidden` dans la suite `test_device_settings_frontend.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_developer_mode_notice_navigates_to_developer_section",
+      "type": "function",
+      "name": "test_developer_mode_notice_navigates_to_developer_section",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        28,
+        31
+      ],
+      "summary": "Vérifie le scénario couvert par `test_developer_mode_notice_navigates_to_developer_section` dans la suite `test_device_settings_frontend.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_advanced_settings_hidden_count_shown_in_status_bar",
+      "type": "function",
+      "name": "test_advanced_settings_hidden_count_shown_in_status_bar",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        34,
+        38
+      ],
+      "summary": "Vérifie le scénario couvert par `test_advanced_settings_hidden_count_shown_in_status_bar` dans la suite `test_device_settings_frontend.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_uses_the_params_api_and_layout_json",
+      "type": "function",
+      "name": "test_device_settings_uses_the_params_api_and_layout_json",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        41,
+        46
+      ],
+      "summary": "Vérifie le scénario couvert par `test_device_settings_uses_the_params_api_and_layout_json` dans la suite `test_device_settings_frontend.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_speed_units_follow_the_vehicle",
+      "type": "function",
+      "name": "test_device_settings_speed_units_follow_the_vehicle",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        49,
+        57
+      ],
+      "summary": "Vérifie le scénario couvert par `test_device_settings_speed_units_follow_the_vehicle` dans la suite `test_device_settings_frontend.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_supports_vehicle_make_exclusions",
+      "type": "function",
+      "name": "test_device_settings_supports_vehicle_make_exclusions",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        60,
+        63
+      ],
+      "summary": "Vérifie le scénario couvert par `test_device_settings_supports_vehicle_make_exclusions` dans la suite `test_device_settings_frontend.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_lane_center_offset_can_step_below_zero",
+      "type": "function",
+      "name": "test_lane_center_offset_can_step_below_zero",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        66,
+        71
+      ],
+      "summary": "Vérifie le scénario couvert par `test_lane_center_offset_can_step_below_zero` dans la suite `test_device_settings_frontend.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_developer_mode_notice_has_styles",
+      "type": "function",
+      "name": "test_developer_mode_notice_has_styles",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "lineRange": [
+        74,
+        78
+      ],
+      "summary": "Vérifie le scénario couvert par `test_developer_mode_notice_has_styles` dans la suite `test_device_settings_frontend.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "type": "file",
+      "name": "test_device_settings_layout.py",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "summary": "Valide le layout JSON des réglages Galaxy contre le registre Params, les valeurs par défaut, les groupes et les contraintes de visibilité.",
+      "tags": [
+        "test",
+        "galaxy",
+        "schema",
+        "parametres",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:_layout",
+      "type": "function",
+      "name": "_layout",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        11,
+        12
+      ],
+      "summary": "Implémente l’opération `_layout` dans le module `test_device_settings_layout.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "test",
+        "galaxy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:_params_by_section",
+      "type": "function",
+      "name": "_params_by_section",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        15,
+        19
+      ],
+      "summary": "Implémente l’opération `_params_by_section` dans le module `test_device_settings_layout.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "test",
+        "galaxy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:_declared_default",
+      "type": "function",
+      "name": "_declared_default",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        22,
+        29
+      ],
+      "summary": "Implémente l’opération `_declared_default` dans le module `test_device_settings_layout.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "test",
+        "galaxy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_galaxy_layout_removes_obsolete_and_duplicate_controls",
+      "type": "function",
+      "name": "test_galaxy_layout_removes_obsolete_and_duplicate_controls",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        32,
+        44
+      ],
+      "summary": "Vérifie le scénario couvert par `test_galaxy_layout_removes_obsolete_and_duplicate_controls` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_slc_override_method_is_not_exposed_in_either_settings_ui",
+      "type": "function",
+      "name": "test_slc_override_method_is_not_exposed_in_either_settings_ui",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        47,
+        58
+      ],
+      "summary": "Vérifie le scénario couvert par `test_slc_override_method_is_not_exposed_in_either_settings_ui` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_galaxy_layout_contains_basic_mode_controls",
+      "type": "function",
+      "name": "test_galaxy_layout_contains_basic_mode_controls",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        61,
+        80
+      ],
+      "summary": "Vérifie le scénario couvert par `test_galaxy_layout_contains_basic_mode_controls` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_galaxy_new_ui_is_the_visible_default_choice",
+      "type": "function",
+      "name": "test_galaxy_new_ui_is_the_visible_default_choice",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        83,
+        89
+      ],
+      "summary": "Vérifie le scénario couvert par `test_galaxy_new_ui_is_the_visible_default_choice` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_driving_personality_controls_are_not_parked_only",
+      "type": "function",
+      "name": "test_driving_personality_controls_are_not_parked_only",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        92,
+        111
+      ],
+      "summary": "Vérifie le scénario couvert par `test_driving_personality_controls_are_not_parked_only` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_brake_status_toggle_is_galaxy_only",
+      "type": "function",
+      "name": "test_brake_status_toggle_is_galaxy_only",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        114,
+        120
+      ],
+      "summary": "Vérifie le scénario couvert par `test_brake_status_toggle_is_galaxy_only` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_ford_lateral_controls_are_ford_only_and_galaxy_only",
+      "type": "function",
+      "name": "test_ford_lateral_controls_are_ford_only_and_galaxy_only",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        123,
+        152
+      ],
+      "summary": "Vérifie le scénario couvert par `test_ford_lateral_controls_are_ford_only_and_galaxy_only` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_device_shutdown_uses_literal_hours",
+      "type": "function",
+      "name": "test_device_shutdown_uses_literal_hours",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        155,
+        161
+      ],
+      "summary": "Vérifie le scénario couvert par `test_device_shutdown_uses_literal_hours` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_speed_settings_follow_vehicle_units_with_one_unit_steps",
+      "type": "function",
+      "name": "test_speed_settings_follow_vehicle_units_with_one_unit_steps",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        164,
+        196
+      ],
+      "summary": "Vérifie le scénario couvert par `test_speed_settings_follow_vehicle_units_with_one_unit_steps` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_cruise_controls_are_split_between_toyota_and_software_cruise",
+      "type": "function",
+      "name": "test_cruise_controls_are_split_between_toyota_and_software_cruise",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        199,
+        205
+      ],
+      "summary": "Vérifie le scénario couvert par `test_cruise_controls_are_split_between_toyota_and_software_cruise` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_curve_speed_controller_no_lead_toggle_is_nested_under_csc",
+      "type": "function",
+      "name": "test_curve_speed_controller_no_lead_toggle_is_nested_under_csc",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        208,
+        213
+      ],
+      "summary": "Vérifie le scénario couvert par `test_curve_speed_controller_no_lead_toggle_is_nested_under_csc` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_curve_speed_controller_readouts_are_display_only_and_nested",
+      "type": "function",
+      "name": "test_curve_speed_controller_readouts_are_display_only_and_nested",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        216,
+        224
+      ],
+      "summary": "Vérifie le scénario couvert par `test_curve_speed_controller_readouts_are_display_only_and_nested` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_custom_accel_profile_exposes_variable_breakpoints",
+      "type": "function",
+      "name": "test_custom_accel_profile_exposes_variable_breakpoints",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        227,
+        247
+      ],
+      "summary": "Vérifie le scénario couvert par `test_custom_accel_profile_exposes_variable_breakpoints` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_every_galaxy_setting_has_a_shared_settings_tier",
+      "type": "function",
+      "name": "test_every_galaxy_setting_has_a_shared_settings_tier",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        250,
+        259
+      ],
+      "summary": "Vérifie le scénario couvert par `test_every_galaxy_setting_has_a_shared_settings_tier` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_every_setting_parent_exposes_a_manage_control",
+      "type": "function",
+      "name": "test_every_setting_parent_exposes_a_manage_control",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        262,
+        272
+      ],
+      "summary": "Vérifie le scénario couvert par `test_every_setting_parent_exposes_a_manage_control` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_requested_simple_and_advanced_settings_tiers",
+      "type": "function",
+      "name": "test_requested_simple_and_advanced_settings_tiers",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        275,
+        339
+      ],
+      "summary": "Vérifie le scénario couvert par `test_requested_simple_and_advanced_settings_tiers` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_turn_steering_limit_mute_speed_is_galaxy_developer_only",
+      "type": "function",
+      "name": "test_turn_steering_limit_mute_speed_is_galaxy_developer_only",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        342,
+        357
+      ],
+      "summary": "Vérifie le scénario couvert par `test_turn_steering_limit_mute_speed_is_galaxy_developer_only` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_honda_pid_scale_controls_use_galaxy_fine_granularity",
+      "type": "function",
+      "name": "test_honda_pid_scale_controls_use_galaxy_fine_granularity",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        360,
+        367
+      ],
+      "summary": "Vérifie le scénario couvert par `test_honda_pid_scale_controls_use_galaxy_fine_granularity` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_hidden_feature_defaults_remain_enabled",
+      "type": "function",
+      "name": "test_hidden_feature_defaults_remain_enabled",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        370,
+        383
+      ],
+      "summary": "Vérifie le scénario couvert par `test_hidden_feature_defaults_remain_enabled` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_toyota_auto_hold_is_galaxy_only",
+      "type": "function",
+      "name": "test_toyota_auto_hold_is_galaxy_only",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        386,
+        390
+      ],
+      "summary": "Vérifie le scénario couvert par `test_toyota_auto_hold_is_galaxy_only` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_cluster_offset_is_in_galaxy_developer_section_only",
+      "type": "function",
+      "name": "test_cluster_offset_is_in_galaxy_developer_section_only",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        393,
+        416
+      ],
+      "summary": "Vérifie le scénario couvert par `test_cluster_offset_is_in_galaxy_developer_section_only` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_human_acceleration_param_is_removed",
+      "type": "function",
+      "name": "test_human_acceleration_param_is_removed",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        418,
+        420
+      ],
+      "summary": "Vérifie le scénario couvert par `test_human_acceleration_param_is_removed` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_rivian_angle_control_is_harness_gated",
+      "type": "function",
+      "name": "test_rivian_angle_control_is_harness_gated",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        423,
+        431
+      ],
+      "summary": "Vérifie le scénario couvert par `test_rivian_angle_control_is_harness_gated` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_vasm_is_default_off_and_configured_only_in_galaxy",
+      "type": "function",
+      "name": "test_vasm_is_default_off_and_configured_only_in_galaxy",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        434,
+        445
+      ],
+      "summary": "Vérifie le scénario couvert par `test_vasm_is_default_off_and_configured_only_in_galaxy` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_low_vision_limit_filter_is_default_off_and_configured_only_in_galaxy",
+      "type": "function",
+      "name": "test_low_vision_limit_filter_is_default_off_and_configured_only_in_galaxy",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        448,
+        471
+      ],
+      "summary": "Vérifie le scénario couvert par `test_low_vision_limit_filter_is_default_off_and_configured_only_in_galaxy` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_pip_preview_is_under_driving_screen_widgets_and_configured_only_in_galaxy",
+      "type": "function",
+      "name": "test_pip_preview_is_under_driving_screen_widgets_and_configured_only_in_galaxy",
+      "filePath": "starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "lineRange": [
+        474,
+        503
+      ],
+      "summary": "Vérifie le scénario couvert par `test_pip_preview_is_under_driving_screen_widgets_and_configured_only_in_galaxy` dans la suite `test_device_settings_layout.py`.",
+      "tags": [
+        "test",
+        "galaxy",
+        "composant"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:_device_settings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:_device_settings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_surfaces_hidden_advanced_settings_count",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_surfaces_hidden_advanced_settings_count",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_developer_mode_notice_is_rendered_when_advanced_settings_hidden",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_developer_mode_notice_is_rendered_when_advanced_settings_hidden",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_developer_mode_notice_navigates_to_developer_section",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_developer_mode_notice_navigates_to_developer_section",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_advanced_settings_hidden_count_shown_in_status_bar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_advanced_settings_hidden_count_shown_in_status_bar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_uses_the_params_api_and_layout_json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_uses_the_params_api_and_layout_json",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_speed_units_follow_the_vehicle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_speed_units_follow_the_vehicle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_supports_vehicle_make_exclusions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_device_settings_supports_vehicle_make_exclusions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_lane_center_offset_can_step_below_zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_lane_center_offset_can_step_below_zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_developer_mode_notice_has_styles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_frontend.py:test_developer_mode_notice_has_styles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:_layout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:_layout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:_params_by_section",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:_params_by_section",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:_declared_default",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:_declared_default",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_galaxy_layout_removes_obsolete_and_duplicate_controls",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_galaxy_layout_removes_obsolete_and_duplicate_controls",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_slc_override_method_is_not_exposed_in_either_settings_ui",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_slc_override_method_is_not_exposed_in_either_settings_ui",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_galaxy_layout_contains_basic_mode_controls",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_galaxy_layout_contains_basic_mode_controls",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_galaxy_new_ui_is_the_visible_default_choice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_galaxy_new_ui_is_the_visible_default_choice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_driving_personality_controls_are_not_parked_only",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_driving_personality_controls_are_not_parked_only",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_brake_status_toggle_is_galaxy_only",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_brake_status_toggle_is_galaxy_only",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_ford_lateral_controls_are_ford_only_and_galaxy_only",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_ford_lateral_controls_are_ford_only_and_galaxy_only",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_device_shutdown_uses_literal_hours",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_device_shutdown_uses_literal_hours",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_speed_settings_follow_vehicle_units_with_one_unit_steps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_speed_settings_follow_vehicle_units_with_one_unit_steps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_cruise_controls_are_split_between_toyota_and_software_cruise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_cruise_controls_are_split_between_toyota_and_software_cruise",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_curve_speed_controller_no_lead_toggle_is_nested_under_csc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_curve_speed_controller_no_lead_toggle_is_nested_under_csc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_curve_speed_controller_readouts_are_display_only_and_nested",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_curve_speed_controller_readouts_are_display_only_and_nested",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_custom_accel_profile_exposes_variable_breakpoints",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_custom_accel_profile_exposes_variable_breakpoints",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_every_galaxy_setting_has_a_shared_settings_tier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_every_galaxy_setting_has_a_shared_settings_tier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_every_setting_parent_exposes_a_manage_control",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_every_setting_parent_exposes_a_manage_control",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_requested_simple_and_advanced_settings_tiers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_requested_simple_and_advanced_settings_tiers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_turn_steering_limit_mute_speed_is_galaxy_developer_only",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_turn_steering_limit_mute_speed_is_galaxy_developer_only",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_honda_pid_scale_controls_use_galaxy_fine_granularity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_honda_pid_scale_controls_use_galaxy_fine_granularity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_hidden_feature_defaults_remain_enabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_hidden_feature_defaults_remain_enabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_toyota_auto_hold_is_galaxy_only",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_toyota_auto_hold_is_galaxy_only",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_cluster_offset_is_in_galaxy_developer_section_only",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_cluster_offset_is_in_galaxy_developer_section_only",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_human_acceleration_param_is_removed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_human_acceleration_param_is_removed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_rivian_angle_control_is_harness_gated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_rivian_angle_control_is_harness_gated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_vasm_is_default_off_and_configured_only_in_galaxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_vasm_is_default_off_and_configured_only_in_galaxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_low_vision_limit_filter_is_default_off_and_configured_only_in_galaxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_low_vision_limit_filter_is_default_off_and_configured_only_in_galaxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_pip_preview_is_under_driving_screen_widgets_and_configured_only_in_galaxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/system/the_galaxy/tests/test_device_settings_layout.py",
+      "target": "function:starpilot/system/the_galaxy/tests/test_device_settings_layout.py:test_pip_preview_is_under_driving_screen_widgets_and_configured_only_in_galaxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

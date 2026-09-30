@@ -1,0 +1,1932 @@
+{
+  "nodes": [
+    {
+      "id": "file:starpilot/common/connect_server.py",
+      "type": "file",
+      "name": "connect_server.py",
+      "filePath": "starpilot/common/connect_server.py",
+      "summary": "Prépare les bascules entre le serveur stock et Konik en conservant, restaurant ou régénérant l’identifiant de l’appareil dans les Params actifs et leur cache.",
+      "tags": [
+        "serveur",
+        "identite-appareil",
+        "parametres",
+        "synchronisation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/connect_server.py:_cache_params_path",
+      "type": "function",
+      "name": "_cache_params_path",
+      "filePath": "starpilot/common/connect_server.py",
+      "lineRange": [
+        10,
+        11
+      ],
+      "summary": "Implémente l’opération `_cache_params_path` dans le module `connect_server.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "serveur",
+        "identite-appareil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/connect_server.py:_normalize_dongle_id",
+      "type": "function",
+      "name": "_normalize_dongle_id",
+      "filePath": "starpilot/common/connect_server.py",
+      "lineRange": [
+        14,
+        20
+      ],
+      "summary": "Normalise ou valide les données de `_normalize_dongle_id` dans le module `connect_server.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "serveur",
+        "identite-appareil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/connect_server.py:_read_persisted_stock_dongle_id",
+      "type": "function",
+      "name": "_read_persisted_stock_dongle_id",
+      "filePath": "starpilot/common/connect_server.py",
+      "lineRange": [
+        23,
+        27
+      ],
+      "summary": "Récupère ou résout les données de `_read_persisted_stock_dongle_id` dans le module `connect_server.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "serveur",
+        "identite-appareil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/connect_server.py:_remove_param_from_live_and_cache",
+      "type": "function",
+      "name": "_remove_param_from_live_and_cache",
+      "filePath": "starpilot/common/connect_server.py",
+      "lineRange": [
+        30,
+        34
+      ],
+      "summary": "Exécute le flux piloté par `_remove_param_from_live_and_cache` dans le module `connect_server.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "serveur",
+        "identite-appareil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/connect_server.py:prepare_konik_server_switch",
+      "type": "function",
+      "name": "prepare_konik_server_switch",
+      "filePath": "starpilot/common/connect_server.py",
+      "lineRange": [
+        37,
+        42
+      ],
+      "summary": "Exécute le flux piloté par `prepare_konik_server_switch` dans le module `connect_server.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "serveur",
+        "identite-appareil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/connect_server.py:_ensure_stock_dongle_id",
+      "type": "function",
+      "name": "_ensure_stock_dongle_id",
+      "filePath": "starpilot/common/connect_server.py",
+      "lineRange": [
+        45,
+        60
+      ],
+      "summary": "Implémente l’opération `_ensure_stock_dongle_id` dans le module `connect_server.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "serveur",
+        "identite-appareil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/connect_server.py:sync_konik_dongle_id",
+      "type": "function",
+      "name": "sync_konik_dongle_id",
+      "filePath": "starpilot/common/connect_server.py",
+      "lineRange": [
+        63,
+        76
+      ],
+      "summary": "Met à jour l’état géré par `sync_konik_dongle_id` dans le module `connect_server.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "serveur",
+        "identite-appareil"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/controller_actions.py",
+      "type": "file",
+      "name": "controller_actions.py",
+      "filePath": "starpilot/common/controller_actions.py",
+      "summary": "Centralise le catalogue des actions assignables aux favoris et aux contrôleurs externes, ainsi que leurs compteurs et bornes de vitesse.",
+      "tags": [
+        "actions",
+        "controleur",
+        "favoris",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/controller_actions.py:controller_speed_bounds",
+      "type": "function",
+      "name": "controller_speed_bounds",
+      "filePath": "starpilot/common/controller_actions.py",
+      "lineRange": [
+        80,
+        81
+      ],
+      "summary": "Implémente l’opération `controller_speed_bounds` dans le module `controller_actions.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "actions",
+        "controleur"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/cpu_throttle.py",
+      "type": "file",
+      "name": "cpu_throttle.py",
+      "filePath": "starpilot/common/cpu_throttle.py",
+      "summary": "Évalue la charge des cœurs CPU en ligne et produit un facteur de ralentissement stable pour protéger les traitements d’arrière-plan.",
+      "tags": [
+        "cpu",
+        "performance",
+        "limitation",
+        "telemetrie"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/cpu_throttle.py:_online_cpu_count",
+      "type": "function",
+      "name": "_online_cpu_count",
+      "filePath": "starpilot/common/cpu_throttle.py",
+      "lineRange": [
+        17,
+        30
+      ],
+      "summary": "Implémente l’opération `_online_cpu_count` dans le module `cpu_throttle.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "cpu",
+        "performance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/cpu_throttle.py:_online_cpu_usage",
+      "type": "function",
+      "name": "_online_cpu_usage",
+      "filePath": "starpilot/common/cpu_throttle.py",
+      "lineRange": [
+        33,
+        41
+      ],
+      "summary": "Implémente l’opération `_online_cpu_usage` dans le module `cpu_throttle.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "cpu",
+        "performance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/cpu_throttle.py:device_cpu_throttle_factor",
+      "type": "function",
+      "name": "device_cpu_throttle_factor",
+      "filePath": "starpilot/common/cpu_throttle.py",
+      "lineRange": [
+        44,
+        73
+      ],
+      "summary": "Implémente l’opération `device_cpu_throttle_factor` dans le module `cpu_throttle.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "cpu",
+        "performance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/cpu_throttle.py:_compute_throttle_factor",
+      "type": "function",
+      "name": "_compute_throttle_factor",
+      "filePath": "starpilot/common/cpu_throttle.py",
+      "lineRange": [
+        76,
+        79
+      ],
+      "summary": "Calcule la valeur retournée par `_compute_throttle_factor` dans le module `cpu_throttle.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "calcul",
+        "cpu",
+        "performance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/experimental_state.py",
+      "type": "file",
+      "name": "experimental_state.py",
+      "filePath": "starpilot/common/experimental_state.py",
+      "summary": "Normalise, persiste et restaure les états manuels ou conditionnels des modes Experimental et Chill entre les Params persistants et mémoire.",
+      "tags": [
+        "etat",
+        "mode-experimental",
+        "mode-chill",
+        "parametres"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:is_manual_ce_status",
+      "type": "function",
+      "name": "is_manual_ce_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        44,
+        45
+      ],
+      "summary": "Évalue la condition portée par `is_manual_ce_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:is_manual_cc_status",
+      "type": "function",
+      "name": "is_manual_cc_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        48,
+        49
+      ],
+      "summary": "Évalue la condition portée par `is_manual_cc_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:normalize_persisted_ce_status",
+      "type": "function",
+      "name": "normalize_persisted_ce_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        52,
+        54
+      ],
+      "summary": "Normalise ou valide les données de `normalize_persisted_ce_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:normalize_persisted_cc_status",
+      "type": "function",
+      "name": "normalize_persisted_cc_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        57,
+        59
+      ],
+      "summary": "Normalise ou valide les données de `normalize_persisted_cc_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:get_persisted_ce_status",
+      "type": "function",
+      "name": "get_persisted_ce_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        62,
+        63
+      ],
+      "summary": "Récupère ou résout les données de `get_persisted_ce_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:get_persisted_cc_status",
+      "type": "function",
+      "name": "get_persisted_cc_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        66,
+        67
+      ],
+      "summary": "Récupère ou résout les données de `get_persisted_cc_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:set_persisted_ce_status",
+      "type": "function",
+      "name": "set_persisted_ce_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        70,
+        73
+      ],
+      "summary": "Enregistre ou publie l’état produit par `set_persisted_ce_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:set_persisted_cc_status",
+      "type": "function",
+      "name": "set_persisted_cc_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        76,
+        79
+      ],
+      "summary": "Enregistre ou publie l’état produit par `set_persisted_cc_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:clear_persisted_ce_status",
+      "type": "function",
+      "name": "clear_persisted_ce_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        82,
+        83
+      ],
+      "summary": "Exécute le flux piloté par `clear_persisted_ce_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:clear_persisted_cc_status",
+      "type": "function",
+      "name": "clear_persisted_cc_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        86,
+        87
+      ],
+      "summary": "Exécute le flux piloté par `clear_persisted_cc_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:sync_persist_experimental_state",
+      "type": "function",
+      "name": "sync_persist_experimental_state",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        90,
+        96
+      ],
+      "summary": "Met à jour l’état géré par `sync_persist_experimental_state` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:sync_persist_chill_state",
+      "type": "function",
+      "name": "sync_persist_chill_state",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        99,
+        105
+      ],
+      "summary": "Met à jour l’état géré par `sync_persist_chill_state` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:sync_manual_ce_state",
+      "type": "function",
+      "name": "sync_manual_ce_state",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        108,
+        109
+      ],
+      "summary": "Met à jour l’état géré par `sync_manual_ce_state` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:sync_manual_cc_state",
+      "type": "function",
+      "name": "sync_manual_cc_state",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        112,
+        113
+      ],
+      "summary": "Met à jour l’état géré par `sync_manual_cc_state` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "synchronisation",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:clear_and_return_off",
+      "type": "function",
+      "name": "clear_and_return_off",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        116,
+        118
+      ],
+      "summary": "Exécute le flux piloté par `clear_and_return_off` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:clear_cc_and_return_off",
+      "type": "function",
+      "name": "clear_cc_and_return_off",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        121,
+        123
+      ],
+      "summary": "Exécute le flux piloté par `clear_cc_and_return_off` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:next_manual_ce_status",
+      "type": "function",
+      "name": "next_manual_ce_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        126,
+        129
+      ],
+      "summary": "Implémente l’opération `next_manual_ce_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:next_manual_cc_status",
+      "type": "function",
+      "name": "next_manual_cc_status",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        132,
+        135
+      ],
+      "summary": "Implémente l’opération `next_manual_cc_status` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:requested_experimental_mode",
+      "type": "function",
+      "name": "requested_experimental_mode",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        138,
+        156
+      ],
+      "summary": "Exécute le flux piloté par `requested_experimental_mode` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:restore_persisted_ce_state",
+      "type": "function",
+      "name": "restore_persisted_ce_state",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        159,
+        173
+      ],
+      "summary": "Exécute le flux piloté par `restore_persisted_ce_state` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/experimental_state.py:restore_persisted_cc_state",
+      "type": "function",
+      "name": "restore_persisted_cc_state",
+      "filePath": "starpilot/common/experimental_state.py",
+      "lineRange": [
+        176,
+        190
+      ],
+      "summary": "Exécute le flux piloté par `restore_persisted_cc_state` dans le module `experimental_state.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "etat",
+        "mode-experimental"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:starpilot/common/favorite_slots.py",
+      "type": "file",
+      "name": "favorite_slots.py",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "summary": "Construit et valide les emplacements favoris, lit leurs valeurs de Params et exécute de façon contrôlée les réglages ou actions qui leur sont assignés.",
+      "tags": [
+        "favoris",
+        "parametres",
+        "validation",
+        "actions"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:is_param_action_safe_onroad",
+      "type": "function",
+      "name": "is_param_action_safe_onroad",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        85,
+        94
+      ],
+      "summary": "Évalue la condition portée par `is_param_action_safe_onroad` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:load_settings_catalog",
+      "type": "function",
+      "name": "load_settings_catalog",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        98,
+        107
+      ],
+      "summary": "Récupère ou résout les données de `load_settings_catalog` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:get_catalog_param_map",
+      "type": "function",
+      "name": "get_catalog_param_map",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        111,
+        131
+      ],
+      "summary": "Récupère ou résout les données de `get_catalog_param_map` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:build_favorite_slot_options",
+      "type": "function",
+      "name": "build_favorite_slot_options",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        134,
+        193
+      ],
+      "summary": "Construit la représentation produite par `build_favorite_slot_options` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:filter_favorite_slot_options",
+      "type": "function",
+      "name": "filter_favorite_slot_options",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        196,
+        204
+      ],
+      "summary": "Normalise ou valide les données de `filter_favorite_slot_options` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:default_favorite_slots",
+      "type": "function",
+      "name": "default_favorite_slots",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        207,
+        211
+      ],
+      "summary": "Construit la représentation produite par `default_favorite_slots` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "construction",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:_load_raw_slots",
+      "type": "function",
+      "name": "_load_raw_slots",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        214,
+        230
+      ],
+      "summary": "Récupère ou résout les données de `_load_raw_slots` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:_get_key_type",
+      "type": "function",
+      "name": "_get_key_type",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        233,
+        242
+      ],
+      "summary": "Récupère ou résout les données de `_get_key_type` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:is_enum_param",
+      "type": "function",
+      "name": "is_enum_param",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        245,
+        251
+      ],
+      "summary": "Évalue la condition portée par `is_enum_param` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:get_param_enum_options",
+      "type": "function",
+      "name": "get_param_enum_options",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        254,
+        261
+      ],
+      "summary": "Récupère ou résout les données de `get_param_enum_options` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:get_favorite_param_value",
+      "type": "function",
+      "name": "get_favorite_param_value",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        264,
+        308
+      ],
+      "summary": "Récupère ou résout les données de `get_favorite_param_value` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:get_favorite_values",
+      "type": "function",
+      "name": "get_favorite_values",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        311,
+        321
+      ],
+      "summary": "Récupère ou résout les données de `get_favorite_values` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:get_favorite_enum_state",
+      "type": "function",
+      "name": "get_favorite_enum_state",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        324,
+        357
+      ],
+      "summary": "Récupère ou résout les données de `get_favorite_enum_state` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:cycle_enum_parameter",
+      "type": "function",
+      "name": "cycle_enum_parameter",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        360,
+        398
+      ],
+      "summary": "Exécute le flux piloté par `cycle_enum_parameter` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:is_favorite_action_key",
+      "type": "function",
+      "name": "is_favorite_action_key",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        401,
+        402
+      ],
+      "summary": "Évalue la condition portée par `is_favorite_action_key` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:favorite_key_is_valid",
+      "type": "function",
+      "name": "favorite_key_is_valid",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        405,
+        415
+      ],
+      "summary": "Implémente l’opération `favorite_key_is_valid` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:is_bool_param",
+      "type": "function",
+      "name": "is_bool_param",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        418,
+        425
+      ],
+      "summary": "Évalue la condition portée par `is_bool_param` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "condition",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:normalize_favorite_slots",
+      "type": "function",
+      "name": "normalize_favorite_slots",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        428,
+        472
+      ],
+      "summary": "Normalise ou valide les données de `normalize_favorite_slots` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "validation",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:load_favorite_slots",
+      "type": "function",
+      "name": "load_favorite_slots",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        475,
+        481
+      ],
+      "summary": "Récupère ou résout les données de `load_favorite_slots` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "lecture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:save_favorite_slots",
+      "type": "function",
+      "name": "save_favorite_slots",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        484,
+        489
+      ],
+      "summary": "Enregistre ou publie l’état produit par `save_favorite_slots` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "ecriture",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:request_starpilot_toggle_refresh",
+      "type": "function",
+      "name": "request_starpilot_toggle_refresh",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        492,
+        494
+      ],
+      "summary": "Exécute le flux piloté par `request_starpilot_toggle_refresh` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:trigger_favorite_action",
+      "type": "function",
+      "name": "trigger_favorite_action",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        497,
+        511
+      ],
+      "summary": "Exécute le flux piloté par `trigger_favorite_action` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:execute_favorite_key",
+      "type": "function",
+      "name": "execute_favorite_key",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        514,
+        539
+      ],
+      "summary": "Exécute le flux piloté par `execute_favorite_key` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:toggle_favorite_slot",
+      "type": "function",
+      "name": "toggle_favorite_slot",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        542,
+        555
+      ],
+      "summary": "Exécute le flux piloté par `toggle_favorite_slot` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "execution",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:starpilot/common/favorite_slots.py:unassign_favorite_slot",
+      "type": "function",
+      "name": "unassign_favorite_slot",
+      "filePath": "starpilot/common/favorite_slots.py",
+      "lineRange": [
+        558,
+        570
+      ],
+      "summary": "Implémente l’opération `unassign_favorite_slot` dans le module `favorite_slots.py` de StarPilot.",
+      "tags": [
+        "fonction",
+        "logique-metier",
+        "favoris",
+        "parametres"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_cache_params_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_cache_params_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_normalize_dongle_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_normalize_dongle_id",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_read_persisted_stock_dongle_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_read_persisted_stock_dongle_id",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_remove_param_from_live_and_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_remove_param_from_live_and_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:prepare_konik_server_switch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:prepare_konik_server_switch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_ensure_stock_dongle_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:_ensure_stock_dongle_id",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:sync_konik_dongle_id",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/connect_server.py",
+      "target": "function:starpilot/common/connect_server.py:sync_konik_dongle_id",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/controller_actions.py",
+      "target": "function:starpilot/common/controller_actions.py:controller_speed_bounds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/controller_actions.py",
+      "target": "function:starpilot/common/controller_actions.py:controller_speed_bounds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/cpu_throttle.py",
+      "target": "function:starpilot/common/cpu_throttle.py:_online_cpu_count",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/cpu_throttle.py",
+      "target": "function:starpilot/common/cpu_throttle.py:_online_cpu_count",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/cpu_throttle.py",
+      "target": "function:starpilot/common/cpu_throttle.py:_online_cpu_usage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/cpu_throttle.py",
+      "target": "function:starpilot/common/cpu_throttle.py:_online_cpu_usage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/cpu_throttle.py",
+      "target": "function:starpilot/common/cpu_throttle.py:device_cpu_throttle_factor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/cpu_throttle.py",
+      "target": "function:starpilot/common/cpu_throttle.py:device_cpu_throttle_factor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/cpu_throttle.py",
+      "target": "function:starpilot/common/cpu_throttle.py:_compute_throttle_factor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/cpu_throttle.py",
+      "target": "function:starpilot/common/cpu_throttle.py:_compute_throttle_factor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:is_manual_ce_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:is_manual_ce_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:is_manual_cc_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:is_manual_cc_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:normalize_persisted_ce_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:normalize_persisted_ce_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:normalize_persisted_cc_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:normalize_persisted_cc_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:get_persisted_ce_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:get_persisted_ce_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:get_persisted_cc_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:get_persisted_cc_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:set_persisted_ce_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:set_persisted_ce_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:set_persisted_cc_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:set_persisted_cc_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:clear_persisted_ce_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:clear_persisted_ce_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:clear_persisted_cc_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:clear_persisted_cc_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:sync_persist_experimental_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:sync_persist_experimental_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:sync_persist_chill_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:sync_persist_chill_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:sync_manual_ce_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:sync_manual_ce_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:sync_manual_cc_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:sync_manual_cc_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:clear_and_return_off",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:clear_and_return_off",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:clear_cc_and_return_off",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:clear_cc_and_return_off",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:next_manual_ce_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:next_manual_ce_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:next_manual_cc_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:next_manual_cc_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:requested_experimental_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:requested_experimental_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:restore_persisted_ce_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:restore_persisted_ce_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:restore_persisted_cc_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/experimental_state.py",
+      "target": "function:starpilot/common/experimental_state.py:restore_persisted_cc_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:is_param_action_safe_onroad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:is_param_action_safe_onroad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:load_settings_catalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:load_settings_catalog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_catalog_param_map",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_catalog_param_map",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:build_favorite_slot_options",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:build_favorite_slot_options",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:filter_favorite_slot_options",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:filter_favorite_slot_options",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:default_favorite_slots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:default_favorite_slots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:_load_raw_slots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:_load_raw_slots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:_get_key_type",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:_get_key_type",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:is_enum_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:is_enum_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_param_enum_options",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_param_enum_options",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_favorite_param_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_favorite_param_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_favorite_values",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_favorite_values",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_favorite_enum_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:get_favorite_enum_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:cycle_enum_parameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:cycle_enum_parameter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:is_favorite_action_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:is_favorite_action_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:favorite_key_is_valid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:favorite_key_is_valid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:is_bool_param",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:is_bool_param",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:normalize_favorite_slots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:normalize_favorite_slots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:load_favorite_slots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:load_favorite_slots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:save_favorite_slots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:save_favorite_slots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:request_starpilot_toggle_refresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:request_starpilot_toggle_refresh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:trigger_favorite_action",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:trigger_favorite_action",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:execute_favorite_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:execute_favorite_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:toggle_favorite_slot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:toggle_favorite_slot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:unassign_favorite_slot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:starpilot/common/favorite_slots.py",
+      "target": "function:starpilot/common/favorite_slots.py:unassign_favorite_slot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
