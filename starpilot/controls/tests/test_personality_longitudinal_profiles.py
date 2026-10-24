@@ -53,9 +53,10 @@ class Personality(IntEnum):
   relaxed = 2
 
 
-def _sm(*, traffic=False, personality=Personality.standard, lead=False, force_decel=False):
+def _sm(*, traffic=False, personality=Personality.standard, lead=False, force_decel=False, car_fingerprint="OTHER"):
   lead_state = SimpleNamespace(status=lead, vLead=0.0, aLeadK=-1.0 if lead else 0.0, dRel=10.0 if lead else 1000.0)
   return {
+    "carParams": SimpleNamespace(carFingerprint=car_fingerprint),
     "carControl": SimpleNamespace(orientationNED=[0.0, 0.0, 0.0]),
     "carState": SimpleNamespace(vCruise=80.0, vEgoCluster=0.0, standstill=False),
     "controlsState": SimpleNamespace(forceDecel=force_decel),
@@ -174,6 +175,19 @@ def test_detected_truck_curve_is_used_without_enabling_legacy_truck_tuning():
   controller.update(0.0, _sm(personality=Personality.standard), toggles)
 
   expected = get_accel_profile_curve_values(ACCELERATION_PROFILES["SPORT_PLUS"], False, True)[0]
+  assert controller.max_accel == pytest.approx(expected)
+
+
+@pytest.mark.parametrize(("car_fingerprint", "expected"), [("SUBARU_ASCENT", 1.30), ("OTHER", 0.60)])
+def test_sport_truck_acceleration_candidate_is_limited_to_ascent(car_fingerprint, expected):
+  toggles = _toggles(_document())
+  toggles.acceleration_profile = ACCELERATION_PROFILES["SPORT"]
+  toggles.truck_tuning = True
+  toggles.custom_personalities = False
+
+  controller = StarPilotAcceleration(_planner())
+  controller.update(40.0, _sm(car_fingerprint=car_fingerprint), toggles)
+
   assert controller.max_accel == pytest.approx(expected)
 
 

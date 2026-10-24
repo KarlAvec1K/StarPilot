@@ -40,7 +40,11 @@ class LaneChangeDirection(IntEnum):
 
 sys.modules["cereal"] = _module(
   "cereal",
-  log=SimpleNamespace(LaneChangeState=LaneChangeState, LaneChangeDirection=LaneChangeDirection),
+  log=SimpleNamespace(
+    LaneChangeState=LaneChangeState,
+    LaneChangeDirection=LaneChangeDirection,
+    LongitudinalPersonality=SimpleNamespace(aggressive=0),
+  ),
 )
 sys.modules["openpilot.common.constants"] = _module(
   "openpilot.common.constants", CV=SimpleNamespace(MPH_TO_MS=0.44704),
@@ -92,8 +96,9 @@ def _planner(*, weather_id=0, weather_increase=0.0):
   )
 
 
-def _sm(*, traffic=False, personality=Personality.standard):
+def _sm(*, traffic=False, personality=Personality.standard, car_fingerprint="OTHER"):
   return {
+    "carParams": SimpleNamespace(carFingerprint=car_fingerprint),
     "carState": SimpleNamespace(aEgo=0.0, standstill=False, leftBlindspot=False, rightBlindspot=False),
     "selfdriveState": SimpleNamespace(personality=personality),
     "starpilotCarState": SimpleNamespace(trafficModeEnabled=traffic),
@@ -204,6 +209,39 @@ def test_disabled_active_profile_keeps_legacy_following_path(profile, personalit
   controller.update(True, 0.0, _sm(traffic=traffic_mode, personality=personality), toggles)
 
   assert controller.t_follow == pytest.approx(legacy_follow)
+
+
+@pytest.mark.parametrize(
+  ("speed", "expected"),
+  [
+    (30.0 / 3.6, 1.25),
+    (75.0 / 3.6, 1.0),
+    (120.0 / 3.6, 0.75),
+  ],
+)
+def test_ascent_aggressive_legacy_following_ramps_down_after_30_kph(speed, expected):
+  toggles = _toggles(_document(enabled=False))
+  toggles.custom_personalities = False
+  controller = StarPilotFollowing(_planner())
+
+  controller.update(
+    True,
+    speed,
+    _sm(personality=Personality.aggressive, car_fingerprint="SUBARU_ASCENT"),
+    toggles,
+  )
+
+  assert controller.t_follow == pytest.approx(expected)
+
+
+def test_non_ascent_keeps_legacy_aggressive_following_distance():
+  toggles = _toggles(_document(enabled=False))
+  toggles.custom_personalities = False
+  controller = StarPilotFollowing(_planner())
+
+  controller.update(True, 120.0 / 3.6, _sm(personality=Personality.aggressive), toggles)
+
+  assert controller.t_follow == pytest.approx(1.25)
 
 
 def test_traffic_profile_wins_over_cereal_personality_without_changing_jerk():

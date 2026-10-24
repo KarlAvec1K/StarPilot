@@ -11,6 +11,7 @@ from openpilot.selfdrive.controls.lib.longitudinal_planner import A_CRUISE_MIN, 
 from openpilot.starpilot.common.accel_profile import (
   ACCELERATION_PROFILES,
   A_CRUISE_MAX_BP_CUSTOM,
+  A_CRUISE_MAX_VALS_SPORT_TRUCK_ASCENT,
   A_CRUISE_MAX_VALS_TRAFFIC_ALL,
   DECELERATION_PROFILES,
   coerce_custom_accel_profile_values,
@@ -396,6 +397,17 @@ class StarPilotAcceleration:
         self.max_accel = get_max_allowed_accel(v_ego, ev_tuning, truck_tuning)
       else:
         self.max_accel = get_max_accel_standard(v_ego, ev_tuning, truck_tuning)
+
+    if (
+      getattr(sm.get("carParams"), "carFingerprint", "") == "SUBARU_ASCENT"
+      and truck_tuning
+      and not custom_accel_profile
+      and personality_acceleration is None
+      and not traffic_mode
+      and not starpilot_toggles.map_acceleration
+      and starpilot_toggles.acceleration_profile == ACCELERATION_PROFILES["SPORT"]
+    ):
+      self.max_accel = interpolate_accel_profile(v_ego, A_CRUISE_MAX_VALS_SPORT_TRUCK_ASCENT)
 
     if self.starpilot_planner.starpilot_weather.weather_id != 0:
       self.max_accel -= self.max_accel * self.starpilot_planner.starpilot_weather.reduce_acceleration
