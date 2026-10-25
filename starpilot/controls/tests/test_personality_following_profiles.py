@@ -244,6 +244,30 @@ def test_non_ascent_keeps_legacy_aggressive_following_distance():
   assert controller.t_follow == pytest.approx(1.25)
 
 
+@pytest.mark.parametrize(
+  ("car_fingerprint", "expected"),
+  [("SUBARU_ASCENT", 0.75), (None, 1.25)],
+)
+def test_ascent_legacy_following_supports_submaster_without_get(car_fingerprint, expected):
+  class SubMasterLike:
+    def __init__(self, services):
+      self.services = services
+
+    def __getitem__(self, service):
+      return self.services[service]
+
+  toggles = _toggles(_document(enabled=False))
+  toggles.custom_personalities = False
+  services = _sm(personality=Personality.aggressive, car_fingerprint=car_fingerprint or "OTHER")
+  if car_fingerprint is None:
+    del services["carParams"]
+  controller = StarPilotFollowing(_planner())
+
+  controller.update(True, 120.0 / 3.6, SubMasterLike(services), toggles)
+
+  assert controller.t_follow == pytest.approx(expected)
+
+
 def test_traffic_profile_wins_over_cereal_personality_without_changing_jerk():
   document = _document()
   document["profiles"]["traffic"]["following"] = {"preset": "far", "curve": []}

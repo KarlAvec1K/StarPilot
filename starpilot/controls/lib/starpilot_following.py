@@ -116,9 +116,13 @@ class StarPilotFollowing:
         if (
           not starpilot_toggles.custom_personalities
           and personality == log.LongitudinalPersonality.aggressive
-          and getattr(sm.get("carParams"), "carFingerprint", "") == "SUBARU_ASCENT"
         ):
-          self.t_follow = float(np.interp(v_ego, ASCENT_LEGACY_FOLLOW_BP, ASCENT_AGGRESSIVE_FOLLOW))
+          try:
+            car_params = sm["carParams"]
+          except KeyError:
+            car_params = None
+          if getattr(car_params, "carFingerprint", "") == "SUBARU_ASCENT":
+            self.t_follow = float(np.interp(v_ego, ASCENT_LEGACY_FOLLOW_BP, ASCENT_AGGRESSIVE_FOLLOW))
     else:
       self.base_acceleration_jerk = 0
       self.base_danger_jerk = 0
