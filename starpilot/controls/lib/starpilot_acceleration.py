@@ -398,8 +398,13 @@ class StarPilotAcceleration:
       else:
         self.max_accel = get_max_accel_standard(v_ego, ev_tuning, truck_tuning)
 
+    try:
+      car_params = sm["carParams"]
+    except (KeyError, IndexError, TypeError, AttributeError):
+      car_params = None
+
     if (
-      getattr(sm.get("carParams"), "carFingerprint", "") == "SUBARU_ASCENT"
+      getattr(car_params, "carFingerprint", "") == "SUBARU_ASCENT"
       and truck_tuning
       and not custom_accel_profile
       and personality_acceleration is None

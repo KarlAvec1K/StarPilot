@@ -5,7 +5,13 @@ import pytest
 
 from openpilot.common.constants import CV
 from openpilot.selfdrive.controls.lib.longitudinal_planner import A_CRUISE_MIN
-from openpilot.starpilot.common.accel_profile import A_CRUISE_MAX_BP_CUSTOM, ACCELERATION_PROFILES, DECELERATION_PROFILES
+from openpilot.starpilot.common.accel_profile import (
+  A_CRUISE_MAX_BP_CUSTOM,
+  A_CRUISE_MAX_VALS_SPORT_TRUCK_ASCENT,
+  ACCELERATION_PROFILES,
+  DECELERATION_PROFILES,
+  interpolate_accel_profile,
+)
 from openpilot.starpilot.controls.lib.starpilot_acceleration import (
   A_CRUISE_MIN_ECO,
   A_CRUISE_MIN_TRAFFIC,
@@ -77,6 +83,15 @@ def make_sm(*, set_speed_kph=100.0, lead_one=None, lead_two=None, standstill=Fal
       trafficModeEnabled=traffic_mode,
     ),
   }
+
+
+class SubMasterLike:
+  """Match cereal.messaging.SubMaster's item access without dict.get()."""
+  def __init__(self, messages):
+    self._messages = messages
+
+  def __getitem__(self, service):
+    return self._messages[service]
 
 
 def test_slc_coast_window_prefers_coast_for_small_overspeed():
@@ -170,6 +185,23 @@ def test_truck_tuning_standard_profile_keeps_non_binding_launch_headroom():
 def test_truck_tuning_standard_profile_uses_proven_cruise_limits():
   assert get_max_accel_standard(15.0, ev_tuning=False, truck_tuning=True) == pytest.approx(0.60)
   assert get_max_accel_standard(25.0, ev_tuning=False, truck_tuning=True) == pytest.approx(0.45)
+
+
+def test_ascent_sport_acceleration_accepts_submaster_without_get():
+  accel = StarPilotAcceleration(FakePlanner(v_cruise=100.0 * CV.KPH_TO_MS))
+  messages = make_sm()
+  messages["carParams"] = SimpleNamespace(carFingerprint="SUBARU_ASCENT")
+
+  accel.update(
+    25.0,
+    SubMasterLike(messages),
+    make_toggles(
+      acceleration_profile=ACCELERATION_PROFILES["SPORT"],
+      truck_tuning=True,
+    ),
+  )
+
+  assert accel.max_accel == pytest.approx(interpolate_accel_profile(25.0, A_CRUISE_MAX_VALS_SPORT_TRUCK_ASCENT))
 
 
 def test_truck_tuning_standard_profile_limits_highway_run_up():
