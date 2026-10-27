@@ -29,7 +29,15 @@ def test_ascent_adaptive_accel_feedback_is_speed_gated_and_bounded():
     accel, filtered_error = _ascent_adaptive_accel_request(
       requested_accel=0.4, measured_accel=-0.2, v_ego=110 / 3.6, filtered_error=filtered_error, dt=0.01,
     )
-  assert accel == pytest.approx(0.85)
+  assert accel == pytest.approx(1.05)
+
+
+def test_ascent_adaptive_accel_feedback_reaches_full_weight_by_80_kph():
+  accel, _ = _ascent_adaptive_accel_request(
+    requested_accel=0.4, measured_accel=0.4, v_ego=75 / 3.6, filtered_error=1.0, dt=0.01,
+  )
+
+  assert accel == pytest.approx(0.725, abs=0.001)
 
 
 def test_ascent_adaptive_accel_feedback_does_not_boost_braking_or_low_speed():
