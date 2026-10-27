@@ -1,3 +1,4 @@
+import math
 import numpy as np
 from opendbc.can import CANPacker
 from opendbc.car import Bus, DT_CTRL, make_tester_present_msg, structs
@@ -22,6 +23,11 @@ _ANGLE_REENGAGE_MAX_STEER_RATE = 2.0
 _ANGLE_MADS_MIN_SPEED = 0.44704
 _ANGLE_MADS_MAX_STEER_ANGLE = 120.0
 _ASCENT_AOL_ARM_FRAMES = 30
+_ASCENT_ACCEL_FEEDBACK_MIN_SPEED = 70.0 / 3.6
+_ASCENT_ACCEL_FEEDBACK_FULL_SPEED = 90.0 / 3.6
+_ASCENT_ACCEL_FEEDBACK_TIME_CONSTANT = 0.75
+_ASCENT_ACCEL_FEEDBACK_GAIN = 1.5
+_ASCENT_ACCEL_FEEDBACK_MAX_CORRECTION = 0.45
 _STOP_START_STARTUP_DELAY_FRAMES = 100
 # StarPilot's first populated toggle message can arrive several seconds after
 # the car controller starts while fingerprinting and settings settle.
@@ -30,6 +36,27 @@ _STOP_START_PULSE_FRAMES = 30
 _STOP_START_PULSE_PERIOD_FRAMES = 5
 _REDNECK_BUTTON_INTERVAL_FRAMES = 10
 _REDNECK_BUTTON_COPIES = 2
+
+
+def _ascent_adaptive_accel_request(requested_accel, measured_accel, v_ego, filtered_error, dt):
+  """Apply a bounded, speed-gated correction for the Ascent's measured accel shortfall."""
+  values = (requested_accel, measured_accel, v_ego, filtered_error, dt)
+  if not all(math.isfinite(value) for value in values) or requested_accel <= 0.0 or dt <= 0.0:
+    return requested_accel, 0.0
+
+  if v_ego < _ASCENT_ACCEL_FEEDBACK_MIN_SPEED:
+    return requested_accel, 0.0
+
+  alpha = dt / (_ASCENT_ACCEL_FEEDBACK_TIME_CONSTANT + dt)
+  filtered_error += alpha * (requested_accel - measured_accel - filtered_error)
+  filtered_error = min(max(filtered_error, -1.0), 1.0)
+  speed_weight = min(max(
+    (v_ego - _ASCENT_ACCEL_FEEDBACK_MIN_SPEED) /
+    (_ASCENT_ACCEL_FEEDBACK_FULL_SPEED - _ASCENT_ACCEL_FEEDBACK_MIN_SPEED),
+    0.0), 1.0)
+  correction = min(max(filtered_error, 0.0) * _ASCENT_ACCEL_FEEDBACK_GAIN,
+                   _ASCENT_ACCEL_FEEDBACK_MAX_CORRECTION) * speed_weight
+  return requested_accel + correction, filtered_error
 
 
 def get_safety_CP():
@@ -74,6 +101,7 @@ class CarController(CarControllerBase):
     self.stop_start_acknowledged = False
     self.last_redneck_button_frame = 0
     self.avh_startup = AvhStartup()
+    self.ascent_accel_feedback_error = 0.0
 
   def _stop_start_off_request(self, CC, CS, starpilot_toggles):
     """Send one bounded Subaru Stop/Start OFF request after ignition.
@@ -357,7 +385,10 @@ class CarController(CarControllerBase):
       # First validation patch: only alter non-negative acceleration commands on
       # the 2019-21 Ascent. Braking and all other Subaru platforms stay unchanged.
       if self.CP.carFingerprint == CAR.SUBARU_ASCENT and actuators.accel >= 0.0:
-        accel_ff = np.clip(actuators.accel, 0.0, 2.0)
+        accel_ff, self.ascent_accel_feedback_error = _ascent_adaptive_accel_request(
+          actuators.accel, CS.out.aEgo, CS.out.vEgo, self.ascent_accel_feedback_error, DT_CTRL,
+        )
+        accel_ff = np.clip(accel_ff, 0.0, 2.0)
         throttle_base = np.interp(CS.out.vEgo, CarControllerParams.ASCENT_LONG_SPEED_BP,
                                   CarControllerParams.ASCENT_THROTTLE_BASE_V)
         rpm_base = np.interp(CS.out.vEgo, CarControllerParams.ASCENT_LONG_SPEED_BP,
@@ -366,6 +397,8 @@ class CarController(CarControllerBase):
         apply_throttle = int(round(throttle_base + accel_ff * CarControllerParams.ASCENT_THROTTLE_ACCEL_GAIN))
         apply_rpm = int(round(rpm_base + accel_ff * CarControllerParams.ASCENT_RPM_ACCEL_GAIN))
       else:
+        if self.CP.carFingerprint == CAR.SUBARU_ASCENT:
+          self.ascent_accel_feedback_error = 0.0
         apply_throttle = int(round(np.interp(actuators.accel, CarControllerParams.THROTTLE_LOOKUP_BP, CarControllerParams.THROTTLE_LOOKUP_V)))
         apply_rpm = int(round(np.interp(actuators.accel, CarControllerParams.RPM_LOOKUP_BP, CarControllerParams.RPM_LOOKUP_V)))
 
@@ -376,6 +409,7 @@ class CarController(CarControllerBase):
       cruise_rpm = np.clip(apply_rpm, CarControllerParams.RPM_MIN, CarControllerParams.RPM_MAX)
       cruise_brake = np.clip(apply_brake, CarControllerParams.BRAKE_MIN, CarControllerParams.BRAKE_MAX)
     else:
+      self.ascent_accel_feedback_error = 0.0
       cruise_throttle = CarControllerParams.THROTTLE_INACTIVE
       cruise_rpm = CarControllerParams.RPM_MIN
       cruise_brake = CarControllerParams.BRAKE_MIN
