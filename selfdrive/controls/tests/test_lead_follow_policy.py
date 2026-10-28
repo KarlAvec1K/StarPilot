@@ -18,20 +18,22 @@ def lead(*, d_rel=40.0, v_lead=20.0, a_lead=0.0, radar=False, model_prob=0.99, y
 
 
 def run(lead_one, *, lead_two=None, source="lead0", active=True, v_ego=20.0,
-        previous=0.0, raw=0.0, post_departure=False, blocked=False, panic=False):
+        previous=0.0, raw=0.0, post_departure=False, blocked=False, panic=False,
+        t_follow=1.45, ascent_creep=False):
   return apply(
     lead_one,
     lead_two or SimpleNamespace(status=False),
     source=source,
     active=active,
     v_ego=v_ego,
-    t_follow=1.45,
+    t_follow=t_follow,
     previous_target=previous,
     raw_target=raw,
     tracking=active,
     post_departure=post_departure,
     blocked=blocked,
     panic_bypass=panic,
+    ascent_creep=ascent_creep,
   )
 
 
@@ -101,3 +103,50 @@ def test_follow_policy_bypasses_post_departure_handoff():
   result = run(lead(d_rel=46.0, v_lead=22.0), v_ego=20.0, previous=0.0, raw=0.6, post_departure=True)
   assert result.target == pytest.approx(0.6)
   assert result.accel_cap is None
+
+
+def test_ascent_low_speed_stable_follow_caps_positive_surge_near_target():
+  result = run(
+    lead(d_rel=9.5, v_lead=2.5, radar=True),
+    v_ego=2.5,
+    t_follow=1.25,
+    raw=0.6,
+    ascent_creep=True,
+  )
+
+  assert result.accel_cap == pytest.approx(0.18)
+  assert result.target == pytest.approx(0.18)
+
+
+def test_ascent_low_speed_creep_does_not_change_braking_or_safety_bypasses():
+  urgent_brake = run(
+    lead(d_rel=9.5, v_lead=2.5, radar=True),
+    v_ego=2.5,
+    t_follow=1.25,
+    previous=0.2,
+    raw=-1.2,
+    ascent_creep=True,
+  )
+  blocked = run(
+    lead(d_rel=9.5, v_lead=2.5, radar=True),
+    v_ego=2.5,
+    t_follow=1.25,
+    raw=0.6,
+    blocked=True,
+    ascent_creep=True,
+  )
+
+  assert urgent_brake.target == pytest.approx(-1.2)
+  assert blocked.target == pytest.approx(0.6)
+
+
+def test_ascent_low_speed_creep_is_opt_in_and_rejects_unstable_leads():
+  ordinary_car = run(lead(d_rel=9.5, v_lead=2.5, radar=True), v_ego=2.5,
+                     t_follow=1.25, raw=0.6)
+  braking_lead = run(lead(d_rel=9.5, v_lead=2.5, a_lead=-0.8, radar=True),
+                     v_ego=2.5, t_follow=1.25, raw=0.6, ascent_creep=True)
+
+  assert ordinary_car.target == pytest.approx(0.6)
+  assert ordinary_car.accel_cap is None
+  assert braking_lead.target == pytest.approx(0.6)
+  assert braking_lead.accel_cap is None

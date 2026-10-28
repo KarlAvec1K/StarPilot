@@ -2967,6 +2967,7 @@ class LongitudinalPlanner:
       post_departure=post_departure_bypass,
       blocked=bool(output_should_stop or vision_low_speed_stop_active or close_lead_caps),
       panic_bypass=panic_bypass,
+      ascent_creep=self.CP.carFingerprint == "SUBARU_ASCENT",
     )
     comfort_follow_lead = follow_result.lead
     comfort_lead = follow_result.lead

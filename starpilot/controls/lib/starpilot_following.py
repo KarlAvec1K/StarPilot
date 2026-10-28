@@ -13,8 +13,8 @@ from openpilot.starpilot.common.starpilot_variables import CITY_SPEED_LIMIT, MAX
 
 TRAFFIC_MODE_BP = [0., CITY_SPEED_LIMIT]
 PERSONALITY_BP = [45. * CV.MPH_TO_MS, 70. * CV.MPH_TO_MS]
-ASCENT_LEGACY_FOLLOW_BP = [30. / 3.6, 120. / 3.6]
-ASCENT_AGGRESSIVE_FOLLOW = [1.25, 0.75]
+ASCENT_LEGACY_FOLLOW_BP = [30. / 3.6, 70. / 3.6, 80. / 3.6, 120. / 3.6]
+ASCENT_AGGRESSIVE_FOLLOW = [1.25, 0.625, 0.5, 0.5]
 
 LaneChangeState = log.LaneChangeState
 LaneChangeDirection = log.LaneChangeDirection

@@ -211,12 +211,27 @@ def test_disabled_active_profile_keeps_legacy_following_path(profile, personalit
   assert controller.t_follow == pytest.approx(legacy_follow)
 
 
+def test_ascent_aggressive_highway_follow_is_at_least_30_percent_shorter_at_100_kph():
+  document = _document()
+  toggles = _toggles(document)
+  toggles.custom_personalities = False
+  controller = StarPilotFollowing(_planner())
+
+  speed = 100.0 / 3.6
+  controller.update(True, speed, _sm(personality=Personality.aggressive, car_fingerprint="SUBARU_ASCENT"), toggles)
+
+  old_t_follow = 1.25 + (0.75 - 1.25) * ((100.0 - 30.0) / (120.0 - 30.0))
+  old_equal_speed_gap = 6.0 + speed * old_t_follow
+  new_equal_speed_gap = 6.0 + speed * controller.t_follow
+  assert new_equal_speed_gap <= old_equal_speed_gap * 0.70
+
+
 @pytest.mark.parametrize(
   ("speed", "expected"),
   [
     (30.0 / 3.6, 1.25),
-    (75.0 / 3.6, 1.0),
-    (120.0 / 3.6, 0.75),
+    (75.0 / 3.6, 0.5625),
+    (120.0 / 3.6, 0.5),
   ],
 )
 def test_ascent_aggressive_legacy_following_ramps_down_after_30_kph(speed, expected):
@@ -246,7 +261,7 @@ def test_non_ascent_keeps_legacy_aggressive_following_distance():
 
 @pytest.mark.parametrize(
   ("car_fingerprint", "expected"),
-  [("SUBARU_ASCENT", 0.75), (None, 1.25)],
+  [("SUBARU_ASCENT", 0.5), (None, 1.25)],
 )
 def test_ascent_legacy_following_supports_submaster_without_get(car_fingerprint, expected):
   class SubMasterLike:

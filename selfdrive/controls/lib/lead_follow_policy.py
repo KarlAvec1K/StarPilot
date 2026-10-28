@@ -30,6 +30,14 @@ FOLLOW_TRANSITION_MAX_BRAKE = 0.25
 FOLLOW_STEADY_DEADBAND_MAX_TARGET = 0.28
 FOLLOW_STEADY_DEADBAND_MAX_CLOSING = 0.75
 FOLLOW_STEADY_DEADBAND_MAX_HEADWAY_MARGIN = 0.90
+ASCENT_CREEP_MIN_SPEED = 1.0
+ASCENT_CREEP_MAX_SPEED = 3.0
+ASCENT_CREEP_MAX_RELATIVE_SPEED = 0.5
+ASCENT_CREEP_MAX_LEAD_BRAKE = 0.20
+ASCENT_CREEP_MIN_MODEL_PROB = 0.98
+ASCENT_CREEP_GAP_ERROR_MIN = -0.5
+ASCENT_CREEP_GAP_ERROR_MAX = 2.5
+ASCENT_CREEP_ACCEL_CAP = 0.18
 
 
 @dataclass(frozen=True)
@@ -197,9 +205,32 @@ def _steady_follow_deadband(lead, v_ego: float, t_follow: float, previous: float
   return float(target)
 
 
+def _ascent_creep_accel_cap(lead, v_ego: float, t_follow: float, target: float) -> float | None:
+  """Limit only positive Ascent crawl acceleration near a stable lead target."""
+  if lead is None or not lead.status or target <= 0.0:
+    return None
+  if not ASCENT_CREEP_MIN_SPEED <= float(v_ego) <= ASCENT_CREEP_MAX_SPEED:
+    return None
+  if _lead_brake(lead) > ASCENT_CREEP_MAX_LEAD_BRAKE:
+    return None
+  if not bool(getattr(lead, "radar", False)) and _lead_prob(lead) < ASCENT_CREEP_MIN_MODEL_PROB:
+    return None
+
+  relative_speed = float(v_ego) - float(lead.vLead)
+  if abs(relative_speed) > ASCENT_CREEP_MAX_RELATIVE_SPEED:
+    return None
+
+  desired_gap = float(desired_follow_distance(float(v_ego), float(lead.vLead), float(t_follow)))
+  gap_error = float(lead.dRel) - desired_gap
+  if not ASCENT_CREEP_GAP_ERROR_MIN <= gap_error <= ASCENT_CREEP_GAP_ERROR_MAX:
+    return None
+
+  return min(float(target), ASCENT_CREEP_ACCEL_CAP)
+
+
 def apply(lead_one, lead_two, *, source: str, active: bool, v_ego: float, t_follow: float,
           previous_target: float, raw_target: float, tracking: bool, post_departure: bool,
-          blocked: bool, panic_bypass: bool) -> FollowResult:
+          blocked: bool, panic_bypass: bool, ascent_creep: bool = False) -> FollowResult:
   if blocked or panic_bypass or post_departure:
     return FollowResult(None, None, None, float(raw_target))
 
@@ -215,6 +246,11 @@ def apply(lead_one, lead_two, *, source: str, active: bool, v_ego: float, t_foll
     target = max(target, floor)
   if cap is not None:
     target = min(target, cap)
+  if ascent_creep:
+    creep_cap = _ascent_creep_accel_cap(lead, v_ego, t_follow, target)
+    if creep_cap is not None:
+      cap = creep_cap if cap is None else min(cap, creep_cap)
+      target = min(target, creep_cap)
   deadband_target = _steady_follow_deadband(lead, v_ego, t_follow, previous_target, target)
   if deadband_target != target:
     target = deadband_target
