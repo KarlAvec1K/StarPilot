@@ -191,7 +191,6 @@ inline static std::unordered_map<std::string, ParamKeyAttributes> keys = {
     {"AdvancedLongitudinalTune", {PERSISTENT, BOOL, "1", "0", 3}},
     {"AggressiveFollow", {PERSISTENT, FLOAT, "1.25", "1.25", 2}},
     {"AggressiveFollowHigh", {PERSISTENT, FLOAT, "1.0", "1.0", 2}},
-    {"AscentGalaxyFollowDefaultsMigrated", {PERSISTENT, BOOL, "0", "0"}},
     {"AggressiveJerkAcceleration", {PERSISTENT, FLOAT, "50.0", "50.0", 3}},
     {"AggressiveJerkDanger", {PERSISTENT, FLOAT, "100.0", "100.0", 3}},
     {"AggressiveJerkDeceleration", {PERSISTENT, FLOAT, "50.0", "50.0", 3}},

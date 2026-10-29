@@ -1,8 +1,12 @@
 """Vehicle-specific baselines for the Subaru Ascent longitudinal controls."""
 from __future__ import annotations
 
+from pathlib import Path
+
 ASCENT_FINGERPRINT = "SUBARU_ASCENT"
-ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY = "AscentGalaxyFollowDefaultsMigrated"
+ASCENT_FOLLOW_DEFAULTS_MIGRATION_MARKER = Path(
+  "/data/params/.starpilot_param_migrations/d/.starpilot_ascent_follow_defaults_v1"
+)
 
 ASCENT_FOLLOW_OLD_DEFAULTS = {
   "AggressiveFollow": 1.25,
@@ -99,9 +103,10 @@ def ascent_following_curve(profile_id: str, values_by_key: dict[str, float], spe
   raise ValueError(f"Unknown personality: {profile_id}")
 
 
-def migrate_ascent_follow_defaults(fingerprint: object, is_offroad: bool, params) -> bool:
+def migrate_ascent_follow_defaults(fingerprint: object, is_offroad: bool, params, marker_path=ASCENT_FOLLOW_DEFAULTS_MIGRATION_MARKER) -> bool:
   """Rebase stored generic follow settings once while preserving user deltas."""
-  if not is_ascent_fingerprint(fingerprint) or not is_offroad or params.get_bool(ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY):
+  marker_path = Path(marker_path)
+  if not is_ascent_fingerprint(fingerprint) or not is_offroad or marker_path.exists():
     return False
 
   for key, old_default in ASCENT_FOLLOW_OLD_DEFAULTS.items():
@@ -112,5 +117,8 @@ def migrate_ascent_follow_defaults(fingerprint: object, is_offroad: bool, params
       value = old_default
     params.put_float(key, ASCENT_FOLLOW_DEFAULTS[key] + value - old_default)
 
-  params.put_bool(ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY, True)
+  marker_path.parent.mkdir(parents=True, exist_ok=True)
+  marker_tmp = marker_path.with_name(marker_path.name + ".tmp")
+  marker_tmp.write_text("1\n", encoding="ascii")
+  marker_tmp.replace(marker_path)
   return True

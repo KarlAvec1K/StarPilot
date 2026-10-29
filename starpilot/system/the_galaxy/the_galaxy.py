@@ -104,7 +104,7 @@ from openpilot.starpilot.common.accel_profile import (
 from openpilot.starpilot.common.ascent_longitudinal_defaults import (
   ASCENT_FOLLOW_DEFAULTS,
   ASCENT_FOLLOWING_SPEEDS_MPH,
-  ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY,
+  ASCENT_FOLLOW_DEFAULTS_MIGRATION_MARKER,
   ascent_following_curve,
   is_ascent_fingerprint,
   effective_ascent_follow_value,
@@ -3875,7 +3875,7 @@ def _get_effective_legacy_following_curve(profile_id: str) -> list[float]:
         parsed = effective_ascent_follow_value(
           key,
           _safe_params_get_live_raw(key),
-          _safe_params_get_bool(ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY),
+          ASCENT_FOLLOW_DEFAULTS_MIGRATION_MARKER.exists(),
         )
       else:
         parsed = float(_safe_params_get_live_raw(key, defaults[key]))

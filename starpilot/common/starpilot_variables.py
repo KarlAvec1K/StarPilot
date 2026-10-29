@@ -52,7 +52,7 @@ from openpilot.starpilot.common.accel_profile import (
 )
 from openpilot.starpilot.common.ascent_longitudinal_defaults import (
   ASCENT_FOLLOW_DEFAULTS,
-  ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY,
+  ASCENT_FOLLOW_DEFAULTS_MIGRATION_MARKER,
   effective_ascent_follow_value,
   ASCENT_TRAFFIC_FOLLOW_HIGH_BASELINE,
   ASCENT_TRAFFIC_FOLLOW_HIGH_RELAXED_BASELINE,
@@ -543,7 +543,7 @@ class StarPilotVariables:
         value = default if default is not None else self.default_values.get(key)
       else:
         value = effective_ascent_follow_value(
-          key, raw_value, self.params_raw.get_bool(ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY),
+          key, raw_value, ASCENT_FOLLOW_DEFAULTS_MIGRATION_MARKER.exists(),
         )
     elif cast is bool:
       value = self.params.get_bool(key)
@@ -697,7 +697,7 @@ class StarPilotVariables:
     toggle.car_model = CP.carFingerprint
     if is_ascent_fingerprint(toggle.car_model):
       self.default_values.update(ASCENT_FOLLOW_DEFAULTS)
-      migrate_ascent_follow_defaults(toggle.car_model, not started, self.params_raw)
+      migrate_ascent_follow_defaults(toggle.car_model, not started, self.params_raw, ASCENT_FOLLOW_DEFAULTS_MIGRATION_MARKER)
     migrate_sonata_hybrid_lkas_button_default(toggle.car_model, self.params)
     toggle.disable_openpilot_long = self.get_value("DisableOpenpilotLongitudinal", condition=not alpha_longitudinal)
     friction = CP.lateralTuning.torque.friction

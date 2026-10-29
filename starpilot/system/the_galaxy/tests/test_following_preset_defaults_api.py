@@ -48,21 +48,22 @@ def test_existing_dom_default_keeps_inheriting_user_following_settings(monkeypat
   assert body["reference_curves"]["standard"]["following"][-1] == 1.6
 
 
-def test_ascent_reference_defaults_preserve_all_legacy_follow_modes(monkeypatch):
+def test_ascent_reference_defaults_preserve_all_legacy_follow_modes(monkeypatch, tmp_path):
   values = {
     "CarModel": "SUBARU_ASCENT",
     "CustomPersonalities": True,
-    "AscentGalaxyFollowDefaultsMigrated": True,
     "AggressiveFollow": 1.25,
     "AggressiveFollowHigh": 0.5,
     "StandardFollow": 1.45,
-    "StandardFollowHigh": 1.45,
+    "StandardFollowHigh": 0.84,
     "RelaxedFollow": 1.75,
     "RelaxedFollowHigh": 1.75,
     "TrafficFollow": 0.75,
   }
+  migration_marker = tmp_path / "ascent-follow-v1"
+  migration_marker.write_text("1\n", encoding="ascii")
+  monkeypatch.setattr(the_galaxy, "ASCENT_FOLLOW_DEFAULTS_MIGRATION_MARKER", migration_marker)
   monkeypatch.setattr(the_galaxy, "_safe_params_get_live_raw", lambda key, default=None, block=False: values.get(key, default))
-  monkeypatch.setattr(the_galaxy, "_safe_params_get_bool", lambda key, default=False: bool(values.get(key, default)))
 
   aggressive = the_galaxy._get_effective_legacy_following_curve("aggressive")
   standard = the_galaxy._get_effective_legacy_following_curve("standard")
@@ -71,7 +72,8 @@ def test_ascent_reference_defaults_preserve_all_legacy_follow_modes(monkeypatch)
 
   assert aggressive[0] == pytest.approx(1.25)
   assert aggressive[5] == pytest.approx(0.5)
-  assert standard == pytest.approx([1.45] * len(lpp.FOLLOWING_SPEEDS_MPH))
+  assert standard[0] == pytest.approx(1.45)
+  assert standard[-1] == pytest.approx(0.84)
   assert relaxed == pytest.approx([1.75] * len(lpp.FOLLOWING_SPEEDS_MPH))
   assert traffic[0] == pytest.approx(0.75)
   assert traffic[-1] == pytest.approx(1.6)
