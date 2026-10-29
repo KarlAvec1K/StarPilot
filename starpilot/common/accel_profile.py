@@ -149,8 +149,13 @@ def get_max_allowed_accel(v_ego, ev_tuning=True, truck_tuning=False):
   return interpolate_accel_profile(v_ego, get_accel_profile_curve_values(ACCELERATION_PROFILES["SPORT_PLUS"], ev_tuning, truck_tuning))
 
 
-def build_custom_accel_profile_defaults(acceleration_profile, ev_tuning=True, truck_tuning=False):
+def build_custom_accel_profile_defaults(acceleration_profile, ev_tuning=True, truck_tuning=False, *, car_fingerprint=None):
   curve_values = get_accel_profile_curve_values(acceleration_profile, ev_tuning, truck_tuning)
+  if (
+    isinstance(car_fingerprint, str) and car_fingerprint.upper() == "SUBARU_ASCENT"
+    and normalize_acceleration_profile(acceleration_profile) == ACCELERATION_PROFILES["STANDARD"]
+  ):
+    curve_values = A_CRUISE_MAX_VALS_SPORT_TRUCK_ASCENT
   return {
     key: float(curve_values[idx])
     for idx, key in enumerate(CUSTOM_ACCEL_PROFILE_PARAM_KEYS)
@@ -242,8 +247,10 @@ def parse_custom_accel_profile_curve(raw_count, raw_breakpoints_mph, raw_values)
   return [speed * CV.MPH_TO_MS for speed in breakpoints_mph], values
 
 
-def get_custom_accel_profile_curve_defaults(acceleration_profile, ev_tuning=True, truck_tuning=False):
-  profile_values = get_accel_profile_curve_values(acceleration_profile, ev_tuning, truck_tuning)
+def get_custom_accel_profile_curve_defaults(acceleration_profile, ev_tuning=True, truck_tuning=False, *, car_fingerprint=None):
+  profile_values = list(build_custom_accel_profile_defaults(
+    acceleration_profile, ev_tuning, truck_tuning, car_fingerprint=car_fingerprint,
+  ).values())
   return {
     CUSTOM_ACCEL_PROFILE_POINT_COUNT_KEY: CUSTOM_ACCEL_PROFILE_DEFAULT_POINT_COUNT,
     **{

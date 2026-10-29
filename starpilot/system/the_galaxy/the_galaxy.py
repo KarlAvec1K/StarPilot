@@ -95,12 +95,19 @@ from openpilot.starpilot.common.accel_profile import (
   CUSTOM_ACCEL_PROFILE_VALUE_MIN,
   build_custom_accel_profile_defaults,
   custom_accel_profile_is_initialized,
-  get_accel_profile_curve_values,
   get_custom_accel_profile_curve_defaults,
   interpolate_accel_profile,
   normalize_acceleration_profile,
   normalize_deceleration_profile,
   parse_custom_accel_profile_curve,
+)
+from openpilot.starpilot.common.ascent_longitudinal_defaults import (
+  ASCENT_FOLLOW_DEFAULTS,
+  ASCENT_FOLLOWING_SPEEDS_MPH,
+  ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY,
+  ascent_following_curve,
+  is_ascent_fingerprint,
+  effective_ascent_follow_value,
 )
 from openpilot.starpilot.common.maps_catalog import (
   MAPS_CATALOG,
@@ -3573,6 +3580,21 @@ def _safe_params_get_live_raw(key, default=None, block=False):
   except Exception:
     return default
 
+def _get_live_car_fingerprint():
+  raw = _safe_params_get_live_raw("CarParamsPersistent")
+  if raw:
+    try:
+      with car.CarParams.from_bytes(raw) as cp:
+        return cp.carFingerprint
+    except Exception:
+      pass
+  raw = _safe_params_get_live_raw("CarModel", "")
+  if isinstance(raw, bytes):
+    raw = raw.decode("utf-8", errors="replace")
+  if isinstance(raw, str) and raw.strip():
+    return raw.strip()
+  return ""
+
 def _safe_params_get_bool(key, default=False):
   try:
     return params.get_bool(key)
@@ -3781,17 +3803,20 @@ def _get_effective_car_make(stored_make):
 
 def _get_effective_legacy_custom_accel_curve(
   ev_tuning: bool, truck_tuning: bool, *, acceleration_profile=None, custom_enabled: bool | None = None,
+  car_fingerprint=None,
 ) -> list[float]:
   target_axis = np.array(ACCELERATION_SPEEDS_MPH, dtype=float) * 0.44704
+  car_fingerprint = _get_live_car_fingerprint() if car_fingerprint is None else car_fingerprint
 
   def sample(values, breakpoints):
     return [round(interpolate_accel_profile(float(speed), values, breakpoints), 4) for speed in target_axis]
 
-  preset_curve = get_accel_profile_curve_values(
-    normalize_acceleration_profile(_safe_params_get_live_raw("AccelerationProfile") if acceleration_profile is None else acceleration_profile),
-    ev_tuning,
-    truck_tuning,
+  preset_profile = normalize_acceleration_profile(
+    _safe_params_get_live_raw("AccelerationProfile") if acceleration_profile is None else acceleration_profile
   )
+  preset_curve = list(build_custom_accel_profile_defaults(
+    preset_profile, ev_tuning, truck_tuning, car_fingerprint=car_fingerprint,
+  ).values())
   if not (_safe_params_get_bool("CustomAccelProfile") if custom_enabled is None else custom_enabled):
     return sample(preset_curve, A_CRUISE_MAX_BP_CUSTOM)
 
@@ -3818,12 +3843,16 @@ def _get_effective_legacy_custom_accel_curve(
 
 
 def _get_effective_legacy_following_curve(profile_id: str) -> list[float]:
+  car_fingerprint = _get_live_car_fingerprint()
+  custom_personalities = _safe_params_get_bool("CustomPersonalities")
   builtin_follow = {
     "aggressive": 1.25,
     "standard": 1.45,
     "relaxed": 1.75,
   }
-  if profile_id in builtin_follow and not _safe_params_get_bool("CustomPersonalities"):
+  if profile_id in builtin_follow and not custom_personalities and not (
+    profile_id == "aggressive" and is_ascent_fingerprint(car_fingerprint)
+  ):
     return [builtin_follow[profile_id]] * len(FOLLOWING_SPEEDS_MPH)
 
   defaults = {
@@ -3835,15 +3864,31 @@ def _get_effective_legacy_following_curve(profile_id: str) -> list[float]:
     "RelaxedFollow": 1.6,
     "RelaxedFollowHigh": 1.4,
   }
+  if is_ascent_fingerprint(car_fingerprint):
+    defaults.update(ASCENT_FOLLOW_DEFAULTS)
 
   def follow_value(key: str) -> float:
     try:
-      parsed = float(_safe_params_get_live_raw(key, defaults[key]) if _safe_params_get_bool("CustomPersonalities") else defaults[key])
+      if not custom_personalities:
+        parsed = defaults[key]
+      elif is_ascent_fingerprint(car_fingerprint) and key in ASCENT_FOLLOW_DEFAULTS:
+        parsed = effective_ascent_follow_value(
+          key,
+          _safe_params_get_live_raw(key),
+          _safe_params_get_bool(ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY),
+        )
+      else:
+        parsed = float(_safe_params_get_live_raw(key, defaults[key]))
     except (TypeError, ValueError):
       parsed = defaults[key]
     if not math.isfinite(parsed):
       parsed = defaults[key]
     return float(np.clip(parsed, 0.5 if key == "TrafficFollow" else CURVE_BOUNDS["following"][0], CURVE_BOUNDS["following"][1]))
+
+  if is_ascent_fingerprint(car_fingerprint):
+    ascent_values = {key: follow_value(key) for key in ASCENT_FOLLOW_DEFAULTS}
+    ascent_values["TrafficFollow"] = follow_value("TrafficFollow")
+    return ascent_following_curve(profile_id, ascent_values, FOLLOWING_SPEEDS_MPH)
 
   if profile_id == "traffic":
     breakpoints = (0.0, 25.0 / CV.MPH_TO_MS)
@@ -3951,8 +3996,15 @@ def _get_runtime_default_param_overrides():
   acceleration_profile = normalize_acceleration_profile(
     acceleration_profile_raw if not _is_blank_param_raw(acceleration_profile_raw) else static_defaults.get("AccelerationProfile", "0")
   )
-  overrides.update(build_custom_accel_profile_defaults(acceleration_profile, ev_tuning, truck_tuning))
-  overrides.update(get_custom_accel_profile_curve_defaults(acceleration_profile, ev_tuning, truck_tuning))
+  car_fingerprint = _get_live_car_fingerprint()
+  if is_ascent_fingerprint(car_fingerprint):
+    overrides.update(ASCENT_FOLLOW_DEFAULTS)
+  overrides.update(build_custom_accel_profile_defaults(
+    acceleration_profile, ev_tuning, truck_tuning, car_fingerprint=car_fingerprint,
+  ))
+  overrides.update(get_custom_accel_profile_curve_defaults(
+    acceleration_profile, ev_tuning, truck_tuning, car_fingerprint=car_fingerprint,
+  ))
 
   return overrides
 

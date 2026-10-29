@@ -187,7 +187,7 @@ def test_truck_tuning_standard_profile_uses_proven_cruise_limits():
   assert get_max_accel_standard(25.0, ev_tuning=False, truck_tuning=True) == pytest.approx(0.45)
 
 
-def test_ascent_sport_acceleration_accepts_submaster_without_get():
+def test_ascent_standard_acceleration_is_the_default_without_sport_or_truck_toggle():
   accel = StarPilotAcceleration(FakePlanner(v_cruise=100.0 * CV.KPH_TO_MS))
   messages = make_sm()
   messages["carParams"] = SimpleNamespace(carFingerprint="SUBARU_ASCENT")
@@ -196,8 +196,8 @@ def test_ascent_sport_acceleration_accepts_submaster_without_get():
     25.0,
     SubMasterLike(messages),
     make_toggles(
-      acceleration_profile=ACCELERATION_PROFILES["SPORT"],
-      truck_tuning=True,
+      acceleration_profile=ACCELERATION_PROFILES["STANDARD"],
+      truck_tuning=False,
     ),
   )
 

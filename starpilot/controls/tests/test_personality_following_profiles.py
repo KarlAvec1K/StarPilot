@@ -215,6 +215,7 @@ def test_ascent_aggressive_highway_follow_is_at_least_30_percent_shorter_at_100_
   document = _document()
   toggles = _toggles(document)
   toggles.custom_personalities = False
+  toggles.aggressive_follow = [1.25, 0.5]
   controller = StarPilotFollowing(_planner())
 
   speed = 100.0 / 3.6
@@ -227,16 +228,21 @@ def test_ascent_aggressive_highway_follow_is_at_least_30_percent_shorter_at_100_
 
 
 @pytest.mark.parametrize(
-  ("speed", "expected"),
+  ("speed", "expected", "custom_personalities"),
   [
-    (30.0 / 3.6, 1.25),
-    (75.0 / 3.6, 0.5625),
-    (120.0 / 3.6, 0.5),
+    (30.0 / 3.6, 1.25, False),
+    (75.0 / 3.6, 0.5625, False),
+    (120.0 / 3.6, 0.5, False),
+    (30.0 / 3.6, 1.25, True),
+    (75.0 / 3.6, 0.5625, True),
+    (120.0 / 3.6, 0.5, True),
   ],
 )
-def test_ascent_aggressive_legacy_following_ramps_down_after_30_kph(speed, expected):
+def test_ascent_aggressive_legacy_following_ramps_down_after_30_kph(speed, expected, custom_personalities):
   toggles = _toggles(_document(enabled=False))
-  toggles.custom_personalities = False
+  toggles.custom_personalities = custom_personalities
+  toggles.aggressive_follow = [1.25, 0.5]
+  toggles.aggressive_follow_high = 0.5
   controller = StarPilotFollowing(_planner())
 
   controller.update(
@@ -252,11 +258,51 @@ def test_ascent_aggressive_legacy_following_ramps_down_after_30_kph(speed, expec
 def test_non_ascent_keeps_legacy_aggressive_following_distance():
   toggles = _toggles(_document(enabled=False))
   toggles.custom_personalities = False
+  toggles.aggressive_follow = [1.25, 0.5]
   controller = StarPilotFollowing(_planner())
 
   controller.update(True, 120.0 / 3.6, _sm(personality=Personality.aggressive), toggles)
 
   assert controller.t_follow == pytest.approx(1.25)
+
+
+@pytest.mark.parametrize(("personality", "follow_values", "speed", "expected"), [
+  (Personality.standard, [1.45, 1.45], 70.0 / 3.6, 1.45),
+  (Personality.relaxed, [1.75, 1.75], 70.0 / 3.6, 1.75),
+])
+def test_ascent_custom_personality_defaults_match_current_following(personality, follow_values, speed, expected):
+  toggles = _toggles(_document(enabled=False))
+  toggles.custom_personalities = True
+  toggles.standard_follow = follow_values if personality == Personality.standard else [1.45, 1.45]
+  toggles.relaxed_follow = follow_values if personality == Personality.relaxed else [1.75, 1.75]
+  controller = StarPilotFollowing(_planner())
+
+  controller.update(True, speed, _sm(personality=personality, car_fingerprint="SUBARU_ASCENT"), toggles)
+
+  assert controller.t_follow == pytest.approx(expected)
+
+
+def test_ascent_aggressive_slider_adjustments_offset_the_current_curve_when_profile_toggle_is_off():
+  toggles = _toggles(_document(enabled=False))
+  toggles.custom_personalities = True
+  toggles.aggressive_personality_profile = False
+  toggles.aggressive_follow = [1.25, 0.6]
+  controller = StarPilotFollowing(_planner())
+
+  controller.update(True, 70.0 * 0.44704, _sm(personality=Personality.aggressive, car_fingerprint="SUBARU_ASCENT"), toggles)
+
+  assert controller.t_follow == pytest.approx(0.6)
+
+
+def test_ascent_custom_traffic_mode_keeps_its_current_far_speed_endpoint():
+  toggles = _toggles(_document(enabled=False))
+  toggles.custom_personalities = True
+  toggles.traffic_mode_follow = [0.75, 1.6]
+  controller = StarPilotFollowing(_planner())
+
+  controller.update(True, 11.176, _sm(traffic=True, car_fingerprint="SUBARU_ASCENT"), toggles)
+
+  assert controller.t_follow == pytest.approx(1.6)
 
 
 @pytest.mark.parametrize(
@@ -273,6 +319,7 @@ def test_ascent_legacy_following_supports_submaster_without_get(car_fingerprint,
 
   toggles = _toggles(_document(enabled=False))
   toggles.custom_personalities = False
+  toggles.aggressive_follow = [1.25, 0.5]
   services = _sm(personality=Personality.aggressive, car_fingerprint=car_fingerprint or "OTHER")
   if car_fingerprint is None:
     del services["carParams"]

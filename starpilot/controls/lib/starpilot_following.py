@@ -9,12 +9,18 @@ from openpilot.selfdrive.controls.lib.longitudinal_vehicle_tunes import get_far_
 from openpilot.selfdrive.controls.lib.longitudinal_mpc_lib.long_mpc import COMFORT_BRAKE, LEAD_DANGER_FACTOR, desired_follow_distance, get_jerk_factor, get_T_FOLLOW
 
 from openpilot.starpilot.common.longitudinal_personality_profiles import active_personality_id, interpolate_category_curve, resolve_personality_category
+from openpilot.starpilot.common.ascent_longitudinal_defaults import (
+  ASCENT_AGGRESSIVE_FOLLOW_BP,
+  ASCENT_AGGRESSIVE_FOLLOW_VALUES,
+  ASCENT_FOLLOW_DEFAULTS,
+  is_ascent_fingerprint,
+)
 from openpilot.starpilot.common.starpilot_variables import CITY_SPEED_LIMIT, MAX_T_FOLLOW
 
 TRAFFIC_MODE_BP = [0., CITY_SPEED_LIMIT]
 PERSONALITY_BP = [45. * CV.MPH_TO_MS, 70. * CV.MPH_TO_MS]
-ASCENT_LEGACY_FOLLOW_BP = [30. / 3.6, 70. / 3.6, 80. / 3.6, 120. / 3.6]
-ASCENT_AGGRESSIVE_FOLLOW = [1.25, 0.625, 0.5, 0.5]
+ASCENT_LEGACY_FOLLOW_BP = ASCENT_AGGRESSIVE_FOLLOW_BP
+ASCENT_AGGRESSIVE_FOLLOW = ASCENT_AGGRESSIVE_FOLLOW_VALUES
 
 LaneChangeState = log.LaneChangeState
 LaneChangeDirection = log.LaneChangeDirection
@@ -113,16 +119,25 @@ class StarPilotFollowing:
           self.t_follow = float(np.interp(v_ego, PERSONALITY_BP, self.t_follow))
         else:
           self.t_follow = float(self.t_follow)
-        if (
-          not starpilot_toggles.custom_personalities
-          and personality == log.LongitudinalPersonality.aggressive
-        ):
+        if personality == log.LongitudinalPersonality.aggressive:
           try:
             car_params = sm["carParams"]
           except KeyError:
             car_params = None
-          if getattr(car_params, "carFingerprint", "") == "SUBARU_ASCENT":
-            self.t_follow = float(np.interp(v_ego, ASCENT_LEGACY_FOLLOW_BP, ASCENT_AGGRESSIVE_FOLLOW))
+          if is_ascent_fingerprint(getattr(car_params, "carFingerprint", "")):
+            base = float(np.interp(v_ego, ASCENT_LEGACY_FOLLOW_BP, ASCENT_AGGRESSIVE_FOLLOW))
+            configured = starpilot_toggles.aggressive_follow
+            if not isinstance(configured, (list, tuple)):
+              configured = (configured, configured)
+            delta = np.interp(
+              v_ego,
+              PERSONALITY_BP,
+              [
+                float(configured[0]) - ASCENT_FOLLOW_DEFAULTS["AggressiveFollow"],
+                float(configured[1]) - ASCENT_FOLLOW_DEFAULTS["AggressiveFollowHigh"],
+              ],
+            )
+            self.t_follow = base + float(delta)
     else:
       self.base_acceleration_jerk = 0
       self.base_danger_jerk = 0

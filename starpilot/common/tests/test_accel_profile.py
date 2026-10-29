@@ -7,7 +7,12 @@ from openpilot.starpilot.common.accel_profile import (
   A_CRUISE_MAX_VALS_ECO_TRUCK,
   A_CRUISE_MAX_VALS_STANDARD_TRUCK,
   A_CRUISE_MAX_VALS_SPORT_PLUS_TRUCK,
+  A_CRUISE_MAX_VALS_SPORT_TRUCK_ASCENT,
   A_CRUISE_MAX_VALS_SPORT_TRUCK,
+  CUSTOM_ACCEL_PROFILE_PARAM_KEYS,
+  CUSTOM_ACCEL_PROFILE_POINT_VALUE_PARAM_KEYS,
+  build_custom_accel_profile_defaults,
+  get_custom_accel_profile_curve_defaults,
   get_accel_profile_curve_values,
   interpolate_accel_profile,
   parse_custom_accel_profile_curve,
@@ -63,3 +68,21 @@ def test_default_accel_interpolation_still_uses_legacy_breakpoints():
   values = [2.0, 1.8, 1.6, 1.4, 1.2, 1.0, 0.8]
 
   assert interpolate_accel_profile(A_CRUISE_MAX_BP_CUSTOM[3], values) == pytest.approx(values[3])
+
+
+def test_ascent_standard_custom_defaults_match_the_last_run_curve_without_truck_toggle():
+  defaults = build_custom_accel_profile_defaults(0, ev_tuning=False, truck_tuning=False, car_fingerprint="SUBARU_ASCENT")
+
+  assert [defaults[key] for key in CUSTOM_ACCEL_PROFILE_PARAM_KEYS] == A_CRUISE_MAX_VALS_SPORT_TRUCK_ASCENT
+
+
+def test_other_vehicles_keep_the_existing_sport_truck_custom_defaults():
+  defaults = build_custom_accel_profile_defaults(2, ev_tuning=False, truck_tuning=True, car_fingerprint="SUBARU_OUTBACK")
+
+  assert [defaults[key] for key in CUSTOM_ACCEL_PROFILE_PARAM_KEYS] == A_CRUISE_MAX_VALS_SPORT_TRUCK
+
+
+def test_ascent_custom_curve_defaults_start_from_the_standard_vehicle_curve():
+  defaults = get_custom_accel_profile_curve_defaults(0, ev_tuning=False, truck_tuning=False, car_fingerprint="SUBARU_ASCENT")
+
+  assert [defaults[key] for key in CUSTOM_ACCEL_PROFILE_POINT_VALUE_PARAM_KEYS[:7]] == A_CRUISE_MAX_VALS_SPORT_TRUCK_ASCENT

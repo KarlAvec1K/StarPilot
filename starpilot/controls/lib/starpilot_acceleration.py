@@ -405,12 +405,11 @@ class StarPilotAcceleration:
 
     if (
       getattr(car_params, "carFingerprint", "") == "SUBARU_ASCENT"
-      and truck_tuning
       and not custom_accel_profile
       and personality_acceleration is None
       and not traffic_mode
       and not starpilot_toggles.map_acceleration
-      and starpilot_toggles.acceleration_profile == ACCELERATION_PROFILES["SPORT"]
+      and starpilot_toggles.acceleration_profile == ACCELERATION_PROFILES["STANDARD"]
     ):
       self.max_accel = interpolate_accel_profile(v_ego, A_CRUISE_MAX_VALS_SPORT_TRUCK_ASCENT)
 

@@ -50,6 +50,15 @@ from openpilot.starpilot.common.accel_profile import (
   normalize_deceleration_profile,
   parse_custom_accel_profile_curve,
 )
+from openpilot.starpilot.common.ascent_longitudinal_defaults import (
+  ASCENT_FOLLOW_DEFAULTS,
+  ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY,
+  effective_ascent_follow_value,
+  ASCENT_TRAFFIC_FOLLOW_HIGH_BASELINE,
+  ASCENT_TRAFFIC_FOLLOW_HIGH_RELAXED_BASELINE,
+  migrate_ascent_follow_defaults,
+  is_ascent_fingerprint,
+)
 from openpilot.starpilot.common.longitudinal_personality_profiles import (
   PERSONALITY_PROFILES_PARAM,
   is_truck_fingerprint,
@@ -528,7 +537,15 @@ class StarPilotVariables:
 
       return value
 
-    if cast is bool:
+    if key in ASCENT_FOLLOW_DEFAULTS and is_ascent_fingerprint(getattr(self.starpilot_toggles, "car_model", "")):
+      raw_value = self.params_raw.get(key)
+      if raw_value is None:
+        value = default if default is not None else self.default_values.get(key)
+      else:
+        value = effective_ascent_follow_value(
+          key, raw_value, self.params_raw.get_bool(ASCENT_FOLLOW_DEFAULTS_MIGRATION_KEY),
+        )
+    elif cast is bool:
       value = self.params.get_bool(key)
     else:
       value = self.params.get(key)
@@ -678,6 +695,9 @@ class StarPilotVariables:
     toggle.car_make = CP.brand
     migrate_ford_lkas_button_default(toggle.car_make, self.params)
     toggle.car_model = CP.carFingerprint
+    if is_ascent_fingerprint(toggle.car_model):
+      self.default_values.update(ASCENT_FOLLOW_DEFAULTS)
+      migrate_ascent_follow_defaults(toggle.car_model, not started, self.params_raw)
     migrate_sonata_hybrid_lkas_button_default(toggle.car_model, self.params)
     toggle.disable_openpilot_long = self.get_value("DisableOpenpilotLongitudinal", condition=not alpha_longitudinal)
     friction = CP.lateralTuning.torque.friction
@@ -956,7 +976,10 @@ class StarPilotVariables:
     toggle.aggressive_jerk_speed = self.get_value("AggressiveJerkSpeed", cast=float, condition=toggle.custom_personalities, conversion=0.01, min=0.25, max=2.0)
     toggle.aggressive_jerk_speed_decrease = self.get_value("AggressiveJerkSpeedDecrease", cast=float, condition=toggle.custom_personalities, conversion=0.01, min=0.25, max=2.0)
     aggressive_follow_low = float(self.get_value("AggressiveFollow", cast=float, condition=toggle.custom_personalities, min=MIN_T_FOLLOW, max=MAX_T_FOLLOW))
-    aggressive_follow_high = float(self.get_value("AggressiveFollowHigh", cast=float, condition=toggle.custom_personalities, min=MIN_T_FOLLOW, max=MAX_T_FOLLOW))
+    aggressive_follow_high = float(self.get_value(
+      "AggressiveFollowHigh", cast=float, condition=toggle.custom_personalities,
+      min=0.5 if is_ascent_fingerprint(toggle.car_model) else MIN_T_FOLLOW, max=MAX_T_FOLLOW,
+    ))
     toggle.aggressive_follow = [aggressive_follow_low, aggressive_follow_high]
     toggle.standard_jerk_acceleration = self.get_value("StandardJerkAcceleration", cast=float, condition=toggle.custom_personalities, conversion=0.01, min=0.25, max=2.0)
     toggle.standard_jerk_deceleration = self.get_value("StandardJerkDeceleration", cast=float, condition=toggle.custom_personalities, conversion=0.01, min=0.25, max=2.0)
@@ -979,7 +1002,15 @@ class StarPilotVariables:
     toggle.traffic_mode_jerk_danger = [self.get_value("TrafficJerkDanger", cast=float, condition=toggle.custom_personalities, conversion=0.01, min=0.25, max=2.0), toggle.relaxed_jerk_danger]
     toggle.traffic_mode_jerk_speed = [self.get_value("TrafficJerkSpeed", cast=float, condition=toggle.custom_personalities, conversion=0.01, min=0.25, max=2.0), toggle.relaxed_jerk_speed]
     toggle.traffic_mode_jerk_speed_decrease = [self.get_value("TrafficJerkSpeedDecrease", cast=float, condition=toggle.custom_personalities, conversion=0.01, min=0.25, max=2.0), toggle.relaxed_jerk_speed_decrease]
-    toggle.traffic_mode_follow = [float(self.get_value("TrafficFollow", cast=float, condition=toggle.custom_personalities, min=0.5, max=MAX_T_FOLLOW)), toggle.relaxed_follow[0]]
+    traffic_follow_high = toggle.relaxed_follow[0]
+    if is_ascent_fingerprint(toggle.car_model):
+      traffic_follow_high = ASCENT_TRAFFIC_FOLLOW_HIGH_BASELINE + (
+        toggle.relaxed_follow[0] - ASCENT_TRAFFIC_FOLLOW_HIGH_RELAXED_BASELINE
+      )
+    toggle.traffic_mode_follow = [
+      float(self.get_value("TrafficFollow", cast=float, condition=toggle.custom_personalities, min=0.5, max=MAX_T_FOLLOW)),
+      traffic_follow_high,
+    ]
 
     custom_themes = self.get_value("CustomThemes")
     toggle.boot_logo = self.get_value("BootLogo", cast=None, default="starpilot")
@@ -1332,7 +1363,9 @@ class StarPilotVariables:
       self.get_value("DecelerationProfile", cast=None, condition=longitudinal_tuning, default=DECELERATION_PROFILES["ECO"])
     )
     toggle.custom_accel_profile = custom_accel_profile_tuning
-    custom_accel_defaults = build_custom_accel_profile_defaults(toggle.acceleration_profile, toggle.ev_tuning, toggle.truck_tuning)
+    custom_accel_defaults = build_custom_accel_profile_defaults(
+      toggle.acceleration_profile, toggle.ev_tuning, toggle.truck_tuning, car_fingerprint=toggle.car_model,
+    )
     custom_accel_raw_values = {key: self.params_raw.get(key) for key in CUSTOM_ACCEL_PROFILE_PARAM_KEYS}
     custom_accel_initialized = custom_accel_profile_is_initialized(
       self.params_raw.get(CUSTOM_ACCEL_PROFILE_INITIALIZED_KEY),

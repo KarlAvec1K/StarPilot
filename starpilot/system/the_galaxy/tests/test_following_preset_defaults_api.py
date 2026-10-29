@@ -3,7 +3,7 @@ from copy import deepcopy
 import pytest
 
 from openpilot.starpilot.common import longitudinal_personality_profiles as lpp
-from test_personality_profiles_api import _client
+from test_personality_profiles_api import _client, the_galaxy
 
 
 @pytest.mark.parametrize("personality,preset", [("aggressive", "close"), ("standard", "medium"), ("relaxed", "far"), ("traffic", "traffic")])
@@ -46,3 +46,32 @@ def test_existing_dom_default_keeps_inheriting_user_following_settings(monkeypat
   assert body["profiles"]["standard"]["following"]["preset"] == "dom_default"
   assert body["reference_curves"]["standard"]["following"][0] == 1.8
   assert body["reference_curves"]["standard"]["following"][-1] == 1.6
+
+
+def test_ascent_reference_defaults_preserve_all_legacy_follow_modes(monkeypatch):
+  values = {
+    "CarModel": "SUBARU_ASCENT",
+    "CustomPersonalities": True,
+    "AscentGalaxyFollowDefaultsMigrated": True,
+    "AggressiveFollow": 1.25,
+    "AggressiveFollowHigh": 0.5,
+    "StandardFollow": 1.45,
+    "StandardFollowHigh": 1.45,
+    "RelaxedFollow": 1.75,
+    "RelaxedFollowHigh": 1.75,
+    "TrafficFollow": 0.75,
+  }
+  monkeypatch.setattr(the_galaxy, "_safe_params_get_live_raw", lambda key, default=None, block=False: values.get(key, default))
+  monkeypatch.setattr(the_galaxy, "_safe_params_get_bool", lambda key, default=False: bool(values.get(key, default)))
+
+  aggressive = the_galaxy._get_effective_legacy_following_curve("aggressive")
+  standard = the_galaxy._get_effective_legacy_following_curve("standard")
+  relaxed = the_galaxy._get_effective_legacy_following_curve("relaxed")
+  traffic = the_galaxy._get_effective_legacy_following_curve("traffic")
+
+  assert aggressive[0] == pytest.approx(1.25)
+  assert aggressive[5] == pytest.approx(0.5)
+  assert standard == pytest.approx([1.45] * len(lpp.FOLLOWING_SPEEDS_MPH))
+  assert relaxed == pytest.approx([1.75] * len(lpp.FOLLOWING_SPEEDS_MPH))
+  assert traffic[0] == pytest.approx(0.75)
+  assert traffic[-1] == pytest.approx(1.6)
