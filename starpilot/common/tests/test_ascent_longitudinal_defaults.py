@@ -4,6 +4,7 @@ from openpilot.starpilot.common.ascent_longitudinal_defaults import (
   ASCENT_FOLLOW_DEFAULTS,
   ASCENT_FOLLOWING_SPEEDS_MPH,
   ascent_following_curve,
+  default_human_lane_changes_enabled,
   effective_ascent_follow_value,
   migrate_ascent_follow_defaults,
 )
@@ -48,6 +49,12 @@ def test_ascent_follow_values_use_rebased_defaults_before_offroad_migration():
   assert effective_ascent_follow_value("AggressiveFollowHigh", 0.9, migrated=False) == pytest.approx(0.4)
   assert effective_ascent_follow_value("RelaxedFollow", 1.6, migrated=False) == pytest.approx(1.75)
   assert effective_ascent_follow_value("RelaxedFollow", 1.85, migrated=True) == pytest.approx(1.85)
+
+
+def test_human_lane_changes_default_is_enabled_only_for_ascent():
+  assert default_human_lane_changes_enabled("SUBARU_ASCENT") is True
+  assert default_human_lane_changes_enabled("SUBARU_OUTBACK") is False
+  assert default_human_lane_changes_enabled(None) is False
 
 
 def test_ascent_galaxy_profile_defaults_match_current_follow_curves():

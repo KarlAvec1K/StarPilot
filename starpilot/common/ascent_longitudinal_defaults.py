@@ -51,6 +51,11 @@ def is_ascent_fingerprint(fingerprint: object) -> bool:
   return isinstance(fingerprint, str) and fingerprint.upper() == ASCENT_FINGERPRINT
 
 
+def default_human_lane_changes_enabled(fingerprint: object) -> bool:
+  """Keep the Ascent's active lane-change behavior when longitudinal tuning is off."""
+  return is_ascent_fingerprint(fingerprint)
+
+
 def effective_ascent_follow_value(key: str, raw_value, migrated: bool) -> float:
   """Use the new baseline immediately, even before an offroad write is possible."""
   if key not in ASCENT_FOLLOW_DEFAULTS:

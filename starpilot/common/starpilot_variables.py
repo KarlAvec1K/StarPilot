@@ -58,6 +58,7 @@ from openpilot.starpilot.common.ascent_longitudinal_defaults import (
   ASCENT_TRAFFIC_FOLLOW_HIGH_RELAXED_BASELINE,
   migrate_ascent_follow_defaults,
   is_ascent_fingerprint,
+  default_human_lane_changes_enabled,
 )
 from openpilot.starpilot.common.longitudinal_personality_profiles import (
   PERSONALITY_PROFILES_PARAM,
@@ -1391,7 +1392,12 @@ class StarPilotVariables:
         toggle.custom_accel_profile_values = custom_values
       except ValueError:
         pass
-    toggle.human_lane_changes = has_radar and self.get_value("HumanLaneChanges", condition=longitudinal_tuning)
+    human_lane_changes_default = default_human_lane_changes_enabled(toggle.car_model)
+    toggle.human_lane_changes = has_radar and self.get_value(
+      "HumanLaneChanges",
+      condition=longitudinal_tuning or human_lane_changes_default,
+      default=human_lane_changes_default,
+    )
     toggle.nav_longitudinal_allowed = toggle.openpilot_longitudinal and self.get_value("NavLongitudinalAllowed", condition=longitudinal_tuning)
     # Keep lead detection sensitivity normalized even when longitudinal tuning is disabled.
     # Some branches can return raw integer defaults (e.g. 35) when condition=False.
