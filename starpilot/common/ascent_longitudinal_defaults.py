@@ -17,7 +17,7 @@ ASCENT_FOLLOW_DEFAULTS = {
   "AggressiveFollow": 1.25,
   "AggressiveFollowHigh": 0.5,
   "StandardFollow": 1.45,
-  "StandardFollowHigh": 1.45,
+  "StandardFollowHigh": 0.84,
   "RelaxedFollow": 1.75,
   "RelaxedFollowHigh": 1.75,
 }

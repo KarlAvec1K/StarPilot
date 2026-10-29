@@ -43,7 +43,7 @@ def test_ascent_follow_defaults_migration_rebases_old_values_and_keeps_user_delt
     "AggressiveFollow": 1.35,
     "AggressiveFollowHigh": 0.4,
     "StandardFollow": 1.55,
-    "StandardFollowHigh": 1.55,
+    "StandardFollowHigh": 0.94,
     "RelaxedFollow": 1.85,
     "RelaxedFollowHigh": 1.85,
   })
@@ -70,7 +70,9 @@ def test_ascent_galaxy_profile_defaults_match_current_follow_curves():
 
   assert aggressive[0] == pytest.approx(1.25)
   assert aggressive[5] == pytest.approx(0.5)
-  assert standard == pytest.approx([1.45] * len(ASCENT_FOLLOWING_SPEEDS_MPH))
+  assert standard[0] == pytest.approx(1.45)
+  assert standard[-1] == pytest.approx(0.84)
+  assert all(left >= right for left, right in zip(standard, standard[1:]))
   assert relaxed == pytest.approx([1.75] * len(ASCENT_FOLLOWING_SPEEDS_MPH))
   assert traffic[0] == pytest.approx(0.75)
   assert traffic[-1] == pytest.approx(1.6)
