@@ -38,6 +38,12 @@ _REDNECK_BUTTON_INTERVAL_FRAMES = 10
 _REDNECK_BUTTON_COPIES = 2
 
 
+def _throttle_max_for_car(car_fingerprint):
+  if car_fingerprint == CAR.SUBARU_ASCENT:
+    return CarControllerParams.ASCENT_THROTTLE_MAX
+  return CarControllerParams.THROTTLE_MAX
+
+
 def _ascent_adaptive_accel_request(requested_accel, measured_accel, v_ego, filtered_error, dt):
   """Apply a bounded, speed-gated correction for the Ascent's measured accel shortfall."""
   values = (requested_accel, measured_accel, v_ego, filtered_error, dt)
@@ -405,7 +411,8 @@ class CarController(CarControllerBase):
       apply_brake = int(round(np.interp(actuators.accel, CarControllerParams.BRAKE_LOOKUP_BP, CarControllerParams.BRAKE_LOOKUP_V)))
 
       # limit min and max values
-      cruise_throttle = np.clip(apply_throttle, CarControllerParams.THROTTLE_MIN, CarControllerParams.THROTTLE_MAX)
+      throttle_max = _throttle_max_for_car(self.CP.carFingerprint)
+      cruise_throttle = np.clip(apply_throttle, CarControllerParams.THROTTLE_MIN, throttle_max)
       cruise_rpm = np.clip(apply_rpm, CarControllerParams.RPM_MIN, CarControllerParams.RPM_MAX)
       cruise_brake = np.clip(apply_brake, CarControllerParams.BRAKE_MIN, CarControllerParams.BRAKE_MAX)
     else:

@@ -8,13 +8,14 @@ from opendbc.can import CANPacker, CANParser
 from opendbc.car import Bus, fw_versions, gen_empty_fingerprint, structs
 from opendbc.car.fw_query_definitions import StdQueries
 from opendbc.car.subaru import subarucan
-from opendbc.car.subaru.carcontroller import CarController, _ASCENT_AOL_ARM_FRAMES, _ascent_adaptive_accel_request
+from opendbc.car.subaru.carcontroller import CarController, _ASCENT_AOL_ARM_FRAMES, _ascent_adaptive_accel_request, \
+  _throttle_max_for_car
 from opendbc.car.subaru.carstate import CarState
 from opendbc.car.subaru.fingerprints import FW_VERSIONS
 from opendbc.car.fw_versions import match_fw_to_car
 from opendbc.car.subaru.interface import CarInterface
 from opendbc.car.subaru.values import CAR, DBC, FW_QUERY_CONFIG, SUBARU_ALT_VERSION_REQUEST, SUBARU_VERSION_REQUEST, CanBus, \
-  SubaruFlags, SubaruSafetyFlags
+  CarControllerParams, SubaruFlags, SubaruSafetyFlags
 from opendbc.car.structs import CarParams
 
 
@@ -270,6 +271,19 @@ def test_torque_platform_does_not_enable_angle_safety():
   assert not (CP.flags & SubaruFlags.LKAS_ANGLE)
   assert CP.steerControlType == CarParams.SteerControlType.torque
   assert not (CP.safetyConfigs[0].safetyParam & SubaruSafetyFlags.LKAS_ANGLE)
+
+
+def test_ascent_throttle_limit_is_vehicle_specific():
+  ascent_cp = CarInterface.get_non_essential_params(CAR.SUBARU_ASCENT)
+  other_cp = CarInterface.get_non_essential_params(CAR.SUBARU_IMPREZA_2020)
+
+  assert CarControllerParams.THROTTLE_MAX == 3400
+  assert CarControllerParams.ASCENT_THROTTLE_MAX == 3800
+  assert _throttle_max_for_car(CAR.SUBARU_ASCENT) == 3800
+  assert _throttle_max_for_car(CAR.SUBARU_ASCENT_2023) == 3400
+  assert _throttle_max_for_car(CAR.SUBARU_IMPREZA_2020) == 3400
+  assert ascent_cp.safetyConfigs[0].safetyParam & SubaruSafetyFlags.ASCENT_LONG_THROTTLE
+  assert not (other_cp.safetyConfigs[0].safetyParam & SubaruSafetyFlags.ASCENT_LONG_THROTTLE)
 
 
 def test_outback_2023_uses_d_platform_bus_layout():

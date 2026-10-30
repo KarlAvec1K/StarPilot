@@ -86,15 +86,16 @@ class CarControllerParams:
   # from early Crosstrek testing.
   #
   # Keep this Ascent-specific and conservative for the first road validation:
-  # - braking path is unchanged
-  # - THROTTLE_MAX / RPM_MAX safety limits are unchanged
+  # - other Subaru keep the 3400 throttle limit; Ascent has a separate 3800 candidate limit
+  # - the RPM limit and braking path are unchanged
   # - values above 100 km/h hold the 100 km/h feed-forward instead of extrapolating
   ASCENT_LONG_SPEED_BP = [0.0, 35.0 / 3.6, 70.0 / 3.6, 90.0 / 3.6, 100.0 / 3.6]
   ASCENT_THROTTLE_BASE_V = [THROTTLE_INACTIVE, 2230, 2610, 2740, 2940]
   ASCENT_RPM_BASE_V = [RPM_INACTIVE, 1185, 1445, 1545, 1770]
 
   # Preserve the existing accel-command slope on top of the speed feed-forward.
-  ASCENT_THROTTLE_ACCEL_GAIN = (THROTTLE_MAX - THROTTLE_INACTIVE) / 2.0
+  ASCENT_THROTTLE_MAX = 3800
+  ASCENT_THROTTLE_ACCEL_GAIN = (ASCENT_THROTTLE_MAX - THROTTLE_INACTIVE) / 2.0
   ASCENT_RPM_ACCEL_GAIN = (RPM_MAX - RPM_INACTIVE) / 2.0
 
 
@@ -111,6 +112,7 @@ class SubaruSafetyFlags(IntFlag):
   REDNECK_CRUISE = 512
   AVH_STARTUP = 1024
   ASCENT_LKAS_ALERT = 2048
+  ASCENT_LONG_THROTTLE = 4096
   LEGACY_2025_ANGLE_LIMITS = FIXED_ANGLE_LIMITS
 
 
