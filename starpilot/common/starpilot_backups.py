@@ -17,10 +17,11 @@ from openpilot.starpilot.common.starpilot_variables import EXCLUDED_KEYS, STARPI
 def backup_starpilot(build_metadata, params):
   maximum_backups = 3
   cleanup_backups(STARPILOT_BACKUPS, maximum_backups)
+  safe_channel = str(build_metadata.channel).replace("/", "_").replace("\\", "_")
 
   today = datetime.datetime.now().date()
   for backup in STARPILOT_BACKUPS.glob("*_auto.tar.zst"):
-    if backup.name.endswith(f"_{build_metadata.channel}_auto.tar.zst"):
+    if backup.name.endswith(f"_{safe_channel}_auto.tar.zst"):
       if datetime.datetime.fromtimestamp(backup.stat().st_mtime).date() == today:
         if not backup.name.startswith(f"{build_metadata.openpilot.git_commit[:6]}_"):
           delete_file(backup, report=False)
@@ -28,8 +29,11 @@ def backup_starpilot(build_metadata, params):
   _, _, free = shutil.disk_usage(STARPILOT_BACKUPS)
   minimum_backup_size = params.get_int("MinimumBackupSize", return_default=True, default=0)
   if free > minimum_backup_size * maximum_backups:
-    destination = STARPILOT_BACKUPS / f"{build_metadata.openpilot.git_commit}_{build_metadata.channel}_auto"
-    create_backup(Path(BASEDIR), destination, "Successfully backed up StarPilot!", "Failed to backup StarPilot...", params, minimum_backup_size, compressed=True)
+    destination = STARPILOT_BACKUPS / f"{build_metadata.openpilot.git_commit}_{safe_channel}_auto"
+    create_backup(
+      Path(BASEDIR), destination, "Successfully backed up StarPilot!", "Failed to backup StarPilot...",
+      params, minimum_backup_size, compressed=True,
+    )
 
 
 def backup_toggles(params, boot_run=False):
@@ -79,6 +83,8 @@ def create_backup(backup, destination, success_message, fail_message, params, mi
   if final_destination.exists():
     print("Backup already exists. Aborting...")
     return
+
+  destination.parent.mkdir(parents=True, exist_ok=True)
 
   if compressed:
     compressed_temp = destination.parent / f"{destination.name}_in_progress.tar.zst"
