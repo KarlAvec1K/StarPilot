@@ -118,6 +118,30 @@ def test_ascent_low_speed_stable_follow_caps_positive_surge_near_target():
   assert result.target == pytest.approx(0.18)
 
 
+def test_ascent_creep_caps_departure_from_standstill_when_close_lead_pulls_away():
+  result = run(
+    lead(d_rel=6.24, v_lead=1.27, a_lead=0.99, model_prob=0.9999),
+    v_ego=0.0,
+    raw=0.53,
+    ascent_creep=True,
+  )
+
+  assert result.accel_cap == pytest.approx(0.18)
+  assert result.target <= 0.18
+
+
+def test_ascent_creep_caps_low_speed_launch_with_moderate_relative_speed():
+  result = run(
+    lead(d_rel=5.76, v_lead=2.06, a_lead=0.73, model_prob=0.9999),
+    v_ego=1.28,
+    raw=0.42,
+    ascent_creep=True,
+  )
+
+  assert result.accel_cap == pytest.approx(0.18)
+  assert result.target <= 0.18
+
+
 def test_ascent_low_speed_creep_does_not_change_braking_or_safety_bypasses():
   urgent_brake = run(
     lead(d_rel=9.5, v_lead=2.5, radar=True),

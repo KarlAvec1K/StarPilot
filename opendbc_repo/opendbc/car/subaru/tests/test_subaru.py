@@ -33,6 +33,20 @@ def test_ascent_adaptive_accel_feedback_is_speed_gated_and_bounded():
   assert accel == pytest.approx(1.05)
 
 
+def test_ascent_adaptive_accel_feedback_builds_small_persistent_highway_request():
+  accel, filtered_error = _ascent_adaptive_accel_request(
+    requested_accel=0.1, measured_accel=0.0, v_ego=110 / 3.6, filtered_error=0.0, dt=0.01,
+  )
+  for _ in range(1200):
+    accel, filtered_error = _ascent_adaptive_accel_request(
+      requested_accel=0.1, measured_accel=0.0, v_ego=110 / 3.6,
+      filtered_error=filtered_error, dt=0.01,
+    )
+
+  assert filtered_error == pytest.approx(0.1, abs=0.001)
+  assert accel == pytest.approx(0.4, abs=0.005)
+
+
 def test_ascent_adaptive_accel_feedback_reaches_full_weight_by_80_kph():
   accel, _ = _ascent_adaptive_accel_request(
     requested_accel=0.4, measured_accel=0.4, v_ego=75 / 3.6, filtered_error=1.0, dt=0.01,
