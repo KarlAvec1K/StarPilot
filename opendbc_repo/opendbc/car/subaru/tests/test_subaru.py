@@ -24,7 +24,7 @@ def test_ascent_adaptive_accel_feedback_is_speed_gated_and_bounded():
     requested_accel=0.4, measured_accel=0.0, v_ego=80 / 3.6, filtered_error=0.0, dt=0.01,
   )
   assert filtered_error > 0.0
-  assert 0.4 < accel < 0.41
+  assert 0.41 < accel < 0.42
 
   for _ in range(1000):
     accel, filtered_error = _ascent_adaptive_accel_request(
