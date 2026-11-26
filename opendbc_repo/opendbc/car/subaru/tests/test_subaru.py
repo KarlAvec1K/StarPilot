@@ -69,6 +69,19 @@ def test_ascent_adaptive_accel_feedback_does_not_boost_braking_or_low_speed():
   assert braking_error == pytest.approx(0.0)
 
 
+def test_ascent_high_speed_feedforward_continues_to_120_kph():
+  speed_bp = CarControllerParams.ASCENT_LONG_SPEED_BP
+  throttle_base = CarControllerParams.ASCENT_THROTTLE_BASE_V
+  rpm_base = CarControllerParams.ASCENT_RPM_BASE_V
+
+  assert speed_bp[-3] == pytest.approx(100 / 3.6)
+  assert throttle_base[-3] == 2940
+  assert rpm_base[-3] == 1770
+  assert speed_bp[-1] == pytest.approx(120 / 3.6)
+  assert throttle_base[-1] == 3300
+  assert rpm_base[-1] == 2250
+
+
 def make_sng_controller(flags=0, prev_close_distance=4.0):
   controller = object.__new__(CarController)
   controller.CP = SimpleNamespace(flags=flags)

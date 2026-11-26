@@ -80,18 +80,17 @@ class CarControllerParams:
 
   # Subaru Ascent 2019-21 longitudinal feed-forward.
   #
-  # Checkpoint 04 OEM EyeSight data showed that maintaining road speed requires
-  # materially more Cruise_Throttle / Cruise_RPM as vEgo increases. The generic
-  # Subaru alpha-long mapping was effectively speed-independent and was derived
-  # from early Crosstrek testing.
+  # The generic Subaru alpha-long mapping was effectively speed-independent and
+  # was derived from early Crosstrek testing. Checkpoint 74 logs showed persistent
+  # underspeed near 118 km/h with only a small positive acceleration request.
   #
   # Keep this Ascent-specific and conservative for the first road validation:
   # - other Subaru keep the 3400 throttle limit; Ascent has a separate 3800 candidate limit
   # - the RPM limit and braking path are unchanged
-  # - values above 100 km/h hold the 100 km/h feed-forward instead of extrapolating
-  ASCENT_LONG_SPEED_BP = [0.0, 35.0 / 3.6, 70.0 / 3.6, 90.0 / 3.6, 100.0 / 3.6]
-  ASCENT_THROTTLE_BASE_V = [THROTTLE_INACTIVE, 2230, 2610, 2740, 2940]
-  ASCENT_RPM_BASE_V = [RPM_INACTIVE, 1185, 1445, 1545, 1770]
+  # - test a moderate speed-dependent feed-forward ramp through 120 km/h
+  ASCENT_LONG_SPEED_BP = [0.0, 35.0 / 3.6, 70.0 / 3.6, 90.0 / 3.6, 100.0 / 3.6, 110.0 / 3.6, 120.0 / 3.6]
+  ASCENT_THROTTLE_BASE_V = [THROTTLE_INACTIVE, 2230, 2610, 2740, 2940, 3100, 3300]
+  ASCENT_RPM_BASE_V = [RPM_INACTIVE, 1185, 1445, 1545, 1770, 2000, 2250]
 
   # Preserve the existing accel-command slope on top of the speed feed-forward.
   ASCENT_THROTTLE_MAX = 3800
