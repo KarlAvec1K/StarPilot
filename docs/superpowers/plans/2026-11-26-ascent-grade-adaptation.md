@@ -45,7 +45,7 @@
 - [x] Implement minimal pure helpers using gravity `9.81 m/s²`, grade clamp `±0.27 rad`, close gap `desired_follow_distance + 4 m`, close TTC `< 6 s` only while closing faster than `0.5 m/s`, and catch-up headroom `v_cruise - v_ego >= 1.0 m/s`.
 - [x] Run the focused pytest target and confirm it passes.
 - [x] Run Ruff on the new module and test file.
-- [ ] Commit as `feat: add Ascent grade estimator and gates`.
+- [x] Included with the persistent learner and planner telemetry in implementation commit `0c38be56bd`.
 
 ### Task 2: Persistent shadow learner
 
@@ -65,7 +65,7 @@
 - [x] Implement the validated persistent learner with a maximum residual of `0.25 m/s²`, a per-update step no greater than `0.01 m/s²`, and no use of rejected samples.
 - [x] Run the focused tests and confirm they pass.
 - [x] Run Ruff on the new module and test file.
-- [ ] Commit as `feat: add bounded Ascent grade shadow learning`.
+- [x] Included with the estimator and planner telemetry in implementation commit `0c38be56bd`.
 
 ### Task 3: Planner shadow telemetry
 
@@ -84,7 +84,7 @@
 - [x] Add sequential `LongitudinalPlan` fields, integrate shadow update after target arbitration, and preserve existing arbitration.
 - [x] Run the new test and existing longitudinal planner target; confirm all pass.
 - [x] Run Ruff on the new Python module/tests and validate Cap’n Proto schema loading through planner tests. Existing unrelated lint findings remain in `longitudinal_planner.py`.
-- [ ] Commit as `feat: publish Ascent grade shadow telemetry`.
+- [x] Included with the estimator and learner in implementation commit `0c38be56bd`.
 
 ### Task 4: Branch and Comma verification/deployment
 
@@ -92,12 +92,12 @@
 - No further source files unless a validation fix is required.
 
 **Interfaces:**
-- The complete feature branch contains the three task commits plus plan/design documentation.
+- The feature branch contains the approved design, implementation plan, and combined implementation commit.
 - The Comma install is allowed only after a read-only preflight confirms device identity, expected checkout/branch, clean or safely preservable worktree, `IsOffroad=1`, and `IsOnroad=0`.
 
 - [x] Run the targeted controls tests and existing acceleration tests: `581 passed`; Ruff passes on the new helper and helper tests.
 - [x] Review the feature scope and confirm the shadow path never modifies `aTarget`.
-- [ ] Push the feature branch to `origin` and verify the remote commit before installing.
+- [x] Pushed `codex/ascent-stopgo-118-20261119` to `origin` and verified remote SHA `0c38be56bd2aef52b2bca79c76f05610a2d4004a`.
 - [ ] Preflight Comma branch/commit/status and offroad flags. The last SSH preflight to `192.168.18.118` timed out; do not deploy or reboot until it is reachable and confirmed offroad.
 - [ ] Install the verified commit, restart services/reboot only while offroad, then verify commit, active service, offroad/onroad state, and Panda loader completion.
 - [ ] Record the deployed commit and explicit shadow-only validation boundary in the project note.
