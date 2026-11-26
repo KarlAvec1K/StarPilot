@@ -1332,6 +1332,14 @@ struct LongitudinalPlan @0xe00b5b3eba12876c {
   leadTrajectoryV0 @41 :List(Float32);
   leadTrajectoryX1 @42 :List(Float32);
   leadTrajectoryV1 @43 :List(Float32);
+  ascentGradePitch @44 :Float32;
+  ascentGradeValid @45 :Bool;
+  ascentGradeAccel @46 :Float32;
+  ascentGradeCandidate @47 :Float32;
+  ascentGradeLearned @48 :Float32;
+  ascentGradeSampleCount @49 :UInt32;
+  ascentGradeBlockedByLead @50 :Bool;
+  ascentGradeReason @51 :Text;
 
   enum LongitudinalPlanSource {
     cruise @0;

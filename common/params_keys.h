@@ -46,6 +46,8 @@ inline static std::unordered_map<std::string, ParamKeyAttributes> keys = {
     {"DriverLockoutCount", {CLEAR_ON_MANAGER_START | CLEAR_ON_IGNITION_ON, INT, "0"}},
     {"EcuDisableFailed", {CLEAR_ON_MANAGER_START, BOOL}},
     {"AlphaLongitudinalEnabled", {PERSISTENT, BOOL}},
+    {"AscentGradeLearning", {PERSISTENT, JSON, "{}", "{}"}},
+    {"AscentGradeLearningEnabled", {PERSISTENT, BOOL, "0", "0"}},
     {"ExperimentalLongitudinalEnabled", {PERSISTENT, BOOL}},
     {"ExperimentalMode", {PERSISTENT, BOOL}},
     {"ExperimentalModeConfirmed", {PERSISTENT, BOOL}},

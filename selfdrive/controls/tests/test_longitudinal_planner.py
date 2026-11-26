@@ -27,6 +27,7 @@ from openpilot.selfdrive.controls.lib.longitudinal_planner import (
   get_vehicle_min_accel,
   should_publish_planner_fcw,
 )
+from openpilot.selfdrive.controls.lib.ascent_grade_adaptive import GradeEstimate
 from openpilot.selfdrive.controls.lib.longitudinal_mpc_lib.long_mpc import (
   LongitudinalMpc,
   build_model_lead_trajectory,
@@ -3591,6 +3592,51 @@ def test_publish_has_lead_includes_second_mpc_lead():
   planner.publish(sm, pm)
 
   assert pm.sent["longitudinalPlan"].longitudinalPlan.hasLead
+
+
+def test_publish_reports_ascent_grade_shadow_without_changing_target():
+  class FakePM:
+    def __init__(self):
+      self.sent = {}
+
+    def send(self, name, msg):
+      self.sent[name] = msg
+
+  class FakeSM(dict):
+    def all_checks(self, service_list=None):
+      return True
+
+    logMonoTime = {"modelV2": int(1e9)}
+
+  planner = LongitudinalPlanner(CarInterface.get_non_essential_params(CAR.HONDA_CIVIC), init_v=20.0)
+  planner.output_a_target = 0.35
+  planner.output_should_stop = False
+  planner.v_desired_trajectory = np.zeros(CONTROL_N)
+  planner.a_desired_trajectory = np.zeros(CONTROL_N)
+  planner.j_desired_trajectory = np.zeros(CONTROL_N)
+  planner.fcw = False
+  planner.mpc.source = "cruise"
+  planner.mpc.solve_time = 0.0
+  planner.ascent_grade_estimate = GradeEstimate(0.10, 0.98, True, "valid")
+  planner.ascent_grade_candidate = 0.98
+  planner.ascent_grade_learned = 0.08
+  planner.ascent_grade_sample_count = 20
+  planner.ascent_grade_blocked_by_lead = True
+  planner.ascent_grade_reason = "close_lead"
+  pm = FakePM()
+
+  planner.publish(FakeSM(make_sm(20.0, 0.35, -1.0)), pm)
+
+  longitudinal_plan = pm.sent["longitudinalPlan"].longitudinalPlan
+  assert longitudinal_plan.aTarget == pytest.approx(0.35)
+  assert longitudinal_plan.ascentGradePitch == pytest.approx(0.10)
+  assert longitudinal_plan.ascentGradeValid
+  assert longitudinal_plan.ascentGradeAccel == pytest.approx(0.98, abs=0.01)
+  assert longitudinal_plan.ascentGradeCandidate == pytest.approx(0.98)
+  assert longitudinal_plan.ascentGradeLearned == pytest.approx(0.08)
+  assert longitudinal_plan.ascentGradeSampleCount == 20
+  assert longitudinal_plan.ascentGradeBlockedByLead
+  assert longitudinal_plan.ascentGradeReason == "close_lead"
 
 
 def test_rav4_tss2_variants_use_the_car_specific_post_departure_tune():

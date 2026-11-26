@@ -16,6 +16,13 @@ from openpilot.selfdrive.controls.lib.longitudinal_mpc_lib.long_mpc import desir
 from openpilot.selfdrive.controls.lib.longitudinal_mpc_lib.long_mpc import should_trigger_planner_fcw
 from openpilot.selfdrive.controls.lib.longitudinal_mpc_lib.long_mpc import STOP_DISTANCE
 from openpilot.selfdrive.controls.lib.longitudinal_mpc_lib.long_mpc import T_IDXS as T_IDXS_MPC
+from openpilot.selfdrive.controls.lib.ascent_grade_adaptive import (
+  GradeEstimate,
+  GradeEstimator,
+  GradeLearner,
+  is_close_lead,
+  is_sample_eligible,
+)
 from openpilot.selfdrive.controls.lib.lead_behavior import is_radarless_matched_follow_window
 from openpilot.selfdrive.controls.lib.lead_follow_policy import apply as apply_follow_policy
 from openpilot.selfdrive.controls.lib.lead_follow_policy import is_nonurgent_duplicate_vision_follow
@@ -569,6 +576,23 @@ def get_accel_from_plan(speeds, accels, action_t=DT_MDL, vEgoStopping=0.05):
 class LongitudinalPlanner:
   def __init__(self, CP, init_v=0.0, init_a=0.0, dt=DT_MDL):
     self.CP = CP
+    self.ascent_grade_estimator = None
+    self.ascent_grade_learner = None
+    self.ascent_grade_estimate = GradeEstimate(0.0, 0.0, False, "not_ascent")
+    self.ascent_grade_candidate = 0.0
+    self.ascent_grade_learned = 0.0
+    self.ascent_grade_sample_count = 0
+    self.ascent_grade_blocked_by_lead = False
+    self.ascent_grade_reason = "not_ascent"
+    if getattr(CP, "carFingerprint", "") == "SUBARU_ASCENT" and getattr(CP, "openpilotLongitudinalControl", False):
+      self.ascent_grade_estimator = GradeEstimator()
+      try:
+        from openpilot.common.params import Params
+        params = Params()
+        device_id = params.get("DongleId", encoding="utf-8") or ""
+        self.ascent_grade_learner = GradeLearner(params, "SUBARU_ASCENT", device_id)
+      except Exception as e:
+        cloudlog.warning(f"Ascent grade shadow learner unavailable: {e}")
     self.mpc = LongitudinalMpc(dt=dt, hold_stopped_lead_position=use_stopped_lead_position(CP),
                               sync_model_lead_filters=use_model_lead_filter_sync(CP))
     self.fcw = False
@@ -657,6 +681,85 @@ class LongitudinalPlanner:
       except Exception:
         self._preap_params = None
         self.nap_adaptive_accel = False
+
+  def update_ascent_grade_shadow(self, sm, v_ego, v_cruise, a_target, output_should_stop,
+                                 vision_low_speed_stop_active, accel_limits, accel_limits_turns):
+    if self.ascent_grade_estimator is None:
+      return
+
+    orientation = sm["carControl"].orientationNED
+    pitch = float(orientation[1]) if len(orientation) >= 2 else float("nan")
+    car_state = sm["carState"]
+    self.ascent_grade_estimate = self.ascent_grade_estimator.update(
+      pitch, float(getattr(car_state, "aEgo", 0.0)), self.dt,
+    )
+    grade_accel = self.ascent_grade_estimate.grade_accel_mps2
+    positive_grade_accel = max(0.0, grade_accel) if self.ascent_grade_estimate.valid else 0.0
+
+    leads = (self.lead_one, self.lead_two)
+    close_lead = False
+    for lead in leads:
+      if not bool(getattr(lead, "status", False)):
+        continue
+      desired_gap = desired_follow_distance(v_ego, getattr(lead, "vLead", v_ego), self.effective_t_follow)
+      if is_close_lead(lead, v_ego, desired_gap):
+        close_lead = True
+        break
+    self.ascent_grade_blocked_by_lead = close_lead
+
+    controls_state = sm["controlsState"]
+    starpilot_plan = sm["starpilotPlan"]
+    longitudinal_active = bool(
+      getattr(self.CP, "openpilotLongitudinalControl", False) and
+      getattr(sm["selfdriveState"], "enabled", False) and
+      controls_state.longControlState != LongCtrlState.off
+    )
+    stop_active = bool(
+      output_should_stop or vision_low_speed_stop_active or
+      controls_state.longControlState == LongCtrlState.stopping or
+      getattr(starpilot_plan, "forcingStop", False) or
+      getattr(starpilot_plan, "redLight", False)
+    )
+    gas_pressed = bool(
+      getattr(car_state, "gasPressed", False) or
+      getattr(sm.get("starpilotCarState"), "accelPressed", False)
+    )
+    turn_limited = float(accel_limits_turns[1]) < float(accel_limits[1]) - 0.05
+    cruise_error = float(v_cruise) - float(v_ego)
+    eligible, reason = is_sample_eligible(
+      is_ascent=True,
+      longitudinal_active=longitudinal_active,
+      grade_valid=self.ascent_grade_estimate.valid,
+      close_lead=close_lead,
+      stop_active=stop_active,
+      brake_pressed=bool(getattr(car_state, "brakePressed", False)),
+      gas_pressed=gas_pressed,
+      turn_limited=turn_limited,
+      force_decel=bool(getattr(controls_state, "forceDecel", False)),
+      positive_accel_request=self.mpc.source == "cruise" and float(a_target) > 0.0,
+      cruise_error_mps=cruise_error,
+    )
+
+    self.ascent_grade_learned = 0.0
+    self.ascent_grade_sample_count = 0
+    if self.ascent_grade_learner is not None:
+      learn_result = self.ascent_grade_learner.observe(
+        speed_mps=float(v_ego),
+        grade_accel_mps2=positive_grade_accel,
+        speed_error_mps=cruise_error,
+        eligible=eligible,
+        reason=reason,
+        dt=self.dt,
+      )
+      self.ascent_grade_learned = learn_result.learned_residual_mps2
+      self.ascent_grade_sample_count = learn_result.sample_count
+      if eligible:
+        reason = learn_result.reason
+
+    self.ascent_grade_candidate = 0.0
+    if eligible and positive_grade_accel > 0.0:
+      self.ascent_grade_candidate = min(1.5, positive_grade_accel + self.ascent_grade_learned)
+    self.ascent_grade_reason = reason
 
   @property
   def mlsim(self):
@@ -3193,6 +3296,16 @@ class LongitudinalPlanner:
 
     self.output_a_target = output_a_target
     self.output_should_stop = bool(output_should_stop or vision_low_speed_stop_active)
+    self.update_ascent_grade_shadow(
+      sm,
+      v_ego,
+      v_cruise,
+      output_a_target,
+      self.output_should_stop,
+      vision_low_speed_stop_active,
+      accel_limits,
+      accel_limits_turns,
+    )
 
   def publish(self, sm, pm):
     plan_send = messaging.new_message('longitudinalPlan')
@@ -3219,6 +3332,15 @@ class LongitudinalPlanner:
     longitudinalPlan.leadTrajectoryV0 = self.mpc.lead_xv_0[:, 1].tolist()
     longitudinalPlan.leadTrajectoryX1 = self.mpc.lead_xv_1[:, 0].tolist()
     longitudinalPlan.leadTrajectoryV1 = self.mpc.lead_xv_1[:, 1].tolist()
+
+    longitudinalPlan.ascentGradePitch = float(self.ascent_grade_estimate.pitch_rad)
+    longitudinalPlan.ascentGradeValid = self.ascent_grade_estimate.valid
+    longitudinalPlan.ascentGradeAccel = float(self.ascent_grade_estimate.grade_accel_mps2)
+    longitudinalPlan.ascentGradeCandidate = float(self.ascent_grade_candidate)
+    longitudinalPlan.ascentGradeLearned = float(self.ascent_grade_learned)
+    longitudinalPlan.ascentGradeSampleCount = int(self.ascent_grade_sample_count)
+    longitudinalPlan.ascentGradeBlockedByLead = bool(self.ascent_grade_blocked_by_lead)
+    longitudinalPlan.ascentGradeReason = self.ascent_grade_reason
 
     longitudinalPlan.aTarget = float(self.output_a_target)
     force_stop_handoff = bool(
