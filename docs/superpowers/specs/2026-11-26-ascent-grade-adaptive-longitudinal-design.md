@@ -55,7 +55,7 @@ Help the 2021 Subaru Ascent hold its requested speed on steep uphill sections, w
 - Keep the physical grade feed-forward and learned residual as separate terms. Learning may correct only a small residual where the same speed/grade cell repeatedly shows a clean, persistent speed deficit despite available positive acceleration request.
 - Accept samples only during stable Ascent longitudinal operation with valid grade, cruise set speed above ego speed, no lead limiting, no stops, no braking, no driver pedal input, no turn cap, and no engagement transition. Reject short-lived transients and saturated/invalid sensor samples.
 - Start in **shadow mode**: calculate and log proposed learned values without applying them. After shadow data has been inspected, enable application through an explicit parameter/feature gate.
-- Persist a bounded calibration map keyed by vehicle identity and coarse speed/grade bands, with update-rate limits, decay toward zero when evidence is absent, and a one-step rollback/reset mechanism. A mismatched vehicle identity or malformed data disables learning and starts from the safe zero residual.
+- Persist a bounded calibration map keyed by the Comma device identity plus the car fingerprint and coarse speed/grade bands, with update-rate limits, decay toward zero when evidence is absent, and a one-step rollback/reset mechanism. Do not store the VIN. A different device, car fingerprint, or malformed data disables learning and starts from the safe zero residual. If the same Comma is moved to another vehicle with the same fingerprint, reset the learned map before using it there.
 - Keep learned values in runtime parameters/data, not source files. No automatic code patching, commit, push, or deployment.
 - Log sample eligibility/rejection reason, grade estimate/confidence, requested and measured acceleration, speed error, lead state/gap/TTC, feed-forward term, learned term, final correction, and calibration version.
 
@@ -92,6 +92,7 @@ flowchart TD
 
 - User selected planner-side grade compensation plus bounded learning between trips, with compensation blocked while closely following another vehicle.
 - The builder may select exact filter constants, confidence tests, close-lead thresholds, initial correction ceiling, learning rate, persistence format, and feature parameter names. These must be conservative, documented, and covered by tests; they must not weaken the gates or existing planner constraints above.
+- Calibration identity is scoped to one Comma device and its car fingerprint, not shared across vehicles or devices; VIN data is not persisted. This is the selected default because the current project is calibrating Karl's single Ascent while avoiding VIN retention.
 - If available signals cannot distinguish road grade from body pitch reliably, keep runtime compensation disabled and deliver shadow logging plus an offline calibration report rather than guessing.
 
 ## Rollout
