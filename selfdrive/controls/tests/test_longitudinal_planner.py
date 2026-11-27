@@ -27,7 +27,7 @@ from openpilot.selfdrive.controls.lib.longitudinal_planner import (
   get_vehicle_min_accel,
   should_publish_planner_fcw,
 )
-from openpilot.selfdrive.controls.lib.ascent_grade_adaptive import GradeEstimate
+from openpilot.selfdrive.controls.lib.ascent_grade_adaptive import GradeEstimate, GradeEstimator
 from openpilot.selfdrive.controls.lib.longitudinal_mpc_lib.long_mpc import (
   LongitudinalMpc,
   build_model_lead_trajectory,
@@ -3637,6 +3637,37 @@ def test_publish_reports_ascent_grade_shadow_without_changing_target():
   assert longitudinal_plan.ascentGradeSampleCount == 20
   assert longitudinal_plan.ascentGradeBlockedByLead
   assert longitudinal_plan.ascentGradeReason == "close_lead"
+
+
+def test_ascent_grade_shadow_uses_submaster_subscription_without_get():
+  class FakeSubMaster:
+    def __init__(self, services):
+      self.services = services
+
+    def __getitem__(self, service):
+      return self.services[service]
+
+  planner = LongitudinalPlanner(CarInterface.get_non_essential_params(CAR.HONDA_CIVIC), init_v=20.0)
+  planner.ascent_grade_estimator = GradeEstimator()
+  planner.ascent_grade_learner = None
+  planner.lead_one = SimpleNamespace(status=False)
+  planner.lead_two = SimpleNamespace(status=False)
+  planner.effective_t_follow = 1.45
+  planner.mpc.source = "cruise"
+  planner.output_a_target = 0.42
+  sm = FakeSubMaster({
+    "carControl": SimpleNamespace(orientationNED=[0.0, 0.1, 0.0]),
+    "carState": SimpleNamespace(aEgo=0.0, gasPressed=False, brakePressed=False),
+    "controlsState": SimpleNamespace(longControlState=LongCtrlState.pid, forceDecel=False),
+    "selfdriveState": SimpleNamespace(enabled=True),
+    "starpilotCarState": SimpleNamespace(accelPressed=False),
+    "starpilotPlan": SimpleNamespace(forcingStop=False, redLight=False),
+  })
+
+  planner.update_ascent_grade_shadow(sm, 20.0, 25.0, 0.42, False, False, [-3.0, 1.0], [-3.0, 1.0])
+
+  assert planner.output_a_target == pytest.approx(0.42)
+  assert planner.ascent_grade_reason == "grade_invalid"
 
 
 def test_rav4_tss2_variants_use_the_car_specific_post_departure_tune():

@@ -95,9 +95,13 @@
 - The feature branch contains the approved design, implementation plan, and combined implementation commit.
 - The Comma install is allowed only after a read-only preflight confirms device identity, expected checkout/branch, clean or safely preservable worktree, `IsOffroad=1`, and `IsOnroad=0`.
 
-- [x] Run the targeted controls tests and existing acceleration tests: `581 passed`; Ruff passes on the new helper and helper tests.
+- [x] Run the targeted controls tests and existing acceleration tests: `582 passed`; Ruff passes on the new helper and helper tests.
 - [x] Review the feature scope and confirm the shadow path never modifies `aTarget`.
 - [x] Pushed `codex/ascent-stopgo-118-20261119` to `origin` and verified remote SHA `0c38be56bd2aef52b2bca79c76f05610a2d4004a`.
-- [ ] Preflight Comma branch/commit/status and offroad flags. The last SSH preflight to `192.168.18.118` timed out; do not deploy or reboot until it is reachable and confirmed offroad.
+- [ ] Repeat the Comma branch/status/offroad preflight for the repair before installing or rebooting. The previous installation confirmed `IsOffroad=1`, `IsOnroad=0`; verify the current state again.
 - [ ] Install the verified commit, restart services/reboot only while offroad, then verify commit, active service, offroad/onroad state, and Panda loader completion.
 - [ ] Record the deployed commit and explicit shadow-only validation boundary in the project note.
+
+#### Post-deployment defect and repair
+
+The first deployed build crashed `plannerd` because `SubMaster` implements indexed service access but has no `.get()` method. The resulting missing `longitudinalPlan` publisher raised communication alerts and prevented both longitudinal and lateral control from becoming available. The fix reads the already-subscribed `starpilotCarState` with `sm["starpilotCarState"]`; a regression test uses a SubMaster-shaped object with no `get()` method. The targeted controls tests pass at `582 passed` after this repair.

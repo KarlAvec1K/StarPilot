@@ -722,7 +722,7 @@ class LongitudinalPlanner:
     )
     gas_pressed = bool(
       getattr(car_state, "gasPressed", False) or
-      getattr(sm.get("starpilotCarState"), "accelPressed", False)
+      getattr(sm["starpilotCarState"], "accelPressed", False)
     )
     turn_limited = float(accel_limits_turns[1]) < float(accel_limits[1]) - 0.05
     cruise_error = float(v_cruise) - float(v_ego)
